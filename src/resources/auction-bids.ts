@@ -37,39 +37,81 @@ export class AuctionBids extends APIResource {
 }
 
 export interface AuctionBidCreateParams {
+  /**
+   * Bid amount
+   */
   amount: unknown | null;
 
+  /**
+   * ID of the auction
+   */
   auctionId: string;
 
+  /**
+   * Name of the blockchain chain
+   */
   chainName: string;
 
+  /**
+   * ID of the organization
+   */
   organizationId: string;
 
+  /**
+   * Signature of the bid
+   */
   signature: string;
 
+  /**
+   * ID of the website
+   */
   websiteId: string;
 }
 
 export interface AuctionBidListParams {
   /**
-   * The bid id
+   * The bid ID
    */
   id?: string;
 
+  /**
+   * ID of the auction
+   */
   auctionId?: string;
 
+  /**
+   * Maximum number of bids to return
+   */
   limit?: number | null;
 
+  /**
+   * ID of the organization
+   */
   organizationId?: string;
 
+  /**
+   * Pagination cursor to start after a specific bid ID
+   */
   startingAfter?: string;
 
+  /**
+   * Status of the bid
+   */
   status?: 'submitted' | 'accepted' | 'rejected' | 'fulfilled';
 
+  /**
+   * ID of the user who made the bid
+   */
   userId?: string;
 
+  /**
+   * Wallet address of the bidder
+   */
   walletAddress?: string;
 
+  /**
+   * ID of the website
+   */
   websiteId?: string;
 }
 
