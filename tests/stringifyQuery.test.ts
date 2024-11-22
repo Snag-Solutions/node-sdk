@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { SnagSolutions } from 'snag-solutions';
+import { SnagSolutions } from '@snag/sdk';
 
 const { stringifyQuery } = SnagSolutions.prototype as any;
 
