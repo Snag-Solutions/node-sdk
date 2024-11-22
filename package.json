@@ -1,6 +1,6 @@
 {
-  "name": "snag-solutions",
-  "version": "0.1.0-alpha.2",
+  "name": "@snag/sdk",
+  "version": "0.1.0-alpha.3",
   "description": "The official TypeScript library for the Snag Solutions API",
   "author": "Snag Solutions <dev-feedback@snag-solutions.com>",
   "types": "dist/index.d.ts",
@@ -59,8 +59,8 @@
     "./shims/web.mjs"
   ],
   "imports": {
-    "snag-solutions": ".",
-    "snag-solutions/*": "./src/*"
+    "@snag/sdk": ".",
+    "@snag/sdk/*": "./src/*"
   },
   "exports": {
     "./_shims/auto/*": {
