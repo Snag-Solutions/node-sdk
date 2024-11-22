@@ -4,8 +4,8 @@
 /**
  * Types will get added to this namespace when you import one of the following:
  *
- *   import 'snag-solutions/shims/node'
- *   import 'snag-solutions/shims/web'
+ *   import '@snag/sdk/shims/node'
+ *   import '@snag/sdk/shims/web'
  *
  * Importing more than one will cause type and runtime errors.
  */
