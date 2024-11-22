@@ -5,7 +5,7 @@ import * as Core from '../core';
 
 export class Assets extends APIResource {
   /**
-   * This endpoint allows you to upload a file to the resource.returns a presigned
+   * This endpoint allows you to upload a file to the resource. returns a presigned
    * URL and the asset's public URL call put with the file as the body to upload the
    * asst
    */
