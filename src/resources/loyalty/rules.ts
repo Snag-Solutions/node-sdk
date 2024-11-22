@@ -1685,11 +1685,6 @@ export interface RuleListParams {
   collectionAddress?: string;
 
   /**
-   * Whether to include drip quest rules in the results
-   */
-  includeDripQuestRules?: boolean;
-
-  /**
    * Maximum number of records to return (max 1000)
    */
   limit?: number;
