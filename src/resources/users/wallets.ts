@@ -7,16 +7,6 @@ import * as Core from '../../core';
 export class Wallets extends APIResource {
   /**
    * This endpoint allows you to create a user wallet
-   *
-   * Here is the message structure that you will need to use.
-   *
-   * Possible values for <b>chainType</b> are <b>evm,solana,sui,ton</b> <pre> {
-   * "domain": "your-website-domain.com", "chainType": "evm", "address":
-   * "0xFe4ddc4Bc5E3506542B42cAcC48DB141aF69de3b", "statement": "Sign in to the app.
-   * Powered by Snag Solutions.", "uri": "https://snag-web.onrender.com", "version":
-   * "1", "chainId": 137, "nonce":
-   * "e04cfb63b2ce6ee2fe237e81fc5dfe148640ad5edde9d4475a73ecd7954142d7", "issuedAt":
-   * "2024-11-12T11:47:55.598Z" } </pre>
    */
   create(body: WalletCreateParams, options?: Core.RequestOptions): Core.APIPromise<WalletCreateResponse> {
     return this._client.post('/api/users/wallets', { body, ...options });
@@ -45,63 +35,150 @@ export class Wallets extends APIResource {
   }
 }
 
+/**
+ * Schema for user wallet response
+ */
 export interface WalletCreateResponse {
+  /**
+   * Unique identifier for the user wallet
+   */
   id: string;
 
+  /**
+   * Timestamp when the wallet was created
+   */
   createdAt: string;
 
+  /**
+   * Unique identifier for the organization
+   */
   organizationId: string;
 
+  /**
+   * Timestamp when the wallet was last updated
+   */
   updatedAt: string;
 
+  /**
+   * Validated and formatted wallet address
+   */
   walletAddress: string;
 
+  /**
+   * Type of the wallet
+   */
   walletType: 'evm' | 'solana' | 'imx' | 'sui' | 'ton';
 
+  /**
+   * Unique identifier for the website
+   */
   websiteId: string;
 
+  /**
+   * Optional identifier for the wallet
+   */
   walletIdentifier?: string | null;
 }
 
+/**
+ * Schema for a list of user wallets
+ */
 export interface WalletListResponse {
+  /**
+   * Array of user wallets
+   */
   data: Array<WalletListResponse.Data>;
 }
 
 export namespace WalletListResponse {
+  /**
+   * Schema for user wallet response
+   */
   export interface Data {
+    /**
+     * Unique identifier for the user wallet
+     */
     id: string;
 
+    /**
+     * Timestamp when the wallet was created
+     */
     createdAt: string;
 
+    /**
+     * Unique identifier for the organization
+     */
     organizationId: string;
 
+    /**
+     * Timestamp when the wallet was last updated
+     */
     updatedAt: string;
 
+    /**
+     * Validated and formatted wallet address
+     */
     walletAddress: string;
 
+    /**
+     * Type of the wallet
+     */
     walletType: 'evm' | 'solana' | 'imx' | 'sui' | 'ton';
 
+    /**
+     * Unique identifier for the website
+     */
     websiteId: string;
 
+    /**
+     * Optional identifier for the wallet
+     */
     walletIdentifier?: string | null;
   }
 }
 
+/**
+ * Schema for user wallet response
+ */
 export interface WalletDeleteResponse {
+  /**
+   * Unique identifier for the user wallet
+   */
   id: string;
 
+  /**
+   * Timestamp when the wallet was created
+   */
   createdAt: string;
 
+  /**
+   * Unique identifier for the organization
+   */
   organizationId: string;
 
+  /**
+   * Timestamp when the wallet was last updated
+   */
   updatedAt: string;
 
+  /**
+   * Validated and formatted wallet address
+   */
   walletAddress: string;
 
+  /**
+   * Type of the wallet
+   */
   walletType: 'evm' | 'solana' | 'imx' | 'sui' | 'ton';
 
+  /**
+   * Unique identifier for the website
+   */
   websiteId: string;
 
+  /**
+   * Optional identifier for the wallet
+   */
   walletIdentifier?: string | null;
 }
 

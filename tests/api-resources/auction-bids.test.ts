@@ -11,12 +11,12 @@ const client = new SnagSolutions({
 describe('resource auctionBids', () => {
   test('create: only required params', async () => {
     const responsePromise = client.auctionBids.create({
-      amount: {},
-      auctionId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
-      chainName: 'chainName',
-      organizationId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
-      signature: 'signature',
-      websiteId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+      amount: '1.5',
+      auctionId: '123e4567-e89b-12d3-a456-426614174004',
+      chainName: 'Ethereum',
+      organizationId: '123e4567-e89b-12d3-a456-426614174002',
+      signature: '0xabcdef...',
+      websiteId: '123e4567-e89b-12d3-a456-426614174003',
     });
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
@@ -29,12 +29,12 @@ describe('resource auctionBids', () => {
 
   test('create: required and optional params', async () => {
     const response = await client.auctionBids.create({
-      amount: {},
-      auctionId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
-      chainName: 'chainName',
-      organizationId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
-      signature: 'signature',
-      websiteId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+      amount: '1.5',
+      auctionId: '123e4567-e89b-12d3-a456-426614174004',
+      chainName: 'Ethereum',
+      organizationId: '123e4567-e89b-12d3-a456-426614174002',
+      signature: '0xabcdef...',
+      websiteId: '123e4567-e89b-12d3-a456-426614174003',
     });
   });
 
@@ -61,15 +61,15 @@ describe('resource auctionBids', () => {
     await expect(
       client.auctionBids.list(
         {
-          id: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
-          auctionId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
-          limit: 0,
-          organizationId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
-          startingAfter: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+          id: '123e4567-e89b-12d3-a456-426614174010',
+          auctionId: '123e4567-e89b-12d3-a456-426614174004',
+          limit: 50,
+          organizationId: '123e4567-e89b-12d3-a456-426614174002',
+          startingAfter: '123e4567-e89b-12d3-a456-426614174020',
           status: 'submitted',
-          userId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
-          walletAddress: 'walletAddress',
-          websiteId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+          userId: '123e4567-e89b-12d3-a456-426614174001',
+          walletAddress: '0x1234567890abcdef1234567890abcdef12345678',
+          websiteId: '123e4567-e89b-12d3-a456-426614174003',
         },
         { path: '/_stainless_unknown_path' },
       ),
