@@ -8,7 +8,6 @@ import * as Uploads from './uploads';
 import * as API from './resources/index';
 import { AssetCreateParams, AssetCreateResponse, Assets } from './resources/assets';
 import { AuctionBidCreateParams, AuctionBidListParams, AuctionBids } from './resources/auction-bids';
-import { Drip } from './resources/drip/drip';
 import { Loyalty } from './resources/loyalty/loyalty';
 import { Users } from './resources/users/users';
 
@@ -129,7 +128,6 @@ export class SnagSolutions extends Core.APIClient {
   users: API.Users = new API.Users(this);
   loyalty: API.Loyalty = new API.Loyalty(this);
   auctionBids: API.AuctionBids = new API.AuctionBids(this);
-  drip: API.Drip = new API.Drip(this);
 
   protected override defaultQuery(): Core.DefaultQuery | undefined {
     return this._options.defaultQuery;
@@ -175,7 +173,6 @@ SnagSolutions.Assets = Assets;
 SnagSolutions.Users = Users;
 SnagSolutions.Loyalty = Loyalty;
 SnagSolutions.AuctionBids = AuctionBids;
-SnagSolutions.Drip = Drip;
 export declare namespace SnagSolutions {
   export type RequestOptions = Core.RequestOptions;
 
@@ -194,8 +191,6 @@ export declare namespace SnagSolutions {
     type AuctionBidCreateParams as AuctionBidCreateParams,
     type AuctionBidListParams as AuctionBidListParams,
   };
-
-  export { Drip as Drip };
 }
 
 export { toFile, fileFromPath } from './uploads';
