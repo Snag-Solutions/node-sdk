@@ -9,9 +9,9 @@
     "esModuleInterop": true,
     "baseUrl": "./",
     "paths": {
-      "snag-solutions/_shims/auto/*": ["src/_shims/auto/*-node"],
-      "snag-solutions/*": ["src/*"],
-      "snag-solutions": ["src/index.ts"]
+      "@snag/sdk/_shims/auto/*": ["src/_shims/auto/*-node"],
+      "@snag/sdk/*": ["src/*"],
+      "@snag/sdk": ["src/index.ts"]
     },
     "noEmit": true,
 

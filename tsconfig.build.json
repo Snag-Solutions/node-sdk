@@ -5,8 +5,8 @@
   "compilerOptions": {
     "rootDir": "./dist/src",
     "paths": {
-      "snag-solutions/*": ["dist/src/*"],
-      "snag-solutions": ["dist/src/index.ts"],
+      "@snag/sdk/*": ["dist/src/*"],
+      "@snag/sdk": ["dist/src/index.ts"],
     },
     "noEmit": false,
     "declaration": true,
