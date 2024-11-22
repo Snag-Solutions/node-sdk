@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.1.0-alpha.5 (2024-11-22)
+
+Full Changelog: [v0.1.0-alpha.4...v0.1.0-alpha.5](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.4...v0.1.0-alpha.5)
+
+### Features
+
+* **api:** api update ([#13](https://github.com/Snag-Solutions/node-sdk/issues/13)) ([b691782](https://github.com/Snag-Solutions/node-sdk/commit/b69178269f9d182d2ea7105f8b1024a0c3880134))
+* **api:** api update ([#15](https://github.com/Snag-Solutions/node-sdk/issues/15)) ([ec14b9d](https://github.com/Snag-Solutions/node-sdk/commit/ec14b9d0964f8beceda60a09fd2c9c2cfffd17da))
+* **api:** api update ([#16](https://github.com/Snag-Solutions/node-sdk/issues/16)) ([3123dc6](https://github.com/Snag-Solutions/node-sdk/commit/3123dc6e29d239580f6d3a800801f9ad50dbabc5))
+
 ## 0.1.0-alpha.4 (2024-11-22)
 
 Full Changelog: [v0.1.0-alpha.3...v0.1.0-alpha.4](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.3...v0.1.0-alpha.4)
