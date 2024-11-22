@@ -279,7 +279,6 @@ describe('resource rules', () => {
       client.loyalty.rules.list(
         {
           collectionAddress: '0x1234567890abcdef1234567890abcdef12345678',
-          includeDripQuestRules: true,
           limit: 50,
           organizationId: '123e4567-e89b-12d3-a456-426614174001',
           startingAfter: '123e4567-e89b-12d3-a456-426614174010',
