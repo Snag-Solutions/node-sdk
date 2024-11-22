@@ -157,13 +157,13 @@ describe('instantiate client', () => {
     test('empty env variable', () => {
       process.env['SNAG_SOLUTIONS_BASE_URL'] = ''; // empty
       const client = new SnagSolutions({ apiKey: 'My API Key' });
-      expect(client.baseURL).toEqual('https://localhost:8080/test-api');
+      expect(client.baseURL).toEqual('https://admin.snagsolutions.io/');
     });
 
     test('blank env variable', () => {
       process.env['SNAG_SOLUTIONS_BASE_URL'] = '  '; // blank
       const client = new SnagSolutions({ apiKey: 'My API Key' });
-      expect(client.baseURL).toEqual('https://localhost:8080/test-api');
+      expect(client.baseURL).toEqual('https://admin.snagsolutions.io/');
     });
   });
 
