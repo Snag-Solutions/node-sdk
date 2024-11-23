@@ -8,6 +8,13 @@ import * as Uploads from './uploads';
 import * as API from './resources/index';
 import { AssetCreateParams, AssetCreateResponse, Assets } from './resources/assets';
 import { AuctionBidCreateParams, AuctionBidListParams, AuctionBids } from './resources/auction-bids';
+import {
+  WebsiteCreateParams,
+  WebsiteCreateResponse,
+  WebsiteListParams,
+  WebsiteListResponse,
+  Websites,
+} from './resources/websites';
 import { Loyalty } from './resources/loyalty/loyalty';
 import { Users } from './resources/users/users';
 
@@ -128,6 +135,7 @@ export class SnagSolutions extends Core.APIClient {
   users: API.Users = new API.Users(this);
   loyalty: API.Loyalty = new API.Loyalty(this);
   auctionBids: API.AuctionBids = new API.AuctionBids(this);
+  websites: API.Websites = new API.Websites(this);
 
   protected override defaultQuery(): Core.DefaultQuery | undefined {
     return this._options.defaultQuery;
@@ -173,6 +181,7 @@ SnagSolutions.Assets = Assets;
 SnagSolutions.Users = Users;
 SnagSolutions.Loyalty = Loyalty;
 SnagSolutions.AuctionBids = AuctionBids;
+SnagSolutions.Websites = Websites;
 export declare namespace SnagSolutions {
   export type RequestOptions = Core.RequestOptions;
 
@@ -190,6 +199,14 @@ export declare namespace SnagSolutions {
     AuctionBids as AuctionBids,
     type AuctionBidCreateParams as AuctionBidCreateParams,
     type AuctionBidListParams as AuctionBidListParams,
+  };
+
+  export {
+    Websites as Websites,
+    type WebsiteCreateResponse as WebsiteCreateResponse,
+    type WebsiteListResponse as WebsiteListResponse,
+    type WebsiteCreateParams as WebsiteCreateParams,
+    type WebsiteListParams as WebsiteListParams,
   };
 }
 

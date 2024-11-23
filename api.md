@@ -72,3 +72,15 @@ Methods:
 
 - <code title="post /api/auction_bids">client.auctionBids.<a href="./src/resources/auction-bids.ts">create</a>({ ...params }) -> void</code>
 - <code title="get /api/auction_bids">client.auctionBids.<a href="./src/resources/auction-bids.ts">list</a>({ ...params }) -> void</code>
+
+# Websites
+
+Types:
+
+- <code><a href="./src/resources/websites.ts">WebsiteCreateResponse</a></code>
+- <code><a href="./src/resources/websites.ts">WebsiteListResponse</a></code>
+
+Methods:
+
+- <code title="post /api/websites">client.websites.<a href="./src/resources/websites.ts">create</a>({ ...params }) -> WebsiteCreateResponse</code>
+- <code title="get /api/websites">client.websites.<a href="./src/resources/websites.ts">list</a>({ ...params }) -> WebsiteListResponse</code>
