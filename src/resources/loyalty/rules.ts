@@ -3215,6 +3215,11 @@ export interface RuleCompleteParams {
    * Optional verification code for completing the loyalty rule
    */
   verificationCode?: string;
+
+  /**
+   * Wallet address of the user can only be used if userId is not provided
+   */
+  walletAddress?: string;
 }
 
 export declare namespace Rules {
