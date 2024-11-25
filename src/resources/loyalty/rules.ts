@@ -50,18 +50,9 @@ export class Rules extends APIResource {
    */
   complete(
     id: string,
-    body?: RuleCompleteParams,
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<RuleCompleteResponse>;
-  complete(id: string, options?: Core.RequestOptions): Core.APIPromise<RuleCompleteResponse>;
-  complete(
-    id: string,
-    body: RuleCompleteParams | Core.RequestOptions = {},
+    body: RuleCompleteParams,
     options?: Core.RequestOptions,
   ): Core.APIPromise<RuleCompleteResponse> {
-    if (isRequestOptions(body)) {
-      return this.complete(id, {}, body);
-    }
     return this._client.post(`/api/loyalty/rules/${id}/complete`, { body, ...options });
   }
 }
@@ -3207,6 +3198,11 @@ export interface RuleListParams {
 
 export interface RuleCompleteParams {
   /**
+   * Wallet address of the user can only be used if userId is not provided
+   */
+  walletAddress: string;
+
+  /**
    * Unique identifier for the user
    */
   userId?: string;
@@ -3215,11 +3211,6 @@ export interface RuleCompleteParams {
    * Optional verification code for completing the loyalty rule
    */
   verificationCode?: string;
-
-  /**
-   * Wallet address of the user can only be used if userId is not provided
-   */
-  walletAddress?: string;
 }
 
 export declare namespace Rules {
