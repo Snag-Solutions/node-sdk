@@ -224,6 +224,11 @@ export interface RuleCreateResponse {
   isRequired?: boolean;
 
   /**
+   * Unique identifier for the loyalty rule group
+   */
+  loyaltyRuleGroupId?: string | null;
+
+  /**
    * Blockchain network where the rule will apply
    */
   network?:
@@ -977,6 +982,11 @@ export interface RuleUpdateResponse {
    * Whether this rule is required for participation
    */
   isRequired?: boolean;
+
+  /**
+   * ID of the rule group section to associate with the rule
+   */
+  loyaltyRuleGroupId?: string | null;
 
   /**
    * ID for associated OAuth credentials
@@ -1819,6 +1829,11 @@ export interface RuleCreateParams {
   isRequired?: boolean;
 
   /**
+   * Unique identifier for the loyalty rule group
+   */
+  loyaltyRuleGroupId?: string | null;
+
+  /**
    * Blockchain network where the rule will apply
    */
   network?:
@@ -2572,6 +2587,11 @@ export interface RuleUpdateParams {
   isRequired?: boolean;
 
   /**
+   * ID of the rule group section to associate with the rule
+   */
+  loyaltyRuleGroupId?: string | null;
+
+  /**
    * ID for associated OAuth credentials
    */
   oauthCredentialsId?: string | null;
@@ -3215,6 +3235,11 @@ export interface RuleCompleteParams {
    * Optional verification code for completing the loyalty rule
    */
   verificationCode?: string;
+
+  /**
+   * Wallet address of the user can only be used if userId is not provided
+   */
+  walletAddress?: string;
 }
 
 export declare namespace Rules {
