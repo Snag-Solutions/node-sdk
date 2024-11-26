@@ -224,6 +224,11 @@ export interface RuleCreateResponse {
   isRequired?: boolean;
 
   /**
+   * Unique identifier for the loyalty rule group
+   */
+  loyaltyRuleGroupId?: string | null;
+
+  /**
    * Blockchain network where the rule will apply
    */
   network?:
@@ -977,6 +982,11 @@ export interface RuleUpdateResponse {
    * Whether this rule is required for participation
    */
   isRequired?: boolean;
+
+  /**
+   * ID of the rule group section to associate with the rule
+   */
+  loyaltyRuleGroupId?: string | null;
 
   /**
    * ID for associated OAuth credentials
@@ -1819,6 +1829,11 @@ export interface RuleCreateParams {
   isRequired?: boolean;
 
   /**
+   * Unique identifier for the loyalty rule group
+   */
+  loyaltyRuleGroupId?: string | null;
+
+  /**
    * Blockchain network where the rule will apply
    */
   network?:
@@ -2570,6 +2585,11 @@ export interface RuleUpdateParams {
    * Whether this rule is required for participation
    */
   isRequired?: boolean;
+
+  /**
+   * ID of the rule group section to associate with the rule
+   */
+  loyaltyRuleGroupId?: string | null;
 
   /**
    * ID for associated OAuth credentials
