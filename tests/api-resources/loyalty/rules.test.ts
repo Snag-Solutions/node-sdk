@@ -349,6 +349,7 @@ describe('resource rules', () => {
       client.loyalty.rules.complete(
         '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
         {
+          commentLink: 'https://x.com/Snag_Solutions/status/1735407428093522314',
           userId: '123e4567-e89b-12d3-a456-426614174000',
           verificationCode: 'VERIF123',
           walletAddress: '0x1234567890abcdef1234567890abcdef12345678',

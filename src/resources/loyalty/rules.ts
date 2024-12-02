@@ -165,6 +165,7 @@ export interface RuleCreateResponse {
     | 'drip_x_new_tweet'
     | 'drip_x_text_in_bio'
     | 'drip_x_text_in_name'
+    | 'drip_x_text_in_comment'
     | 'smart_contract_event'
     | 'create_partner_account'
     | 'telegram_join'
@@ -226,7 +227,7 @@ export interface RuleCreateResponse {
   /**
    * Unique identifier for the loyalty rule group
    */
-  loyaltyRuleGroupId?: string | null;
+  loyaltyRuleGroupId?: 'no-section' | (string & {}) | null;
 
   /**
    * Blockchain network where the rule will apply
@@ -986,7 +987,7 @@ export interface RuleUpdateResponse {
   /**
    * ID of the rule group section to associate with the rule
    */
-  loyaltyRuleGroupId?: string | null;
+  loyaltyRuleGroupId?: (string & {}) | 'no-section' | null;
 
   /**
    * ID for associated OAuth credentials
@@ -1770,6 +1771,7 @@ export interface RuleCreateParams {
     | 'drip_x_new_tweet'
     | 'drip_x_text_in_bio'
     | 'drip_x_text_in_name'
+    | 'drip_x_text_in_comment'
     | 'smart_contract_event'
     | 'create_partner_account'
     | 'telegram_join'
@@ -1831,7 +1833,7 @@ export interface RuleCreateParams {
   /**
    * Unique identifier for the loyalty rule group
    */
-  loyaltyRuleGroupId?: string | null;
+  loyaltyRuleGroupId?: 'no-section' | (string & {}) | null;
 
   /**
    * Blockchain network where the rule will apply
@@ -2589,7 +2591,7 @@ export interface RuleUpdateParams {
   /**
    * ID of the rule group section to associate with the rule
    */
-  loyaltyRuleGroupId?: string | null;
+  loyaltyRuleGroupId?: (string & {}) | 'no-section' | null;
 
   /**
    * ID for associated OAuth credentials
@@ -3226,6 +3228,11 @@ export interface RuleListParams {
 }
 
 export interface RuleCompleteParams {
+  /**
+   * Link to the comment made by user
+   */
+  commentLink?: string;
+
   /**
    * Unique identifier for the user
    */
