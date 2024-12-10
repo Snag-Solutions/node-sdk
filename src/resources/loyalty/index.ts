@@ -1,12 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-export {
-  Currencies,
-  type CurrencyCreateResponse,
-  type CurrencyListResponse,
-  type CurrencyCreateParams,
-  type CurrencyListParams,
-} from './currencies';
+export { Currencies } from './currencies';
 export { Loyalty } from './loyalty';
 export {
   Rules,
