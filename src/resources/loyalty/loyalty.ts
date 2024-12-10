@@ -2,13 +2,7 @@
 
 import { APIResource } from '../../resource';
 import * as CurrenciesAPI from './currencies';
-import {
-  Currencies,
-  CurrencyCreateParams,
-  CurrencyCreateResponse,
-  CurrencyListParams,
-  CurrencyListResponse,
-} from './currencies';
+import { Currencies } from './currencies';
 import * as RulesAPI from './rules';
 import {
   RuleCompleteParams,
@@ -55,13 +49,7 @@ export declare namespace Loyalty {
     type RuleCompleteParams as RuleCompleteParams,
   };
 
-  export {
-    Currencies as Currencies,
-    type CurrencyCreateResponse as CurrencyCreateResponse,
-    type CurrencyListResponse as CurrencyListResponse,
-    type CurrencyCreateParams as CurrencyCreateParams,
-    type CurrencyListParams as CurrencyListParams,
-  };
+  export { Currencies as Currencies };
 
   export {
     TransactionEntries as TransactionEntries,
