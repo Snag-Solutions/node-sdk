@@ -183,7 +183,7 @@ describe('instantiate client', () => {
     expect(client.apiKey).toBe('My API Key');
   });
 
-  test('with overridden environment variable arguments', () => {
+  test('with overriden environment variable arguments', () => {
     // set options via env var
     process.env['X_API_KEY'] = 'another My API Key';
     const client = new SnagSolutions({ apiKey: 'My API Key' });
