@@ -762,11 +762,6 @@ export namespace RuleCreateResponse {
       bonus?: Array<SmartContract.Bonus> | null;
 
       /**
-       * ID of the smart contract.
-       */
-      contractId?: string | null;
-
-      /**
        * Criteria to evaluate the smart contract event.
        */
       criteria?: 'everyEvent' | 'byParameter' | null;
@@ -1491,11 +1486,6 @@ export namespace RuleUpdateResponse {
        * Array of bonus details applied to the rule.
        */
       bonus?: Array<SmartContract.Bonus> | null;
-
-      /**
-       * ID of the smart contract.
-       */
-      contractId?: string | null;
 
       /**
        * Criteria to evaluate the smart contract event.
@@ -2378,11 +2368,6 @@ export namespace RuleCreateParams {
       bonus?: Array<SmartContract.Bonus> | null;
 
       /**
-       * ID of the smart contract.
-       */
-      contractId?: string | null;
-
-      /**
        * Criteria to evaluate the smart contract event.
        */
       criteria?: 'everyEvent' | 'byParameter' | null;
@@ -3105,11 +3090,6 @@ export namespace RuleUpdateParams {
        * Array of bonus details applied to the rule.
        */
       bonus?: Array<SmartContract.Bonus> | null;
-
-      /**
-       * ID of the smart contract.
-       */
-      contractId?: string | null;
 
       /**
        * Criteria to evaluate the smart contract event.
