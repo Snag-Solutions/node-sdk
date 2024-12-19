@@ -97,6 +97,7 @@ describe('resource rules', () => {
           abi: '[]',
           addressMapping: '0x123...789',
           bonus: [{ amount: 50, count: 5 }],
+          contractId: '123e4567-e89b-12d3-a456-426614174000',
           criteria: 'everyEvent',
           customRange: { endsAt: '2024-01-31T23:59:59Z', startsAt: '2024-01-01T00:00:00Z' },
           event: 'Transfer',
@@ -137,6 +138,7 @@ describe('resource rules', () => {
       hideInUi: false,
       interval: 'daily',
       isRequired: true,
+      loyaltyRuleGroupId: '123e4567-e89b-12d3-a456-426614174004',
       network: 'mainnet',
       oauthCredentialsId: '123e4567-e89b-12d3-a456-426614174003',
       rewardType: 'points',
@@ -227,6 +229,7 @@ describe('resource rules', () => {
           abi: '[]',
           addressMapping: '0x123...789',
           bonus: [{ amount: 50, count: 5 }],
+          contractId: '123e4567-e89b-12d3-a456-426614174000',
           criteria: 'everyEvent',
           customRange: { endsAt: '2024-01-31T23:59:59Z', startsAt: '2024-01-01T00:00:00Z' },
           event: 'Transfer',
@@ -261,6 +264,7 @@ describe('resource rules', () => {
       hideInUi: false,
       interval: 'daily',
       isRequired: true,
+      loyaltyRuleGroupId: '123e4567-e89b-12d3-a456-426614174005',
       oauthCredentialsId: '123e4567-e89b-12d3-a456-426614174000',
       rewardType: 'points',
       subscriptionIdentifier: 'sub12345',
@@ -346,7 +350,12 @@ describe('resource rules', () => {
     await expect(
       client.loyalty.rules.complete(
         '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
-        { userId: '123e4567-e89b-12d3-a456-426614174000', verificationCode: 'VERIF123' },
+        {
+          commentLink: 'https://x.com/Snag_Solutions/status/1735407428093522314',
+          userId: '123e4567-e89b-12d3-a456-426614174000',
+          verificationCode: 'VERIF123',
+          walletAddress: '0x1234567890abcdef1234567890abcdef12345678',
+        },
         { path: '/_stainless_unknown_path' },
       ),
     ).rejects.toThrow(SnagSolutions.NotFoundError);

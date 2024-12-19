@@ -46,7 +46,11 @@ export class Rules extends APIResource {
   }
 
   /**
-   * Verify a loyalty rule based on user action and reward them if applicable.
+   * Verify a loyalty rule based on user action and reward them if applicable. This
+   * endpoint currenlty onlu supports following rule types code_entry, text_input,
+   * link_click, discord_member, connect_wallet, check_in, external_rule,
+   * drip_x_follow, drip_x_new_tweet, drip_x_text_in_bio, drip_x_text_in_name,
+   * drip_x_text_in_comment, drip_x_tweet, telegram_join
    */
   complete(
     id: string,
@@ -165,6 +169,7 @@ export interface RuleCreateResponse {
     | 'drip_x_new_tweet'
     | 'drip_x_text_in_bio'
     | 'drip_x_text_in_name'
+    | 'drip_x_text_in_comment'
     | 'smart_contract_event'
     | 'create_partner_account'
     | 'telegram_join'
@@ -222,6 +227,11 @@ export interface RuleCreateResponse {
    * Whether this rule is mandatory
    */
   isRequired?: boolean;
+
+  /**
+   * Unique identifier for the loyalty rule group
+   */
+  loyaltyRuleGroupId?: 'no-section' | (string & {}) | null;
 
   /**
    * Blockchain network where the rule will apply
@@ -752,6 +762,11 @@ export namespace RuleCreateResponse {
       bonus?: Array<SmartContract.Bonus> | null;
 
       /**
+       * ID of the smart contract.
+       */
+      contractId?: string | null;
+
+      /**
        * Criteria to evaluate the smart contract event.
        */
       criteria?: 'everyEvent' | 'byParameter' | null;
@@ -977,6 +992,11 @@ export interface RuleUpdateResponse {
    * Whether this rule is required for participation
    */
   isRequired?: boolean;
+
+  /**
+   * ID of the rule group section to associate with the rule
+   */
+  loyaltyRuleGroupId?: (string & {}) | 'no-section' | null;
 
   /**
    * ID for associated OAuth credentials
@@ -1473,6 +1493,11 @@ export namespace RuleUpdateResponse {
       bonus?: Array<SmartContract.Bonus> | null;
 
       /**
+       * ID of the smart contract.
+       */
+      contractId?: string | null;
+
+      /**
        * Criteria to evaluate the smart contract event.
        */
       criteria?: 'everyEvent' | 'byParameter' | null;
@@ -1760,6 +1785,7 @@ export interface RuleCreateParams {
     | 'drip_x_new_tweet'
     | 'drip_x_text_in_bio'
     | 'drip_x_text_in_name'
+    | 'drip_x_text_in_comment'
     | 'smart_contract_event'
     | 'create_partner_account'
     | 'telegram_join'
@@ -1817,6 +1843,11 @@ export interface RuleCreateParams {
    * Whether this rule is mandatory
    */
   isRequired?: boolean;
+
+  /**
+   * Unique identifier for the loyalty rule group
+   */
+  loyaltyRuleGroupId?: 'no-section' | (string & {}) | null;
 
   /**
    * Blockchain network where the rule will apply
@@ -2347,6 +2378,11 @@ export namespace RuleCreateParams {
       bonus?: Array<SmartContract.Bonus> | null;
 
       /**
+       * ID of the smart contract.
+       */
+      contractId?: string | null;
+
+      /**
        * Criteria to evaluate the smart contract event.
        */
       criteria?: 'everyEvent' | 'byParameter' | null;
@@ -2570,6 +2606,11 @@ export interface RuleUpdateParams {
    * Whether this rule is required for participation
    */
   isRequired?: boolean;
+
+  /**
+   * ID of the rule group section to associate with the rule
+   */
+  loyaltyRuleGroupId?: (string & {}) | 'no-section' | null;
 
   /**
    * ID for associated OAuth credentials
@@ -3066,6 +3107,11 @@ export namespace RuleUpdateParams {
       bonus?: Array<SmartContract.Bonus> | null;
 
       /**
+       * ID of the smart contract.
+       */
+      contractId?: string | null;
+
+      /**
        * Criteria to evaluate the smart contract event.
        */
       criteria?: 'everyEvent' | 'byParameter' | null;
@@ -3207,6 +3253,11 @@ export interface RuleListParams {
 
 export interface RuleCompleteParams {
   /**
+   * Link to the comment made by user
+   */
+  commentLink?: string;
+
+  /**
    * Unique identifier for the user
    */
   userId?: string;
@@ -3215,6 +3266,11 @@ export interface RuleCompleteParams {
    * Optional verification code for completing the loyalty rule
    */
   verificationCode?: string;
+
+  /**
+   * Wallet address of the user can only be used if userId is not provided
+   */
+  walletAddress?: string;
 }
 
 export declare namespace Rules {

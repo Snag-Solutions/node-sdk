@@ -46,16 +46,6 @@ Methods:
 
 ## Currencies
 
-Types:
-
-- <code><a href="./src/resources/loyalty/currencies.ts">CurrencyCreateResponse</a></code>
-- <code><a href="./src/resources/loyalty/currencies.ts">CurrencyListResponse</a></code>
-
-Methods:
-
-- <code title="post /api/loyalty/currencies/">client.loyalty.currencies.<a href="./src/resources/loyalty/currencies.ts">create</a>({ ...params }) -> CurrencyCreateResponse</code>
-- <code title="get /api/loyalty/currencies/">client.loyalty.currencies.<a href="./src/resources/loyalty/currencies.ts">list</a>({ ...params }) -> CurrencyListResponse</code>
-
 ## TransactionEntries
 
 Types:

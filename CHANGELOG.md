@@ -1,5 +1,39 @@
 # Changelog
 
+## 0.1.0-alpha.9 (2024-12-19)
+
+Full Changelog: [v0.1.0-alpha.8...v0.1.0-alpha.9](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.8...v0.1.0-alpha.9)
+
+### Features
+
+* **api:** api update ([#29](https://github.com/Snag-Solutions/node-sdk/issues/29)) ([48e7200](https://github.com/Snag-Solutions/node-sdk/commit/48e7200659fb26b46b7c15bb89ab97397790a4a2))
+* **api:** api update ([#31](https://github.com/Snag-Solutions/node-sdk/issues/31)) ([0724f3b](https://github.com/Snag-Solutions/node-sdk/commit/0724f3b6094549f5fc2d0771107755d0c98c3efd))
+* **api:** api update ([#32](https://github.com/Snag-Solutions/node-sdk/issues/32)) ([acc86fc](https://github.com/Snag-Solutions/node-sdk/commit/acc86fc52921a19f20325eb73e53da6edbf5cd25))
+* **api:** api update ([#33](https://github.com/Snag-Solutions/node-sdk/issues/33)) ([f2eea73](https://github.com/Snag-Solutions/node-sdk/commit/f2eea73c42fcc211fa829cef800c0d8668d2ac0f))
+* **api:** api update ([#35](https://github.com/Snag-Solutions/node-sdk/issues/35)) ([271bb6c](https://github.com/Snag-Solutions/node-sdk/commit/271bb6cc9634322dc290b68b1ee085b06c10b020))
+* **api:** api update ([#36](https://github.com/Snag-Solutions/node-sdk/issues/36)) ([75d2f33](https://github.com/Snag-Solutions/node-sdk/commit/75d2f33d1025ad57814af33475d272516ad89746))
+* **api:** api update ([#38](https://github.com/Snag-Solutions/node-sdk/issues/38)) ([7d0db9a](https://github.com/Snag-Solutions/node-sdk/commit/7d0db9a0f75ca6f35cd0459d7edadb34e9429a10))
+* **api:** api update ([#42](https://github.com/Snag-Solutions/node-sdk/issues/42)) ([b0021f7](https://github.com/Snag-Solutions/node-sdk/commit/b0021f77372bdb6c401836f6d8f91cf46e94b43a))
+* **api:** api update ([#43](https://github.com/Snag-Solutions/node-sdk/issues/43)) ([d772569](https://github.com/Snag-Solutions/node-sdk/commit/d77256957b5441ca8878ff871bf331c5a301daf1))
+* **api:** api update ([#44](https://github.com/Snag-Solutions/node-sdk/issues/44)) ([5f8c1af](https://github.com/Snag-Solutions/node-sdk/commit/5f8c1af21d44360eacede294efedba2749a6f628))
+* **api:** api update ([#51](https://github.com/Snag-Solutions/node-sdk/issues/51)) ([c87475e](https://github.com/Snag-Solutions/node-sdk/commit/c87475e7497c1da9281cfb2eeb151c79e0d50cbe))
+* **api:** open api update ([#50](https://github.com/Snag-Solutions/node-sdk/issues/50)) ([048be25](https://github.com/Snag-Solutions/node-sdk/commit/048be2501cf994253d36866b246670d01f7ef498))
+* **api:** open api update ([#52](https://github.com/Snag-Solutions/node-sdk/issues/52)) ([6502084](https://github.com/Snag-Solutions/node-sdk/commit/6502084a0297431c2014c7c0d1eefafbe78d890b))
+
+
+### Chores
+
+* **internal:** bump cross-spawn to v7.0.6 ([#39](https://github.com/Snag-Solutions/node-sdk/issues/39)) ([52be261](https://github.com/Snag-Solutions/node-sdk/commit/52be261cc31d54de1d34360e93dac9fef975f2e0))
+* **internal:** codegen related update ([#34](https://github.com/Snag-Solutions/node-sdk/issues/34)) ([0575ab0](https://github.com/Snag-Solutions/node-sdk/commit/0575ab00573f81fc0238c72f29bc8d6b980d31e6))
+* **internal:** codegen related update ([#46](https://github.com/Snag-Solutions/node-sdk/issues/46)) ([6b97e9f](https://github.com/Snag-Solutions/node-sdk/commit/6b97e9fa2b3f40e8143c38edf2fd5bae1f15990d))
+* **internal:** codegen related update ([#48](https://github.com/Snag-Solutions/node-sdk/issues/48)) ([7be5577](https://github.com/Snag-Solutions/node-sdk/commit/7be5577a10139def97777fe3fc9183b16d2150a0))
+* **internal:** fix some typos ([#45](https://github.com/Snag-Solutions/node-sdk/issues/45)) ([0f0d61a](https://github.com/Snag-Solutions/node-sdk/commit/0f0d61af3d255360727f9681ea48f5eaa1a47193))
+* **internal:** fix some typos ([#47](https://github.com/Snag-Solutions/node-sdk/issues/47)) ([47dc89e](https://github.com/Snag-Solutions/node-sdk/commit/47dc89e909ac05b5ce0e6eb8016b9b1049072889))
+* **internal:** fix some typos ([#49](https://github.com/Snag-Solutions/node-sdk/issues/49)) ([1e0446a](https://github.com/Snag-Solutions/node-sdk/commit/1e0446a04c2ed791e7bfb00943e4ac80d6cd6923))
+* **internal:** remove unnecessary getRequestClient function ([#37](https://github.com/Snag-Solutions/node-sdk/issues/37)) ([0788305](https://github.com/Snag-Solutions/node-sdk/commit/078830511a30b43f25368776f2119a9e9a6a3dfb))
+* **internal:** update isAbsoluteURL ([#41](https://github.com/Snag-Solutions/node-sdk/issues/41)) ([df5ec7b](https://github.com/Snag-Solutions/node-sdk/commit/df5ec7bf4980e406e1392f99ba18c1fb7fcc00f5))
+* **types:** nicer error class types + jsdocs ([#40](https://github.com/Snag-Solutions/node-sdk/issues/40)) ([049a327](https://github.com/Snag-Solutions/node-sdk/commit/049a327ea16f4071d9ae316494137644ea197b01))
+
 ## 0.1.0-alpha.8 (2024-11-23)
 
 Full Changelog: [v0.1.0-alpha.7...v0.1.0-alpha.8](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.7...v0.1.0-alpha.8)
