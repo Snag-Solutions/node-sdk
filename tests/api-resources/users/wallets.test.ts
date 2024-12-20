@@ -27,6 +27,7 @@ describe('resource wallets', () => {
     const response = await client.users.wallets.create({
       walletAddress: 'walletAddress',
       walletType: 'evm',
+      confirmDisconnect: true,
       userId: 'userId',
       verificationData: {
         accessToken: 'accessToken',
