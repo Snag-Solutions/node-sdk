@@ -187,6 +187,8 @@ export interface WalletCreateParams {
 
   walletType: 'evm' | 'solana' | 'imx' | 'sui' | 'ton';
 
+  confirmDisconnect?: boolean;
+
   userId?: string;
 
   verificationData?: WalletCreateParams.VerificationData;
