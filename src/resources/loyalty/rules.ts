@@ -518,6 +518,11 @@ export namespace RuleCreateResponse {
     timeDelayToVerifySeconds?: string | number | null;
 
     /**
+     * Flag indicating if all contracts are tracked.
+     */
+    trackAllContracts?: boolean | null;
+
+    /**
      * URL of the associated Twitter account.
      */
     twitterAccountUrl?: string;
@@ -1247,6 +1252,11 @@ export namespace RuleUpdateResponse {
      * Time delay in seconds to verify actions.
      */
     timeDelayToVerifySeconds?: string | number | null;
+
+    /**
+     * Flag indicating if all contracts are tracked.
+     */
+    trackAllContracts?: boolean | null;
 
     /**
      * URL of the associated Twitter account.
@@ -2134,6 +2144,11 @@ export namespace RuleCreateParams {
     timeDelayToVerifySeconds?: string | number | null;
 
     /**
+     * Flag indicating if all contracts are tracked.
+     */
+    trackAllContracts?: boolean | null;
+
+    /**
      * URL of the associated Twitter account.
      */
     twitterAccountUrl?: string;
@@ -2861,6 +2876,11 @@ export namespace RuleUpdateParams {
      * Time delay in seconds to verify actions.
      */
     timeDelayToVerifySeconds?: string | number | null;
+
+    /**
+     * Flag indicating if all contracts are tracked.
+     */
+    trackAllContracts?: boolean | null;
 
     /**
      * URL of the associated Twitter account.
