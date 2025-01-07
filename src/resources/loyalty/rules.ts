@@ -76,7 +76,7 @@ export interface RuleCreateResponse {
   /**
    * Reward amount associated with the rule
    */
-  amount: unknown | null;
+  amount: unknown;
 
   /**
    * The effective end time of the rule
@@ -931,7 +931,7 @@ export interface RuleUpdateResponse {
   /**
    * Reward amount for the loyalty rule
    */
-  amount: unknown | null;
+  amount: unknown;
 
   /**
    * Effective end time of the rule
@@ -1702,7 +1702,7 @@ export interface RuleCreateParams {
   /**
    * Reward amount associated with the rule
    */
-  amount: unknown | null;
+  amount: unknown;
 
   /**
    * The effective end time of the rule
@@ -2555,7 +2555,7 @@ export interface RuleUpdateParams {
   /**
    * Reward amount for the loyalty rule
    */
-  amount: unknown | null;
+  amount: unknown;
 
   /**
    * Effective end time of the rule
