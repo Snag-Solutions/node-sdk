@@ -970,6 +970,16 @@ export interface RuleUpdateResponse {
   startTime: string | null;
 
   /**
+   * Blockchain address of the associated collection
+   */
+  collectionAddress?: string;
+
+  /**
+   * List of associated collections
+   */
+  collections?: Array<RuleUpdateResponse.Collection> | null;
+
+  /**
    * API URL for custom rewards integration
    */
   customRewardsApiUrl?: string | null;
@@ -1003,6 +1013,40 @@ export interface RuleUpdateResponse {
    * ID of the rule group section to associate with the rule
    */
   loyaltyRuleGroupId?: (string & {}) | 'no-section' | null;
+
+  /**
+   * Blockchain network where the rule will apply
+   */
+  network?:
+    | 'mainnet'
+    | 'polygon'
+    | 'polygon_mumbai'
+    | 'optimism'
+    | 'arbitrum'
+    | 'binance'
+    | 'bscTestnet'
+    | 'avalanche'
+    | 'avalancheFuji'
+    | 'zksync'
+    | 'fantom'
+    | 'fantomTestnet'
+    | 'base'
+    | 'baseSepolia'
+    | 'skaleNebula'
+    | 'xai'
+    | 'berachainArtio'
+    | 'solana'
+    | 'apechain'
+    | 'flowMainnet'
+    | 'campTestnet'
+    | 'sui'
+    | 'vanar'
+    | 'sepolia'
+    | 'optimism_sepolia'
+    | 'arbitrumSepolia'
+    | 'goerli'
+    | 'optimism_goerli'
+    | 'arbitrumGoerli';
 
   /**
    * ID for associated OAuth credentials
@@ -1618,6 +1662,47 @@ export namespace RuleUpdateResponse {
        */
       streakMilestone: number;
     }
+  }
+
+  export interface Collection {
+    /**
+     * Blockchain address of the collection
+     */
+    address: string;
+
+    /**
+     * Blockchain network for the collection
+     */
+    network:
+      | 'mainnet'
+      | 'polygon'
+      | 'polygon_mumbai'
+      | 'optimism'
+      | 'arbitrum'
+      | 'binance'
+      | 'bscTestnet'
+      | 'avalanche'
+      | 'avalancheFuji'
+      | 'zksync'
+      | 'fantom'
+      | 'fantomTestnet'
+      | 'base'
+      | 'baseSepolia'
+      | 'skaleNebula'
+      | 'xai'
+      | 'berachainArtio'
+      | 'solana'
+      | 'apechain'
+      | 'flowMainnet'
+      | 'campTestnet'
+      | 'sui'
+      | 'vanar'
+      | 'sepolia'
+      | 'optimism_sepolia'
+      | 'arbitrumSepolia'
+      | 'goerli'
+      | 'optimism_goerli'
+      | 'arbitrumGoerli';
   }
 }
 
@@ -2595,6 +2680,16 @@ export interface RuleUpdateParams {
   startTime: string | null;
 
   /**
+   * Blockchain address of the associated collection
+   */
+  collectionAddress?: string;
+
+  /**
+   * List of associated collections
+   */
+  collections?: Array<RuleUpdateParams.Collection> | null;
+
+  /**
    * API URL for custom rewards integration
    */
   customRewardsApiUrl?: string | null;
@@ -2628,6 +2723,40 @@ export interface RuleUpdateParams {
    * ID of the rule group section to associate with the rule
    */
   loyaltyRuleGroupId?: (string & {}) | 'no-section' | null;
+
+  /**
+   * Blockchain network where the rule will apply
+   */
+  network?:
+    | 'mainnet'
+    | 'polygon'
+    | 'polygon_mumbai'
+    | 'optimism'
+    | 'arbitrum'
+    | 'binance'
+    | 'bscTestnet'
+    | 'avalanche'
+    | 'avalancheFuji'
+    | 'zksync'
+    | 'fantom'
+    | 'fantomTestnet'
+    | 'base'
+    | 'baseSepolia'
+    | 'skaleNebula'
+    | 'xai'
+    | 'berachainArtio'
+    | 'solana'
+    | 'apechain'
+    | 'flowMainnet'
+    | 'campTestnet'
+    | 'sui'
+    | 'vanar'
+    | 'sepolia'
+    | 'optimism_sepolia'
+    | 'arbitrumSepolia'
+    | 'goerli'
+    | 'optimism_goerli'
+    | 'arbitrumGoerli';
 
   /**
    * ID for associated OAuth credentials
@@ -3243,6 +3372,47 @@ export namespace RuleUpdateParams {
        */
       streakMilestone: number;
     }
+  }
+
+  export interface Collection {
+    /**
+     * Blockchain address of the collection
+     */
+    address: string;
+
+    /**
+     * Blockchain network for the collection
+     */
+    network:
+      | 'mainnet'
+      | 'polygon'
+      | 'polygon_mumbai'
+      | 'optimism'
+      | 'arbitrum'
+      | 'binance'
+      | 'bscTestnet'
+      | 'avalanche'
+      | 'avalancheFuji'
+      | 'zksync'
+      | 'fantom'
+      | 'fantomTestnet'
+      | 'base'
+      | 'baseSepolia'
+      | 'skaleNebula'
+      | 'xai'
+      | 'berachainArtio'
+      | 'solana'
+      | 'apechain'
+      | 'flowMainnet'
+      | 'campTestnet'
+      | 'sui'
+      | 'vanar'
+      | 'sepolia'
+      | 'optimism_sepolia'
+      | 'arbitrumSepolia'
+      | 'goerli'
+      | 'optimism_goerli'
+      | 'arbitrumGoerli';
   }
 }
 
