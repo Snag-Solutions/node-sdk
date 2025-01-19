@@ -21,9 +21,6 @@ export class Metadatas extends APIResource {
   }
 }
 
-/**
- * Schema for user metadata response
- */
 export interface MetadataCreateResponse {
   /**
    * Unique identifier for the user metadata
