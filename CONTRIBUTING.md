@@ -55,12 +55,12 @@ $ cd node-sdk
 # With yarn
 $ yarn link
 $ cd ../my-package
-$ yarn link @snagsolutions/sdk
+$ yarn link snag-sdk
 
 # With pnpm
 $ pnpm link --global
 $ cd ../my-package
-$ pnpm link -—global @snagsolutions/sdk
+$ pnpm link -—global snag-sdk
 ```
 
 ## Running tests
