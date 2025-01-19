@@ -9,9 +9,9 @@ export function getRuntime({ manuallyImported }: { manuallyImported?: boolean } 
   const recommendation =
     manuallyImported ?
       `You may need to use polyfills`
-    : `Add one of these imports before your first \`import … from 'snag-sdk'\`:
-- \`import 'snag-sdk/shims/node'\` (if you're running on Node)
-- \`import 'snag-sdk/shims/web'\` (otherwise)
+    : `Add one of these imports before your first \`import … from '@snagsolutions/sdk'\`:
+- \`import '@snagsolutions/sdk/shims/node'\` (if you're running on Node)
+- \`import '@snagsolutions/sdk/shims/web'\` (otherwise)
 `;
 
   let _fetch, _Request, _Response, _Headers;

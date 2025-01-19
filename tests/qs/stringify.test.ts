@@ -1,7 +1,7 @@
 import iconv from 'iconv-lite';
-import { stringify } from 'snag-sdk/internal/qs';
-import { encode } from 'snag-sdk/internal/qs/utils';
-import { StringifyOptions } from 'snag-sdk/internal/qs/types';
+import { stringify } from '@snagsolutions/sdk/internal/qs';
+import { encode } from '@snagsolutions/sdk/internal/qs/utils';
+import { StringifyOptions } from '@snagsolutions/sdk/internal/qs/types';
 import { empty_test_cases } from './empty-keys-cases';
 import assert from 'assert';
 
