@@ -8,9 +8,9 @@ const client = new SnagSolutions({
   baseURL: process.env['TEST_API_BASE_URL'] ?? 'http://127.0.0.1:4010',
 });
 
-describe('resource websites', () => {
-  test('create: only required params', async () => {
-    const responsePromise = client.websites.create({ name: 'My New Website' });
+describe('resource ruleEdits', () => {
+  test('retrieve: only required params', async () => {
+    const responsePromise = client.loyalty.ruleEdits.retrieve({ loyaltyRuleId: true });
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -20,20 +20,18 @@ describe('resource websites', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  test('create: required and optional params', async () => {
-    const response = await client.websites.create({
-      name: 'My New Website',
-      discordUrl: 'https://discord.gg/mywebsite',
-      homeUrl: 'https://www.mywebsite.com',
-      instagramUsername: '@mywebsite',
+  test('retrieve: required and optional params', async () => {
+    const response = await client.loyalty.ruleEdits.retrieve({
+      loyaltyRuleId: true,
+      limit: 20,
       organizationId: '123e4567-e89b-12d3-a456-426614174001',
-      telegramUrl: 'https://t.me/mywebsite',
-      twitterUsername: '@mywebsite',
+      startingAfter: '123e4567-e89b-12d3-a456-426614174100',
+      websiteId: '123e4567-e89b-12d3-a456-426614174002',
     });
   });
 
-  test('list', async () => {
-    const responsePromise = client.websites.list();
+  test('restore', async () => {
+    const responsePromise = client.loyalty.ruleEdits.restore('182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e');
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -43,23 +41,12 @@ describe('resource websites', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  test('list: request options instead of params are passed correctly', async () => {
-    // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
-    await expect(client.websites.list({ path: '/_stainless_unknown_path' })).rejects.toThrow(
-      SnagSolutions.NotFoundError,
-    );
-  });
-
-  test('list: request options and params are passed correctly', async () => {
+  test('restore: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
-      client.websites.list(
-        {
-          limit: 10,
-          name: 'My Website',
-          organizationId: '123e4567-e89b-12d3-a456-426614174001',
-          startingAfter: '123e4567-e89b-12d3-a456-426614174000',
-        },
+      client.loyalty.ruleEdits.restore(
+        '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+        {},
         { path: '/_stainless_unknown_path' },
       ),
     ).rejects.toThrow(SnagSolutions.NotFoundError);

@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import SnagSolutions from '@snag/sdk';
+import SnagSolutions from '@snagsolutions/sdk';
 import { Response } from 'node-fetch';
 
 const client = new SnagSolutions({
@@ -364,5 +364,27 @@ describe('resource rules', () => {
         { path: '/_stainless_unknown_path' },
       ),
     ).rejects.toThrow(SnagSolutions.NotFoundError);
+  });
+
+  test('status: only required params', async () => {
+    const responsePromise = client.loyalty.rules.status({
+      organizationId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+      websiteId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+    });
+    const rawResponse = await responsePromise.asResponse();
+    expect(rawResponse).toBeInstanceOf(Response);
+    const response = await responsePromise;
+    expect(response).not.toBeInstanceOf(Response);
+    const dataAndResponse = await responsePromise.withResponse();
+    expect(dataAndResponse.data).toBe(response);
+    expect(dataAndResponse.response).toBe(rawResponse);
+  });
+
+  test('status: required and optional params', async () => {
+    const response = await client.loyalty.rules.status({
+      organizationId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+      websiteId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+      userId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+    });
   });
 });

@@ -8,9 +8,12 @@ const client = new SnagSolutions({
   baseURL: process.env['TEST_API_BASE_URL'] ?? 'http://127.0.0.1:4010',
 });
 
-describe('resource assets', () => {
-  test('create: only required params', async () => {
-    const responsePromise = client.assets.create({ fileName: 'example.png' });
+describe('resource quests', () => {
+  test('complete: only required params', async () => {
+    const responsePromise = client.drip.quests.complete('dripQuestId', {
+      organizationId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+      websiteId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+    });
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -20,13 +23,11 @@ describe('resource assets', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  test('create: required and optional params', async () => {
-    const response = await client.assets.create({
-      fileName: 'example.png',
-      filePath: 'announcements',
-      organizationId: '123e4567-e89b-12d3-a456-426614174222',
-      userId: '123e4567-e89b-12d3-a456-426614174333',
-      websiteId: '123e4567-e89b-12d3-a456-426614174111',
+  test('complete: required and optional params', async () => {
+    const response = await client.drip.quests.complete('dripQuestId', {
+      organizationId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+      websiteId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+      userId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
     });
   });
 });
