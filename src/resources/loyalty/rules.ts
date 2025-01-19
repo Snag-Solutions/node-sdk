@@ -68,6 +68,13 @@ export class Rules extends APIResource {
     }
     return this._client.post(`/api/loyalty/rules/${id}/complete`, { body, ...options });
   }
+
+  /**
+   * This will return the processing status of quests for a specific user
+   */
+  status(query: RuleStatusParams, options?: Core.RequestOptions): Core.APIPromise<RuleStatusResponse> {
+    return this._client.get('/api/loyalty/rules/status', { query, ...options });
+  }
 }
 
 export interface RuleCreateResponse {
@@ -1784,6 +1791,22 @@ export interface RuleCompleteResponse {
   message: string;
 }
 
+export interface RuleStatusResponse {
+  data: Array<RuleStatusResponse.Data>;
+}
+
+export namespace RuleStatusResponse {
+  export interface Data {
+    loyaltyRuleId: string;
+
+    status: 'pending' | 'processing' | 'completed' | 'failed';
+
+    userId: string;
+
+    message?: string;
+  }
+}
+
 export interface RuleCreateParams {
   /**
    * Reward amount associated with the rule
@@ -3465,6 +3488,14 @@ export interface RuleCompleteParams {
   walletAddress?: string;
 }
 
+export interface RuleStatusParams {
+  organizationId: string;
+
+  websiteId: string;
+
+  userId?: string;
+}
+
 export declare namespace Rules {
   export {
     type RuleCreateResponse as RuleCreateResponse,
@@ -3472,9 +3503,11 @@ export declare namespace Rules {
     type RuleListResponse as RuleListResponse,
     type RuleDeleteResponse as RuleDeleteResponse,
     type RuleCompleteResponse as RuleCompleteResponse,
+    type RuleStatusResponse as RuleStatusResponse,
     type RuleCreateParams as RuleCreateParams,
     type RuleUpdateParams as RuleUpdateParams,
     type RuleListParams as RuleListParams,
     type RuleCompleteParams as RuleCompleteParams,
+    type RuleStatusParams as RuleStatusParams,
   };
 }
