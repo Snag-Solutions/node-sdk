@@ -1,8 +1,8 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import SnagSolutions from 'snag-sdk';
-import { APIUserAbortError } from 'snag-sdk';
-import { Headers } from 'snag-sdk/core';
+import SnagSolutions from '@snagsolutions/sdk';
+import { APIUserAbortError } from '@snagsolutions/sdk';
+import { Headers } from '@snagsolutions/sdk/core';
 import defaultFetch, { Response, type RequestInit, type RequestInfo } from 'node-fetch';
 
 describe('instantiate client', () => {
