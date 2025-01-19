@@ -15,6 +15,7 @@ import {
   WebsiteListResponse,
   Websites,
 } from './resources/websites';
+import { Drip } from './resources/drip/drip';
 import { Loyalty } from './resources/loyalty/loyalty';
 import { Users } from './resources/users/users';
 
@@ -136,6 +137,7 @@ export class SnagSolutions extends Core.APIClient {
   loyalty: API.Loyalty = new API.Loyalty(this);
   auctionBids: API.AuctionBids = new API.AuctionBids(this);
   websites: API.Websites = new API.Websites(this);
+  drip: API.Drip = new API.Drip(this);
 
   protected override defaultQuery(): Core.DefaultQuery | undefined {
     return this._options.defaultQuery;
@@ -182,6 +184,7 @@ SnagSolutions.Users = Users;
 SnagSolutions.Loyalty = Loyalty;
 SnagSolutions.AuctionBids = AuctionBids;
 SnagSolutions.Websites = Websites;
+SnagSolutions.Drip = Drip;
 export declare namespace SnagSolutions {
   export type RequestOptions = Core.RequestOptions;
 
@@ -208,6 +211,8 @@ export declare namespace SnagSolutions {
     type WebsiteCreateParams as WebsiteCreateParams,
     type WebsiteListParams as WebsiteListParams,
   };
+
+  export { Drip as Drip };
 }
 
 export { toFile, fileFromPath } from './uploads';
