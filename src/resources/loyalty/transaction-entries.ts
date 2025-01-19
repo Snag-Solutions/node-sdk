@@ -194,6 +194,13 @@ export interface TransactionEntryListParams {
   type?: 'auction_bid' | 'direct_mint' | 'loyalty_rule' | 'api_key' | 'order';
 
   /**
+   * When passed in return the list of fulfilled entries for loyalty rules. If a
+   * loyalty rule has a fulfilled entry this means the user cannot currently complete
+   * the rule. Must be passed in with userId or walletAddress.
+   */
+  userCompletedLoyaltyRuleId?: string | Array<string>;
+
+  /**
    * User ID or array of User IDs to filter by
    */
   userId?: string | Array<string>;

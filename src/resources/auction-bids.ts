@@ -40,7 +40,7 @@ export interface AuctionBidCreateParams {
   /**
    * Bid amount
    */
-  amount: unknown | null;
+  amount: unknown;
 
   /**
    * ID of the auction

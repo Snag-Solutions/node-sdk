@@ -46,7 +46,11 @@ export class Rules extends APIResource {
   }
 
   /**
-   * Verify a loyalty rule based on user action and reward them if applicable.
+   * Verify a loyalty rule based on user action and reward them if applicable. This
+   * endpoint currenlty onlu supports following rule types code_entry, text_input,
+   * link_click, discord_member, connect_wallet, check_in, external_rule,
+   * drip_x_follow, drip_x_new_tweet, drip_x_text_in_bio, drip_x_text_in_name,
+   * drip_x_text_in_comment, drip_x_tweet, telegram_join
    */
   complete(
     id: string,
@@ -72,7 +76,7 @@ export interface RuleCreateResponse {
   /**
    * Reward amount associated with the rule
    */
-  amount: unknown | null;
+  amount: unknown;
 
   /**
    * The effective end time of the rule
@@ -140,38 +144,40 @@ export interface RuleCreateResponse {
     | 'TwitterBio'
     | 'TwitterHashTagPost'
     | 'Retweet'
-    | 'twitter_follow'
-    | 'twitter_like'
-    | 'twitter_comment'
-    | 'connected_discord'
-    | 'connected_twitter'
-    | 'connected_email'
-    | 'profile_completed'
-    | 'referred_user'
-    | 'code_entry'
     | 'check_in'
-    | 'external_rule'
-    | 'link_click'
-    | 'tweet_liked_by_project'
-    | 'twitter_post_hashtag'
-    | 'token_hold_erc20'
-    | 'snapshot_governance'
-    | 'twitter_followers'
+    | 'code_entry'
+    | 'connect_wallet'
+    | 'connected_discord'
+    | 'connected_email'
+    | 'connected_epic'
+    | 'connected_steam'
+    | 'connected_telegram'
+    | 'connected_twitter'
+    | 'create_partner_account'
     | 'discord_member'
-    | 'text_input'
-    | 'telegram_messages'
     | 'drip_x_follow'
-    | 'drip_x_tweet'
     | 'drip_x_new_tweet'
     | 'drip_x_text_in_bio'
+    | 'drip_x_text_in_comment'
     | 'drip_x_text_in_name'
-    | 'smart_contract_event'
-    | 'create_partner_account'
-    | 'telegram_join'
-    | 'connected_telegram'
+    | 'drip_x_tweet'
+    | 'external_rule'
+    | 'link_click'
     | 'manual_upload'
-    | 'connect_wallet'
-    | 'connected_steam';
+    | 'profile_completed'
+    | 'referred_user'
+    | 'smart_contract_event'
+    | 'snapshot_governance'
+    | 'telegram_join'
+    | 'telegram_messages'
+    | 'text_input'
+    | 'token_hold_erc20'
+    | 'tweet_liked_by_project'
+    | 'twitter_comment'
+    | 'twitter_follow'
+    | 'twitter_followers'
+    | 'twitter_like'
+    | 'twitter_post_hashtag';
 
   /**
    * Unique identifier for the associated website
@@ -222,6 +228,11 @@ export interface RuleCreateResponse {
    * Whether this rule is mandatory
    */
   isRequired?: boolean;
+
+  /**
+   * Unique identifier for the loyalty rule group
+   */
+  loyaltyRuleGroupId?: 'no-section' | (string & {}) | null;
 
   /**
    * Blockchain network where the rule will apply
@@ -508,6 +519,11 @@ export namespace RuleCreateResponse {
     timeDelayToVerifySeconds?: string | number | null;
 
     /**
+     * Flag indicating if all contracts are tracked.
+     */
+    trackAllContracts?: boolean | null;
+
+    /**
      * URL of the associated Twitter account.
      */
     twitterAccountUrl?: string;
@@ -752,6 +768,11 @@ export namespace RuleCreateResponse {
       bonus?: Array<SmartContract.Bonus> | null;
 
       /**
+       * ID of the smart contract.
+       */
+      contractId?: string | null;
+
+      /**
        * Criteria to evaluate the smart contract event.
        */
       criteria?: 'everyEvent' | 'byParameter' | null;
@@ -911,7 +932,7 @@ export interface RuleUpdateResponse {
   /**
    * Reward amount for the loyalty rule
    */
-  amount: unknown | null;
+  amount: unknown;
 
   /**
    * Effective end time of the rule
@@ -949,6 +970,16 @@ export interface RuleUpdateResponse {
   startTime: string | null;
 
   /**
+   * Blockchain address of the associated collection
+   */
+  collectionAddress?: string;
+
+  /**
+   * List of associated collections
+   */
+  collections?: Array<RuleUpdateResponse.Collection> | null;
+
+  /**
    * API URL for custom rewards integration
    */
   customRewardsApiUrl?: string | null;
@@ -977,6 +1008,45 @@ export interface RuleUpdateResponse {
    * Whether this rule is required for participation
    */
   isRequired?: boolean;
+
+  /**
+   * ID of the rule group section to associate with the rule
+   */
+  loyaltyRuleGroupId?: (string & {}) | 'no-section' | null;
+
+  /**
+   * Blockchain network where the rule will apply
+   */
+  network?:
+    | 'mainnet'
+    | 'polygon'
+    | 'polygon_mumbai'
+    | 'optimism'
+    | 'arbitrum'
+    | 'binance'
+    | 'bscTestnet'
+    | 'avalanche'
+    | 'avalancheFuji'
+    | 'zksync'
+    | 'fantom'
+    | 'fantomTestnet'
+    | 'base'
+    | 'baseSepolia'
+    | 'skaleNebula'
+    | 'xai'
+    | 'berachainArtio'
+    | 'solana'
+    | 'apechain'
+    | 'flowMainnet'
+    | 'campTestnet'
+    | 'sui'
+    | 'vanar'
+    | 'sepolia'
+    | 'optimism_sepolia'
+    | 'arbitrumSepolia'
+    | 'goerli'
+    | 'optimism_goerli'
+    | 'arbitrumGoerli';
 
   /**
    * ID for associated OAuth credentials
@@ -1229,6 +1299,11 @@ export namespace RuleUpdateResponse {
     timeDelayToVerifySeconds?: string | number | null;
 
     /**
+     * Flag indicating if all contracts are tracked.
+     */
+    trackAllContracts?: boolean | null;
+
+    /**
      * URL of the associated Twitter account.
      */
     twitterAccountUrl?: string;
@@ -1473,6 +1548,11 @@ export namespace RuleUpdateResponse {
       bonus?: Array<SmartContract.Bonus> | null;
 
       /**
+       * ID of the smart contract.
+       */
+      contractId?: string | null;
+
+      /**
        * Criteria to evaluate the smart contract event.
        */
       criteria?: 'everyEvent' | 'byParameter' | null;
@@ -1583,6 +1663,47 @@ export namespace RuleUpdateResponse {
       streakMilestone: number;
     }
   }
+
+  export interface Collection {
+    /**
+     * Blockchain address of the collection
+     */
+    address: string;
+
+    /**
+     * Blockchain network for the collection
+     */
+    network:
+      | 'mainnet'
+      | 'polygon'
+      | 'polygon_mumbai'
+      | 'optimism'
+      | 'arbitrum'
+      | 'binance'
+      | 'bscTestnet'
+      | 'avalanche'
+      | 'avalancheFuji'
+      | 'zksync'
+      | 'fantom'
+      | 'fantomTestnet'
+      | 'base'
+      | 'baseSepolia'
+      | 'skaleNebula'
+      | 'xai'
+      | 'berachainArtio'
+      | 'solana'
+      | 'apechain'
+      | 'flowMainnet'
+      | 'campTestnet'
+      | 'sui'
+      | 'vanar'
+      | 'sepolia'
+      | 'optimism_sepolia'
+      | 'arbitrumSepolia'
+      | 'goerli'
+      | 'optimism_goerli'
+      | 'arbitrumGoerli';
+  }
 }
 
 export interface RuleListResponse {
@@ -1667,7 +1788,7 @@ export interface RuleCreateParams {
   /**
    * Reward amount associated with the rule
    */
-  amount: unknown | null;
+  amount: unknown;
 
   /**
    * The effective end time of the rule
@@ -1735,38 +1856,40 @@ export interface RuleCreateParams {
     | 'TwitterBio'
     | 'TwitterHashTagPost'
     | 'Retweet'
-    | 'twitter_follow'
-    | 'twitter_like'
-    | 'twitter_comment'
-    | 'connected_discord'
-    | 'connected_twitter'
-    | 'connected_email'
-    | 'profile_completed'
-    | 'referred_user'
-    | 'code_entry'
     | 'check_in'
-    | 'external_rule'
-    | 'link_click'
-    | 'tweet_liked_by_project'
-    | 'twitter_post_hashtag'
-    | 'token_hold_erc20'
-    | 'snapshot_governance'
-    | 'twitter_followers'
+    | 'code_entry'
+    | 'connect_wallet'
+    | 'connected_discord'
+    | 'connected_email'
+    | 'connected_epic'
+    | 'connected_steam'
+    | 'connected_telegram'
+    | 'connected_twitter'
+    | 'create_partner_account'
     | 'discord_member'
-    | 'text_input'
-    | 'telegram_messages'
     | 'drip_x_follow'
-    | 'drip_x_tweet'
     | 'drip_x_new_tweet'
     | 'drip_x_text_in_bio'
+    | 'drip_x_text_in_comment'
     | 'drip_x_text_in_name'
-    | 'smart_contract_event'
-    | 'create_partner_account'
-    | 'telegram_join'
-    | 'connected_telegram'
+    | 'drip_x_tweet'
+    | 'external_rule'
+    | 'link_click'
     | 'manual_upload'
-    | 'connect_wallet'
-    | 'connected_steam';
+    | 'profile_completed'
+    | 'referred_user'
+    | 'smart_contract_event'
+    | 'snapshot_governance'
+    | 'telegram_join'
+    | 'telegram_messages'
+    | 'text_input'
+    | 'token_hold_erc20'
+    | 'tweet_liked_by_project'
+    | 'twitter_comment'
+    | 'twitter_follow'
+    | 'twitter_followers'
+    | 'twitter_like'
+    | 'twitter_post_hashtag';
 
   /**
    * Unique identifier for the associated website
@@ -1817,6 +1940,11 @@ export interface RuleCreateParams {
    * Whether this rule is mandatory
    */
   isRequired?: boolean;
+
+  /**
+   * Unique identifier for the loyalty rule group
+   */
+  loyaltyRuleGroupId?: 'no-section' | (string & {}) | null;
 
   /**
    * Blockchain network where the rule will apply
@@ -2103,6 +2231,11 @@ export namespace RuleCreateParams {
     timeDelayToVerifySeconds?: string | number | null;
 
     /**
+     * Flag indicating if all contracts are tracked.
+     */
+    trackAllContracts?: boolean | null;
+
+    /**
      * URL of the associated Twitter account.
      */
     twitterAccountUrl?: string;
@@ -2347,6 +2480,11 @@ export namespace RuleCreateParams {
       bonus?: Array<SmartContract.Bonus> | null;
 
       /**
+       * ID of the smart contract.
+       */
+      contractId?: string | null;
+
+      /**
        * Criteria to evaluate the smart contract event.
        */
       criteria?: 'everyEvent' | 'byParameter' | null;
@@ -2504,7 +2642,7 @@ export interface RuleUpdateParams {
   /**
    * Reward amount for the loyalty rule
    */
-  amount: unknown | null;
+  amount: unknown;
 
   /**
    * Effective end time of the rule
@@ -2542,6 +2680,16 @@ export interface RuleUpdateParams {
   startTime: string | null;
 
   /**
+   * Blockchain address of the associated collection
+   */
+  collectionAddress?: string;
+
+  /**
+   * List of associated collections
+   */
+  collections?: Array<RuleUpdateParams.Collection> | null;
+
+  /**
    * API URL for custom rewards integration
    */
   customRewardsApiUrl?: string | null;
@@ -2570,6 +2718,45 @@ export interface RuleUpdateParams {
    * Whether this rule is required for participation
    */
   isRequired?: boolean;
+
+  /**
+   * ID of the rule group section to associate with the rule
+   */
+  loyaltyRuleGroupId?: (string & {}) | 'no-section' | null;
+
+  /**
+   * Blockchain network where the rule will apply
+   */
+  network?:
+    | 'mainnet'
+    | 'polygon'
+    | 'polygon_mumbai'
+    | 'optimism'
+    | 'arbitrum'
+    | 'binance'
+    | 'bscTestnet'
+    | 'avalanche'
+    | 'avalancheFuji'
+    | 'zksync'
+    | 'fantom'
+    | 'fantomTestnet'
+    | 'base'
+    | 'baseSepolia'
+    | 'skaleNebula'
+    | 'xai'
+    | 'berachainArtio'
+    | 'solana'
+    | 'apechain'
+    | 'flowMainnet'
+    | 'campTestnet'
+    | 'sui'
+    | 'vanar'
+    | 'sepolia'
+    | 'optimism_sepolia'
+    | 'arbitrumSepolia'
+    | 'goerli'
+    | 'optimism_goerli'
+    | 'arbitrumGoerli';
 
   /**
    * ID for associated OAuth credentials
@@ -2822,6 +3009,11 @@ export namespace RuleUpdateParams {
     timeDelayToVerifySeconds?: string | number | null;
 
     /**
+     * Flag indicating if all contracts are tracked.
+     */
+    trackAllContracts?: boolean | null;
+
+    /**
      * URL of the associated Twitter account.
      */
     twitterAccountUrl?: string;
@@ -3066,6 +3258,11 @@ export namespace RuleUpdateParams {
       bonus?: Array<SmartContract.Bonus> | null;
 
       /**
+       * ID of the smart contract.
+       */
+      contractId?: string | null;
+
+      /**
        * Criteria to evaluate the smart contract event.
        */
       criteria?: 'everyEvent' | 'byParameter' | null;
@@ -3176,6 +3373,47 @@ export namespace RuleUpdateParams {
       streakMilestone: number;
     }
   }
+
+  export interface Collection {
+    /**
+     * Blockchain address of the collection
+     */
+    address: string;
+
+    /**
+     * Blockchain network for the collection
+     */
+    network:
+      | 'mainnet'
+      | 'polygon'
+      | 'polygon_mumbai'
+      | 'optimism'
+      | 'arbitrum'
+      | 'binance'
+      | 'bscTestnet'
+      | 'avalanche'
+      | 'avalancheFuji'
+      | 'zksync'
+      | 'fantom'
+      | 'fantomTestnet'
+      | 'base'
+      | 'baseSepolia'
+      | 'skaleNebula'
+      | 'xai'
+      | 'berachainArtio'
+      | 'solana'
+      | 'apechain'
+      | 'flowMainnet'
+      | 'campTestnet'
+      | 'sui'
+      | 'vanar'
+      | 'sepolia'
+      | 'optimism_sepolia'
+      | 'arbitrumSepolia'
+      | 'goerli'
+      | 'optimism_goerli'
+      | 'arbitrumGoerli';
+  }
 }
 
 export interface RuleListParams {
@@ -3207,6 +3445,11 @@ export interface RuleListParams {
 
 export interface RuleCompleteParams {
   /**
+   * Link to the comment made by user
+   */
+  commentLink?: string;
+
+  /**
    * Unique identifier for the user
    */
   userId?: string;
@@ -3215,6 +3458,11 @@ export interface RuleCompleteParams {
    * Optional verification code for completing the loyalty rule
    */
   verificationCode?: string;
+
+  /**
+   * Wallet address of the user can only be used if userId is not provided
+   */
+  walletAddress?: string;
 }
 
 export declare namespace Rules {

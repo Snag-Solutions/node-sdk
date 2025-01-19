@@ -122,6 +122,23 @@ describe('instantiate client', () => {
     expect(spy).toHaveBeenCalledTimes(1);
   });
 
+  test('normalized method', async () => {
+    let capturedRequest: RequestInit | undefined;
+    const testFetch = async (url: RequestInfo, init: RequestInit = {}): Promise<Response> => {
+      capturedRequest = init;
+      return new Response(JSON.stringify({}), { headers: { 'Content-Type': 'application/json' } });
+    };
+
+    const client = new SnagSolutions({
+      baseURL: 'http://localhost:5000/',
+      apiKey: 'My API Key',
+      fetch: testFetch,
+    });
+
+    await client.patch('/foo');
+    expect(capturedRequest?.method).toEqual('PATCH');
+  });
+
   describe('baseUrl', () => {
     test('trailing slash', () => {
       const client = new SnagSolutions({
@@ -183,7 +200,7 @@ describe('instantiate client', () => {
     expect(client.apiKey).toBe('My API Key');
   });
 
-  test('with overriden environment variable arguments', () => {
+  test('with overridden environment variable arguments', () => {
     // set options via env var
     process.env['X_API_KEY'] = 'another My API Key';
     const client = new SnagSolutions({ apiKey: 'My API Key' });
