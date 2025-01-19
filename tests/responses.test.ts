@@ -1,5 +1,5 @@
-import { createResponseHeaders } from '@snagsolutions/sdk/core';
-import { Headers } from '@snagsolutions/sdk/_shims/index';
+import { createResponseHeaders } from 'snag-sdk/core';
+import { Headers } from 'snag-sdk/_shims/index';
 
 describe('response parsing', () => {
   // TODO: test unicode characters

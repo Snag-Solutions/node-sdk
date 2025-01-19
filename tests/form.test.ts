@@ -1,6 +1,6 @@
-import { multipartFormRequestOptions, createForm } from '@snagsolutions/sdk/core';
-import { Blob } from '@snagsolutions/sdk/_shims/index';
-import { toFile } from '@snagsolutions/sdk';
+import { multipartFormRequestOptions, createForm } from 'snag-sdk/core';
+import { Blob } from 'snag-sdk/_shims/index';
+import { toFile } from 'snag-sdk';
 
 describe('form data validation', () => {
   test('valid values do not error', async () => {
