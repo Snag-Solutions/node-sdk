@@ -3451,6 +3451,11 @@ export interface RuleListParams {
   limit?: number;
 
   /**
+   * ID of the loyalty rule group to filter results
+   */
+  loyaltyRuleGroupId?: string;
+
+  /**
    * Unique identifier for the organization to filter by
    */
   organizationId?: string;
