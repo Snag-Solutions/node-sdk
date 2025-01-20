@@ -301,6 +301,7 @@ describe('resource rules', () => {
         {
           collectionAddress: '0x1234567890abcdef1234567890abcdef12345678',
           limit: 50,
+          loyaltyRuleGroupId: '123e4567-e89b-12d3-a456-426614174004',
           organizationId: '123e4567-e89b-12d3-a456-426614174001',
           startingAfter: '123e4567-e89b-12d3-a456-426614174010',
           websiteId: '123e4567-e89b-12d3-a456-426614174002',
