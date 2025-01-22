@@ -35,6 +35,7 @@ describe('resource badges', () => {
         {
           type: 'rule',
           amount: 10,
+          csvUrl: 'https://example.com/csv',
           description: 'Example description',
           loyaltyBadgeId: '123e4567-e89b-12d3-a456-426614174333',
           loyaltyCurrencyId: '123e4567-e89b-12d3-a456-426614174333',
