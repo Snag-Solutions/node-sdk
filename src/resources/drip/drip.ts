@@ -2,9 +2,9 @@
 
 import { APIResource } from '../../resource';
 import * as QuestsAPI from './quests';
-import { QuestCompleteParams, QuestCompleteResponse, Quests } from './quests';
+import { Quests } from './quests';
 import * as StatusAPI from './status';
-import { Status, StatusRetrieveResponse } from './status';
+import { Status } from './status';
 
 export class Drip extends APIResource {
   quests: QuestsAPI.Quests = new QuestsAPI.Quests(this._client);
@@ -15,11 +15,7 @@ Drip.Quests = Quests;
 Drip.Status = Status;
 
 export declare namespace Drip {
-  export {
-    Quests as Quests,
-    type QuestCompleteResponse as QuestCompleteResponse,
-    type QuestCompleteParams as QuestCompleteParams,
-  };
+  export { Quests as Quests };
 
-  export { Status as Status, type StatusRetrieveResponse as StatusRetrieveResponse };
+  export { Status as Status };
 }
