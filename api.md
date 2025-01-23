@@ -159,20 +159,4 @@ Methods:
 
 ## Quests
 
-Types:
-
-- <code><a href="./src/resources/drip/quests.ts">QuestCompleteResponse</a></code>
-
-Methods:
-
-- <code title="post /api/drip/quests/{dripQuestId}/complete">client.drip.quests.<a href="./src/resources/drip/quests.ts">complete</a>(dripQuestId, { ...params }) -> QuestCompleteResponse</code>
-
 ## Status
-
-Types:
-
-- <code><a href="./src/resources/drip/status.ts">StatusRetrieveResponse</a></code>
-
-Methods:
-
-- <code title="get /api/drip/status/{verificationId}">client.drip.status.<a href="./src/resources/drip/status.ts">retrieve</a>(verificationId) -> StatusRetrieveResponse</code>
