@@ -184,7 +184,9 @@ export interface RuleCreateResponse {
     | 'twitter_follow'
     | 'twitter_followers'
     | 'twitter_like'
-    | 'twitter_post_hashtag';
+    | 'twitter_post_hashtag'
+    | 'quiz'
+    | 'poll';
 
   /**
    * Unique identifier for the associated website
@@ -1912,7 +1914,9 @@ export interface RuleCreateParams {
     | 'twitter_follow'
     | 'twitter_followers'
     | 'twitter_like'
-    | 'twitter_post_hashtag';
+    | 'twitter_post_hashtag'
+    | 'quiz'
+    | 'poll';
 
   /**
    * Unique identifier for the associated website
@@ -3476,6 +3480,11 @@ export interface RuleCompleteParams {
    * Link to the comment made by user
    */
   commentLink?: string;
+
+  /**
+   * ID of the choice selected by the user
+   */
+  loyaltyQuestionChoiceId?: string;
 
   /**
    * Unique identifier for the user
