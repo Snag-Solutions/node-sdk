@@ -668,6 +668,11 @@ export namespace RuleCreateResponse {
          * Array of emojis used in the channel.
          */
         emojis?: Array<Channel.Emoji>;
+
+        /**
+         * Phrase of text to be present in the discord message
+         */
+        text?: string;
       }
 
       export namespace Channel {
@@ -1448,6 +1453,11 @@ export namespace RuleUpdateResponse {
          * Array of emojis used in the channel.
          */
         emojis?: Array<Channel.Emoji>;
+
+        /**
+         * Phrase of text to be present in the discord message
+         */
+        text?: string;
       }
 
       export namespace Channel {
@@ -2398,6 +2408,11 @@ export namespace RuleCreateParams {
          * Array of emojis used in the channel.
          */
         emojis?: Array<Channel.Emoji>;
+
+        /**
+         * Phrase of text to be present in the discord message
+         */
+        text?: string;
       }
 
       export namespace Channel {
@@ -3176,6 +3191,11 @@ export namespace RuleUpdateParams {
          * Array of emojis used in the channel.
          */
         emojis?: Array<Channel.Emoji>;
+
+        /**
+         * Phrase of text to be present in the discord message
+         */
+        text?: string;
       }
 
       export namespace Channel {
