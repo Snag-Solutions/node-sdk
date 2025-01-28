@@ -90,7 +90,7 @@ describe('resource multipliers', () => {
           discordUser: 'discordUser',
           externalIdentifier: 'externalIdentifier',
           includeDeleted: true,
-          limit: 0,
+          limit: 1000,
           organizationId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
           startingAfter: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
           twitterUser: 'twitterUser',
