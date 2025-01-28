@@ -55,7 +55,7 @@ describe('resource rules', () => {
         discordServersToJoin: [
           {
             id: '123456789012345678',
-            channels: [{ id: '987654321098765432', emojis: [{ id: '1f600' }] }],
+            channels: [{ id: '987654321098765432', emojis: [{ id: '1f600' }], text: 'Hello' }],
             roles: [{ id: 'role123' }],
           },
         ],
@@ -188,7 +188,7 @@ describe('resource rules', () => {
         discordServersToJoin: [
           {
             id: '123456789012345678',
-            channels: [{ id: '987654321098765432', emojis: [{ id: '1f600' }] }],
+            channels: [{ id: '987654321098765432', emojis: [{ id: '1f600' }], text: 'Hello' }],
             roles: [{ id: 'role123' }],
           },
         ],
