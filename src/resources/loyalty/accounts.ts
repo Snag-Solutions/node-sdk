@@ -139,6 +139,11 @@ export interface AccountListParams {
   discordUser?: string;
 
   /**
+   * Whether to include wallet group information
+   */
+  includeWalletGroup?: boolean | null;
+
+  /**
    * Maximum number of accounts to return
    */
   limit?: number | null;
