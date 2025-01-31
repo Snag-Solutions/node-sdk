@@ -12,18 +12,6 @@ Methods:
 
 ## Wallets
 
-Types:
-
-- <code><a href="./src/resources/users/wallets.ts">WalletCreateResponse</a></code>
-- <code><a href="./src/resources/users/wallets.ts">WalletListResponse</a></code>
-- <code><a href="./src/resources/users/wallets.ts">WalletDeleteResponse</a></code>
-
-Methods:
-
-- <code title="post /api/users/wallets">client.users.wallets.<a href="./src/resources/users/wallets.ts">create</a>({ ...params }) -> WalletCreateResponse</code>
-- <code title="get /api/users/wallets">client.users.wallets.<a href="./src/resources/users/wallets.ts">list</a>({ ...params }) -> WalletListResponse</code>
-- <code title="delete /api/users/wallets/{id}">client.users.wallets.<a href="./src/resources/users/wallets.ts">delete</a>(id) -> WalletDeleteResponse</code>
-
 ## Metadatas
 
 Types:

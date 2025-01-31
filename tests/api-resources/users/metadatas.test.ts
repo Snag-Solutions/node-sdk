@@ -45,6 +45,8 @@ describe('resource metadatas', () => {
           telegramUsername: 'telegramUsername',
           twitterUser: 'twitterUser',
           twitterUserId: 'twitterUserId',
+          userGroupExternalIdentifier: 'userGroupExternalIdentifier',
+          userGroupId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
           userId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
           walletAddress: 'walletAddress',
           walletGroupIdentifier: 'walletGroupIdentifier',

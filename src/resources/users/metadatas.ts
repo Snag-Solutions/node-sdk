@@ -85,6 +85,10 @@ export interface MetadataCreateParams {
 
   twitterUserId?: string | null;
 
+  userGroupExternalIdentifier?: string | null;
+
+  userGroupId?: string;
+
   userId?: string;
 
   walletAddress?: string;
