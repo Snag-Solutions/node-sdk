@@ -4,7 +4,14 @@ import { APIResource } from '../../resource';
 import * as MetadatasAPI from './metadatas';
 import { MetadataCreateParams, MetadataCreateResponse, Metadatas } from './metadatas';
 import * as WalletsAPI from './wallets';
-import { Wallets } from './wallets';
+import {
+  WalletCreateParams,
+  WalletCreateResponse,
+  WalletDeleteResponse,
+  WalletListParams,
+  WalletListResponse,
+  Wallets,
+} from './wallets';
 
 export class Users extends APIResource {
   wallets: WalletsAPI.Wallets = new WalletsAPI.Wallets(this._client);
@@ -15,7 +22,14 @@ Users.Wallets = Wallets;
 Users.Metadatas = Metadatas;
 
 export declare namespace Users {
-  export { Wallets as Wallets };
+  export {
+    Wallets as Wallets,
+    type WalletCreateResponse as WalletCreateResponse,
+    type WalletListResponse as WalletListResponse,
+    type WalletDeleteResponse as WalletDeleteResponse,
+    type WalletCreateParams as WalletCreateParams,
+    type WalletListParams as WalletListParams,
+  };
 
   export {
     Metadatas as Metadatas,

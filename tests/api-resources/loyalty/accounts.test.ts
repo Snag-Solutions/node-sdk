@@ -33,6 +33,7 @@ describe('resource accounts', () => {
       client.loyalty.accounts.list(
         {
           discordUser: 'user123#4567',
+          includeWalletGroup: true,
           limit: 20,
           loyaltyCurrencyId: '123e4567-e89b-12d3-a456-426614174090',
           'orderBy[amount]': 'asc',
