@@ -79,6 +79,7 @@ describe('resource rules', () => {
         onlyKnownUsers: false,
         onlyNative: true,
         onlyNonListed: true,
+        onlyRewardSingleTokenOwnership: true,
         promoCode: 'PROMO123',
         range: [{ amount: 5, endRange: 10, startRange: 1 }],
         referralRequirements: {
@@ -212,6 +213,7 @@ describe('resource rules', () => {
         onlyKnownUsers: false,
         onlyNative: true,
         onlyNonListed: true,
+        onlyRewardSingleTokenOwnership: true,
         promoCode: 'PROMO123',
         range: [{ amount: 5, endRange: 10, startRange: 1 }],
         referralRequirements: {
