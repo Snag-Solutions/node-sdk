@@ -444,6 +444,11 @@ export namespace RuleCreateResponse {
     onlyNonListed?: boolean;
 
     /**
+     * give points for only one token ownership per contract
+     */
+    onlyRewardSingleTokenOwnership?: boolean | null;
+
+    /**
      * Promotional code associated with the rule.
      */
     promoCode?: string;
@@ -1227,6 +1232,11 @@ export namespace RuleUpdateResponse {
      * Flag indicating whether to include only non-listed items.
      */
     onlyNonListed?: boolean;
+
+    /**
+     * give points for only one token ownership per contract
+     */
+    onlyRewardSingleTokenOwnership?: boolean | null;
 
     /**
      * Promotional code associated with the rule.
@@ -2184,6 +2194,11 @@ export namespace RuleCreateParams {
     onlyNonListed?: boolean;
 
     /**
+     * give points for only one token ownership per contract
+     */
+    onlyRewardSingleTokenOwnership?: boolean | null;
+
+    /**
      * Promotional code associated with the rule.
      */
     promoCode?: string;
@@ -2965,6 +2980,11 @@ export namespace RuleUpdateParams {
      * Flag indicating whether to include only non-listed items.
      */
     onlyNonListed?: boolean;
+
+    /**
+     * give points for only one token ownership per contract
+     */
+    onlyRewardSingleTokenOwnership?: boolean | null;
 
     /**
      * Promotional code associated with the rule.
