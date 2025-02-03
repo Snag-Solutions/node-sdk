@@ -206,7 +206,7 @@ export interface MultiplierListParams {
 
   externalIdentifier?: string;
 
-  includeDeleted?: boolean;
+  includeDeleted?: string;
 
   limit?: number;
 
@@ -215,6 +215,10 @@ export interface MultiplierListParams {
   startingAfter?: string;
 
   twitterUser?: string;
+
+  userGroupExternalIdentifier?: string;
+
+  userGroupId?: string;
 
   userId?: string | Array<string>;
 

@@ -169,6 +169,16 @@ export interface AccountListParams {
   twitterUser?: string;
 
   /**
+   * External identifier for the user group controlled by you
+   */
+  userGroupExternalIdentifier?: string;
+
+  /**
+   * Unique identifier for the user group
+   */
+  userGroupId?: string;
+
+  /**
    * User ID(s) to filter accounts by
    */
   userId?: string | Array<string>;
