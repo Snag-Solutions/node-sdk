@@ -201,6 +201,16 @@ export interface TransactionEntryListParams {
   userCompletedLoyaltyRuleId?: string | Array<string>;
 
   /**
+   * External identifier for the user group controlled by you
+   */
+  userGroupExternalIdentifier?: string;
+
+  /**
+   * Unique identifier for the user group
+   */
+  userGroupId?: string;
+
+  /**
    * User ID or array of User IDs to filter by
    */
   userId?: string | Array<string>;

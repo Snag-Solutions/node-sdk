@@ -39,6 +39,8 @@ describe('resource accounts', () => {
           organizationId: '123e4567-e89b-12d3-a456-426614174001',
           startingAfter: '123e4567-e89b-12d3-a456-426614174100',
           twitterUser: '@user123',
+          userGroupExternalIdentifier: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+          userGroupId: '123e4567-e89b-12d3-a456-426614174090',
           userId: ['123e4567-e89b-12d3-a456-426614174000'],
           walletAddress: ['0x1234567890abcdef1234567890abcdef12345678'],
           walletGroupIdentifier: 'group123',
