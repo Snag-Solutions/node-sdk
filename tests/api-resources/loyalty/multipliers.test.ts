@@ -94,7 +94,7 @@ describe('resource multipliers', () => {
           organizationId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
           startingAfter: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
           twitterUser: 'twitterUser',
-          userGroupExternalIdentifier: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+          userGroupExternalIdentifier: 'userGroupExternalIdentifier',
           userGroupId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
           userId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
           walletAddress: 'string',
