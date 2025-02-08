@@ -144,7 +144,7 @@ describe('resource rules', () => {
       network: 'mainnet',
       oauthCredentialsId: '123e4567-e89b-12d3-a456-426614174003',
       rewardType: 'points',
-      subscriptionIdentifier: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+      subscriptionIdentifier: 'sub12345',
     });
   });
 
