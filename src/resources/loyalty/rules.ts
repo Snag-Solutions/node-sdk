@@ -3537,12 +3537,6 @@ export interface RuleCompleteParams {
   verificationCode?: string;
 
   /**
-   * Flag indicating if only verification is required, this will not create a
-   * transaction and reward the user
-   */
-  verifyOnly?: string;
-
-  /**
    * Wallet address of the user can only be used if userId is not provided
    */
   walletAddress?: string;
