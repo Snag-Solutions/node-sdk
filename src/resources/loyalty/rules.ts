@@ -184,7 +184,9 @@ export interface RuleCreateResponse {
     | 'twitter_follow'
     | 'twitter_followers'
     | 'twitter_like'
-    | 'twitter_post_hashtag';
+    | 'twitter_post_hashtag'
+    | 'quiz'
+    | 'poll';
 
   /**
    * Unique identifier for the associated website
@@ -442,6 +444,11 @@ export namespace RuleCreateResponse {
     onlyNonListed?: boolean;
 
     /**
+     * give points for only one token ownership per contract
+     */
+    onlyRewardSingleTokenOwnership?: boolean | null;
+
+    /**
      * Promotional code associated with the rule.
      */
     promoCode?: string;
@@ -666,6 +673,11 @@ export namespace RuleCreateResponse {
          * Array of emojis used in the channel.
          */
         emojis?: Array<Channel.Emoji>;
+
+        /**
+         * Phrase of text to be present in the discord message
+         */
+        text?: string;
       }
 
       export namespace Channel {
@@ -1222,6 +1234,11 @@ export namespace RuleUpdateResponse {
     onlyNonListed?: boolean;
 
     /**
+     * give points for only one token ownership per contract
+     */
+    onlyRewardSingleTokenOwnership?: boolean | null;
+
+    /**
      * Promotional code associated with the rule.
      */
     promoCode?: string;
@@ -1446,6 +1463,11 @@ export namespace RuleUpdateResponse {
          * Array of emojis used in the channel.
          */
         emojis?: Array<Channel.Emoji>;
+
+        /**
+         * Phrase of text to be present in the discord message
+         */
+        text?: string;
       }
 
       export namespace Channel {
@@ -1912,7 +1934,9 @@ export interface RuleCreateParams {
     | 'twitter_follow'
     | 'twitter_followers'
     | 'twitter_like'
-    | 'twitter_post_hashtag';
+    | 'twitter_post_hashtag'
+    | 'quiz'
+    | 'poll';
 
   /**
    * Unique identifier for the associated website
@@ -2170,6 +2194,11 @@ export namespace RuleCreateParams {
     onlyNonListed?: boolean;
 
     /**
+     * give points for only one token ownership per contract
+     */
+    onlyRewardSingleTokenOwnership?: boolean | null;
+
+    /**
      * Promotional code associated with the rule.
      */
     promoCode?: string;
@@ -2394,6 +2423,11 @@ export namespace RuleCreateParams {
          * Array of emojis used in the channel.
          */
         emojis?: Array<Channel.Emoji>;
+
+        /**
+         * Phrase of text to be present in the discord message
+         */
+        text?: string;
       }
 
       export namespace Channel {
@@ -2948,6 +2982,11 @@ export namespace RuleUpdateParams {
     onlyNonListed?: boolean;
 
     /**
+     * give points for only one token ownership per contract
+     */
+    onlyRewardSingleTokenOwnership?: boolean | null;
+
+    /**
      * Promotional code associated with the rule.
      */
     promoCode?: string;
@@ -3172,6 +3211,11 @@ export namespace RuleUpdateParams {
          * Array of emojis used in the channel.
          */
         emojis?: Array<Channel.Emoji>;
+
+        /**
+         * Phrase of text to be present in the discord message
+         */
+        text?: string;
       }
 
       export namespace Channel {
@@ -3451,6 +3495,11 @@ export interface RuleListParams {
   limit?: number;
 
   /**
+   * ID of the loyalty rule group to filter results
+   */
+  loyaltyRuleGroupId?: string;
+
+  /**
    * Unique identifier for the organization to filter by
    */
   organizationId?: string;
@@ -3473,6 +3522,11 @@ export interface RuleCompleteParams {
   commentLink?: string;
 
   /**
+   * ID of the choice selected by the user
+   */
+  loyaltyQuestionChoiceId?: string;
+
+  /**
    * Unique identifier for the user
    */
   userId?: string;
@@ -3481,6 +3535,12 @@ export interface RuleCompleteParams {
    * Optional verification code for completing the loyalty rule
    */
   verificationCode?: string;
+
+  /**
+   * Flag indicating if only verification is required, this will not create a
+   * transaction and reward the user
+   */
+  verifyOnly?: string;
 
   /**
    * Wallet address of the user can only be used if userId is not provided

@@ -55,7 +55,7 @@ describe('resource rules', () => {
         discordServersToJoin: [
           {
             id: '123456789012345678',
-            channels: [{ id: '987654321098765432', emojis: [{ id: '1f600' }] }],
+            channels: [{ id: '987654321098765432', emojis: [{ id: '1f600' }], text: 'Hello' }],
             roles: [{ id: 'role123' }],
           },
         ],
@@ -79,6 +79,7 @@ describe('resource rules', () => {
         onlyKnownUsers: false,
         onlyNative: true,
         onlyNonListed: true,
+        onlyRewardSingleTokenOwnership: true,
         promoCode: 'PROMO123',
         range: [{ amount: 5, endRange: 10, startRange: 1 }],
         referralRequirements: {
@@ -143,7 +144,7 @@ describe('resource rules', () => {
       network: 'mainnet',
       oauthCredentialsId: '123e4567-e89b-12d3-a456-426614174003',
       rewardType: 'points',
-      subscriptionIdentifier: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+      subscriptionIdentifier: 'sub12345',
     });
   });
 
@@ -188,7 +189,7 @@ describe('resource rules', () => {
         discordServersToJoin: [
           {
             id: '123456789012345678',
-            channels: [{ id: '987654321098765432', emojis: [{ id: '1f600' }] }],
+            channels: [{ id: '987654321098765432', emojis: [{ id: '1f600' }], text: 'Hello' }],
             roles: [{ id: 'role123' }],
           },
         ],
@@ -212,6 +213,7 @@ describe('resource rules', () => {
         onlyKnownUsers: false,
         onlyNative: true,
         onlyNonListed: true,
+        onlyRewardSingleTokenOwnership: true,
         promoCode: 'PROMO123',
         range: [{ amount: 5, endRange: 10, startRange: 1 }],
         referralRequirements: {
@@ -301,6 +303,7 @@ describe('resource rules', () => {
         {
           collectionAddress: '0x1234567890abcdef1234567890abcdef12345678',
           limit: 50,
+          loyaltyRuleGroupId: '123e4567-e89b-12d3-a456-426614174004',
           organizationId: '123e4567-e89b-12d3-a456-426614174001',
           startingAfter: '123e4567-e89b-12d3-a456-426614174010',
           websiteId: '123e4567-e89b-12d3-a456-426614174002',
@@ -357,8 +360,10 @@ describe('resource rules', () => {
         '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
         {
           commentLink: 'https://x.com/Snag_Solutions/status/1735407428093522314',
+          loyaltyQuestionChoiceId: '123e4567-e89b-12d3-a456-426614174000',
           userId: '123e4567-e89b-12d3-a456-426614174000',
           verificationCode: 'VERIF123',
+          verifyOnly: 'verifyOnly',
           walletAddress: '0x1234567890abcdef1234567890abcdef12345678',
         },
         { path: '/_stainless_unknown_path' },

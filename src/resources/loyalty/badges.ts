@@ -174,7 +174,7 @@ export namespace BadgeListResponse {
       /**
        * The type of rule
        */
-      type: 'rule' | 'section' | 'level' | 'points' | 'api' | 'badge';
+      type: 'rule' | 'section' | 'level' | 'points' | 'api' | 'badge' | 'csv';
 
       /**
        * The amount of the rule
@@ -301,12 +301,17 @@ export namespace BadgeCreateParams {
     /**
      * The type of rule
      */
-    type: 'rule' | 'section' | 'level' | 'points' | 'api' | 'badge';
+    type: 'rule' | 'section' | 'level' | 'points' | 'api' | 'badge' | 'csv';
 
     /**
      * The amount of the rule
      */
     amount?: number | null;
+
+    /**
+     * URL of the CSV file (optional)
+     */
+    csvUrl?: string | null;
 
     /**
      * The description of the rule

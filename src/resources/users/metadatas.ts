@@ -21,9 +21,6 @@ export class Metadatas extends APIResource {
   }
 }
 
-/**
- * Schema for user metadata response
- */
 export interface MetadataCreateResponse {
   /**
    * Unique identifier for the user metadata
@@ -87,6 +84,10 @@ export interface MetadataCreateParams {
   twitterUser?: string | null;
 
   twitterUserId?: string | null;
+
+  userGroupExternalIdentifier?: string | null;
+
+  userGroupId?: string;
 
   userId?: string;
 
