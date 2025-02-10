@@ -363,6 +363,7 @@ describe('resource rules', () => {
           loyaltyQuestionChoiceId: '123e4567-e89b-12d3-a456-426614174000',
           userId: '123e4567-e89b-12d3-a456-426614174000',
           verificationCode: 'VERIF123',
+          verifyOnly: 'verifyOnly',
           walletAddress: '0x1234567890abcdef1234567890abcdef12345678',
         },
         { path: '/_stainless_unknown_path' },
