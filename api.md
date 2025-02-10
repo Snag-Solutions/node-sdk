@@ -71,22 +71,12 @@ Methods:
 Types:
 
 - <code><a href="./src/resources/loyalty/rule-edits.ts">RuleEditRetrieveResponse</a></code>
-- <code><a href="./src/resources/loyalty/rule-edits.ts">RuleEditRestoreResponse</a></code>
 
 Methods:
 
 - <code title="get /api/loyalty/rule_edits">client.loyalty.ruleEdits.<a href="./src/resources/loyalty/rule-edits.ts">retrieve</a>({ ...params }) -> RuleEditRetrieveResponse</code>
-- <code title="post /api/api/loyalty/rule_edits/{id}/restore">client.loyalty.ruleEdits.<a href="./src/resources/loyalty/rule-edits.ts">restore</a>(id) -> RuleEditRestoreResponse</code>
 
 ## Accounts
-
-Types:
-
-- <code><a href="./src/resources/loyalty/accounts.ts">AccountListResponse</a></code>
-
-Methods:
-
-- <code title="get /">client.loyalty.accounts.<a href="./src/resources/loyalty/accounts.ts">list</a>({ ...params }) -> AccountListResponse</code>
 
 ## Multipliers
 
@@ -128,7 +118,6 @@ Methods:
 
 Methods:
 
-- <code title="post /api/auction_bids">client.auctionBids.<a href="./src/resources/auction-bids.ts">create</a>({ ...params }) -> void</code>
 - <code title="get /api/auction_bids">client.auctionBids.<a href="./src/resources/auction-bids.ts">list</a>({ ...params }) -> void</code>
 
 # Websites
