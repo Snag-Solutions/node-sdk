@@ -5,9 +5,9 @@ import * as Core from '../core';
 
 export class Assets extends APIResource {
   /**
-   * This endpoint allows you to upload a file to the resource. Returns a presigned
-   * URL and the asset's public URL call put with the file as the body to upload the
-   * asset.
+   * This endpoint enables you to upload a file to the resource. Returns a presigned
+   * URL and the asset's public URL. Call PUT with the file as the body to upload the
+   * asset using the presigned URL.
    */
   create(body: AssetCreateParams, options?: Core.RequestOptions): Core.APIPromise<AssetCreateResponse> {
     return this._client.post('/api/assets', { body, ...options });
