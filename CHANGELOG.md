@@ -1,5 +1,42 @@
 # Changelog
 
+## 0.1.0-alpha.14 (2025-02-10)
+
+Full Changelog: [v0.1.0-alpha.13...v0.1.0-alpha.14](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.13...v0.1.0-alpha.14)
+
+### Features
+
+* **api:** api update ([#106](https://github.com/Snag-Solutions/node-sdk/issues/106)) ([349bfb9](https://github.com/Snag-Solutions/node-sdk/commit/349bfb90579c276557fcd8d63585d415f45a4ce6))
+* **api:** api update ([#107](https://github.com/Snag-Solutions/node-sdk/issues/107)) ([29d905b](https://github.com/Snag-Solutions/node-sdk/commit/29d905bd51054c80a720f936d423146c7a0f1e07))
+* **api:** api update ([#88](https://github.com/Snag-Solutions/node-sdk/issues/88)) ([c2e9e3d](https://github.com/Snag-Solutions/node-sdk/commit/c2e9e3d96c60124a5b16b7ed711ea9922be8ac17))
+* **api:** api update ([#93](https://github.com/Snag-Solutions/node-sdk/issues/93)) ([ecaa688](https://github.com/Snag-Solutions/node-sdk/commit/ecaa688470db482e0fe32e56c2d3782601b291ae))
+* **api:** open api update ([#101](https://github.com/Snag-Solutions/node-sdk/issues/101)) ([3177da9](https://github.com/Snag-Solutions/node-sdk/commit/3177da9e8a57a942c704bc54bb364faa1e01b5a7))
+* **api:** open api update ([#102](https://github.com/Snag-Solutions/node-sdk/issues/102)) ([ba7e2d5](https://github.com/Snag-Solutions/node-sdk/commit/ba7e2d5eb69b2e4ac0ca8c5a45f3d400951378f0))
+* **api:** open api update ([#103](https://github.com/Snag-Solutions/node-sdk/issues/103)) ([6d617e3](https://github.com/Snag-Solutions/node-sdk/commit/6d617e34ef1484e65d6aee36e18ceb4c68b8666c))
+* **api:** open api update ([#104](https://github.com/Snag-Solutions/node-sdk/issues/104)) ([7909259](https://github.com/Snag-Solutions/node-sdk/commit/790925958fa13dd0324c4af07543033dcc96e432))
+* **api:** open api update ([#105](https://github.com/Snag-Solutions/node-sdk/issues/105)) ([0d5183a](https://github.com/Snag-Solutions/node-sdk/commit/0d5183abf40c603ec3e84539e8bde485d6f0834a))
+* **api:** open api update ([#82](https://github.com/Snag-Solutions/node-sdk/issues/82)) ([cca4e69](https://github.com/Snag-Solutions/node-sdk/commit/cca4e69bbaf7609edfab73c056d90c85309271ac))
+* **api:** open api update ([#84](https://github.com/Snag-Solutions/node-sdk/issues/84)) ([25405e1](https://github.com/Snag-Solutions/node-sdk/commit/25405e102adb79e5aadadf3deb14ae78700650b4))
+* **api:** open api update ([#86](https://github.com/Snag-Solutions/node-sdk/issues/86)) ([fde6673](https://github.com/Snag-Solutions/node-sdk/commit/fde6673188757f177d642f5e9b46b8f2b6856d5d))
+* **api:** open api update ([#87](https://github.com/Snag-Solutions/node-sdk/issues/87)) ([0e9e188](https://github.com/Snag-Solutions/node-sdk/commit/0e9e1888c8b8aae47eb527614601308fd91ea96a))
+* **api:** open api update ([#89](https://github.com/Snag-Solutions/node-sdk/issues/89)) ([cfe6ea9](https://github.com/Snag-Solutions/node-sdk/commit/cfe6ea9b6b43f55b098464f72ffec3dad470e5d8))
+* **api:** open api update ([#90](https://github.com/Snag-Solutions/node-sdk/issues/90)) ([efd7eeb](https://github.com/Snag-Solutions/node-sdk/commit/efd7eeb8a366345ec5adcc68b2c9a0a9519a6c20))
+* **api:** open api update ([#92](https://github.com/Snag-Solutions/node-sdk/issues/92)) ([32d86aa](https://github.com/Snag-Solutions/node-sdk/commit/32d86aaa97653b36b0d30dbfcbbc677f684e8e88))
+* **api:** open api update ([#94](https://github.com/Snag-Solutions/node-sdk/issues/94)) ([6fc0fa8](https://github.com/Snag-Solutions/node-sdk/commit/6fc0fa820bfc7294c07fdf9abdd12f63fee04c41))
+* **api:** open api update ([#95](https://github.com/Snag-Solutions/node-sdk/issues/95)) ([724feb7](https://github.com/Snag-Solutions/node-sdk/commit/724feb7e5db919c6c169a43cd2ea518bcb7d3e6a))
+* **api:** open api update ([#96](https://github.com/Snag-Solutions/node-sdk/issues/96)) ([4c4aa90](https://github.com/Snag-Solutions/node-sdk/commit/4c4aa90986c7a886c738ebbbe5abf0d8d56ce4a5))
+* **api:** open api update ([#97](https://github.com/Snag-Solutions/node-sdk/issues/97)) ([a0f7125](https://github.com/Snag-Solutions/node-sdk/commit/a0f7125aed763ec1e2cd8eba240ccf421544e0af))
+* **api:** open api update ([#98](https://github.com/Snag-Solutions/node-sdk/issues/98)) ([0a30f3f](https://github.com/Snag-Solutions/node-sdk/commit/0a30f3f0ca28e29f1b80eb3b7f4f4abebb98db75))
+* **client:** send `X-Stainless-Timeout` header ([#99](https://github.com/Snag-Solutions/node-sdk/issues/99)) ([7b6a01a](https://github.com/Snag-Solutions/node-sdk/commit/7b6a01af524550a50578ec60d196e981e2982477))
+
+
+### Chores
+
+* **internal:** codegen related update ([#83](https://github.com/Snag-Solutions/node-sdk/issues/83)) ([0ad3611](https://github.com/Snag-Solutions/node-sdk/commit/0ad361126f615265b76d42ab52cd29422c752bc6))
+* **internal:** codegen related update ([#85](https://github.com/Snag-Solutions/node-sdk/issues/85)) ([c422b7a](https://github.com/Snag-Solutions/node-sdk/commit/c422b7adc6368998cd2a1f48ee83e0a5395bd50c))
+* **internal:** codegen related update ([#91](https://github.com/Snag-Solutions/node-sdk/issues/91)) ([b9dc711](https://github.com/Snag-Solutions/node-sdk/commit/b9dc711172e7953750369b944d934bcba01881c7))
+* minor change to tests ([#100](https://github.com/Snag-Solutions/node-sdk/issues/100)) ([271e329](https://github.com/Snag-Solutions/node-sdk/commit/271e32981c99b246f33efa2580eb8e88dd6f889b))
+
 ## 0.1.0-alpha.13 (2025-01-19)
 
 Full Changelog: [v0.1.0-alpha.12...v0.1.0-alpha.13](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.12...v0.1.0-alpha.13)
