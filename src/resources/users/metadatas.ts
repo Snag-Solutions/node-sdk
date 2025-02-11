@@ -6,7 +6,7 @@ import * as Core from '../../core';
 
 export class Metadatas extends APIResource {
   /**
-   * This endpoint allows you to create or edit a user metadata
+   * This endpoint is used to create user metadata
    */
   create(body?: MetadataCreateParams, options?: Core.RequestOptions): Core.APIPromise<MetadataCreateResponse>;
   create(options?: Core.RequestOptions): Core.APIPromise<MetadataCreateResponse>;
