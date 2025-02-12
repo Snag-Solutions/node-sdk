@@ -37,15 +37,14 @@ export interface MetadataCreateResponse {
    */
   organizationId: string;
 
-  /**
-   * Timestamp when the wallet was last updated
-   */
-  updatedAt: string;
+  user: MetadataCreateResponse.User;
+
+  userGroup: MetadataCreateResponse.UserGroup;
 
   /**
-   * Validated and formatted wallet address
+   * Identifier for the user group set via api
    */
-  walletAddress: string;
+  userGroupId: string | null;
 
   /**
    * Identifier for the user wallet group set via api
@@ -56,6 +55,32 @@ export interface MetadataCreateResponse {
    * Unique identifier for the website
    */
   websiteId: string;
+}
+
+export namespace MetadataCreateResponse {
+  export interface User {
+    /**
+     * Id for the user
+     */
+    id: string;
+
+    /**
+     * Wallet address of the user
+     */
+    walletAddress: string;
+  }
+
+  export interface UserGroup {
+    /**
+     * id for the user group
+     */
+    id: string;
+
+    /**
+     * External identifier for the user group
+     */
+    externalIdentifier: string | null;
+  }
 }
 
 export interface MetadataCreateParams {
