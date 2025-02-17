@@ -484,11 +484,6 @@ export namespace RuleCreateResponse {
     secondReferralReward?: number | null;
 
     /**
-     * Flag indicating if the multiplier is skipped.
-     */
-    skipMultiplier?: boolean | null;
-
-    /**
      * Object containing details of the associated smart contract.
      */
     smartContract?: Metadata.SmartContract;
@@ -1277,11 +1272,6 @@ export namespace RuleUpdateResponse {
      * Percentage reward given for a second-level referral.
      */
     secondReferralReward?: number | null;
-
-    /**
-     * Flag indicating if the multiplier is skipped.
-     */
-    skipMultiplier?: boolean | null;
 
     /**
      * Object containing details of the associated smart contract.
@@ -2244,11 +2234,6 @@ export namespace RuleCreateParams {
     secondReferralReward?: number | null;
 
     /**
-     * Flag indicating if the multiplier is skipped.
-     */
-    skipMultiplier?: boolean | null;
-
-    /**
      * Object containing details of the associated smart contract.
      */
     smartContract?: Metadata.SmartContract;
@@ -3035,11 +3020,6 @@ export namespace RuleUpdateParams {
      * Percentage reward given for a second-level referral.
      */
     secondReferralReward?: number | null;
-
-    /**
-     * Flag indicating if the multiplier is skipped.
-     */
-    skipMultiplier?: boolean | null;
 
     /**
      * Object containing details of the associated smart contract.
