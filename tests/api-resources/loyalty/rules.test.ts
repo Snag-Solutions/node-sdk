@@ -94,7 +94,6 @@ describe('resource rules', () => {
         rewardPerImpression: true,
         saleCurrency: 'USD',
         secondReferralReward: 5,
-        skipMultiplier: true,
         smartContract: {
           abi: '[]',
           addressMapping: '0x123...789',
@@ -229,7 +228,6 @@ describe('resource rules', () => {
         rewardPerImpression: true,
         saleCurrency: 'USD',
         secondReferralReward: 5,
-        skipMultiplier: true,
         smartContract: {
           abi: '[]',
           addressMapping: '0x123...789',
