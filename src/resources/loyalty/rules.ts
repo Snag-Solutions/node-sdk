@@ -47,7 +47,7 @@ export class Rules extends APIResource {
 
   /**
    * Verify a loyalty rule based on user action and reward them if applicable. This
-   * endpoint currenlty onlu supports following rule types code_entry, text_input,
+   * endpoint currently only supports following rule types code_entry, text_input,
    * link_click, discord_member, connect_wallet, check_in, external_rule,
    * drip_x_follow, drip_x_new_tweet, drip_x_text_in_bio, drip_x_text_in_name,
    * drip_x_text_in_comment, drip_x_tweet, telegram_join
