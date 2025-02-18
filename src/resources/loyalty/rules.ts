@@ -510,7 +510,6 @@ export namespace RuleCreateResponse {
       | 'YouTube'
       | 'Discord'
       | 'Custom'
-      | 'Telegram'
       | null;
 
     /**
@@ -1306,7 +1305,6 @@ export namespace RuleUpdateResponse {
       | 'YouTube'
       | 'Discord'
       | 'Custom'
-      | 'Telegram'
       | null;
 
     /**
@@ -2272,7 +2270,6 @@ export namespace RuleCreateParams {
       | 'YouTube'
       | 'Discord'
       | 'Custom'
-      | 'Telegram'
       | null;
 
     /**
@@ -3066,7 +3063,6 @@ export namespace RuleUpdateParams {
       | 'YouTube'
       | 'Discord'
       | 'Custom'
-      | 'Telegram'
       | null;
 
     /**
