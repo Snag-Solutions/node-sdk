@@ -502,15 +502,16 @@ export namespace RuleCreateResponse {
      * Social media platform associated with the rule.
      */
     socialPlatform?:
-      | 'Twitch'
-      | 'TikTok'
-      | 'X(Twitter)'
-      | 'Instagram'
-      | 'EpicGames'
-      | 'YouTube'
-      | 'Discord'
       | 'Custom'
+      | 'Discord'
+      | 'EpicGames'
+      | 'Instagram'
+      | 'Steam'
       | 'Telegram'
+      | 'TikTok'
+      | 'Twitch'
+      | 'X(Twitter)'
+      | 'YouTube'
       | null;
 
     /**
@@ -1298,15 +1299,16 @@ export namespace RuleUpdateResponse {
      * Social media platform associated with the rule.
      */
     socialPlatform?:
-      | 'Twitch'
-      | 'TikTok'
-      | 'X(Twitter)'
-      | 'Instagram'
-      | 'EpicGames'
-      | 'YouTube'
-      | 'Discord'
       | 'Custom'
+      | 'Discord'
+      | 'EpicGames'
+      | 'Instagram'
+      | 'Steam'
       | 'Telegram'
+      | 'TikTok'
+      | 'Twitch'
+      | 'X(Twitter)'
+      | 'YouTube'
       | null;
 
     /**
@@ -2264,15 +2266,16 @@ export namespace RuleCreateParams {
      * Social media platform associated with the rule.
      */
     socialPlatform?:
-      | 'Twitch'
-      | 'TikTok'
-      | 'X(Twitter)'
-      | 'Instagram'
-      | 'EpicGames'
-      | 'YouTube'
-      | 'Discord'
       | 'Custom'
+      | 'Discord'
+      | 'EpicGames'
+      | 'Instagram'
+      | 'Steam'
       | 'Telegram'
+      | 'TikTok'
+      | 'Twitch'
+      | 'X(Twitter)'
+      | 'YouTube'
       | null;
 
     /**
@@ -3058,15 +3061,16 @@ export namespace RuleUpdateParams {
      * Social media platform associated with the rule.
      */
     socialPlatform?:
-      | 'Twitch'
-      | 'TikTok'
-      | 'X(Twitter)'
-      | 'Instagram'
-      | 'EpicGames'
-      | 'YouTube'
-      | 'Discord'
       | 'Custom'
+      | 'Discord'
+      | 'EpicGames'
+      | 'Instagram'
+      | 'Steam'
       | 'Telegram'
+      | 'TikTok'
+      | 'Twitch'
+      | 'X(Twitter)'
+      | 'YouTube'
       | null;
 
     /**
