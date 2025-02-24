@@ -961,39 +961,14 @@ export interface RuleUpdateResponse {
   amount: unknown;
 
   /**
-   * Effective end time of the rule
-   */
-  effectiveEndTime: string | null;
-
-  /**
-   * Effective start time of the rule
-   */
-  effectiveStartTime: string | null;
-
-  /**
    * End time for the loyalty rule
    */
   endTime: string | null;
 
   /**
-   * Frequency of the rule execution
-   */
-  frequency: 'none' | 'once' | 'daily' | 'weekly' | 'monthly' | 'immediately';
-
-  /**
-   * Additional metadata for the loyalty rule
-   */
-  metadata: RuleUpdateResponse.Metadata;
-
-  /**
    * Name of the loyalty rule
    */
   name: string;
-
-  /**
-   * Start time for the loyalty rule
-   */
-  startTime: string | null;
 
   /**
    * Blockchain address of the associated collection
@@ -1021,6 +996,21 @@ export interface RuleUpdateResponse {
   description?: string;
 
   /**
+   * Effective end time of the rule
+   */
+  effectiveEndTime?: string | null;
+
+  /**
+   * Effective start time of the rule
+   */
+  effectiveStartTime?: string | null;
+
+  /**
+   * Frequency of the rule execution
+   */
+  frequency?: 'none' | 'once' | 'daily' | 'weekly' | 'monthly' | 'immediately';
+
+  /**
    * Whether to hide this rule in the user interface
    */
   hideInUi?: boolean;
@@ -1039,6 +1029,11 @@ export interface RuleUpdateResponse {
    * ID of the rule group section to associate with the rule
    */
   loyaltyRuleGroupId?: (string & {}) | 'no-section' | null;
+
+  /**
+   * Additional metadata for the loyalty rule
+   */
+  metadata?: RuleUpdateResponse.Metadata;
 
   /**
    * Blockchain network where the rule will apply
@@ -1085,12 +1080,58 @@ export interface RuleUpdateResponse {
   rewardType?: 'points' | 'multiplier';
 
   /**
+   * Start time for the loyalty rule
+   */
+  startTime?: string | null;
+
+  /**
    * Optional subscription identifier for the rule
    */
   subscriptionIdentifier?: string | null;
 }
 
 export namespace RuleUpdateResponse {
+  export interface Collection {
+    /**
+     * Blockchain address of the collection
+     */
+    address: string;
+
+    /**
+     * Blockchain network for the collection
+     */
+    network:
+      | 'mainnet'
+      | 'polygon'
+      | 'polygon_mumbai'
+      | 'optimism'
+      | 'arbitrum'
+      | 'binance'
+      | 'bscTestnet'
+      | 'avalanche'
+      | 'avalancheFuji'
+      | 'zksync'
+      | 'fantom'
+      | 'fantomTestnet'
+      | 'base'
+      | 'baseSepolia'
+      | 'skaleNebula'
+      | 'xai'
+      | 'berachainArtio'
+      | 'solana'
+      | 'apechain'
+      | 'flowMainnet'
+      | 'campTestnet'
+      | 'sui'
+      | 'vanar'
+      | 'sepolia'
+      | 'optimism_sepolia'
+      | 'arbitrumSepolia'
+      | 'goerli'
+      | 'optimism_goerli'
+      | 'arbitrumGoerli';
+  }
+
   /**
    * Additional metadata for the loyalty rule
    */
@@ -1705,47 +1746,6 @@ export namespace RuleUpdateResponse {
        */
       streakMilestone: number;
     }
-  }
-
-  export interface Collection {
-    /**
-     * Blockchain address of the collection
-     */
-    address: string;
-
-    /**
-     * Blockchain network for the collection
-     */
-    network:
-      | 'mainnet'
-      | 'polygon'
-      | 'polygon_mumbai'
-      | 'optimism'
-      | 'arbitrum'
-      | 'binance'
-      | 'bscTestnet'
-      | 'avalanche'
-      | 'avalancheFuji'
-      | 'zksync'
-      | 'fantom'
-      | 'fantomTestnet'
-      | 'base'
-      | 'baseSepolia'
-      | 'skaleNebula'
-      | 'xai'
-      | 'berachainArtio'
-      | 'solana'
-      | 'apechain'
-      | 'flowMainnet'
-      | 'campTestnet'
-      | 'sui'
-      | 'vanar'
-      | 'sepolia'
-      | 'optimism_sepolia'
-      | 'arbitrumSepolia'
-      | 'goerli'
-      | 'optimism_goerli'
-      | 'arbitrumGoerli';
   }
 }
 
@@ -2723,39 +2723,14 @@ export interface RuleUpdateParams {
   amount: unknown;
 
   /**
-   * Effective end time of the rule
-   */
-  effectiveEndTime: string | null;
-
-  /**
-   * Effective start time of the rule
-   */
-  effectiveStartTime: string | null;
-
-  /**
    * End time for the loyalty rule
    */
   endTime: string | null;
 
   /**
-   * Frequency of the rule execution
-   */
-  frequency: 'none' | 'once' | 'daily' | 'weekly' | 'monthly' | 'immediately';
-
-  /**
-   * Additional metadata for the loyalty rule
-   */
-  metadata: RuleUpdateParams.Metadata;
-
-  /**
    * Name of the loyalty rule
    */
   name: string;
-
-  /**
-   * Start time for the loyalty rule
-   */
-  startTime: string | null;
 
   /**
    * Blockchain address of the associated collection
@@ -2783,6 +2758,21 @@ export interface RuleUpdateParams {
   description?: string;
 
   /**
+   * Effective end time of the rule
+   */
+  effectiveEndTime?: string | null;
+
+  /**
+   * Effective start time of the rule
+   */
+  effectiveStartTime?: string | null;
+
+  /**
+   * Frequency of the rule execution
+   */
+  frequency?: 'none' | 'once' | 'daily' | 'weekly' | 'monthly' | 'immediately';
+
+  /**
    * Whether to hide this rule in the user interface
    */
   hideInUi?: boolean;
@@ -2801,6 +2791,11 @@ export interface RuleUpdateParams {
    * ID of the rule group section to associate with the rule
    */
   loyaltyRuleGroupId?: (string & {}) | 'no-section' | null;
+
+  /**
+   * Additional metadata for the loyalty rule
+   */
+  metadata?: RuleUpdateParams.Metadata;
 
   /**
    * Blockchain network where the rule will apply
@@ -2847,12 +2842,58 @@ export interface RuleUpdateParams {
   rewardType?: 'points' | 'multiplier';
 
   /**
+   * Start time for the loyalty rule
+   */
+  startTime?: string | null;
+
+  /**
    * Optional subscription identifier for the rule
    */
   subscriptionIdentifier?: string | null;
 }
 
 export namespace RuleUpdateParams {
+  export interface Collection {
+    /**
+     * Blockchain address of the collection
+     */
+    address: string;
+
+    /**
+     * Blockchain network for the collection
+     */
+    network:
+      | 'mainnet'
+      | 'polygon'
+      | 'polygon_mumbai'
+      | 'optimism'
+      | 'arbitrum'
+      | 'binance'
+      | 'bscTestnet'
+      | 'avalanche'
+      | 'avalancheFuji'
+      | 'zksync'
+      | 'fantom'
+      | 'fantomTestnet'
+      | 'base'
+      | 'baseSepolia'
+      | 'skaleNebula'
+      | 'xai'
+      | 'berachainArtio'
+      | 'solana'
+      | 'apechain'
+      | 'flowMainnet'
+      | 'campTestnet'
+      | 'sui'
+      | 'vanar'
+      | 'sepolia'
+      | 'optimism_sepolia'
+      | 'arbitrumSepolia'
+      | 'goerli'
+      | 'optimism_goerli'
+      | 'arbitrumGoerli';
+  }
+
   /**
    * Additional metadata for the loyalty rule
    */
@@ -3467,47 +3508,6 @@ export namespace RuleUpdateParams {
        */
       streakMilestone: number;
     }
-  }
-
-  export interface Collection {
-    /**
-     * Blockchain address of the collection
-     */
-    address: string;
-
-    /**
-     * Blockchain network for the collection
-     */
-    network:
-      | 'mainnet'
-      | 'polygon'
-      | 'polygon_mumbai'
-      | 'optimism'
-      | 'arbitrum'
-      | 'binance'
-      | 'bscTestnet'
-      | 'avalanche'
-      | 'avalancheFuji'
-      | 'zksync'
-      | 'fantom'
-      | 'fantomTestnet'
-      | 'base'
-      | 'baseSepolia'
-      | 'skaleNebula'
-      | 'xai'
-      | 'berachainArtio'
-      | 'solana'
-      | 'apechain'
-      | 'flowMainnet'
-      | 'campTestnet'
-      | 'sui'
-      | 'vanar'
-      | 'sepolia'
-      | 'optimism_sepolia'
-      | 'arbitrumSepolia'
-      | 'goerli'
-      | 'optimism_goerli'
-      | 'arbitrumGoerli';
   }
 }
 

@@ -152,13 +152,8 @@ describe('resource rules', () => {
   test('update: only required params', async () => {
     const responsePromise = client.loyalty.rules.update('182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e', {
       amount: '10.5',
-      effectiveEndTime: '2024-12-31T23:59:00Z',
-      effectiveStartTime: '2024-01-01T00:00:00Z',
       endTime: '2024-12-31T23:59:00Z',
-      frequency: 'none',
-      metadata: {},
       name: 'Daily Rewards Program',
-      startTime: '2024-01-01T00:00:00Z',
     });
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
@@ -172,10 +167,20 @@ describe('resource rules', () => {
   test('update: required and optional params', async () => {
     const response = await client.loyalty.rules.update('182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e', {
       amount: '10.5',
+      endTime: '2024-12-31T23:59:00Z',
+      name: 'Daily Rewards Program',
+      collectionAddress: '0x1234567890abcdef1234567890abcdef12345678',
+      collections: [{ address: '0xabcdefabcdefabcdefabcdefabcdefabcdef', network: 'mainnet' }],
+      customRewardsApiUrl: 'https://api.example.com/rewards',
+      customRewardsCsvUrl: 'https://example.com/rewards.csv',
+      description: 'This rule rewards users daily for specific actions.',
       effectiveEndTime: '2024-12-31T23:59:00Z',
       effectiveStartTime: '2024-01-01T00:00:00Z',
-      endTime: '2024-12-31T23:59:00Z',
       frequency: 'none',
+      hideInUi: false,
+      interval: 'daily',
+      isRequired: true,
+      loyaltyRuleGroupId: '123e4567-e89b-12d3-a456-426614174005',
       metadata: {
         buttonText: 'Verify Now',
         checkComment: true,
@@ -262,20 +267,10 @@ describe('resource rules', () => {
         verifyPlaceHolderText: 'Enter your verification code here.',
         walletType: 'evm',
       },
-      name: 'Daily Rewards Program',
-      startTime: '2024-01-01T00:00:00Z',
-      collectionAddress: '0x1234567890abcdef1234567890abcdef12345678',
-      collections: [{ address: '0xabcdefabcdefabcdefabcdefabcdefabcdef', network: 'mainnet' }],
-      customRewardsApiUrl: 'https://api.example.com/rewards',
-      customRewardsCsvUrl: 'https://example.com/rewards.csv',
-      description: 'This rule rewards users daily for specific actions.',
-      hideInUi: false,
-      interval: 'daily',
-      isRequired: true,
-      loyaltyRuleGroupId: '123e4567-e89b-12d3-a456-426614174005',
       network: 'mainnet',
       oauthCredentialsId: '123e4567-e89b-12d3-a456-426614174000',
       rewardType: 'points',
+      startTime: '2024-01-01T00:00:00Z',
       subscriptionIdentifier: 'sub12345',
     });
   });
