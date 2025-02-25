@@ -297,7 +297,7 @@ export interface CurrencyListParams {
   /**
    * Maximum number of records to return
    */
-  limit?: number | null;
+  limit?: number;
 
   /**
    * Cursor for pagination; start after this ID
