@@ -208,7 +208,7 @@ export interface MultiplierListParams {
 
   includeDeleted?: string;
 
-  limit?: number | null;
+  limit?: number;
 
   organizationId?: string;
 

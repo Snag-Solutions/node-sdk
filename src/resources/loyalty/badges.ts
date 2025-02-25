@@ -1073,7 +1073,7 @@ export interface BadgeListParams {
   /**
    * Number of badges to fetch
    */
-  limit?: number | null;
+  limit?: number;
 
   /**
    * UUID of the organization (optional, converted to lowercase)
