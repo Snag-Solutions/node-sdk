@@ -39,7 +39,7 @@ export interface AuctionBidListParams {
   /**
    * Maximum number of bids to return
    */
-  limit?: number;
+  limit?: number | null;
 
   /**
    * ID of the organization
