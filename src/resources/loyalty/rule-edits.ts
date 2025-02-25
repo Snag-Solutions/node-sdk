@@ -206,7 +206,7 @@ export interface RuleEditRetrieveParams {
   /**
    * Maximum number of edits to return
    */
-  limit?: number | null;
+  limit?: number;
 
   /**
    * Unique identifier for the organization to filter by
