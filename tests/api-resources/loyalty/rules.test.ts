@@ -55,7 +55,7 @@ describe('resource rules', () => {
         discordServersToJoin: [
           {
             id: '123456789012345678',
-            channels: [{ id: '987654321098765432', emojis: [{ id: '1f600' }] }],
+            channels: [{ id: '987654321098765432', emojis: [{ id: '1f600' }], text: 'Hello' }],
             roles: [{ id: 'role123' }],
           },
         ],
@@ -79,6 +79,7 @@ describe('resource rules', () => {
         onlyKnownUsers: false,
         onlyNative: true,
         onlyNonListed: true,
+        onlyRewardSingleTokenOwnership: true,
         promoCode: 'PROMO123',
         range: [{ amount: 5, endRange: 10, startRange: 1 }],
         referralRequirements: {
@@ -93,6 +94,7 @@ describe('resource rules', () => {
         rewardPerImpression: true,
         saleCurrency: 'USD',
         secondReferralReward: 5,
+        skipMultiplier: true,
         smartContract: {
           abi: '[]',
           addressMapping: '0x123...789',
@@ -108,7 +110,7 @@ describe('resource rules', () => {
           withMax: true,
         },
         snapshotProposals: [{ id: 'proposal123', space: 'space123' }],
-        socialPlatform: 'Twitch',
+        socialPlatform: 'Custom',
         socialPlatformLogo: 'https://example.com/logo.png',
         socialPlatformName: 'Twitter',
         streakArray: [{ streakAmount: 10, streakMilestone: 5 }],
@@ -143,20 +145,15 @@ describe('resource rules', () => {
       network: 'mainnet',
       oauthCredentialsId: '123e4567-e89b-12d3-a456-426614174003',
       rewardType: 'points',
-      subscriptionIdentifier: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+      subscriptionIdentifier: 'sub12345',
     });
   });
 
   test('update: only required params', async () => {
     const responsePromise = client.loyalty.rules.update('182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e', {
       amount: '10.5',
-      effectiveEndTime: '2024-12-31T23:59:00Z',
-      effectiveStartTime: '2024-01-01T00:00:00Z',
       endTime: '2024-12-31T23:59:00Z',
-      frequency: 'none',
-      metadata: {},
       name: 'Daily Rewards Program',
-      startTime: '2024-01-01T00:00:00Z',
     });
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
@@ -170,10 +167,20 @@ describe('resource rules', () => {
   test('update: required and optional params', async () => {
     const response = await client.loyalty.rules.update('182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e', {
       amount: '10.5',
+      endTime: '2024-12-31T23:59:00Z',
+      name: 'Daily Rewards Program',
+      collectionAddress: '0x1234567890abcdef1234567890abcdef12345678',
+      collections: [{ address: '0xabcdefabcdefabcdefabcdefabcdefabcdef', network: 'mainnet' }],
+      customRewardsApiUrl: 'https://api.example.com/rewards',
+      customRewardsCsvUrl: 'https://example.com/rewards.csv',
+      description: 'This rule rewards users daily for specific actions.',
       effectiveEndTime: '2024-12-31T23:59:00Z',
       effectiveStartTime: '2024-01-01T00:00:00Z',
-      endTime: '2024-12-31T23:59:00Z',
       frequency: 'none',
+      hideInUi: false,
+      interval: 'daily',
+      isRequired: true,
+      loyaltyRuleGroupId: '123e4567-e89b-12d3-a456-426614174005',
       metadata: {
         buttonText: 'Verify Now',
         checkComment: true,
@@ -188,7 +195,7 @@ describe('resource rules', () => {
         discordServersToJoin: [
           {
             id: '123456789012345678',
-            channels: [{ id: '987654321098765432', emojis: [{ id: '1f600' }] }],
+            channels: [{ id: '987654321098765432', emojis: [{ id: '1f600' }], text: 'Hello' }],
             roles: [{ id: 'role123' }],
           },
         ],
@@ -212,6 +219,7 @@ describe('resource rules', () => {
         onlyKnownUsers: false,
         onlyNative: true,
         onlyNonListed: true,
+        onlyRewardSingleTokenOwnership: true,
         promoCode: 'PROMO123',
         range: [{ amount: 5, endRange: 10, startRange: 1 }],
         referralRequirements: {
@@ -226,6 +234,7 @@ describe('resource rules', () => {
         rewardPerImpression: true,
         saleCurrency: 'USD',
         secondReferralReward: 5,
+        skipMultiplier: true,
         smartContract: {
           abi: '[]',
           addressMapping: '0x123...789',
@@ -241,7 +250,7 @@ describe('resource rules', () => {
           withMax: true,
         },
         snapshotProposals: [{ id: 'proposal123', space: 'space123' }],
-        socialPlatform: 'Twitch',
+        socialPlatform: 'Custom',
         socialPlatformLogo: 'https://example.com/logo.png',
         socialPlatformName: 'Twitter',
         streakArray: [{ streakAmount: 10, streakMilestone: 5 }],
@@ -258,20 +267,10 @@ describe('resource rules', () => {
         verifyPlaceHolderText: 'Enter your verification code here.',
         walletType: 'evm',
       },
-      name: 'Daily Rewards Program',
-      startTime: '2024-01-01T00:00:00Z',
-      collectionAddress: '0x1234567890abcdef1234567890abcdef12345678',
-      collections: [{ address: '0xabcdefabcdefabcdefabcdefabcdefabcdef', network: 'mainnet' }],
-      customRewardsApiUrl: 'https://api.example.com/rewards',
-      customRewardsCsvUrl: 'https://example.com/rewards.csv',
-      description: 'This rule rewards users daily for specific actions.',
-      hideInUi: false,
-      interval: 'daily',
-      isRequired: true,
-      loyaltyRuleGroupId: '123e4567-e89b-12d3-a456-426614174005',
       network: 'mainnet',
       oauthCredentialsId: '123e4567-e89b-12d3-a456-426614174000',
       rewardType: 'points',
+      startTime: '2024-01-01T00:00:00Z',
       subscriptionIdentifier: 'sub12345',
     });
   });
@@ -301,6 +300,7 @@ describe('resource rules', () => {
         {
           collectionAddress: '0x1234567890abcdef1234567890abcdef12345678',
           limit: 50,
+          loyaltyRuleGroupId: '123e4567-e89b-12d3-a456-426614174004',
           organizationId: '123e4567-e89b-12d3-a456-426614174001',
           startingAfter: '123e4567-e89b-12d3-a456-426614174010',
           websiteId: '123e4567-e89b-12d3-a456-426614174002',
@@ -357,8 +357,10 @@ describe('resource rules', () => {
         '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
         {
           commentLink: 'https://x.com/Snag_Solutions/status/1735407428093522314',
+          loyaltyQuestionChoiceId: '123e4567-e89b-12d3-a456-426614174000',
           userId: '123e4567-e89b-12d3-a456-426614174000',
           verificationCode: 'VERIF123',
+          verifyOnly: 'verifyOnly',
           walletAddress: '0x1234567890abcdef1234567890abcdef12345678',
         },
         { path: '/_stainless_unknown_path' },

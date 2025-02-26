@@ -6,7 +6,7 @@ import * as Core from '../../core';
 
 export class Metadatas extends APIResource {
   /**
-   * This endpoint allows you to create or edit a user metadata
+   * This endpoint is used to create user metadata
    */
   create(body?: MetadataCreateParams, options?: Core.RequestOptions): Core.APIPromise<MetadataCreateResponse>;
   create(options?: Core.RequestOptions): Core.APIPromise<MetadataCreateResponse>;
@@ -21,9 +21,6 @@ export class Metadatas extends APIResource {
   }
 }
 
-/**
- * Schema for user metadata response
- */
 export interface MetadataCreateResponse {
   /**
    * Unique identifier for the user metadata
@@ -40,15 +37,14 @@ export interface MetadataCreateResponse {
    */
   organizationId: string;
 
-  /**
-   * Timestamp when the wallet was last updated
-   */
-  updatedAt: string;
+  user: MetadataCreateResponse.User;
+
+  userGroup: MetadataCreateResponse.UserGroup;
 
   /**
-   * Validated and formatted wallet address
+   * Identifier for the user group set via api
    */
-  walletAddress: string;
+  userGroupId: string | null;
 
   /**
    * Identifier for the user wallet group set via api
@@ -59,6 +55,32 @@ export interface MetadataCreateResponse {
    * Unique identifier for the website
    */
   websiteId: string;
+}
+
+export namespace MetadataCreateResponse {
+  export interface User {
+    /**
+     * Id for the user
+     */
+    id: string;
+
+    /**
+     * Wallet address of the user
+     */
+    walletAddress: string;
+  }
+
+  export interface UserGroup {
+    /**
+     * id for the user group
+     */
+    id: string;
+
+    /**
+     * External identifier for the user group
+     */
+    externalIdentifier: string | null;
+  }
 }
 
 export interface MetadataCreateParams {
@@ -87,6 +109,10 @@ export interface MetadataCreateParams {
   twitterUser?: string | null;
 
   twitterUserId?: string | null;
+
+  userGroupExternalIdentifier?: string | null;
+
+  userGroupId?: string;
 
   userId?: string;
 
