@@ -2,7 +2,7 @@
 
 import { APIResource } from '../../resource';
 import * as AccountsAPI from './accounts';
-import { AccountListParams, AccountListResponse, Accounts } from './accounts';
+import { Accounts } from './accounts';
 import * as BadgesAPI from './badges';
 import {
   BadgeCreateParams,
@@ -38,13 +38,7 @@ import {
   Multipliers,
 } from './multipliers';
 import * as RuleEditsAPI from './rule-edits';
-import {
-  RuleEditRestoreParams,
-  RuleEditRestoreResponse,
-  RuleEditRetrieveParams,
-  RuleEditRetrieveResponse,
-  RuleEdits,
-} from './rule-edits';
+import { RuleEditRetrieveParams, RuleEditRetrieveResponse, RuleEdits } from './rule-edits';
 import * as RulesAPI from './rules';
 import {
   RuleCompleteParams,
@@ -120,16 +114,10 @@ export declare namespace Loyalty {
   export {
     RuleEdits as RuleEdits,
     type RuleEditRetrieveResponse as RuleEditRetrieveResponse,
-    type RuleEditRestoreResponse as RuleEditRestoreResponse,
     type RuleEditRetrieveParams as RuleEditRetrieveParams,
-    type RuleEditRestoreParams as RuleEditRestoreParams,
   };
 
-  export {
-    Accounts as Accounts,
-    type AccountListResponse as AccountListResponse,
-    type AccountListParams as AccountListParams,
-  };
+  export { Accounts as Accounts };
 
   export {
     Multipliers as Multipliers,
