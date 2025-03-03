@@ -12,18 +12,6 @@ Methods:
 
 ## Wallets
 
-Types:
-
-- <code><a href="./src/resources/users/wallets.ts">WalletCreateResponse</a></code>
-- <code><a href="./src/resources/users/wallets.ts">WalletListResponse</a></code>
-- <code><a href="./src/resources/users/wallets.ts">WalletDeleteResponse</a></code>
-
-Methods:
-
-- <code title="post /api/users/wallets">client.users.wallets.<a href="./src/resources/users/wallets.ts">create</a>({ ...params }) -> WalletCreateResponse</code>
-- <code title="get /api/users/wallets">client.users.wallets.<a href="./src/resources/users/wallets.ts">list</a>({ ...params }) -> WalletListResponse</code>
-- <code title="delete /api/users/wallets/{id}">client.users.wallets.<a href="./src/resources/users/wallets.ts">delete</a>(id) -> WalletDeleteResponse</code>
-
 ## Metadatas
 
 Types:
@@ -83,22 +71,12 @@ Methods:
 Types:
 
 - <code><a href="./src/resources/loyalty/rule-edits.ts">RuleEditRetrieveResponse</a></code>
-- <code><a href="./src/resources/loyalty/rule-edits.ts">RuleEditRestoreResponse</a></code>
 
 Methods:
 
 - <code title="get /api/loyalty/rule_edits">client.loyalty.ruleEdits.<a href="./src/resources/loyalty/rule-edits.ts">retrieve</a>({ ...params }) -> RuleEditRetrieveResponse</code>
-- <code title="post /api/api/loyalty/rule_edits/{id}/restore">client.loyalty.ruleEdits.<a href="./src/resources/loyalty/rule-edits.ts">restore</a>(id) -> RuleEditRestoreResponse</code>
 
 ## Accounts
-
-Types:
-
-- <code><a href="./src/resources/loyalty/accounts.ts">AccountListResponse</a></code>
-
-Methods:
-
-- <code title="get /">client.loyalty.accounts.<a href="./src/resources/loyalty/accounts.ts">list</a>({ ...params }) -> AccountListResponse</code>
 
 ## Multipliers
 
@@ -140,7 +118,6 @@ Methods:
 
 Methods:
 
-- <code title="post /api/auction_bids">client.auctionBids.<a href="./src/resources/auction-bids.ts">create</a>({ ...params }) -> void</code>
 - <code title="get /api/auction_bids">client.auctionBids.<a href="./src/resources/auction-bids.ts">list</a>({ ...params }) -> void</code>
 
 # Websites
@@ -159,20 +136,4 @@ Methods:
 
 ## Quests
 
-Types:
-
-- <code><a href="./src/resources/drip/quests.ts">QuestCompleteResponse</a></code>
-
-Methods:
-
-- <code title="post /api/drip/quests/{dripQuestId}/complete">client.drip.quests.<a href="./src/resources/drip/quests.ts">complete</a>(dripQuestId, { ...params }) -> QuestCompleteResponse</code>
-
 ## Status
-
-Types:
-
-- <code><a href="./src/resources/drip/status.ts">StatusRetrieveResponse</a></code>
-
-Methods:
-
-- <code title="get /api/drip/status/{verificationId}">client.drip.status.<a href="./src/resources/drip/status.ts">retrieve</a>(verificationId) -> StatusRetrieveResponse</code>

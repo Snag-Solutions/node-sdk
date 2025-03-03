@@ -42,6 +42,8 @@ describe('resource transactionEntries', () => {
           startingAfter: '123e4567-e89b-12d3-a456-426614174010',
           type: 'auction_bid',
           userCompletedLoyaltyRuleId: '123e4567-e89b-12d3-a456-426614174030',
+          userGroupExternalIdentifier: 'userGroupExternalIdentifier',
+          userGroupId: '123e4567-e89b-12d3-a456-426614174090',
           userId: ['123e4567-e89b-12d3-a456-426614174000'],
           walletAddress: ['0x1234567890abcdef1234567890abcdef12345678'],
           walletGroupIdentifier: 'group123',
