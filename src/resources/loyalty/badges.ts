@@ -1003,7 +1003,7 @@ export namespace BadgeCreateParams {
     /**
      * The description of the rule
      */
-    description?: string;
+    description?: string | null;
 
     /**
      * Array of UUIDs of the badge (optional, converted to lowercase)
