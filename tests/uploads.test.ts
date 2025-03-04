@@ -1,6 +1,6 @@
 import fs from 'fs';
-import { toFile, type ResponseLike } from '@snagsolutions/sdk/uploads';
-import { File } from '@snagsolutions/sdk/_shims/index';
+import { toFile, type ResponseLike } from 'snag-solutions/uploads';
+import { File } from 'snag-solutions/_shims/index';
 
 class MyClass {
   name: string = 'foo';
