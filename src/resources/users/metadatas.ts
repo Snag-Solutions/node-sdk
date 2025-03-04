@@ -6,7 +6,7 @@ import * as Core from '../../core';
 
 export class Metadatas extends APIResource {
   /**
-   * This endpoint allows you to create or edit a user metadata
+   * This endpoint is used to create user metadata
    */
   create(body?: MetadataCreateParams, options?: Core.RequestOptions): Core.APIPromise<MetadataCreateResponse>;
   create(options?: Core.RequestOptions): Core.APIPromise<MetadataCreateResponse>;
@@ -19,11 +19,26 @@ export class Metadatas extends APIResource {
     }
     return this._client.post('/api/users/metadatas', { body, ...options });
   }
+
+  /**
+   * This endpoint is used to get user metadata
+   */
+  retrieve(
+    query?: MetadataRetrieveParams,
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<MetadataRetrieveResponse>;
+  retrieve(options?: Core.RequestOptions): Core.APIPromise<MetadataRetrieveResponse>;
+  retrieve(
+    query: MetadataRetrieveParams | Core.RequestOptions = {},
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<MetadataRetrieveResponse> {
+    if (isRequestOptions(query)) {
+      return this.retrieve({}, query);
+    }
+    return this._client.get('/api/users/metadatas', { query, ...options });
+  }
 }
 
-/**
- * Schema for user metadata response
- */
 export interface MetadataCreateResponse {
   /**
    * Unique identifier for the user metadata
@@ -40,15 +55,14 @@ export interface MetadataCreateResponse {
    */
   organizationId: string;
 
-  /**
-   * Timestamp when the wallet was last updated
-   */
-  updatedAt: string;
+  user: MetadataCreateResponse.User;
+
+  userGroup: MetadataCreateResponse.UserGroup;
 
   /**
-   * Validated and formatted wallet address
+   * Identifier for the user group set via api
    */
-  walletAddress: string;
+  userGroupId: string | null;
 
   /**
    * Identifier for the user wallet group set via api
@@ -59,6 +73,53 @@ export interface MetadataCreateResponse {
    * Unique identifier for the website
    */
   websiteId: string;
+}
+
+export namespace MetadataCreateResponse {
+  export interface User {
+    /**
+     * Id for the user
+     */
+    id: string;
+
+    /**
+     * Wallet address of the user
+     */
+    walletAddress: string;
+  }
+
+  export interface UserGroup {
+    /**
+     * id for the user group
+     */
+    id: string;
+
+    /**
+     * External identifier for the user group
+     */
+    externalIdentifier: string | null;
+  }
+}
+
+/**
+ * Response schema for fetching user metadata
+ */
+export interface MetadataRetrieveResponse {
+  data: Array<MetadataRetrieveResponse.Data>;
+
+  /**
+   * Indicates if there are more records available
+   */
+  hasNextPage: boolean;
+}
+
+export namespace MetadataRetrieveResponse {
+  export interface Data {
+    /**
+     * Unique identifier for the user metadata
+     */
+    id: string;
+  }
 }
 
 export interface MetadataCreateParams {
@@ -88,6 +149,10 @@ export interface MetadataCreateParams {
 
   twitterUserId?: string | null;
 
+  userGroupExternalIdentifier?: string | null;
+
+  userGroupId?: string;
+
   userId?: string;
 
   walletAddress?: string;
@@ -95,9 +160,43 @@ export interface MetadataCreateParams {
   walletGroupIdentifier?: string | null;
 }
 
+export interface MetadataRetrieveParams {
+  /**
+   * Number of records to fetch
+   */
+  limit?: number;
+
+  /**
+   * UUID of the organization
+   */
+  organizationId?: string;
+
+  /**
+   * Fetch records starting after this ID
+   */
+  startingAfter?: string;
+
+  /**
+   * UUID of the user
+   */
+  userId?: string;
+
+  /**
+   * Wallet address of the user
+   */
+  walletAddress?: string;
+
+  /**
+   * UUID of the website
+   */
+  websiteId?: string;
+}
+
 export declare namespace Metadatas {
   export {
     type MetadataCreateResponse as MetadataCreateResponse,
+    type MetadataRetrieveResponse as MetadataRetrieveResponse,
     type MetadataCreateParams as MetadataCreateParams,
+    type MetadataRetrieveParams as MetadataRetrieveParams,
   };
 }

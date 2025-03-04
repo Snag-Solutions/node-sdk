@@ -6,8 +6,7 @@ import * as Core from './core';
 import * as Errors from './error';
 import * as Uploads from './uploads';
 import * as API from './resources/index';
-import { AssetCreateParams, AssetCreateResponse, Assets } from './resources/assets';
-import { AuctionBidCreateParams, AuctionBidListParams, AuctionBids } from './resources/auction-bids';
+import { AuctionBidListParams, AuctionBids } from './resources/auction-bids';
 import {
   WebsiteCreateParams,
   WebsiteCreateResponse,
@@ -15,6 +14,12 @@ import {
   WebsiteListResponse,
   Websites,
 } from './resources/websites';
+import {
+  AssetCreateParams,
+  AssetCreateResponse,
+  AssetGetAuctionsResponse,
+  Assets,
+} from './resources/assets/assets';
 import { Drip } from './resources/drip/drip';
 import { Loyalty } from './resources/loyalty/loyalty';
 import { Users } from './resources/users/users';
@@ -39,7 +44,7 @@ export interface ClientOptions {
    * Note that request timeouts are retried by default, so in a worst-case scenario you may wait
    * much longer than this timeout before the promise succeeds or fails.
    */
-  timeout?: number;
+  timeout?: number | undefined;
 
   /**
    * An HTTP agent used to manage HTTP(S) connections.
@@ -47,7 +52,7 @@ export interface ClientOptions {
    * If not provided, an agent will be constructed by default in the Node.js environment,
    * otherwise no agent is used.
    */
-  httpAgent?: Agent;
+  httpAgent?: Agent | undefined;
 
   /**
    * Specify a custom `fetch` function implementation.
@@ -63,7 +68,7 @@ export interface ClientOptions {
    *
    * @default 2
    */
-  maxRetries?: number;
+  maxRetries?: number | undefined;
 
   /**
    * Default headers to include with every request to the API.
@@ -71,7 +76,7 @@ export interface ClientOptions {
    * These can be removed in individual requests by explicitly setting the
    * header to `undefined` or `null` in request options.
    */
-  defaultHeaders?: Core.Headers;
+  defaultHeaders?: Core.Headers | undefined;
 
   /**
    * Default query parameters to include with every request to the API.
@@ -79,7 +84,7 @@ export interface ClientOptions {
    * These can be removed in individual requests by explicitly setting the
    * param to `undefined` in request options.
    */
-  defaultQuery?: Core.DefaultQuery;
+  defaultQuery?: Core.DefaultQuery | undefined;
 }
 
 /**
@@ -191,6 +196,7 @@ export declare namespace SnagSolutions {
   export {
     Assets as Assets,
     type AssetCreateResponse as AssetCreateResponse,
+    type AssetGetAuctionsResponse as AssetGetAuctionsResponse,
     type AssetCreateParams as AssetCreateParams,
   };
 
@@ -198,11 +204,7 @@ export declare namespace SnagSolutions {
 
   export { Loyalty as Loyalty };
 
-  export {
-    AuctionBids as AuctionBids,
-    type AuctionBidCreateParams as AuctionBidCreateParams,
-    type AuctionBidListParams as AuctionBidListParams,
-  };
+  export { AuctionBids as AuctionBids, type AuctionBidListParams as AuctionBidListParams };
 
   export {
     Websites as Websites,

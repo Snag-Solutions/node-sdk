@@ -47,7 +47,7 @@ export class Rules extends APIResource {
 
   /**
    * Verify a loyalty rule based on user action and reward them if applicable. This
-   * endpoint currenlty onlu supports following rule types code_entry, text_input,
+   * endpoint currently only supports following rule types code_entry, text_input,
    * link_click, discord_member, connect_wallet, check_in, external_rule,
    * drip_x_follow, drip_x_new_tweet, drip_x_text_in_bio, drip_x_text_in_name,
    * drip_x_text_in_comment, drip_x_tweet, telegram_join
@@ -184,7 +184,9 @@ export interface RuleCreateResponse {
     | 'twitter_follow'
     | 'twitter_followers'
     | 'twitter_like'
-    | 'twitter_post_hashtag';
+    | 'twitter_post_hashtag'
+    | 'quiz'
+    | 'poll';
 
   /**
    * Unique identifier for the associated website
@@ -229,7 +231,7 @@ export interface RuleCreateResponse {
   /**
    * Interval between rule executions
    */
-  interval?: 'daily' | 'weekly' | 'monthly' | 'once' | null;
+  interval?: 'daily' | 'weekly' | 'monthly' | 'once' | 'custom' | null;
 
   /**
    * Whether this rule is mandatory
@@ -442,6 +444,11 @@ export namespace RuleCreateResponse {
     onlyNonListed?: boolean;
 
     /**
+     * give points for only one token ownership per contract
+     */
+    onlyRewardSingleTokenOwnership?: boolean | null;
+
+    /**
      * Promotional code associated with the rule.
      */
     promoCode?: string;
@@ -477,6 +484,11 @@ export namespace RuleCreateResponse {
     secondReferralReward?: number | null;
 
     /**
+     * Flag indicating if the multiplier is skipped.
+     */
+    skipMultiplier?: boolean | null;
+
+    /**
      * Object containing details of the associated smart contract.
      */
     smartContract?: Metadata.SmartContract;
@@ -490,14 +502,16 @@ export namespace RuleCreateResponse {
      * Social media platform associated with the rule.
      */
     socialPlatform?:
-      | 'Twitch'
-      | 'TikTok'
-      | 'X(Twitter)'
-      | 'Instagram'
-      | 'EpicGames'
-      | 'YouTube'
-      | 'Discord'
       | 'Custom'
+      | 'Discord'
+      | 'EpicGames'
+      | 'Instagram'
+      | 'Steam'
+      | 'Telegram'
+      | 'TikTok'
+      | 'Twitch'
+      | 'X(Twitter)'
+      | 'YouTube'
       | null;
 
     /**
@@ -666,6 +680,11 @@ export namespace RuleCreateResponse {
          * Array of emojis used in the channel.
          */
         emojis?: Array<Channel.Emoji>;
+
+        /**
+         * Phrase of text to be present in the discord message
+         */
+        text?: string;
       }
 
       export namespace Channel {
@@ -942,39 +961,14 @@ export interface RuleUpdateResponse {
   amount: unknown;
 
   /**
-   * Effective end time of the rule
-   */
-  effectiveEndTime: string | null;
-
-  /**
-   * Effective start time of the rule
-   */
-  effectiveStartTime: string | null;
-
-  /**
    * End time for the loyalty rule
    */
   endTime: string | null;
 
   /**
-   * Frequency of the rule execution
-   */
-  frequency: 'none' | 'once' | 'daily' | 'weekly' | 'monthly' | 'immediately';
-
-  /**
-   * Additional metadata for the loyalty rule
-   */
-  metadata: RuleUpdateResponse.Metadata;
-
-  /**
    * Name of the loyalty rule
    */
   name: string;
-
-  /**
-   * Start time for the loyalty rule
-   */
-  startTime: string | null;
 
   /**
    * Blockchain address of the associated collection
@@ -1002,6 +996,21 @@ export interface RuleUpdateResponse {
   description?: string;
 
   /**
+   * Effective end time of the rule
+   */
+  effectiveEndTime?: string | null;
+
+  /**
+   * Effective start time of the rule
+   */
+  effectiveStartTime?: string | null;
+
+  /**
+   * Frequency of the rule execution
+   */
+  frequency?: 'none' | 'once' | 'daily' | 'weekly' | 'monthly' | 'immediately';
+
+  /**
    * Whether to hide this rule in the user interface
    */
   hideInUi?: boolean;
@@ -1009,7 +1018,7 @@ export interface RuleUpdateResponse {
   /**
    * Time interval for recurring rule execution
    */
-  interval?: 'daily' | 'weekly' | 'monthly' | 'once' | null;
+  interval?: 'daily' | 'weekly' | 'monthly' | 'once' | 'custom' | null;
 
   /**
    * Whether this rule is required for participation
@@ -1020,6 +1029,11 @@ export interface RuleUpdateResponse {
    * ID of the rule group section to associate with the rule
    */
   loyaltyRuleGroupId?: (string & {}) | 'no-section' | null;
+
+  /**
+   * Additional metadata for the loyalty rule
+   */
+  metadata?: RuleUpdateResponse.Metadata;
 
   /**
    * Blockchain network where the rule will apply
@@ -1066,12 +1080,58 @@ export interface RuleUpdateResponse {
   rewardType?: 'points' | 'multiplier';
 
   /**
+   * Start time for the loyalty rule
+   */
+  startTime?: string | null;
+
+  /**
    * Optional subscription identifier for the rule
    */
   subscriptionIdentifier?: string | null;
 }
 
 export namespace RuleUpdateResponse {
+  export interface Collection {
+    /**
+     * Blockchain address of the collection
+     */
+    address: string;
+
+    /**
+     * Blockchain network for the collection
+     */
+    network:
+      | 'mainnet'
+      | 'polygon'
+      | 'polygon_mumbai'
+      | 'optimism'
+      | 'arbitrum'
+      | 'binance'
+      | 'bscTestnet'
+      | 'avalanche'
+      | 'avalancheFuji'
+      | 'zksync'
+      | 'fantom'
+      | 'fantomTestnet'
+      | 'base'
+      | 'baseSepolia'
+      | 'skaleNebula'
+      | 'xai'
+      | 'berachainArtio'
+      | 'solana'
+      | 'apechain'
+      | 'flowMainnet'
+      | 'campTestnet'
+      | 'sui'
+      | 'vanar'
+      | 'sepolia'
+      | 'optimism_sepolia'
+      | 'arbitrumSepolia'
+      | 'goerli'
+      | 'optimism_goerli'
+      | 'arbitrumGoerli';
+  }
+
   /**
    * Additional metadata for the loyalty rule
    */
@@ -1222,6 +1282,11 @@ export namespace RuleUpdateResponse {
     onlyNonListed?: boolean;
 
     /**
+     * give points for only one token ownership per contract
+     */
+    onlyRewardSingleTokenOwnership?: boolean | null;
+
+    /**
      * Promotional code associated with the rule.
      */
     promoCode?: string;
@@ -1257,6 +1322,11 @@ export namespace RuleUpdateResponse {
     secondReferralReward?: number | null;
 
     /**
+     * Flag indicating if the multiplier is skipped.
+     */
+    skipMultiplier?: boolean | null;
+
+    /**
      * Object containing details of the associated smart contract.
      */
     smartContract?: Metadata.SmartContract;
@@ -1270,14 +1340,16 @@ export namespace RuleUpdateResponse {
      * Social media platform associated with the rule.
      */
     socialPlatform?:
-      | 'Twitch'
-      | 'TikTok'
-      | 'X(Twitter)'
-      | 'Instagram'
-      | 'EpicGames'
-      | 'YouTube'
-      | 'Discord'
       | 'Custom'
+      | 'Discord'
+      | 'EpicGames'
+      | 'Instagram'
+      | 'Steam'
+      | 'Telegram'
+      | 'TikTok'
+      | 'Twitch'
+      | 'X(Twitter)'
+      | 'YouTube'
       | null;
 
     /**
@@ -1446,6 +1518,11 @@ export namespace RuleUpdateResponse {
          * Array of emojis used in the channel.
          */
         emojis?: Array<Channel.Emoji>;
+
+        /**
+         * Phrase of text to be present in the discord message
+         */
+        text?: string;
       }
 
       export namespace Channel {
@@ -1670,47 +1747,6 @@ export namespace RuleUpdateResponse {
       streakMilestone: number;
     }
   }
-
-  export interface Collection {
-    /**
-     * Blockchain address of the collection
-     */
-    address: string;
-
-    /**
-     * Blockchain network for the collection
-     */
-    network:
-      | 'mainnet'
-      | 'polygon'
-      | 'polygon_mumbai'
-      | 'optimism'
-      | 'arbitrum'
-      | 'binance'
-      | 'bscTestnet'
-      | 'avalanche'
-      | 'avalancheFuji'
-      | 'zksync'
-      | 'fantom'
-      | 'fantomTestnet'
-      | 'base'
-      | 'baseSepolia'
-      | 'skaleNebula'
-      | 'xai'
-      | 'berachainArtio'
-      | 'solana'
-      | 'apechain'
-      | 'flowMainnet'
-      | 'campTestnet'
-      | 'sui'
-      | 'vanar'
-      | 'sepolia'
-      | 'optimism_sepolia'
-      | 'arbitrumSepolia'
-      | 'goerli'
-      | 'optimism_goerli'
-      | 'arbitrumGoerli';
-  }
 }
 
 export interface RuleListResponse {
@@ -1912,7 +1948,9 @@ export interface RuleCreateParams {
     | 'twitter_follow'
     | 'twitter_followers'
     | 'twitter_like'
-    | 'twitter_post_hashtag';
+    | 'twitter_post_hashtag'
+    | 'quiz'
+    | 'poll';
 
   /**
    * Unique identifier for the associated website
@@ -1957,7 +1995,7 @@ export interface RuleCreateParams {
   /**
    * Interval between rule executions
    */
-  interval?: 'daily' | 'weekly' | 'monthly' | 'once' | null;
+  interval?: 'daily' | 'weekly' | 'monthly' | 'once' | 'custom' | null;
 
   /**
    * Whether this rule is mandatory
@@ -2170,6 +2208,11 @@ export namespace RuleCreateParams {
     onlyNonListed?: boolean;
 
     /**
+     * give points for only one token ownership per contract
+     */
+    onlyRewardSingleTokenOwnership?: boolean | null;
+
+    /**
      * Promotional code associated with the rule.
      */
     promoCode?: string;
@@ -2205,6 +2248,11 @@ export namespace RuleCreateParams {
     secondReferralReward?: number | null;
 
     /**
+     * Flag indicating if the multiplier is skipped.
+     */
+    skipMultiplier?: boolean | null;
+
+    /**
      * Object containing details of the associated smart contract.
      */
     smartContract?: Metadata.SmartContract;
@@ -2218,14 +2266,16 @@ export namespace RuleCreateParams {
      * Social media platform associated with the rule.
      */
     socialPlatform?:
-      | 'Twitch'
-      | 'TikTok'
-      | 'X(Twitter)'
-      | 'Instagram'
-      | 'EpicGames'
-      | 'YouTube'
-      | 'Discord'
       | 'Custom'
+      | 'Discord'
+      | 'EpicGames'
+      | 'Instagram'
+      | 'Steam'
+      | 'Telegram'
+      | 'TikTok'
+      | 'Twitch'
+      | 'X(Twitter)'
+      | 'YouTube'
       | null;
 
     /**
@@ -2394,6 +2444,11 @@ export namespace RuleCreateParams {
          * Array of emojis used in the channel.
          */
         emojis?: Array<Channel.Emoji>;
+
+        /**
+         * Phrase of text to be present in the discord message
+         */
+        text?: string;
       }
 
       export namespace Channel {
@@ -2668,39 +2723,14 @@ export interface RuleUpdateParams {
   amount: unknown;
 
   /**
-   * Effective end time of the rule
-   */
-  effectiveEndTime: string | null;
-
-  /**
-   * Effective start time of the rule
-   */
-  effectiveStartTime: string | null;
-
-  /**
    * End time for the loyalty rule
    */
   endTime: string | null;
 
   /**
-   * Frequency of the rule execution
-   */
-  frequency: 'none' | 'once' | 'daily' | 'weekly' | 'monthly' | 'immediately';
-
-  /**
-   * Additional metadata for the loyalty rule
-   */
-  metadata: RuleUpdateParams.Metadata;
-
-  /**
    * Name of the loyalty rule
    */
   name: string;
-
-  /**
-   * Start time for the loyalty rule
-   */
-  startTime: string | null;
 
   /**
    * Blockchain address of the associated collection
@@ -2728,6 +2758,21 @@ export interface RuleUpdateParams {
   description?: string;
 
   /**
+   * Effective end time of the rule
+   */
+  effectiveEndTime?: string | null;
+
+  /**
+   * Effective start time of the rule
+   */
+  effectiveStartTime?: string | null;
+
+  /**
+   * Frequency of the rule execution
+   */
+  frequency?: 'none' | 'once' | 'daily' | 'weekly' | 'monthly' | 'immediately';
+
+  /**
    * Whether to hide this rule in the user interface
    */
   hideInUi?: boolean;
@@ -2735,7 +2780,7 @@ export interface RuleUpdateParams {
   /**
    * Time interval for recurring rule execution
    */
-  interval?: 'daily' | 'weekly' | 'monthly' | 'once' | null;
+  interval?: 'daily' | 'weekly' | 'monthly' | 'once' | 'custom' | null;
 
   /**
    * Whether this rule is required for participation
@@ -2746,6 +2791,11 @@ export interface RuleUpdateParams {
    * ID of the rule group section to associate with the rule
    */
   loyaltyRuleGroupId?: (string & {}) | 'no-section' | null;
+
+  /**
+   * Additional metadata for the loyalty rule
+   */
+  metadata?: RuleUpdateParams.Metadata;
 
   /**
    * Blockchain network where the rule will apply
@@ -2792,12 +2842,58 @@ export interface RuleUpdateParams {
   rewardType?: 'points' | 'multiplier';
 
   /**
+   * Start time for the loyalty rule
+   */
+  startTime?: string | null;
+
+  /**
    * Optional subscription identifier for the rule
    */
   subscriptionIdentifier?: string | null;
 }
 
 export namespace RuleUpdateParams {
+  export interface Collection {
+    /**
+     * Blockchain address of the collection
+     */
+    address: string;
+
+    /**
+     * Blockchain network for the collection
+     */
+    network:
+      | 'mainnet'
+      | 'polygon'
+      | 'polygon_mumbai'
+      | 'optimism'
+      | 'arbitrum'
+      | 'binance'
+      | 'bscTestnet'
+      | 'avalanche'
+      | 'avalancheFuji'
+      | 'zksync'
+      | 'fantom'
+      | 'fantomTestnet'
+      | 'base'
+      | 'baseSepolia'
+      | 'skaleNebula'
+      | 'xai'
+      | 'berachainArtio'
+      | 'solana'
+      | 'apechain'
+      | 'flowMainnet'
+      | 'campTestnet'
+      | 'sui'
+      | 'vanar'
+      | 'sepolia'
+      | 'optimism_sepolia'
+      | 'arbitrumSepolia'
+      | 'goerli'
+      | 'optimism_goerli'
+      | 'arbitrumGoerli';
+  }
+
   /**
    * Additional metadata for the loyalty rule
    */
@@ -2948,6 +3044,11 @@ export namespace RuleUpdateParams {
     onlyNonListed?: boolean;
 
     /**
+     * give points for only one token ownership per contract
+     */
+    onlyRewardSingleTokenOwnership?: boolean | null;
+
+    /**
      * Promotional code associated with the rule.
      */
     promoCode?: string;
@@ -2983,6 +3084,11 @@ export namespace RuleUpdateParams {
     secondReferralReward?: number | null;
 
     /**
+     * Flag indicating if the multiplier is skipped.
+     */
+    skipMultiplier?: boolean | null;
+
+    /**
      * Object containing details of the associated smart contract.
      */
     smartContract?: Metadata.SmartContract;
@@ -2996,14 +3102,16 @@ export namespace RuleUpdateParams {
      * Social media platform associated with the rule.
      */
     socialPlatform?:
-      | 'Twitch'
-      | 'TikTok'
-      | 'X(Twitter)'
-      | 'Instagram'
-      | 'EpicGames'
-      | 'YouTube'
-      | 'Discord'
       | 'Custom'
+      | 'Discord'
+      | 'EpicGames'
+      | 'Instagram'
+      | 'Steam'
+      | 'Telegram'
+      | 'TikTok'
+      | 'Twitch'
+      | 'X(Twitter)'
+      | 'YouTube'
       | null;
 
     /**
@@ -3172,6 +3280,11 @@ export namespace RuleUpdateParams {
          * Array of emojis used in the channel.
          */
         emojis?: Array<Channel.Emoji>;
+
+        /**
+         * Phrase of text to be present in the discord message
+         */
+        text?: string;
       }
 
       export namespace Channel {
@@ -3396,47 +3509,6 @@ export namespace RuleUpdateParams {
       streakMilestone: number;
     }
   }
-
-  export interface Collection {
-    /**
-     * Blockchain address of the collection
-     */
-    address: string;
-
-    /**
-     * Blockchain network for the collection
-     */
-    network:
-      | 'mainnet'
-      | 'polygon'
-      | 'polygon_mumbai'
-      | 'optimism'
-      | 'arbitrum'
-      | 'binance'
-      | 'bscTestnet'
-      | 'avalanche'
-      | 'avalancheFuji'
-      | 'zksync'
-      | 'fantom'
-      | 'fantomTestnet'
-      | 'base'
-      | 'baseSepolia'
-      | 'skaleNebula'
-      | 'xai'
-      | 'berachainArtio'
-      | 'solana'
-      | 'apechain'
-      | 'flowMainnet'
-      | 'campTestnet'
-      | 'sui'
-      | 'vanar'
-      | 'sepolia'
-      | 'optimism_sepolia'
-      | 'arbitrumSepolia'
-      | 'goerli'
-      | 'optimism_goerli'
-      | 'arbitrumGoerli';
-  }
 }
 
 export interface RuleListParams {
@@ -3449,6 +3521,11 @@ export interface RuleListParams {
    * Maximum number of records to return (max 1000)
    */
   limit?: number;
+
+  /**
+   * ID of the loyalty rule group to filter results
+   */
+  loyaltyRuleGroupId?: string;
 
   /**
    * Unique identifier for the organization to filter by
@@ -3473,6 +3550,11 @@ export interface RuleCompleteParams {
   commentLink?: string;
 
   /**
+   * ID of the choice selected by the user
+   */
+  loyaltyQuestionChoiceId?: string;
+
+  /**
    * Unique identifier for the user
    */
   userId?: string;
@@ -3481,6 +3563,12 @@ export interface RuleCompleteParams {
    * Optional verification code for completing the loyalty rule
    */
   verificationCode?: string;
+
+  /**
+   * Flag indicating if only verification is required, this will not create a
+   * transaction and reward the user
+   */
+  verifyOnly?: string;
 
   /**
    * Wallet address of the user can only be used if userId is not provided

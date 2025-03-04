@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-export { Accounts, type AccountListResponse, type AccountListParams } from './accounts';
+export { Accounts } from './accounts';
 export {
   Badges,
   type BadgeCreateResponse,
@@ -32,6 +32,7 @@ export {
   type MultiplierCreateParams,
   type MultiplierUpdateParams,
   type MultiplierListParams,
+  type MultiplierDeleteParams,
 } from './multipliers';
 export {
   RuleEdits,
@@ -57,5 +58,9 @@ export {
 export {
   TransactionEntries,
   type TransactionEntryListResponse,
+  type TransactionEntryCreateTransactionResponse,
+  type TransactionEntryListRuleGroupsResponse,
   type TransactionEntryListParams,
-} from './transaction-entries';
+  type TransactionEntryCreateTransactionParams,
+  type TransactionEntryListRuleGroupsParams,
+} from './transaction-entries/index';

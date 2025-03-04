@@ -22,7 +22,7 @@ export class RuleEdits extends APIResource {
     body?: RuleEditRestoreParams | null | undefined,
     options?: Core.RequestOptions,
   ): Core.APIPromise<RuleEditRestoreResponse> {
-    return this._client.post(`/api/api/loyalty/rule_edits/${id}/restore`, { body, ...options });
+    return this._client.post(`/api/loyalty/rule_edits/${id}/restore`, { body, ...options });
   }
 }
 
@@ -391,7 +391,7 @@ export interface RuleEditRetrieveParams {
   /**
    * Maximum number of edits to return
    */
-  limit?: number | null;
+  limit?: number;
 
   /**
    * Unique identifier for the organization to filter by

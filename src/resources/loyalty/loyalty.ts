@@ -2,7 +2,7 @@
 
 import { APIResource } from '../../resource';
 import * as AccountsAPI from './accounts';
-import { AccountListParams, AccountListResponse, Accounts } from './accounts';
+import { Accounts } from './accounts';
 import * as BadgesAPI from './badges';
 import {
   BadgeCreateParams,
@@ -30,6 +30,7 @@ import * as MultipliersAPI from './multipliers';
 import {
   MultiplierCreateParams,
   MultiplierCreateResponse,
+  MultiplierDeleteParams,
   MultiplierDeleteResponse,
   MultiplierListParams,
   MultiplierListResponse,
@@ -60,12 +61,16 @@ import {
   RuleUpdateResponse,
   Rules,
 } from './rules';
-import * as TransactionEntriesAPI from './transaction-entries';
+import * as TransactionEntriesAPI from './transaction-entries/transaction-entries';
 import {
   TransactionEntries,
+  TransactionEntryCreateTransactionParams,
+  TransactionEntryCreateTransactionResponse,
   TransactionEntryListParams,
   TransactionEntryListResponse,
-} from './transaction-entries';
+  TransactionEntryListRuleGroupsParams,
+  TransactionEntryListRuleGroupsResponse,
+} from './transaction-entries/transaction-entries';
 
 export class Loyalty extends APIResource {
   rules: RulesAPI.Rules = new RulesAPI.Rules(this._client);
@@ -114,7 +119,11 @@ export declare namespace Loyalty {
   export {
     TransactionEntries as TransactionEntries,
     type TransactionEntryListResponse as TransactionEntryListResponse,
+    type TransactionEntryCreateTransactionResponse as TransactionEntryCreateTransactionResponse,
+    type TransactionEntryListRuleGroupsResponse as TransactionEntryListRuleGroupsResponse,
     type TransactionEntryListParams as TransactionEntryListParams,
+    type TransactionEntryCreateTransactionParams as TransactionEntryCreateTransactionParams,
+    type TransactionEntryListRuleGroupsParams as TransactionEntryListRuleGroupsParams,
   };
 
   export {
@@ -125,11 +134,7 @@ export declare namespace Loyalty {
     type RuleEditRestoreParams as RuleEditRestoreParams,
   };
 
-  export {
-    Accounts as Accounts,
-    type AccountListResponse as AccountListResponse,
-    type AccountListParams as AccountListParams,
-  };
+  export { Accounts as Accounts };
 
   export {
     Multipliers as Multipliers,
@@ -140,6 +145,7 @@ export declare namespace Loyalty {
     type MultiplierCreateParams as MultiplierCreateParams,
     type MultiplierUpdateParams as MultiplierUpdateParams,
     type MultiplierListParams as MultiplierListParams,
+    type MultiplierDeleteParams as MultiplierDeleteParams,
   };
 
   export {
