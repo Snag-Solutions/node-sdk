@@ -2,7 +2,13 @@
 
 import { APIResource } from '../../resource';
 import * as MetadatasAPI from './metadatas';
-import { MetadataCreateParams, MetadataCreateResponse, Metadatas } from './metadatas';
+import {
+  MetadataCreateParams,
+  MetadataCreateResponse,
+  MetadataRetrieveParams,
+  MetadataRetrieveResponse,
+  Metadatas,
+} from './metadatas';
 import * as WalletsAPI from './wallets';
 import { Wallets } from './wallets';
 
@@ -20,6 +26,8 @@ export declare namespace Users {
   export {
     Metadatas as Metadatas,
     type MetadataCreateResponse as MetadataCreateResponse,
+    type MetadataRetrieveResponse as MetadataRetrieveResponse,
     type MetadataCreateParams as MetadataCreateParams,
+    type MetadataRetrieveParams as MetadataRetrieveParams,
   };
 }

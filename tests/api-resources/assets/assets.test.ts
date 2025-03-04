@@ -29,4 +29,22 @@ describe('resource assets', () => {
       websiteId: '123e4567-e89b-12d3-a456-426614174111',
     });
   });
+
+  test('getAuctions', async () => {
+    const responsePromise = client.assets.getAuctions();
+    const rawResponse = await responsePromise.asResponse();
+    expect(rawResponse).toBeInstanceOf(Response);
+    const response = await responsePromise;
+    expect(response).not.toBeInstanceOf(Response);
+    const dataAndResponse = await responsePromise.withResponse();
+    expect(dataAndResponse.data).toBe(response);
+    expect(dataAndResponse.response).toBe(rawResponse);
+  });
+
+  test('getAuctions: request options instead of params are passed correctly', async () => {
+    // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
+    await expect(client.assets.getAuctions({ path: '/_stainless_unknown_path' })).rejects.toThrow(
+      SnagSolutions.NotFoundError,
+    );
+  });
 });

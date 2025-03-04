@@ -19,6 +19,24 @@ export class Metadatas extends APIResource {
     }
     return this._client.post('/api/users/metadatas', { body, ...options });
   }
+
+  /**
+   * This endpoint is used to get user metadata
+   */
+  retrieve(
+    query?: MetadataRetrieveParams,
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<MetadataRetrieveResponse>;
+  retrieve(options?: Core.RequestOptions): Core.APIPromise<MetadataRetrieveResponse>;
+  retrieve(
+    query: MetadataRetrieveParams | Core.RequestOptions = {},
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<MetadataRetrieveResponse> {
+    if (isRequestOptions(query)) {
+      return this.retrieve({}, query);
+    }
+    return this._client.get('/api/users/metadatas', { query, ...options });
+  }
 }
 
 export interface MetadataCreateResponse {
@@ -83,6 +101,27 @@ export namespace MetadataCreateResponse {
   }
 }
 
+/**
+ * Response schema for fetching user metadata
+ */
+export interface MetadataRetrieveResponse {
+  data: Array<MetadataRetrieveResponse.Data>;
+
+  /**
+   * Indicates if there are more records available
+   */
+  hasNextPage: boolean;
+}
+
+export namespace MetadataRetrieveResponse {
+  export interface Data {
+    /**
+     * Unique identifier for the user metadata
+     */
+    id: string;
+  }
+}
+
 export interface MetadataCreateParams {
   discordUser?: string | null;
 
@@ -121,9 +160,43 @@ export interface MetadataCreateParams {
   walletGroupIdentifier?: string | null;
 }
 
+export interface MetadataRetrieveParams {
+  /**
+   * Number of records to fetch
+   */
+  limit?: number;
+
+  /**
+   * UUID of the organization
+   */
+  organizationId?: string;
+
+  /**
+   * Fetch records starting after this ID
+   */
+  startingAfter?: string;
+
+  /**
+   * UUID of the user
+   */
+  userId?: string;
+
+  /**
+   * Wallet address of the user
+   */
+  walletAddress?: string;
+
+  /**
+   * UUID of the website
+   */
+  websiteId?: string;
+}
+
 export declare namespace Metadatas {
   export {
     type MetadataCreateResponse as MetadataCreateResponse,
+    type MetadataRetrieveResponse as MetadataRetrieveResponse,
     type MetadataCreateParams as MetadataCreateParams,
+    type MetadataRetrieveParams as MetadataRetrieveParams,
   };
 }
