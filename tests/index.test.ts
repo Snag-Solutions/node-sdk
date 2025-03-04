@@ -183,13 +183,13 @@ describe('instantiate client', () => {
     test('empty env variable', () => {
       process.env['SNAG_SOLUTIONS_BASE_URL'] = ''; // empty
       const client = new SnagSolutions({ apiKey: 'My API Key' });
-      expect(client.baseURL).toEqual('https://api.example.com');
+      expect(client.baseURL).toEqual('https://admin.snagsolutions.io/');
     });
 
     test('blank env variable', () => {
       process.env['SNAG_SOLUTIONS_BASE_URL'] = '  '; // blank
       const client = new SnagSolutions({ apiKey: 'My API Key' });
-      expect(client.baseURL).toEqual('https://api.example.com');
+      expect(client.baseURL).toEqual('https://admin.snagsolutions.io/');
     });
   });
 
@@ -204,14 +204,14 @@ describe('instantiate client', () => {
 
   test('with environment variable arguments', () => {
     // set options via env var
-    process.env['SNAG_SOLUTIONS_API_KEY'] = 'My API Key';
+    process.env['X_API_KEY'] = 'My API Key';
     const client = new SnagSolutions();
     expect(client.apiKey).toBe('My API Key');
   });
 
   test('with overridden environment variable arguments', () => {
     // set options via env var
-    process.env['SNAG_SOLUTIONS_API_KEY'] = 'another My API Key';
+    process.env['X_API_KEY'] = 'another My API Key';
     const client = new SnagSolutions({ apiKey: 'My API Key' });
     expect(client.apiKey).toBe('My API Key');
   });

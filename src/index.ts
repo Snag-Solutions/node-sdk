@@ -6,19 +6,27 @@ import * as Core from './core';
 import * as Errors from './error';
 import * as Uploads from './uploads';
 import * as API from './resources/index';
+import { AuctionBidListParams, AuctionBids } from './resources/auction-bids';
 import {
-  API as ApiapiAPI,
-  APICreateAssetUploadURLParams,
-  APICreateAssetUploadURLResponse,
-  APIListAuctionBidsParams,
-  APIListAuctionsResponse,
-  APIListUsersParams,
-  APIListUsersResponse,
-} from './resources/api/api';
+  WebsiteCreateParams,
+  WebsiteCreateResponse,
+  WebsiteListParams,
+  WebsiteListResponse,
+  Websites,
+} from './resources/websites';
+import {
+  AssetCreateParams,
+  AssetCreateResponse,
+  AssetGetAuctionsResponse,
+  Assets,
+} from './resources/assets/assets';
+import { Drip } from './resources/drip/drip';
+import { Loyalty } from './resources/loyalty/loyalty';
+import { Users } from './resources/users/users';
 
 export interface ClientOptions {
   /**
-   * Defaults to process.env['SNAG_SOLUTIONS_API_KEY'].
+   * API key required to authenticate with the Snag Solutions API.
    */
   apiKey?: string | undefined;
 
@@ -90,8 +98,8 @@ export class SnagSolutions extends Core.APIClient {
   /**
    * API Client for interfacing with the Snag Solutions API.
    *
-   * @param {string | undefined} [opts.apiKey=process.env['SNAG_SOLUTIONS_API_KEY'] ?? undefined]
-   * @param {string} [opts.baseURL=process.env['SNAG_SOLUTIONS_BASE_URL'] ?? https://api.example.com] - Override the default base URL for the API.
+   * @param {string | undefined} [opts.apiKey=process.env['X_API_KEY'] ?? undefined]
+   * @param {string} [opts.baseURL=process.env['SNAG_SOLUTIONS_BASE_URL'] ?? https://admin.snagsolutions.io/] - Override the default base URL for the API.
    * @param {number} [opts.timeout=1 minute] - The maximum amount of time (in milliseconds) the client will wait for a response before timing out.
    * @param {number} [opts.httpAgent] - An HTTP agent used to manage HTTP(s) connections.
    * @param {Core.Fetch} [opts.fetch] - Specify a custom `fetch` function implementation.
@@ -101,19 +109,19 @@ export class SnagSolutions extends Core.APIClient {
    */
   constructor({
     baseURL = Core.readEnv('SNAG_SOLUTIONS_BASE_URL'),
-    apiKey = Core.readEnv('SNAG_SOLUTIONS_API_KEY'),
+    apiKey = Core.readEnv('X_API_KEY'),
     ...opts
   }: ClientOptions = {}) {
     if (apiKey === undefined) {
       throw new Errors.SnagSolutionsError(
-        "The SNAG_SOLUTIONS_API_KEY environment variable is missing or empty; either provide it, or instantiate the SnagSolutions client with an apiKey option, like new SnagSolutions({ apiKey: 'My API Key' }).",
+        "The X_API_KEY environment variable is missing or empty; either provide it, or instantiate the SnagSolutions client with an apiKey option, like new SnagSolutions({ apiKey: 'My API Key' }).",
       );
     }
 
     const options: ClientOptions = {
       apiKey,
       ...opts,
-      baseURL: baseURL || `https://api.example.com`,
+      baseURL: baseURL || `https://admin.snagsolutions.io/`,
     };
 
     super({
@@ -129,7 +137,12 @@ export class SnagSolutions extends Core.APIClient {
     this.apiKey = apiKey;
   }
 
-  api: API.API = new API.API(this);
+  assets: API.Assets = new API.Assets(this);
+  users: API.Users = new API.Users(this);
+  loyalty: API.Loyalty = new API.Loyalty(this);
+  auctionBids: API.AuctionBids = new API.AuctionBids(this);
+  websites: API.Websites = new API.Websites(this);
+  drip: API.Drip = new API.Drip(this);
 
   protected override defaultQuery(): Core.DefaultQuery | undefined {
     return this._options.defaultQuery;
@@ -171,19 +184,37 @@ export class SnagSolutions extends Core.APIClient {
   static fileFromPath = Uploads.fileFromPath;
 }
 
-SnagSolutions.API = ApiapiAPI;
+SnagSolutions.Assets = Assets;
+SnagSolutions.Users = Users;
+SnagSolutions.Loyalty = Loyalty;
+SnagSolutions.AuctionBids = AuctionBids;
+SnagSolutions.Websites = Websites;
+SnagSolutions.Drip = Drip;
 export declare namespace SnagSolutions {
   export type RequestOptions = Core.RequestOptions;
 
   export {
-    ApiapiAPI as API,
-    type APICreateAssetUploadURLResponse as APICreateAssetUploadURLResponse,
-    type APIListAuctionsResponse as APIListAuctionsResponse,
-    type APIListUsersResponse as APIListUsersResponse,
-    type APICreateAssetUploadURLParams as APICreateAssetUploadURLParams,
-    type APIListAuctionBidsParams as APIListAuctionBidsParams,
-    type APIListUsersParams as APIListUsersParams,
+    Assets as Assets,
+    type AssetCreateResponse as AssetCreateResponse,
+    type AssetGetAuctionsResponse as AssetGetAuctionsResponse,
+    type AssetCreateParams as AssetCreateParams,
   };
+
+  export { Users as Users };
+
+  export { Loyalty as Loyalty };
+
+  export { AuctionBids as AuctionBids, type AuctionBidListParams as AuctionBidListParams };
+
+  export {
+    Websites as Websites,
+    type WebsiteCreateResponse as WebsiteCreateResponse,
+    type WebsiteListResponse as WebsiteListResponse,
+    type WebsiteCreateParams as WebsiteCreateParams,
+    type WebsiteListParams as WebsiteListParams,
+  };
+
+  export { Drip as Drip };
 }
 
 export { toFile, fileFromPath } from './uploads';
