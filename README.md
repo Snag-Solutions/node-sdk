@@ -1,6 +1,6 @@
 # Snag Solutions Node API Library
 
-[![NPM version](https://img.shields.io/npm/v/snag-solutions.svg)](https://npmjs.org/package/snag-solutions) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/snag-solutions)
+[![NPM version](https://img.shields.io/npm/v/@snagsolutions/sdk.svg)](https://npmjs.org/package/@snagsolutions/sdk) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/@snagsolutions/sdk)
 
 This library provides convenient access to the Snag Solutions REST API from server-side TypeScript or JavaScript.
 
@@ -11,11 +11,8 @@ It is generated with [Stainless](https://www.stainless.com/).
 ## Installation
 
 ```sh
-npm install git+ssh://git@github.com:Snag-Solutions/node-sdk.git
+npm install @snagsolutions/sdk
 ```
-
-> [!NOTE]
-> Once this package is [published to npm](https://app.stainless.com/docs/guides/publish), this will become: `npm install snag-solutions`
 
 ## Usage
 
@@ -23,7 +20,7 @@ The full API of this library can be found in [api.md](api.md).
 
 <!-- prettier-ignore -->
 ```js
-import SnagSolutions from 'snag-solutions';
+import SnagSolutions from '@snagsolutions/sdk';
 
 const client = new SnagSolutions({
   apiKey: process.env['SNAG_SOLUTIONS_API_KEY'], // This is the default and can be omitted
@@ -44,7 +41,7 @@ This library includes TypeScript definitions for all request params and response
 
 <!-- prettier-ignore -->
 ```ts
-import SnagSolutions from 'snag-solutions';
+import SnagSolutions from '@snagsolutions/sdk';
 
 const client = new SnagSolutions({
   apiKey: process.env['SNAG_SOLUTIONS_API_KEY'], // This is the default and can be omitted
@@ -218,11 +215,11 @@ add the following import before your first import `from "SnagSolutions"`:
 ```ts
 // Tell TypeScript and the package to use the global web fetch instead of node-fetch.
 // Note, despite the name, this does not add any polyfills, but expects them to be provided if needed.
-import 'snag-solutions/shims/web';
-import SnagSolutions from 'snag-solutions';
+import '@snagsolutions/sdk/shims/web';
+import SnagSolutions from '@snagsolutions/sdk';
 ```
 
-To do the inverse, add `import "snag-solutions/shims/node"` (which does import polyfills).
+To do the inverse, add `import "@snagsolutions/sdk/shims/node"` (which does import polyfills).
 This can also be useful if you are getting the wrong TypeScript types for `Response` ([more details](https://github.com/Snag-Solutions/node-sdk/tree/main/src/_shims#readme)).
 
 ### Logging and middleware
@@ -232,7 +229,7 @@ which can be used to inspect or alter the `Request` or `Response` before/after e
 
 ```ts
 import { fetch } from 'undici'; // as one example
-import SnagSolutions from 'snag-solutions';
+import SnagSolutions from '@snagsolutions/sdk';
 
 const client = new SnagSolutions({
   fetch: async (url: RequestInfo, init?: RequestInit): Promise<Response> => {
