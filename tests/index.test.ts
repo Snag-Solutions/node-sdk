@@ -1,8 +1,8 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import SnagSolutions from '@snagsolutions/sdk';
-import { APIUserAbortError } from '@snagsolutions/sdk';
-import { Headers } from '@snagsolutions/sdk/core';
+import SnagSolutions from 'snag-solutions';
+import { APIUserAbortError } from 'snag-solutions';
+import { Headers } from 'snag-solutions/core';
 import defaultFetch, { Response, type RequestInit, type RequestInfo } from 'node-fetch';
 
 describe('instantiate client', () => {
@@ -183,13 +183,13 @@ describe('instantiate client', () => {
     test('empty env variable', () => {
       process.env['SNAG_SOLUTIONS_BASE_URL'] = ''; // empty
       const client = new SnagSolutions({ apiKey: 'My API Key' });
-      expect(client.baseURL).toEqual('https://admin.snagsolutions.io/');
+      expect(client.baseURL).toEqual('https://api.example.com');
     });
 
     test('blank env variable', () => {
       process.env['SNAG_SOLUTIONS_BASE_URL'] = '  '; // blank
       const client = new SnagSolutions({ apiKey: 'My API Key' });
-      expect(client.baseURL).toEqual('https://admin.snagsolutions.io/');
+      expect(client.baseURL).toEqual('https://api.example.com');
     });
   });
 
@@ -204,14 +204,14 @@ describe('instantiate client', () => {
 
   test('with environment variable arguments', () => {
     // set options via env var
-    process.env['X_API_KEY'] = 'My API Key';
+    process.env['SNAG_SOLUTIONS_API_KEY'] = 'My API Key';
     const client = new SnagSolutions();
     expect(client.apiKey).toBe('My API Key');
   });
 
   test('with overridden environment variable arguments', () => {
     // set options via env var
-    process.env['X_API_KEY'] = 'another My API Key';
+    process.env['SNAG_SOLUTIONS_API_KEY'] = 'another My API Key';
     const client = new SnagSolutions({ apiKey: 'My API Key' });
     expect(client.apiKey).toBe('My API Key');
   });
