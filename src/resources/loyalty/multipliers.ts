@@ -51,10 +51,13 @@ export class Multipliers extends APIResource {
   }
 
   /**
-   * Delete a loyalty multiplier by its ID.
+   * Delete a loyalty multiplier by its external identifier.
    */
-  delete(multiplierId: string, options?: Core.RequestOptions): Core.APIPromise<MultiplierDeleteResponse> {
-    return this._client.delete(`/api/loyalty/multipliers/${multiplierId}`, options);
+  delete(
+    body: MultiplierDeleteParams,
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<MultiplierDeleteResponse> {
+    return this._client.delete('/api/loyalty/multipliers', { body, ...options });
   }
 }
 
@@ -177,8 +180,41 @@ export namespace MultiplierListResponse {
   }
 }
 
+/**
+ * Schema for loyalty multiplier
+ */
 export interface MultiplierDeleteResponse {
   id: string;
+
+  createdAt: string;
+
+  deletedAt: string | null;
+
+  description: string | null;
+
+  externalIdentifier: string | null;
+
+  multiplier: number;
+
+  organizationId: string;
+
+  title: string | null;
+
+  updatedAt: string;
+
+  user: MultiplierDeleteResponse.User;
+
+  userId: string;
+
+  websiteId: string;
+}
+
+export namespace MultiplierDeleteResponse {
+  export interface User {
+    id: string;
+
+    walletAddress: string;
+  }
 }
 
 export interface MultiplierCreateParams {
@@ -229,6 +265,10 @@ export interface MultiplierListParams {
   websiteId?: string;
 }
 
+export interface MultiplierDeleteParams {
+  externalIdentifier: string;
+}
+
 export declare namespace Multipliers {
   export {
     type MultiplierCreateResponse as MultiplierCreateResponse,
@@ -238,5 +278,6 @@ export declare namespace Multipliers {
     type MultiplierCreateParams as MultiplierCreateParams,
     type MultiplierUpdateParams as MultiplierUpdateParams,
     type MultiplierListParams as MultiplierListParams,
+    type MultiplierDeleteParams as MultiplierDeleteParams,
   };
 }

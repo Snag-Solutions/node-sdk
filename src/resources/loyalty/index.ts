@@ -32,8 +32,15 @@ export {
   type MultiplierCreateParams,
   type MultiplierUpdateParams,
   type MultiplierListParams,
+  type MultiplierDeleteParams,
 } from './multipliers';
-export { RuleEdits, type RuleEditRetrieveResponse, type RuleEditRetrieveParams } from './rule-edits';
+export {
+  RuleEdits,
+  type RuleEditRetrieveResponse,
+  type RuleEditRestoreResponse,
+  type RuleEditRetrieveParams,
+  type RuleEditRestoreParams,
+} from './rule-edits';
 export {
   Rules,
   type RuleCreateResponse,
@@ -51,5 +58,9 @@ export {
 export {
   TransactionEntries,
   type TransactionEntryListResponse,
+  type TransactionEntryCreateTransactionResponse,
+  type TransactionEntryListRuleGroupsResponse,
   type TransactionEntryListParams,
-} from './transaction-entries';
+  type TransactionEntryCreateTransactionParams,
+  type TransactionEntryListRuleGroupsParams,
+} from './transaction-entries/index';

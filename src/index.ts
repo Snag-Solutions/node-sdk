@@ -6,7 +6,6 @@ import * as Core from './core';
 import * as Errors from './error';
 import * as Uploads from './uploads';
 import * as API from './resources/index';
-import { AssetCreateParams, AssetCreateResponse, Assets } from './resources/assets';
 import { AuctionBidListParams, AuctionBids } from './resources/auction-bids';
 import {
   WebsiteCreateParams,
@@ -15,6 +14,12 @@ import {
   WebsiteListResponse,
   Websites,
 } from './resources/websites';
+import {
+  AssetCreateParams,
+  AssetCreateResponse,
+  AssetGetAuctionsResponse,
+  Assets,
+} from './resources/assets/assets';
 import { Drip } from './resources/drip/drip';
 import { Loyalty } from './resources/loyalty/loyalty';
 import { Users } from './resources/users/users';
@@ -191,6 +196,7 @@ export declare namespace SnagSolutions {
   export {
     Assets as Assets,
     type AssetCreateResponse as AssetCreateResponse,
+    type AssetGetAuctionsResponse as AssetGetAuctionsResponse,
     type AssetCreateParams as AssetCreateParams,
   };
 
