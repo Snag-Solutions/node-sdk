@@ -6,17 +6,6 @@ import * as Core from '../core';
 
 export class AuctionBids extends APIResource {
   /**
-   * Creates a new bid for an auction.
-   */
-  create(body: AuctionBidCreateParams, options?: Core.RequestOptions): Core.APIPromise<void> {
-    return this._client.post('/api/auction_bids', {
-      body,
-      ...options,
-      headers: { Accept: '*/*', ...options?.headers },
-    });
-  }
-
-  /**
    * Returns a list of auction bids with optional filtering and pagination.
    */
   list(query?: AuctionBidListParams, options?: Core.RequestOptions): Core.APIPromise<void>;
@@ -36,38 +25,6 @@ export class AuctionBids extends APIResource {
   }
 }
 
-export interface AuctionBidCreateParams {
-  /**
-   * Bid amount
-   */
-  amount: unknown;
-
-  /**
-   * ID of the auction
-   */
-  auctionId: string;
-
-  /**
-   * Name of the blockchain chain
-   */
-  chainName: string;
-
-  /**
-   * ID of the organization
-   */
-  organizationId: string;
-
-  /**
-   * Signature of the bid
-   */
-  signature: string;
-
-  /**
-   * ID of the website
-   */
-  websiteId: string;
-}
-
 export interface AuctionBidListParams {
   /**
    * The bid ID
@@ -82,7 +39,7 @@ export interface AuctionBidListParams {
   /**
    * Maximum number of bids to return
    */
-  limit?: number | null;
+  limit?: number;
 
   /**
    * ID of the organization
@@ -116,8 +73,5 @@ export interface AuctionBidListParams {
 }
 
 export declare namespace AuctionBids {
-  export {
-    type AuctionBidCreateParams as AuctionBidCreateParams,
-    type AuctionBidListParams as AuctionBidListParams,
-  };
+  export { type AuctionBidListParams as AuctionBidListParams };
 }
