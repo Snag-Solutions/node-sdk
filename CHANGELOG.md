@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.1.0-alpha.15 (2025-03-05)
+
+Full Changelog: [v0.1.0-alpha.14...v0.1.0-alpha.15](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.14...v0.1.0-alpha.15)
+
+### Features
+
+* **api:** manual updates ([d4b1fea](https://github.com/Snag-Solutions/node-sdk/commit/d4b1feaeb2d39731edfec2270e38b6f5c4a98e27))
+* **api:** open api update ([#142](https://github.com/Snag-Solutions/node-sdk/issues/142)) ([6bb15b9](https://github.com/Snag-Solutions/node-sdk/commit/6bb15b9517f867a6ab7a793bda9b6ca79cc71e6c))
+
+
+### Chores
+
+* go live ([#137](https://github.com/Snag-Solutions/node-sdk/issues/137)) ([d84b449](https://github.com/Snag-Solutions/node-sdk/commit/d84b4497510280f267fb63676ab8bf5b91cad906))
+* update SDK settings ([#138](https://github.com/Snag-Solutions/node-sdk/issues/138)) ([4f4efa1](https://github.com/Snag-Solutions/node-sdk/commit/4f4efa18330a50d4d619ce3b63e8564e59b5b5bf))
+
 ## 0.1.0-alpha.14 (2025-03-04)
 
 Full Changelog: [v0.1.0-alpha.13...v0.1.0-alpha.14](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.13...v0.1.0-alpha.14)
