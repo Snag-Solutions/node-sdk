@@ -278,7 +278,8 @@ export interface RuleCreateResponse {
     | 'arbitrumSepolia'
     | 'goerli'
     | 'optimism_goerli'
-    | 'arbitrumGoerli';
+    | 'arbitrumGoerli'
+    | 'basecamp';
 
   /**
    * OAuth credentials associated with the rule
@@ -637,7 +638,8 @@ export namespace RuleCreateResponse {
         | 'arbitrumSepolia'
         | 'goerli'
         | 'optimism_goerli'
-        | 'arbitrumGoerli';
+        | 'arbitrumGoerli'
+        | 'basecamp';
     }
 
     /**
@@ -951,7 +953,8 @@ export namespace RuleCreateResponse {
       | 'arbitrumSepolia'
       | 'goerli'
       | 'optimism_goerli'
-      | 'arbitrumGoerli';
+      | 'arbitrumGoerli'
+      | 'basecamp';
   }
 }
 
@@ -1070,7 +1073,8 @@ export interface RuleUpdateResponse {
     | 'arbitrumSepolia'
     | 'goerli'
     | 'optimism_goerli'
-    | 'arbitrumGoerli';
+    | 'arbitrumGoerli'
+    | 'basecamp';
 
   /**
    * ID for associated OAuth credentials
@@ -1132,7 +1136,8 @@ export namespace RuleUpdateResponse {
       | 'arbitrumSepolia'
       | 'goerli'
       | 'optimism_goerli'
-      | 'arbitrumGoerli';
+      | 'arbitrumGoerli'
+      | 'basecamp';
   }
 
   /**
@@ -1475,7 +1480,8 @@ export namespace RuleUpdateResponse {
         | 'arbitrumSepolia'
         | 'goerli'
         | 'optimism_goerli'
-        | 'arbitrumGoerli';
+        | 'arbitrumGoerli'
+        | 'basecamp';
     }
 
     /**
@@ -2042,7 +2048,8 @@ export interface RuleCreateParams {
     | 'arbitrumSepolia'
     | 'goerli'
     | 'optimism_goerli'
-    | 'arbitrumGoerli';
+    | 'arbitrumGoerli'
+    | 'basecamp';
 
   /**
    * OAuth credentials associated with the rule
@@ -2401,7 +2408,8 @@ export namespace RuleCreateParams {
         | 'arbitrumSepolia'
         | 'goerli'
         | 'optimism_goerli'
-        | 'arbitrumGoerli';
+        | 'arbitrumGoerli'
+        | 'basecamp';
     }
 
     /**
@@ -2715,7 +2723,8 @@ export namespace RuleCreateParams {
       | 'arbitrumSepolia'
       | 'goerli'
       | 'optimism_goerli'
-      | 'arbitrumGoerli';
+      | 'arbitrumGoerli'
+      | 'basecamp';
   }
 }
 
@@ -2832,7 +2841,8 @@ export interface RuleUpdateParams {
     | 'arbitrumSepolia'
     | 'goerli'
     | 'optimism_goerli'
-    | 'arbitrumGoerli';
+    | 'arbitrumGoerli'
+    | 'basecamp';
 
   /**
    * ID for associated OAuth credentials
@@ -2894,7 +2904,8 @@ export namespace RuleUpdateParams {
       | 'arbitrumSepolia'
       | 'goerli'
       | 'optimism_goerli'
-      | 'arbitrumGoerli';
+      | 'arbitrumGoerli'
+      | 'basecamp';
   }
 
   /**
@@ -3237,7 +3248,8 @@ export namespace RuleUpdateParams {
         | 'arbitrumSepolia'
         | 'goerli'
         | 'optimism_goerli'
-        | 'arbitrumGoerli';
+        | 'arbitrumGoerli'
+        | 'basecamp';
     }
 
     /**
