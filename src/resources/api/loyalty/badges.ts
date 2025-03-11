@@ -1021,6 +1021,11 @@ export namespace BadgeCreateParams {
     loyaltyLeaderboardViewIds?: Array<string>;
 
     /**
+     * UUID of the loyalty rule chain (optional, converted to lowercase)
+     */
+    loyaltyRuleChainId?: string;
+
+    /**
      * Array of UUIDs of the rule group (optional, converted to lowercase)
      */
     loyaltyRuleGroupIds?: Array<string>;

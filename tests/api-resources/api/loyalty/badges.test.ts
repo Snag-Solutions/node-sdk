@@ -42,6 +42,7 @@ describe('resource badges', () => {
           loyaltyBadgeIds: ['123e4567-e89b-12d3-a456-426614174333'],
           loyaltyCurrencyIds: ['123e4567-e89b-12d3-a456-426614174333'],
           loyaltyLeaderboardViewIds: ['123e4567-e89b-12d3-a456-426614174222'],
+          loyaltyRuleChainId: '123e4567-e89b-12d3-a456-426614174333',
           loyaltyRuleGroupIds: ['123e4567-e89b-12d3-a456-426614174222'],
           loyaltyRuleIds: ['123e4567-e89b-12d3-a456-426614174111'],
           repeatCount: 1,
