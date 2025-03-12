@@ -81,7 +81,7 @@ export interface MintingGetAssetsParams {
   mintingContractAssetId?: string | null;
 
   /**
-   * Minting Contract IDs
+   * Comma-separated list of Minting Contract UUIDs
    */
   mintingContractIds?: string | null;
 
