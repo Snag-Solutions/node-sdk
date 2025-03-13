@@ -111,6 +111,8 @@ export namespace UserConnectParams {
   export interface VerificationData {
     accessToken?: string;
 
+    dynamicAuthToken?: string;
+
     message?: string;
 
     signature?: string;
