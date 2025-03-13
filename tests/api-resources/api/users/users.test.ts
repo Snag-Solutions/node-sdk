@@ -37,7 +37,6 @@ describe('resource users', () => {
       userId: '123e4567-e89b-12d3-a456-426614174001',
       verificationData: {
         accessToken: 'accessToken',
-        dynamicAuthToken: 'dynamicAuthToken',
         message: 'message',
         signature: 'signature',
         tonVerification: {
