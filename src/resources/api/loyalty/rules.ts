@@ -448,6 +448,11 @@ export namespace RuleCreateResponse {
     onlyNonListed?: boolean;
 
     /**
+     * Indicates if only existing users are rewarded.
+     */
+    onlyRewardExistingUser?: boolean;
+
+    /**
      * give points for only one token ownership per contract
      */
     onlyRewardSingleTokenOwnership?: boolean | null;
@@ -1288,6 +1293,11 @@ export namespace RuleUpdateResponse {
      * Flag indicating whether to include only non-listed items.
      */
     onlyNonListed?: boolean;
+
+    /**
+     * Indicates if only existing users are rewarded.
+     */
+    onlyRewardExistingUser?: boolean;
 
     /**
      * give points for only one token ownership per contract
@@ -2218,6 +2228,11 @@ export namespace RuleCreateParams {
     onlyNonListed?: boolean;
 
     /**
+     * Indicates if only existing users are rewarded.
+     */
+    onlyRewardExistingUser?: boolean;
+
+    /**
      * give points for only one token ownership per contract
      */
     onlyRewardSingleTokenOwnership?: boolean | null;
@@ -3056,6 +3071,11 @@ export namespace RuleUpdateParams {
      * Flag indicating whether to include only non-listed items.
      */
     onlyNonListed?: boolean;
+
+    /**
+     * Indicates if only existing users are rewarded.
+     */
+    onlyRewardExistingUser?: boolean;
 
     /**
      * give points for only one token ownership per contract
