@@ -79,6 +79,7 @@ export interface WebsiteCollectionCreateParams {
     | 'campTestnet'
     | 'sui'
     | 'vanar'
+    | 'superseed'
     | 'sepolia'
     | 'optimism_sepolia'
     | 'arbitrumSepolia'
