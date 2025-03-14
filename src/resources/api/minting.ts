@@ -112,7 +112,6 @@ export interface MintingGetAssetsParams {
     | 'campTestnet'
     | 'sui'
     | 'vanar'
-    | 'superseed'
     | 'sepolia'
     | 'optimism_sepolia'
     | 'arbitrumSepolia'
