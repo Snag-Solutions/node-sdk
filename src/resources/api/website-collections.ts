@@ -87,7 +87,8 @@ export interface WebsiteCollectionCreateParams {
     | 'goerli'
     | 'optimism_goerli'
     | 'arbitrumGoerli'
-    | 'basecamp';
+    | 'basecamp'
+    | 'abstract';
 
   organizationId: string;
 
