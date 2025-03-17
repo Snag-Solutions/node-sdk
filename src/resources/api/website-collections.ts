@@ -80,6 +80,7 @@ export interface WebsiteCollectionCreateParams {
     | 'sui'
     | 'vanar'
     | 'superseed'
+    | 'superseedSepolia'
     | 'sepolia'
     | 'optimism_sepolia'
     | 'arbitrumSepolia'
