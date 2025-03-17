@@ -281,7 +281,8 @@ export interface RuleCreateResponse {
     | 'goerli'
     | 'optimism_goerli'
     | 'arbitrumGoerli'
-    | 'basecamp';
+    | 'basecamp'
+    | 'abstract';
 
   /**
    * OAuth credentials associated with the rule
@@ -648,7 +649,8 @@ export namespace RuleCreateResponse {
         | 'goerli'
         | 'optimism_goerli'
         | 'arbitrumGoerli'
-        | 'basecamp';
+        | 'basecamp'
+        | 'abstract';
     }
 
     /**
@@ -965,7 +967,8 @@ export namespace RuleCreateResponse {
       | 'goerli'
       | 'optimism_goerli'
       | 'arbitrumGoerli'
-      | 'basecamp';
+      | 'basecamp'
+      | 'abstract';
   }
 }
 
@@ -1087,7 +1090,8 @@ export interface RuleUpdateResponse {
     | 'goerli'
     | 'optimism_goerli'
     | 'arbitrumGoerli'
-    | 'basecamp';
+    | 'basecamp'
+    | 'abstract';
 
   /**
    * ID for associated OAuth credentials
@@ -1152,7 +1156,8 @@ export namespace RuleUpdateResponse {
       | 'goerli'
       | 'optimism_goerli'
       | 'arbitrumGoerli'
-      | 'basecamp';
+      | 'basecamp'
+      | 'abstract';
   }
 
   /**
@@ -1503,7 +1508,8 @@ export namespace RuleUpdateResponse {
         | 'goerli'
         | 'optimism_goerli'
         | 'arbitrumGoerli'
-        | 'basecamp';
+        | 'basecamp'
+        | 'abstract';
     }
 
     /**
@@ -2073,7 +2079,8 @@ export interface RuleCreateParams {
     | 'goerli'
     | 'optimism_goerli'
     | 'arbitrumGoerli'
-    | 'basecamp';
+    | 'basecamp'
+    | 'abstract';
 
   /**
    * OAuth credentials associated with the rule
@@ -2440,7 +2447,8 @@ export namespace RuleCreateParams {
         | 'goerli'
         | 'optimism_goerli'
         | 'arbitrumGoerli'
-        | 'basecamp';
+        | 'basecamp'
+        | 'abstract';
     }
 
     /**
@@ -2757,7 +2765,8 @@ export namespace RuleCreateParams {
       | 'goerli'
       | 'optimism_goerli'
       | 'arbitrumGoerli'
-      | 'basecamp';
+      | 'basecamp'
+      | 'abstract';
   }
 }
 
@@ -2877,7 +2886,8 @@ export interface RuleUpdateParams {
     | 'goerli'
     | 'optimism_goerli'
     | 'arbitrumGoerli'
-    | 'basecamp';
+    | 'basecamp'
+    | 'abstract';
 
   /**
    * ID for associated OAuth credentials
@@ -2942,7 +2952,8 @@ export namespace RuleUpdateParams {
       | 'goerli'
       | 'optimism_goerli'
       | 'arbitrumGoerli'
-      | 'basecamp';
+      | 'basecamp'
+      | 'abstract';
   }
 
   /**
@@ -3293,7 +3304,8 @@ export namespace RuleUpdateParams {
         | 'goerli'
         | 'optimism_goerli'
         | 'arbitrumGoerli'
-        | 'basecamp';
+        | 'basecamp'
+        | 'abstract';
     }
 
     /**
