@@ -113,6 +113,7 @@ export interface MintingGetAssetsParams {
     | 'sui'
     | 'vanar'
     | 'superseed'
+    | 'superseedSepolia'
     | 'sepolia'
     | 'optimism_sepolia'
     | 'arbitrumSepolia'
