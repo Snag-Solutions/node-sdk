@@ -120,8 +120,7 @@ export interface MintingGetAssetsParams {
     | 'goerli'
     | 'optimism_goerli'
     | 'arbitrumGoerli'
-    | 'basecamp'
-    | 'abstract';
+    | 'basecamp';
 
   /**
    * Sort Dir

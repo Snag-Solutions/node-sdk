@@ -640,8 +640,7 @@ export namespace LoyaltyGetRuleGroupsResponse {
               | 'goerli'
               | 'optimism_goerli'
               | 'arbitrumGoerli'
-              | 'basecamp'
-              | 'abstract';
+              | 'basecamp';
           }
 
           /**
