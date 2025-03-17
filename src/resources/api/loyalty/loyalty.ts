@@ -633,7 +633,6 @@ export namespace LoyaltyGetRuleGroupsResponse {
               | 'sui'
               | 'vanar'
               | 'superseed'
-              | 'superseedSepolia'
               | 'sepolia'
               | 'optimism_sepolia'
               | 'arbitrumSepolia'
