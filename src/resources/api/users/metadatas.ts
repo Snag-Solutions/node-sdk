@@ -161,11 +161,6 @@ export interface MetadataCreateParams {
 
 export interface MetadataListParams {
   /**
-   * External identifier for the user
-   */
-  externalIdentifier?: string | null;
-
-  /**
    * Number of records to fetch
    */
   limit?: number;
