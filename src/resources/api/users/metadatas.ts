@@ -130,6 +130,8 @@ export interface MetadataCreateParams {
 
   epicAccountIdentifier?: string | null;
 
+  externalIdentifier?: string | null;
+
   isBlocked?: boolean;
 
   logoUrl?: string | null;
