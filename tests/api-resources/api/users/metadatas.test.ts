@@ -40,6 +40,7 @@ describe('resource metadatas', () => {
           displayName: 'displayName',
           emailAddress: 'emailAddress',
           epicAccountIdentifier: 'epicAccountIdentifier',
+          externalIdentifier: 'externalIdentifier',
           isBlocked: true,
           logoUrl: 'logoUrl',
           stardustProfileIdentifier: 'stardustProfileIdentifier',
