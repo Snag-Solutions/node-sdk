@@ -60,6 +60,9 @@ export interface UserListResponse {
 }
 
 export namespace UserListResponse {
+  /**
+   * Schema for a user response
+   */
   export interface Data {
     id: string;
 
@@ -180,6 +183,9 @@ export namespace UserListResponse {
   }
 }
 
+/**
+ * Schema for a connect users response
+ */
 export interface UserConnectResponse {
   /**
    * The ID of the user

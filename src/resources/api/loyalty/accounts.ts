@@ -145,6 +145,9 @@ export namespace AccountListResponse {
   }
 }
 
+/**
+ * Schema for a get account rank response
+ */
 export interface AccountGetRankResponse {
   /**
    * Rank of the user
