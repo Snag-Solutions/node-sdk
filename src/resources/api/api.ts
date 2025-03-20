@@ -479,11 +479,6 @@ export interface APIListUsersParams {
   discordUser?: string;
 
   /**
-   * External identifier for the user
-   */
-  externalIdentifier?: string;
-
-  /**
    * Whether to include delegations in the response
    */
   includeDelegation?: boolean | null;
