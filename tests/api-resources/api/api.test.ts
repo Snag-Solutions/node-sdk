@@ -121,6 +121,7 @@ describe('resource api', () => {
         {
           address: '0x1234567890abcdef1234567890abcdef12345678',
           discordUser: 'elonmusk',
+          externalIdentifier: '123e4567',
           includeDelegation: true,
           includeFollow: true,
           limit: 10,
