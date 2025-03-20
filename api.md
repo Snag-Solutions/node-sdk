@@ -2,28 +2,44 @@
 
 Types:
 
-- <code><a href="./src/resources/api/api.ts">APIConnectAuthResponse</a></code>
-- <code><a href="./src/resources/api/api.ts">APIConnectUserToGroupResponse</a></code>
+- <code><a href="./src/resources/api/api.ts">APIConnectTwitterResponse</a></code>
 - <code><a href="./src/resources/api/api.ts">APICreateAssetUploadURLResponse</a></code>
-- <code><a href="./src/resources/api/api.ts">APICreateUserMetadataResponse</a></code>
-- <code><a href="./src/resources/api/api.ts">APIDisconnectUserFromGroupResponse</a></code>
-- <code><a href="./src/resources/api/api.ts">APIGetUserCountResponse</a></code>
 - <code><a href="./src/resources/api/api.ts">APIListAuctionsResponse</a></code>
-- <code><a href="./src/resources/api/api.ts">APIListUserMetadatasResponse</a></code>
-- <code><a href="./src/resources/api/api.ts">APIListUsersResponse</a></code>
 
 Methods:
 
-- <code title="get /api/{authType}/auth">client.api.<a href="./src/resources/api/api.ts">connectAuth</a>(authType, { ...params }) -> APIConnectAuthResponse</code>
-- <code title="post /api/users/connect">client.api.<a href="./src/resources/api/api.ts">connectUserToGroup</a>({ ...params }) -> APIConnectUserToGroupResponse</code>
+- <code title="get /api/{authType}/auth">client.api.<a href="./src/resources/api/api.ts">connectTwitter</a>(authType, { ...params }) -> APIConnectTwitterResponse</code>
 - <code title="post /api/assets">client.api.<a href="./src/resources/api/api.ts">createAssetUploadURL</a>({ ...params }) -> APICreateAssetUploadURLResponse</code>
-- <code title="post /api/users/metadatas">client.api.<a href="./src/resources/api/api.ts">createUserMetadata</a>({ ...params }) -> APICreateUserMetadataResponse</code>
-- <code title="post /api/users/disconnect">client.api.<a href="./src/resources/api/api.ts">disconnectUserFromGroup</a>({ ...params }) -> unknown</code>
-- <code title="get /api/users/count">client.api.<a href="./src/resources/api/api.ts">getUserCount</a>({ ...params }) -> APIGetUserCountResponse</code>
 - <code title="get /api/auction_bids">client.api.<a href="./src/resources/api/api.ts">listAuctionBids</a>({ ...params }) -> void</code>
 - <code title="get /api/auctions">client.api.<a href="./src/resources/api/api.ts">listAuctions</a>() -> APIListAuctionsResponse</code>
-- <code title="get /api/users/metadatas">client.api.<a href="./src/resources/api/api.ts">listUserMetadatas</a>({ ...params }) -> APIListUserMetadatasResponse</code>
-- <code title="get /api/users">client.api.<a href="./src/resources/api/api.ts">listUsers</a>({ ...params }) -> APIListUsersResponse</code>
+
+## Users
+
+Types:
+
+- <code><a href="./src/resources/api/users/users.ts">UserListResponse</a></code>
+- <code><a href="./src/resources/api/users/users.ts">UserConnectResponse</a></code>
+- <code><a href="./src/resources/api/users/users.ts">UserCountResponse</a></code>
+- <code><a href="./src/resources/api/users/users.ts">UserDisconnectResponse</a></code>
+
+Methods:
+
+- <code title="get /api/users">client.api.users.<a href="./src/resources/api/users/users.ts">list</a>({ ...params }) -> UserListResponse</code>
+- <code title="post /api/users/connect">client.api.users.<a href="./src/resources/api/users/users.ts">connect</a>({ ...params }) -> UserConnectResponse</code>
+- <code title="get /api/users/count">client.api.users.<a href="./src/resources/api/users/users.ts">count</a>({ ...params }) -> UserCountResponse</code>
+- <code title="post /api/users/disconnect">client.api.users.<a href="./src/resources/api/users/users.ts">disconnect</a>({ ...params }) -> unknown</code>
+
+### Metadatas
+
+Types:
+
+- <code><a href="./src/resources/api/users/metadatas.ts">MetadataCreateResponse</a></code>
+- <code><a href="./src/resources/api/users/metadatas.ts">MetadataListResponse</a></code>
+
+Methods:
+
+- <code title="post /api/users/metadatas">client.api.users.metadatas.<a href="./src/resources/api/users/metadatas.ts">create</a>({ ...params }) -> MetadataCreateResponse</code>
+- <code title="get /api/users/metadatas">client.api.users.metadatas.<a href="./src/resources/api/users/metadatas.ts">list</a>({ ...params }) -> MetadataListResponse</code>
 
 ## Loyalty
 
@@ -44,12 +60,12 @@ Methods:
 Types:
 
 - <code><a href="./src/resources/api/loyalty/accounts.ts">AccountListResponse</a></code>
-- <code><a href="./src/resources/api/loyalty/accounts.ts">AccountRetrieveRankResponse</a></code>
+- <code><a href="./src/resources/api/loyalty/accounts.ts">AccountGetRankResponse</a></code>
 
 Methods:
 
 - <code title="get /api/loyalty/accounts">client.api.loyalty.accounts.<a href="./src/resources/api/loyalty/accounts.ts">list</a>({ ...params }) -> AccountListResponse</code>
-- <code title="get /api/loyalty/accounts/{id}/rank">client.api.loyalty.accounts.<a href="./src/resources/api/loyalty/accounts.ts">retrieveRank</a>(pathId, { ...params }) -> AccountRetrieveRankResponse</code>
+- <code title="get /api/loyalty/accounts/{id}/rank">client.api.loyalty.accounts.<a href="./src/resources/api/loyalty/accounts.ts">getRank</a>(pathId, { ...params }) -> AccountGetRankResponse</code>
 
 ### Badges
 

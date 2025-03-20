@@ -25,11 +25,11 @@ export class Accounts extends APIResource {
    * loyalty currency. This can be a slow operation for large organizations. We
    * recommend caching when possible.
    */
-  retrieveRank(
+  getRank(
     pathId: string,
-    query: AccountRetrieveRankParams,
+    query: AccountGetRankParams,
     options?: Core.RequestOptions,
-  ): Core.APIPromise<AccountRetrieveRankResponse> {
+  ): Core.APIPromise<AccountGetRankResponse> {
     return this._client.get(`/api/loyalty/accounts/${pathId}/rank`, { query, ...options });
   }
 }
@@ -145,10 +145,7 @@ export namespace AccountListResponse {
   }
 }
 
-/**
- * Schema for a get account rank response
- */
-export interface AccountRetrieveRankResponse {
+export interface AccountGetRankResponse {
   /**
    * Rank of the user
    */
@@ -227,7 +224,7 @@ export interface AccountListParams {
   websiteId?: string;
 }
 
-export interface AccountRetrieveRankParams {
+export interface AccountGetRankParams {
   /**
    * UUID of the account
    */
@@ -252,8 +249,8 @@ export interface AccountRetrieveRankParams {
 export declare namespace Accounts {
   export {
     type AccountListResponse as AccountListResponse,
-    type AccountRetrieveRankResponse as AccountRetrieveRankResponse,
+    type AccountGetRankResponse as AccountGetRankResponse,
     type AccountListParams as AccountListParams,
-    type AccountRetrieveRankParams as AccountRetrieveRankParams,
+    type AccountGetRankParams as AccountGetRankParams,
   };
 }

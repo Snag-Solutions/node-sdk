@@ -5,10 +5,10 @@ import { isRequestOptions } from '../../../core';
 import * as Core from '../../../core';
 import * as AccountsAPI from './accounts';
 import {
+  AccountGetRankParams,
+  AccountGetRankResponse,
   AccountListParams,
   AccountListResponse,
-  AccountRetrieveRankParams,
-  AccountRetrieveRankResponse,
   Accounts,
 } from './accounts';
 import * as BadgesAPI from './badges';
@@ -183,9 +183,6 @@ export interface LoyaltyGetRuleGroupsResponse {
 }
 
 export namespace LoyaltyGetRuleGroupsResponse {
-  /**
-   * Schema for a get loyalty rule groups response
-   */
   export interface Data {
     id: string;
 
@@ -1214,9 +1211,9 @@ export declare namespace Loyalty {
   export {
     Accounts as Accounts,
     type AccountListResponse as AccountListResponse,
-    type AccountRetrieveRankResponse as AccountRetrieveRankResponse,
+    type AccountGetRankResponse as AccountGetRankResponse,
     type AccountListParams as AccountListParams,
-    type AccountRetrieveRankParams as AccountRetrieveRankParams,
+    type AccountGetRankParams as AccountGetRankParams,
   };
 
   export {

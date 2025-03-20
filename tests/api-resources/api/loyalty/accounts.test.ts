@@ -56,8 +56,8 @@ describe('resource accounts', () => {
   });
 
   // skipped: tests are disabled for the time being
-  test.skip('retrieveRank: only required params', async () => {
-    const responsePromise = client.api.loyalty.accounts.retrieveRank('123e4567-e89b-12d3-a456-426614174333', {
+  test.skip('getRank: only required params', async () => {
+    const responsePromise = client.api.loyalty.accounts.getRank('123e4567-e89b-12d3-a456-426614174333', {
       query_id: '123e4567-e89b-12d3-a456-426614174333',
       loyaltyCurrencyId: '123e4567-e89b-12d3-a456-426614174333',
       organizationId: '123e4567-e89b-12d3-a456-426614174333',
@@ -73,8 +73,8 @@ describe('resource accounts', () => {
   });
 
   // skipped: tests are disabled for the time being
-  test.skip('retrieveRank: required and optional params', async () => {
-    const response = await client.api.loyalty.accounts.retrieveRank('123e4567-e89b-12d3-a456-426614174333', {
+  test.skip('getRank: required and optional params', async () => {
+    const response = await client.api.loyalty.accounts.getRank('123e4567-e89b-12d3-a456-426614174333', {
       query_id: '123e4567-e89b-12d3-a456-426614174333',
       loyaltyCurrencyId: '123e4567-e89b-12d3-a456-426614174333',
       organizationId: '123e4567-e89b-12d3-a456-426614174333',

@@ -3,24 +3,12 @@
 export { API } from './api/index';
 export {
   API,
-  type APIConnectAuthResponse,
-  type APIConnectUserToGroupResponse,
+  type APIConnectTwitterResponse,
   type APICreateAssetUploadURLResponse,
-  type APICreateUserMetadataResponse,
-  type APIDisconnectUserFromGroupResponse,
-  type APIGetUserCountResponse,
   type APIListAuctionsResponse,
-  type APIListUserMetadatasResponse,
-  type APIListUsersResponse,
-  type APIConnectAuthParams,
-  type APIConnectUserToGroupParams,
+  type APIConnectTwitterParams,
   type APICreateAssetUploadURLParams,
-  type APICreateUserMetadataParams,
-  type APIDisconnectUserFromGroupParams,
-  type APIGetUserCountParams,
   type APIListAuctionBidsParams,
-  type APIListUserMetadatasParams,
-  type APIListUsersParams,
 } from './api';
 export {
   Loyalty,
@@ -33,6 +21,17 @@ export {
 } from './loyalty/index';
 export { Minting, type MintingGetAssetsResponse, type MintingGetAssetsParams } from './minting';
 export { Referral, type ReferralCreateCodeResponse, type ReferralCreateCodeParams } from './referral/index';
+export {
+  Users,
+  type UserListResponse,
+  type UserConnectResponse,
+  type UserCountResponse,
+  type UserDisconnectResponse,
+  type UserListParams,
+  type UserConnectParams,
+  type UserCountParams,
+  type UserDisconnectParams,
+} from './users/index';
 export {
   WebsiteCollections,
   type WebsiteCollectionListResponse,

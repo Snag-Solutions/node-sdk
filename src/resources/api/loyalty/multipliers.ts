@@ -90,9 +90,6 @@ export interface MultiplierCreateResponse {
 
   updatedAt: string;
 
-  /**
-   * Schema for a loyalty multiplier user
-   */
   user: MultiplierCreateResponse.User;
 
   userId: string;
@@ -101,9 +98,6 @@ export interface MultiplierCreateResponse {
 }
 
 export namespace MultiplierCreateResponse {
-  /**
-   * Schema for a loyalty multiplier user
-   */
   export interface User {
     id: string;
 
@@ -133,9 +127,6 @@ export interface MultiplierUpdateResponse {
 
   updatedAt: string;
 
-  /**
-   * Schema for a loyalty multiplier user
-   */
   user: MultiplierUpdateResponse.User;
 
   userId: string;
@@ -144,9 +135,6 @@ export interface MultiplierUpdateResponse {
 }
 
 export namespace MultiplierUpdateResponse {
-  /**
-   * Schema for a loyalty multiplier user
-   */
   export interface User {
     id: string;
 
@@ -183,9 +171,6 @@ export namespace MultiplierListResponse {
 
     updatedAt: string;
 
-    /**
-     * Schema for a loyalty multiplier user
-     */
     user: Data.User;
 
     userId: string;
@@ -194,9 +179,6 @@ export namespace MultiplierListResponse {
   }
 
   export namespace Data {
-    /**
-     * Schema for a loyalty multiplier user
-     */
     export interface User {
       id: string;
 
@@ -231,9 +213,6 @@ export interface MultiplierDeleteByExternalIDResponse {
 
   updatedAt: string;
 
-  /**
-   * Schema for a loyalty multiplier user
-   */
   user: MultiplierDeleteByExternalIDResponse.User;
 
   userId: string;
@@ -242,9 +221,6 @@ export interface MultiplierDeleteByExternalIDResponse {
 }
 
 export namespace MultiplierDeleteByExternalIDResponse {
-  /**
-   * Schema for a loyalty multiplier user
-   */
   export interface User {
     id: string;
 
