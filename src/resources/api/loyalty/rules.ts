@@ -3599,6 +3599,11 @@ export interface RuleListParams {
   loyaltyRuleGroupId?: string;
 
   /**
+   * The IDs of the loyalty rule
+   */
+  loyaltyRuleId?: string | Array<string>;
+
+  /**
    * Unique identifier for the organization to filter by
    */
   organizationId?: string;
