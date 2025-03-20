@@ -8,10 +8,22 @@ import * as Uploads from './uploads';
 import * as API from './resources/index';
 import {
   API as ApiapiAPI,
+  APIConnectAuthParams,
+  APIConnectAuthResponse,
+  APIConnectUserToGroupParams,
+  APIConnectUserToGroupResponse,
   APICreateAssetUploadURLParams,
   APICreateAssetUploadURLResponse,
+  APICreateUserMetadataParams,
+  APICreateUserMetadataResponse,
+  APIDisconnectUserFromGroupParams,
+  APIDisconnectUserFromGroupResponse,
+  APIGetUserCountParams,
+  APIGetUserCountResponse,
   APIListAuctionBidsParams,
   APIListAuctionsResponse,
+  APIListUserMetadatasParams,
+  APIListUserMetadatasResponse,
   APIListUsersParams,
   APIListUsersResponse,
 } from './resources/api/api';
@@ -177,11 +189,23 @@ export declare namespace SnagSolutions {
 
   export {
     ApiapiAPI as API,
+    type APIConnectAuthResponse as APIConnectAuthResponse,
+    type APIConnectUserToGroupResponse as APIConnectUserToGroupResponse,
     type APICreateAssetUploadURLResponse as APICreateAssetUploadURLResponse,
+    type APICreateUserMetadataResponse as APICreateUserMetadataResponse,
+    type APIDisconnectUserFromGroupResponse as APIDisconnectUserFromGroupResponse,
+    type APIGetUserCountResponse as APIGetUserCountResponse,
     type APIListAuctionsResponse as APIListAuctionsResponse,
+    type APIListUserMetadatasResponse as APIListUserMetadatasResponse,
     type APIListUsersResponse as APIListUsersResponse,
+    type APIConnectAuthParams as APIConnectAuthParams,
+    type APIConnectUserToGroupParams as APIConnectUserToGroupParams,
     type APICreateAssetUploadURLParams as APICreateAssetUploadURLParams,
+    type APICreateUserMetadataParams as APICreateUserMetadataParams,
+    type APIDisconnectUserFromGroupParams as APIDisconnectUserFromGroupParams,
+    type APIGetUserCountParams as APIGetUserCountParams,
     type APIListAuctionBidsParams as APIListAuctionBidsParams,
+    type APIListUserMetadatasParams as APIListUserMetadatasParams,
     type APIListUsersParams as APIListUsersParams,
   };
 }
