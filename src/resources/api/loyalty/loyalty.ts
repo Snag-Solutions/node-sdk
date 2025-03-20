@@ -183,6 +183,9 @@ export interface LoyaltyGetRuleGroupsResponse {
 }
 
 export namespace LoyaltyGetRuleGroupsResponse {
+  /**
+   * Schema for a get loyalty rule groups response
+   */
   export interface Data {
     id: string;
 
