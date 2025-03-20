@@ -1099,16 +1099,6 @@ export interface LoyaltyGetRuleGroupsParams {
 
 export interface LoyaltyListTransactionEntriesParams {
   /**
-   * End date to filter by (exclusive, less than)
-   */
-  createdAtEnd?: string;
-
-  /**
-   * Start date to filter by (inclusive, greater than or equal to)
-   */
-  createdAtStart?: string;
-
-  /**
    * Direction of the transaction entry to filter by
    */
   direction?: 'credit' | 'debit';
