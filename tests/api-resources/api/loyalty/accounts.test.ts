@@ -36,6 +36,7 @@ describe('resource accounts', () => {
       client.api.loyalty.accounts.list(
         {
           discordUser: 'user123#4567',
+          externalIdentifier: '123e4567-e89b-12d3-a456-426614174090',
           limit: 20,
           loyaltyCurrencyId: '123e4567-e89b-12d3-a456-426614174090',
           'orderBy[amount]': 'asc',
