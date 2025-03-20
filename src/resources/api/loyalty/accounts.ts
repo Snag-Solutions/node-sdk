@@ -159,6 +159,11 @@ export interface AccountListParams {
   discordUser?: string;
 
   /**
+   * External identifier for the user
+   */
+  externalIdentifier?: string;
+
+  /**
    * Maximum number of accounts to return
    */
   limit?: number;
