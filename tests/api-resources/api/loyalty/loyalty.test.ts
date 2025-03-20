@@ -103,6 +103,8 @@ describe('resource loyalty', () => {
     await expect(
       client.api.loyalty.listTransactionEntries(
         {
+          createdAtEnd: '2023-10-01T12:34:56Z',
+          createdAtStart: '2023-10-01T12:34:56Z',
           direction: 'credit',
           idempotencyKey: 'idempkey123',
           limit: 50,
