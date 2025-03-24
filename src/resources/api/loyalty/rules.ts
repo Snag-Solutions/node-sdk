@@ -3653,6 +3653,12 @@ export interface RuleListParams {
 
 export interface RuleCompleteParams {
   /**
+   * Override amount for the reward (rounded to nearest whole number). This will
+   * override the rule amount and reward the integer passed.
+   */
+  amount?: number | null;
+
+  /**
    * Link to the comment made by user
    */
   commentLink?: string;
