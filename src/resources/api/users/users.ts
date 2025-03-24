@@ -262,6 +262,11 @@ export interface UserListParams {
   startingAfter?: string;
 
   /**
+   * Steam ID of the user
+   */
+  steamUserId?: string;
+
+  /**
    * Steam username of the user
    */
   steamUsername?: string;
