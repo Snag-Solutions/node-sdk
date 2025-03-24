@@ -43,7 +43,6 @@ describe('resource users', () => {
           limit: 10,
           organizationId: '123e4567-e89b-12d3-a456-426614174001',
           startingAfter: '123e4567-e89b-12d3-a456-426614174020',
-          steamUserId: '1234567890',
           steamUsername: 'elonmusk',
           telegramUserId: '1234567890',
           telegramUsername: 'elonmusk',
