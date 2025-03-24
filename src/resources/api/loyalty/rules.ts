@@ -337,11 +337,6 @@ export namespace RuleCreateResponse {
     collection?: Array<Metadata.Collection>;
 
     /**
-     * Conditions for completing the profile.
-     */
-    completeProfileConditions?: Record<string, boolean> | null;
-
-    /**
      * Object containing details for the call-to-action.
      */
     cta?: Metadata.Cta | null;
@@ -1203,11 +1198,6 @@ export namespace RuleUpdateResponse {
      * Array of collections associated with the rule.
      */
     collection?: Array<Metadata.Collection>;
-
-    /**
-     * Conditions for completing the profile.
-     */
-    completeProfileConditions?: Record<string, boolean> | null;
 
     /**
      * Object containing details for the call-to-action.
@@ -2151,11 +2141,6 @@ export namespace RuleCreateParams {
     collection?: Array<Metadata.Collection>;
 
     /**
-     * Conditions for completing the profile.
-     */
-    completeProfileConditions?: Record<string, boolean> | null;
-
-    /**
      * Object containing details for the call-to-action.
      */
     cta?: Metadata.Cta | null;
@@ -3017,11 +3002,6 @@ export namespace RuleUpdateParams {
     collection?: Array<Metadata.Collection>;
 
     /**
-     * Conditions for completing the profile.
-     */
-    completeProfileConditions?: Record<string, boolean> | null;
-
-    /**
      * Object containing details for the call-to-action.
      */
     cta?: Metadata.Cta | null;
@@ -3652,6 +3632,12 @@ export interface RuleListParams {
 }
 
 export interface RuleCompleteParams {
+  /**
+   * Override amount for the reward (rounded to nearest whole number). This will
+   * override the rule amount and reward the integer passed.
+   */
+  amount?: number | null;
+
   /**
    * Link to the comment made by user
    */
