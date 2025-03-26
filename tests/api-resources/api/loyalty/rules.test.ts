@@ -145,6 +145,7 @@ describe('resource rules', () => {
       interval: 'daily',
       isRequired: true,
       loyaltyRuleGroupId: '123e4567-e89b-12d3-a456-426614174004',
+      mediaUrl: 'https://example.com/media.png',
       network: 'apechain',
       oauthCredentialsId: '123e4567-e89b-12d3-a456-426614174003',
       rewardType: 'points',
@@ -186,6 +187,7 @@ describe('resource rules', () => {
       interval: 'daily',
       isRequired: true,
       loyaltyRuleGroupId: '123e4567-e89b-12d3-a456-426614174005',
+      mediaUrl: 'https://example.com/media.png',
       metadata: {
         buttonText: 'Verify Now',
         checkComment: true,

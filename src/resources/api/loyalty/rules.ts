@@ -247,6 +247,11 @@ export interface RuleCreateResponse {
   loyaltyRuleGroupId?: 'no-section' | (string & {}) | null;
 
   /**
+   * URL of the media to be displayed
+   */
+  mediaUrl?: string | null;
+
+  /**
    * Blockchain network where the rule will apply
    */
   network?:
@@ -1052,6 +1057,11 @@ export interface RuleUpdateResponse {
    * ID of the rule group section to associate with the rule
    */
   loyaltyRuleGroupId?: (string & {}) | 'no-section' | null;
+
+  /**
+   * URL of the media to be displayed
+   */
+  mediaUrl?: string | null;
 
   /**
    * Additional metadata for the loyalty rule
@@ -2051,6 +2061,11 @@ export interface RuleCreateParams {
   loyaltyRuleGroupId?: 'no-section' | (string & {}) | null;
 
   /**
+   * URL of the media to be displayed
+   */
+  mediaUrl?: string | null;
+
+  /**
    * Blockchain network where the rule will apply
    */
   network?:
@@ -2854,6 +2869,11 @@ export interface RuleUpdateParams {
    * ID of the rule group section to associate with the rule
    */
   loyaltyRuleGroupId?: (string & {}) | 'no-section' | null;
+
+  /**
+   * URL of the media to be displayed
+   */
+  mediaUrl?: string | null;
 
   /**
    * Additional metadata for the loyalty rule

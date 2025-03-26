@@ -231,6 +231,8 @@ export namespace LoyaltyGetRuleGroupsResponse {
 
         loyaltyCurrencyId: string;
 
+        mediaUrl: string | null;
+
         metadata: LoyaltyRule.Metadata;
 
         name: string;
