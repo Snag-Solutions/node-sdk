@@ -365,14 +365,29 @@ export namespace LoyaltyGetRuleGroupsResponse {
           enableVerifiedMultiplier?: boolean;
 
           /**
+           * Fill source of the order for the token sale
+           */
+          fillSource?: string;
+
+          /**
            * Percentage reward given to a user for their first referral.
            */
           firstReferralReward?: number | null;
 
           /**
+           * Flag indicating whether the fill source is included.
+           */
+          hasFillSource?: boolean;
+
+          /**
            * Indicates if the item has never been sold.
            */
           hasNeverSold?: boolean;
+
+          /**
+           * Flag indicating whether the order source is included.
+           */
+          hasOrderSource?: boolean;
 
           /**
            * Indicates if the full royalty has been paid for items.
@@ -453,6 +468,11 @@ export namespace LoyaltyGetRuleGroupsResponse {
            * give points for only one token ownership per contract
            */
           onlyRewardSingleTokenOwnership?: boolean | null;
+
+          /**
+           * Order source of the order for the token sale
+           */
+          orderSource?: string;
 
           /**
            * Promotional code associated with the rule.
