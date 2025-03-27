@@ -3,9 +3,9 @@
 export {
   Accounts,
   type AccountListResponse,
-  type AccountGetRankResponse,
+  type AccountRetrieveRankResponse,
   type AccountListParams,
-  type AccountGetRankParams,
+  type AccountRetrieveRankParams,
 } from './accounts';
 export {
   Badges,

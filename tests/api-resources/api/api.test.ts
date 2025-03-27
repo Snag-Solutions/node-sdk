@@ -10,8 +10,8 @@ const client = new SnagSolutions({
 
 describe('resource api', () => {
   // skipped: tests are disabled for the time being
-  test.skip('connectTwitter', async () => {
-    const responsePromise = client.api.connectTwitter('twitter');
+  test.skip('connectAuth', async () => {
+    const responsePromise = client.api.connectAuth('twitter');
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -22,18 +22,18 @@ describe('resource api', () => {
   });
 
   // skipped: tests are disabled for the time being
-  test.skip('connectTwitter: request options instead of params are passed correctly', async () => {
+  test.skip('connectAuth: request options instead of params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
-    await expect(client.api.connectTwitter('twitter', { path: '/_stainless_unknown_path' })).rejects.toThrow(
+    await expect(client.api.connectAuth('twitter', { path: '/_stainless_unknown_path' })).rejects.toThrow(
       SnagSolutions.NotFoundError,
     );
   });
 
   // skipped: tests are disabled for the time being
-  test.skip('connectTwitter: request options and params are passed correctly', async () => {
+  test.skip('connectAuth: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
-      client.api.connectTwitter(
+      client.api.connectAuth(
         'twitter',
         {
           redirect: 'https://example.com',
@@ -47,8 +47,8 @@ describe('resource api', () => {
   });
 
   // skipped: tests are disabled for the time being
-  test.skip('createAssetUploadURL: only required params', async () => {
-    const responsePromise = client.api.createAssetUploadURL({ fileName: 'example.png' });
+  test.skip('createAsset: only required params', async () => {
+    const responsePromise = client.api.createAsset({ fileName: 'example.png' });
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -59,8 +59,8 @@ describe('resource api', () => {
   });
 
   // skipped: tests are disabled for the time being
-  test.skip('createAssetUploadURL: required and optional params', async () => {
-    const response = await client.api.createAssetUploadURL({
+  test.skip('createAsset: required and optional params', async () => {
+    const response = await client.api.createAsset({
       fileName: 'example.png',
       filePath: 'announcements',
       organizationId: '123e4567-e89b-12d3-a456-426614174222',

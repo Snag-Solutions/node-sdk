@@ -3,11 +3,11 @@
 export { API } from './api/index';
 export {
   API,
-  type APIConnectTwitterResponse,
-  type APICreateAssetUploadURLResponse,
+  type APIConnectAuthResponse,
+  type APICreateAssetResponse,
   type APIListAuctionsResponse,
-  type APIConnectTwitterParams,
-  type APICreateAssetUploadURLParams,
+  type APIConnectAuthParams,
+  type APICreateAssetParams,
   type APIListAuctionBidsParams,
 } from './api';
 export {

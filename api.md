@@ -2,14 +2,14 @@
 
 Types:
 
-- <code><a href="./src/resources/api/api.ts">APIConnectTwitterResponse</a></code>
-- <code><a href="./src/resources/api/api.ts">APICreateAssetUploadURLResponse</a></code>
+- <code><a href="./src/resources/api/api.ts">APIConnectAuthResponse</a></code>
+- <code><a href="./src/resources/api/api.ts">APICreateAssetResponse</a></code>
 - <code><a href="./src/resources/api/api.ts">APIListAuctionsResponse</a></code>
 
 Methods:
 
-- <code title="get /api/{authType}/auth">client.api.<a href="./src/resources/api/api.ts">connectTwitter</a>(authType, { ...params }) -> APIConnectTwitterResponse</code>
-- <code title="post /api/assets">client.api.<a href="./src/resources/api/api.ts">createAssetUploadURL</a>({ ...params }) -> APICreateAssetUploadURLResponse</code>
+- <code title="get /api/{authType}/auth">client.api.<a href="./src/resources/api/api.ts">connectAuth</a>(authType, { ...params }) -> APIConnectAuthResponse</code>
+- <code title="post /api/assets">client.api.<a href="./src/resources/api/api.ts">createAsset</a>({ ...params }) -> APICreateAssetResponse</code>
 - <code title="get /api/auction_bids">client.api.<a href="./src/resources/api/api.ts">listAuctionBids</a>({ ...params }) -> void</code>
 - <code title="get /api/auctions">client.api.<a href="./src/resources/api/api.ts">listAuctions</a>() -> APIListAuctionsResponse</code>
 
@@ -60,12 +60,12 @@ Methods:
 Types:
 
 - <code><a href="./src/resources/api/loyalty/accounts.ts">AccountListResponse</a></code>
-- <code><a href="./src/resources/api/loyalty/accounts.ts">AccountGetRankResponse</a></code>
+- <code><a href="./src/resources/api/loyalty/accounts.ts">AccountRetrieveRankResponse</a></code>
 
 Methods:
 
 - <code title="get /api/loyalty/accounts">client.api.loyalty.accounts.<a href="./src/resources/api/loyalty/accounts.ts">list</a>({ ...params }) -> AccountListResponse</code>
-- <code title="get /api/loyalty/accounts/{id}/rank">client.api.loyalty.accounts.<a href="./src/resources/api/loyalty/accounts.ts">getRank</a>(pathId, { ...params }) -> AccountGetRankResponse</code>
+- <code title="get /api/loyalty/accounts/{id}/rank">client.api.loyalty.accounts.<a href="./src/resources/api/loyalty/accounts.ts">retrieveRank</a>(pathId, { ...params }) -> AccountRetrieveRankResponse</code>
 
 ### Badges
 

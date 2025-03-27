@@ -139,8 +139,6 @@ export interface MetadataCreateParams {
 
   logoUrl?: string | null;
 
-  organizationId?: string;
-
   stardustProfileIdentifier?: string | null;
 
   stardustWalletIdentifier?: string | null;
@@ -162,8 +160,6 @@ export interface MetadataCreateParams {
   walletAddress?: string;
 
   walletGroupIdentifier?: string | null;
-
-  websiteId?: string;
 }
 
 export interface MetadataListParams {
