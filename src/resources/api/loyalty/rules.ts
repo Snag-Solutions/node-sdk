@@ -247,6 +247,11 @@ export interface RuleCreateResponse {
   loyaltyRuleGroupId?: 'no-section' | (string & {}) | null;
 
   /**
+   * URL of the media to be displayed
+   */
+  mediaUrl?: string | null;
+
+  /**
    * Blockchain network where the rule will apply
    */
   network?:
@@ -337,6 +342,11 @@ export namespace RuleCreateResponse {
     collection?: Array<Metadata.Collection>;
 
     /**
+     * Conditions for completing the profile.
+     */
+    completeProfileConditions?: Record<string, boolean> | null;
+
+    /**
      * Object containing details for the call-to-action.
      */
     cta?: Metadata.Cta | null;
@@ -372,14 +382,29 @@ export namespace RuleCreateResponse {
     enableVerifiedMultiplier?: boolean;
 
     /**
+     * Fill source of the order for the token sale
+     */
+    fillSource?: string;
+
+    /**
      * Percentage reward given to a user for their first referral.
      */
     firstReferralReward?: number | null;
 
     /**
+     * Flag indicating whether the fill source is included.
+     */
+    hasFillSource?: boolean;
+
+    /**
      * Indicates if the item has never been sold.
      */
     hasNeverSold?: boolean;
+
+    /**
+     * Flag indicating whether the order source is included.
+     */
+    hasOrderSource?: boolean;
 
     /**
      * Indicates if the full royalty has been paid for items.
@@ -460,6 +485,11 @@ export namespace RuleCreateResponse {
      * give points for only one token ownership per contract
      */
     onlyRewardSingleTokenOwnership?: boolean | null;
+
+    /**
+     * Order source of the order for the token sale
+     */
+    orderSource?: string;
 
     /**
      * Promotional code associated with the rule.
@@ -1054,6 +1084,11 @@ export interface RuleUpdateResponse {
   loyaltyRuleGroupId?: (string & {}) | 'no-section' | null;
 
   /**
+   * URL of the media to be displayed
+   */
+  mediaUrl?: string | null;
+
+  /**
    * Additional metadata for the loyalty rule
    */
   metadata?: RuleUpdateResponse.Metadata;
@@ -1200,6 +1235,11 @@ export namespace RuleUpdateResponse {
     collection?: Array<Metadata.Collection>;
 
     /**
+     * Conditions for completing the profile.
+     */
+    completeProfileConditions?: Record<string, boolean> | null;
+
+    /**
      * Object containing details for the call-to-action.
      */
     cta?: Metadata.Cta | null;
@@ -1235,14 +1275,29 @@ export namespace RuleUpdateResponse {
     enableVerifiedMultiplier?: boolean;
 
     /**
+     * Fill source of the order for the token sale
+     */
+    fillSource?: string;
+
+    /**
      * Percentage reward given to a user for their first referral.
      */
     firstReferralReward?: number | null;
 
     /**
+     * Flag indicating whether the fill source is included.
+     */
+    hasFillSource?: boolean;
+
+    /**
      * Indicates if the item has never been sold.
      */
     hasNeverSold?: boolean;
+
+    /**
+     * Flag indicating whether the order source is included.
+     */
+    hasOrderSource?: boolean;
 
     /**
      * Indicates if the full royalty has been paid for items.
@@ -1323,6 +1378,11 @@ export namespace RuleUpdateResponse {
      * give points for only one token ownership per contract
      */
     onlyRewardSingleTokenOwnership?: boolean | null;
+
+    /**
+     * Order source of the order for the token sale
+     */
+    orderSource?: string;
 
     /**
      * Promotional code associated with the rule.
@@ -2051,6 +2111,11 @@ export interface RuleCreateParams {
   loyaltyRuleGroupId?: 'no-section' | (string & {}) | null;
 
   /**
+   * URL of the media to be displayed
+   */
+  mediaUrl?: string | null;
+
+  /**
    * Blockchain network where the rule will apply
    */
   network?:
@@ -2141,6 +2206,11 @@ export namespace RuleCreateParams {
     collection?: Array<Metadata.Collection>;
 
     /**
+     * Conditions for completing the profile.
+     */
+    completeProfileConditions?: Record<string, boolean> | null;
+
+    /**
      * Object containing details for the call-to-action.
      */
     cta?: Metadata.Cta | null;
@@ -2176,14 +2246,29 @@ export namespace RuleCreateParams {
     enableVerifiedMultiplier?: boolean;
 
     /**
+     * Fill source of the order for the token sale
+     */
+    fillSource?: string;
+
+    /**
      * Percentage reward given to a user for their first referral.
      */
     firstReferralReward?: number | null;
 
     /**
+     * Flag indicating whether the fill source is included.
+     */
+    hasFillSource?: boolean;
+
+    /**
      * Indicates if the item has never been sold.
      */
     hasNeverSold?: boolean;
+
+    /**
+     * Flag indicating whether the order source is included.
+     */
+    hasOrderSource?: boolean;
 
     /**
      * Indicates if the full royalty has been paid for items.
@@ -2264,6 +2349,11 @@ export namespace RuleCreateParams {
      * give points for only one token ownership per contract
      */
     onlyRewardSingleTokenOwnership?: boolean | null;
+
+    /**
+     * Order source of the order for the token sale
+     */
+    orderSource?: string;
 
     /**
      * Promotional code associated with the rule.
@@ -2856,6 +2946,11 @@ export interface RuleUpdateParams {
   loyaltyRuleGroupId?: (string & {}) | 'no-section' | null;
 
   /**
+   * URL of the media to be displayed
+   */
+  mediaUrl?: string | null;
+
+  /**
    * Additional metadata for the loyalty rule
    */
   metadata?: RuleUpdateParams.Metadata;
@@ -3002,6 +3097,11 @@ export namespace RuleUpdateParams {
     collection?: Array<Metadata.Collection>;
 
     /**
+     * Conditions for completing the profile.
+     */
+    completeProfileConditions?: Record<string, boolean> | null;
+
+    /**
      * Object containing details for the call-to-action.
      */
     cta?: Metadata.Cta | null;
@@ -3037,14 +3137,29 @@ export namespace RuleUpdateParams {
     enableVerifiedMultiplier?: boolean;
 
     /**
+     * Fill source of the order for the token sale
+     */
+    fillSource?: string;
+
+    /**
      * Percentage reward given to a user for their first referral.
      */
     firstReferralReward?: number | null;
 
     /**
+     * Flag indicating whether the fill source is included.
+     */
+    hasFillSource?: boolean;
+
+    /**
      * Indicates if the item has never been sold.
      */
     hasNeverSold?: boolean;
+
+    /**
+     * Flag indicating whether the order source is included.
+     */
+    hasOrderSource?: boolean;
 
     /**
      * Indicates if the full royalty has been paid for items.
@@ -3125,6 +3240,11 @@ export namespace RuleUpdateParams {
      * give points for only one token ownership per contract
      */
     onlyRewardSingleTokenOwnership?: boolean | null;
+
+    /**
+     * Order source of the order for the token sale
+     */
+    orderSource?: string;
 
     /**
      * Promotional code associated with the rule.

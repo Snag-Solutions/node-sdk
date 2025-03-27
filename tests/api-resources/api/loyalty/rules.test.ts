@@ -52,6 +52,7 @@ describe('resource rules', () => {
         collection: [
           { address: '0xabcdefabcdefabcdefabcdefabcdefabcdef', multiplier: 2, network: 'apechain' },
         ],
+        completeProfileConditions: { twitter: true, discord: false },
         cta: { href: 'https://example.com', label: 'Click Here' },
         customRewardsApiKey: 'api-key-1234',
         discordServersToJoin: [
@@ -65,8 +66,11 @@ describe('resource rules', () => {
         enableJoinDiscordServers: true,
         enableStreaks: true,
         enableVerifiedMultiplier: true,
+        fillSource: 'opensea.io',
         firstReferralReward: 10,
+        hasFillSource: true,
         hasNeverSold: false,
+        hasOrderSource: true,
         hasPaidFullRoyalty: false,
         hasSaleCurrency: false,
         hasVerifiedTwitter: true,
@@ -83,6 +87,7 @@ describe('resource rules', () => {
         onlyNonListed: true,
         onlyRewardExistingUser: true,
         onlyRewardSingleTokenOwnership: true,
+        orderSource: 'opensea.io',
         promoCode: 'PROMO123',
         range: [{ amount: 5, endRange: 10, startRange: 1 }],
         referralRequirements: {
@@ -145,6 +150,7 @@ describe('resource rules', () => {
       interval: 'daily',
       isRequired: true,
       loyaltyRuleGroupId: '123e4567-e89b-12d3-a456-426614174004',
+      mediaUrl: 'https://example.com/media.png',
       network: 'apechain',
       oauthCredentialsId: '123e4567-e89b-12d3-a456-426614174003',
       rewardType: 'points',
@@ -186,6 +192,7 @@ describe('resource rules', () => {
       interval: 'daily',
       isRequired: true,
       loyaltyRuleGroupId: '123e4567-e89b-12d3-a456-426614174005',
+      mediaUrl: 'https://example.com/media.png',
       metadata: {
         buttonText: 'Verify Now',
         checkComment: true,
@@ -195,6 +202,7 @@ describe('resource rules', () => {
         collection: [
           { address: '0xabcdefabcdefabcdefabcdefabcdefabcdef', multiplier: 2, network: 'apechain' },
         ],
+        completeProfileConditions: { twitter: true, discord: false },
         cta: { href: 'https://example.com', label: 'Click Here' },
         customRewardsApiKey: 'api-key-1234',
         discordServersToJoin: [
@@ -208,8 +216,11 @@ describe('resource rules', () => {
         enableJoinDiscordServers: true,
         enableStreaks: true,
         enableVerifiedMultiplier: true,
+        fillSource: 'opensea.io',
         firstReferralReward: 10,
+        hasFillSource: true,
         hasNeverSold: false,
+        hasOrderSource: true,
         hasPaidFullRoyalty: false,
         hasSaleCurrency: false,
         hasVerifiedTwitter: true,
@@ -226,6 +237,7 @@ describe('resource rules', () => {
         onlyNonListed: true,
         onlyRewardExistingUser: true,
         onlyRewardSingleTokenOwnership: true,
+        orderSource: 'opensea.io',
         promoCode: 'PROMO123',
         range: [{ amount: 5, endRange: 10, startRange: 1 }],
         referralRequirements: {
