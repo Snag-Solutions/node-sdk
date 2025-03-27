@@ -342,11 +342,6 @@ export namespace RuleCreateResponse {
     collection?: Array<Metadata.Collection>;
 
     /**
-     * Conditions for completing the profile.
-     */
-    completeProfileConditions?: Record<string, boolean> | null;
-
-    /**
      * Object containing details for the call-to-action.
      */
     cta?: Metadata.Cta | null;
@@ -1233,11 +1228,6 @@ export namespace RuleUpdateResponse {
      * Array of collections associated with the rule.
      */
     collection?: Array<Metadata.Collection>;
-
-    /**
-     * Conditions for completing the profile.
-     */
-    completeProfileConditions?: Record<string, boolean> | null;
 
     /**
      * Object containing details for the call-to-action.
@@ -2206,11 +2196,6 @@ export namespace RuleCreateParams {
     collection?: Array<Metadata.Collection>;
 
     /**
-     * Conditions for completing the profile.
-     */
-    completeProfileConditions?: Record<string, boolean> | null;
-
-    /**
      * Object containing details for the call-to-action.
      */
     cta?: Metadata.Cta | null;
@@ -3095,11 +3080,6 @@ export namespace RuleUpdateParams {
      * Array of collections associated with the rule.
      */
     collection?: Array<Metadata.Collection>;
-
-    /**
-     * Conditions for completing the profile.
-     */
-    completeProfileConditions?: Record<string, boolean> | null;
 
     /**
      * Object containing details for the call-to-action.

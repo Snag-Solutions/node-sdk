@@ -52,7 +52,6 @@ describe('resource rules', () => {
         collection: [
           { address: '0xabcdefabcdefabcdefabcdefabcdefabcdef', multiplier: 2, network: 'apechain' },
         ],
-        completeProfileConditions: { twitter: true, discord: false },
         cta: { href: 'https://example.com', label: 'Click Here' },
         customRewardsApiKey: 'api-key-1234',
         discordServersToJoin: [
@@ -202,7 +201,6 @@ describe('resource rules', () => {
         collection: [
           { address: '0xabcdefabcdefabcdefabcdefabcdefabcdef', multiplier: 2, network: 'apechain' },
         ],
-        completeProfileConditions: { twitter: true, discord: false },
         cta: { href: 'https://example.com', label: 'Click Here' },
         customRewardsApiKey: 'api-key-1234',
         discordServersToJoin: [
