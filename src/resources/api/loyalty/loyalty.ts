@@ -330,6 +330,11 @@ export namespace LoyaltyGetRuleGroupsResponse {
           collection?: Array<Metadata.Collection>;
 
           /**
+           * Conditions for completing the profile.
+           */
+          completeProfileConditions?: Record<string, boolean> | null;
+
+          /**
            * Object containing details for the call-to-action.
            */
           cta?: Metadata.Cta | null;
