@@ -19,6 +19,9 @@ export class Currencies extends APIResource {
   }
 }
 
+/**
+ * Schema for a loyalty currency
+ */
 export interface CurrencyCreateResponse {
   /**
    * Unique identifier for the loyalty currency
@@ -118,6 +121,9 @@ export interface CurrencyListResponse {
 }
 
 export namespace CurrencyListResponse {
+  /**
+   * Schema for a loyalty currency
+   */
   export interface Data {
     /**
      * Unique identifier for the loyalty currency

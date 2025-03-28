@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import SnagSolutions from '@snagsolutions/sdk';
+import SnagSolutions from 'snag-solutions';
 import { Response } from 'node-fetch';
 
 const client = new SnagSolutions({
@@ -36,7 +36,7 @@ describe('resource minting', () => {
       isListed: true,
       mintingContractAssetId: '00000000-0000-0000-0000-000000000000',
       mintingContractIds: '123e4567-e89b-12d3-a456-426614174000,987fcdeb-51a2-43d7-9876-543210987654',
-      network: 'mainnet',
+      network: 'apechain',
       sortDir: 'asc',
       sortKey: 'price',
       status: 'active',

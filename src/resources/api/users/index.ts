@@ -9,9 +9,11 @@ export {
 } from './metadatas';
 export {
   Users,
+  type UserListResponse,
   type UserConnectResponse,
   type UserCountResponse,
   type UserDisconnectResponse,
+  type UserListParams,
   type UserConnectParams,
   type UserCountParams,
   type UserDisconnectParams,

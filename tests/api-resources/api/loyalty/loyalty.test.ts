@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import SnagSolutions from '@snagsolutions/sdk';
+import SnagSolutions from 'snag-solutions';
 import { Response } from 'node-fetch';
 
 const client = new SnagSolutions({
@@ -78,8 +78,8 @@ describe('resource loyalty', () => {
   });
 
   // skipped: tests are disabled for the time being
-  test.skip('listTransactionEntries', async () => {
-    const responsePromise = client.api.loyalty.listTransactionEntries();
+  test.skip('getTransactionEntries', async () => {
+    const responsePromise = client.api.loyalty.getTransactionEntries();
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -90,18 +90,18 @@ describe('resource loyalty', () => {
   });
 
   // skipped: tests are disabled for the time being
-  test.skip('listTransactionEntries: request options instead of params are passed correctly', async () => {
+  test.skip('getTransactionEntries: request options instead of params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
-      client.api.loyalty.listTransactionEntries({ path: '/_stainless_unknown_path' }),
+      client.api.loyalty.getTransactionEntries({ path: '/_stainless_unknown_path' }),
     ).rejects.toThrow(SnagSolutions.NotFoundError);
   });
 
   // skipped: tests are disabled for the time being
-  test.skip('listTransactionEntries: request options and params are passed correctly', async () => {
+  test.skip('getTransactionEntries: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
-      client.api.loyalty.listTransactionEntries(
+      client.api.loyalty.getTransactionEntries(
         {
           createdAtEnd: '2023-10-01T12:34:56Z',
           createdAtStart: '2023-10-01T12:34:56Z',

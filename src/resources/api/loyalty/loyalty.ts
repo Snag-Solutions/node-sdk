@@ -5,10 +5,10 @@ import { isRequestOptions } from '../../../core';
 import * as Core from '../../../core';
 import * as AccountsAPI from './accounts';
 import {
-  AccountGetRankParams,
-  AccountGetRankResponse,
   AccountListParams,
   AccountListResponse,
+  AccountRetrieveRankParams,
+  AccountRetrieveRankResponse,
   Accounts,
 } from './accounts';
 import * as BadgesAPI from './badges';
@@ -133,19 +133,17 @@ export class Loyalty extends APIResource {
    * Fetch loyalty transaction entries for wallets or users, representing account
    * balance changes.
    */
-  listTransactionEntries(
-    query?: LoyaltyListTransactionEntriesParams,
+  getTransactionEntries(
+    query?: LoyaltyGetTransactionEntriesParams,
     options?: Core.RequestOptions,
-  ): Core.APIPromise<LoyaltyListTransactionEntriesResponse>;
-  listTransactionEntries(
+  ): Core.APIPromise<LoyaltyGetTransactionEntriesResponse>;
+  getTransactionEntries(options?: Core.RequestOptions): Core.APIPromise<LoyaltyGetTransactionEntriesResponse>;
+  getTransactionEntries(
+    query: LoyaltyGetTransactionEntriesParams | Core.RequestOptions = {},
     options?: Core.RequestOptions,
-  ): Core.APIPromise<LoyaltyListTransactionEntriesResponse>;
-  listTransactionEntries(
-    query: LoyaltyListTransactionEntriesParams | Core.RequestOptions = {},
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<LoyaltyListTransactionEntriesResponse> {
+  ): Core.APIPromise<LoyaltyGetTransactionEntriesResponse> {
     if (isRequestOptions(query)) {
-      return this.listTransactionEntries({}, query);
+      return this.getTransactionEntries({}, query);
     }
     return this._client.get('/api/loyalty/transaction_entries', { query, ...options });
   }
@@ -185,6 +183,9 @@ export interface LoyaltyGetRuleGroupsResponse {
 }
 
 export namespace LoyaltyGetRuleGroupsResponse {
+  /**
+   * Schema for a get loyalty rule groups response
+   */
   export interface Data {
     id: string;
 
@@ -229,6 +230,8 @@ export namespace LoyaltyGetRuleGroupsResponse {
         isRequired: boolean;
 
         loyaltyCurrencyId: string;
+
+        mediaUrl: string | null;
 
         metadata: LoyaltyRule.Metadata;
 
@@ -327,6 +330,11 @@ export namespace LoyaltyGetRuleGroupsResponse {
           collection?: Array<Metadata.Collection>;
 
           /**
+           * Conditions for completing the profile.
+           */
+          completeProfileConditions?: Record<string, boolean> | null;
+
+          /**
            * Object containing details for the call-to-action.
            */
           cta?: Metadata.Cta | null;
@@ -362,14 +370,29 @@ export namespace LoyaltyGetRuleGroupsResponse {
           enableVerifiedMultiplier?: boolean;
 
           /**
+           * Fill source of the order for the token sale
+           */
+          fillSource?: string;
+
+          /**
            * Percentage reward given to a user for their first referral.
            */
           firstReferralReward?: number | null;
 
           /**
+           * Flag indicating whether the fill source is included.
+           */
+          hasFillSource?: boolean;
+
+          /**
            * Indicates if the item has never been sold.
            */
           hasNeverSold?: boolean;
+
+          /**
+           * Flag indicating whether the order source is included.
+           */
+          hasOrderSource?: boolean;
 
           /**
            * Indicates if the full royalty has been paid for items.
@@ -450,6 +473,11 @@ export namespace LoyaltyGetRuleGroupsResponse {
            * give points for only one token ownership per contract
            */
           onlyRewardSingleTokenOwnership?: boolean | null;
+
+          /**
+           * Order source of the order for the token sale
+           */
+          orderSource?: string;
 
           /**
            * Promotional code associated with the rule.
@@ -609,31 +637,32 @@ export namespace LoyaltyGetRuleGroupsResponse {
              * Blockchain network of the collection.
              */
             network?:
-              | 'mainnet'
-              | 'polygon'
-              | 'polygon_mumbai'
-              | 'optimism'
+              | 'apechain'
               | 'arbitrum'
-              | 'binance'
-              | 'bscTestnet'
               | 'avalanche'
               | 'avalancheFuji'
-              | 'zksync'
-              | 'fantom'
-              | 'fantomTestnet'
               | 'base'
               | 'baseSepolia'
-              | 'skaleNebula'
-              | 'xai'
               | 'berachainArtio'
-              | 'solana'
-              | 'apechain'
-              | 'flowMainnet'
+              | 'binance'
+              | 'bscTestnet'
               | 'campTestnet'
+              | 'fantom'
+              | 'fantomTestnet'
+              | 'flowMainnet'
+              | 'mainnet'
+              | 'optimism'
+              | 'polygon'
+              | 'polygon_mumbai'
+              | 'skaleNebula'
+              | 'solana'
+              | 'sophon'
               | 'sui'
-              | 'vanar'
               | 'superseed'
               | 'superseedSepolia'
+              | 'vanar'
+              | 'xai'
+              | 'zksync'
               | 'sepolia'
               | 'optimism_sepolia'
               | 'arbitrumSepolia'
@@ -921,13 +950,13 @@ export namespace LoyaltyGetRuleGroupsResponse {
   }
 }
 
-export interface LoyaltyListTransactionEntriesResponse {
-  data: Array<LoyaltyListTransactionEntriesResponse.Data>;
+export interface LoyaltyGetTransactionEntriesResponse {
+  data: Array<LoyaltyGetTransactionEntriesResponse.Data>;
 
   hasNextPage: boolean;
 }
 
-export namespace LoyaltyListTransactionEntriesResponse {
+export namespace LoyaltyGetTransactionEntriesResponse {
   /**
    * Schema for a loyalty transaction entry
    */
@@ -1097,7 +1126,7 @@ export interface LoyaltyGetRuleGroupsParams {
   websiteId?: string;
 }
 
-export interface LoyaltyListTransactionEntriesParams {
+export interface LoyaltyGetTransactionEntriesParams {
   /**
    * End date to filter by (exclusive, less than)
    */
@@ -1204,18 +1233,18 @@ export declare namespace Loyalty {
   export {
     type LoyaltyCreateTransactionResponse as LoyaltyCreateTransactionResponse,
     type LoyaltyGetRuleGroupsResponse as LoyaltyGetRuleGroupsResponse,
-    type LoyaltyListTransactionEntriesResponse as LoyaltyListTransactionEntriesResponse,
+    type LoyaltyGetTransactionEntriesResponse as LoyaltyGetTransactionEntriesResponse,
     type LoyaltyCreateTransactionParams as LoyaltyCreateTransactionParams,
     type LoyaltyGetRuleGroupsParams as LoyaltyGetRuleGroupsParams,
-    type LoyaltyListTransactionEntriesParams as LoyaltyListTransactionEntriesParams,
+    type LoyaltyGetTransactionEntriesParams as LoyaltyGetTransactionEntriesParams,
   };
 
   export {
     Accounts as Accounts,
     type AccountListResponse as AccountListResponse,
-    type AccountGetRankResponse as AccountGetRankResponse,
+    type AccountRetrieveRankResponse as AccountRetrieveRankResponse,
     type AccountListParams as AccountListParams,
-    type AccountGetRankParams as AccountGetRankParams,
+    type AccountRetrieveRankParams as AccountRetrieveRankParams,
   };
 
   export {

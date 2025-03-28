@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import SnagSolutions from '@snagsolutions/sdk';
+import SnagSolutions from 'snag-solutions';
 import { Response } from 'node-fetch';
 
 const client = new SnagSolutions({
@@ -43,6 +43,7 @@ describe('resource metadatas', () => {
           externalIdentifier: 'externalIdentifier',
           isBlocked: true,
           logoUrl: 'logoUrl',
+          organizationId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
           stardustProfileIdentifier: 'stardustProfileIdentifier',
           stardustWalletIdentifier: 'stardustWalletIdentifier',
           telegramUserId: 'telegramUserId',
@@ -54,6 +55,7 @@ describe('resource metadatas', () => {
           userId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
           walletAddress: 'walletAddress',
           walletGroupIdentifier: 'walletGroupIdentifier',
+          websiteId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
         },
         { path: '/_stainless_unknown_path' },
       ),

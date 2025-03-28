@@ -2,10 +2,10 @@
 
 export {
   API,
-  type APICreateAssetUploadURLResponse,
+  type APIConnectAuthResponse,
+  type APICreateAssetResponse,
   type APIListAuctionsResponse,
-  type APIListUsersResponse,
-  type APICreateAssetUploadURLParams,
+  type APIConnectAuthParams,
+  type APICreateAssetParams,
   type APIListAuctionBidsParams,
-  type APIListUsersParams,
 } from './api/api';

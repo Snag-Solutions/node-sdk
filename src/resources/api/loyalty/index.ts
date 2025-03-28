@@ -3,9 +3,9 @@
 export {
   Accounts,
   type AccountListResponse,
-  type AccountGetRankResponse,
+  type AccountRetrieveRankResponse,
   type AccountListParams,
-  type AccountGetRankParams,
+  type AccountRetrieveRankParams,
 } from './accounts';
 export {
   Badges,
@@ -32,10 +32,10 @@ export {
   Loyalty,
   type LoyaltyCreateTransactionResponse,
   type LoyaltyGetRuleGroupsResponse,
-  type LoyaltyListTransactionEntriesResponse,
+  type LoyaltyGetTransactionEntriesResponse,
   type LoyaltyCreateTransactionParams,
   type LoyaltyGetRuleGroupsParams,
-  type LoyaltyListTransactionEntriesParams,
+  type LoyaltyGetTransactionEntriesParams,
 } from './loyalty';
 export {
   Multipliers,
