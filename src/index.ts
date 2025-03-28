@@ -6,19 +6,46 @@ import * as Core from './core';
 import * as Errors from './error';
 import * as Uploads from './uploads';
 import * as API from './resources/index';
+import { AssetCreateAssetParams, AssetCreateAssetResponse, Assets } from './resources/assets';
+import { AuctionListAuctionBidsParams, AuctionListAuctionsResponse, Auctions } from './resources/auctions';
+import { Auth, AuthConnectAuthParams, AuthConnectAuthResponse } from './resources/auth';
+import { Minting, MintingGetAssetsParams, MintingGetAssetsResponse } from './resources/minting';
 import {
-  API as ApiapiAPI,
-  APIConnectAuthParams,
-  APIConnectAuthResponse,
-  APICreateAssetParams,
-  APICreateAssetResponse,
-  APIListAuctionBidsParams,
-  APIListAuctionsResponse,
-} from './resources/api/api';
+  Loyalty,
+  LoyaltyCreateTransactionParams,
+  LoyaltyCreateTransactionResponse,
+  LoyaltyGetRuleGroupsParams,
+  LoyaltyGetRuleGroupsResponse,
+  LoyaltyGetTransactionEntriesParams,
+  LoyaltyGetTransactionEntriesResponse,
+} from './resources/loyalty/loyalty';
+import {
+  Referral,
+  ReferralCreateCodeParams,
+  ReferralCreateCodeResponse,
+} from './resources/referral/referral';
+import {
+  UserConnectParams,
+  UserConnectResponse,
+  UserCountParams,
+  UserCountResponse,
+  UserDisconnectParams,
+  UserDisconnectResponse,
+  UserListParams,
+  UserListResponse,
+  Users,
+} from './resources/users/users';
+import {
+  WebsiteCreateParams,
+  WebsiteCreateResponse,
+  WebsiteListParams,
+  WebsiteListResponse,
+  Websites,
+} from './resources/websites/websites';
 
 export interface ClientOptions {
   /**
-   * Defaults to process.env['SNAG_SOLUTIONS_API_KEY'].
+   * API key required to authenticate with the Snag Solutions API.
    */
   apiKey?: string | undefined;
 
@@ -90,7 +117,7 @@ export class SnagSolutions extends Core.APIClient {
   /**
    * API Client for interfacing with the Snag Solutions API.
    *
-   * @param {string | undefined} [opts.apiKey=process.env['SNAG_SOLUTIONS_API_KEY'] ?? undefined]
+   * @param {string | undefined} [opts.apiKey=process.env['X_API_KEY'] ?? undefined]
    * @param {string} [opts.baseURL=process.env['SNAG_SOLUTIONS_BASE_URL'] ?? https://admin.snagsolutions.io/] - Override the default base URL for the API.
    * @param {number} [opts.timeout=1 minute] - The maximum amount of time (in milliseconds) the client will wait for a response before timing out.
    * @param {number} [opts.httpAgent] - An HTTP agent used to manage HTTP(s) connections.
@@ -101,12 +128,12 @@ export class SnagSolutions extends Core.APIClient {
    */
   constructor({
     baseURL = Core.readEnv('SNAG_SOLUTIONS_BASE_URL'),
-    apiKey = Core.readEnv('SNAG_SOLUTIONS_API_KEY'),
+    apiKey = Core.readEnv('X_API_KEY'),
     ...opts
   }: ClientOptions = {}) {
     if (apiKey === undefined) {
       throw new Errors.SnagSolutionsError(
-        "The SNAG_SOLUTIONS_API_KEY environment variable is missing or empty; either provide it, or instantiate the SnagSolutions client with an apiKey option, like new SnagSolutions({ apiKey: 'My API Key' }).",
+        "The X_API_KEY environment variable is missing or empty; either provide it, or instantiate the SnagSolutions client with an apiKey option, like new SnagSolutions({ apiKey: 'My API Key' }).",
       );
     }
 
@@ -129,7 +156,14 @@ export class SnagSolutions extends Core.APIClient {
     this.apiKey = apiKey;
   }
 
-  api: API.API = new API.API(this);
+  assets: API.Assets = new API.Assets(this);
+  auth: API.Auth = new API.Auth(this);
+  auctions: API.Auctions = new API.Auctions(this);
+  users: API.Users = new API.Users(this);
+  loyalty: API.Loyalty = new API.Loyalty(this);
+  minting: API.Minting = new API.Minting(this);
+  referral: API.Referral = new API.Referral(this);
+  websites: API.Websites = new API.Websites(this);
 
   protected override defaultQuery(): Core.DefaultQuery | undefined {
     return this._options.defaultQuery;
@@ -171,18 +205,75 @@ export class SnagSolutions extends Core.APIClient {
   static fileFromPath = Uploads.fileFromPath;
 }
 
-SnagSolutions.API = ApiapiAPI;
+SnagSolutions.Assets = Assets;
+SnagSolutions.Auth = Auth;
+SnagSolutions.Auctions = Auctions;
+SnagSolutions.Users = Users;
+SnagSolutions.Loyalty = Loyalty;
+SnagSolutions.Minting = Minting;
+SnagSolutions.Referral = Referral;
+SnagSolutions.Websites = Websites;
 export declare namespace SnagSolutions {
   export type RequestOptions = Core.RequestOptions;
 
   export {
-    ApiapiAPI as API,
-    type APIConnectAuthResponse as APIConnectAuthResponse,
-    type APICreateAssetResponse as APICreateAssetResponse,
-    type APIListAuctionsResponse as APIListAuctionsResponse,
-    type APIConnectAuthParams as APIConnectAuthParams,
-    type APICreateAssetParams as APICreateAssetParams,
-    type APIListAuctionBidsParams as APIListAuctionBidsParams,
+    Assets as Assets,
+    type AssetCreateAssetResponse as AssetCreateAssetResponse,
+    type AssetCreateAssetParams as AssetCreateAssetParams,
+  };
+
+  export {
+    Auth as Auth,
+    type AuthConnectAuthResponse as AuthConnectAuthResponse,
+    type AuthConnectAuthParams as AuthConnectAuthParams,
+  };
+
+  export {
+    Auctions as Auctions,
+    type AuctionListAuctionsResponse as AuctionListAuctionsResponse,
+    type AuctionListAuctionBidsParams as AuctionListAuctionBidsParams,
+  };
+
+  export {
+    Users as Users,
+    type UserListResponse as UserListResponse,
+    type UserConnectResponse as UserConnectResponse,
+    type UserCountResponse as UserCountResponse,
+    type UserDisconnectResponse as UserDisconnectResponse,
+    type UserListParams as UserListParams,
+    type UserConnectParams as UserConnectParams,
+    type UserCountParams as UserCountParams,
+    type UserDisconnectParams as UserDisconnectParams,
+  };
+
+  export {
+    Loyalty as Loyalty,
+    type LoyaltyCreateTransactionResponse as LoyaltyCreateTransactionResponse,
+    type LoyaltyGetRuleGroupsResponse as LoyaltyGetRuleGroupsResponse,
+    type LoyaltyGetTransactionEntriesResponse as LoyaltyGetTransactionEntriesResponse,
+    type LoyaltyCreateTransactionParams as LoyaltyCreateTransactionParams,
+    type LoyaltyGetRuleGroupsParams as LoyaltyGetRuleGroupsParams,
+    type LoyaltyGetTransactionEntriesParams as LoyaltyGetTransactionEntriesParams,
+  };
+
+  export {
+    Minting as Minting,
+    type MintingGetAssetsResponse as MintingGetAssetsResponse,
+    type MintingGetAssetsParams as MintingGetAssetsParams,
+  };
+
+  export {
+    Referral as Referral,
+    type ReferralCreateCodeResponse as ReferralCreateCodeResponse,
+    type ReferralCreateCodeParams as ReferralCreateCodeParams,
+  };
+
+  export {
+    Websites as Websites,
+    type WebsiteCreateResponse as WebsiteCreateResponse,
+    type WebsiteListResponse as WebsiteListResponse,
+    type WebsiteCreateParams as WebsiteCreateParams,
+    type WebsiteListParams as WebsiteListParams,
   };
 }
 
