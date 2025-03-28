@@ -61,15 +61,23 @@ Methods:
 
 ## RuleChains
 
+Types:
+
+- <code><a href="./src/resources/loyalty/rule-chains.ts">RuleChainGetResponse</a></code>
+
+Methods:
+
+- <code title="get /api/loyalty/rule_chains">client.loyalty.ruleChains.<a href="./src/resources/loyalty/rule-chains.ts">get</a>({ ...params }) -> RuleChainGetResponse</code>
+
 ## RuleGroups
 
 Types:
 
-- <code><a href="./src/resources/loyalty/rule-groups.ts">RuleGroupGetRuleGroupsResponse</a></code>
+- <code><a href="./src/resources/loyalty/rule-groups.ts">RuleGroupGetResponse</a></code>
 
 Methods:
 
-- <code title="get /api/loyalty/rule_groups">client.loyalty.ruleGroups.<a href="./src/resources/loyalty/rule-groups.ts">getRuleGroups</a>({ ...params }) -> RuleGroupGetRuleGroupsResponse</code>
+- <code title="get /api/loyalty/rule_groups">client.loyalty.ruleGroups.<a href="./src/resources/loyalty/rule-groups.ts">get</a>({ ...params }) -> RuleGroupGetResponse</code>
 
 ## Transactions
 
