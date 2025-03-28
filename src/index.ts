@@ -91,7 +91,7 @@ export class SnagSolutions extends Core.APIClient {
    * API Client for interfacing with the Snag Solutions API.
    *
    * @param {string | undefined} [opts.apiKey=process.env['SNAG_SOLUTIONS_API_KEY'] ?? undefined]
-   * @param {string} [opts.baseURL=process.env['SNAG_SOLUTIONS_BASE_URL'] ?? https://api.example.com] - Override the default base URL for the API.
+   * @param {string} [opts.baseURL=process.env['SNAG_SOLUTIONS_BASE_URL'] ?? https://admin.snagsolutions.io/] - Override the default base URL for the API.
    * @param {number} [opts.timeout=1 minute] - The maximum amount of time (in milliseconds) the client will wait for a response before timing out.
    * @param {number} [opts.httpAgent] - An HTTP agent used to manage HTTP(s) connections.
    * @param {Core.Fetch} [opts.fetch] - Specify a custom `fetch` function implementation.
@@ -113,7 +113,7 @@ export class SnagSolutions extends Core.APIClient {
     const options: ClientOptions = {
       apiKey,
       ...opts,
-      baseURL: baseURL || `https://api.example.com`,
+      baseURL: baseURL || `https://admin.snagsolutions.io/`,
     };
 
     super({
