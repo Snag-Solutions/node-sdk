@@ -57,6 +57,7 @@ export {
   type QuestionsResponseListParams,
   type QuestionsResponseSubmitParams,
 } from './questions-responses';
+export { RuleChains } from './rule-chains';
 export {
   RuleEdits,
   type RuleEditListResponse,
