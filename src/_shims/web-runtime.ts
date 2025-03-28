@@ -9,9 +9,9 @@ export function getRuntime({ manuallyImported }: { manuallyImported?: boolean } 
   const recommendation =
     manuallyImported ?
       `You may need to use polyfills`
-    : `Add one of these imports before your first \`import … from 'snag-solutions'\`:
-- \`import 'snag-solutions/shims/node'\` (if you're running on Node)
-- \`import 'snag-solutions/shims/web'\` (otherwise)
+    : `Add one of these imports before your first \`import … from '@snagsolutions/sdk'\`:
+- \`import '@snagsolutions/sdk/shims/node'\` (if you're running on Node)
+- \`import '@snagsolutions/sdk/shims/web'\` (otherwise)
 `;
 
   let _fetch, _Request, _Response, _Headers;
@@ -95,7 +95,7 @@ export function getRuntime({ manuallyImported }: { manuallyImported?: boolean } 
     getDefaultAgent: (url: string) => undefined,
     fileFromPath: () => {
       throw new Error(
-        'The `fileFromPath` function is only supported in Node. See the README for more details: https://www.github.com/stainless-sdks/snag-solutions-node#file-uploads',
+        'The `fileFromPath` function is only supported in Node. See the README for more details: https://www.github.com/Snag-Solutions/node-sdk#file-uploads',
       );
     },
     isFsReadStream: (value: any) => false,
