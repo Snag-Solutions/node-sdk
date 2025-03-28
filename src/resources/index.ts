@@ -6,9 +6,11 @@ export { Auth, type AuthConnectAuthResponse, type AuthConnectAuthParams } from '
 export {
   Loyalty,
   type LoyaltyCreateTransactionResponse,
+  type LoyaltyGetRuleChainsResponse,
   type LoyaltyGetRuleGroupsResponse,
   type LoyaltyGetTransactionEntriesResponse,
   type LoyaltyCreateTransactionParams,
+  type LoyaltyGetRuleChainsParams,
   type LoyaltyGetRuleGroupsParams,
   type LoyaltyGetTransactionEntriesParams,
 } from './loyalty/loyalty';
