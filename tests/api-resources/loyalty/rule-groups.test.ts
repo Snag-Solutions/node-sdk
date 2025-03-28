@@ -10,8 +10,8 @@ const client = new SnagSolutions({
 
 describe('resource ruleGroups', () => {
   // skipped: tests are disabled for the time being
-  test.skip('getRuleGroups', async () => {
-    const responsePromise = client.loyalty.ruleGroups.getRuleGroups();
+  test.skip('get', async () => {
+    const responsePromise = client.loyalty.ruleGroups.get();
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -22,18 +22,18 @@ describe('resource ruleGroups', () => {
   });
 
   // skipped: tests are disabled for the time being
-  test.skip('getRuleGroups: request options instead of params are passed correctly', async () => {
+  test.skip('get: request options instead of params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
-    await expect(
-      client.loyalty.ruleGroups.getRuleGroups({ path: '/_stainless_unknown_path' }),
-    ).rejects.toThrow(SnagSolutions.NotFoundError);
+    await expect(client.loyalty.ruleGroups.get({ path: '/_stainless_unknown_path' })).rejects.toThrow(
+      SnagSolutions.NotFoundError,
+    );
   });
 
   // skipped: tests are disabled for the time being
-  test.skip('getRuleGroups: request options and params are passed correctly', async () => {
+  test.skip('get: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
-      client.loyalty.ruleGroups.getRuleGroups(
+      client.loyalty.ruleGroups.get(
         {
           excludeHidden: 'excludeHidden',
           limit: 1,
