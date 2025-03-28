@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import SnagSolutions from '@snagsolutions/sdk';
+import SnagSolutions from 'snag-solutions';
 import { Response } from 'node-fetch';
 
 const client = new SnagSolutions({
@@ -41,7 +41,7 @@ describe('resource currencies', () => {
       apiGetTransactionEntryUrl: 'https://api.example.com/get-loyalty-tx',
       apiGetUrl: 'https://api.example.com/get-loyalty',
       apiPostUrl: 'https://api.example.com/post-loyalty',
-      imageUrl: 'https://snag-assets.s3.us-west-2.amazonaws.com/images/loyalty.png',
+      imageUrl: 'https://assets.snagsolutions.io/images/loyalty.png',
       sortId: 1,
     });
   });

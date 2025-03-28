@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import SnagSolutions from '@snagsolutions/sdk';
+import SnagSolutions from 'snag-solutions';
 import { Response } from 'node-fetch';
 
 const client = new SnagSolutions({
@@ -14,7 +14,7 @@ describe('resource websiteCollections', () => {
     const responsePromise = client.api.websiteCollections.create({
       collectionAddress: '0x2c02efDd09B3BA1AEaDd3dCAa7aC7A37C1CBDA8A',
       name: 'x',
-      network: 'mainnet',
+      network: 'apechain',
       organizationId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
       sortId: 0,
       websiteId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
@@ -33,7 +33,7 @@ describe('resource websiteCollections', () => {
     const response = await client.api.websiteCollections.create({
       collectionAddress: '0x2c02efDd09B3BA1AEaDd3dCAa7aC7A37C1CBDA8A',
       name: 'x',
-      network: 'mainnet',
+      network: 'apechain',
       organizationId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
       sortId: 0,
       websiteId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',

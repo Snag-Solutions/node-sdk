@@ -2,8 +2,10 @@
  * Disclaimer: modules in _shims aren't intended to be imported by SDK users.
  */
 const shims = require('./registry');
-const auto = require('@snagsolutions/sdk/_shims/auto/runtime');
-if (!shims.kind) shims.setShims(auto.getRuntime(), { auto: true });
+const auto = require('snag-solutions/_shims/auto/runtime');
+exports.init = () => {
+  if (!shims.kind) shims.setShims(auto.getRuntime(), { auto: true });
+};
 for (const property of Object.keys(shims)) {
   Object.defineProperty(exports, property, {
     get() {
@@ -11,3 +13,5 @@ for (const property of Object.keys(shims)) {
     },
   });
 }
+
+exports.init();

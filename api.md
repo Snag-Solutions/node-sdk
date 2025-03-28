@@ -2,27 +2,29 @@
 
 Types:
 
-- <code><a href="./src/resources/api/api.ts">APICreateAssetUploadURLResponse</a></code>
+- <code><a href="./src/resources/api/api.ts">APIConnectAuthResponse</a></code>
+- <code><a href="./src/resources/api/api.ts">APICreateAssetResponse</a></code>
 - <code><a href="./src/resources/api/api.ts">APIListAuctionsResponse</a></code>
-- <code><a href="./src/resources/api/api.ts">APIListUsersResponse</a></code>
 
 Methods:
 
-- <code title="post /api/assets">client.api.<a href="./src/resources/api/api.ts">createAssetUploadURL</a>({ ...params }) -> APICreateAssetUploadURLResponse</code>
+- <code title="get /api/{authType}/auth">client.api.<a href="./src/resources/api/api.ts">connectAuth</a>(authType, { ...params }) -> APIConnectAuthResponse</code>
+- <code title="post /api/assets">client.api.<a href="./src/resources/api/api.ts">createAsset</a>({ ...params }) -> APICreateAssetResponse</code>
 - <code title="get /api/auction_bids">client.api.<a href="./src/resources/api/api.ts">listAuctionBids</a>({ ...params }) -> void</code>
 - <code title="get /api/auctions">client.api.<a href="./src/resources/api/api.ts">listAuctions</a>() -> APIListAuctionsResponse</code>
-- <code title="get /api/users">client.api.<a href="./src/resources/api/api.ts">listUsers</a>({ ...params }) -> APIListUsersResponse</code>
 
 ## Users
 
 Types:
 
+- <code><a href="./src/resources/api/users/users.ts">UserListResponse</a></code>
 - <code><a href="./src/resources/api/users/users.ts">UserConnectResponse</a></code>
 - <code><a href="./src/resources/api/users/users.ts">UserCountResponse</a></code>
 - <code><a href="./src/resources/api/users/users.ts">UserDisconnectResponse</a></code>
 
 Methods:
 
+- <code title="get /api/users">client.api.users.<a href="./src/resources/api/users/users.ts">list</a>({ ...params }) -> UserListResponse</code>
 - <code title="post /api/users/connect">client.api.users.<a href="./src/resources/api/users/users.ts">connect</a>({ ...params }) -> UserConnectResponse</code>
 - <code title="get /api/users/count">client.api.users.<a href="./src/resources/api/users/users.ts">count</a>({ ...params }) -> UserCountResponse</code>
 - <code title="post /api/users/disconnect">client.api.users.<a href="./src/resources/api/users/users.ts">disconnect</a>({ ...params }) -> unknown</code>
@@ -45,25 +47,25 @@ Types:
 
 - <code><a href="./src/resources/api/loyalty/loyalty.ts">LoyaltyCreateTransactionResponse</a></code>
 - <code><a href="./src/resources/api/loyalty/loyalty.ts">LoyaltyGetRuleGroupsResponse</a></code>
-- <code><a href="./src/resources/api/loyalty/loyalty.ts">LoyaltyListTransactionEntriesResponse</a></code>
+- <code><a href="./src/resources/api/loyalty/loyalty.ts">LoyaltyGetTransactionEntriesResponse</a></code>
 
 Methods:
 
 - <code title="post /api/loyalty/transactions">client.api.loyalty.<a href="./src/resources/api/loyalty/loyalty.ts">createTransaction</a>({ ...params }) -> LoyaltyCreateTransactionResponse</code>
 - <code title="get /api/loyalty/rule_groups">client.api.loyalty.<a href="./src/resources/api/loyalty/loyalty.ts">getRuleGroups</a>({ ...params }) -> LoyaltyGetRuleGroupsResponse</code>
-- <code title="get /api/loyalty/transaction_entries">client.api.loyalty.<a href="./src/resources/api/loyalty/loyalty.ts">listTransactionEntries</a>({ ...params }) -> LoyaltyListTransactionEntriesResponse</code>
+- <code title="get /api/loyalty/transaction_entries">client.api.loyalty.<a href="./src/resources/api/loyalty/loyalty.ts">getTransactionEntries</a>({ ...params }) -> LoyaltyGetTransactionEntriesResponse</code>
 
 ### Accounts
 
 Types:
 
 - <code><a href="./src/resources/api/loyalty/accounts.ts">AccountListResponse</a></code>
-- <code><a href="./src/resources/api/loyalty/accounts.ts">AccountGetRankResponse</a></code>
+- <code><a href="./src/resources/api/loyalty/accounts.ts">AccountRetrieveRankResponse</a></code>
 
 Methods:
 
 - <code title="get /api/loyalty/accounts">client.api.loyalty.accounts.<a href="./src/resources/api/loyalty/accounts.ts">list</a>({ ...params }) -> AccountListResponse</code>
-- <code title="get /api/loyalty/accounts/{id}/rank">client.api.loyalty.accounts.<a href="./src/resources/api/loyalty/accounts.ts">getRank</a>(pathId, { ...params }) -> AccountGetRankResponse</code>
+- <code title="get /api/loyalty/accounts/{id}/rank">client.api.loyalty.accounts.<a href="./src/resources/api/loyalty/accounts.ts">retrieveRank</a>(pathId, { ...params }) -> AccountRetrieveRankResponse</code>
 
 ### Badges
 
@@ -172,6 +174,18 @@ Methods:
 
 - <code title="get /api/loyalty/questions_responses">client.api.loyalty.questionsResponses.<a href="./src/resources/api/loyalty/questions-responses.ts">list</a>({ ...params }) -> QuestionsResponseListResponse</code>
 - <code title="post /api/loyalty/questions_responses">client.api.loyalty.questionsResponses.<a href="./src/resources/api/loyalty/questions-responses.ts">submit</a>({ ...params }) -> QuestionsResponseSubmitResponse</code>
+
+## API
+
+### Loyalty
+
+Types:
+
+- <code><a href="./src/resources/api/api/loyalty.ts">LoyaltyGetRuleChainsResponse</a></code>
+
+Methods:
+
+- <code title="get /api/api/loyalty/rule_chains">client.api.api.loyalty.<a href="./src/resources/api/api/loyalty.ts">getRuleChains</a>({ ...params }) -> LoyaltyGetRuleChainsResponse</code>
 
 ## Minting
 

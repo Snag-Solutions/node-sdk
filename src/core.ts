@@ -16,7 +16,12 @@ import {
   type RequestInit,
   type Response,
   type HeadersInit,
+  init,
 } from './_shims/index';
+
+// try running side effects outside of _shims/index to workaround https://github.com/vercel/next.js/issues/76881
+init();
+
 export { type Response };
 import { BlobLike, isBlobLike, isMultipartBody } from './uploads';
 export {
@@ -99,9 +104,9 @@ export class APIPromise<T> extends Promise<T> {
    *
    * 👋 Getting the wrong TypeScript type for `Response`?
    * Try setting `"moduleResolution": "NodeNext"` if you can,
-   * or add one of these imports before your first `import … from '@snagsolutions/sdk'`:
-   * - `import '@snagsolutions/sdk/shims/node'` (if you're running on Node)
-   * - `import '@snagsolutions/sdk/shims/web'` (otherwise)
+   * or add one of these imports before your first `import … from 'snag-solutions'`:
+   * - `import 'snag-solutions/shims/node'` (if you're running on Node)
+   * - `import 'snag-solutions/shims/web'` (otherwise)
    */
   asResponse(): Promise<Response> {
     return this.responsePromise.then((p) => p.response);
@@ -115,9 +120,9 @@ export class APIPromise<T> extends Promise<T> {
    *
    * 👋 Getting the wrong TypeScript type for `Response`?
    * Try setting `"moduleResolution": "NodeNext"` if you can,
-   * or add one of these imports before your first `import … from '@snagsolutions/sdk'`:
-   * - `import '@snagsolutions/sdk/shims/node'` (if you're running on Node)
-   * - `import '@snagsolutions/sdk/shims/web'` (otherwise)
+   * or add one of these imports before your first `import … from 'snag-solutions'`:
+   * - `import 'snag-solutions/shims/node'` (if you're running on Node)
+   * - `import 'snag-solutions/shims/web'` (otherwise)
    */
   async withResponse(): Promise<{ data: T; response: Response }> {
     const [data, response] = await Promise.all([this.parse(), this.asResponse()]);
@@ -395,7 +400,7 @@ export abstract class APIClient {
       !headers ? {}
       : Symbol.iterator in headers ?
         Object.fromEntries(Array.from(headers as Iterable<string[]>).map((header) => [...header]))
-      : { ...headers }
+      : { ...(headers as any as Record<string, string>) }
     );
   }
 

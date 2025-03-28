@@ -1,30 +1,33 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
+export { API } from './api/index';
 export {
   API,
-  type APICreateAssetUploadURLResponse,
+  type APIConnectAuthResponse,
+  type APICreateAssetResponse,
   type APIListAuctionsResponse,
-  type APIListUsersResponse,
-  type APICreateAssetUploadURLParams,
+  type APIConnectAuthParams,
+  type APICreateAssetParams,
   type APIListAuctionBidsParams,
-  type APIListUsersParams,
 } from './api';
 export {
   Loyalty,
   type LoyaltyCreateTransactionResponse,
   type LoyaltyGetRuleGroupsResponse,
-  type LoyaltyListTransactionEntriesResponse,
+  type LoyaltyGetTransactionEntriesResponse,
   type LoyaltyCreateTransactionParams,
   type LoyaltyGetRuleGroupsParams,
-  type LoyaltyListTransactionEntriesParams,
+  type LoyaltyGetTransactionEntriesParams,
 } from './loyalty/index';
 export { Minting, type MintingGetAssetsResponse, type MintingGetAssetsParams } from './minting';
 export { Referral, type ReferralCreateCodeResponse, type ReferralCreateCodeParams } from './referral/index';
 export {
   Users,
+  type UserListResponse,
   type UserConnectResponse,
   type UserCountResponse,
   type UserDisconnectResponse,
+  type UserListParams,
   type UserConnectParams,
   type UserCountParams,
   type UserDisconnectParams,

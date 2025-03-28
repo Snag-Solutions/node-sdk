@@ -2,7 +2,7 @@
  * Disclaimer: modules in _shims aren't intended to be imported by SDK users.
  */
 import { manual } from './manual-types';
-import * as auto from '@snagsolutions/sdk/_shims/auto/types';
+import * as auto from 'snag-solutions/_shims/auto/types';
 import { type RequestOptions } from '../core';
 
 type SelectType<Manual, Auto> = unknown extends Manual ? Auto : Manual;
@@ -79,3 +79,5 @@ export function fileFromPath(path: string, options?: FileFromPathOptions): Promi
 export function fileFromPath(path: string, filename?: string, options?: FileFromPathOptions): Promise<File>;
 
 export function isFsReadStream(value: any): value is FsReadStream;
+
+export const init: () => void;

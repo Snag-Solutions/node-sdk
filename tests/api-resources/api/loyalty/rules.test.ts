@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import SnagSolutions from '@snagsolutions/sdk';
+import SnagSolutions from 'snag-solutions';
 import { Response } from 'node-fetch';
 
 const client = new SnagSolutions({
@@ -50,8 +50,9 @@ describe('resource rules', () => {
         checkRepost: true,
         checkText: 'loyalty',
         collection: [
-          { address: '0xabcdefabcdefabcdefabcdefabcdefabcdef', multiplier: 2, network: 'mainnet' },
+          { address: '0xabcdefabcdefabcdefabcdefabcdefabcdef', multiplier: 2, network: 'apechain' },
         ],
+        completeProfileConditions: { twitter: true, discord: false },
         cta: { href: 'https://example.com', label: 'Click Here' },
         customRewardsApiKey: 'api-key-1234',
         discordServersToJoin: [
@@ -65,8 +66,11 @@ describe('resource rules', () => {
         enableJoinDiscordServers: true,
         enableStreaks: true,
         enableVerifiedMultiplier: true,
+        fillSource: 'opensea.io',
         firstReferralReward: 10,
+        hasFillSource: true,
         hasNeverSold: false,
+        hasOrderSource: true,
         hasPaidFullRoyalty: false,
         hasSaleCurrency: false,
         hasVerifiedTwitter: true,
@@ -83,6 +87,7 @@ describe('resource rules', () => {
         onlyNonListed: true,
         onlyRewardExistingUser: true,
         onlyRewardSingleTokenOwnership: true,
+        orderSource: 'opensea.io',
         promoCode: 'PROMO123',
         range: [{ amount: 5, endRange: 10, startRange: 1 }],
         referralRequirements: {
@@ -137,7 +142,7 @@ describe('resource rules', () => {
       websiteId: '123e4567-e89b-12d3-a456-426614174002',
       backgroundAssetUrl: 'https://example.com/background.png',
       collectionAddress: '0x1234567890abcdef1234567890abcdef12345678',
-      collections: [{ address: '0xabcdefabcdefabcdefabcdefabcdefabcdef', network: 'mainnet' }],
+      collections: [{ address: '0xabcdefabcdefabcdefabcdefabcdefabcdef', network: 'apechain' }],
       customRewardsApiUrl: 'https://api.example.com/rewards',
       customRewardsCsvUrl: 'https://example.com/rewards.csv',
       description: 'A loyalty rule rewarding users for referrals.',
@@ -145,7 +150,8 @@ describe('resource rules', () => {
       interval: 'daily',
       isRequired: true,
       loyaltyRuleGroupId: '123e4567-e89b-12d3-a456-426614174004',
-      network: 'mainnet',
+      mediaUrl: 'https://example.com/media.png',
+      network: 'apechain',
       oauthCredentialsId: '123e4567-e89b-12d3-a456-426614174003',
       rewardType: 'points',
       subscriptionIdentifier: 'sub12345',
@@ -175,7 +181,7 @@ describe('resource rules', () => {
       endTime: '2024-12-31T23:59:00Z',
       name: 'Daily Rewards Program',
       collectionAddress: '0x1234567890abcdef1234567890abcdef12345678',
-      collections: [{ address: '0xabcdefabcdefabcdefabcdefabcdefabcdef', network: 'mainnet' }],
+      collections: [{ address: '0xabcdefabcdefabcdefabcdefabcdefabcdef', network: 'apechain' }],
       customRewardsApiUrl: 'https://api.example.com/rewards',
       customRewardsCsvUrl: 'https://example.com/rewards.csv',
       description: 'This rule rewards users daily for specific actions.',
@@ -186,6 +192,7 @@ describe('resource rules', () => {
       interval: 'daily',
       isRequired: true,
       loyaltyRuleGroupId: '123e4567-e89b-12d3-a456-426614174005',
+      mediaUrl: 'https://example.com/media.png',
       metadata: {
         buttonText: 'Verify Now',
         checkComment: true,
@@ -193,8 +200,9 @@ describe('resource rules', () => {
         checkRepost: true,
         checkText: 'loyalty',
         collection: [
-          { address: '0xabcdefabcdefabcdefabcdefabcdefabcdef', multiplier: 2, network: 'mainnet' },
+          { address: '0xabcdefabcdefabcdefabcdefabcdefabcdef', multiplier: 2, network: 'apechain' },
         ],
+        completeProfileConditions: { twitter: true, discord: false },
         cta: { href: 'https://example.com', label: 'Click Here' },
         customRewardsApiKey: 'api-key-1234',
         discordServersToJoin: [
@@ -208,8 +216,11 @@ describe('resource rules', () => {
         enableJoinDiscordServers: true,
         enableStreaks: true,
         enableVerifiedMultiplier: true,
+        fillSource: 'opensea.io',
         firstReferralReward: 10,
+        hasFillSource: true,
         hasNeverSold: false,
+        hasOrderSource: true,
         hasPaidFullRoyalty: false,
         hasSaleCurrency: false,
         hasVerifiedTwitter: true,
@@ -226,6 +237,7 @@ describe('resource rules', () => {
         onlyNonListed: true,
         onlyRewardExistingUser: true,
         onlyRewardSingleTokenOwnership: true,
+        orderSource: 'opensea.io',
         promoCode: 'PROMO123',
         range: [{ amount: 5, endRange: 10, startRange: 1 }],
         referralRequirements: {
@@ -273,7 +285,7 @@ describe('resource rules', () => {
         verifyPlaceHolderText: 'Enter your verification code here.',
         walletType: 'evm',
       },
-      network: 'mainnet',
+      network: 'apechain',
       oauthCredentialsId: '123e4567-e89b-12d3-a456-426614174000',
       rewardType: 'points',
       startTime: '2024-01-01T00:00:00Z',
@@ -310,6 +322,7 @@ describe('resource rules', () => {
           collectionAddress: '0x1234567890abcdef1234567890abcdef12345678',
           limit: 50,
           loyaltyRuleGroupId: '123e4567-e89b-12d3-a456-426614174004',
+          loyaltyRuleId: '123e4567-e89b-12d3-a456-426614174001',
           organizationId: '123e4567-e89b-12d3-a456-426614174001',
           startingAfter: '123e4567-e89b-12d3-a456-426614174010',
           websiteId: '123e4567-e89b-12d3-a456-426614174002',
@@ -370,6 +383,7 @@ describe('resource rules', () => {
       client.api.loyalty.rules.complete(
         '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
         {
+          amount: 10,
           commentLink: 'https://x.com/Snag_Solutions/status/1735407428093522314',
           loyaltyQuestionChoiceId: '123e4567-e89b-12d3-a456-426614174000',
           userId: '123e4567-e89b-12d3-a456-426614174000',
