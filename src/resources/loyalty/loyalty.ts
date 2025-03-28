@@ -64,7 +64,7 @@ import {
   QuestionsResponses,
 } from './questions-responses';
 import * as RuleChainsAPI from './rule-chains';
-import { RuleChains } from './rule-chains';
+import { RuleChainGetParams, RuleChainGetResponse, RuleChains } from './rule-chains';
 import * as RuleEditsAPI from './rule-edits';
 import {
   RuleEditListParams,
@@ -74,7 +74,7 @@ import {
   RuleEdits,
 } from './rule-edits';
 import * as RuleGroupsAPI from './rule-groups';
-import { RuleGroupGetRuleGroupsParams, RuleGroupGetRuleGroupsResponse, RuleGroups } from './rule-groups';
+import { RuleGroupGetParams, RuleGroupGetResponse, RuleGroups } from './rule-groups';
 import * as RulesAPI from './rules';
 import {
   RuleCompleteParams,
@@ -128,12 +128,16 @@ Loyalty.Questions = Questions;
 Loyalty.QuestionsResponses = QuestionsResponses;
 
 export declare namespace Loyalty {
-  export { RuleChains as RuleChains };
+  export {
+    RuleChains as RuleChains,
+    type RuleChainGetResponse as RuleChainGetResponse,
+    type RuleChainGetParams as RuleChainGetParams,
+  };
 
   export {
     RuleGroups as RuleGroups,
-    type RuleGroupGetRuleGroupsResponse as RuleGroupGetRuleGroupsResponse,
-    type RuleGroupGetRuleGroupsParams as RuleGroupGetRuleGroupsParams,
+    type RuleGroupGetResponse as RuleGroupGetResponse,
+    type RuleGroupGetParams as RuleGroupGetParams,
   };
 
   export {
