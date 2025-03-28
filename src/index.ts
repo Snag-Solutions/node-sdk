@@ -14,6 +14,8 @@ import {
   Loyalty,
   LoyaltyCreateTransactionParams,
   LoyaltyCreateTransactionResponse,
+  LoyaltyGetRuleChainsParams,
+  LoyaltyGetRuleChainsResponse,
   LoyaltyGetRuleGroupsParams,
   LoyaltyGetRuleGroupsResponse,
   LoyaltyGetTransactionEntriesParams,
@@ -249,9 +251,11 @@ export declare namespace SnagSolutions {
   export {
     Loyalty as Loyalty,
     type LoyaltyCreateTransactionResponse as LoyaltyCreateTransactionResponse,
+    type LoyaltyGetRuleChainsResponse as LoyaltyGetRuleChainsResponse,
     type LoyaltyGetRuleGroupsResponse as LoyaltyGetRuleGroupsResponse,
     type LoyaltyGetTransactionEntriesResponse as LoyaltyGetTransactionEntriesResponse,
     type LoyaltyCreateTransactionParams as LoyaltyCreateTransactionParams,
+    type LoyaltyGetRuleChainsParams as LoyaltyGetRuleChainsParams,
     type LoyaltyGetRuleGroupsParams as LoyaltyGetRuleGroupsParams,
     type LoyaltyGetTransactionEntriesParams as LoyaltyGetTransactionEntriesParams,
   };
