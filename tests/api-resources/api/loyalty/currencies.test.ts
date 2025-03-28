@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import SnagSolutions from '@snagsolutions/sdk';
+import SnagSolutions from 'snag-solutions';
 import { Response } from 'node-fetch';
 
 const client = new SnagSolutions({
