@@ -6,9 +6,7 @@ import * as Core from './core';
 import * as Errors from './error';
 import * as Uploads from './uploads';
 import * as API from './resources/index';
-import {
-  API as ApiapiAPI,
-} from './resources/api/api';
+import { API as ApiapiAPI } from './resources/api/api';
 
 export interface ClientOptions {
   /**
@@ -169,9 +167,7 @@ SnagSolutions.API = ApiapiAPI;
 export declare namespace SnagSolutions {
   export type RequestOptions = Core.RequestOptions;
 
-  export {
-    ApiapiAPI as API,
-  };
+  export { ApiapiAPI as API };
 }
 
 export { toFile, fileFromPath } from './uploads';
