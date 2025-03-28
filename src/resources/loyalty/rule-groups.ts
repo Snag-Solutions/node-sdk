@@ -8,29 +8,26 @@ export class RuleGroups extends APIResource {
   /**
    * Retrieve configured loyalty rule groups
    */
-  getRuleGroups(
-    query?: RuleGroupGetRuleGroupsParams,
+  get(query?: RuleGroupGetParams, options?: Core.RequestOptions): Core.APIPromise<RuleGroupGetResponse>;
+  get(options?: Core.RequestOptions): Core.APIPromise<RuleGroupGetResponse>;
+  get(
+    query: RuleGroupGetParams | Core.RequestOptions = {},
     options?: Core.RequestOptions,
-  ): Core.APIPromise<RuleGroupGetRuleGroupsResponse>;
-  getRuleGroups(options?: Core.RequestOptions): Core.APIPromise<RuleGroupGetRuleGroupsResponse>;
-  getRuleGroups(
-    query: RuleGroupGetRuleGroupsParams | Core.RequestOptions = {},
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<RuleGroupGetRuleGroupsResponse> {
+  ): Core.APIPromise<RuleGroupGetResponse> {
     if (isRequestOptions(query)) {
-      return this.getRuleGroups({}, query);
+      return this.get({}, query);
     }
     return this._client.get('/api/loyalty/rule_groups', { query, ...options });
   }
 }
 
-export interface RuleGroupGetRuleGroupsResponse {
-  data: Array<RuleGroupGetRuleGroupsResponse.Data>;
+export interface RuleGroupGetResponse {
+  data: Array<RuleGroupGetResponse.Data>;
 
   hasNextPage: boolean;
 }
 
-export namespace RuleGroupGetRuleGroupsResponse {
+export namespace RuleGroupGetResponse {
   /**
    * Schema for a get loyalty rule groups response
    */
@@ -798,7 +795,7 @@ export namespace RuleGroupGetRuleGroupsResponse {
   }
 }
 
-export interface RuleGroupGetRuleGroupsParams {
+export interface RuleGroupGetParams {
   excludeHidden?: string;
 
   limit?: number;
@@ -811,8 +808,5 @@ export interface RuleGroupGetRuleGroupsParams {
 }
 
 export declare namespace RuleGroups {
-  export {
-    type RuleGroupGetRuleGroupsResponse as RuleGroupGetRuleGroupsResponse,
-    type RuleGroupGetRuleGroupsParams as RuleGroupGetRuleGroupsParams,
-  };
+  export { type RuleGroupGetResponse as RuleGroupGetResponse, type RuleGroupGetParams as RuleGroupGetParams };
 }
