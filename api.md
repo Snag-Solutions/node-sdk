@@ -59,17 +59,27 @@ Methods:
 
 # Loyalty
 
+## RuleGroups
+
 Types:
 
-- <code><a href="./src/resources/loyalty/loyalty.ts">LoyaltyCreateTransactionResponse</a></code>
-- <code><a href="./src/resources/loyalty/loyalty.ts">LoyaltyGetRuleGroupsResponse</a></code>
-- <code><a href="./src/resources/loyalty/loyalty.ts">LoyaltyGetTransactionEntriesResponse</a></code>
+- <code><a href="./src/resources/loyalty/rule-groups.ts">RuleGroupGetRuleGroupsResponse</a></code>
 
 Methods:
 
-- <code title="post /api/loyalty/transactions">client.loyalty.<a href="./src/resources/loyalty/loyalty.ts">createTransaction</a>({ ...params }) -> LoyaltyCreateTransactionResponse</code>
-- <code title="get /api/loyalty/rule_groups">client.loyalty.<a href="./src/resources/loyalty/loyalty.ts">getRuleGroups</a>({ ...params }) -> LoyaltyGetRuleGroupsResponse</code>
-- <code title="get /api/loyalty/transaction_entries">client.loyalty.<a href="./src/resources/loyalty/loyalty.ts">getTransactionEntries</a>({ ...params }) -> LoyaltyGetTransactionEntriesResponse</code>
+- <code title="get /api/loyalty/rule_groups">client.loyalty.ruleGroups.<a href="./src/resources/loyalty/rule-groups.ts">getRuleGroups</a>({ ...params }) -> RuleGroupGetRuleGroupsResponse</code>
+
+## Transactions
+
+Types:
+
+- <code><a href="./src/resources/loyalty/transactions.ts">TransactionCreateTransactionResponse</a></code>
+- <code><a href="./src/resources/loyalty/transactions.ts">TransactionGetTransactionEntriesResponse</a></code>
+
+Methods:
+
+- <code title="post /api/loyalty/transactions">client.loyalty.transactions.<a href="./src/resources/loyalty/transactions.ts">createTransaction</a>({ ...params }) -> TransactionCreateTransactionResponse</code>
+- <code title="get /api/loyalty/transaction_entries">client.loyalty.transactions.<a href="./src/resources/loyalty/transactions.ts">getTransactionEntries</a>({ ...params }) -> TransactionGetTransactionEntriesResponse</code>
 
 ## Accounts
 

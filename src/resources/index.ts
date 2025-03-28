@@ -3,15 +3,7 @@
 export { Assets, type AssetCreateAssetResponse, type AssetCreateAssetParams } from './assets';
 export { Auctions, type AuctionListAuctionsResponse, type AuctionListAuctionBidsParams } from './auctions';
 export { Auth, type AuthConnectAuthResponse, type AuthConnectAuthParams } from './auth';
-export {
-  Loyalty,
-  type LoyaltyCreateTransactionResponse,
-  type LoyaltyGetRuleGroupsResponse,
-  type LoyaltyGetTransactionEntriesResponse,
-  type LoyaltyCreateTransactionParams,
-  type LoyaltyGetRuleGroupsParams,
-  type LoyaltyGetTransactionEntriesParams,
-} from './loyalty/loyalty';
+export { Loyalty } from './loyalty/loyalty';
 export { Minting, type MintingGetAssetsResponse, type MintingGetAssetsParams } from './minting';
 export {
   Referral,
