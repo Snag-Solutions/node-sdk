@@ -62,14 +62,12 @@ Methods:
 Types:
 
 - <code><a href="./src/resources/loyalty/loyalty.ts">LoyaltyCreateTransactionResponse</a></code>
-- <code><a href="./src/resources/loyalty/loyalty.ts">LoyaltyGetRuleChainsResponse</a></code>
 - <code><a href="./src/resources/loyalty/loyalty.ts">LoyaltyGetRuleGroupsResponse</a></code>
 - <code><a href="./src/resources/loyalty/loyalty.ts">LoyaltyGetTransactionEntriesResponse</a></code>
 
 Methods:
 
 - <code title="post /api/loyalty/transactions">client.loyalty.<a href="./src/resources/loyalty/loyalty.ts">createTransaction</a>({ ...params }) -> LoyaltyCreateTransactionResponse</code>
-- <code title="get /api/loyalty/rule_chains">client.loyalty.<a href="./src/resources/loyalty/loyalty.ts">getRuleChains</a>({ ...params }) -> LoyaltyGetRuleChainsResponse</code>
 - <code title="get /api/loyalty/rule_groups">client.loyalty.<a href="./src/resources/loyalty/loyalty.ts">getRuleGroups</a>({ ...params }) -> LoyaltyGetRuleGroupsResponse</code>
 - <code title="get /api/loyalty/transaction_entries">client.loyalty.<a href="./src/resources/loyalty/loyalty.ts">getTransactionEntries</a>({ ...params }) -> LoyaltyGetTransactionEntriesResponse</code>
 
