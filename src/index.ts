@@ -6,15 +6,7 @@ import * as Core from './core';
 import * as Errors from './error';
 import * as Uploads from './uploads';
 import * as API from './resources/index';
-import {
-  API as ApiapiAPI,
-  APIConnectAuthParams,
-  APIConnectAuthResponse,
-  APICreateAssetParams,
-  APICreateAssetResponse,
-  APIListAuctionBidsParams,
-  APIListAuctionsResponse,
-} from './resources/api/api';
+import { API as ApiapiAPI } from './resources/api/api';
 
 export interface ClientOptions {
   /**
@@ -175,15 +167,7 @@ SnagSolutions.API = ApiapiAPI;
 export declare namespace SnagSolutions {
   export type RequestOptions = Core.RequestOptions;
 
-  export {
-    ApiapiAPI as API,
-    type APIConnectAuthResponse as APIConnectAuthResponse,
-    type APICreateAssetResponse as APICreateAssetResponse,
-    type APIListAuctionsResponse as APIListAuctionsResponse,
-    type APIConnectAuthParams as APIConnectAuthParams,
-    type APICreateAssetParams as APICreateAssetParams,
-    type APIListAuctionBidsParams as APIListAuctionBidsParams,
-  };
+  export { ApiapiAPI as API };
 }
 
 export { toFile, fileFromPath } from './uploads';
