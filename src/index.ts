@@ -8,12 +8,6 @@ import * as Uploads from './uploads';
 import * as API from './resources/index';
 import {
   API as ApiapiAPI,
-  APIConnectAuthParams,
-  APIConnectAuthResponse,
-  APICreateAssetParams,
-  APICreateAssetResponse,
-  APIListAuctionBidsParams,
-  APIListAuctionsResponse,
 } from './resources/api/api';
 
 export interface ClientOptions {
@@ -177,12 +171,6 @@ export declare namespace SnagSolutions {
 
   export {
     ApiapiAPI as API,
-    type APIConnectAuthResponse as APIConnectAuthResponse,
-    type APICreateAssetResponse as APICreateAssetResponse,
-    type APIListAuctionsResponse as APIListAuctionsResponse,
-    type APIConnectAuthParams as APIConnectAuthParams,
-    type APICreateAssetParams as APICreateAssetParams,
-    type APIListAuctionBidsParams as APIListAuctionBidsParams,
   };
 }
 
