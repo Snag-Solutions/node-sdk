@@ -10,7 +10,15 @@ import { AssetCreateAssetParams, AssetCreateAssetResponse, Assets } from './reso
 import { AuctionListAuctionBidsParams, AuctionListAuctionsResponse, Auctions } from './resources/auctions';
 import { Auth, AuthConnectAuthParams, AuthConnectAuthResponse } from './resources/auth';
 import { Minting, MintingGetAssetsParams, MintingGetAssetsResponse } from './resources/minting';
-import { Loyalty } from './resources/loyalty/loyalty';
+import {
+  Loyalty,
+  LoyaltyCreateTransactionParams,
+  LoyaltyCreateTransactionResponse,
+  LoyaltyGetRuleGroupsParams,
+  LoyaltyGetRuleGroupsResponse,
+  LoyaltyGetTransactionEntriesParams,
+  LoyaltyGetTransactionEntriesResponse,
+} from './resources/loyalty/loyalty';
 import {
   Referral,
   ReferralCreateCodeParams,
@@ -238,7 +246,15 @@ export declare namespace SnagSolutions {
     type UserDisconnectParams as UserDisconnectParams,
   };
 
-  export { Loyalty as Loyalty };
+  export {
+    Loyalty as Loyalty,
+    type LoyaltyCreateTransactionResponse as LoyaltyCreateTransactionResponse,
+    type LoyaltyGetRuleGroupsResponse as LoyaltyGetRuleGroupsResponse,
+    type LoyaltyGetTransactionEntriesResponse as LoyaltyGetTransactionEntriesResponse,
+    type LoyaltyCreateTransactionParams as LoyaltyCreateTransactionParams,
+    type LoyaltyGetRuleGroupsParams as LoyaltyGetRuleGroupsParams,
+    type LoyaltyGetTransactionEntriesParams as LoyaltyGetTransactionEntriesParams,
+  };
 
   export {
     Minting as Minting,

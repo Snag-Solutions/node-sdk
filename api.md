@@ -59,6 +59,18 @@ Methods:
 
 # Loyalty
 
+Types:
+
+- <code><a href="./src/resources/loyalty/loyalty.ts">LoyaltyCreateTransactionResponse</a></code>
+- <code><a href="./src/resources/loyalty/loyalty.ts">LoyaltyGetRuleGroupsResponse</a></code>
+- <code><a href="./src/resources/loyalty/loyalty.ts">LoyaltyGetTransactionEntriesResponse</a></code>
+
+Methods:
+
+- <code title="post /api/loyalty/transactions">client.loyalty.<a href="./src/resources/loyalty/loyalty.ts">createTransaction</a>({ ...params }) -> LoyaltyCreateTransactionResponse</code>
+- <code title="get /api/loyalty/rule_groups">client.loyalty.<a href="./src/resources/loyalty/loyalty.ts">getRuleGroups</a>({ ...params }) -> LoyaltyGetRuleGroupsResponse</code>
+- <code title="get /api/loyalty/transaction_entries">client.loyalty.<a href="./src/resources/loyalty/loyalty.ts">getTransactionEntries</a>({ ...params }) -> LoyaltyGetTransactionEntriesResponse</code>
+
 ## Accounts
 
 Types:
@@ -70,18 +82,6 @@ Methods:
 
 - <code title="get /api/loyalty/accounts">client.loyalty.accounts.<a href="./src/resources/loyalty/accounts.ts">list</a>({ ...params }) -> AccountListResponse</code>
 - <code title="get /api/loyalty/accounts/{id}/rank">client.loyalty.accounts.<a href="./src/resources/loyalty/accounts.ts">retrieveRank</a>(id, { ...params }) -> AccountRetrieveRankResponse</code>
-
-## Transactions
-
-Types:
-
-- <code><a href="./src/resources/loyalty/transactions.ts">TransactionCreateTransactionResponse</a></code>
-- <code><a href="./src/resources/loyalty/transactions.ts">TransactionGetTransactionEntriesResponse</a></code>
-
-Methods:
-
-- <code title="post /api/loyalty/transactions">client.loyalty.transactions.<a href="./src/resources/loyalty/transactions.ts">createTransaction</a>({ ...params }) -> TransactionCreateTransactionResponse</code>
-- <code title="get /api/loyalty/transaction_entries">client.loyalty.transactions.<a href="./src/resources/loyalty/transactions.ts">getTransactionEntries</a>({ ...params }) -> TransactionGetTransactionEntriesResponse</code>
 
 ## Badges
 
@@ -132,16 +132,6 @@ Methods:
 - <code title="get /api/loyalty/multipliers">client.loyalty.multipliers.<a href="./src/resources/loyalty/multipliers.ts">list</a>({ ...params }) -> MultiplierListResponse</code>
 - <code title="delete /api/loyalty/multipliers/{multiplierId}">client.loyalty.multipliers.<a href="./src/resources/loyalty/multipliers.ts">delete</a>(multiplierId) -> MultiplierDeleteResponse</code>
 - <code title="delete /api/loyalty/multipliers">client.loyalty.multipliers.<a href="./src/resources/loyalty/multipliers.ts">deleteByExternalId</a>({ ...params }) -> MultiplierDeleteByExternalIDResponse</code>
-
-## RuleGroups
-
-Types:
-
-- <code><a href="./src/resources/loyalty/rule-groups.ts">RuleGroupGetRuleGroupsResponse</a></code>
-
-Methods:
-
-- <code title="get /api/loyalty/rule_groups">client.loyalty.ruleGroups.<a href="./src/resources/loyalty/rule-groups.ts">getRuleGroups</a>({ ...params }) -> RuleGroupGetRuleGroupsResponse</code>
 
 ## RuleEdits
 
