@@ -1,5 +1,30 @@
 # Changelog
 
+## 0.1.0-alpha.15 (2025-03-28)
+
+Full Changelog: [v0.1.0-alpha.14...v0.1.0-alpha.15](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.14...v0.1.0-alpha.15)
+
+### Features
+
+* **api:** api update ([9db71a8](https://github.com/Snag-Solutions/node-sdk/commit/9db71a8a336cad149a6dee626aab19542bb4c269))
+* **api:** manual updates ([2fc7269](https://github.com/Snag-Solutions/node-sdk/commit/2fc7269c5b2e9b0bd92daef6674bcc69df5146da))
+* **api:** manual updates ([0762ae6](https://github.com/Snag-Solutions/node-sdk/commit/0762ae6de81aec708b7f52f4ffabaa0402f8bb9e))
+* **api:** manual updates ([#184](https://github.com/Snag-Solutions/node-sdk/issues/184)) ([17322ff](https://github.com/Snag-Solutions/node-sdk/commit/17322ff407b4be58a3480caa09ebf4003ceb4c82))
+* **api:** manual updates ([#186](https://github.com/Snag-Solutions/node-sdk/issues/186)) ([15df7ea](https://github.com/Snag-Solutions/node-sdk/commit/15df7ea7963f1b3055a0b2cabd9ca05f6bbcd3a0))
+* **api:** manual updates ([#187](https://github.com/Snag-Solutions/node-sdk/issues/187)) ([885252c](https://github.com/Snag-Solutions/node-sdk/commit/885252c933cbbc3c6252b7732c79ffc9988ecc40))
+* **api:** manual updates ([#188](https://github.com/Snag-Solutions/node-sdk/issues/188)) ([f1876d2](https://github.com/Snag-Solutions/node-sdk/commit/f1876d20a25c454f66a6b2995dcadd50b69e18f3))
+* **api:** manual updates ([#189](https://github.com/Snag-Solutions/node-sdk/issues/189)) ([136e91b](https://github.com/Snag-Solutions/node-sdk/commit/136e91be906bcc4db9ffe56d8a9829e12c0bdfdd))
+* **api:** manual updates ([#191](https://github.com/Snag-Solutions/node-sdk/issues/191)) ([1e38dd4](https://github.com/Snag-Solutions/node-sdk/commit/1e38dd4bf56fed4acc2b7af1f962ee2e5e90281d))
+* **api:** open api update ([3cedd3a](https://github.com/Snag-Solutions/node-sdk/commit/3cedd3aad63131914204154fd95d73e988dce3ea))
+* **api:** open api update ([#190](https://github.com/Snag-Solutions/node-sdk/issues/190)) ([dfa1302](https://github.com/Snag-Solutions/node-sdk/commit/dfa13021f8f81105d5fdcb477b83f48b2c9cc0d0))
+
+
+### Chores
+
+* go live ([#182](https://github.com/Snag-Solutions/node-sdk/issues/182)) ([12b2834](https://github.com/Snag-Solutions/node-sdk/commit/12b2834a5b6d8083b826b34f62b397c99efc4edd))
+* sync repo ([4dbe8ed](https://github.com/Snag-Solutions/node-sdk/commit/4dbe8edf05d35b926b97ac54543544e23d0bf0c4))
+* update SDK settings ([#183](https://github.com/Snag-Solutions/node-sdk/issues/183)) ([7241769](https://github.com/Snag-Solutions/node-sdk/commit/7241769a40ae875b5ea525935ec8bbcd58677a0b))
+
 ## 0.1.0-alpha.14 (2025-03-04)
 
 Full Changelog: [v0.1.0-alpha.13...v0.1.0-alpha.14](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.13...v0.1.0-alpha.14)
