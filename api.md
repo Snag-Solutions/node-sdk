@@ -59,6 +59,8 @@ Methods:
 
 # Loyalty
 
+## RuleChains
+
 ## RuleGroups
 
 Types:
