@@ -112,6 +112,16 @@ export class Loyalty extends APIResource {
   }
 
   /**
+   * Retrieve configured loyalty rule chains
+   */
+  getRuleChains(
+    query: LoyaltyGetRuleChainsParams,
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<LoyaltyGetRuleChainsResponse> {
+    return this._client.get('/api/loyalty/rule_chains', { query, ...options });
+  }
+
+  /**
    * Retrieve configured loyalty rule groups
    */
   getRuleGroups(
@@ -174,6 +184,12 @@ export namespace LoyaltyCreateTransactionResponse {
 
     idempotencyKey?: string;
   }
+}
+
+export interface LoyaltyGetRuleChainsResponse {
+  data: Array<unknown>;
+
+  hasNextPage: boolean;
 }
 
 export interface LoyaltyGetRuleGroupsResponse {
@@ -1114,6 +1130,28 @@ export namespace LoyaltyCreateTransactionParams {
   }
 }
 
+export interface LoyaltyGetRuleChainsParams {
+  /**
+   * Unique identifier for the organization
+   */
+  organizationId: string;
+
+  /**
+   * Unique identifier for the website
+   */
+  websiteId: string;
+
+  /**
+   * Number of rule chains to return
+   */
+  limit?: number | null;
+
+  /**
+   * Starting after the given rule chain ID
+   */
+  startingAfter?: string;
+}
+
 export interface LoyaltyGetRuleGroupsParams {
   excludeHidden?: string;
 
@@ -1232,9 +1270,11 @@ Loyalty.QuestionsResponses = QuestionsResponses;
 export declare namespace Loyalty {
   export {
     type LoyaltyCreateTransactionResponse as LoyaltyCreateTransactionResponse,
+    type LoyaltyGetRuleChainsResponse as LoyaltyGetRuleChainsResponse,
     type LoyaltyGetRuleGroupsResponse as LoyaltyGetRuleGroupsResponse,
     type LoyaltyGetTransactionEntriesResponse as LoyaltyGetTransactionEntriesResponse,
     type LoyaltyCreateTransactionParams as LoyaltyCreateTransactionParams,
+    type LoyaltyGetRuleChainsParams as LoyaltyGetRuleChainsParams,
     type LoyaltyGetRuleGroupsParams as LoyaltyGetRuleGroupsParams,
     type LoyaltyGetTransactionEntriesParams as LoyaltyGetTransactionEntriesParams,
   };
