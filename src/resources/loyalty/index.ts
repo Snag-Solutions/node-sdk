@@ -28,15 +28,7 @@ export {
   type CurrencyCreateParams,
   type CurrencyListParams,
 } from './currencies';
-export {
-  Loyalty,
-  type LoyaltyCreateTransactionResponse,
-  type LoyaltyGetRuleGroupsResponse,
-  type LoyaltyGetTransactionEntriesResponse,
-  type LoyaltyCreateTransactionParams,
-  type LoyaltyGetRuleGroupsParams,
-  type LoyaltyGetTransactionEntriesParams,
-} from './loyalty';
+export { Loyalty } from './loyalty';
 export {
   Multipliers,
   type MultiplierCreateResponse,
@@ -73,6 +65,11 @@ export {
   type RuleEditRestoreParams,
 } from './rule-edits';
 export {
+  RuleGroups,
+  type RuleGroupGetRuleGroupsResponse,
+  type RuleGroupGetRuleGroupsParams,
+} from './rule-groups';
+export {
   Rules,
   type RuleCreateResponse,
   type RuleUpdateResponse,
@@ -86,3 +83,10 @@ export {
   type RuleCompleteParams,
   type RuleGetStatusParams,
 } from './rules';
+export {
+  Transactions,
+  type TransactionCreateTransactionResponse,
+  type TransactionGetTransactionEntriesResponse,
+  type TransactionCreateTransactionParams,
+  type TransactionGetTransactionEntriesParams,
+} from './transactions';
