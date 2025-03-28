@@ -26,11 +26,11 @@ export class Accounts extends APIResource {
    * recommend caching when possible.
    */
   retrieveRank(
-    pathId: string,
+    id: string,
     query: AccountRetrieveRankParams,
     options?: Core.RequestOptions,
   ): Core.APIPromise<AccountRetrieveRankResponse> {
-    return this._client.get(`/api/loyalty/accounts/${pathId}/rank`, { query, ...options });
+    return this._client.get(`/api/loyalty/accounts/${id}/rank`, { query, ...options });
   }
 }
 
@@ -228,11 +228,6 @@ export interface AccountListParams {
 }
 
 export interface AccountRetrieveRankParams {
-  /**
-   * UUID of the account
-   */
-  query_id: string;
-
   /**
    * UUID of the loyalty currency
    */

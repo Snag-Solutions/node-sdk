@@ -65,7 +65,7 @@ Types:
 Methods:
 
 - <code title="get /api/loyalty/accounts">client.api.loyalty.accounts.<a href="./src/resources/api/loyalty/accounts.ts">list</a>({ ...params }) -> AccountListResponse</code>
-- <code title="get /api/loyalty/accounts/{id}/rank">client.api.loyalty.accounts.<a href="./src/resources/api/loyalty/accounts.ts">retrieveRank</a>(pathId, { ...params }) -> AccountRetrieveRankResponse</code>
+- <code title="get /api/loyalty/accounts/{id}/rank">client.api.loyalty.accounts.<a href="./src/resources/api/loyalty/accounts.ts">retrieveRank</a>(id, { ...params }) -> AccountRetrieveRankResponse</code>
 
 ### Badges
 
