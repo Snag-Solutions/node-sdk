@@ -1,12 +1,12 @@
 {
-  "name": "@snagsolutions/sdk",
+  "name": "snag-solutions",
   "version": "0.1.0-alpha.14",
   "description": "The official TypeScript library for the Snag Solutions API",
   "author": "Snag Solutions <dev-feedback@snag-solutions.com>",
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
   "type": "commonjs",
-  "repository": "github:Snag-Solutions/node-sdk",
+  "repository": "github:stainless-sdks/snag-solutions-node",
   "license": "Apache-2.0",
   "packageManager": "yarn@1.22.22",
   "files": [
@@ -59,8 +59,8 @@
     "./shims/web.mjs"
   ],
   "imports": {
-    "@snagsolutions/sdk": ".",
-    "@snagsolutions/sdk/*": "./src/*"
+    "snag-solutions": ".",
+    "snag-solutions/*": "./src/*"
   },
   "exports": {
     "./_shims/auto/*": {
