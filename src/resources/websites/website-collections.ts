@@ -56,6 +56,8 @@ export interface WebsiteCollectionCreateParams {
   name: string;
 
   network:
+    | 'abstract'
+    | 'abstractTestnet'
     | 'apechain'
     | 'arbitrum'
     | 'avalanche'
@@ -88,8 +90,7 @@ export interface WebsiteCollectionCreateParams {
     | 'goerli'
     | 'optimism_goerli'
     | 'arbitrumGoerli'
-    | 'basecamp'
-    | 'abstract';
+    | 'basecamp';
 
   organizationId: string;
 
