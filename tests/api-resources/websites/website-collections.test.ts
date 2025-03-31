@@ -14,7 +14,7 @@ describe('resource websiteCollections', () => {
     const responsePromise = client.websites.websiteCollections.create({
       collectionAddress: '0x2c02efDd09B3BA1AEaDd3dCAa7aC7A37C1CBDA8A',
       name: 'x',
-      network: 'apechain',
+      network: 'abstract',
       organizationId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
       sortId: 0,
       websiteId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
@@ -33,7 +33,7 @@ describe('resource websiteCollections', () => {
     const response = await client.websites.websiteCollections.create({
       collectionAddress: '0x2c02efDd09B3BA1AEaDd3dCAa7aC7A37C1CBDA8A',
       name: 'x',
-      network: 'apechain',
+      network: 'abstract',
       organizationId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
       sortId: 0,
       websiteId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
