@@ -255,6 +255,8 @@ export interface RuleCreateResponse {
    * Blockchain network where the rule will apply
    */
   network?:
+    | 'abstract'
+    | 'abstractTestnet'
     | 'apechain'
     | 'arbitrum'
     | 'avalanche'
@@ -287,8 +289,7 @@ export interface RuleCreateResponse {
     | 'goerli'
     | 'optimism_goerli'
     | 'arbitrumGoerli'
-    | 'basecamp'
-    | 'abstract';
+    | 'basecamp';
 
   /**
    * OAuth credentials associated with the rule
@@ -649,6 +650,8 @@ export namespace RuleCreateResponse {
        * Blockchain network of the collection.
        */
       network?:
+        | 'abstract'
+        | 'abstractTestnet'
         | 'apechain'
         | 'arbitrum'
         | 'avalanche'
@@ -681,8 +684,7 @@ export namespace RuleCreateResponse {
         | 'goerli'
         | 'optimism_goerli'
         | 'arbitrumGoerli'
-        | 'basecamp'
-        | 'abstract';
+        | 'basecamp';
     }
 
     /**
@@ -968,6 +970,8 @@ export namespace RuleCreateResponse {
      * Blockchain network for the collection
      */
     network:
+      | 'abstract'
+      | 'abstractTestnet'
       | 'apechain'
       | 'arbitrum'
       | 'avalanche'
@@ -1000,8 +1004,7 @@ export namespace RuleCreateResponse {
       | 'goerli'
       | 'optimism_goerli'
       | 'arbitrumGoerli'
-      | 'basecamp'
-      | 'abstract';
+      | 'basecamp';
   }
 }
 
@@ -1097,6 +1100,8 @@ export interface RuleUpdateResponse {
    * Blockchain network where the rule will apply
    */
   network?:
+    | 'abstract'
+    | 'abstractTestnet'
     | 'apechain'
     | 'arbitrum'
     | 'avalanche'
@@ -1129,8 +1134,7 @@ export interface RuleUpdateResponse {
     | 'goerli'
     | 'optimism_goerli'
     | 'arbitrumGoerli'
-    | 'basecamp'
-    | 'abstract';
+    | 'basecamp';
 
   /**
    * ID for associated OAuth credentials
@@ -1164,6 +1168,8 @@ export namespace RuleUpdateResponse {
      * Blockchain network for the collection
      */
     network:
+      | 'abstract'
+      | 'abstractTestnet'
       | 'apechain'
       | 'arbitrum'
       | 'avalanche'
@@ -1196,8 +1202,7 @@ export namespace RuleUpdateResponse {
       | 'goerli'
       | 'optimism_goerli'
       | 'arbitrumGoerli'
-      | 'basecamp'
-      | 'abstract';
+      | 'basecamp';
   }
 
   /**
@@ -1542,6 +1547,8 @@ export namespace RuleUpdateResponse {
        * Blockchain network of the collection.
        */
       network?:
+        | 'abstract'
+        | 'abstractTestnet'
         | 'apechain'
         | 'arbitrum'
         | 'avalanche'
@@ -1574,8 +1581,7 @@ export namespace RuleUpdateResponse {
         | 'goerli'
         | 'optimism_goerli'
         | 'arbitrumGoerli'
-        | 'basecamp'
-        | 'abstract';
+        | 'basecamp';
     }
 
     /**
@@ -2119,6 +2125,8 @@ export interface RuleCreateParams {
    * Blockchain network where the rule will apply
    */
   network?:
+    | 'abstract'
+    | 'abstractTestnet'
     | 'apechain'
     | 'arbitrum'
     | 'avalanche'
@@ -2151,8 +2159,7 @@ export interface RuleCreateParams {
     | 'goerli'
     | 'optimism_goerli'
     | 'arbitrumGoerli'
-    | 'basecamp'
-    | 'abstract';
+    | 'basecamp';
 
   /**
    * OAuth credentials associated with the rule
@@ -2513,6 +2520,8 @@ export namespace RuleCreateParams {
        * Blockchain network of the collection.
        */
       network?:
+        | 'abstract'
+        | 'abstractTestnet'
         | 'apechain'
         | 'arbitrum'
         | 'avalanche'
@@ -2545,8 +2554,7 @@ export namespace RuleCreateParams {
         | 'goerli'
         | 'optimism_goerli'
         | 'arbitrumGoerli'
-        | 'basecamp'
-        | 'abstract';
+        | 'basecamp';
     }
 
     /**
@@ -2832,6 +2840,8 @@ export namespace RuleCreateParams {
      * Blockchain network for the collection
      */
     network:
+      | 'abstract'
+      | 'abstractTestnet'
       | 'apechain'
       | 'arbitrum'
       | 'avalanche'
@@ -2864,8 +2874,7 @@ export namespace RuleCreateParams {
       | 'goerli'
       | 'optimism_goerli'
       | 'arbitrumGoerli'
-      | 'basecamp'
-      | 'abstract';
+      | 'basecamp';
   }
 }
 
@@ -2959,6 +2968,8 @@ export interface RuleUpdateParams {
    * Blockchain network where the rule will apply
    */
   network?:
+    | 'abstract'
+    | 'abstractTestnet'
     | 'apechain'
     | 'arbitrum'
     | 'avalanche'
@@ -2991,8 +3002,7 @@ export interface RuleUpdateParams {
     | 'goerli'
     | 'optimism_goerli'
     | 'arbitrumGoerli'
-    | 'basecamp'
-    | 'abstract';
+    | 'basecamp';
 
   /**
    * ID for associated OAuth credentials
@@ -3026,6 +3036,8 @@ export namespace RuleUpdateParams {
      * Blockchain network for the collection
      */
     network:
+      | 'abstract'
+      | 'abstractTestnet'
       | 'apechain'
       | 'arbitrum'
       | 'avalanche'
@@ -3058,8 +3070,7 @@ export namespace RuleUpdateParams {
       | 'goerli'
       | 'optimism_goerli'
       | 'arbitrumGoerli'
-      | 'basecamp'
-      | 'abstract';
+      | 'basecamp';
   }
 
   /**
@@ -3404,6 +3415,8 @@ export namespace RuleUpdateParams {
        * Blockchain network of the collection.
        */
       network?:
+        | 'abstract'
+        | 'abstractTestnet'
         | 'apechain'
         | 'arbitrum'
         | 'avalanche'
@@ -3436,8 +3449,7 @@ export namespace RuleUpdateParams {
         | 'goerli'
         | 'optimism_goerli'
         | 'arbitrumGoerli'
-        | 'basecamp'
-        | 'abstract';
+        | 'basecamp';
     }
 
     /**
