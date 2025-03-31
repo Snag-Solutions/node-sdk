@@ -482,6 +482,8 @@ export namespace RuleGroupGetResponse {
              * Blockchain network of the collection.
              */
             network?:
+              | 'abstract'
+              | 'abstractTestnet'
               | 'apechain'
               | 'arbitrum'
               | 'avalanche'
@@ -514,8 +516,7 @@ export namespace RuleGroupGetResponse {
               | 'goerli'
               | 'optimism_goerli'
               | 'arbitrumGoerli'
-              | 'basecamp'
-              | 'abstract';
+              | 'basecamp';
           }
 
           /**
