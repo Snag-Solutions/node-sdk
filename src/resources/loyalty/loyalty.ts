@@ -74,7 +74,16 @@ import {
   RuleEdits,
 } from './rule-edits';
 import * as RuleGroupsAPI from './rule-groups';
-import { RuleGroupGetParams, RuleGroupGetResponse, RuleGroups } from './rule-groups';
+import {
+  RuleGroupCreateRuleGroupParams,
+  RuleGroupCreateRuleGroupResponse,
+  RuleGroupDeleteRuleGroupResponse,
+  RuleGroupGetRuleGroupsParams,
+  RuleGroupGetRuleGroupsResponse,
+  RuleGroupUpdateRuleGroupParams,
+  RuleGroupUpdateRuleGroupResponse,
+  RuleGroups,
+} from './rule-groups';
 import * as RulesAPI from './rules';
 import {
   RuleCompleteParams,
@@ -136,8 +145,13 @@ export declare namespace Loyalty {
 
   export {
     RuleGroups as RuleGroups,
-    type RuleGroupGetResponse as RuleGroupGetResponse,
-    type RuleGroupGetParams as RuleGroupGetParams,
+    type RuleGroupCreateRuleGroupResponse as RuleGroupCreateRuleGroupResponse,
+    type RuleGroupDeleteRuleGroupResponse as RuleGroupDeleteRuleGroupResponse,
+    type RuleGroupGetRuleGroupsResponse as RuleGroupGetRuleGroupsResponse,
+    type RuleGroupUpdateRuleGroupResponse as RuleGroupUpdateRuleGroupResponse,
+    type RuleGroupCreateRuleGroupParams as RuleGroupCreateRuleGroupParams,
+    type RuleGroupGetRuleGroupsParams as RuleGroupGetRuleGroupsParams,
+    type RuleGroupUpdateRuleGroupParams as RuleGroupUpdateRuleGroupParams,
   };
 
   export {

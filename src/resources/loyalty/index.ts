@@ -65,7 +65,16 @@ export {
   type RuleEditListParams,
   type RuleEditRestoreParams,
 } from './rule-edits';
-export { RuleGroups, type RuleGroupGetResponse, type RuleGroupGetParams } from './rule-groups';
+export {
+  RuleGroups,
+  type RuleGroupCreateRuleGroupResponse,
+  type RuleGroupDeleteRuleGroupResponse,
+  type RuleGroupGetRuleGroupsResponse,
+  type RuleGroupUpdateRuleGroupResponse,
+  type RuleGroupCreateRuleGroupParams,
+  type RuleGroupGetRuleGroupsParams,
+  type RuleGroupUpdateRuleGroupParams,
+} from './rule-groups';
 export {
   Rules,
   type RuleCreateResponse,

@@ -6,28 +6,95 @@ import * as Core from '../../core';
 
 export class RuleGroups extends APIResource {
   /**
+   * Create a new loyalty rule groups
+   */
+  createRuleGroup(
+    body: RuleGroupCreateRuleGroupParams,
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<RuleGroupCreateRuleGroupResponse> {
+    return this._client.post('/api/loyalty/rule_groups/create', { body, ...options });
+  }
+
+  /**
+   * Delete loyalty rule group by ID
+   */
+  deleteRuleGroup(id: string, options?: Core.RequestOptions): Core.APIPromise<unknown> {
+    return this._client.delete(`/api/loyalty/rule_groups/${id}`, options);
+  }
+
+  /**
    * Retrieve configured loyalty rule groups
    */
-  get(query?: RuleGroupGetParams, options?: Core.RequestOptions): Core.APIPromise<RuleGroupGetResponse>;
-  get(options?: Core.RequestOptions): Core.APIPromise<RuleGroupGetResponse>;
-  get(
-    query: RuleGroupGetParams | Core.RequestOptions = {},
+  getRuleGroups(
+    query?: RuleGroupGetRuleGroupsParams,
     options?: Core.RequestOptions,
-  ): Core.APIPromise<RuleGroupGetResponse> {
+  ): Core.APIPromise<RuleGroupGetRuleGroupsResponse>;
+  getRuleGroups(options?: Core.RequestOptions): Core.APIPromise<RuleGroupGetRuleGroupsResponse>;
+  getRuleGroups(
+    query: RuleGroupGetRuleGroupsParams | Core.RequestOptions = {},
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<RuleGroupGetRuleGroupsResponse> {
     if (isRequestOptions(query)) {
-      return this.get({}, query);
+      return this.getRuleGroups({}, query);
     }
     return this._client.get('/api/loyalty/rule_groups', { query, ...options });
   }
+
+  /**
+   * Update loyalty rule group by ID
+   */
+  updateRuleGroup(
+    id: string,
+    body?: RuleGroupUpdateRuleGroupParams,
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<RuleGroupUpdateRuleGroupResponse>;
+  updateRuleGroup(
+    id: string,
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<RuleGroupUpdateRuleGroupResponse>;
+  updateRuleGroup(
+    id: string,
+    body: RuleGroupUpdateRuleGroupParams | Core.RequestOptions = {},
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<RuleGroupUpdateRuleGroupResponse> {
+    if (isRequestOptions(body)) {
+      return this.updateRuleGroup(id, {}, body);
+    }
+    return this._client.post(`/api/loyalty/rule_groups/${id}`, { body, ...options });
+  }
 }
 
-export interface RuleGroupGetResponse {
-  data: Array<RuleGroupGetResponse.Data>;
+export interface RuleGroupCreateRuleGroupResponse {
+  id: string;
+
+  createdAt: string;
+
+  isCollapsible: boolean;
+
+  isRequired: boolean;
+
+  name: string;
+
+  organizationId: string;
+
+  sortId: number;
+
+  subTitle: string | null;
+
+  updatedAt: string;
+
+  websiteId: string;
+}
+
+export type RuleGroupDeleteRuleGroupResponse = unknown;
+
+export interface RuleGroupGetRuleGroupsResponse {
+  data: Array<RuleGroupGetRuleGroupsResponse.Data>;
 
   hasNextPage: boolean;
 }
 
-export namespace RuleGroupGetResponse {
+export namespace RuleGroupGetRuleGroupsResponse {
   /**
    * Schema for a get loyalty rule groups response
    */
@@ -796,7 +863,31 @@ export namespace RuleGroupGetResponse {
   }
 }
 
-export interface RuleGroupGetParams {
+export interface RuleGroupUpdateRuleGroupResponse {
+  isCollapsible?: boolean;
+
+  name?: string;
+
+  subTitle?: string;
+}
+
+export interface RuleGroupCreateRuleGroupParams {
+  name: string;
+
+  organizationId: string;
+
+  websiteId: string;
+
+  isCollapsible?: boolean;
+
+  isRequired?: boolean;
+
+  sortId?: number;
+
+  subTitle?: string;
+}
+
+export interface RuleGroupGetRuleGroupsParams {
   excludeHidden?: string;
 
   limit?: number;
@@ -808,6 +899,22 @@ export interface RuleGroupGetParams {
   websiteId?: string;
 }
 
+export interface RuleGroupUpdateRuleGroupParams {
+  isCollapsible?: boolean;
+
+  name?: string | null;
+
+  subtitle?: string | null;
+}
+
 export declare namespace RuleGroups {
-  export { type RuleGroupGetResponse as RuleGroupGetResponse, type RuleGroupGetParams as RuleGroupGetParams };
+  export {
+    type RuleGroupCreateRuleGroupResponse as RuleGroupCreateRuleGroupResponse,
+    type RuleGroupDeleteRuleGroupResponse as RuleGroupDeleteRuleGroupResponse,
+    type RuleGroupGetRuleGroupsResponse as RuleGroupGetRuleGroupsResponse,
+    type RuleGroupUpdateRuleGroupResponse as RuleGroupUpdateRuleGroupResponse,
+    type RuleGroupCreateRuleGroupParams as RuleGroupCreateRuleGroupParams,
+    type RuleGroupGetRuleGroupsParams as RuleGroupGetRuleGroupsParams,
+    type RuleGroupUpdateRuleGroupParams as RuleGroupUpdateRuleGroupParams,
+  };
 }
