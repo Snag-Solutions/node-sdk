@@ -57,7 +57,7 @@ export {
   type QuestionsResponseListParams,
   type QuestionsResponseSubmitParams,
 } from './questions-responses';
-export { RuleChains, type RuleChainGetResponse, type RuleChainGetParams } from './rule-chains';
+export { RuleChains } from './rule-chains';
 export {
   RuleEdits,
   type RuleEditListResponse,
