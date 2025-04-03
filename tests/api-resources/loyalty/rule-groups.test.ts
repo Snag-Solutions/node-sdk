@@ -10,8 +10,12 @@ const client = new SnagSolutions({
 
 describe('resource ruleGroups', () => {
   // skipped: tests are disabled for the time being
-  test.skip('get', async () => {
-    const responsePromise = client.loyalty.ruleGroups.get();
+  test.skip('createRuleGroup: only required params', async () => {
+    const responsePromise = client.loyalty.ruleGroups.createRuleGroup({
+      name: 'name',
+      organizationId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+      websiteId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+    });
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -22,18 +26,65 @@ describe('resource ruleGroups', () => {
   });
 
   // skipped: tests are disabled for the time being
-  test.skip('get: request options instead of params are passed correctly', async () => {
-    // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
-    await expect(client.loyalty.ruleGroups.get({ path: '/_stainless_unknown_path' })).rejects.toThrow(
-      SnagSolutions.NotFoundError,
-    );
+  test.skip('createRuleGroup: required and optional params', async () => {
+    const response = await client.loyalty.ruleGroups.createRuleGroup({
+      name: 'name',
+      organizationId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+      websiteId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+      isCollapsible: true,
+      isRequired: true,
+      sortId: 0,
+      subTitle: 'subTitle',
+    });
   });
 
   // skipped: tests are disabled for the time being
-  test.skip('get: request options and params are passed correctly', async () => {
+  test.skip('deleteRuleGroup', async () => {
+    const responsePromise = client.loyalty.ruleGroups.deleteRuleGroup('182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e');
+    const rawResponse = await responsePromise.asResponse();
+    expect(rawResponse).toBeInstanceOf(Response);
+    const response = await responsePromise;
+    expect(response).not.toBeInstanceOf(Response);
+    const dataAndResponse = await responsePromise.withResponse();
+    expect(dataAndResponse.data).toBe(response);
+    expect(dataAndResponse.response).toBe(rawResponse);
+  });
+
+  // skipped: tests are disabled for the time being
+  test.skip('deleteRuleGroup: request options instead of params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
-      client.loyalty.ruleGroups.get(
+      client.loyalty.ruleGroups.deleteRuleGroup('182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e', {
+        path: '/_stainless_unknown_path',
+      }),
+    ).rejects.toThrow(SnagSolutions.NotFoundError);
+  });
+
+  // skipped: tests are disabled for the time being
+  test.skip('getRuleGroups', async () => {
+    const responsePromise = client.loyalty.ruleGroups.getRuleGroups();
+    const rawResponse = await responsePromise.asResponse();
+    expect(rawResponse).toBeInstanceOf(Response);
+    const response = await responsePromise;
+    expect(response).not.toBeInstanceOf(Response);
+    const dataAndResponse = await responsePromise.withResponse();
+    expect(dataAndResponse.data).toBe(response);
+    expect(dataAndResponse.response).toBe(rawResponse);
+  });
+
+  // skipped: tests are disabled for the time being
+  test.skip('getRuleGroups: request options instead of params are passed correctly', async () => {
+    // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
+    await expect(
+      client.loyalty.ruleGroups.getRuleGroups({ path: '/_stainless_unknown_path' }),
+    ).rejects.toThrow(SnagSolutions.NotFoundError);
+  });
+
+  // skipped: tests are disabled for the time being
+  test.skip('getRuleGroups: request options and params are passed correctly', async () => {
+    // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
+    await expect(
+      client.loyalty.ruleGroups.getRuleGroups(
         {
           excludeHidden: 'excludeHidden',
           limit: 1,
@@ -41,6 +92,40 @@ describe('resource ruleGroups', () => {
           startingAfter: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
           websiteId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
         },
+        { path: '/_stainless_unknown_path' },
+      ),
+    ).rejects.toThrow(SnagSolutions.NotFoundError);
+  });
+
+  // skipped: tests are disabled for the time being
+  test.skip('updateRuleGroup', async () => {
+    const responsePromise = client.loyalty.ruleGroups.updateRuleGroup('182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e');
+    const rawResponse = await responsePromise.asResponse();
+    expect(rawResponse).toBeInstanceOf(Response);
+    const response = await responsePromise;
+    expect(response).not.toBeInstanceOf(Response);
+    const dataAndResponse = await responsePromise.withResponse();
+    expect(dataAndResponse.data).toBe(response);
+    expect(dataAndResponse.response).toBe(rawResponse);
+  });
+
+  // skipped: tests are disabled for the time being
+  test.skip('updateRuleGroup: request options instead of params are passed correctly', async () => {
+    // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
+    await expect(
+      client.loyalty.ruleGroups.updateRuleGroup('182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e', {
+        path: '/_stainless_unknown_path',
+      }),
+    ).rejects.toThrow(SnagSolutions.NotFoundError);
+  });
+
+  // skipped: tests are disabled for the time being
+  test.skip('updateRuleGroup: request options and params are passed correctly', async () => {
+    // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
+    await expect(
+      client.loyalty.ruleGroups.updateRuleGroup(
+        '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+        { isCollapsible: true, name: 'name', subtitle: 'subtitle' },
         { path: '/_stainless_unknown_path' },
       ),
     ).rejects.toThrow(SnagSolutions.NotFoundError);

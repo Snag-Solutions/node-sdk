@@ -73,11 +73,17 @@ Methods:
 
 Types:
 
-- <code><a href="./src/resources/loyalty/rule-groups.ts">RuleGroupGetResponse</a></code>
+- <code><a href="./src/resources/loyalty/rule-groups.ts">RuleGroupCreateRuleGroupResponse</a></code>
+- <code><a href="./src/resources/loyalty/rule-groups.ts">RuleGroupDeleteRuleGroupResponse</a></code>
+- <code><a href="./src/resources/loyalty/rule-groups.ts">RuleGroupGetRuleGroupsResponse</a></code>
+- <code><a href="./src/resources/loyalty/rule-groups.ts">RuleGroupUpdateRuleGroupResponse</a></code>
 
 Methods:
 
-- <code title="get /api/loyalty/rule_groups">client.loyalty.ruleGroups.<a href="./src/resources/loyalty/rule-groups.ts">get</a>({ ...params }) -> RuleGroupGetResponse</code>
+- <code title="post /api/loyalty/rule_groups/create">client.loyalty.ruleGroups.<a href="./src/resources/loyalty/rule-groups.ts">createRuleGroup</a>({ ...params }) -> RuleGroupCreateRuleGroupResponse</code>
+- <code title="delete /api/loyalty/rule_groups/{id}">client.loyalty.ruleGroups.<a href="./src/resources/loyalty/rule-groups.ts">deleteRuleGroup</a>(id) -> unknown</code>
+- <code title="get /api/loyalty/rule_groups">client.loyalty.ruleGroups.<a href="./src/resources/loyalty/rule-groups.ts">getRuleGroups</a>({ ...params }) -> RuleGroupGetRuleGroupsResponse</code>
+- <code title="post /api/loyalty/rule_groups/{id}">client.loyalty.ruleGroups.<a href="./src/resources/loyalty/rule-groups.ts">updateRuleGroup</a>(id, { ...params }) -> RuleGroupUpdateRuleGroupResponse</code>
 
 ## Transactions
 
