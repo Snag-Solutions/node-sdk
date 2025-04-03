@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.24 (2025-04-03)
+
+Full Changelog: [v0.1.0-alpha.23...v0.1.0-alpha.24](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.23...v0.1.0-alpha.24)
+
+### Bug Fixes
+
+* **client:** send `X-Stainless-Timeout` in seconds ([#219](https://github.com/Snag-Solutions/node-sdk/issues/219)) ([fb58974](https://github.com/Snag-Solutions/node-sdk/commit/fb58974ca2d55458f982e31295a94b2a7e13dd33))
+
 ## 0.1.0-alpha.23 (2025-04-03)
 
 Full Changelog: [v0.1.0-alpha.22...v0.1.0-alpha.23](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.22...v0.1.0-alpha.23)
