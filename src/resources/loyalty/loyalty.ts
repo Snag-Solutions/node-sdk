@@ -64,7 +64,7 @@ import {
   QuestionsResponses,
 } from './questions-responses';
 import * as RuleChainsAPI from './rule-chains';
-import { RuleChainGetParams, RuleChainGetResponse, RuleChains } from './rule-chains';
+import { RuleChains } from './rule-chains';
 import * as RuleEditsAPI from './rule-edits';
 import {
   RuleEditListParams,
@@ -137,11 +137,7 @@ Loyalty.Questions = Questions;
 Loyalty.QuestionsResponses = QuestionsResponses;
 
 export declare namespace Loyalty {
-  export {
-    RuleChains as RuleChains,
-    type RuleChainGetResponse as RuleChainGetResponse,
-    type RuleChainGetParams as RuleChainGetParams,
-  };
+  export { RuleChains as RuleChains };
 
   export {
     RuleGroups as RuleGroups,
