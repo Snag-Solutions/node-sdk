@@ -222,6 +222,12 @@ export namespace TransactionCreateTransactionParams {
     idempotencyKey?: string;
 
     /**
+     * Unique identifier for the loyalty currency for the wallet. Can only use
+     * entry-level currency or transaction-level currency.
+     */
+    loyaltyCurrencyId?: string;
+
+    /**
      * The wallet address of the user
      */
     walletAddress?: string;
