@@ -33,6 +33,7 @@ describe('resource transactions', () => {
           amount: 5,
           direction: 'credit',
           idempotencyKey: 'example-idempotency-key',
+          loyaltyCurrencyId: '123e4567-e89b-12d3-a456-426614174090',
           walletAddress: '0x1234567890abcdef1234567890abcdef12345678',
         },
       ],
