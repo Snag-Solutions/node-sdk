@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.25 (2025-04-03)
+
+Full Changelog: [v0.1.0-alpha.24...v0.1.0-alpha.25](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.24...v0.1.0-alpha.25)
+
+### Chores
+
+* **internal:** add aliases for Record and Array ([#222](https://github.com/Snag-Solutions/node-sdk/issues/222)) ([31c797f](https://github.com/Snag-Solutions/node-sdk/commit/31c797fa27ffca6b55a5ed1f7cb0f623f58b4487))
+
 ## 0.1.0-alpha.24 (2025-04-03)
 
 Full Changelog: [v0.1.0-alpha.23...v0.1.0-alpha.24](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.23...v0.1.0-alpha.24)
