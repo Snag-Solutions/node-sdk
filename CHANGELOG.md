@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.30 (2025-04-04)
+
+Full Changelog: [v0.1.0-alpha.29...v0.1.0-alpha.30](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.29...v0.1.0-alpha.30)
+
+### Bug Fixes
+
+* **api:** improve type resolution when importing as a package ([#237](https://github.com/Snag-Solutions/node-sdk/issues/237)) ([152bd97](https://github.com/Snag-Solutions/node-sdk/commit/152bd97adbe18b6705dcd7d71901a01afd5d1670))
+
 ## 0.1.0-alpha.29 (2025-04-03)
 
 Full Changelog: [v0.1.0-alpha.28...v0.1.0-alpha.29](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.28...v0.1.0-alpha.29)
