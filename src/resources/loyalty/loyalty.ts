@@ -63,8 +63,6 @@ import {
   QuestionsResponseSubmitResponse,
   QuestionsResponses,
 } from './questions-responses';
-import * as RuleChainsAPI from './rule-chains';
-import { RuleChains } from './rule-chains';
 import * as RuleEditsAPI from './rule-edits';
 import {
   RuleEditListParams,
@@ -109,7 +107,6 @@ import {
 } from './transactions';
 
 export class Loyalty extends APIResource {
-  ruleChains: RuleChainsAPI.RuleChains = new RuleChainsAPI.RuleChains(this._client);
   ruleGroups: RuleGroupsAPI.RuleGroups = new RuleGroupsAPI.RuleGroups(this._client);
   transactions: TransactionsAPI.Transactions = new TransactionsAPI.Transactions(this._client);
   accounts: AccountsAPI.Accounts = new AccountsAPI.Accounts(this._client);
@@ -124,7 +121,6 @@ export class Loyalty extends APIResource {
   );
 }
 
-Loyalty.RuleChains = RuleChains;
 Loyalty.RuleGroups = RuleGroups;
 Loyalty.Transactions = Transactions;
 Loyalty.Accounts = Accounts;
@@ -137,8 +133,6 @@ Loyalty.Questions = Questions;
 Loyalty.QuestionsResponses = QuestionsResponses;
 
 export declare namespace Loyalty {
-  export { RuleChains as RuleChains };
-
   export {
     RuleGroups as RuleGroups,
     type RuleGroupCreateRuleGroupResponse as RuleGroupCreateRuleGroupResponse,
