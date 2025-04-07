@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.0-alpha.31 (2025-04-07)
+
+Full Changelog: [v0.1.0-alpha.30...v0.1.0-alpha.31](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.30...v0.1.0-alpha.31)
+
+### Features
+
+* **api:** manual updates ([#241](https://github.com/Snag-Solutions/node-sdk/issues/241)) ([a3cb517](https://github.com/Snag-Solutions/node-sdk/commit/a3cb5175a9e162fd79438145cf7fd3e2e021796c))
+
+
+### Bug Fixes
+
+* **mcp:** remove unused tools.ts ([#240](https://github.com/Snag-Solutions/node-sdk/issues/240)) ([499f801](https://github.com/Snag-Solutions/node-sdk/commit/499f80109f2f0d7b54af0bd73170c1fea00b6795))
+
 ## 0.1.0-alpha.30 (2025-04-04)
 
 Full Changelog: [v0.1.0-alpha.29...v0.1.0-alpha.30](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.29...v0.1.0-alpha.30)
