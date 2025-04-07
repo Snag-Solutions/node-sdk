@@ -76,6 +76,8 @@ export interface UserListParams {
 
   limit?: number;
 
+  loyaltyRuleId?: string;
+
   organizationId?: string;
 
   startingAfter?: string;

@@ -10,8 +10,10 @@ const client = new SnagSolutions({
 
 describe('resource referral', () => {
   // skipped: tests are disabled for the time being
-  test.skip('createCode', async () => {
-    const responsePromise = client.referral.createCode();
+  test.skip('createCode: only required params', async () => {
+    const responsePromise = client.referral.createCode({
+      loyaltyRuleId: '558bcf56-24f1-4ef4-9787-043086295780',
+    });
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -22,24 +24,10 @@ describe('resource referral', () => {
   });
 
   // skipped: tests are disabled for the time being
-  test.skip('createCode: request options instead of params are passed correctly', async () => {
-    // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
-    await expect(client.referral.createCode({ path: '/_stainless_unknown_path' })).rejects.toThrow(
-      SnagSolutions.NotFoundError,
-    );
-  });
-
-  // skipped: tests are disabled for the time being
-  test.skip('createCode: request options and params are passed correctly', async () => {
-    // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
-    await expect(
-      client.referral.createCode(
-        {
-          loyaltyRuleId: '558bcf56-24f1-4ef4-9787-043086295780',
-          userId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
-        },
-        { path: '/_stainless_unknown_path' },
-      ),
-    ).rejects.toThrow(SnagSolutions.NotFoundError);
+  test.skip('createCode: required and optional params', async () => {
+    const response = await client.referral.createCode({
+      loyaltyRuleId: '558bcf56-24f1-4ef4-9787-043086295780',
+      userId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+    });
   });
 });
