@@ -1,6 +1,7 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
 import { APIResource } from '../../resource';
+import { isRequestOptions } from '../../core';
 import * as Core from '../../core';
 import * as UsersAPI from './users';
 import { UserCreateParams, UserCreateResponse, UserListParams, UserListResponse, Users } from './users';
@@ -12,9 +13,17 @@ export class Referral extends APIResource {
    * This endpoint allows you to create a referral code
    */
   createCode(
-    body: ReferralCreateCodeParams,
+    body?: ReferralCreateCodeParams,
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<ReferralCreateCodeResponse>;
+  createCode(options?: Core.RequestOptions): Core.APIPromise<ReferralCreateCodeResponse>;
+  createCode(
+    body: ReferralCreateCodeParams | Core.RequestOptions = {},
     options?: Core.RequestOptions,
   ): Core.APIPromise<ReferralCreateCodeResponse> {
+    if (isRequestOptions(body)) {
+      return this.createCode({}, body);
+    }
     return this._client.post('/api/referral/codes', { body, ...options });
   }
 }
@@ -38,7 +47,7 @@ export interface ReferralCreateCodeResponse {
 }
 
 export interface ReferralCreateCodeParams {
-  loyaltyRuleId: string;
+  loyaltyRuleId?: string;
 
   userId?: string;
 }
