@@ -127,7 +127,7 @@ export interface BadgeCreateResponse {
   /**
    * Array of user badges
    */
-  LoyaltyBadgeUser?: Array<BadgeCreateResponse.LoyaltyBadgeUser>;
+  loyaltyBadgeUsers?: Array<BadgeCreateResponse.LoyaltyBadgeUser>;
 }
 
 export namespace BadgeCreateResponse {
@@ -329,7 +329,7 @@ export interface BadgeUpdateResponse {
   /**
    * Array of user badges
    */
-  LoyaltyBadgeUser?: Array<BadgeUpdateResponse.LoyaltyBadgeUser>;
+  loyaltyBadgeUsers?: Array<BadgeUpdateResponse.LoyaltyBadgeUser>;
 }
 
 export namespace BadgeUpdateResponse {
@@ -531,7 +531,7 @@ export interface BadgeListResponse {
   /**
    * Array of user badges
    */
-  LoyaltyBadgeUser?: Array<BadgeListResponse.LoyaltyBadgeUser>;
+  loyaltyBadgeUsers?: Array<BadgeListResponse.LoyaltyBadgeUser>;
 }
 
 export namespace BadgeListResponse {
@@ -733,7 +733,7 @@ export interface BadgeDeleteResponse {
   /**
    * Array of user badges
    */
-  LoyaltyBadgeUser?: Array<BadgeDeleteResponse.LoyaltyBadgeUser>;
+  loyaltyBadgeUsers?: Array<BadgeDeleteResponse.LoyaltyBadgeUser>;
 }
 
 export namespace BadgeDeleteResponse {
