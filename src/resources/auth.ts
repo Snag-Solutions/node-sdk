@@ -6,7 +6,7 @@ import * as Core from '../core';
 
 export class Auth extends APIResource {
   /**
-   * This endpoint allows you to connect your Twitter account to a Snag account
+   * This endpoint allows you to connect your auth account to a Snag account
    */
   connectAuth(
     authType: 'twitter' | 'discord' | 'telegram' | 'epic' | 'steam',
@@ -54,6 +54,11 @@ export interface AuthConnectAuthParams {
    * The ID of the user
    */
   userId?: string;
+
+  /**
+   * The wallet address of the user
+   */
+  walletAddress?: string;
 
   /**
    * The ID of the website
