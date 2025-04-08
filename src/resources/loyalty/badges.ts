@@ -1091,9 +1091,14 @@ export interface BadgeListParams {
   startingAfter?: string;
 
   /**
-   * UUID of the user (optional, converted to lowercase)
+   * UUID of the user, or array of UUID.
    */
-  userId?: string;
+  userId?: string | Array<string>;
+
+  /**
+   * Wallet Address of the user, or array of wallet addresses.
+   */
+  walletAddress?: string | Array<string>;
 
   /**
    * UUID of the website (optional, converted to lowercase)
