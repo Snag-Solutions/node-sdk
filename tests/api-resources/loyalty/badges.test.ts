@@ -124,6 +124,7 @@ describe('resource badges', () => {
           organizationId: '123e4567-e89b-12d3-a456-426614174222',
           startingAfter: '123e4567-e89b-12d3-a456-426614174333',
           userId: '123e4567-e89b-12d3-a456-426614174222',
+          walletAddress: '0x1234567890abcdef1234567890abcdef12345678',
           websiteId: '123e4567-e89b-12d3-a456-426614174111',
         },
         { path: '/_stainless_unknown_path' },
