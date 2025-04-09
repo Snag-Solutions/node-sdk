@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.0-alpha.38 (2025-04-09)
+
+Full Changelog: [v0.1.0-alpha.37...v0.1.0-alpha.38](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.37...v0.1.0-alpha.38)
+
+### Features
+
+* **api:** open api update ([#259](https://github.com/Snag-Solutions/node-sdk/issues/259)) ([5f6891e](https://github.com/Snag-Solutions/node-sdk/commit/5f6891e1ee67f5569ea5c57d39ca6a2d413b7768))
+
+
+### Chores
+
+* **tests:** improve enum examples ([#257](https://github.com/Snag-Solutions/node-sdk/issues/257)) ([79fcc17](https://github.com/Snag-Solutions/node-sdk/commit/79fcc1759a4ef23fd4cdadb36096fa6ad916d873))
+
 ## 0.1.0-alpha.37 (2025-04-08)
 
 Full Changelog: [v0.1.0-alpha.36...v0.1.0-alpha.37](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.36...v0.1.0-alpha.37)
