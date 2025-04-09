@@ -189,8 +189,7 @@ export interface RuleCreateResponse {
     | 'twitter_like'
     | 'twitter_post_hashtag'
     | 'quiz'
-    | 'poll'
-    | 'steam_wishlist';
+    | 'poll';
 
   /**
    * Unique identifier for the associated website
@@ -568,11 +567,6 @@ export namespace RuleCreateResponse {
      * Name of the social platform.
      */
     socialPlatformName?: string | null;
-
-    /**
-     * ID of the Steam app.
-     */
-    steamAppId?: string | null;
 
     /**
      * Array of streak milestones and corresponding rewards.
@@ -1472,11 +1466,6 @@ export namespace RuleUpdateResponse {
     socialPlatformName?: string | null;
 
     /**
-     * ID of the Steam app.
-     */
-    steamAppId?: string | null;
-
-    /**
      * Array of streak milestones and corresponding rewards.
      */
     streakArray?: Array<Metadata.StreakArray> | null;
@@ -2070,8 +2059,7 @@ export interface RuleCreateParams {
     | 'twitter_like'
     | 'twitter_post_hashtag'
     | 'quiz'
-    | 'poll'
-    | 'steam_wishlist';
+    | 'poll';
 
   /**
    * Unique identifier for the associated website
@@ -2449,11 +2437,6 @@ export namespace RuleCreateParams {
      * Name of the social platform.
      */
     socialPlatformName?: string | null;
-
-    /**
-     * ID of the Steam app.
-     */
-    steamAppId?: string | null;
 
     /**
      * Array of streak milestones and corresponding rewards.
@@ -3349,11 +3332,6 @@ export namespace RuleUpdateParams {
      * Name of the social platform.
      */
     socialPlatformName?: string | null;
-
-    /**
-     * ID of the Steam app.
-     */
-    steamAppId?: string | null;
 
     /**
      * Array of streak milestones and corresponding rewards.
