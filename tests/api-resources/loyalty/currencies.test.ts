@@ -36,7 +36,7 @@ describe('resource currencies', () => {
       symbol: 'LP',
       websiteId: '123e4567-e89b-12d3-a456-426614174002',
       apiAuthKey: 'apiKey123',
-      apiAuthType: 'none',
+      apiAuthType: 'basic',
       apiAuthValue: 'apiValue456',
       apiGetTransactionEntryUrl: 'https://api.example.com/get-loyalty-tx',
       apiGetUrl: 'https://api.example.com/get-loyalty',

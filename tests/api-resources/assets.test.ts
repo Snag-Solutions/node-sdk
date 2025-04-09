@@ -25,7 +25,7 @@ describe('resource assets', () => {
   test.skip('createAsset: required and optional params', async () => {
     const response = await client.assets.createAsset({
       fileName: 'example.png',
-      filePath: 'announcements',
+      filePath: 'images',
       organizationId: '123e4567-e89b-12d3-a456-426614174222',
       userId: '123e4567-e89b-12d3-a456-426614174333',
       websiteId: '123e4567-e89b-12d3-a456-426614174111',
