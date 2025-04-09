@@ -206,8 +206,7 @@ export namespace RuleGroupGetRuleGroupsResponse {
           | 'twitter_like'
           | 'twitter_post_hashtag'
           | 'quiz'
-          | 'poll'
-          | 'steam_wishlist';
+          | 'poll';
       }
 
       export namespace LoyaltyRule {
@@ -467,11 +466,6 @@ export namespace RuleGroupGetRuleGroupsResponse {
            * Name of the social platform.
            */
           socialPlatformName?: string | null;
-
-          /**
-           * ID of the Steam app.
-           */
-          steamAppId?: string | null;
 
           /**
            * Array of streak milestones and corresponding rewards.
