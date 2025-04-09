@@ -319,6 +319,7 @@ export interface TransactionGetTransactionEntriesParams {
     | 'twitter_post_hashtag'
     | 'quiz'
     | 'poll'
+    | 'steam_wishlist'
     | Array<
         | 'Bonus'
         | 'BoughtOn'
@@ -373,6 +374,7 @@ export interface TransactionGetTransactionEntriesParams {
         | 'twitter_post_hashtag'
         | 'quiz'
         | 'poll'
+        | 'steam_wishlist'
       >;
 
   /**
