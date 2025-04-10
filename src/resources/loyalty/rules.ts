@@ -190,8 +190,7 @@ export interface RuleCreateResponse {
     | 'twitter_post_hashtag'
     | 'quiz'
     | 'poll'
-    | 'steam_wishlist'
-    | 'dummy_test';
+    | 'steam_wishlist';
 
   /**
    * Unique identifier for the associated website
@@ -2072,8 +2071,7 @@ export interface RuleCreateParams {
     | 'twitter_post_hashtag'
     | 'quiz'
     | 'poll'
-    | 'steam_wishlist'
-    | 'dummy_test';
+    | 'steam_wishlist';
 
   /**
    * Unique identifier for the associated website
