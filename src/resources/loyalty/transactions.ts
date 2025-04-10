@@ -320,7 +320,6 @@ export interface TransactionGetTransactionEntriesParams {
     | 'quiz'
     | 'poll'
     | 'steam_wishlist'
-    | 'dummy_test'
     | Array<
         | 'Bonus'
         | 'BoughtOn'
@@ -376,7 +375,6 @@ export interface TransactionGetTransactionEntriesParams {
         | 'quiz'
         | 'poll'
         | 'steam_wishlist'
-        | 'dummy_test'
       >;
 
   /**

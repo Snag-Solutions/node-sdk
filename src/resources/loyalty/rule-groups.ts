@@ -207,8 +207,7 @@ export namespace RuleGroupGetRuleGroupsResponse {
           | 'twitter_post_hashtag'
           | 'quiz'
           | 'poll'
-          | 'steam_wishlist'
-          | 'dummy_test';
+          | 'steam_wishlist';
       }
 
       export namespace LoyaltyRule {
