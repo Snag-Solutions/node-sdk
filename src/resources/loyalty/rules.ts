@@ -3798,6 +3798,11 @@ export interface RuleCompleteParams {
   commentLink?: string;
 
   /**
+   * Unique key to ensure idempotent requests
+   */
+  idempotencyKey?: string;
+
+  /**
    * ID of the choice selected by the user
    */
   loyaltyQuestionChoiceId?: string;
