@@ -1901,39 +1901,14 @@ export namespace RuleListResponse {
     deletedAt: string | null;
 
     /**
-     * Description of the loyalty rule
-     */
-    description: string;
-
-    /**
-     * End time of the loyalty rule
-     */
-    endTime: string;
-
-    /**
      * Frequency of the loyalty rule
      */
     frequency: string;
 
     /**
-     * Name of the loyalty rule
-     */
-    name: string;
-
-    /**
      * Unique identifier for the organization
      */
     organizationId: string;
-
-    /**
-     * Type of the reward
-     */
-    rewardType: 'points' | 'multiplier';
-
-    /**
-     * Start time of the loyalty rule
-     */
-    startTime: string;
 
     /**
      * Type of the loyalty rule

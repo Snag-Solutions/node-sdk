@@ -98,8 +98,6 @@ export interface MultiplierCreateResponse {
   userId: string;
 
   websiteId: string;
-
-  loyaltyRuleId?: string;
 }
 
 export namespace MultiplierCreateResponse {
@@ -143,8 +141,6 @@ export interface MultiplierUpdateResponse {
   userId: string;
 
   websiteId: string;
-
-  loyaltyRuleId?: string;
 }
 
 export namespace MultiplierUpdateResponse {
@@ -195,8 +191,6 @@ export namespace MultiplierListResponse {
     userId: string;
 
     websiteId: string;
-
-    loyaltyRuleId?: string;
   }
 
   export namespace Data {
@@ -245,8 +239,6 @@ export interface MultiplierDeleteByExternalIDResponse {
   userId: string;
 
   websiteId: string;
-
-  loyaltyRuleId?: string;
 }
 
 export namespace MultiplierDeleteByExternalIDResponse {
