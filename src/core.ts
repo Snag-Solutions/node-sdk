@@ -296,10 +296,10 @@ export abstract class APIClient {
   }
 
   buildRequest<Req>(
-    inputOptions: FinalRequestOptions<Req>,
+    options: FinalRequestOptions<Req>,
     { retryCount = 0 }: { retryCount?: number } = {},
   ): { req: RequestInit; url: string; timeout: number } {
-    const options = { ...inputOptions };
+    options = { ...options };
     const { method, path, query, headers: headers = {} } = options;
 
     const body =
@@ -327,8 +327,8 @@ export abstract class APIClient {
     }
 
     if (this.idempotencyHeader && method !== 'get') {
-      if (!inputOptions.idempotencyKey) inputOptions.idempotencyKey = this.defaultIdempotencyKey();
-      headers[this.idempotencyHeader] = inputOptions.idempotencyKey;
+      if (!options.idempotencyKey) options.idempotencyKey = this.defaultIdempotencyKey();
+      headers[this.idempotencyHeader] = options.idempotencyKey;
     }
 
     const reqHeaders = this.buildHeaders({ options, headers, contentLength, retryCount });
