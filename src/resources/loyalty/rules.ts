@@ -73,9 +73,17 @@ export class Rules extends APIResource {
    * This will return the processing status of quests for a specific user
    */
   getStatus(
-    query: RuleGetStatusParams,
+    query?: RuleGetStatusParams,
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<RuleGetStatusResponse>;
+  getStatus(options?: Core.RequestOptions): Core.APIPromise<RuleGetStatusResponse>;
+  getStatus(
+    query: RuleGetStatusParams | Core.RequestOptions = {},
     options?: Core.RequestOptions,
   ): Core.APIPromise<RuleGetStatusResponse> {
+    if (isRequestOptions(query)) {
+      return this.getStatus({}, query);
+    }
     return this._client.get('/api/loyalty/rules/status', { query, ...options });
   }
 }
@@ -4546,11 +4554,13 @@ export interface RuleCompleteParams {
 }
 
 export interface RuleGetStatusParams {
-  organizationId: string;
-
-  websiteId: string;
+  organizationId?: string;
 
   userId?: string;
+
+  walletAddress?: string;
+
+  websiteId?: string;
 }
 
 export declare namespace Rules {
