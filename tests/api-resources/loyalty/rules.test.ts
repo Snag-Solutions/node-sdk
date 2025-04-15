@@ -387,6 +387,7 @@ describe('resource rules', () => {
         {
           amount: 10,
           commentLink: 'https://x.com/Snag_Solutions/status/1735407428093522314',
+          idempotencyKey: 'IDEMPOTENCY123',
           loyaltyQuestionChoiceId: '123e4567-e89b-12d3-a456-426614174000',
           userId: '123e4567-e89b-12d3-a456-426614174000',
           verificationCode: 'VERIF123',
