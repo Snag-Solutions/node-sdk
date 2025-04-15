@@ -494,12 +494,6 @@ export namespace RuleGroupGetRuleGroupsResponse {
           trackAllContracts?: boolean | null;
 
           /**
-           * Flag indicating if the progress is tracked. If enabled, the rule can only be
-           * completed once the progress is 100%.
-           */
-          trackProgress?: boolean | null;
-
-          /**
            * URL of the associated Twitter account.
            */
           twitterAccountUrl?: string;
