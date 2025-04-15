@@ -1,5 +1,22 @@
 # Changelog
 
+## 0.1.0-alpha.42 (2025-04-15)
+
+Full Changelog: [v0.1.0-alpha.41...v0.1.0-alpha.42](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.41...v0.1.0-alpha.42)
+
+### Features
+
+* **api:** api update ([71fc69d](https://github.com/Snag-Solutions/node-sdk/commit/71fc69d0008f485e8b080bc6cdc52e8c414c14a0))
+* **api:** api update ([ed86d10](https://github.com/Snag-Solutions/node-sdk/commit/ed86d104a4a8a72735513b8711e1d75e6b18ac85))
+* **api:** open api update ([c9b05fb](https://github.com/Snag-Solutions/node-sdk/commit/c9b05fb9417de3e61a602f925117e154e0ca0c66))
+* **api:** open api update ([af0ec62](https://github.com/Snag-Solutions/node-sdk/commit/af0ec629516d74a8a65bde8f28f715a9b796f953))
+
+
+### Chores
+
+* **internal:** reduce CI branch coverage ([4ccb865](https://github.com/Snag-Solutions/node-sdk/commit/4ccb865c47213e502ec2a45babb8512ed8b00e26))
+* **internal:** upload builds and expand CI branch coverage ([38b1230](https://github.com/Snag-Solutions/node-sdk/commit/38b1230d61593b39b80194e2a3fffd6d369fd856))
+
 ## 0.1.0-alpha.41 (2025-04-10)
 
 Full Changelog: [v0.1.0-alpha.40...v0.1.0-alpha.41](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.40...v0.1.0-alpha.41)
