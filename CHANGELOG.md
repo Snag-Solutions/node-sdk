@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.43 (2025-04-15)
+
+Full Changelog: [v0.1.0-alpha.42...v0.1.0-alpha.43](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.42...v0.1.0-alpha.43)
+
+### Chores
+
+* **client:** minor internal fixes ([fa9a603](https://github.com/Snag-Solutions/node-sdk/commit/fa9a6030f0a860a22a4eb35d8a7d8b9ec7f50237))
+
 ## 0.1.0-alpha.42 (2025-04-15)
 
 Full Changelog: [v0.1.0-alpha.41...v0.1.0-alpha.42](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.41...v0.1.0-alpha.42)
