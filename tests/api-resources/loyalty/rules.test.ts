@@ -324,6 +324,7 @@ describe('resource rules', () => {
       client.loyalty.rules.list(
         {
           collectionAddress: '0x1234567890abcdef1234567890abcdef12345678',
+          isActive: 'true',
           limit: 50,
           loyaltyRuleGroupId: '123e4567-e89b-12d3-a456-426614174004',
           loyaltyRuleId: '123e4567-e89b-12d3-a456-426614174001',
