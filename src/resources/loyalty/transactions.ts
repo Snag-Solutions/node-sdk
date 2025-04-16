@@ -261,6 +261,11 @@ export interface TransactionGetTransactionEntriesParams {
   limit?: number;
 
   /**
+   * UUID of the rule group (converted to lowercase)
+   */
+  loyaltyRuleGroupId?: string;
+
+  /**
    * Unique identifier for the loyalty rule to filter by
    */
   loyaltyRuleId?: string;

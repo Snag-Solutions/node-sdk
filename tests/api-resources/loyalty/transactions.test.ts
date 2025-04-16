@@ -72,6 +72,7 @@ describe('resource transactions', () => {
           direction: 'credit',
           idempotencyKey: 'idempkey123',
           limit: 50,
+          loyaltyRuleGroupId: '123e4567-e89b-12d3-a456-426614174333',
           loyaltyRuleId: '123e4567-e89b-12d3-a456-426614174030',
           loyaltyRuleType: 'Bonus',
           loyaltyTransactionId: '123e4567-e89b-12d3-a456-426614174020',
