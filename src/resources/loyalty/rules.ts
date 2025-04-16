@@ -4479,6 +4479,12 @@ export interface RuleListParams {
   collectionAddress?: string;
 
   /**
+   * If true this will only return active rules, the rules for which the startTime is
+   * in the past and the endTime is in the future
+   */
+  isActive?: 'true' | 'false';
+
+  /**
    * Maximum number of records to return (max 1000)
    */
   limit?: number;
