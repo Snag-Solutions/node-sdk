@@ -35,7 +35,8 @@ export interface AssetCreateAssetResponse {
 
 export interface AssetCreateAssetParams {
   /**
-   * The name of the file, must match the regex pattern (converted to lowercase)
+   * The name of the file, must match the regex pattern (converted to lowercase) and
+   * have a valid extension.
    */
   fileName: string;
 
@@ -52,6 +53,12 @@ export interface AssetCreateAssetParams {
     | 'profiles'
     | 'minting'
     | 'loyalty';
+
+  /**
+   * Size of the file in bytes. Uploaded file must match this file size. 1mb for
+   * images and 10mb for videos.
+   */
+  fileSize?: number;
 
   /**
    * UUID of the organization (optional, converted to lowercase)
