@@ -26,6 +26,7 @@ describe('resource assets', () => {
     const response = await client.assets.createAsset({
       fileName: 'example.png',
       filePath: 'images',
+      fileSize: 1024,
       organizationId: '123e4567-e89b-12d3-a456-426614174222',
       userId: '123e4567-e89b-12d3-a456-426614174333',
       websiteId: '123e4567-e89b-12d3-a456-426614174111',
