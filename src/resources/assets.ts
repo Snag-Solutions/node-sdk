@@ -41,6 +41,12 @@ export interface AssetCreateAssetParams {
   fileName: string;
 
   /**
+   * Size of the file in bytes. Uploaded file must match this file size. 1mb for
+   * images and 10mb for videos.
+   */
+  fileSize: number;
+
+  /**
    * The file path, must be a valid enum value.
    */
   filePath?:
@@ -53,12 +59,6 @@ export interface AssetCreateAssetParams {
     | 'profiles'
     | 'minting'
     | 'loyalty';
-
-  /**
-   * Size of the file in bytes. Uploaded file must match this file size. 1mb for
-   * images and 10mb for videos.
-   */
-  fileSize?: number;
 
   /**
    * UUID of the organization (optional, converted to lowercase)
