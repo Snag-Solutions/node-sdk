@@ -11,7 +11,7 @@ const client = new SnagSolutions({
 describe('resource assets', () => {
   // skipped: tests are disabled for the time being
   test.skip('createAsset: only required params', async () => {
-    const responsePromise = client.assets.createAsset({ fileName: 'example.png' });
+    const responsePromise = client.assets.createAsset({ fileName: 'example.png', fileSize: 1024 });
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -25,8 +25,8 @@ describe('resource assets', () => {
   test.skip('createAsset: required and optional params', async () => {
     const response = await client.assets.createAsset({
       fileName: 'example.png',
-      filePath: 'images',
       fileSize: 1024,
+      filePath: 'images',
       organizationId: '123e4567-e89b-12d3-a456-426614174222',
       userId: '123e4567-e89b-12d3-a456-426614174333',
       websiteId: '123e4567-e89b-12d3-a456-426614174111',

@@ -27,7 +27,7 @@ const client = new SnagSolutions({
 });
 
 async function main() {
-  const response = await client.assets.createAsset({ fileName: 'REPLACE_ME' });
+  const response = await client.assets.createAsset({ fileName: 'REPLACE_ME', fileSize: 1024 });
 
   console.log(response.signedUrl);
 }
@@ -48,7 +48,7 @@ const client = new SnagSolutions({
 });
 
 async function main() {
-  const params: SnagSolutions.AssetCreateAssetParams = { fileName: 'REPLACE_ME' };
+  const params: SnagSolutions.AssetCreateAssetParams = { fileName: 'REPLACE_ME', fileSize: 1024 };
   const response: SnagSolutions.AssetCreateAssetResponse = await client.assets.createAsset(params);
 }
 
@@ -66,15 +66,17 @@ a subclass of `APIError` will be thrown:
 <!-- prettier-ignore -->
 ```ts
 async function main() {
-  const response = await client.assets.createAsset({ fileName: 'REPLACE_ME' }).catch(async (err) => {
-    if (err instanceof SnagSolutions.APIError) {
-      console.log(err.status); // 400
-      console.log(err.name); // BadRequestError
-      console.log(err.headers); // {server: 'nginx', ...}
-    } else {
-      throw err;
-    }
-  });
+  const response = await client.assets
+    .createAsset({ fileName: 'REPLACE_ME', fileSize: 1024 })
+    .catch(async (err) => {
+      if (err instanceof SnagSolutions.APIError) {
+        console.log(err.status); // 400
+        console.log(err.name); // BadRequestError
+        console.log(err.headers); // {server: 'nginx', ...}
+      } else {
+        throw err;
+      }
+    });
 }
 
 main();
@@ -109,7 +111,7 @@ const client = new SnagSolutions({
 });
 
 // Or, configure per-request:
-await client.assets.createAsset({ fileName: 'REPLACE_ME' }, {
+await client.assets.createAsset({ fileName: 'REPLACE_ME', fileSize: 1024 }, {
   maxRetries: 5,
 });
 ```
@@ -126,7 +128,7 @@ const client = new SnagSolutions({
 });
 
 // Override per-request:
-await client.assets.createAsset({ fileName: 'REPLACE_ME' }, {
+await client.assets.createAsset({ fileName: 'REPLACE_ME', fileSize: 1024 }, {
   timeout: 5 * 1000,
 });
 ```
@@ -147,12 +149,12 @@ You can also use the `.withResponse()` method to get the raw `Response` along wi
 ```ts
 const client = new SnagSolutions();
 
-const response = await client.assets.createAsset({ fileName: 'REPLACE_ME' }).asResponse();
+const response = await client.assets.createAsset({ fileName: 'REPLACE_ME', fileSize: 1024 }).asResponse();
 console.log(response.headers.get('X-My-Header'));
 console.log(response.statusText); // access the underlying Response object
 
 const { data: response, response: raw } = await client.assets
-  .createAsset({ fileName: 'REPLACE_ME' })
+  .createAsset({ fileName: 'REPLACE_ME', fileSize: 1024 })
   .withResponse();
 console.log(raw.headers.get('X-My-Header'));
 console.log(response.signedUrl);
@@ -260,7 +262,7 @@ const client = new SnagSolutions({
 
 // Override per-request:
 await client.assets.createAsset(
-  { fileName: 'REPLACE_ME' },
+  { fileName: 'REPLACE_ME', fileSize: 1024 },
   {
     httpAgent: new http.Agent({ keepAlive: false }),
   },
