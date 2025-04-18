@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.1.0-alpha.46 (2025-04-18)
+
+Full Changelog: [v0.1.0-alpha.45...v0.1.0-alpha.46](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.45...v0.1.0-alpha.46)
+
+### Features
+
+* **api:** add missing endpoints ([70ea079](https://github.com/Snag-Solutions/node-sdk/commit/70ea07902e094186076e70071207d10a19b0c73f))
+* **api:** open api update ([9057a83](https://github.com/Snag-Solutions/node-sdk/commit/9057a830232b4290bcf40e354a330dd8a568aa2c))
+* **api:** open api update ([b9a1658](https://github.com/Snag-Solutions/node-sdk/commit/b9a16582132fc56b1a9a5cf347014e91690b4d85))
+
 ## 0.1.0-alpha.45 (2025-04-16)
 
 Full Changelog: [v0.1.0-alpha.44...v0.1.0-alpha.45](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.44...v0.1.0-alpha.45)
