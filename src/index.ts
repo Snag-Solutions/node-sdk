@@ -7,9 +7,15 @@ import * as Errors from './error';
 import * as Uploads from './uploads';
 import * as API from './resources/index';
 import { AssetCreateAssetParams, AssetCreateAssetResponse, Assets } from './resources/assets';
-import { AuctionListAuctionBidsParams, AuctionListAuctionsResponse, Auctions } from './resources/auctions';
 import { Auth, AuthConnectAuthParams, AuthConnectAuthResponse } from './resources/auth';
 import { Minting, MintingGetAssetsParams, MintingGetAssetsResponse } from './resources/minting';
+import {
+  AuctionGetPageSectionsParams,
+  AuctionGetPageSectionsResponse,
+  AuctionListAuctionBidsParams,
+  AuctionListAuctionsResponse,
+  Auctions,
+} from './resources/auctions/auctions';
 import { Loyalty } from './resources/loyalty/loyalty';
 import {
   Referral,
@@ -21,10 +27,14 @@ import {
   UserConnectResponse,
   UserCountParams,
   UserCountResponse,
+  UserCreateDeviceParams,
+  UserCreateDeviceResponse,
   UserDisconnectParams,
   UserDisconnectResponse,
   UserListParams,
   UserListResponse,
+  UserVerifyParams,
+  UserVerifyResponse,
   Users,
 } from './resources/users/users';
 import {
@@ -222,7 +232,9 @@ export declare namespace SnagSolutions {
 
   export {
     Auctions as Auctions,
+    type AuctionGetPageSectionsResponse as AuctionGetPageSectionsResponse,
     type AuctionListAuctionsResponse as AuctionListAuctionsResponse,
+    type AuctionGetPageSectionsParams as AuctionGetPageSectionsParams,
     type AuctionListAuctionBidsParams as AuctionListAuctionBidsParams,
   };
 
@@ -231,11 +243,15 @@ export declare namespace SnagSolutions {
     type UserListResponse as UserListResponse,
     type UserConnectResponse as UserConnectResponse,
     type UserCountResponse as UserCountResponse,
+    type UserCreateDeviceResponse as UserCreateDeviceResponse,
     type UserDisconnectResponse as UserDisconnectResponse,
+    type UserVerifyResponse as UserVerifyResponse,
     type UserListParams as UserListParams,
     type UserConnectParams as UserConnectParams,
     type UserCountParams as UserCountParams,
+    type UserCreateDeviceParams as UserCreateDeviceParams,
     type UserDisconnectParams as UserDisconnectParams,
+    type UserVerifyParams as UserVerifyParams,
   };
 
   export { Loyalty as Loyalty };

@@ -97,14 +97,16 @@ import {
   RuleUpdateResponse,
   Rules,
 } from './rules';
-import * as TransactionsAPI from './transactions';
+import * as TransactionsAPI from './transactions/transactions';
 import {
   TransactionCreateTransactionParams,
   TransactionCreateTransactionResponse,
   TransactionGetTransactionEntriesParams,
   TransactionGetTransactionEntriesResponse,
+  TransactionListRuleChainsParams,
+  TransactionListRuleChainsResponse,
   Transactions,
-} from './transactions';
+} from './transactions/transactions';
 
 export class Loyalty extends APIResource {
   ruleGroups: RuleGroupsAPI.RuleGroups = new RuleGroupsAPI.RuleGroups(this._client);
@@ -148,8 +150,10 @@ export declare namespace Loyalty {
     Transactions as Transactions,
     type TransactionCreateTransactionResponse as TransactionCreateTransactionResponse,
     type TransactionGetTransactionEntriesResponse as TransactionGetTransactionEntriesResponse,
+    type TransactionListRuleChainsResponse as TransactionListRuleChainsResponse,
     type TransactionCreateTransactionParams as TransactionCreateTransactionParams,
     type TransactionGetTransactionEntriesParams as TransactionGetTransactionEntriesParams,
+    type TransactionListRuleChainsParams as TransactionListRuleChainsParams,
   };
 
   export {

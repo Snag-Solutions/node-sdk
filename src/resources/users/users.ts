@@ -45,10 +45,24 @@ export class Users extends APIResource {
   }
 
   /**
+   * This endpoint is used to create user devices for fraud tracking
+   */
+  createDevice(
+    body: UserCreateDeviceParams,
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<UserCreateDeviceResponse> {
+    return this._client.post('/api/users/devices', { body, ...options });
+  }
+
+  /**
    * This endpoint allows you to disconnect a user from another user
    */
   disconnect(body: UserDisconnectParams, options?: Core.RequestOptions): Core.APIPromise<unknown> {
     return this._client.post('/api/users/disconnect', { body, ...options });
+  }
+
+  verify(body: UserVerifyParams, options?: Core.RequestOptions): Core.APIPromise<UserVerifyResponse> {
+    return this._client.post('/api/users/verify', { body, ...options });
   }
 }
 
@@ -218,7 +232,51 @@ export interface UserCountResponse {
   totalCount: number;
 }
 
+/**
+ * Schema for a user device
+ */
+export interface UserCreateDeviceResponse {
+  /**
+   * Unique identifier for the user device
+   */
+  id: string;
+
+  /**
+   * Timestamp when the wallet was created
+   */
+  createdAt: string;
+
+  /**
+   * IP address of the user device
+   */
+  ipAddress: string;
+
+  /**
+   * Unique identifier for the organization
+   */
+  organizationId: string;
+
+  /**
+   * Source of the user device
+   */
+  source: string;
+
+  /**
+   * Unique identifier for the website
+   */
+  websiteId: string;
+
+  /**
+   * Device identifier of the user device
+   */
+  deviceIdentifier?: string;
+}
+
 export type UserDisconnectResponse = unknown;
+
+export interface UserVerifyResponse {
+  message: string;
+}
 
 export interface UserListParams {
   /**
@@ -415,12 +473,38 @@ export interface UserCountParams {
   websiteId: string;
 }
 
+export interface UserCreateDeviceParams {
+  /**
+   * IP address of the user device
+   */
+  ipAddress: string;
+
+  /**
+   * Device identifier of the user device
+   */
+  deviceIdentifier?: string;
+
+  userId?: string;
+
+  walletAddress?: string;
+}
+
 export interface UserDisconnectParams {
   organizationId: string;
 
   userId: string;
 
   websiteId: string;
+}
+
+export interface UserVerifyParams {
+  accountLinkData: string;
+
+  organizationId?: string;
+
+  userId?: string;
+
+  websiteId?: string;
 }
 
 Users.Metadatas = Metadatas;
@@ -430,11 +514,15 @@ export declare namespace Users {
     type UserListResponse as UserListResponse,
     type UserConnectResponse as UserConnectResponse,
     type UserCountResponse as UserCountResponse,
+    type UserCreateDeviceResponse as UserCreateDeviceResponse,
     type UserDisconnectResponse as UserDisconnectResponse,
+    type UserVerifyResponse as UserVerifyResponse,
     type UserListParams as UserListParams,
     type UserConnectParams as UserConnectParams,
     type UserCountParams as UserCountParams,
+    type UserCreateDeviceParams as UserCreateDeviceParams,
     type UserDisconnectParams as UserDisconnectParams,
+    type UserVerifyParams as UserVerifyParams,
   };
 
   export {
