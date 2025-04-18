@@ -133,6 +133,28 @@ describe('resource users', () => {
   });
 
   // skipped: tests are disabled for the time being
+  test.skip('createDevice: only required params', async () => {
+    const responsePromise = client.users.createDevice({ ipAddress: '123.456.789.012' });
+    const rawResponse = await responsePromise.asResponse();
+    expect(rawResponse).toBeInstanceOf(Response);
+    const response = await responsePromise;
+    expect(response).not.toBeInstanceOf(Response);
+    const dataAndResponse = await responsePromise.withResponse();
+    expect(dataAndResponse.data).toBe(response);
+    expect(dataAndResponse.response).toBe(rawResponse);
+  });
+
+  // skipped: tests are disabled for the time being
+  test.skip('createDevice: required and optional params', async () => {
+    const response = await client.users.createDevice({
+      ipAddress: '123.456.789.012',
+      deviceIdentifier: 'deviceIdentifier',
+      userId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+      walletAddress: 'walletAddress',
+    });
+  });
+
+  // skipped: tests are disabled for the time being
   test.skip('disconnect: only required params', async () => {
     const responsePromise = client.users.disconnect({
       organizationId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
@@ -151,6 +173,28 @@ describe('resource users', () => {
   // skipped: tests are disabled for the time being
   test.skip('disconnect: required and optional params', async () => {
     const response = await client.users.disconnect({
+      organizationId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+      userId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+      websiteId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+    });
+  });
+
+  // skipped: tests are disabled for the time being
+  test.skip('verify: only required params', async () => {
+    const responsePromise = client.users.verify({ accountLinkData: 'accountLinkData' });
+    const rawResponse = await responsePromise.asResponse();
+    expect(rawResponse).toBeInstanceOf(Response);
+    const response = await responsePromise;
+    expect(response).not.toBeInstanceOf(Response);
+    const dataAndResponse = await responsePromise.withResponse();
+    expect(dataAndResponse.data).toBe(response);
+    expect(dataAndResponse.response).toBe(rawResponse);
+  });
+
+  // skipped: tests are disabled for the time being
+  test.skip('verify: required and optional params', async () => {
+    const response = await client.users.verify({
+      accountLinkData: 'accountLinkData',
       organizationId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
       userId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
       websiteId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',

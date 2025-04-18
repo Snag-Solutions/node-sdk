@@ -22,12 +22,40 @@ Methods:
 
 Types:
 
-- <code><a href="./src/resources/auctions.ts">AuctionListAuctionsResponse</a></code>
+- <code><a href="./src/resources/auctions/auctions.ts">AuctionGetPageSectionsResponse</a></code>
+- <code><a href="./src/resources/auctions/auctions.ts">AuctionListAuctionsResponse</a></code>
 
 Methods:
 
-- <code title="get /api/auction_bids">client.auctions.<a href="./src/resources/auctions.ts">listAuctionBids</a>({ ...params }) -> void</code>
-- <code title="get /api/auctions">client.auctions.<a href="./src/resources/auctions.ts">listAuctions</a>() -> AuctionListAuctionsResponse</code>
+- <code title="get /api/page_sections">client.auctions.<a href="./src/resources/auctions/auctions.ts">getPageSections</a>({ ...params }) -> AuctionGetPageSectionsResponse</code>
+- <code title="get /api/auction_bids">client.auctions.<a href="./src/resources/auctions/auctions.ts">listAuctionBids</a>({ ...params }) -> void</code>
+- <code title="get /api/auctions">client.auctions.<a href="./src/resources/auctions/auctions.ts">listAuctions</a>() -> AuctionListAuctionsResponse</code>
+
+## WebsiteUserAttributes
+
+Types:
+
+- <code><a href="./src/resources/auctions/website-user-attributes/website-user-attributes.ts">WebsiteUserAttributeCreateResponse</a></code>
+- <code><a href="./src/resources/auctions/website-user-attributes/website-user-attributes.ts">WebsiteUserAttributeListResponse</a></code>
+- <code><a href="./src/resources/auctions/website-user-attributes/website-user-attributes.ts">WebsiteUserAttributeDeleteResponse</a></code>
+
+Methods:
+
+- <code title="post /api/website_user_attributes">client.auctions.websiteUserAttributes.<a href="./src/resources/auctions/website-user-attributes/website-user-attributes.ts">create</a>({ ...params }) -> WebsiteUserAttributeCreateResponse</code>
+- <code title="get /api/website_user_attributes">client.auctions.websiteUserAttributes.<a href="./src/resources/auctions/website-user-attributes/website-user-attributes.ts">list</a>({ ...params }) -> WebsiteUserAttributeListResponse</code>
+- <code title="delete /api/website_user_attributes/{id}">client.auctions.websiteUserAttributes.<a href="./src/resources/auctions/website-user-attributes/website-user-attributes.ts">delete</a>(pathId, { ...params }) -> WebsiteUserAttributeDeleteResponse</code>
+
+### Values
+
+Types:
+
+- <code><a href="./src/resources/auctions/website-user-attributes/values.ts">ValueCreateResponse</a></code>
+- <code><a href="./src/resources/auctions/website-user-attributes/values.ts">ValueListResponse</a></code>
+
+Methods:
+
+- <code title="post /api/website_user_attributes/values">client.auctions.websiteUserAttributes.values.<a href="./src/resources/auctions/website-user-attributes/values.ts">create</a>({ ...params }) -> ValueCreateResponse</code>
+- <code title="get /api/website_user_attributes/values">client.auctions.websiteUserAttributes.values.<a href="./src/resources/auctions/website-user-attributes/values.ts">list</a>({ ...params }) -> ValueListResponse</code>
 
 # Users
 
@@ -36,14 +64,18 @@ Types:
 - <code><a href="./src/resources/users/users.ts">UserListResponse</a></code>
 - <code><a href="./src/resources/users/users.ts">UserConnectResponse</a></code>
 - <code><a href="./src/resources/users/users.ts">UserCountResponse</a></code>
+- <code><a href="./src/resources/users/users.ts">UserCreateDeviceResponse</a></code>
 - <code><a href="./src/resources/users/users.ts">UserDisconnectResponse</a></code>
+- <code><a href="./src/resources/users/users.ts">UserVerifyResponse</a></code>
 
 Methods:
 
 - <code title="get /api/users">client.users.<a href="./src/resources/users/users.ts">list</a>({ ...params }) -> UserListResponse</code>
 - <code title="post /api/users/connect">client.users.<a href="./src/resources/users/users.ts">connect</a>({ ...params }) -> UserConnectResponse</code>
 - <code title="get /api/users/count">client.users.<a href="./src/resources/users/users.ts">count</a>({ ...params }) -> UserCountResponse</code>
+- <code title="post /api/users/devices">client.users.<a href="./src/resources/users/users.ts">createDevice</a>({ ...params }) -> UserCreateDeviceResponse</code>
 - <code title="post /api/users/disconnect">client.users.<a href="./src/resources/users/users.ts">disconnect</a>({ ...params }) -> unknown</code>
+- <code title="post /api/users/verify">client.users.<a href="./src/resources/users/users.ts">verify</a>({ ...params }) -> UserVerifyResponse</code>
 
 ## Metadatas
 
@@ -79,13 +111,27 @@ Methods:
 
 Types:
 
-- <code><a href="./src/resources/loyalty/transactions.ts">TransactionCreateTransactionResponse</a></code>
-- <code><a href="./src/resources/loyalty/transactions.ts">TransactionGetTransactionEntriesResponse</a></code>
+- <code><a href="./src/resources/loyalty/transactions/transactions.ts">TransactionCreateTransactionResponse</a></code>
+- <code><a href="./src/resources/loyalty/transactions/transactions.ts">TransactionGetTransactionEntriesResponse</a></code>
+- <code><a href="./src/resources/loyalty/transactions/transactions.ts">TransactionListRuleChainsResponse</a></code>
 
 Methods:
 
-- <code title="post /api/loyalty/transactions">client.loyalty.transactions.<a href="./src/resources/loyalty/transactions.ts">createTransaction</a>({ ...params }) -> TransactionCreateTransactionResponse</code>
-- <code title="get /api/loyalty/transaction_entries">client.loyalty.transactions.<a href="./src/resources/loyalty/transactions.ts">getTransactionEntries</a>({ ...params }) -> TransactionGetTransactionEntriesResponse</code>
+- <code title="post /api/loyalty/transactions">client.loyalty.transactions.<a href="./src/resources/loyalty/transactions/transactions.ts">createTransaction</a>({ ...params }) -> TransactionCreateTransactionResponse</code>
+- <code title="get /api/loyalty/transaction_entries">client.loyalty.transactions.<a href="./src/resources/loyalty/transactions/transactions.ts">getTransactionEntries</a>({ ...params }) -> TransactionGetTransactionEntriesResponse</code>
+- <code title="get /api/loyalty/rule_chains">client.loyalty.transactions.<a href="./src/resources/loyalty/transactions/transactions.ts">listRuleChains</a>({ ...params }) -> TransactionListRuleChainsResponse</code>
+
+### RuleStatuses
+
+Types:
+
+- <code><a href="./src/resources/loyalty/transactions/rule-statuses.ts">RuleStatusUpdateResponse</a></code>
+- <code><a href="./src/resources/loyalty/transactions/rule-statuses.ts">RuleStatusListResponse</a></code>
+
+Methods:
+
+- <code title="post /api/loyalty/rule_statuses">client.loyalty.transactions.ruleStatuses.<a href="./src/resources/loyalty/transactions/rule-statuses.ts">update</a>({ ...params }) -> RuleStatusUpdateResponse</code>
+- <code title="get /api/loyalty/rule_statuses">client.loyalty.transactions.ruleStatuses.<a href="./src/resources/loyalty/transactions/rule-statuses.ts">list</a>({ ...params }) -> RuleStatusListResponse</code>
 
 ## Accounts
 

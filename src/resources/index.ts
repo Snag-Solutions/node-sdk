@@ -1,7 +1,13 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
 export { Assets, type AssetCreateAssetResponse, type AssetCreateAssetParams } from './assets';
-export { Auctions, type AuctionListAuctionsResponse, type AuctionListAuctionBidsParams } from './auctions';
+export {
+  Auctions,
+  type AuctionGetPageSectionsResponse,
+  type AuctionListAuctionsResponse,
+  type AuctionGetPageSectionsParams,
+  type AuctionListAuctionBidsParams,
+} from './auctions/auctions';
 export { Auth, type AuthConnectAuthResponse, type AuthConnectAuthParams } from './auth';
 export { Loyalty } from './loyalty/loyalty';
 export { Minting, type MintingGetAssetsResponse, type MintingGetAssetsParams } from './minting';
@@ -15,11 +21,15 @@ export {
   type UserListResponse,
   type UserConnectResponse,
   type UserCountResponse,
+  type UserCreateDeviceResponse,
   type UserDisconnectResponse,
+  type UserVerifyResponse,
   type UserListParams,
   type UserConnectParams,
   type UserCountParams,
+  type UserCreateDeviceParams,
   type UserDisconnectParams,
+  type UserVerifyParams,
 } from './users/users';
 export {
   Websites,
