@@ -12,9 +12,13 @@ export {
   type UserListResponse,
   type UserConnectResponse,
   type UserCountResponse,
+  type UserCreateDeviceResponse,
   type UserDisconnectResponse,
+  type UserVerifyResponse,
   type UserListParams,
   type UserConnectParams,
   type UserCountParams,
+  type UserCreateDeviceParams,
   type UserDisconnectParams,
+  type UserVerifyParams,
 } from './users';

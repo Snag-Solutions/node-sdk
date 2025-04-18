@@ -10,6 +10,35 @@ const client = new SnagSolutions({
 
 describe('resource auctions', () => {
   // skipped: tests are disabled for the time being
+  test.skip('getPageSections: only required params', async () => {
+    const responsePromise = client.auctions.getPageSections({
+      organizationId: '123e4567-e89b-12d3-a456-426614174334',
+      placement: 'page',
+      websiteId: '123e4567-e89b-12d3-a456-426614174333',
+    });
+    const rawResponse = await responsePromise.asResponse();
+    expect(rawResponse).toBeInstanceOf(Response);
+    const response = await responsePromise;
+    expect(response).not.toBeInstanceOf(Response);
+    const dataAndResponse = await responsePromise.withResponse();
+    expect(dataAndResponse.data).toBe(response);
+    expect(dataAndResponse.response).toBe(rawResponse);
+  });
+
+  // skipped: tests are disabled for the time being
+  test.skip('getPageSections: required and optional params', async () => {
+    const response = await client.auctions.getPageSections({
+      organizationId: '123e4567-e89b-12d3-a456-426614174334',
+      placement: 'page',
+      websiteId: '123e4567-e89b-12d3-a456-426614174333',
+      all: '1',
+      pageId: '123e4567-e89b-12d3-a456-426614174336',
+      pageSectionType: 'all_items',
+      websiteCollectionId: '123e4567-e89b-12d3-a456-426614174335',
+    });
+  });
+
+  // skipped: tests are disabled for the time being
   test.skip('listAuctionBids', async () => {
     const responsePromise = client.auctions.listAuctionBids();
     const rawResponse = await responsePromise.asResponse();
