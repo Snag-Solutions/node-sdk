@@ -291,6 +291,11 @@ export namespace RuleEditListResponse {
         imageUrl?: string | null;
 
         /**
+         * If enabled, the first transaction done on the platform will complete this rule
+         */
+        isCheckInOnEveryTxn?: boolean;
+
+        /**
          * Indicates if the multiplier has been applied to rewards.
          */
         isMultiplierApplied?: boolean;
@@ -1041,6 +1046,11 @@ export namespace RuleEditListResponse {
          * URL of the image associated with the rule.
          */
         imageUrl?: string | null;
+
+        /**
+         * If enabled, the first transaction done on the platform will complete this rule
+         */
+        isCheckInOnEveryTxn?: boolean;
 
         /**
          * Indicates if the multiplier has been applied to rewards.
@@ -1850,6 +1860,11 @@ export namespace RuleEditRestoreResponse {
       imageUrl?: string | null;
 
       /**
+       * If enabled, the first transaction done on the platform will complete this rule
+       */
+      isCheckInOnEveryTxn?: boolean;
+
+      /**
        * Indicates if the multiplier has been applied to rewards.
        */
       isMultiplierApplied?: boolean;
@@ -2600,6 +2615,11 @@ export namespace RuleEditRestoreResponse {
        * URL of the image associated with the rule.
        */
       imageUrl?: string | null;
+
+      /**
+       * If enabled, the first transaction done on the platform will complete this rule
+       */
+      isCheckInOnEveryTxn?: boolean;
 
       /**
        * Indicates if the multiplier has been applied to rewards.
