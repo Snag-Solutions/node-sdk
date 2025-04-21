@@ -328,6 +328,11 @@ export namespace RuleGroupGetRuleGroupsResponse {
           imageUrl?: string | null;
 
           /**
+           * If enabled, the first transaction done on the platform will complete this rule
+           */
+          isCheckInOnEveryTxn?: boolean;
+
+          /**
            * Indicates if the multiplier has been applied to rewards.
            */
           isMultiplierApplied?: boolean;
