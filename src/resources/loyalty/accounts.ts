@@ -150,9 +150,9 @@ export namespace AccountListResponse {
  */
 export interface AccountRetrieveRankResponse {
   /**
-   * Rank of the user
+   * Rank of the user. null means the user has no amount.
    */
-  rank: number;
+  rank: number | null;
 }
 
 export interface AccountListParams {
