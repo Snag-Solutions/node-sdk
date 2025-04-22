@@ -160,6 +160,8 @@ export namespace UserListResponse {
 
       epicUsername?: string | null;
 
+      externalLoyaltyScore?: string | null;
+
       instagramUser?: string | null;
 
       instagramVerifiedAt?: string | null;
