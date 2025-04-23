@@ -351,6 +351,8 @@ export interface TransactionGetTransactionEntriesParams {
     | 'quiz'
     | 'poll'
     | 'steam_wishlist'
+    | 'liquidity_uniswap_v2'
+    | 'liquidity_uniswap_v3'
     | Array<
         | 'Bonus'
         | 'BoughtOn'
@@ -406,6 +408,8 @@ export interface TransactionGetTransactionEntriesParams {
         | 'quiz'
         | 'poll'
         | 'steam_wishlist'
+        | 'liquidity_uniswap_v2'
+        | 'liquidity_uniswap_v3'
       >;
 
   /**
