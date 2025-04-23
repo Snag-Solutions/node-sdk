@@ -192,6 +192,8 @@ export namespace TransactionGetTransactionEntriesResponse {
          */
         description?: string;
 
+        loyaltyRuleGroupItem?: LoyaltyRule.LoyaltyRuleGroupItem;
+
         /**
          * Optional metadata for the loyalty rule
          */
@@ -201,6 +203,12 @@ export namespace TransactionGetTransactionEntriesResponse {
          * Name of the loyalty rule
          */
         name?: string;
+      }
+
+      export namespace LoyaltyRule {
+        export interface LoyaltyRuleGroupItem {
+          loyaltyRuleGroupId: string;
+        }
       }
     }
   }
