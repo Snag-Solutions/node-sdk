@@ -176,6 +176,11 @@ export namespace RuleEditListResponse {
     export namespace Data {
       export interface Metadata {
         /**
+         * Number of tokens per batch.
+         */
+        batchSize?: number | null;
+
+        /**
          * Text displayed on the action button.
          */
         buttonText?: string | null;
@@ -384,6 +389,11 @@ export namespace RuleEditListResponse {
          * Lump sum reward given to a referrer.
          */
         referrerReward?: number | null;
+
+        /**
+         * Flag indicating if the reward is rewarded by batch.
+         */
+        rewardByBatch?: boolean | null;
 
         /**
          * Flag indicating if rewards are given per impression.
@@ -1022,6 +1032,11 @@ export namespace RuleEditListResponse {
     export namespace PreviousData {
       export interface Metadata {
         /**
+         * Number of tokens per batch.
+         */
+        batchSize?: number | null;
+
+        /**
          * Text displayed on the action button.
          */
         buttonText?: string | null;
@@ -1230,6 +1245,11 @@ export namespace RuleEditListResponse {
          * Lump sum reward given to a referrer.
          */
         referrerReward?: number | null;
+
+        /**
+         * Flag indicating if the reward is rewarded by batch.
+         */
+        rewardByBatch?: boolean | null;
 
         /**
          * Flag indicating if rewards are given per impression.
@@ -1923,6 +1943,11 @@ export namespace RuleEditRestoreResponse {
   export namespace Data {
     export interface Metadata {
       /**
+       * Number of tokens per batch.
+       */
+      batchSize?: number | null;
+
+      /**
        * Text displayed on the action button.
        */
       buttonText?: string | null;
@@ -2131,6 +2156,11 @@ export namespace RuleEditRestoreResponse {
        * Lump sum reward given to a referrer.
        */
       referrerReward?: number | null;
+
+      /**
+       * Flag indicating if the reward is rewarded by batch.
+       */
+      rewardByBatch?: boolean | null;
 
       /**
        * Flag indicating if rewards are given per impression.
@@ -2769,6 +2799,11 @@ export namespace RuleEditRestoreResponse {
   export namespace PreviousData {
     export interface Metadata {
       /**
+       * Number of tokens per batch.
+       */
+      batchSize?: number | null;
+
+      /**
        * Text displayed on the action button.
        */
       buttonText?: string | null;
@@ -2977,6 +3012,11 @@ export namespace RuleEditRestoreResponse {
        * Lump sum reward given to a referrer.
        */
       referrerReward?: number | null;
+
+      /**
+       * Flag indicating if the reward is rewarded by batch.
+       */
+      rewardByBatch?: boolean | null;
 
       /**
        * Flag indicating if rewards are given per impression.

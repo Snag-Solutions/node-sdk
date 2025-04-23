@@ -215,6 +215,11 @@ export namespace RuleGroupGetRuleGroupsResponse {
       export namespace LoyaltyRule {
         export interface Metadata {
           /**
+           * Number of tokens per batch.
+           */
+          batchSize?: number | null;
+
+          /**
            * Text displayed on the action button.
            */
           buttonText?: string | null;
@@ -423,6 +428,11 @@ export namespace RuleGroupGetRuleGroupsResponse {
            * Lump sum reward given to a referrer.
            */
           referrerReward?: number | null;
+
+          /**
+           * Flag indicating if the reward is rewarded by batch.
+           */
+          rewardByBatch?: boolean | null;
 
           /**
            * Flag indicating if rewards are given per impression.
