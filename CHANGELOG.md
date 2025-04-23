@@ -1,5 +1,21 @@
 # Changelog
 
+## 0.1.0-alpha.49 (2025-04-23)
+
+Full Changelog: [v0.1.0-alpha.48...v0.1.0-alpha.49](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.48...v0.1.0-alpha.49)
+
+### Features
+
+* **api:** open api update ([6e027de](https://github.com/Snag-Solutions/node-sdk/commit/6e027de70ea46293e4440e417d6b3d7e78c8755d))
+* **api:** open api update ([55dc70e](https://github.com/Snag-Solutions/node-sdk/commit/55dc70e8f3fb91c1038ecbd59023ba11edf6ec9f))
+* **api:** open api update ([27af90e](https://github.com/Snag-Solutions/node-sdk/commit/27af90e6ab10215afdad312c325a0b819fede8d9))
+* **api:** open api update ([973081c](https://github.com/Snag-Solutions/node-sdk/commit/973081c6b16f8b73c097002410fb9990e37c2949))
+
+
+### Chores
+
+* **ci:** add timeout thresholds for CI jobs ([7f0bbe0](https://github.com/Snag-Solutions/node-sdk/commit/7f0bbe0ad0243e5feeaf5eb15850202b8cce0293))
+
 ## 0.1.0-alpha.48 (2025-04-22)
 
 Full Changelog: [v0.1.0-alpha.47...v0.1.0-alpha.48](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.47...v0.1.0-alpha.48)
