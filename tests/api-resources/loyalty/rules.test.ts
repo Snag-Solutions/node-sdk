@@ -44,6 +44,7 @@ describe('resource rules', () => {
       frequency: 'daily',
       loyaltyCurrencyId: '456e1234-e89b-12d3-a456-426614174003',
       metadata: {
+        batchSize: 100,
         buttonText: 'Verify Now',
         checkComment: true,
         checkLike: true,
@@ -109,6 +110,7 @@ describe('resource rules', () => {
           points: { amount: 50, loyaltyCurrecyId: 'currency123' },
         },
         referrerReward: 50,
+        rewardByBatch: true,
         rewardPerImpression: true,
         saleCurrency: 'USD',
         secondReferralReward: 5,
@@ -206,6 +208,7 @@ describe('resource rules', () => {
       loyaltyRuleGroupId: '123e4567-e89b-12d3-a456-426614174005',
       mediaUrl: 'https://example.com/media.png',
       metadata: {
+        batchSize: 100,
         buttonText: 'Verify Now',
         checkComment: true,
         checkLike: true,
@@ -271,6 +274,7 @@ describe('resource rules', () => {
           points: { amount: 50, loyaltyCurrecyId: 'currency123' },
         },
         referrerReward: 50,
+        rewardByBatch: true,
         rewardPerImpression: true,
         saleCurrency: 'USD',
         secondReferralReward: 5,

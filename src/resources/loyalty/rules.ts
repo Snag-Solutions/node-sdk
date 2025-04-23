@@ -324,6 +324,11 @@ export namespace RuleCreateResponse {
    */
   export interface Metadata {
     /**
+     * Number of tokens per batch.
+     */
+    batchSize?: number | null;
+
+    /**
      * Text displayed on the action button.
      */
     buttonText?: string | null;
@@ -532,6 +537,11 @@ export namespace RuleCreateResponse {
      * Lump sum reward given to a referrer.
      */
     referrerReward?: number | null;
+
+    /**
+     * Flag indicating if the reward is rewarded by batch.
+     */
+    rewardByBatch?: boolean | null;
 
     /**
      * Flag indicating if rewards are given per impression.
@@ -1326,6 +1336,11 @@ export namespace RuleUpdateResponse {
    */
   export interface Metadata {
     /**
+     * Number of tokens per batch.
+     */
+    batchSize?: number | null;
+
+    /**
      * Text displayed on the action button.
      */
     buttonText?: string | null;
@@ -1534,6 +1549,11 @@ export namespace RuleUpdateResponse {
      * Lump sum reward given to a referrer.
      */
     referrerReward?: number | null;
+
+    /**
+     * Flag indicating if the reward is rewarded by batch.
+     */
+    rewardByBatch?: boolean | null;
 
     /**
      * Flag indicating if rewards are given per impression.
@@ -2179,6 +2199,11 @@ export namespace RuleListResponse {
   export namespace Data {
     export interface Metadata {
       /**
+       * Number of tokens per batch.
+       */
+      batchSize?: number | null;
+
+      /**
        * Text displayed on the action button.
        */
       buttonText?: string | null;
@@ -2387,6 +2412,11 @@ export namespace RuleListResponse {
        * Lump sum reward given to a referrer.
        */
       referrerReward?: number | null;
+
+      /**
+       * Flag indicating if the reward is rewarded by batch.
+       */
+      rewardByBatch?: boolean | null;
 
       /**
        * Flag indicating if rewards are given per impression.
@@ -3193,6 +3223,11 @@ export namespace RuleCreateParams {
    */
   export interface Metadata {
     /**
+     * Number of tokens per batch.
+     */
+    batchSize?: number | null;
+
+    /**
      * Text displayed on the action button.
      */
     buttonText?: string | null;
@@ -3401,6 +3436,11 @@ export namespace RuleCreateParams {
      * Lump sum reward given to a referrer.
      */
     referrerReward?: number | null;
+
+    /**
+     * Flag indicating if the reward is rewarded by batch.
+     */
+    rewardByBatch?: boolean | null;
 
     /**
      * Flag indicating if rewards are given per impression.
@@ -4193,6 +4233,11 @@ export namespace RuleUpdateParams {
    */
   export interface Metadata {
     /**
+     * Number of tokens per batch.
+     */
+    batchSize?: number | null;
+
+    /**
      * Text displayed on the action button.
      */
     buttonText?: string | null;
@@ -4401,6 +4446,11 @@ export namespace RuleUpdateParams {
      * Lump sum reward given to a referrer.
      */
     referrerReward?: number | null;
+
+    /**
+     * Flag indicating if the reward is rewarded by batch.
+     */
+    rewardByBatch?: boolean | null;
 
     /**
      * Flag indicating if rewards are given per impression.
