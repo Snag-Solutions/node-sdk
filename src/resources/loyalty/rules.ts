@@ -198,7 +198,9 @@ export interface RuleCreateResponse {
     | 'twitter_post_hashtag'
     | 'quiz'
     | 'poll'
-    | 'steam_wishlist';
+    | 'steam_wishlist'
+    | 'liquidity_uniswap_v2'
+    | 'liquidity_uniswap_v3';
 
   /**
    * Unique identifier for the associated website
@@ -321,6 +323,11 @@ export namespace RuleCreateResponse {
    * Additional metadata for the loyalty rule
    */
   export interface Metadata {
+    /**
+     * Number of tokens per batch.
+     */
+    batchSize?: number | null;
+
     /**
      * Text displayed on the action button.
      */
@@ -462,6 +469,11 @@ export namespace RuleCreateResponse {
     link?: string | null;
 
     /**
+     * Liquidity pool details.
+     */
+    liquidity?: Metadata.Liquidity;
+
+    /**
      * Maximum quantity constraint for token holding.
      */
     maxQty?: number | null;
@@ -525,6 +537,11 @@ export namespace RuleCreateResponse {
      * Lump sum reward given to a referrer.
      */
     referrerReward?: number | null;
+
+    /**
+     * Flag indicating if the reward is rewarded by batch.
+     */
+    rewardByBatch?: boolean | null;
 
     /**
      * Flag indicating if rewards are given per impression.
@@ -784,6 +801,90 @@ export namespace RuleCreateResponse {
        * ID of the drip quest to complete.
        */
       id: string;
+    }
+
+    /**
+     * Liquidity pool details.
+     */
+    export interface Liquidity {
+      /**
+       * Calculation type of the liquidity pool.
+       */
+      calculationType?: 'fixed' | 'custom';
+
+      /**
+       * Blockchain network of the liquidity pool.
+       */
+      chain?:
+        | 'abstract'
+        | 'abstractTestnet'
+        | 'apechain'
+        | 'arbitrum'
+        | 'avalanche'
+        | 'avalancheFuji'
+        | 'base'
+        | 'baseSepolia'
+        | 'berachainArtio'
+        | 'binance'
+        | 'bscTestnet'
+        | 'campTestnet'
+        | 'fantom'
+        | 'fantomTestnet'
+        | 'flowMainnet'
+        | 'mainnet'
+        | 'optimism'
+        | 'polygon'
+        | 'polygon_mumbai'
+        | 'skaleNebula'
+        | 'solana'
+        | 'sophon'
+        | 'sui'
+        | 'superseed'
+        | 'superseedSepolia'
+        | 'vanar'
+        | 'xai'
+        | 'zksync'
+        | 'sepolia'
+        | 'optimism_sepolia'
+        | 'arbitrumSepolia'
+        | 'goerli'
+        | 'optimism_goerli'
+        | 'arbitrumGoerli'
+        | 'basecamp';
+
+      /**
+       * Custom function to calculate the liquidity provided per hour
+       */
+      customFunction?: string;
+
+      /**
+       * Liquidity provided per hour
+       */
+      liquidityPerHour?: number;
+
+      /**
+       * Indicates if only in-range liquidity is rewarded.
+       */
+      onlyRewardInRangeLiquidity?: boolean;
+
+      /**
+       * Array of liquidity pools associated with the rule.
+       */
+      pools?: Array<Liquidity.Pool>;
+
+      /**
+       * Protocol of the liquidity pool.
+       */
+      protocol?: string;
+    }
+
+    export namespace Liquidity {
+      export interface Pool {
+        /**
+         * Unique identifier of the liquidity pool.
+         */
+        id?: string;
+      }
     }
 
     export interface Range {
@@ -1235,6 +1336,11 @@ export namespace RuleUpdateResponse {
    */
   export interface Metadata {
     /**
+     * Number of tokens per batch.
+     */
+    batchSize?: number | null;
+
+    /**
      * Text displayed on the action button.
      */
     buttonText?: string | null;
@@ -1375,6 +1481,11 @@ export namespace RuleUpdateResponse {
     link?: string | null;
 
     /**
+     * Liquidity pool details.
+     */
+    liquidity?: Metadata.Liquidity;
+
+    /**
      * Maximum quantity constraint for token holding.
      */
     maxQty?: number | null;
@@ -1438,6 +1549,11 @@ export namespace RuleUpdateResponse {
      * Lump sum reward given to a referrer.
      */
     referrerReward?: number | null;
+
+    /**
+     * Flag indicating if the reward is rewarded by batch.
+     */
+    rewardByBatch?: boolean | null;
 
     /**
      * Flag indicating if rewards are given per impression.
@@ -1697,6 +1813,90 @@ export namespace RuleUpdateResponse {
        * ID of the drip quest to complete.
        */
       id: string;
+    }
+
+    /**
+     * Liquidity pool details.
+     */
+    export interface Liquidity {
+      /**
+       * Calculation type of the liquidity pool.
+       */
+      calculationType?: 'fixed' | 'custom';
+
+      /**
+       * Blockchain network of the liquidity pool.
+       */
+      chain?:
+        | 'abstract'
+        | 'abstractTestnet'
+        | 'apechain'
+        | 'arbitrum'
+        | 'avalanche'
+        | 'avalancheFuji'
+        | 'base'
+        | 'baseSepolia'
+        | 'berachainArtio'
+        | 'binance'
+        | 'bscTestnet'
+        | 'campTestnet'
+        | 'fantom'
+        | 'fantomTestnet'
+        | 'flowMainnet'
+        | 'mainnet'
+        | 'optimism'
+        | 'polygon'
+        | 'polygon_mumbai'
+        | 'skaleNebula'
+        | 'solana'
+        | 'sophon'
+        | 'sui'
+        | 'superseed'
+        | 'superseedSepolia'
+        | 'vanar'
+        | 'xai'
+        | 'zksync'
+        | 'sepolia'
+        | 'optimism_sepolia'
+        | 'arbitrumSepolia'
+        | 'goerli'
+        | 'optimism_goerli'
+        | 'arbitrumGoerli'
+        | 'basecamp';
+
+      /**
+       * Custom function to calculate the liquidity provided per hour
+       */
+      customFunction?: string;
+
+      /**
+       * Liquidity provided per hour
+       */
+      liquidityPerHour?: number;
+
+      /**
+       * Indicates if only in-range liquidity is rewarded.
+       */
+      onlyRewardInRangeLiquidity?: boolean;
+
+      /**
+       * Array of liquidity pools associated with the rule.
+       */
+      pools?: Array<Liquidity.Pool>;
+
+      /**
+       * Protocol of the liquidity pool.
+       */
+      protocol?: string;
+    }
+
+    export namespace Liquidity {
+      export interface Pool {
+        /**
+         * Unique identifier of the liquidity pool.
+         */
+        id?: string;
+      }
     }
 
     export interface Range {
@@ -1999,6 +2199,11 @@ export namespace RuleListResponse {
   export namespace Data {
     export interface Metadata {
       /**
+       * Number of tokens per batch.
+       */
+      batchSize?: number | null;
+
+      /**
        * Text displayed on the action button.
        */
       buttonText?: string | null;
@@ -2139,6 +2344,11 @@ export namespace RuleListResponse {
       link?: string | null;
 
       /**
+       * Liquidity pool details.
+       */
+      liquidity?: Metadata.Liquidity;
+
+      /**
        * Maximum quantity constraint for token holding.
        */
       maxQty?: number | null;
@@ -2202,6 +2412,11 @@ export namespace RuleListResponse {
        * Lump sum reward given to a referrer.
        */
       referrerReward?: number | null;
+
+      /**
+       * Flag indicating if the reward is rewarded by batch.
+       */
+      rewardByBatch?: boolean | null;
 
       /**
        * Flag indicating if rewards are given per impression.
@@ -2461,6 +2676,90 @@ export namespace RuleListResponse {
          * ID of the drip quest to complete.
          */
         id: string;
+      }
+
+      /**
+       * Liquidity pool details.
+       */
+      export interface Liquidity {
+        /**
+         * Calculation type of the liquidity pool.
+         */
+        calculationType?: 'fixed' | 'custom';
+
+        /**
+         * Blockchain network of the liquidity pool.
+         */
+        chain?:
+          | 'abstract'
+          | 'abstractTestnet'
+          | 'apechain'
+          | 'arbitrum'
+          | 'avalanche'
+          | 'avalancheFuji'
+          | 'base'
+          | 'baseSepolia'
+          | 'berachainArtio'
+          | 'binance'
+          | 'bscTestnet'
+          | 'campTestnet'
+          | 'fantom'
+          | 'fantomTestnet'
+          | 'flowMainnet'
+          | 'mainnet'
+          | 'optimism'
+          | 'polygon'
+          | 'polygon_mumbai'
+          | 'skaleNebula'
+          | 'solana'
+          | 'sophon'
+          | 'sui'
+          | 'superseed'
+          | 'superseedSepolia'
+          | 'vanar'
+          | 'xai'
+          | 'zksync'
+          | 'sepolia'
+          | 'optimism_sepolia'
+          | 'arbitrumSepolia'
+          | 'goerli'
+          | 'optimism_goerli'
+          | 'arbitrumGoerli'
+          | 'basecamp';
+
+        /**
+         * Custom function to calculate the liquidity provided per hour
+         */
+        customFunction?: string;
+
+        /**
+         * Liquidity provided per hour
+         */
+        liquidityPerHour?: number;
+
+        /**
+         * Indicates if only in-range liquidity is rewarded.
+         */
+        onlyRewardInRangeLiquidity?: boolean;
+
+        /**
+         * Array of liquidity pools associated with the rule.
+         */
+        pools?: Array<Liquidity.Pool>;
+
+        /**
+         * Protocol of the liquidity pool.
+         */
+        protocol?: string;
+      }
+
+      export namespace Liquidity {
+        export interface Pool {
+          /**
+           * Unique identifier of the liquidity pool.
+           */
+          id?: string;
+        }
       }
 
       export interface Range {
@@ -2798,7 +3097,9 @@ export interface RuleCreateParams {
     | 'twitter_post_hashtag'
     | 'quiz'
     | 'poll'
-    | 'steam_wishlist';
+    | 'steam_wishlist'
+    | 'liquidity_uniswap_v2'
+    | 'liquidity_uniswap_v3';
 
   /**
    * Unique identifier for the associated website
@@ -2921,6 +3222,11 @@ export namespace RuleCreateParams {
    * Additional metadata for the loyalty rule
    */
   export interface Metadata {
+    /**
+     * Number of tokens per batch.
+     */
+    batchSize?: number | null;
+
     /**
      * Text displayed on the action button.
      */
@@ -3062,6 +3368,11 @@ export namespace RuleCreateParams {
     link?: string | null;
 
     /**
+     * Liquidity pool details.
+     */
+    liquidity?: Metadata.Liquidity;
+
+    /**
      * Maximum quantity constraint for token holding.
      */
     maxQty?: number | null;
@@ -3125,6 +3436,11 @@ export namespace RuleCreateParams {
      * Lump sum reward given to a referrer.
      */
     referrerReward?: number | null;
+
+    /**
+     * Flag indicating if the reward is rewarded by batch.
+     */
+    rewardByBatch?: boolean | null;
 
     /**
      * Flag indicating if rewards are given per impression.
@@ -3384,6 +3700,90 @@ export namespace RuleCreateParams {
        * ID of the drip quest to complete.
        */
       id: string;
+    }
+
+    /**
+     * Liquidity pool details.
+     */
+    export interface Liquidity {
+      /**
+       * Calculation type of the liquidity pool.
+       */
+      calculationType?: 'fixed' | 'custom';
+
+      /**
+       * Blockchain network of the liquidity pool.
+       */
+      chain?:
+        | 'abstract'
+        | 'abstractTestnet'
+        | 'apechain'
+        | 'arbitrum'
+        | 'avalanche'
+        | 'avalancheFuji'
+        | 'base'
+        | 'baseSepolia'
+        | 'berachainArtio'
+        | 'binance'
+        | 'bscTestnet'
+        | 'campTestnet'
+        | 'fantom'
+        | 'fantomTestnet'
+        | 'flowMainnet'
+        | 'mainnet'
+        | 'optimism'
+        | 'polygon'
+        | 'polygon_mumbai'
+        | 'skaleNebula'
+        | 'solana'
+        | 'sophon'
+        | 'sui'
+        | 'superseed'
+        | 'superseedSepolia'
+        | 'vanar'
+        | 'xai'
+        | 'zksync'
+        | 'sepolia'
+        | 'optimism_sepolia'
+        | 'arbitrumSepolia'
+        | 'goerli'
+        | 'optimism_goerli'
+        | 'arbitrumGoerli'
+        | 'basecamp';
+
+      /**
+       * Custom function to calculate the liquidity provided per hour
+       */
+      customFunction?: string;
+
+      /**
+       * Liquidity provided per hour
+       */
+      liquidityPerHour?: number;
+
+      /**
+       * Indicates if only in-range liquidity is rewarded.
+       */
+      onlyRewardInRangeLiquidity?: boolean;
+
+      /**
+       * Array of liquidity pools associated with the rule.
+       */
+      pools?: Array<Liquidity.Pool>;
+
+      /**
+       * Protocol of the liquidity pool.
+       */
+      protocol?: string;
+    }
+
+    export namespace Liquidity {
+      export interface Pool {
+        /**
+         * Unique identifier of the liquidity pool.
+         */
+        id?: string;
+      }
     }
 
     export interface Range {
@@ -3833,6 +4233,11 @@ export namespace RuleUpdateParams {
    */
   export interface Metadata {
     /**
+     * Number of tokens per batch.
+     */
+    batchSize?: number | null;
+
+    /**
      * Text displayed on the action button.
      */
     buttonText?: string | null;
@@ -3973,6 +4378,11 @@ export namespace RuleUpdateParams {
     link?: string | null;
 
     /**
+     * Liquidity pool details.
+     */
+    liquidity?: Metadata.Liquidity;
+
+    /**
      * Maximum quantity constraint for token holding.
      */
     maxQty?: number | null;
@@ -4036,6 +4446,11 @@ export namespace RuleUpdateParams {
      * Lump sum reward given to a referrer.
      */
     referrerReward?: number | null;
+
+    /**
+     * Flag indicating if the reward is rewarded by batch.
+     */
+    rewardByBatch?: boolean | null;
 
     /**
      * Flag indicating if rewards are given per impression.
@@ -4295,6 +4710,90 @@ export namespace RuleUpdateParams {
        * ID of the drip quest to complete.
        */
       id: string;
+    }
+
+    /**
+     * Liquidity pool details.
+     */
+    export interface Liquidity {
+      /**
+       * Calculation type of the liquidity pool.
+       */
+      calculationType?: 'fixed' | 'custom';
+
+      /**
+       * Blockchain network of the liquidity pool.
+       */
+      chain?:
+        | 'abstract'
+        | 'abstractTestnet'
+        | 'apechain'
+        | 'arbitrum'
+        | 'avalanche'
+        | 'avalancheFuji'
+        | 'base'
+        | 'baseSepolia'
+        | 'berachainArtio'
+        | 'binance'
+        | 'bscTestnet'
+        | 'campTestnet'
+        | 'fantom'
+        | 'fantomTestnet'
+        | 'flowMainnet'
+        | 'mainnet'
+        | 'optimism'
+        | 'polygon'
+        | 'polygon_mumbai'
+        | 'skaleNebula'
+        | 'solana'
+        | 'sophon'
+        | 'sui'
+        | 'superseed'
+        | 'superseedSepolia'
+        | 'vanar'
+        | 'xai'
+        | 'zksync'
+        | 'sepolia'
+        | 'optimism_sepolia'
+        | 'arbitrumSepolia'
+        | 'goerli'
+        | 'optimism_goerli'
+        | 'arbitrumGoerli'
+        | 'basecamp';
+
+      /**
+       * Custom function to calculate the liquidity provided per hour
+       */
+      customFunction?: string;
+
+      /**
+       * Liquidity provided per hour
+       */
+      liquidityPerHour?: number;
+
+      /**
+       * Indicates if only in-range liquidity is rewarded.
+       */
+      onlyRewardInRangeLiquidity?: boolean;
+
+      /**
+       * Array of liquidity pools associated with the rule.
+       */
+      pools?: Array<Liquidity.Pool>;
+
+      /**
+       * Protocol of the liquidity pool.
+       */
+      protocol?: string;
+    }
+
+    export namespace Liquidity {
+      export interface Pool {
+        /**
+         * Unique identifier of the liquidity pool.
+         */
+        id?: string;
+      }
     }
 
     export interface Range {

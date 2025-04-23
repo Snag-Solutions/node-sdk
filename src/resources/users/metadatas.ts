@@ -135,6 +135,8 @@ export interface MetadataCreateParams {
 
   externalIdentifier?: string | null;
 
+  externalLoyaltyScore?: string | null;
+
   isBlocked?: boolean;
 
   logoUrl?: string | null;
