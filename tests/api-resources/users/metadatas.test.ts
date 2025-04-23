@@ -41,6 +41,7 @@ describe('resource metadatas', () => {
           emailAddress: 'emailAddress',
           epicAccountIdentifier: 'epicAccountIdentifier',
           externalIdentifier: 'externalIdentifier',
+          externalLoyaltyScore: 'externalLoyaltyScore',
           isBlocked: true,
           logoUrl: 'logoUrl',
           organizationId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
