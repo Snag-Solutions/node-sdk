@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.1.0-alpha.50 (2025-04-24)
+
+Full Changelog: [v0.1.0-alpha.49...v0.1.0-alpha.50](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.49...v0.1.0-alpha.50)
+
+### Features
+
+* **api:** open api update ([9387a35](https://github.com/Snag-Solutions/node-sdk/commit/9387a35f3ec76b412b3e4394a5c8a352d9c1edf2))
+
+
+### Chores
+
+* **ci:** only use depot for staging repos ([4e635c6](https://github.com/Snag-Solutions/node-sdk/commit/4e635c6833c115c5fe130d69809a4a89826f5ba4))
+* **internal:** codegen related update ([ba0cbb5](https://github.com/Snag-Solutions/node-sdk/commit/ba0cbb55f557c7d067d42d3bcb05b6055c7d3c8a))
+
 ## 0.1.0-alpha.49 (2025-04-23)
 
 Full Changelog: [v0.1.0-alpha.48...v0.1.0-alpha.49](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.48...v0.1.0-alpha.49)
