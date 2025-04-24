@@ -42,11 +42,26 @@ export namespace UserListResponse {
     export interface ReferralCode {
       id: string;
 
+      /**
+       * This will only return data for earnings after 2025-04-24
+       */
+      amount: number;
+
       createdAt: string;
 
       deletedAt: string | null;
 
       referralCode: string;
+
+      /**
+       * This will only return data for earnings after 2025-04-24
+       */
+      tier1Amount: number;
+
+      /**
+       * This will only return data for earnings after 2025-04-24
+       */
+      tier2Amount: number;
 
       updatedAt: string;
 
