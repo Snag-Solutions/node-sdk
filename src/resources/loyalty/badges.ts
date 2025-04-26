@@ -1091,6 +1091,16 @@ export interface BadgeListParams {
   startingAfter?: string;
 
   /**
+   * External identifier of the user group
+   */
+  userGroupExternalIdentifier?: string;
+
+  /**
+   * UUID of the user group
+   */
+  userGroupId?: string;
+
+  /**
    * UUID of the user, or array of UUID.
    */
   userId?: string | Array<string>;

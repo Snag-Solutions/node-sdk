@@ -134,6 +134,10 @@ export interface RuleStatusListParams {
    */
   startingAfter?: string;
 
+  userGroupExternalIdentifier?: string;
+
+  userGroupId?: string;
+
   /**
    * User ID(s) to filter accounts by
    */
