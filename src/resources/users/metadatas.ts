@@ -153,6 +153,8 @@ export interface MetadataCreateParams {
 
   twitterUser?: string | null;
 
+  twitterUserFollowersCount?: number | null;
+
   twitterUserId?: string | null;
 
   userGroupExternalIdentifier?: string | null;
