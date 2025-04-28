@@ -253,6 +253,11 @@ export interface RuleCreateResponse {
   isRequired?: boolean;
 
   /**
+   * Unique identifier for the loyalty badge
+   */
+  loyaltyBadgeId?: string | null;
+
+  /**
    * Unique identifier for the loyalty rule group
    */
   loyaltyRuleGroupId?: 'no-section' | (string & {}) | null;
@@ -310,7 +315,7 @@ export interface RuleCreateResponse {
   /**
    * Type of reward issued by the rule
    */
-  rewardType?: 'points' | 'multiplier';
+  rewardType?: 'points' | 'multiplier' | 'badge';
 
   /**
    * Identifier for associated subscriptions
@@ -1270,7 +1275,7 @@ export interface RuleUpdateResponse {
   /**
    * Type of reward issued by this rule
    */
-  rewardType?: 'points' | 'multiplier';
+  rewardType?: 'points' | 'multiplier' | 'badge';
 
   /**
    * Start time for the loyalty rule
@@ -2158,7 +2163,7 @@ export namespace RuleListResponse {
     /**
      * Type of the reward
      */
-    rewardType: 'points' | 'multiplier';
+    rewardType: 'points' | 'multiplier' | 'badge';
 
     /**
      * Start time of the loyalty rule
@@ -3152,6 +3157,11 @@ export interface RuleCreateParams {
   isRequired?: boolean;
 
   /**
+   * Unique identifier for the loyalty badge
+   */
+  loyaltyBadgeId?: string | null;
+
+  /**
    * Unique identifier for the loyalty rule group
    */
   loyaltyRuleGroupId?: 'no-section' | (string & {}) | null;
@@ -3209,7 +3219,7 @@ export interface RuleCreateParams {
   /**
    * Type of reward issued by the rule
    */
-  rewardType?: 'points' | 'multiplier';
+  rewardType?: 'points' | 'multiplier' | 'badge';
 
   /**
    * Identifier for associated subscriptions
@@ -4167,7 +4177,7 @@ export interface RuleUpdateParams {
   /**
    * Type of reward issued by this rule
    */
-  rewardType?: 'points' | 'multiplier';
+  rewardType?: 'points' | 'multiplier' | 'badge';
 
   /**
    * Start time for the loyalty rule
