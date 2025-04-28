@@ -135,7 +135,7 @@ export namespace RuleEditListResponse {
       /**
        * Type of the reward
        */
-      rewardType: 'points' | 'multiplier';
+      rewardType: 'points' | 'multiplier' | 'badge';
 
       /**
        * Start time of the loyalty rule
@@ -991,7 +991,7 @@ export namespace RuleEditListResponse {
       /**
        * Type of the reward
        */
-      rewardType: 'points' | 'multiplier';
+      rewardType: 'points' | 'multiplier' | 'badge';
 
       /**
        * Start time of the loyalty rule
@@ -1902,7 +1902,7 @@ export namespace RuleEditRestoreResponse {
     /**
      * Type of the reward
      */
-    rewardType: 'points' | 'multiplier';
+    rewardType: 'points' | 'multiplier' | 'badge';
 
     /**
      * Start time of the loyalty rule
@@ -2758,7 +2758,7 @@ export namespace RuleEditRestoreResponse {
     /**
      * Type of the reward
      */
-    rewardType: 'points' | 'multiplier';
+    rewardType: 'points' | 'multiplier' | 'badge';
 
     /**
      * Start time of the loyalty rule
