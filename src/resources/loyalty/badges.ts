@@ -128,6 +128,11 @@ export interface BadgeCreateResponse {
    * Array of user badges
    */
   loyaltyBadgeUsers?: Array<BadgeCreateResponse.LoyaltyBadgeUser>;
+
+  /**
+   * Array of loyalty rules associated with the badge
+   */
+  loyaltyRules?: Array<BadgeCreateResponse.LoyaltyRule>;
 }
 
 export namespace BadgeCreateResponse {
@@ -295,6 +300,13 @@ export namespace BadgeCreateResponse {
      */
     progress?: unknown;
   }
+
+  export interface LoyaltyRule {
+    /**
+     * UUID of the loyalty rule (converted to lowercase)
+     */
+    id: string;
+  }
 }
 
 /**
@@ -330,6 +342,11 @@ export interface BadgeUpdateResponse {
    * Array of user badges
    */
   loyaltyBadgeUsers?: Array<BadgeUpdateResponse.LoyaltyBadgeUser>;
+
+  /**
+   * Array of loyalty rules associated with the badge
+   */
+  loyaltyRules?: Array<BadgeUpdateResponse.LoyaltyRule>;
 }
 
 export namespace BadgeUpdateResponse {
@@ -497,6 +514,13 @@ export namespace BadgeUpdateResponse {
      */
     progress?: unknown;
   }
+
+  export interface LoyaltyRule {
+    /**
+     * UUID of the loyalty rule (converted to lowercase)
+     */
+    id: string;
+  }
 }
 
 /**
@@ -532,6 +556,11 @@ export interface BadgeListResponse {
    * Array of user badges
    */
   loyaltyBadgeUsers?: Array<BadgeListResponse.LoyaltyBadgeUser>;
+
+  /**
+   * Array of loyalty rules associated with the badge
+   */
+  loyaltyRules?: Array<BadgeListResponse.LoyaltyRule>;
 }
 
 export namespace BadgeListResponse {
@@ -699,6 +728,13 @@ export namespace BadgeListResponse {
      */
     progress?: unknown;
   }
+
+  export interface LoyaltyRule {
+    /**
+     * UUID of the loyalty rule (converted to lowercase)
+     */
+    id: string;
+  }
 }
 
 /**
@@ -734,6 +770,11 @@ export interface BadgeDeleteResponse {
    * Array of user badges
    */
   loyaltyBadgeUsers?: Array<BadgeDeleteResponse.LoyaltyBadgeUser>;
+
+  /**
+   * Array of loyalty rules associated with the badge
+   */
+  loyaltyRules?: Array<BadgeDeleteResponse.LoyaltyRule>;
 }
 
 export namespace BadgeDeleteResponse {
@@ -901,6 +942,13 @@ export namespace BadgeDeleteResponse {
      */
     progress?: unknown;
   }
+
+  export interface LoyaltyRule {
+    /**
+     * UUID of the loyalty rule (converted to lowercase)
+     */
+    id: string;
+  }
 }
 
 /**
@@ -953,6 +1001,11 @@ export namespace BadgeRewardResponse {
 
 export interface BadgeCreateParams {
   /**
+   * Array of conditions for the badge
+   */
+  conditions: Array<BadgeCreateParams.Condition>;
+
+  /**
    * The URL of the badge image
    */
   imageUrl: string;
@@ -968,11 +1021,6 @@ export interface BadgeCreateParams {
   organizationId: string;
 
   /**
-   * Array of rules for the badge
-   */
-  rules: Array<BadgeCreateParams.Rule>;
-
-  /**
    * UUID of the website (optional, converted to lowercase)
    */
   websiteId: string;
@@ -984,12 +1032,7 @@ export interface BadgeCreateParams {
 }
 
 export namespace BadgeCreateParams {
-  export interface Rule {
-    /**
-     * The type of rule
-     */
-    type: 'rule' | 'rules' | 'points' | 'section' | 'level' | 'api' | 'badge' | 'badges' | 'csv';
-
+  export interface Condition {
     /**
      * The amount of the rule
      */
@@ -1044,6 +1087,11 @@ export namespace BadgeCreateParams {
      * The number of rules that need to be fulfilled to satisfy the condition
      */
     requiredCount?: number | null;
+
+    /**
+     * The type of rule
+     */
+    type?: 'rule' | 'rules' | 'points' | 'section' | 'level' | 'api' | 'badge' | 'badges' | 'csv';
   }
 }
 

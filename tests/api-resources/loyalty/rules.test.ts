@@ -163,6 +163,7 @@ describe('resource rules', () => {
       hideInUi: false,
       interval: 'weekly',
       isRequired: true,
+      loyaltyBadgeId: '123e4567-e89b-12d3-a456-426614174004',
       loyaltyRuleGroupId: '123e4567-e89b-12d3-a456-426614174004',
       mediaUrl: 'https://example.com/media.png',
       network: 'mainnet',

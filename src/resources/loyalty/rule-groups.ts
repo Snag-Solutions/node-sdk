@@ -141,6 +141,8 @@ export namespace RuleGroupGetRuleGroupsResponse {
 
         isRequired: boolean;
 
+        loyaltyBadge: LoyaltyRule.LoyaltyBadge;
+
         loyaltyCurrencyId: string;
 
         mediaUrl: string | null;
@@ -149,7 +151,7 @@ export namespace RuleGroupGetRuleGroupsResponse {
 
         name: string;
 
-        rewardType: 'points' | 'multiplier';
+        rewardType: 'points' | 'multiplier' | 'badge';
 
         startTime: string | null;
 
@@ -213,6 +215,16 @@ export namespace RuleGroupGetRuleGroupsResponse {
       }
 
       export namespace LoyaltyRule {
+        export interface LoyaltyBadge {
+          id: string;
+
+          description: string | null;
+
+          imageUrl: string | null;
+
+          name: string;
+        }
+
         export interface Metadata {
           /**
            * Number of tokens per batch.

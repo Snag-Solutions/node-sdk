@@ -12,10 +12,10 @@ describe('resource badges', () => {
   // skipped: tests are disabled for the time being
   test.skip('create: only required params', async () => {
     const responsePromise = client.loyalty.badges.create({
+      conditions: [{}],
       imageUrl: 'https://example.com/image.png',
       name: 'Example Badge',
       organizationId: '123e4567-e89b-12d3-a456-426614174222',
-      rules: [{ type: 'rule' }],
       websiteId: '123e4567-e89b-12d3-a456-426614174111',
     });
     const rawResponse = await responsePromise.asResponse();
@@ -30,12 +30,8 @@ describe('resource badges', () => {
   // skipped: tests are disabled for the time being
   test.skip('create: required and optional params', async () => {
     const response = await client.loyalty.badges.create({
-      imageUrl: 'https://example.com/image.png',
-      name: 'Example Badge',
-      organizationId: '123e4567-e89b-12d3-a456-426614174222',
-      rules: [
+      conditions: [
         {
-          type: 'rule',
           amount: 10,
           csvUrl: 'https://example.com/csv',
           description: 'Example description',
@@ -47,8 +43,12 @@ describe('resource badges', () => {
           loyaltyRuleIds: ['123e4567-e89b-12d3-a456-426614174111'],
           repeatCount: 1,
           requiredCount: 1,
+          type: 'rule',
         },
       ],
+      imageUrl: 'https://example.com/image.png',
+      name: 'Example Badge',
+      organizationId: '123e4567-e89b-12d3-a456-426614174222',
       websiteId: '123e4567-e89b-12d3-a456-426614174111',
       description: 'Example description',
     });
