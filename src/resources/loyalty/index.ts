@@ -85,6 +85,7 @@ export {
   type RuleCreateParams,
   type RuleUpdateParams,
   type RuleListParams,
+  type RuleDeleteParams,
   type RuleCompleteParams,
   type RuleGetStatusParams,
 } from './rules';

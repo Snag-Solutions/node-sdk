@@ -41,8 +41,22 @@ export class Rules extends APIResource {
   /**
    * Delete an existing Loyalty Rule
    */
-  delete(id: string, options?: Core.RequestOptions): Core.APIPromise<RuleDeleteResponse> {
-    return this._client.delete(`/api/loyalty/rules/${id}`, options);
+  delete(
+    id: string,
+    params?: RuleDeleteParams,
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<RuleDeleteResponse>;
+  delete(id: string, options?: Core.RequestOptions): Core.APIPromise<RuleDeleteResponse>;
+  delete(
+    id: string,
+    params: RuleDeleteParams | Core.RequestOptions = {},
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<RuleDeleteResponse> {
+    if (isRequestOptions(params)) {
+      return this.delete(id, {}, params);
+    }
+    const { debitLoyaltyPoints } = params;
+    return this._client.delete(`/api/loyalty/rules/${id}`, { query: { debitLoyaltyPoints }, ...options });
   }
 
   /**
@@ -5108,6 +5122,13 @@ export interface RuleListParams {
   websiteId?: string;
 }
 
+export interface RuleDeleteParams {
+  /**
+   * Whether to debit loyalty points
+   */
+  debitLoyaltyPoints?: string;
+}
+
 export interface RuleCompleteParams {
   /**
    * Override amount for the reward (rounded to nearest whole number). This will
@@ -5173,6 +5194,7 @@ export declare namespace Rules {
     type RuleCreateParams as RuleCreateParams,
     type RuleUpdateParams as RuleUpdateParams,
     type RuleListParams as RuleListParams,
+    type RuleDeleteParams as RuleDeleteParams,
     type RuleCompleteParams as RuleCompleteParams,
     type RuleGetStatusParams as RuleGetStatusParams,
   };
