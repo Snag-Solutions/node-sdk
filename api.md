@@ -74,7 +74,7 @@ Methods:
 - <code title="post /api/users/connect">client.users.<a href="./src/resources/users/users.ts">connect</a>({ ...params }) -> UserConnectResponse</code>
 - <code title="get /api/users/count">client.users.<a href="./src/resources/users/users.ts">count</a>({ ...params }) -> UserCountResponse</code>
 - <code title="post /api/users/devices">client.users.<a href="./src/resources/users/users.ts">createDevice</a>({ ...params }) -> UserCreateDeviceResponse</code>
-- <code title="post /api/users/disconnect">client.users.<a href="./src/resources/users/users.ts">disconnect</a>({ ...params }) -> unknown</code>
+- <code title="post /api/users/disconnect">client.users.<a href="./src/resources/users/users.ts">disconnect</a>({ ...params }) -> UserDisconnectResponse</code>
 - <code title="post /api/users/verify">client.users.<a href="./src/resources/users/users.ts">verify</a>({ ...params }) -> UserVerifyResponse</code>
 
 ## Metadatas
