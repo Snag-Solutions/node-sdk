@@ -439,6 +439,7 @@ export namespace RuleEditListResponse {
           | 'Twitch'
           | 'X(Twitter)'
           | 'YouTube'
+          | 'Google'
           | null;
 
         /**
@@ -526,6 +527,16 @@ export namespace RuleEditListResponse {
          * Type of wallet associated with the rule.
          */
         walletType?: 'evm' | 'solana' | 'imx' | 'sui' | 'ton' | null;
+
+        /**
+         * ID of the Youtube channel.
+         */
+        youtubeChannelId?: string | null;
+
+        /**
+         * ID of the Youtube video.
+         */
+        youtubeVideoId?: string | null;
       }
 
       export namespace Metadata {
@@ -1295,6 +1306,7 @@ export namespace RuleEditListResponse {
           | 'Twitch'
           | 'X(Twitter)'
           | 'YouTube'
+          | 'Google'
           | null;
 
         /**
@@ -1382,6 +1394,16 @@ export namespace RuleEditListResponse {
          * Type of wallet associated with the rule.
          */
         walletType?: 'evm' | 'solana' | 'imx' | 'sui' | 'ton' | null;
+
+        /**
+         * ID of the Youtube channel.
+         */
+        youtubeChannelId?: string | null;
+
+        /**
+         * ID of the Youtube video.
+         */
+        youtubeVideoId?: string | null;
       }
 
       export namespace Metadata {
@@ -2206,6 +2228,7 @@ export namespace RuleEditRestoreResponse {
         | 'Twitch'
         | 'X(Twitter)'
         | 'YouTube'
+        | 'Google'
         | null;
 
       /**
@@ -2293,6 +2316,16 @@ export namespace RuleEditRestoreResponse {
        * Type of wallet associated with the rule.
        */
       walletType?: 'evm' | 'solana' | 'imx' | 'sui' | 'ton' | null;
+
+      /**
+       * ID of the Youtube channel.
+       */
+      youtubeChannelId?: string | null;
+
+      /**
+       * ID of the Youtube video.
+       */
+      youtubeVideoId?: string | null;
     }
 
     export namespace Metadata {
@@ -3062,6 +3095,7 @@ export namespace RuleEditRestoreResponse {
         | 'Twitch'
         | 'X(Twitter)'
         | 'YouTube'
+        | 'Google'
         | null;
 
       /**
@@ -3149,6 +3183,16 @@ export namespace RuleEditRestoreResponse {
        * Type of wallet associated with the rule.
        */
       walletType?: 'evm' | 'solana' | 'imx' | 'sui' | 'ton' | null;
+
+      /**
+       * ID of the Youtube channel.
+       */
+      youtubeChannelId?: string | null;
+
+      /**
+       * ID of the Youtube video.
+       */
+      youtubeVideoId?: string | null;
     }
 
     export namespace Metadata {

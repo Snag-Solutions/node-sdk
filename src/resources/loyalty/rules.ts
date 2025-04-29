@@ -200,7 +200,9 @@ export interface RuleCreateResponse {
     | 'poll'
     | 'steam_wishlist'
     | 'liquidity_uniswap_v2'
-    | 'liquidity_uniswap_v3';
+    | 'liquidity_uniswap_v3'
+    | 'youtube_subscribers'
+    | 'youtube_comment';
 
   /**
    * Unique identifier for the associated website
@@ -592,6 +594,7 @@ export namespace RuleCreateResponse {
       | 'Twitch'
       | 'X(Twitter)'
       | 'YouTube'
+      | 'Google'
       | null;
 
     /**
@@ -679,6 +682,16 @@ export namespace RuleCreateResponse {
      * Type of wallet associated with the rule.
      */
     walletType?: 'evm' | 'solana' | 'imx' | 'sui' | 'ton' | null;
+
+    /**
+     * ID of the Youtube channel.
+     */
+    youtubeChannelId?: string | null;
+
+    /**
+     * ID of the Youtube video.
+     */
+    youtubeVideoId?: string | null;
   }
 
   export namespace Metadata {
@@ -1604,6 +1617,7 @@ export namespace RuleUpdateResponse {
       | 'Twitch'
       | 'X(Twitter)'
       | 'YouTube'
+      | 'Google'
       | null;
 
     /**
@@ -1691,6 +1705,16 @@ export namespace RuleUpdateResponse {
      * Type of wallet associated with the rule.
      */
     walletType?: 'evm' | 'solana' | 'imx' | 'sui' | 'ton' | null;
+
+    /**
+     * ID of the Youtube channel.
+     */
+    youtubeChannelId?: string | null;
+
+    /**
+     * ID of the Youtube video.
+     */
+    youtubeVideoId?: string | null;
   }
 
   export namespace Metadata {
@@ -2467,6 +2491,7 @@ export namespace RuleListResponse {
         | 'Twitch'
         | 'X(Twitter)'
         | 'YouTube'
+        | 'Google'
         | null;
 
       /**
@@ -2554,6 +2579,16 @@ export namespace RuleListResponse {
        * Type of wallet associated with the rule.
        */
       walletType?: 'evm' | 'solana' | 'imx' | 'sui' | 'ton' | null;
+
+      /**
+       * ID of the Youtube channel.
+       */
+      youtubeChannelId?: string | null;
+
+      /**
+       * ID of the Youtube video.
+       */
+      youtubeVideoId?: string | null;
     }
 
     export namespace Metadata {
@@ -3104,7 +3139,9 @@ export interface RuleCreateParams {
     | 'poll'
     | 'steam_wishlist'
     | 'liquidity_uniswap_v2'
-    | 'liquidity_uniswap_v3';
+    | 'liquidity_uniswap_v3'
+    | 'youtube_subscribers'
+    | 'youtube_comment';
 
   /**
    * Unique identifier for the associated website
@@ -3496,6 +3533,7 @@ export namespace RuleCreateParams {
       | 'Twitch'
       | 'X(Twitter)'
       | 'YouTube'
+      | 'Google'
       | null;
 
     /**
@@ -3583,6 +3621,16 @@ export namespace RuleCreateParams {
      * Type of wallet associated with the rule.
      */
     walletType?: 'evm' | 'solana' | 'imx' | 'sui' | 'ton' | null;
+
+    /**
+     * ID of the Youtube channel.
+     */
+    youtubeChannelId?: string | null;
+
+    /**
+     * ID of the Youtube video.
+     */
+    youtubeVideoId?: string | null;
   }
 
   export namespace Metadata {
@@ -4506,6 +4554,7 @@ export namespace RuleUpdateParams {
       | 'Twitch'
       | 'X(Twitter)'
       | 'YouTube'
+      | 'Google'
       | null;
 
     /**
@@ -4593,6 +4642,16 @@ export namespace RuleUpdateParams {
      * Type of wallet associated with the rule.
      */
     walletType?: 'evm' | 'solana' | 'imx' | 'sui' | 'ton' | null;
+
+    /**
+     * ID of the Youtube channel.
+     */
+    youtubeChannelId?: string | null;
+
+    /**
+     * ID of the Youtube video.
+     */
+    youtubeVideoId?: string | null;
   }
 
   export namespace Metadata {
