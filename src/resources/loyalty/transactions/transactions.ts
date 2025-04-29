@@ -361,6 +361,8 @@ export interface TransactionGetTransactionEntriesParams {
     | 'steam_wishlist'
     | 'liquidity_uniswap_v2'
     | 'liquidity_uniswap_v3'
+    | 'youtube_subscribers'
+    | 'youtube_comment'
     | Array<
         | 'Bonus'
         | 'BoughtOn'
@@ -418,6 +420,8 @@ export interface TransactionGetTransactionEntriesParams {
         | 'steam_wishlist'
         | 'liquidity_uniswap_v2'
         | 'liquidity_uniswap_v3'
+        | 'youtube_subscribers'
+        | 'youtube_comment'
       >;
 
   /**
