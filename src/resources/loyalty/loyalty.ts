@@ -88,6 +88,7 @@ import {
   RuleCompleteResponse,
   RuleCreateParams,
   RuleCreateResponse,
+  RuleDeleteParams,
   RuleDeleteResponse,
   RuleGetStatusParams,
   RuleGetStatusResponse,
@@ -219,6 +220,7 @@ export declare namespace Loyalty {
     type RuleCreateParams as RuleCreateParams,
     type RuleUpdateParams as RuleUpdateParams,
     type RuleListParams as RuleListParams,
+    type RuleDeleteParams as RuleDeleteParams,
     type RuleCompleteParams as RuleCompleteParams,
     type RuleGetStatusParams as RuleGetStatusParams,
   };
