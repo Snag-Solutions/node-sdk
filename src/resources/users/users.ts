@@ -57,7 +57,10 @@ export class Users extends APIResource {
   /**
    * This endpoint allows you to disconnect a user from another user
    */
-  disconnect(body: UserDisconnectParams, options?: Core.RequestOptions): Core.APIPromise<unknown> {
+  disconnect(
+    body: UserDisconnectParams,
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<UserDisconnectResponse> {
     return this._client.post('/api/users/disconnect', { body, ...options });
   }
 
@@ -274,7 +277,12 @@ export interface UserCreateDeviceResponse {
   deviceIdentifier?: string;
 }
 
-export type UserDisconnectResponse = unknown;
+export interface UserDisconnectResponse {
+  /**
+   * The message of the disconnect user response
+   */
+  message: 'Success';
+}
 
 export interface UserVerifyResponse {
   message: string;

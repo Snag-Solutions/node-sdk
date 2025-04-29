@@ -2989,7 +2989,9 @@ export interface RuleDeleteResponse {
 }
 
 export interface RuleCompleteResponse {
-  message: string;
+  message:
+    | 'Completion request added to queue'
+    | 'Link click being verified, come back later to check the status';
 }
 
 export interface RuleGetStatusResponse {
