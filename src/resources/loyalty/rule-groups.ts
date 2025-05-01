@@ -211,7 +211,9 @@ export namespace RuleGroupGetRuleGroupsResponse {
           | 'poll'
           | 'steam_wishlist'
           | 'liquidity_uniswap_v2'
-          | 'liquidity_uniswap_v3';
+          | 'liquidity_uniswap_v3'
+          | 'youtube_subscribers'
+          | 'youtube_comment';
       }
 
       export namespace LoyaltyRule {
@@ -490,6 +492,7 @@ export namespace RuleGroupGetRuleGroupsResponse {
             | 'Twitch'
             | 'X(Twitter)'
             | 'YouTube'
+            | 'Google'
             | null;
 
           /**
@@ -577,6 +580,16 @@ export namespace RuleGroupGetRuleGroupsResponse {
            * Type of wallet associated with the rule.
            */
           walletType?: 'evm' | 'solana' | 'imx' | 'sui' | 'ton' | null;
+
+          /**
+           * ID of the Youtube channel.
+           */
+          youtubeChannelId?: string | null;
+
+          /**
+           * ID of the Youtube video.
+           */
+          youtubeVideoId?: string | null;
         }
 
         export namespace Metadata {
