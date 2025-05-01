@@ -5190,6 +5190,11 @@ export interface RuleListParams {
   collectionAddress?: string;
 
   /**
+   * If true this will only return loyalty rule chains
+   */
+  includeLoyaltyRuleChains?: 'true' | 'false';
+
+  /**
    * If true this will only return active rules, the rules for which the startTime is
    * in the past and the endTime is in the future
    */
