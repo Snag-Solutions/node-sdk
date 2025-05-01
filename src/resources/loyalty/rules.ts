@@ -2149,9 +2149,6 @@ export interface RuleListResponse {
 }
 
 export namespace RuleListResponse {
-  /**
-   * Schema for a loyalty rule
-   */
   export interface Data {
     /**
      * Unique identifier for the loyalty rule
@@ -2187,6 +2184,11 @@ export namespace RuleListResponse {
      * Frequency of the loyalty rule
      */
     frequency: string;
+
+    /**
+     * Chains attached to the loyalty rule
+     */
+    loyaltyRuleChain: Array<Data.LoyaltyRuleChain>;
 
     /**
      * Name of the loyalty rule
@@ -2240,6 +2242,106 @@ export namespace RuleListResponse {
   }
 
   export namespace Data {
+    export interface LoyaltyRuleChain {
+      /**
+       * Unique identifier for the rule chain
+       */
+      id: string;
+
+      loyaltyConditions: Array<LoyaltyRuleChain.LoyaltyCondition>;
+
+      /**
+       * Unique identifier for the loyalty rule
+       */
+      loyaltyRuleId: string;
+
+      /**
+       * Name of the rule chain
+       */
+      name: string;
+    }
+
+    export namespace LoyaltyRuleChain {
+      export interface LoyaltyCondition {
+        /**
+         * Unique identifier for the condition
+         */
+        id: string;
+
+        /**
+         * Amount of the condition
+         */
+        amount: number | null;
+
+        association: Array<LoyaltyCondition.Association>;
+
+        /**
+         * URL of the CSV file
+         */
+        csvUrl: string | null;
+
+        /**
+         * Description of the condition
+         */
+        description: string | null;
+
+        /**
+         * Number of times the condition must be met
+         */
+        repeatCount: number | null;
+
+        /**
+         * Number of times the condition must be met
+         */
+        requiredCount: number | null;
+
+        /**
+         * Type of the condition
+         */
+        type: 'rule' | 'rules' | 'points' | 'section' | 'level' | 'api' | 'badge' | 'badges' | 'csv';
+      }
+
+      export namespace LoyaltyCondition {
+        export interface Association {
+          /**
+           * Unique identifier for the association
+           */
+          id: string;
+
+          /**
+           * Unique identifier for the loyalty badge
+           */
+          loyaltyBadgeId: string | null;
+
+          /**
+           * Unique identifier for the loyalty currency
+           */
+          loyaltyCurrencyId: string | null;
+
+          loyaltyRule: Association.LoyaltyRule | null;
+
+          /**
+           * Unique identifier for the loyalty rule group
+           */
+          loyaltyRuleGroupId: string | null;
+
+          /**
+           * Unique identifier for the loyalty rule
+           */
+          loyaltyRuleId: string | null;
+        }
+
+        export namespace Association {
+          export interface LoyaltyRule {
+            /**
+             * Name of the loyalty rule
+             */
+            name: string;
+          }
+        }
+      }
+    }
+
     export interface Metadata {
       /**
        * Number of tokens per batch.
