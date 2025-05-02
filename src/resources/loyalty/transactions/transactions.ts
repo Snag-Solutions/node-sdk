@@ -386,6 +386,8 @@ export interface TransactionGetTransactionEntriesParams {
    */
   direction?: 'credit' | 'debit';
 
+  excludeDeletedCurrency?: 'true' | 'false';
+
   /**
    * Key to ensure idempotency of the request
    */
