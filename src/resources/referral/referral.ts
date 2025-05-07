@@ -10,6 +10,13 @@ export class Referral extends APIResource {
 
   /**
    * This endpoint allows you to create a referral code
+   *
+   * @example
+   * ```ts
+   * const response = await client.referral.createCode({
+   *   loyaltyRuleId: '558bcf56-24f1-4ef4-9787-043086295780',
+   * });
+   * ```
    */
   createCode(
     body: ReferralCreateCodeParams,

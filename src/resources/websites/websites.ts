@@ -29,6 +29,13 @@ export class Websites extends APIResource {
 
   /**
    * Creates a new website
+   *
+   * @example
+   * ```ts
+   * const website = await client.websites.create({
+   *   name: 'My New Website',
+   * });
+   * ```
    */
   create(body: WebsiteCreateParams, options?: Core.RequestOptions): Core.APIPromise<WebsiteCreateResponse> {
     return this._client.post('/api/websites', { body, ...options });
@@ -37,6 +44,11 @@ export class Websites extends APIResource {
   /**
    * Returns a list of websites. Includes optional query parameters for filtering and
    * pagination.
+   *
+   * @example
+   * ```ts
+   * const websites = await client.websites.list();
+   * ```
    */
   list(query?: WebsiteListParams, options?: Core.RequestOptions): Core.APIPromise<WebsiteListResponse>;
   list(options?: Core.RequestOptions): Core.APIPromise<WebsiteListResponse>;

@@ -7,6 +7,14 @@ export class WebsiteUserRoles extends APIResource {
   /**
    * Retrieves roles of users for a specific website. If userId is provided,
    * retrieves the role of that specific user for the website.
+   *
+   * @example
+   * ```ts
+   * const websiteUserRoles =
+   *   await client.websites.websiteUserRoles.list({
+   *     websiteId: '123e4567-e89b-12d3-a456-426614174000',
+   *   });
+   * ```
    */
   list(
     query: WebsiteUserRoleListParams,
@@ -17,6 +25,21 @@ export class WebsiteUserRoles extends APIResource {
 
   /**
    * Assign roles to users for a specific website
+   *
+   * @example
+   * ```ts
+   * const response =
+   *   await client.websites.websiteUserRoles.assign({
+   *     websiteId: '123e4567-e89b-12d3-a456-426614174000',
+   *     websiteUserRoles: [
+   *       {
+   *         roleType: 'WEBSITE_ADMIN',
+   *         walletAddress:
+   *           '0x1234567890abcdef1234567890abcdef12345678',
+   *       },
+   *     ],
+   *   });
+   * ```
    */
   assign(
     body: WebsiteUserRoleAssignParams,

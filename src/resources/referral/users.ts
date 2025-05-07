@@ -6,6 +6,13 @@ import * as Core from '../../core';
 export class Users extends APIResource {
   /**
    * This endpoint allows you to create a referral user
+   *
+   * @example
+   * ```ts
+   * const user = await client.referral.users.create({
+   *   userIds: ['182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e'],
+   * });
+   * ```
    */
   create(body: UserCreateParams, options?: Core.RequestOptions): Core.APIPromise<UserCreateResponse> {
     return this._client.post('/api/referral/users', { body, ...options });
@@ -13,6 +20,13 @@ export class Users extends APIResource {
 
   /**
    * This endpoint allows you to get referrals
+   *
+   * @example
+   * ```ts
+   * const users = await client.referral.users.list({
+   *   walletAddress: 'string',
+   * });
+   * ```
    */
   list(query: UserListParams, options?: Core.RequestOptions): Core.APIPromise<UserListResponse> {
     return this._client.get('/api/referral/users', { query, ...options });
