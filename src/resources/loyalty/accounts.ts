@@ -7,6 +7,11 @@ import * as Core from '../../core';
 export class Accounts extends APIResource {
   /**
    * Get loyalty accounts
+   *
+   * @example
+   * ```ts
+   * const accounts = await client.loyalty.accounts.list();
+   * ```
    */
   list(query?: AccountListParams, options?: Core.RequestOptions): Core.APIPromise<AccountListResponse>;
   list(options?: Core.RequestOptions): Core.APIPromise<AccountListResponse>;
@@ -24,6 +29,19 @@ export class Accounts extends APIResource {
    * Returns the user's rank determined by their loyalty points for the specified
    * loyalty currency. This can be a slow operation for large organizations. We
    * recommend caching when possible.
+   *
+   * @example
+   * ```ts
+   * const response = await client.loyalty.accounts.retrieveRank(
+   *   '123e4567-e89b-12d3-a456-426614174333',
+   *   {
+   *     loyaltyCurrencyId:
+   *       '123e4567-e89b-12d3-a456-426614174333',
+   *     organizationId: '123e4567-e89b-12d3-a456-426614174333',
+   *     websiteId: '123e4567-e89b-12d3-a456-426614174333',
+   *   },
+   * );
+   * ```
    */
   retrieveRank(
     id: string,

@@ -7,6 +7,14 @@ import * as Core from '../../../core';
 export class RuleStatuses extends APIResource {
   /**
    * Update a loyalty rule status
+   *
+   * @example
+   * ```ts
+   * const ruleStatus =
+   *   await client.loyalty.transactions.ruleStatuses.update({
+   *     loyaltyRuleId: '123e4567-e89b-12d3-a456-426614174030',
+   *   });
+   * ```
    */
   update(
     body: RuleStatusUpdateParams,
@@ -17,6 +25,12 @@ export class RuleStatuses extends APIResource {
 
   /**
    * Retrieve loyalty rule statuses
+   *
+   * @example
+   * ```ts
+   * const ruleStatuses =
+   *   await client.loyalty.transactions.ruleStatuses.list();
+   * ```
    */
   list(query?: RuleStatusListParams, options?: Core.RequestOptions): Core.APIPromise<RuleStatusListResponse>;
   list(options?: Core.RequestOptions): Core.APIPromise<RuleStatusListResponse>;

@@ -7,6 +7,14 @@ import * as Core from '../../core';
 export class Multipliers extends APIResource {
   /**
    * Create a new loyalty multiplier for a wallet.
+   *
+   * @example
+   * ```ts
+   * const multiplier = await client.loyalty.multipliers.create({
+   *   multiplier: 0.01,
+   *   walletAddress: 'walletAddress',
+   * });
+   * ```
    */
   create(
     body: MultiplierCreateParams,
@@ -17,6 +25,13 @@ export class Multipliers extends APIResource {
 
   /**
    * Update an existing loyalty multiplier.
+   *
+   * @example
+   * ```ts
+   * const multiplier = await client.loyalty.multipliers.update(
+   *   '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+   * );
+   * ```
    */
   update(
     multiplierId: string,
@@ -37,6 +52,11 @@ export class Multipliers extends APIResource {
 
   /**
    * Get Loyalty Multipliers
+   *
+   * @example
+   * ```ts
+   * const multipliers = await client.loyalty.multipliers.list();
+   * ```
    */
   list(query?: MultiplierListParams, options?: Core.RequestOptions): Core.APIPromise<MultiplierListResponse>;
   list(options?: Core.RequestOptions): Core.APIPromise<MultiplierListResponse>;
@@ -52,6 +72,13 @@ export class Multipliers extends APIResource {
 
   /**
    * Delete a loyalty multiplier by its ID.
+   *
+   * @example
+   * ```ts
+   * const multiplier = await client.loyalty.multipliers.delete(
+   *   '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+   * );
+   * ```
    */
   delete(multiplierId: string, options?: Core.RequestOptions): Core.APIPromise<MultiplierDeleteResponse> {
     return this._client.delete(`/api/loyalty/multipliers/${multiplierId}`, options);
@@ -59,6 +86,14 @@ export class Multipliers extends APIResource {
 
   /**
    * Delete a loyalty multiplier by its external identifier.
+   *
+   * @example
+   * ```ts
+   * const response =
+   *   await client.loyalty.multipliers.deleteByExternalId({
+   *     externalIdentifier: 'externalIdentifier',
+   *   });
+   * ```
    */
   deleteByExternalId(
     body: MultiplierDeleteByExternalIDParams,
