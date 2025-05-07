@@ -7,6 +7,17 @@ import * as Core from '../../core';
 export class Badges extends APIResource {
   /**
    * This endpoint allows you to configure a new badge.
+   *
+   * @example
+   * ```ts
+   * const badge = await client.loyalty.badges.create({
+   *   conditions: [{}],
+   *   imageUrl: 'https://example.com/image.png',
+   *   name: 'Example Badge',
+   *   organizationId: '123e4567-e89b-12d3-a456-426614174222',
+   *   websiteId: '123e4567-e89b-12d3-a456-426614174111',
+   * });
+   * ```
    */
   create(body: BadgeCreateParams, options?: Core.RequestOptions): Core.APIPromise<BadgeCreateResponse> {
     return this._client.post('/api/loyalty/badges', { body, ...options });
@@ -14,6 +25,13 @@ export class Badges extends APIResource {
 
   /**
    * This endpoint allows you to update an existing badge.
+   *
+   * @example
+   * ```ts
+   * const badge = await client.loyalty.badges.update(
+   *   '123e4567-e89b-12d3-a456-426614174333',
+   * );
+   * ```
    */
   update(
     id: string,
@@ -34,6 +52,11 @@ export class Badges extends APIResource {
 
   /**
    * This endpoint allows you to fetch badge(s) data.
+   *
+   * @example
+   * ```ts
+   * const badges = await client.loyalty.badges.list();
+   * ```
    */
   list(query?: BadgeListParams, options?: Core.RequestOptions): Core.APIPromise<BadgeListResponse>;
   list(options?: Core.RequestOptions): Core.APIPromise<BadgeListResponse>;
@@ -49,6 +72,13 @@ export class Badges extends APIResource {
 
   /**
    * This endpoint allows you to delete a badge.
+   *
+   * @example
+   * ```ts
+   * const badge = await client.loyalty.badges.delete(
+   *   '123e4567-e89b-12d3-a456-426614174333',
+   * );
+   * ```
    */
   delete(id: string, options?: Core.RequestOptions): Core.APIPromise<BadgeDeleteResponse> {
     return this._client.delete(`/api/loyalty/badges/${id}`, options);
@@ -56,6 +86,13 @@ export class Badges extends APIResource {
 
   /**
    * This endpoint allows you to revoke a badge from an account
+   *
+   * @example
+   * ```ts
+   * const response = await client.loyalty.badges.revoke(
+   *   '123e4567-e89b-12d3-a456-426614174333',
+   * );
+   * ```
    */
   revoke(
     id: string,
@@ -76,6 +113,13 @@ export class Badges extends APIResource {
 
   /**
    * This endpoint allows you to reward a badge for an account
+   *
+   * @example
+   * ```ts
+   * const response = await client.loyalty.badges.reward(
+   *   '123e4567-e89b-12d3-a456-426614174333',
+   * );
+   * ```
    */
   reward(
     id: string,

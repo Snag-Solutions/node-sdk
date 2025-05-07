@@ -11,6 +11,14 @@ export class WebsiteUserAttributes extends APIResource {
 
   /**
    * Create a new website user attribute
+   *
+   * @example
+   * ```ts
+   * const websiteUserAttribute =
+   *   await client.auctions.websiteUserAttributes.create({
+   *     data: [{ label: 'Website User Attribute Label' }],
+   *   });
+   * ```
    */
   create(
     body: WebsiteUserAttributeCreateParams,
@@ -21,6 +29,12 @@ export class WebsiteUserAttributes extends APIResource {
 
   /**
    * Get all website user attributes
+   *
+   * @example
+   * ```ts
+   * const websiteUserAttributes =
+   *   await client.auctions.websiteUserAttributes.list();
+   * ```
    */
   list(
     query?: WebsiteUserAttributeListParams,
@@ -39,6 +53,16 @@ export class WebsiteUserAttributes extends APIResource {
 
   /**
    * Delete a website user attribute
+   *
+   * @example
+   * ```ts
+   * const websiteUserAttribute =
+   *   await client.auctions.websiteUserAttributes.delete('id', {
+   *     body_id: '123e4567-e89b-12d3-a456-426614174003',
+   *     organizationId: '123e4567-e89b-12d3-a456-426614174002',
+   *     websiteId: '123e4567-e89b-12d3-a456-426614174001',
+   *   });
+   * ```
    */
   delete(
     pathId: string,

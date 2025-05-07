@@ -7,6 +7,16 @@ import * as Core from '../../core';
 export class RuleGroups extends APIResource {
   /**
    * Create a new loyalty rule groups
+   *
+   * @example
+   * ```ts
+   * const response =
+   *   await client.loyalty.ruleGroups.createRuleGroup({
+   *     name: 'name',
+   *     organizationId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+   *     websiteId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+   *   });
+   * ```
    */
   createRuleGroup(
     body: RuleGroupCreateRuleGroupParams,
@@ -17,6 +27,14 @@ export class RuleGroups extends APIResource {
 
   /**
    * Delete loyalty rule group by ID
+   *
+   * @example
+   * ```ts
+   * const response =
+   *   await client.loyalty.ruleGroups.deleteRuleGroup(
+   *     '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+   *   );
+   * ```
    */
   deleteRuleGroup(id: string, options?: Core.RequestOptions): Core.APIPromise<unknown> {
     return this._client.delete(`/api/loyalty/rule_groups/${id}`, options);
@@ -24,6 +42,12 @@ export class RuleGroups extends APIResource {
 
   /**
    * Retrieve configured loyalty rule groups
+   *
+   * @example
+   * ```ts
+   * const response =
+   *   await client.loyalty.ruleGroups.getRuleGroups();
+   * ```
    */
   getRuleGroups(
     query?: RuleGroupGetRuleGroupsParams,
@@ -42,6 +66,14 @@ export class RuleGroups extends APIResource {
 
   /**
    * Update loyalty rule group by ID
+   *
+   * @example
+   * ```ts
+   * const response =
+   *   await client.loyalty.ruleGroups.updateRuleGroup(
+   *     '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+   *   );
+   * ```
    */
   updateRuleGroup(
     id: string,

@@ -6,6 +6,13 @@ import * as Core from '../../core';
 export class RuleEdits extends APIResource {
   /**
    * Retrieve configured loyalty rule edits with optional pagination and filters
+   *
+   * @example
+   * ```ts
+   * const ruleEdits = await client.loyalty.ruleEdits.list({
+   *   loyaltyRuleId: true,
+   * });
+   * ```
    */
   list(query: RuleEditListParams, options?: Core.RequestOptions): Core.APIPromise<RuleEditListResponse> {
     return this._client.get('/api/loyalty/rule_edits', { query, ...options });
@@ -13,6 +20,13 @@ export class RuleEdits extends APIResource {
 
   /**
    * Restore a loyalty rule from a rule edit
+   *
+   * @example
+   * ```ts
+   * const response = await client.loyalty.ruleEdits.restore(
+   *   '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+   * );
+   * ```
    */
   restore(
     id: string,

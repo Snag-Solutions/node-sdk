@@ -7,6 +7,11 @@ import * as Core from '../../core';
 export class Metadatas extends APIResource {
   /**
    * This endpoint is used to create user metadata
+   *
+   * @example
+   * ```ts
+   * const metadata = await client.users.metadatas.create();
+   * ```
    */
   create(body?: MetadataCreateParams, options?: Core.RequestOptions): Core.APIPromise<MetadataCreateResponse>;
   create(options?: Core.RequestOptions): Core.APIPromise<MetadataCreateResponse>;
@@ -22,6 +27,11 @@ export class Metadatas extends APIResource {
 
   /**
    * This endpoint is used to get user metadata
+   *
+   * @example
+   * ```ts
+   * const metadatas = await client.users.metadatas.list();
+   * ```
    */
   list(query?: MetadataListParams, options?: Core.RequestOptions): Core.APIPromise<MetadataListResponse>;
   list(options?: Core.RequestOptions): Core.APIPromise<MetadataListResponse>;

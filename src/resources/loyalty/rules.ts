@@ -7,6 +7,24 @@ import * as Core from '../../core';
 export class Rules extends APIResource {
   /**
    * Create a new Loyalty Rule
+   *
+   * @example
+   * ```ts
+   * const rule = await client.loyalty.rules.create({
+   *   amount: '10.5',
+   *   effectiveEndTime: '2024-12-31T23:59:00Z',
+   *   effectiveStartTime: '2024-01-01T00:00:00Z',
+   *   endTime: '2024-12-31T23:59:00Z',
+   *   frequency: 'daily',
+   *   loyaltyCurrencyId: '456e1234-e89b-12d3-a456-426614174003',
+   *   metadata: {},
+   *   name: 'Referral Bonus Rule',
+   *   organizationId: '123e4567-e89b-12d3-a456-426614174001',
+   *   startTime: '2024-01-01T00:00:00Z',
+   *   type: 'Bonus',
+   *   websiteId: '123e4567-e89b-12d3-a456-426614174002',
+   * });
+   * ```
    */
   create(body: RuleCreateParams, options?: Core.RequestOptions): Core.APIPromise<RuleCreateResponse> {
     return this._client.post('/api/loyalty/rules', { body, ...options });
@@ -14,6 +32,18 @@ export class Rules extends APIResource {
 
   /**
    * Update an existing Loyalty Rule
+   *
+   * @example
+   * ```ts
+   * const rule = await client.loyalty.rules.update(
+   *   '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+   *   {
+   *     amount: '10.5',
+   *     endTime: '2024-12-31T23:59:00Z',
+   *     name: 'Daily Rewards Program',
+   *   },
+   * );
+   * ```
    */
   update(
     id: string,
@@ -25,6 +55,11 @@ export class Rules extends APIResource {
 
   /**
    * Retrieve configured loyalty rules with optional pagination and filters
+   *
+   * @example
+   * ```ts
+   * const rules = await client.loyalty.rules.list();
+   * ```
    */
   list(query?: RuleListParams, options?: Core.RequestOptions): Core.APIPromise<RuleListResponse>;
   list(options?: Core.RequestOptions): Core.APIPromise<RuleListResponse>;
@@ -40,6 +75,13 @@ export class Rules extends APIResource {
 
   /**
    * Delete an existing Loyalty Rule
+   *
+   * @example
+   * ```ts
+   * const rule = await client.loyalty.rules.delete(
+   *   '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+   * );
+   * ```
    */
   delete(
     id: string,
@@ -65,6 +107,13 @@ export class Rules extends APIResource {
    * link_click, discord_member, connect_wallet, check_in, external_rule,
    * drip_x_follow, drip_x_new_tweet, drip_x_text_in_bio, drip_x_text_in_name,
    * drip_x_text_in_comment, drip_x_tweet, telegram_join, DiscordMessages
+   *
+   * @example
+   * ```ts
+   * const response = await client.loyalty.rules.complete(
+   *   '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+   * );
+   * ```
    */
   complete(
     id: string,
@@ -85,6 +134,11 @@ export class Rules extends APIResource {
 
   /**
    * This will return the processing status of quests for a specific user
+   *
+   * @example
+   * ```ts
+   * const response = await client.loyalty.rules.getStatus();
+   * ```
    */
   getStatus(
     query?: RuleGetStatusParams,

@@ -17,6 +17,15 @@ export class Transactions extends APIResource {
 
   /**
    * Create a loyalty transaction to update account balances.
+   *
+   * @example
+   * ```ts
+   * const response =
+   *   await client.loyalty.transactions.createTransaction({
+   *     description: 'Purchase of item X',
+   *     entries: [{ amount: 5 }],
+   *   });
+   * ```
    */
   createTransaction(
     body: TransactionCreateTransactionParams,
@@ -28,6 +37,12 @@ export class Transactions extends APIResource {
   /**
    * Fetch loyalty transaction entries for wallets or users, representing account
    * balance changes.
+   *
+   * @example
+   * ```ts
+   * const response =
+   *   await client.loyalty.transactions.getTransactionEntries();
+   * ```
    */
   getTransactionEntries(
     query?: TransactionGetTransactionEntriesParams,
@@ -48,6 +63,15 @@ export class Transactions extends APIResource {
 
   /**
    * Retrieve configured loyalty rule chains
+   *
+   * @example
+   * ```ts
+   * const response =
+   *   await client.loyalty.transactions.listRuleChains({
+   *     organizationId: '123e4567-e89b-12d3-a456-426614174001',
+   *     websiteId: '123e4567-e89b-12d3-a456-426614174002',
+   *   });
+   * ```
    */
   listRuleChains(
     query: TransactionListRuleChainsParams,

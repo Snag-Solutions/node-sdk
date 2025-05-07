@@ -17,6 +17,11 @@ export class Users extends APIResource {
 
   /**
    * This endpoint allows you to get users
+   *
+   * @example
+   * ```ts
+   * const users = await client.users.list();
+   * ```
    */
   list(query?: UserListParams, options?: Core.RequestOptions): Core.APIPromise<UserListResponse>;
   list(options?: Core.RequestOptions): Core.APIPromise<UserListResponse>;
@@ -32,6 +37,17 @@ export class Users extends APIResource {
 
   /**
    * This endpoint allows you to create a user
+   *
+   * @example
+   * ```ts
+   * const response = await client.users.connect({
+   *   organizationId: '123e4567-e89b-12d3-a456-426614174001',
+   *   walletAddress:
+   *     '0x1234567890abcdef1234567890abcdef12345678',
+   *   walletType: 'evm',
+   *   websiteId: '123e4567-e89b-12d3-a456-426614174000',
+   * });
+   * ```
    */
   connect(body: UserConnectParams, options?: Core.RequestOptions): Core.APIPromise<UserConnectResponse> {
     return this._client.post('/api/users/connect', { body, ...options });
@@ -39,6 +55,14 @@ export class Users extends APIResource {
 
   /**
    * This endpoint returns the total user count
+   *
+   * @example
+   * ```ts
+   * const response = await client.users.count({
+   *   organizationId: '123e4567-e89b-12d3-a456-426614174001',
+   *   websiteId: '123e4567-e89b-12d3-a456-426614174000',
+   * });
+   * ```
    */
   count(query: UserCountParams, options?: Core.RequestOptions): Core.APIPromise<UserCountResponse> {
     return this._client.get('/api/users/count', { query, ...options });
@@ -46,6 +70,13 @@ export class Users extends APIResource {
 
   /**
    * This endpoint is used to create user devices for fraud tracking
+   *
+   * @example
+   * ```ts
+   * const response = await client.users.createDevice({
+   *   ipAddress: '123.456.789.012',
+   * });
+   * ```
    */
   createDevice(
     body: UserCreateDeviceParams,
@@ -56,6 +87,15 @@ export class Users extends APIResource {
 
   /**
    * This endpoint allows you to disconnect a user from another user
+   *
+   * @example
+   * ```ts
+   * const response = await client.users.disconnect({
+   *   organizationId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+   *   userId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+   *   websiteId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+   * });
+   * ```
    */
   disconnect(
     body: UserDisconnectParams,
@@ -64,6 +104,14 @@ export class Users extends APIResource {
     return this._client.post('/api/users/disconnect', { body, ...options });
   }
 
+  /**
+   * @example
+   * ```ts
+   * const response = await client.users.verify({
+   *   accountLinkData: 'accountLinkData',
+   * });
+   * ```
+   */
   verify(body: UserVerifyParams, options?: Core.RequestOptions): Core.APIPromise<UserVerifyResponse> {
     return this._client.post('/api/users/verify', { body, ...options });
   }

@@ -6,6 +6,17 @@ import * as Core from '../../core';
 export class Questions extends APIResource {
   /**
    * This endpoint allows you to create a new question.
+   *
+   * @example
+   * ```ts
+   * const question = await client.loyalty.questions.create({
+   *   loyaltyQuestionAnswers: [
+   *     { isCorrect: true, sortIdentifier: 1, text: 'Red' },
+   *   ],
+   *   loyaltyRuleId: '123e4567-e89b-12d3-a456-426614174000',
+   *   questionText: 'What is your favorite color?',
+   * });
+   * ```
    */
   create(body: QuestionCreateParams, options?: Core.RequestOptions): Core.APIPromise<QuestionCreateResponse> {
     return this._client.post('/api/loyalty/questions', { body, ...options });
@@ -13,6 +24,19 @@ export class Questions extends APIResource {
 
   /**
    * This endpoint allows you to update an existing question.
+   *
+   * @example
+   * ```ts
+   * const question = await client.loyalty.questions.update(
+   *   'id',
+   *   {
+   *     loyaltyQuestionAnswers: [
+   *       { isCorrect: true, sortIdentifier: 1, text: 'Red' },
+   *     ],
+   *     questionText: 'What is your favorite color?',
+   *   },
+   * );
+   * ```
    */
   update(
     id: string,
@@ -24,6 +48,15 @@ export class Questions extends APIResource {
 
   /**
    * This endpoint allows you to fetch questions for a loyalty rule.
+   *
+   * @example
+   * ```ts
+   * const questions = await client.loyalty.questions.list({
+   *   loyaltyRuleIds: '123e4567-e89b-12d3-a456-426614174000',
+   *   organizationId: '123e4567-e89b-12d3-a456-426614174002',
+   *   websiteId: '123e4567-e89b-12d3-a456-426614174001',
+   * });
+   * ```
    */
   list(query: QuestionListParams, options?: Core.RequestOptions): Core.APIPromise<QuestionListResponse> {
     return this._client.get('/api/loyalty/questions', { query, ...options });

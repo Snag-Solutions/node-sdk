@@ -6,6 +6,26 @@ import * as Core from '../../../core';
 export class Values extends APIResource {
   /**
    * Create a new website user attribute value
+   *
+   * @example
+   * ```ts
+   * const values =
+   *   await client.auctions.websiteUserAttributes.values.create(
+   *     {
+   *       data: [
+   *         {
+   *           userId: '123e4567-e89b-12d3-a456-426614174005',
+   *           value: 'Website User Attribute Value',
+   *           websiteUserAttributeId:
+   *             '123e4567-e89b-12d3-a456-426614174004',
+   *         },
+   *       ],
+   *       organizationId:
+   *         '123e4567-e89b-12d3-a456-426614174002',
+   *       websiteId: '123e4567-e89b-12d3-a456-426614174001',
+   *     },
+   *   );
+   * ```
    */
   create(body: ValueCreateParams, options?: Core.RequestOptions): Core.APIPromise<ValueCreateResponse> {
     return this._client.post('/api/website_user_attributes/values', { body, ...options });
@@ -13,6 +33,14 @@ export class Values extends APIResource {
 
   /**
    * Get all website user attribute values
+   *
+   * @example
+   * ```ts
+   * const values =
+   *   await client.auctions.websiteUserAttributes.values.list({
+   *     userIds: '123e4567-e89b-12d3-a456-426614174004',
+   *   });
+   * ```
    */
   list(query: ValueListParams, options?: Core.RequestOptions): Core.APIPromise<ValueListResponse> {
     return this._client.get('/api/website_user_attributes/values', { query, ...options });

@@ -20,6 +20,15 @@ export class Auctions extends APIResource {
 
   /**
    * This endpoint allows you to fetch page sections
+   *
+   * @example
+   * ```ts
+   * const response = await client.auctions.getPageSections({
+   *   organizationId: '123e4567-e89b-12d3-a456-426614174334',
+   *   placement: 'page',
+   *   websiteId: '123e4567-e89b-12d3-a456-426614174333',
+   * });
+   * ```
    */
   getPageSections(
     query: AuctionGetPageSectionsParams,
@@ -30,6 +39,11 @@ export class Auctions extends APIResource {
 
   /**
    * Returns a list of auction bids with optional filtering and pagination.
+   *
+   * @example
+   * ```ts
+   * await client.auctions.listAuctionBids();
+   * ```
    */
   listAuctionBids(query?: AuctionListAuctionBidsParams, options?: Core.RequestOptions): Core.APIPromise<void>;
   listAuctionBids(options?: Core.RequestOptions): Core.APIPromise<void>;
@@ -49,6 +63,11 @@ export class Auctions extends APIResource {
 
   /**
    * Returns a list of auctions with optional filtering and pagination.
+   *
+   * @example
+   * ```ts
+   * const response = await client.auctions.listAuctions();
+   * ```
    */
   listAuctions(options?: Core.RequestOptions): Core.APIPromise<AuctionListAuctionsResponse> {
     return this._client.get('/api/auctions', options);
