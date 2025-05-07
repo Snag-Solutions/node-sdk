@@ -8,6 +8,14 @@ export class Assets extends APIResource {
    * This endpoint enables you to upload a file to the resource. Returns a presigned
    * URL and the asset's public URL. Call PUT with the file as the body to upload the
    * asset using the presigned URL.
+   *
+   * @example
+   * ```ts
+   * const response = await client.assets.createAsset({
+   *   fileName: 'example.png',
+   *   fileSize: 1024,
+   * });
+   * ```
    */
   createAsset(
     body: AssetCreateAssetParams,

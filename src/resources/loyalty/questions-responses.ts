@@ -8,6 +8,12 @@ export class QuestionsResponses extends APIResource {
   /**
    * Retrieve responses submitted by the authenticated user, optionally filtered by
    * question IDs
+   *
+   * @example
+   * ```ts
+   * const questionsResponses =
+   *   await client.loyalty.questionsResponses.list();
+   * ```
    */
   list(
     query?: QuestionsResponseListParams,
@@ -26,6 +32,15 @@ export class QuestionsResponses extends APIResource {
 
   /**
    * This endpoint allows you to submit a response to a question.
+   *
+   * @example
+   * ```ts
+   * const response =
+   *   await client.loyalty.questionsResponses.submit({
+   *     loyaltyQuestionChoiceId:
+   *       '123e4567-e89b-12d3-a456-426614174001',
+   *   });
+   * ```
    */
   submit(
     body: QuestionsResponseSubmitParams,

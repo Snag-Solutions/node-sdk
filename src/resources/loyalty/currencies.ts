@@ -6,6 +6,17 @@ import * as Core from '../../core';
 export class Currencies extends APIResource {
   /**
    * Create a loyalty currency
+   *
+   * @example
+   * ```ts
+   * const currency = await client.loyalty.currencies.create({
+   *   decimals: 2,
+   *   name: 'Loyalty Points',
+   *   organizationId: '123e4567-e89b-12d3-a456-426614174001',
+   *   symbol: 'LP',
+   *   websiteId: '123e4567-e89b-12d3-a456-426614174002',
+   * });
+   * ```
    */
   create(body: CurrencyCreateParams, options?: Core.RequestOptions): Core.APIPromise<CurrencyCreateResponse> {
     return this._client.post('/api/loyalty/currencies', { body, ...options });
@@ -13,6 +24,14 @@ export class Currencies extends APIResource {
 
   /**
    * Get loyalty currencies
+   *
+   * @example
+   * ```ts
+   * const currencies = await client.loyalty.currencies.list({
+   *   organizationId: '123e4567-e89b-12d3-a456-426614174001',
+   *   websiteId: '123e4567-e89b-12d3-a456-426614174002',
+   * });
+   * ```
    */
   list(query: CurrencyListParams, options?: Core.RequestOptions): Core.APIPromise<CurrencyListResponse> {
     return this._client.get('/api/loyalty/currencies', { query, ...options });
