@@ -489,6 +489,7 @@ export interface TransactionGetTransactionEntriesParams {
     | 'steam_wishlist'
     | 'liquidity_uniswap_v2'
     | 'liquidity_uniswap_v3'
+    | 'points_airdrop'
     | 'youtube_subscribers'
     | 'youtube_comment'
     | Array<
@@ -548,6 +549,7 @@ export interface TransactionGetTransactionEntriesParams {
         | 'steam_wishlist'
         | 'liquidity_uniswap_v2'
         | 'liquidity_uniswap_v3'
+        | 'points_airdrop'
         | 'youtube_subscribers'
         | 'youtube_comment'
       >;

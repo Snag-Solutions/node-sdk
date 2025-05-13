@@ -244,6 +244,7 @@ export namespace RuleGroupGetRuleGroupsResponse {
           | 'steam_wishlist'
           | 'liquidity_uniswap_v2'
           | 'liquidity_uniswap_v3'
+          | 'points_airdrop'
           | 'youtube_subscribers'
           | 'youtube_comment';
       }
@@ -662,6 +663,7 @@ export namespace RuleGroupGetRuleGroupsResponse {
               | 'skaleNebula'
               | 'solana'
               | 'sophon'
+              | 'sophonTestnet'
               | 'sui'
               | 'superseed'
               | 'superseedSepolia'
@@ -786,6 +788,7 @@ export namespace RuleGroupGetRuleGroupsResponse {
               | 'skaleNebula'
               | 'solana'
               | 'sophon'
+              | 'sophonTestnet'
               | 'sui'
               | 'superseed'
               | 'superseedSepolia'

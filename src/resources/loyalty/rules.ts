@@ -106,7 +106,8 @@ export class Rules extends APIResource {
    * endpoint currently only supports following rule types code_entry, text_input,
    * link_click, discord_member, connect_wallet, check_in, external_rule,
    * drip_x_follow, drip_x_new_tweet, drip_x_text_in_bio, drip_x_text_in_name,
-   * drip_x_text_in_comment, drip_x_tweet, telegram_join, DiscordMessages
+   * drip_x_text_in_comment, drip_x_tweet, telegram_join, DiscordMessages,
+   * youtube_subscribers, youtube_comment, steam_wishlist
    *
    * @example
    * ```ts
@@ -269,6 +270,7 @@ export interface RuleCreateResponse {
     | 'steam_wishlist'
     | 'liquidity_uniswap_v2'
     | 'liquidity_uniswap_v3'
+    | 'points_airdrop'
     | 'youtube_subscribers'
     | 'youtube_comment';
 
@@ -363,6 +365,7 @@ export interface RuleCreateResponse {
     | 'skaleNebula'
     | 'solana'
     | 'sophon'
+    | 'sophonTestnet'
     | 'sui'
     | 'superseed'
     | 'superseedSepolia'
@@ -800,6 +803,7 @@ export namespace RuleCreateResponse {
         | 'skaleNebula'
         | 'solana'
         | 'sophon'
+        | 'sophonTestnet'
         | 'sui'
         | 'superseed'
         | 'superseedSepolia'
@@ -924,6 +928,7 @@ export namespace RuleCreateResponse {
         | 'skaleNebula'
         | 'solana'
         | 'sophon'
+        | 'sophonTestnet'
         | 'sui'
         | 'superseed'
         | 'superseedSepolia'
@@ -1204,6 +1209,7 @@ export namespace RuleCreateResponse {
       | 'skaleNebula'
       | 'solana'
       | 'sophon'
+      | 'sophonTestnet'
       | 'sui'
       | 'superseed'
       | 'superseedSepolia'
@@ -1334,6 +1340,7 @@ export interface RuleUpdateResponse {
     | 'skaleNebula'
     | 'solana'
     | 'sophon'
+    | 'sophonTestnet'
     | 'sui'
     | 'superseed'
     | 'superseedSepolia'
@@ -1402,6 +1409,7 @@ export namespace RuleUpdateResponse {
       | 'skaleNebula'
       | 'solana'
       | 'sophon'
+      | 'sophonTestnet'
       | 'sui'
       | 'superseed'
       | 'superseedSepolia'
@@ -1823,6 +1831,7 @@ export namespace RuleUpdateResponse {
         | 'skaleNebula'
         | 'solana'
         | 'sophon'
+        | 'sophonTestnet'
         | 'sui'
         | 'superseed'
         | 'superseedSepolia'
@@ -1947,6 +1956,7 @@ export namespace RuleUpdateResponse {
         | 'skaleNebula'
         | 'solana'
         | 'sophon'
+        | 'sophonTestnet'
         | 'sui'
         | 'superseed'
         | 'superseedSepolia'
@@ -2799,6 +2809,7 @@ export namespace RuleListResponse {
           | 'skaleNebula'
           | 'solana'
           | 'sophon'
+          | 'sophonTestnet'
           | 'sui'
           | 'superseed'
           | 'superseedSepolia'
@@ -2923,6 +2934,7 @@ export namespace RuleListResponse {
           | 'skaleNebula'
           | 'solana'
           | 'sophon'
+          | 'sophonTestnet'
           | 'sui'
           | 'superseed'
           | 'superseedSepolia'
@@ -3312,6 +3324,7 @@ export interface RuleCreateParams {
     | 'steam_wishlist'
     | 'liquidity_uniswap_v2'
     | 'liquidity_uniswap_v3'
+    | 'points_airdrop'
     | 'youtube_subscribers'
     | 'youtube_comment';
 
@@ -3406,6 +3419,7 @@ export interface RuleCreateParams {
     | 'skaleNebula'
     | 'solana'
     | 'sophon'
+    | 'sophonTestnet'
     | 'sui'
     | 'superseed'
     | 'superseedSepolia'
@@ -3843,6 +3857,7 @@ export namespace RuleCreateParams {
         | 'skaleNebula'
         | 'solana'
         | 'sophon'
+        | 'sophonTestnet'
         | 'sui'
         | 'superseed'
         | 'superseedSepolia'
@@ -3967,6 +3982,7 @@ export namespace RuleCreateParams {
         | 'skaleNebula'
         | 'solana'
         | 'sophon'
+        | 'sophonTestnet'
         | 'sui'
         | 'superseed'
         | 'superseedSepolia'
@@ -4247,6 +4263,7 @@ export namespace RuleCreateParams {
       | 'skaleNebula'
       | 'solana'
       | 'sophon'
+      | 'sophonTestnet'
       | 'sui'
       | 'superseed'
       | 'superseedSepolia'
@@ -4375,6 +4392,7 @@ export interface RuleUpdateParams {
     | 'skaleNebula'
     | 'solana'
     | 'sophon'
+    | 'sophonTestnet'
     | 'sui'
     | 'superseed'
     | 'superseedSepolia'
@@ -4443,6 +4461,7 @@ export namespace RuleUpdateParams {
       | 'skaleNebula'
       | 'solana'
       | 'sophon'
+      | 'sophonTestnet'
       | 'sui'
       | 'superseed'
       | 'superseedSepolia'
@@ -4864,6 +4883,7 @@ export namespace RuleUpdateParams {
         | 'skaleNebula'
         | 'solana'
         | 'sophon'
+        | 'sophonTestnet'
         | 'sui'
         | 'superseed'
         | 'superseedSepolia'
@@ -4988,6 +5008,7 @@ export namespace RuleUpdateParams {
         | 'skaleNebula'
         | 'solana'
         | 'sophon'
+        | 'sophonTestnet'
         | 'sui'
         | 'superseed'
         | 'superseedSepolia'
