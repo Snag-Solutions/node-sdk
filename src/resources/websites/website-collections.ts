@@ -99,6 +99,7 @@ export interface WebsiteCollectionCreateParams {
     | 'skaleNebula'
     | 'solana'
     | 'sophon'
+    | 'sophonTestnet'
     | 'sui'
     | 'superseed'
     | 'superseedSepolia'
