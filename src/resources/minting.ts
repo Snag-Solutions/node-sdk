@@ -111,6 +111,7 @@ export interface MintingGetAssetsParams {
     | 'skaleNebula'
     | 'solana'
     | 'sophon'
+    | 'sophonTestnet'
     | 'sui'
     | 'superseed'
     | 'superseedSepolia'
