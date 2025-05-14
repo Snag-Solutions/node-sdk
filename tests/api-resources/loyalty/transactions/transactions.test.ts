@@ -78,6 +78,7 @@ describe('resource transactions', () => {
           loyaltyRuleType: 'Bonus',
           loyaltyTransactionId: '123e4567-e89b-12d3-a456-426614174020',
           orderBy: 'createdAt',
+          orderDirection: 'desc',
           organizationId: '123e4567-e89b-12d3-a456-426614174001',
           startingAfter: '123e4567-e89b-12d3-a456-426614174010',
           type: 'loyalty_rule',
