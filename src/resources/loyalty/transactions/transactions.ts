@@ -565,6 +565,11 @@ export interface TransactionGetTransactionEntriesParams {
   orderBy?: 'createdAt' | 'updatedAt' | 'loyaltyAccountLockVersion';
 
   /**
+   * Direction to order the results by
+   */
+  orderDirection?: 'asc' | 'desc';
+
+  /**
    * Unique identifier for the organization to filter by
    */
   organizationId?: string;
