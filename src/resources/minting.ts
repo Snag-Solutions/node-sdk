@@ -127,14 +127,14 @@ export interface MintingGetAssetsParams {
     | 'basecamp';
 
   /**
+   * Sort Key
+   */
+  sortBy?: 'price' | 'startsAt' | 'assetNr' | null;
+
+  /**
    * Sort Dir
    */
   sortDir?: 'asc' | 'desc' | null;
-
-  /**
-   * Sort Key
-   */
-  sortKey?: 'price' | 'startsAt' | 'assetNr' | null;
 
   /**
    * Status
