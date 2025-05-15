@@ -195,14 +195,14 @@ export interface AccountListParams {
   loyaltyCurrencyId?: string;
 
   /**
-   * Order the accounts by amount in ascending or descending order
-   */
-  'orderBy[amount]'?: 'asc' | 'desc';
-
-  /**
    * Unique identifier for the organization to filter by
    */
   organizationId?: string;
+
+  /**
+   * Order the accounts in ascending or descending order, sorted by amount
+   */
+  sortDir?: 'asc' | 'desc';
 
   /**
    * Pagination cursor to start after a specific account ID

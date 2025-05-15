@@ -560,19 +560,19 @@ export interface TransactionGetTransactionEntriesParams {
   loyaltyTransactionId?: string;
 
   /**
-   * Field to order the results by
-   */
-  orderBy?: 'createdAt' | 'updatedAt' | 'loyaltyAccountLockVersion';
-
-  /**
-   * Direction to order the results by
-   */
-  orderDirection?: 'asc' | 'desc';
-
-  /**
    * Unique identifier for the organization to filter by
    */
   organizationId?: string;
+
+  /**
+   * Field to sort the results by
+   */
+  sortBy?: 'createdAt' | 'updatedAt' | 'loyaltyAccountLockVersion';
+
+  /**
+   * Direction to sort the results by
+   */
+  sortDir?: 'asc' | 'desc';
 
   /**
    * Pagination cursor to start after a specific resource ID
