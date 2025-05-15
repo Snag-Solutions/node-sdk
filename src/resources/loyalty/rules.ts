@@ -903,9 +903,21 @@ export namespace RuleCreateResponse {
       calculationType?: 'fixed' | 'custom';
 
       /**
+       * Custom function to calculate the the reward amount based on the liquidity
+       * provided per day. X is the reward amount, Y is the liquidity provided per day in
+       * USD.
+       */
+      customFunction?: string;
+
+      /**
+       * Liquidity provided per day in USD
+       */
+      liquidityPerDay?: number;
+
+      /**
        * Blockchain network of the liquidity pool.
        */
-      chain?:
+      network?:
         | 'abstract'
         | 'abstractTestnet'
         | 'apechain'
@@ -944,16 +956,6 @@ export namespace RuleCreateResponse {
         | 'basecamp';
 
       /**
-       * Custom function to calculate the liquidity provided per hour
-       */
-      customFunction?: string;
-
-      /**
-       * Liquidity provided per hour
-       */
-      liquidityPerHour?: number;
-
-      /**
        * Indicates if only in-range liquidity is rewarded.
        */
       onlyRewardInRangeLiquidity?: boolean;
@@ -974,7 +976,7 @@ export namespace RuleCreateResponse {
         /**
          * Unique identifier of the liquidity pool.
          */
-        id?: string;
+        id: string;
       }
     }
 
@@ -1931,9 +1933,21 @@ export namespace RuleUpdateResponse {
       calculationType?: 'fixed' | 'custom';
 
       /**
+       * Custom function to calculate the the reward amount based on the liquidity
+       * provided per day. X is the reward amount, Y is the liquidity provided per day in
+       * USD.
+       */
+      customFunction?: string;
+
+      /**
+       * Liquidity provided per day in USD
+       */
+      liquidityPerDay?: number;
+
+      /**
        * Blockchain network of the liquidity pool.
        */
-      chain?:
+      network?:
         | 'abstract'
         | 'abstractTestnet'
         | 'apechain'
@@ -1972,16 +1986,6 @@ export namespace RuleUpdateResponse {
         | 'basecamp';
 
       /**
-       * Custom function to calculate the liquidity provided per hour
-       */
-      customFunction?: string;
-
-      /**
-       * Liquidity provided per hour
-       */
-      liquidityPerHour?: number;
-
-      /**
        * Indicates if only in-range liquidity is rewarded.
        */
       onlyRewardInRangeLiquidity?: boolean;
@@ -2002,7 +2006,7 @@ export namespace RuleUpdateResponse {
         /**
          * Unique identifier of the liquidity pool.
          */
-        id?: string;
+        id: string;
       }
     }
 
@@ -2909,9 +2913,21 @@ export namespace RuleListResponse {
         calculationType?: 'fixed' | 'custom';
 
         /**
+         * Custom function to calculate the the reward amount based on the liquidity
+         * provided per day. X is the reward amount, Y is the liquidity provided per day in
+         * USD.
+         */
+        customFunction?: string;
+
+        /**
+         * Liquidity provided per day in USD
+         */
+        liquidityPerDay?: number;
+
+        /**
          * Blockchain network of the liquidity pool.
          */
-        chain?:
+        network?:
           | 'abstract'
           | 'abstractTestnet'
           | 'apechain'
@@ -2950,16 +2966,6 @@ export namespace RuleListResponse {
           | 'basecamp';
 
         /**
-         * Custom function to calculate the liquidity provided per hour
-         */
-        customFunction?: string;
-
-        /**
-         * Liquidity provided per hour
-         */
-        liquidityPerHour?: number;
-
-        /**
          * Indicates if only in-range liquidity is rewarded.
          */
         onlyRewardInRangeLiquidity?: boolean;
@@ -2980,7 +2986,7 @@ export namespace RuleListResponse {
           /**
            * Unique identifier of the liquidity pool.
            */
-          id?: string;
+          id: string;
         }
       }
 
@@ -3957,9 +3963,21 @@ export namespace RuleCreateParams {
       calculationType?: 'fixed' | 'custom';
 
       /**
+       * Custom function to calculate the the reward amount based on the liquidity
+       * provided per day. X is the reward amount, Y is the liquidity provided per day in
+       * USD.
+       */
+      customFunction?: string;
+
+      /**
+       * Liquidity provided per day in USD
+       */
+      liquidityPerDay?: number;
+
+      /**
        * Blockchain network of the liquidity pool.
        */
-      chain?:
+      network?:
         | 'abstract'
         | 'abstractTestnet'
         | 'apechain'
@@ -3998,16 +4016,6 @@ export namespace RuleCreateParams {
         | 'basecamp';
 
       /**
-       * Custom function to calculate the liquidity provided per hour
-       */
-      customFunction?: string;
-
-      /**
-       * Liquidity provided per hour
-       */
-      liquidityPerHour?: number;
-
-      /**
        * Indicates if only in-range liquidity is rewarded.
        */
       onlyRewardInRangeLiquidity?: boolean;
@@ -4028,7 +4036,7 @@ export namespace RuleCreateParams {
         /**
          * Unique identifier of the liquidity pool.
          */
-        id?: string;
+        id: string;
       }
     }
 
@@ -4983,9 +4991,21 @@ export namespace RuleUpdateParams {
       calculationType?: 'fixed' | 'custom';
 
       /**
+       * Custom function to calculate the the reward amount based on the liquidity
+       * provided per day. X is the reward amount, Y is the liquidity provided per day in
+       * USD.
+       */
+      customFunction?: string;
+
+      /**
+       * Liquidity provided per day in USD
+       */
+      liquidityPerDay?: number;
+
+      /**
        * Blockchain network of the liquidity pool.
        */
-      chain?:
+      network?:
         | 'abstract'
         | 'abstractTestnet'
         | 'apechain'
@@ -5024,16 +5044,6 @@ export namespace RuleUpdateParams {
         | 'basecamp';
 
       /**
-       * Custom function to calculate the liquidity provided per hour
-       */
-      customFunction?: string;
-
-      /**
-       * Liquidity provided per hour
-       */
-      liquidityPerHour?: number;
-
-      /**
        * Indicates if only in-range liquidity is rewarded.
        */
       onlyRewardInRangeLiquidity?: boolean;
@@ -5054,7 +5064,7 @@ export namespace RuleUpdateParams {
         /**
          * Unique identifier of the liquidity pool.
          */
-        id?: string;
+        id: string;
       }
     }
 
