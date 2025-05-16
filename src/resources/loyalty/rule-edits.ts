@@ -320,6 +320,11 @@ export namespace RuleEditListResponse {
         isMultiplierApplied?: boolean;
 
         /**
+         * Flag indicating if the rule is restricted to new users.
+         */
+        isRestrictedToNewUsers?: boolean;
+
+        /**
          * Flag indicating if rewards are applied retroactively.
          */
         isRetroactive?: boolean | null;
@@ -388,6 +393,21 @@ export namespace RuleEditListResponse {
          * Promotional code associated with the rule.
          */
         promoCode?: string;
+
+        /**
+         * URL of the CSV file containing promo codes.
+         */
+        promoCodeCsvUrl?: string;
+
+        /**
+         * Numbers of the promotional code to be generated.
+         */
+        promoCodeLength?: number | null;
+
+        /**
+         * Type of the promotional code.
+         */
+        promoCodeType?: 'code' | 'csv' | 'generate';
 
         /**
          * Array defining ranges and corresponding rewards.
@@ -1191,6 +1211,11 @@ export namespace RuleEditListResponse {
         isMultiplierApplied?: boolean;
 
         /**
+         * Flag indicating if the rule is restricted to new users.
+         */
+        isRestrictedToNewUsers?: boolean;
+
+        /**
          * Flag indicating if rewards are applied retroactively.
          */
         isRetroactive?: boolean | null;
@@ -1259,6 +1284,21 @@ export namespace RuleEditListResponse {
          * Promotional code associated with the rule.
          */
         promoCode?: string;
+
+        /**
+         * URL of the CSV file containing promo codes.
+         */
+        promoCodeCsvUrl?: string;
+
+        /**
+         * Numbers of the promotional code to be generated.
+         */
+        promoCodeLength?: number | null;
+
+        /**
+         * Type of the promotional code.
+         */
+        promoCodeType?: 'code' | 'csv' | 'generate';
 
         /**
          * Array defining ranges and corresponding rewards.
@@ -2117,6 +2157,11 @@ export namespace RuleEditRestoreResponse {
       isMultiplierApplied?: boolean;
 
       /**
+       * Flag indicating if the rule is restricted to new users.
+       */
+      isRestrictedToNewUsers?: boolean;
+
+      /**
        * Flag indicating if rewards are applied retroactively.
        */
       isRetroactive?: boolean | null;
@@ -2185,6 +2230,21 @@ export namespace RuleEditRestoreResponse {
        * Promotional code associated with the rule.
        */
       promoCode?: string;
+
+      /**
+       * URL of the CSV file containing promo codes.
+       */
+      promoCodeCsvUrl?: string;
+
+      /**
+       * Numbers of the promotional code to be generated.
+       */
+      promoCodeLength?: number | null;
+
+      /**
+       * Type of the promotional code.
+       */
+      promoCodeType?: 'code' | 'csv' | 'generate';
 
       /**
        * Array defining ranges and corresponding rewards.
@@ -2988,6 +3048,11 @@ export namespace RuleEditRestoreResponse {
       isMultiplierApplied?: boolean;
 
       /**
+       * Flag indicating if the rule is restricted to new users.
+       */
+      isRestrictedToNewUsers?: boolean;
+
+      /**
        * Flag indicating if rewards are applied retroactively.
        */
       isRetroactive?: boolean | null;
@@ -3056,6 +3121,21 @@ export namespace RuleEditRestoreResponse {
        * Promotional code associated with the rule.
        */
       promoCode?: string;
+
+      /**
+       * URL of the CSV file containing promo codes.
+       */
+      promoCodeCsvUrl?: string;
+
+      /**
+       * Numbers of the promotional code to be generated.
+       */
+      promoCodeLength?: number | null;
+
+      /**
+       * Type of the promotional code.
+       */
+      promoCodeType?: 'code' | 'csv' | 'generate';
 
       /**
        * Array defining ranges and corresponding rewards.

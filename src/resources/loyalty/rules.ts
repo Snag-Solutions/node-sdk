@@ -532,6 +532,11 @@ export namespace RuleCreateResponse {
     isMultiplierApplied?: boolean;
 
     /**
+     * Flag indicating if the rule is restricted to new users.
+     */
+    isRestrictedToNewUsers?: boolean;
+
+    /**
      * Flag indicating if rewards are applied retroactively.
      */
     isRetroactive?: boolean | null;
@@ -600,6 +605,21 @@ export namespace RuleCreateResponse {
      * Promotional code associated with the rule.
      */
     promoCode?: string;
+
+    /**
+     * URL of the CSV file containing promo codes.
+     */
+    promoCodeCsvUrl?: string;
+
+    /**
+     * Numbers of the promotional code to be generated.
+     */
+    promoCodeLength?: number | null;
+
+    /**
+     * Type of the promotional code.
+     */
+    promoCodeType?: 'code' | 'csv' | 'generate';
 
     /**
      * Array defining ranges and corresponding rewards.
@@ -1562,6 +1582,11 @@ export namespace RuleUpdateResponse {
     isMultiplierApplied?: boolean;
 
     /**
+     * Flag indicating if the rule is restricted to new users.
+     */
+    isRestrictedToNewUsers?: boolean;
+
+    /**
      * Flag indicating if rewards are applied retroactively.
      */
     isRetroactive?: boolean | null;
@@ -1630,6 +1655,21 @@ export namespace RuleUpdateResponse {
      * Promotional code associated with the rule.
      */
     promoCode?: string;
+
+    /**
+     * URL of the CSV file containing promo codes.
+     */
+    promoCodeCsvUrl?: string;
+
+    /**
+     * Numbers of the promotional code to be generated.
+     */
+    promoCodeLength?: number | null;
+
+    /**
+     * Type of the promotional code.
+     */
+    promoCodeType?: 'code' | 'csv' | 'generate';
 
     /**
      * Array defining ranges and corresponding rewards.
@@ -2542,6 +2582,11 @@ export namespace RuleListResponse {
       isMultiplierApplied?: boolean;
 
       /**
+       * Flag indicating if the rule is restricted to new users.
+       */
+      isRestrictedToNewUsers?: boolean;
+
+      /**
        * Flag indicating if rewards are applied retroactively.
        */
       isRetroactive?: boolean | null;
@@ -2610,6 +2655,21 @@ export namespace RuleListResponse {
        * Promotional code associated with the rule.
        */
       promoCode?: string;
+
+      /**
+       * URL of the CSV file containing promo codes.
+       */
+      promoCodeCsvUrl?: string;
+
+      /**
+       * Numbers of the promotional code to be generated.
+       */
+      promoCodeLength?: number | null;
+
+      /**
+       * Type of the promotional code.
+       */
+      promoCodeType?: 'code' | 'csv' | 'generate';
 
       /**
        * Array defining ranges and corresponding rewards.
@@ -3592,6 +3652,11 @@ export namespace RuleCreateParams {
     isMultiplierApplied?: boolean;
 
     /**
+     * Flag indicating if the rule is restricted to new users.
+     */
+    isRestrictedToNewUsers?: boolean;
+
+    /**
      * Flag indicating if rewards are applied retroactively.
      */
     isRetroactive?: boolean | null;
@@ -3660,6 +3725,21 @@ export namespace RuleCreateParams {
      * Promotional code associated with the rule.
      */
     promoCode?: string;
+
+    /**
+     * URL of the CSV file containing promo codes.
+     */
+    promoCodeCsvUrl?: string;
+
+    /**
+     * Numbers of the promotional code to be generated.
+     */
+    promoCodeLength?: number | null;
+
+    /**
+     * Type of the promotional code.
+     */
+    promoCodeType?: 'code' | 'csv' | 'generate';
 
     /**
      * Array defining ranges and corresponding rewards.
@@ -4620,6 +4700,11 @@ export namespace RuleUpdateParams {
     isMultiplierApplied?: boolean;
 
     /**
+     * Flag indicating if the rule is restricted to new users.
+     */
+    isRestrictedToNewUsers?: boolean;
+
+    /**
      * Flag indicating if rewards are applied retroactively.
      */
     isRetroactive?: boolean | null;
@@ -4688,6 +4773,21 @@ export namespace RuleUpdateParams {
      * Promotional code associated with the rule.
      */
     promoCode?: string;
+
+    /**
+     * URL of the CSV file containing promo codes.
+     */
+    promoCodeCsvUrl?: string;
+
+    /**
+     * Numbers of the promotional code to be generated.
+     */
+    promoCodeLength?: number | null;
+
+    /**
+     * Type of the promotional code.
+     */
+    promoCodeType?: 'code' | 'csv' | 'generate';
 
     /**
      * Array defining ranges and corresponding rewards.
