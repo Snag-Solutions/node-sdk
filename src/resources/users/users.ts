@@ -213,6 +213,10 @@ export namespace UserListResponse {
 
       externalLoyaltyScore?: string | null;
 
+      googleUser?: string | null;
+
+      googleUserId?: string | null;
+
       instagramUser?: string | null;
 
       instagramVerifiedAt?: string | null;
@@ -246,6 +250,8 @@ export namespace UserListResponse {
       userGroupId?: string | null;
 
       walletGroupIdentifier?: string | null;
+
+      YTChannelId?: string | null;
     }
   }
 }
