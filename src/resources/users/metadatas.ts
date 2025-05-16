@@ -147,6 +147,10 @@ export interface MetadataCreateParams {
 
   externalLoyaltyScore?: string | null;
 
+  googleUser?: string | null;
+
+  googleUserId?: string | null;
+
   isBlocked?: boolean;
 
   logoUrl?: string | null;
@@ -156,6 +160,10 @@ export interface MetadataCreateParams {
   stardustProfileIdentifier?: string | null;
 
   stardustWalletIdentifier?: string | null;
+
+  steamUserId?: string | null;
+
+  steamUsername?: string | null;
 
   telegramUserId?: string | null;
 
@@ -178,6 +186,8 @@ export interface MetadataCreateParams {
   walletGroupIdentifier?: string | null;
 
   websiteId?: string;
+
+  YTChannelId?: string | null;
 }
 
 export interface MetadataListParams {
