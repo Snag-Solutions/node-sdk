@@ -335,6 +335,11 @@ export interface RuleCreateResponse {
   loyaltyRuleGroupId?: 'no-section' | (string & {}) | null;
 
   /**
+   * URL for uploading loyalty user allotment via CSV
+   */
+  loyaltyUserAllotmentCsvUrl?: string;
+
+  /**
    * URL of the media to be displayed
    */
   mediaUrl?: string | null;
@@ -3453,6 +3458,11 @@ export interface RuleCreateParams {
    * Unique identifier for the loyalty rule group
    */
   loyaltyRuleGroupId?: 'no-section' | (string & {}) | null;
+
+  /**
+   * URL for uploading loyalty user allotment via CSV
+   */
+  loyaltyUserAllotmentCsvUrl?: string;
 
   /**
    * URL of the media to be displayed
