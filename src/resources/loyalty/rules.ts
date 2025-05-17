@@ -5380,6 +5380,11 @@ export namespace RuleUpdateParams {
 
 export interface RuleListParams {
   /**
+   * ID of the user to filter results by
+   */
+  allotedToUserId?: string;
+
+  /**
    * Address of the collection to filter by
    */
   collectionAddress?: string;
