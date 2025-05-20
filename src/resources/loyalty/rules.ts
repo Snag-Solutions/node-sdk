@@ -777,7 +777,7 @@ export namespace RuleCreateResponse {
     /**
      * Type of wallet associated with the rule.
      */
-    walletType?: 'evm' | 'solana' | 'imx' | 'sui' | 'ton' | null;
+    walletType?: 'evm' | 'solana' | 'imx' | 'sui' | 'ton' | 'cosmos' | null;
 
     /**
      * ID of the Youtube channel.
@@ -1827,7 +1827,7 @@ export namespace RuleUpdateResponse {
     /**
      * Type of wallet associated with the rule.
      */
-    walletType?: 'evm' | 'solana' | 'imx' | 'sui' | 'ton' | null;
+    walletType?: 'evm' | 'solana' | 'imx' | 'sui' | 'ton' | 'cosmos' | null;
 
     /**
      * ID of the Youtube channel.
@@ -2827,7 +2827,7 @@ export namespace RuleListResponse {
       /**
        * Type of wallet associated with the rule.
        */
-      walletType?: 'evm' | 'solana' | 'imx' | 'sui' | 'ton' | null;
+      walletType?: 'evm' | 'solana' | 'imx' | 'sui' | 'ton' | 'cosmos' | null;
 
       /**
        * ID of the Youtube channel.
@@ -3902,7 +3902,7 @@ export namespace RuleCreateParams {
     /**
      * Type of wallet associated with the rule.
      */
-    walletType?: 'evm' | 'solana' | 'imx' | 'sui' | 'ton' | null;
+    walletType?: 'evm' | 'solana' | 'imx' | 'sui' | 'ton' | 'cosmos' | null;
 
     /**
      * ID of the Youtube channel.
@@ -4950,7 +4950,7 @@ export namespace RuleUpdateParams {
     /**
      * Type of wallet associated with the rule.
      */
-    walletType?: 'evm' | 'solana' | 'imx' | 'sui' | 'ton' | null;
+    walletType?: 'evm' | 'solana' | 'imx' | 'sui' | 'ton' | 'cosmos' | null;
 
     /**
      * ID of the Youtube channel.
