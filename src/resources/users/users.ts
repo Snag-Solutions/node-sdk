@@ -445,7 +445,7 @@ export interface UserConnectParams {
    */
   walletAddress: string;
 
-  walletType: 'evm' | 'solana' | 'imx' | 'sui' | 'ton';
+  walletType: 'evm' | 'solana' | 'imx' | 'sui' | 'ton' | 'cosmos';
 
   /**
    * The ID of the website
