@@ -632,7 +632,7 @@ export namespace RuleGroupGetRuleGroupsResponse {
           /**
            * Type of wallet associated with the rule.
            */
-          walletType?: 'evm' | 'solana' | 'imx' | 'sui' | 'ton' | null;
+          walletType?: 'evm' | 'solana' | 'imx' | 'sui' | 'ton' | 'cosmos' | null;
 
           /**
            * ID of the Youtube channel.
