@@ -15,7 +15,7 @@ export class WebsiteCollections extends APIResource {
    *   name: 'x',
    *   network: 'abstract',
    *   organizationId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
-   *   sortId: 0,
+   *   sortId: 99999,
    *   websiteId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
    * });
    * ```
