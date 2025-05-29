@@ -362,6 +362,7 @@ describe('resource rules', () => {
       client.loyalty.rules.list(
         {
           allotedToUserId: '123e4567-e89b-12d3-a456-426614174005',
+          allotedUserGroupId: '123e4567-e89b-12d3-a456-426614174006',
           collectionAddress: '0x1234567890abcdef1234567890abcdef12345678',
           includeLoyaltyRuleChains: 'true',
           isActive: 'true',
