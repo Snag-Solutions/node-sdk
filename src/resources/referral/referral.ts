@@ -47,7 +47,11 @@ export interface ReferralCreateCodeResponse {
 export interface ReferralCreateCodeParams {
   loyaltyRuleId: string;
 
+  organizationId?: string;
+
   userId?: string;
+
+  websiteId?: string;
 }
 
 Referral.Users = Users;
