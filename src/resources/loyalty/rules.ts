@@ -5380,9 +5380,14 @@ export namespace RuleUpdateParams {
 
 export interface RuleListParams {
   /**
-   * ID of the user to filter results by
+   * IDs of the users to filter results by
    */
-  allotedToUserId?: string;
+  allotedToUserId?: string | Array<string>;
+
+  /**
+   * ID of the user group to filter results by
+   */
+  allotedUserGroupId?: string;
 
   /**
    * Address of the collection to filter by
