@@ -145,6 +145,16 @@ Methods:
 - <code title="get /api/loyalty/accounts">client.loyalty.accounts.<a href="./src/resources/loyalty/accounts.ts">list</a>({ ...params }) -> AccountListResponse</code>
 - <code title="get /api/loyalty/accounts/{id}/rank">client.loyalty.accounts.<a href="./src/resources/loyalty/accounts.ts">retrieveRank</a>(id, { ...params }) -> AccountRetrieveRankResponse</code>
 
+## AccountStreaks
+
+Types:
+
+- <code><a href="./src/resources/loyalty/account-streaks.ts">AccountStreakGetStreaksResponse</a></code>
+
+Methods:
+
+- <code title="get /api/loyalty/account_streaks">client.loyalty.accountStreaks.<a href="./src/resources/loyalty/account-streaks.ts">getStreaks</a>({ ...params }) -> AccountStreakGetStreaksResponse</code>
+
 ## Badges
 
 Types:
