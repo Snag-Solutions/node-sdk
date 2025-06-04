@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.66 (2025-06-04)
+
+Full Changelog: [v0.1.0-alpha.65...v0.1.0-alpha.66](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.65...v0.1.0-alpha.66)
+
+### Chores
+
+* **docs:** use top-level-await in example snippets ([8b4a3ab](https://github.com/Snag-Solutions/node-sdk/commit/8b4a3abc8b7eed70224ad2c9b83ded5cd6f30b64))
+
 ## 0.1.0-alpha.65 (2025-05-29)
 
 Full Changelog: [v0.1.0-alpha.64...v0.1.0-alpha.65](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.64...v0.1.0-alpha.65)
