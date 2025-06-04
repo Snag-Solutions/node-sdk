@@ -26,13 +26,9 @@ const client = new SnagSolutions({
   apiKey: process.env['X_API_KEY'], // This is the default and can be omitted
 });
 
-async function main() {
-  const response = await client.assets.createAsset({ fileName: 'REPLACE_ME', fileSize: 1024 });
+const response = await client.assets.createAsset({ fileName: 'REPLACE_ME', fileSize: 1024 });
 
-  console.log(response.signedUrl);
-}
-
-main();
+console.log(response.signedUrl);
 ```
 
 ### Request & Response types
@@ -47,12 +43,8 @@ const client = new SnagSolutions({
   apiKey: process.env['X_API_KEY'], // This is the default and can be omitted
 });
 
-async function main() {
-  const params: SnagSolutions.AssetCreateAssetParams = { fileName: 'REPLACE_ME', fileSize: 1024 };
-  const response: SnagSolutions.AssetCreateAssetResponse = await client.assets.createAsset(params);
-}
-
-main();
+const params: SnagSolutions.AssetCreateAssetParams = { fileName: 'REPLACE_ME', fileSize: 1024 };
+const response: SnagSolutions.AssetCreateAssetResponse = await client.assets.createAsset(params);
 ```
 
 Documentation for each method, request param, and response field are available in docstrings and will appear on hover in most modern editors.
@@ -65,21 +57,17 @@ a subclass of `APIError` will be thrown:
 
 <!-- prettier-ignore -->
 ```ts
-async function main() {
-  const response = await client.assets
-    .createAsset({ fileName: 'REPLACE_ME', fileSize: 1024 })
-    .catch(async (err) => {
-      if (err instanceof SnagSolutions.APIError) {
-        console.log(err.status); // 400
-        console.log(err.name); // BadRequestError
-        console.log(err.headers); // {server: 'nginx', ...}
-      } else {
-        throw err;
-      }
-    });
-}
-
-main();
+const response = await client.assets
+  .createAsset({ fileName: 'REPLACE_ME', fileSize: 1024 })
+  .catch(async (err) => {
+    if (err instanceof SnagSolutions.APIError) {
+      console.log(err.status); // 400
+      console.log(err.name); // BadRequestError
+      console.log(err.headers); // {server: 'nginx', ...}
+    } else {
+      throw err;
+    }
+  });
 ```
 
 Error codes are as follows:
