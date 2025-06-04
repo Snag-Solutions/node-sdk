@@ -1,6 +1,12 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
 import { APIResource } from '../../resource';
+import * as AccountStreaksAPI from './account-streaks';
+import {
+  AccountStreakGetStreaksParams,
+  AccountStreakGetStreaksResponse,
+  AccountStreaks,
+} from './account-streaks';
 import * as AccountsAPI from './accounts';
 import {
   AccountListParams,
@@ -113,6 +119,7 @@ export class Loyalty extends APIResource {
   ruleGroups: RuleGroupsAPI.RuleGroups = new RuleGroupsAPI.RuleGroups(this._client);
   transactions: TransactionsAPI.Transactions = new TransactionsAPI.Transactions(this._client);
   accounts: AccountsAPI.Accounts = new AccountsAPI.Accounts(this._client);
+  accountStreaks: AccountStreaksAPI.AccountStreaks = new AccountStreaksAPI.AccountStreaks(this._client);
   badges: BadgesAPI.Badges = new BadgesAPI.Badges(this._client);
   currencies: CurrenciesAPI.Currencies = new CurrenciesAPI.Currencies(this._client);
   multipliers: MultipliersAPI.Multipliers = new MultipliersAPI.Multipliers(this._client);
@@ -127,6 +134,7 @@ export class Loyalty extends APIResource {
 Loyalty.RuleGroups = RuleGroups;
 Loyalty.Transactions = Transactions;
 Loyalty.Accounts = Accounts;
+Loyalty.AccountStreaks = AccountStreaks;
 Loyalty.Badges = Badges;
 Loyalty.Currencies = Currencies;
 Loyalty.Multipliers = Multipliers;
@@ -163,6 +171,12 @@ export declare namespace Loyalty {
     type AccountRetrieveRankResponse as AccountRetrieveRankResponse,
     type AccountListParams as AccountListParams,
     type AccountRetrieveRankParams as AccountRetrieveRankParams,
+  };
+
+  export {
+    AccountStreaks as AccountStreaks,
+    type AccountStreakGetStreaksResponse as AccountStreakGetStreaksResponse,
+    type AccountStreakGetStreaksParams as AccountStreakGetStreaksParams,
   };
 
   export {
