@@ -14,7 +14,6 @@ describe('resource accountStreaks', () => {
     const responsePromise = client.loyalty.accountStreaks.getStreaks({
       loyaltyRuleId:
         'loyaltyRuleId=123e4567-e89b-12d3-a456-426614174001&loyaltyRuleId=123e4567-e89b-12d3-a456-426614174002',
-      userId: '123e4567-e89b-12d3-a456-426614174001',
     });
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
@@ -30,9 +29,10 @@ describe('resource accountStreaks', () => {
     const response = await client.loyalty.accountStreaks.getStreaks({
       loyaltyRuleId:
         'loyaltyRuleId=123e4567-e89b-12d3-a456-426614174001&loyaltyRuleId=123e4567-e89b-12d3-a456-426614174002',
-      userId: '123e4567-e89b-12d3-a456-426614174001',
       limit: 50,
       startingAfter: '123e4567-e89b-12d3-a456-426614174010',
+      userId: '123e4567-e89b-12d3-a456-426614174001',
+      walletAddress: '0x1234567890123456789012345678901234567890',
     });
   });
 });

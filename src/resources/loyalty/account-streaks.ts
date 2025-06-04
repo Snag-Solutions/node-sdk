@@ -13,7 +13,6 @@ export class AccountStreaks extends APIResource {
    *   await client.loyalty.accountStreaks.getStreaks({
    *     loyaltyRuleId:
    *       'loyaltyRuleId=123e4567-e89b-12d3-a456-426614174001&loyaltyRuleId=123e4567-e89b-12d3-a456-426614174002',
-   *     userId: '123e4567-e89b-12d3-a456-426614174001',
    *   });
    * ```
    */
@@ -39,11 +38,23 @@ export namespace AccountStreakGetStreaksResponse {
 
     expiresAt: string;
 
+    milestone: Array<AccountStreakGetStreaksResponseItem.Milestone>;
+
     streakCount: number;
 
     updatedAt: string;
 
     userId: string;
+
+    walletAddress: string;
+  }
+
+  export namespace AccountStreakGetStreaksResponseItem {
+    export interface Milestone {
+      streakAmount: number;
+
+      streakMilestone: number;
+    }
   }
 }
 
@@ -54,11 +65,6 @@ export interface AccountStreakGetStreaksParams {
   loyaltyRuleId: string | Array<string>;
 
   /**
-   * User id to filter by
-   */
-  userId: string;
-
-  /**
    * Maximum number of records to return (max 1000)
    */
   limit?: number;
@@ -67,6 +73,16 @@ export interface AccountStreakGetStreaksParams {
    * Pagination cursor to start after a specific resource ID
    */
   startingAfter?: string;
+
+  /**
+   * User id to filter by
+   */
+  userId?: string;
+
+  /**
+   * Wallet address to filter by
+   */
+  walletAddress?: string;
 }
 
 export declare namespace AccountStreaks {
