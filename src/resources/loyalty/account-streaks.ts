@@ -32,17 +32,34 @@ export type AccountStreakGetStreaksResponse =
 
 export namespace AccountStreakGetStreaksResponse {
   export interface AccountStreakGetStreaksResponseItem {
-    id: string;
+    /**
+     * ID of the loyalty account streak, null if no streak yet
+     */
+    id: string | null;
 
-    createdAt: string;
+    /**
+     * Date and time the streak was created, null if no streak yet
+     */
+    createdAt: string | null;
 
-    expiresAt: string;
+    /**
+     * Date and time the streak expires, null if no streak yet
+     */
+    expiresAt: string | null;
+
+    loyaltyRuleId: string;
 
     milestone: Array<AccountStreakGetStreaksResponseItem.Milestone>;
 
+    /**
+     * Number of days in the streak, 0 if no streak
+     */
     streakCount: number;
 
-    updatedAt: string;
+    /**
+     * Date and time the streak was last updated, null if no streak yet
+     */
+    updatedAt: string | null;
 
     userId: string;
 
