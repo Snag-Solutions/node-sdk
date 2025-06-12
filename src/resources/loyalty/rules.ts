@@ -1083,6 +1083,11 @@ export namespace RuleCreateResponse {
       addressMapping?: string | null;
 
       /**
+       * Object containing details of the amount multiplier from the event.
+       */
+      amountMultiplier?: SmartContract.AmountMultiplier | null;
+
+      /**
        * Array of bonus details applied to the rule.
        */
       bonus?: Array<SmartContract.Bonus> | null;
@@ -1134,6 +1139,16 @@ export namespace RuleCreateResponse {
     }
 
     export namespace SmartContract {
+      /**
+       * Object containing details of the amount multiplier from the event.
+       */
+      export interface AmountMultiplier {
+        /**
+         * Mapping of the value for the smart contract.
+         */
+        valueMapping?: string | null;
+      }
+
       export interface Bonus {
         /**
          * Amount of the bonus.
@@ -2133,6 +2148,11 @@ export namespace RuleUpdateResponse {
       addressMapping?: string | null;
 
       /**
+       * Object containing details of the amount multiplier from the event.
+       */
+      amountMultiplier?: SmartContract.AmountMultiplier | null;
+
+      /**
        * Array of bonus details applied to the rule.
        */
       bonus?: Array<SmartContract.Bonus> | null;
@@ -2184,6 +2204,16 @@ export namespace RuleUpdateResponse {
     }
 
     export namespace SmartContract {
+      /**
+       * Object containing details of the amount multiplier from the event.
+       */
+      export interface AmountMultiplier {
+        /**
+         * Mapping of the value for the smart contract.
+         */
+        valueMapping?: string | null;
+      }
+
       export interface Bonus {
         /**
          * Amount of the bonus.
@@ -3133,6 +3163,11 @@ export namespace RuleListResponse {
         addressMapping?: string | null;
 
         /**
+         * Object containing details of the amount multiplier from the event.
+         */
+        amountMultiplier?: SmartContract.AmountMultiplier | null;
+
+        /**
          * Array of bonus details applied to the rule.
          */
         bonus?: Array<SmartContract.Bonus> | null;
@@ -3184,6 +3219,16 @@ export namespace RuleListResponse {
       }
 
       export namespace SmartContract {
+        /**
+         * Object containing details of the amount multiplier from the event.
+         */
+        export interface AmountMultiplier {
+          /**
+           * Mapping of the value for the smart contract.
+           */
+          valueMapping?: string | null;
+        }
+
         export interface Bonus {
           /**
            * Amount of the bonus.
@@ -4208,6 +4253,11 @@ export namespace RuleCreateParams {
       addressMapping?: string | null;
 
       /**
+       * Object containing details of the amount multiplier from the event.
+       */
+      amountMultiplier?: SmartContract.AmountMultiplier | null;
+
+      /**
        * Array of bonus details applied to the rule.
        */
       bonus?: Array<SmartContract.Bonus> | null;
@@ -4259,6 +4309,16 @@ export namespace RuleCreateParams {
     }
 
     export namespace SmartContract {
+      /**
+       * Object containing details of the amount multiplier from the event.
+       */
+      export interface AmountMultiplier {
+        /**
+         * Mapping of the value for the smart contract.
+         */
+        valueMapping?: string | null;
+      }
+
       export interface Bonus {
         /**
          * Amount of the bonus.
@@ -5256,6 +5316,11 @@ export namespace RuleUpdateParams {
       addressMapping?: string | null;
 
       /**
+       * Object containing details of the amount multiplier from the event.
+       */
+      amountMultiplier?: SmartContract.AmountMultiplier | null;
+
+      /**
        * Array of bonus details applied to the rule.
        */
       bonus?: Array<SmartContract.Bonus> | null;
@@ -5307,6 +5372,16 @@ export namespace RuleUpdateParams {
     }
 
     export namespace SmartContract {
+      /**
+       * Object containing details of the amount multiplier from the event.
+       */
+      export interface AmountMultiplier {
+        /**
+         * Mapping of the value for the smart contract.
+         */
+        valueMapping?: string | null;
+      }
+
       export interface Bonus {
         /**
          * Amount of the bonus.
