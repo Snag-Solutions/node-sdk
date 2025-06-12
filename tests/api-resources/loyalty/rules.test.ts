@@ -122,6 +122,7 @@ describe('resource rules', () => {
         smartContract: {
           abi: '[]',
           addressMapping: '0x123...789',
+          amountMultiplier: { valueMapping: 'amount' },
           bonus: [{ amount: 50, count: 5 }],
           contractId: '123e4567-e89b-12d3-a456-426614174000',
           criteria: 'everyEvent',
@@ -294,6 +295,7 @@ describe('resource rules', () => {
         smartContract: {
           abi: '[]',
           addressMapping: '0x123...789',
+          amountMultiplier: { valueMapping: 'amount' },
           bonus: [{ amount: 50, count: 5 }],
           contractId: '123e4567-e89b-12d3-a456-426614174000',
           criteria: 'everyEvent',
