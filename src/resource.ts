@@ -2,7 +2,7 @@
 
 import type { SnagSolutions } from './index';
 
-export class APIResource {
+export abstract class APIResource {
   protected _client: SnagSolutions;
 
   constructor(client: SnagSolutions) {
