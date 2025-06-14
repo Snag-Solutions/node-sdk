@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.72 (2025-06-14)
+
+Full Changelog: [v0.1.0-alpha.71...v0.1.0-alpha.72](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.71...v0.1.0-alpha.72)
+
+### Chores
+
+* **internal:** make base APIResource abstract ([7a042e6](https://github.com/Snag-Solutions/node-sdk/commit/7a042e6ee33f9b4e1960f5b557e06993fb6efb07))
+
 ## 0.1.0-alpha.71 (2025-06-14)
 
 Full Changelog: [v0.1.0-alpha.70...v0.1.0-alpha.71](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.70...v0.1.0-alpha.71)
