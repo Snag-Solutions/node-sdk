@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.71 (2025-06-14)
+
+Full Changelog: [v0.1.0-alpha.70...v0.1.0-alpha.71](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.70...v0.1.0-alpha.71)
+
+### Bug Fixes
+
+* publish script — handle NPM errors correctly ([be07ce3](https://github.com/Snag-Solutions/node-sdk/commit/be07ce30fd04afb16e90a18e3b908aa98b11bc7c))
+
 ## 0.1.0-alpha.70 (2025-06-12)
 
 Full Changelog: [v0.1.0-alpha.69...v0.1.0-alpha.70](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.69...v0.1.0-alpha.70)
