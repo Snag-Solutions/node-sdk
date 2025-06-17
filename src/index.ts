@@ -147,6 +147,7 @@ export class SnagSolutions extends Core.APIClient {
 
     super({
       baseURL: options.baseURL!,
+      baseURLOverridden: baseURL ? baseURL !== 'https://admin.snagsolutions.io/' : false,
       timeout: options.timeout ?? 60000 /* 1 minute */,
       httpAgent: options.httpAgent,
       maxRetries: options.maxRetries,
@@ -166,6 +167,13 @@ export class SnagSolutions extends Core.APIClient {
   minting: API.Minting = new API.Minting(this);
   referral: API.Referral = new API.Referral(this);
   websites: API.Websites = new API.Websites(this);
+
+  /**
+   * Check whether the base URL is set to its default.
+   */
+  #baseURLOverridden(): boolean {
+    return this.baseURL !== 'https://admin.snagsolutions.io/';
+  }
 
   protected override defaultQuery(): Core.DefaultQuery | undefined {
     return this._options.defaultQuery;
