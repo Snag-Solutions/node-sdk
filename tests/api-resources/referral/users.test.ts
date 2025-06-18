@@ -48,7 +48,6 @@ describe('resource users', () => {
   test.skip('list: required and optional params', async () => {
     const response = await client.referral.users.list({
       walletAddress: 'string',
-      includeEligibility: true,
       limit: 1,
       loyaltyRuleId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
       organizationId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
