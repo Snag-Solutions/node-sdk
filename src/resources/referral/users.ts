@@ -101,8 +101,6 @@ export interface UserCreateParams {
 export interface UserListParams {
   walletAddress: string | Array<string>;
 
-  includeEligibility?: boolean | null;
-
   limit?: number;
 
   loyaltyRuleId?: string;
