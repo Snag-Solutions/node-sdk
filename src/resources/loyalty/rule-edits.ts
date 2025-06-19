@@ -918,11 +918,6 @@ export namespace RuleEditListResponse {
            * Flag indicating if a custom range is applied.
            */
           withCustomRange?: boolean | null;
-
-          /**
-           * Flag indicating if a maximum limit is applied.
-           */
-          withMax?: boolean | null;
         }
 
         export namespace SmartContract {
@@ -1828,11 +1823,6 @@ export namespace RuleEditListResponse {
            * Flag indicating if a custom range is applied.
            */
           withCustomRange?: boolean | null;
-
-          /**
-           * Flag indicating if a maximum limit is applied.
-           */
-          withMax?: boolean | null;
         }
 
         export namespace SmartContract {
@@ -2793,11 +2783,6 @@ export namespace RuleEditRestoreResponse {
          * Flag indicating if a custom range is applied.
          */
         withCustomRange?: boolean | null;
-
-        /**
-         * Flag indicating if a maximum limit is applied.
-         */
-        withMax?: boolean | null;
       }
 
       export namespace SmartContract {
@@ -3703,11 +3688,6 @@ export namespace RuleEditRestoreResponse {
          * Flag indicating if a custom range is applied.
          */
         withCustomRange?: boolean | null;
-
-        /**
-         * Flag indicating if a maximum limit is applied.
-         */
-        withMax?: boolean | null;
       }
 
       export namespace SmartContract {
