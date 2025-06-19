@@ -340,6 +340,18 @@ export interface RuleCreateResponse {
   loyaltyUserAllotmentCsvUrl?: string;
 
   /**
+   * The interval for the max amount. Available for the smart contract and external
+   * rules.
+   */
+  maxAmountInterval?: 'daily' | 'weekly' | 'monthly' | 'lifetime' | null;
+
+  /**
+   * The maximum amount of points a user can earn per interval. Available for the
+   * smart contract and external rules.
+   */
+  maxAmountPerInterval?: number | null;
+
+  /**
    * URL of the media to be displayed
    */
   mediaUrl?: string | null;
@@ -1137,11 +1149,6 @@ export namespace RuleCreateResponse {
        * Flag indicating if a custom range is applied.
        */
       withCustomRange?: boolean | null;
-
-      /**
-       * Flag indicating if a maximum limit is applied.
-       */
-      withMax?: boolean | null;
     }
 
     export namespace SmartContract {
@@ -1353,6 +1360,18 @@ export interface RuleUpdateResponse {
    * ID of the rule group section to associate with the rule
    */
   loyaltyRuleGroupId?: (string & {}) | 'no-section' | null;
+
+  /**
+   * The interval for the max amount. Available for the smart contract and external
+   * rules.
+   */
+  maxAmountInterval?: 'daily' | 'weekly' | 'monthly' | 'lifetime' | null;
+
+  /**
+   * The maximum amount of points a user can earn per interval. Available for the
+   * smart contract and external rules.
+   */
+  maxAmountPerInterval?: number | null;
 
   /**
    * URL of the media to be displayed
@@ -2212,11 +2231,6 @@ export namespace RuleUpdateResponse {
        * Flag indicating if a custom range is applied.
        */
       withCustomRange?: boolean | null;
-
-      /**
-       * Flag indicating if a maximum limit is applied.
-       */
-      withMax?: boolean | null;
     }
 
     export namespace SmartContract {
@@ -3231,11 +3245,6 @@ export namespace RuleListResponse {
          * Flag indicating if a custom range is applied.
          */
         withCustomRange?: boolean | null;
-
-        /**
-         * Flag indicating if a maximum limit is applied.
-         */
-        withMax?: boolean | null;
       }
 
       export namespace SmartContract {
@@ -3528,6 +3537,18 @@ export interface RuleCreateParams {
    * URL for uploading loyalty user allotment via CSV
    */
   loyaltyUserAllotmentCsvUrl?: string;
+
+  /**
+   * The interval for the max amount. Available for the smart contract and external
+   * rules.
+   */
+  maxAmountInterval?: 'daily' | 'weekly' | 'monthly' | 'lifetime' | null;
+
+  /**
+   * The maximum amount of points a user can earn per interval. Available for the
+   * smart contract and external rules.
+   */
+  maxAmountPerInterval?: number | null;
 
   /**
    * URL of the media to be displayed
@@ -4327,11 +4348,6 @@ export namespace RuleCreateParams {
        * Flag indicating if a custom range is applied.
        */
       withCustomRange?: boolean | null;
-
-      /**
-       * Flag indicating if a maximum limit is applied.
-       */
-      withMax?: boolean | null;
     }
 
     export namespace SmartContract {
@@ -4541,6 +4557,18 @@ export interface RuleUpdateParams {
    * ID of the rule group section to associate with the rule
    */
   loyaltyRuleGroupId?: (string & {}) | 'no-section' | null;
+
+  /**
+   * The interval for the max amount. Available for the smart contract and external
+   * rules.
+   */
+  maxAmountInterval?: 'daily' | 'weekly' | 'monthly' | 'lifetime' | null;
+
+  /**
+   * The maximum amount of points a user can earn per interval. Available for the
+   * smart contract and external rules.
+   */
+  maxAmountPerInterval?: number | null;
 
   /**
    * URL of the media to be displayed
@@ -5400,11 +5428,6 @@ export namespace RuleUpdateParams {
        * Flag indicating if a custom range is applied.
        */
       withCustomRange?: boolean | null;
-
-      /**
-       * Flag indicating if a maximum limit is applied.
-       */
-      withMax?: boolean | null;
     }
 
     export namespace SmartContract {
