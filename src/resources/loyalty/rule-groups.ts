@@ -497,6 +497,11 @@ export namespace RuleGroupGetRuleGroupsResponse {
           referrerReward?: number | null;
 
           /**
+           * Flag indicating if the rule can also reward badges per range.
+           */
+          rewardBadgePerRange?: boolean;
+
+          /**
            * Flag indicating if the reward is rewarded by batch.
            */
           rewardByBatch?: boolean | null;
@@ -879,6 +884,16 @@ export namespace RuleGroupGetRuleGroupsResponse {
              * Start value of the range.
              */
             startRange: number;
+
+            /**
+             * ID of the loyalty badge for this range.
+             */
+            loyaltyBadgeId?: string;
+
+            /**
+             * Amount of the loyalty multiplier for this range.
+             */
+            loyaltyMultiplierAmount?: number;
           }
 
           /**

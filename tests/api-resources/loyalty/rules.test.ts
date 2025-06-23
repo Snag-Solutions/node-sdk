@@ -104,7 +104,15 @@ describe('resource rules', () => {
         promoCodeCsvUrl: 'https://example.com/promo_codes.csv',
         promoCodeLength: 10,
         promoCodeType: 'code',
-        range: [{ amount: 5, endRange: 10, startRange: 1 }],
+        range: [
+          {
+            amount: 5,
+            endRange: 10,
+            startRange: 1,
+            loyaltyBadgeId: 'badge123',
+            loyaltyMultiplierAmount: 1.5,
+          },
+        ],
         referralRequirements: {
           achievePoints: true,
           completeProfile: false,
@@ -114,6 +122,7 @@ describe('resource rules', () => {
           points: { amount: 50, loyaltyCurrecyId: 'currency123' },
         },
         referrerReward: 50,
+        rewardBadgePerRange: false,
         rewardByBatch: true,
         rewardPerImpression: true,
         saleCurrency: 'USD',
@@ -280,7 +289,15 @@ describe('resource rules', () => {
         promoCodeCsvUrl: 'https://example.com/promo_codes.csv',
         promoCodeLength: 10,
         promoCodeType: 'code',
-        range: [{ amount: 5, endRange: 10, startRange: 1 }],
+        range: [
+          {
+            amount: 5,
+            endRange: 10,
+            startRange: 1,
+            loyaltyBadgeId: 'badge123',
+            loyaltyMultiplierAmount: 1.5,
+          },
+        ],
         referralRequirements: {
           achievePoints: true,
           completeProfile: false,
@@ -290,6 +307,7 @@ describe('resource rules', () => {
           points: { amount: 50, loyaltyCurrecyId: 'currency123' },
         },
         referrerReward: 50,
+        rewardBadgePerRange: false,
         rewardByBatch: true,
         rewardPerImpression: true,
         saleCurrency: 'USD',
