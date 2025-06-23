@@ -656,6 +656,11 @@ export namespace RuleCreateResponse {
     referrerReward?: number | null;
 
     /**
+     * Flag indicating if the rule can also reward badges per range.
+     */
+    rewardBadgePerRange?: boolean;
+
+    /**
      * Flag indicating if the reward is rewarded by batch.
      */
     rewardByBatch?: boolean | null;
@@ -1038,6 +1043,16 @@ export namespace RuleCreateResponse {
        * Start value of the range.
        */
       startRange: number;
+
+      /**
+       * ID of the loyalty badge for this range.
+       */
+      loyaltyBadgeId?: string;
+
+      /**
+       * Amount of the loyalty multiplier for this range.
+       */
+      loyaltyMultiplierAmount?: number;
     }
 
     /**
@@ -1738,6 +1753,11 @@ export namespace RuleUpdateResponse {
     referrerReward?: number | null;
 
     /**
+     * Flag indicating if the rule can also reward badges per range.
+     */
+    rewardBadgePerRange?: boolean;
+
+    /**
      * Flag indicating if the reward is rewarded by batch.
      */
     rewardByBatch?: boolean | null;
@@ -2120,6 +2140,16 @@ export namespace RuleUpdateResponse {
        * Start value of the range.
        */
       startRange: number;
+
+      /**
+       * ID of the loyalty badge for this range.
+       */
+      loyaltyBadgeId?: string;
+
+      /**
+       * Amount of the loyalty multiplier for this range.
+       */
+      loyaltyMultiplierAmount?: number;
     }
 
     /**
@@ -2752,6 +2782,11 @@ export namespace RuleListResponse {
       referrerReward?: number | null;
 
       /**
+       * Flag indicating if the rule can also reward badges per range.
+       */
+      rewardBadgePerRange?: boolean;
+
+      /**
        * Flag indicating if the reward is rewarded by batch.
        */
       rewardByBatch?: boolean | null;
@@ -3134,6 +3169,16 @@ export namespace RuleListResponse {
          * Start value of the range.
          */
         startRange: number;
+
+        /**
+         * ID of the loyalty badge for this range.
+         */
+        loyaltyBadgeId?: string;
+
+        /**
+         * Amount of the loyalty multiplier for this range.
+         */
+        loyaltyMultiplierAmount?: number;
       }
 
       /**
@@ -3855,6 +3900,11 @@ export namespace RuleCreateParams {
     referrerReward?: number | null;
 
     /**
+     * Flag indicating if the rule can also reward badges per range.
+     */
+    rewardBadgePerRange?: boolean;
+
+    /**
      * Flag indicating if the reward is rewarded by batch.
      */
     rewardByBatch?: boolean | null;
@@ -4237,6 +4287,16 @@ export namespace RuleCreateParams {
        * Start value of the range.
        */
       startRange: number;
+
+      /**
+       * ID of the loyalty badge for this range.
+       */
+      loyaltyBadgeId?: string;
+
+      /**
+       * Amount of the loyalty multiplier for this range.
+       */
+      loyaltyMultiplierAmount?: number;
     }
 
     /**
@@ -4935,6 +4995,11 @@ export namespace RuleUpdateParams {
     referrerReward?: number | null;
 
     /**
+     * Flag indicating if the rule can also reward badges per range.
+     */
+    rewardBadgePerRange?: boolean;
+
+    /**
      * Flag indicating if the reward is rewarded by batch.
      */
     rewardByBatch?: boolean | null;
@@ -5317,6 +5382,16 @@ export namespace RuleUpdateParams {
        * Start value of the range.
        */
       startRange: number;
+
+      /**
+       * ID of the loyalty badge for this range.
+       */
+      loyaltyBadgeId?: string;
+
+      /**
+       * Amount of the loyalty multiplier for this range.
+       */
+      loyaltyMultiplierAmount?: number;
     }
 
     /**
