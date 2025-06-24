@@ -458,7 +458,7 @@ export namespace RuleCreateResponse {
     /**
      * Conditions for completing the profile.
      */
-    completeProfileConditions?: Record<string, boolean> | null;
+    completeProfileConditions?: { [key: string]: boolean } | null;
 
     /**
      * Object containing details for the call-to-action.
@@ -1555,7 +1555,7 @@ export namespace RuleUpdateResponse {
     /**
      * Conditions for completing the profile.
      */
-    completeProfileConditions?: Record<string, boolean> | null;
+    completeProfileConditions?: { [key: string]: boolean } | null;
 
     /**
      * Object containing details for the call-to-action.
@@ -2441,7 +2441,7 @@ export namespace RuleListResponse {
     /**
      * Optional metadata for the loyalty rule
      */
-    metadata?: Record<string, Data.Metadata>;
+    metadata?: { [key: string]: Data.Metadata };
   }
 
   export namespace Data {
@@ -2584,7 +2584,7 @@ export namespace RuleListResponse {
       /**
        * Conditions for completing the profile.
        */
-      completeProfileConditions?: Record<string, boolean> | null;
+      completeProfileConditions?: { [key: string]: boolean } | null;
 
       /**
        * Object containing details for the call-to-action.
@@ -3702,7 +3702,7 @@ export namespace RuleCreateParams {
     /**
      * Conditions for completing the profile.
      */
-    completeProfileConditions?: Record<string, boolean> | null;
+    completeProfileConditions?: { [key: string]: boolean } | null;
 
     /**
      * Object containing details for the call-to-action.
@@ -4797,7 +4797,7 @@ export namespace RuleUpdateParams {
     /**
      * Conditions for completing the profile.
      */
-    completeProfileConditions?: Record<string, boolean> | null;
+    completeProfileConditions?: { [key: string]: boolean } | null;
 
     /**
      * Object containing details for the call-to-action.
