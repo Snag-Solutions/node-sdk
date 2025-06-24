@@ -184,7 +184,7 @@ export namespace RuleEditListResponse {
       /**
        * Optional metadata for the loyalty rule
        */
-      metadata?: Record<string, Data.Metadata>;
+      metadata?: { [key: string]: Data.Metadata };
     }
 
     export namespace Data {
@@ -227,7 +227,7 @@ export namespace RuleEditListResponse {
         /**
          * Conditions for completing the profile.
          */
-        completeProfileConditions?: Record<string, boolean> | null;
+        completeProfileConditions?: { [key: string]: boolean } | null;
 
         /**
          * Object containing details for the call-to-action.
@@ -1104,7 +1104,7 @@ export namespace RuleEditListResponse {
       /**
        * Optional metadata for the loyalty rule
        */
-      metadata?: Record<string, PreviousData.Metadata>;
+      metadata?: { [key: string]: PreviousData.Metadata };
     }
 
     export namespace PreviousData {
@@ -1147,7 +1147,7 @@ export namespace RuleEditListResponse {
         /**
          * Conditions for completing the profile.
          */
-        completeProfileConditions?: Record<string, boolean> | null;
+        completeProfileConditions?: { [key: string]: boolean } | null;
 
         /**
          * Object containing details for the call-to-action.
@@ -2079,7 +2079,7 @@ export namespace RuleEditRestoreResponse {
     /**
      * Optional metadata for the loyalty rule
      */
-    metadata?: Record<string, Data.Metadata>;
+    metadata?: { [key: string]: Data.Metadata };
   }
 
   export namespace Data {
@@ -2122,7 +2122,7 @@ export namespace RuleEditRestoreResponse {
       /**
        * Conditions for completing the profile.
        */
-      completeProfileConditions?: Record<string, boolean> | null;
+      completeProfileConditions?: { [key: string]: boolean } | null;
 
       /**
        * Object containing details for the call-to-action.
@@ -2999,7 +2999,7 @@ export namespace RuleEditRestoreResponse {
     /**
      * Optional metadata for the loyalty rule
      */
-    metadata?: Record<string, PreviousData.Metadata>;
+    metadata?: { [key: string]: PreviousData.Metadata };
   }
 
   export namespace PreviousData {
@@ -3042,7 +3042,7 @@ export namespace RuleEditRestoreResponse {
       /**
        * Conditions for completing the profile.
        */
-      completeProfileConditions?: Record<string, boolean> | null;
+      completeProfileConditions?: { [key: string]: boolean } | null;
 
       /**
        * Object containing details for the call-to-action.

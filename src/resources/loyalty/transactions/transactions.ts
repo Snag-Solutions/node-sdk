@@ -172,7 +172,7 @@ export namespace TransactionGetTransactionEntriesResponse {
     /**
      * Optional metadata for the transaction entry
      */
-    metadata?: Record<string, unknown>;
+    metadata?: { [key: string]: unknown };
   }
 
   export namespace Data {
@@ -221,7 +221,7 @@ export namespace TransactionGetTransactionEntriesResponse {
         /**
          * Optional metadata for the loyalty rule
          */
-        metadata?: Record<string, unknown>;
+        metadata?: { [key: string]: unknown };
 
         /**
          * Name of the loyalty rule

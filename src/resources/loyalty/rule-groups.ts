@@ -299,7 +299,7 @@ export namespace RuleGroupGetRuleGroupsResponse {
           /**
            * Conditions for completing the profile.
            */
-          completeProfileConditions?: Record<string, boolean> | null;
+          completeProfileConditions?: { [key: string]: boolean } | null;
 
           /**
            * Object containing details for the call-to-action.
