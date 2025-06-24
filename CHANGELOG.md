@@ -1,5 +1,28 @@
 # Changelog
 
+## 0.1.0-alpha.72 (2025-06-24)
+
+Full Changelog: [v0.1.0-alpha.71...v0.1.0-alpha.72](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.71...v0.1.0-alpha.72)
+
+### Features
+
+* **api:** open api update ([45622ef](https://github.com/Snag-Solutions/node-sdk/commit/45622efa67f0a7d2b3e893e3ca993f4dc7acdacc))
+* **api:** open api update ([2166d48](https://github.com/Snag-Solutions/node-sdk/commit/2166d481012d9b1c413e58744088f0ccad77ab85))
+* **api:** open api update ([0c823ae](https://github.com/Snag-Solutions/node-sdk/commit/0c823aef8d62e8f98b63e08d8409d58984c8f5f5))
+* **api:** open api update ([a8f5715](https://github.com/Snag-Solutions/node-sdk/commit/a8f5715cc755963fa63cb52dbbf1ef05125dae70))
+* **client:** add support for endpoint-specific base URLs ([e0e6469](https://github.com/Snag-Solutions/node-sdk/commit/e0e6469697c1b3358a91525967aea30949ffe9f3))
+
+
+### Chores
+
+* **ci:** enable for pull requests ([8d3ed38](https://github.com/Snag-Solutions/node-sdk/commit/8d3ed389984c6ba4e031a775363c091589718c02))
+* **internal:** make base APIResource abstract ([7a042e6](https://github.com/Snag-Solutions/node-sdk/commit/7a042e6ee33f9b4e1960f5b557e06993fb6efb07))
+
+
+### Refactors
+
+* **types:** replace Record with mapped types ([34366b5](https://github.com/Snag-Solutions/node-sdk/commit/34366b5d847185242e79db26d9151988db7fe2d2))
+
 ## 0.1.0-alpha.71 (2025-06-14)
 
 Full Changelog: [v0.1.0-alpha.70...v0.1.0-alpha.71](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.70...v0.1.0-alpha.71)
