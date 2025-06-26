@@ -410,7 +410,12 @@ export interface RuleCreateResponse {
   rewardType?: 'points' | 'multiplier' | 'badge';
 
   /**
-   * Identifier for associated subscriptions
+   * Optional subscription id for the rule
+   */
+  subscriptionId?: string | null;
+
+  /**
+   * Blockchain Identifier for associated subscriptions
    */
   subscriptionIdentifier?: string | null;
 }
@@ -1457,7 +1462,12 @@ export interface RuleUpdateResponse {
   startTime?: string | null;
 
   /**
-   * Optional subscription identifier for the rule
+   * Optional subscription id for the rule
+   */
+  subscriptionId?: string | null;
+
+  /**
+   * Optional blockchain subscription identifier for the rule
    */
   subscriptionIdentifier?: string | null;
 }
@@ -3654,7 +3664,12 @@ export interface RuleCreateParams {
   rewardType?: 'points' | 'multiplier' | 'badge';
 
   /**
-   * Identifier for associated subscriptions
+   * Optional subscription id for the rule
+   */
+  subscriptionId?: string | null;
+
+  /**
+   * Blockchain Identifier for associated subscriptions
    */
   subscriptionIdentifier?: string | null;
 }
@@ -4699,7 +4714,12 @@ export interface RuleUpdateParams {
   startTime?: string | null;
 
   /**
-   * Optional subscription identifier for the rule
+   * Optional subscription id for the rule
+   */
+  subscriptionId?: string | null;
+
+  /**
+   * Optional blockchain subscription identifier for the rule
    */
   subscriptionIdentifier?: string | null;
 }
