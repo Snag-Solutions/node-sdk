@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.74 (2025-06-27)
+
+Full Changelog: [v0.1.0-alpha.73...v0.1.0-alpha.74](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.73...v0.1.0-alpha.74)
+
+### Bug Fixes
+
+* **ci:** release-doctor — report correct token name ([a4918ad](https://github.com/Snag-Solutions/node-sdk/commit/a4918adf3ebb426052010f93d382bc8b22b28924))
+
 ## 0.1.0-alpha.73 (2025-06-26)
 
 Full Changelog: [v0.1.0-alpha.72...v0.1.0-alpha.73](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.72...v0.1.0-alpha.73)
