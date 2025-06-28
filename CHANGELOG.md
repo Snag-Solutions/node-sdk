@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.75 (2025-06-28)
+
+Full Changelog: [v0.1.0-alpha.74...v0.1.0-alpha.75](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.74...v0.1.0-alpha.75)
+
+### Chores
+
+* **ci:** only run for pushes and fork pull requests ([6395d0e](https://github.com/Snag-Solutions/node-sdk/commit/6395d0e32874a599ca74de1a5fa5b3e80cfa528e))
+
 ## 0.1.0-alpha.74 (2025-06-27)
 
 Full Changelog: [v0.1.0-alpha.73...v0.1.0-alpha.74](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.73...v0.1.0-alpha.74)
