@@ -246,7 +246,8 @@ export namespace RuleGroupGetRuleGroupsResponse {
           | 'liquidity_uniswap_v3'
           | 'points_airdrop'
           | 'youtube_subscribers'
-          | 'youtube_comment';
+          | 'youtube_comment'
+          | 'shopify_spend';
       }
 
       export namespace LoyaltyRule {
