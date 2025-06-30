@@ -492,6 +492,7 @@ export interface TransactionGetTransactionEntriesParams {
     | 'points_airdrop'
     | 'youtube_subscribers'
     | 'youtube_comment'
+    | 'shopify_spend'
     | Array<
         | 'Bonus'
         | 'BoughtOn'
@@ -552,6 +553,7 @@ export interface TransactionGetTransactionEntriesParams {
         | 'points_airdrop'
         | 'youtube_subscribers'
         | 'youtube_comment'
+        | 'shopify_spend'
       >;
 
   /**
