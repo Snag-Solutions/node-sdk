@@ -272,7 +272,8 @@ export interface RuleCreateResponse {
     | 'liquidity_uniswap_v3'
     | 'points_airdrop'
     | 'youtube_subscribers'
-    | 'youtube_comment';
+    | 'youtube_comment'
+    | 'shopify_spend';
 
   /**
    * Unique identifier for the associated website
@@ -308,6 +309,11 @@ export interface RuleCreateResponse {
    * Optional detailed description of the rule
    */
   description?: string;
+
+  /**
+   * ID of the external integration
+   */
+  externalIntegrationId?: string | null;
 
   /**
    * Whether to hide this rule in the user interface
@@ -408,6 +414,11 @@ export interface RuleCreateResponse {
    * Type of reward issued by the rule
    */
   rewardType?: 'points' | 'multiplier' | 'badge';
+
+  /**
+   * URL of the Shopify store
+   */
+  shopifyStoreUrl?: string | null;
 
   /**
    * Optional subscription id for the rule
@@ -1357,6 +1368,11 @@ export interface RuleUpdateResponse {
   effectiveStartTime?: string | null;
 
   /**
+   * ID of the external integration
+   */
+  externalIntegrationId?: string | null;
+
+  /**
    * Frequency of the rule execution
    */
   frequency?: 'none' | 'once' | 'daily' | 'weekly' | 'monthly' | 'immediately';
@@ -1455,6 +1471,11 @@ export interface RuleUpdateResponse {
    * Type of reward issued by this rule
    */
   rewardType?: 'points' | 'multiplier' | 'badge';
+
+  /**
+   * URL of the Shopify store
+   */
+  shopifyStoreUrl?: string | null;
 
   /**
    * Start time for the loyalty rule
@@ -3526,7 +3547,8 @@ export interface RuleCreateParams {
     | 'liquidity_uniswap_v3'
     | 'points_airdrop'
     | 'youtube_subscribers'
-    | 'youtube_comment';
+    | 'youtube_comment'
+    | 'shopify_spend';
 
   /**
    * Unique identifier for the associated website
@@ -3562,6 +3584,11 @@ export interface RuleCreateParams {
    * Optional detailed description of the rule
    */
   description?: string;
+
+  /**
+   * ID of the external integration
+   */
+  externalIntegrationId?: string | null;
 
   /**
    * Whether to hide this rule in the user interface
@@ -3662,6 +3689,11 @@ export interface RuleCreateParams {
    * Type of reward issued by the rule
    */
   rewardType?: 'points' | 'multiplier' | 'badge';
+
+  /**
+   * URL of the Shopify store
+   */
+  shopifyStoreUrl?: string | null;
 
   /**
    * Optional subscription id for the rule
@@ -4609,6 +4641,11 @@ export interface RuleUpdateParams {
   effectiveStartTime?: string | null;
 
   /**
+   * ID of the external integration
+   */
+  externalIntegrationId?: string | null;
+
+  /**
    * Frequency of the rule execution
    */
   frequency?: 'none' | 'once' | 'daily' | 'weekly' | 'monthly' | 'immediately';
@@ -4707,6 +4744,11 @@ export interface RuleUpdateParams {
    * Type of reward issued by this rule
    */
   rewardType?: 'points' | 'multiplier' | 'badge';
+
+  /**
+   * URL of the Shopify store
+   */
+  shopifyStoreUrl?: string | null;
 
   /**
    * Start time for the loyalty rule
