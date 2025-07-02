@@ -190,7 +190,6 @@ describe('resource rules', () => {
       rewardType: 'points',
       shopifyStoreUrl: 'https://example.com',
       subscriptionId: 'sub12345',
-      subscriptionIdentifier: 'sub12345',
     });
   });
 
@@ -359,7 +358,6 @@ describe('resource rules', () => {
       shopifyStoreUrl: 'https://example.com',
       startTime: '2024-01-01T00:00:00Z',
       subscriptionId: 'sub12345',
-      subscriptionIdentifier: 'sub12345',
     });
   });
 

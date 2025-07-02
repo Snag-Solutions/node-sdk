@@ -424,11 +424,6 @@ export interface RuleCreateResponse {
    * Optional subscription id for the rule
    */
   subscriptionId?: string | null;
-
-  /**
-   * Blockchain Identifier for associated subscriptions
-   */
-  subscriptionIdentifier?: string | null;
 }
 
 export namespace RuleCreateResponse {
@@ -1486,11 +1481,6 @@ export interface RuleUpdateResponse {
    * Optional subscription id for the rule
    */
   subscriptionId?: string | null;
-
-  /**
-   * Optional blockchain subscription identifier for the rule
-   */
-  subscriptionIdentifier?: string | null;
 }
 
 export namespace RuleUpdateResponse {
@@ -3699,11 +3689,6 @@ export interface RuleCreateParams {
    * Optional subscription id for the rule
    */
   subscriptionId?: string | null;
-
-  /**
-   * Blockchain Identifier for associated subscriptions
-   */
-  subscriptionIdentifier?: string | null;
 }
 
 export namespace RuleCreateParams {
@@ -4759,11 +4744,6 @@ export interface RuleUpdateParams {
    * Optional subscription id for the rule
    */
   subscriptionId?: string | null;
-
-  /**
-   * Optional blockchain subscription identifier for the rule
-   */
-  subscriptionIdentifier?: string | null;
 }
 
 export namespace RuleUpdateParams {
