@@ -247,7 +247,8 @@ export namespace RuleGroupGetRuleGroupsResponse {
           | 'points_airdrop'
           | 'youtube_subscribers'
           | 'youtube_comment'
-          | 'shopify_spend';
+          | 'shopify_spend'
+          | 'swap';
       }
 
       export namespace LoyaltyRule {
@@ -573,6 +574,11 @@ export namespace RuleGroupGetRuleGroupsResponse {
            * Array of streak milestones and corresponding rewards.
            */
           streakArray?: Array<Metadata.StreakArray> | null;
+
+          /**
+           * Metadata for swap loyalty rules
+           */
+          swap?: Metadata.Swap;
 
           /**
            * ID of the Telegram channel.
@@ -1086,6 +1092,33 @@ export namespace RuleGroupGetRuleGroupsResponse {
              * Milestone required to achieve the streak.
              */
             streakMilestone: number;
+          }
+
+          /**
+           * Metadata for swap loyalty rules
+           */
+          export interface Swap {
+            provider?: 'any' | 'relay' | 'lifi';
+
+            relayReferrerId?: string;
+
+            requireCrossChainSwap?: boolean;
+
+            swappedToChain?: 'any' | number | string;
+
+            swappedToTokens?: Array<Swap.SwappedToToken>;
+
+            tokenMode?: 'any' | 'specific';
+
+            trackTokenAmount?: boolean;
+          }
+
+          export namespace Swap {
+            export interface SwappedToToken {
+              address: string;
+
+              chainId: string;
+            }
           }
         }
       }

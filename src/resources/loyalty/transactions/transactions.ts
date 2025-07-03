@@ -493,6 +493,7 @@ export interface TransactionGetTransactionEntriesParams {
     | 'youtube_subscribers'
     | 'youtube_comment'
     | 'shopify_spend'
+    | 'swap'
     | Array<
         | 'Bonus'
         | 'BoughtOn'
@@ -554,6 +555,7 @@ export interface TransactionGetTransactionEntriesParams {
         | 'youtube_subscribers'
         | 'youtube_comment'
         | 'shopify_spend'
+        | 'swap'
       >;
 
   /**
