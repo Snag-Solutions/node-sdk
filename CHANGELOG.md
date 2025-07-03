@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.0-alpha.77 (2025-07-03)
+
+Full Changelog: [v0.1.0-alpha.76...v0.1.0-alpha.77](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.76...v0.1.0-alpha.77)
+
+### Bug Fixes
+
+* **client:** don't send `Content-Type` for bodyless methods ([293c141](https://github.com/Snag-Solutions/node-sdk/commit/293c1418bf9515d16d8e93fa1a6379347d483ab2))
+
+
+### Chores
+
+* mention unit type in timeout docs ([83dd336](https://github.com/Snag-Solutions/node-sdk/commit/83dd336ec8d88ca0b14f6784d5a73f5d3023bc16))
+
 ## 0.1.0-alpha.76 (2025-07-03)
 
 Full Changelog: [v0.1.0-alpha.75...v0.1.0-alpha.76](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.75...v0.1.0-alpha.76)
