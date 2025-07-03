@@ -185,6 +185,11 @@ export interface AccountListParams {
   externalIdentifier?: string;
 
   /**
+   * Whether the account is the main account
+   */
+  isMainAccount?: 'true' | 'false';
+
+  /**
    * Maximum number of accounts to return
    */
   limit?: number;

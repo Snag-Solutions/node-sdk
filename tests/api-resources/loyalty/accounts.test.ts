@@ -37,6 +37,7 @@ describe('resource accounts', () => {
         {
           discordUser: 'user123#4567',
           externalIdentifier: '123e4567-e89b-12d3-a456-426614174090',
+          isMainAccount: 'true',
           limit: 20,
           loyaltyCurrencyId: '123e4567-e89b-12d3-a456-426614174090',
           organizationId: '123e4567-e89b-12d3-a456-426614174001',
