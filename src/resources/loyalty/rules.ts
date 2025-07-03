@@ -273,7 +273,8 @@ export interface RuleCreateResponse {
     | 'points_airdrop'
     | 'youtube_subscribers'
     | 'youtube_comment'
-    | 'shopify_spend';
+    | 'shopify_spend'
+    | 'swap';
 
   /**
    * Unique identifier for the associated website
@@ -742,6 +743,11 @@ export namespace RuleCreateResponse {
      * Array of streak milestones and corresponding rewards.
      */
     streakArray?: Array<Metadata.StreakArray> | null;
+
+    /**
+     * Metadata for swap loyalty rules
+     */
+    swap?: Metadata.Swap;
 
     /**
      * ID of the Telegram channel.
@@ -1255,6 +1261,33 @@ export namespace RuleCreateResponse {
        * Milestone required to achieve the streak.
        */
       streakMilestone: number;
+    }
+
+    /**
+     * Metadata for swap loyalty rules
+     */
+    export interface Swap {
+      provider?: 'any' | 'relay' | 'lifi';
+
+      relayReferrerId?: string;
+
+      requireCrossChainSwap?: boolean;
+
+      swappedToChain?: 'any' | number | string;
+
+      swappedToTokens?: Array<Swap.SwappedToToken>;
+
+      tokenMode?: 'any' | 'specific';
+
+      trackTokenAmount?: boolean;
+    }
+
+    export namespace Swap {
+      export interface SwappedToToken {
+        address: string;
+
+        chainId: string;
+      }
     }
   }
 
@@ -1851,6 +1884,11 @@ export namespace RuleUpdateResponse {
     streakArray?: Array<Metadata.StreakArray> | null;
 
     /**
+     * Metadata for swap loyalty rules
+     */
+    swap?: Metadata.Swap;
+
+    /**
      * ID of the Telegram channel.
      */
     telegramChannelId?: string | null;
@@ -2362,6 +2400,33 @@ export namespace RuleUpdateResponse {
        * Milestone required to achieve the streak.
        */
       streakMilestone: number;
+    }
+
+    /**
+     * Metadata for swap loyalty rules
+     */
+    export interface Swap {
+      provider?: 'any' | 'relay' | 'lifi';
+
+      relayReferrerId?: string;
+
+      requireCrossChainSwap?: boolean;
+
+      swappedToChain?: 'any' | number | string;
+
+      swappedToTokens?: Array<Swap.SwappedToToken>;
+
+      tokenMode?: 'any' | 'specific';
+
+      trackTokenAmount?: boolean;
+    }
+
+    export namespace Swap {
+      export interface SwappedToToken {
+        address: string;
+
+        chainId: string;
+      }
     }
   }
 }
@@ -2880,6 +2945,11 @@ export namespace RuleListResponse {
       streakArray?: Array<Metadata.StreakArray> | null;
 
       /**
+       * Metadata for swap loyalty rules
+       */
+      swap?: Metadata.Swap;
+
+      /**
        * ID of the Telegram channel.
        */
       telegramChannelId?: string | null;
@@ -3392,6 +3462,33 @@ export namespace RuleListResponse {
          */
         streakMilestone: number;
       }
+
+      /**
+       * Metadata for swap loyalty rules
+       */
+      export interface Swap {
+        provider?: 'any' | 'relay' | 'lifi';
+
+        relayReferrerId?: string;
+
+        requireCrossChainSwap?: boolean;
+
+        swappedToChain?: 'any' | number | string;
+
+        swappedToTokens?: Array<Swap.SwappedToToken>;
+
+        tokenMode?: 'any' | 'specific';
+
+        trackTokenAmount?: boolean;
+      }
+
+      export namespace Swap {
+        export interface SwappedToToken {
+          address: string;
+
+          chainId: string;
+        }
+      }
     }
   }
 }
@@ -3538,7 +3635,8 @@ export interface RuleCreateParams {
     | 'points_airdrop'
     | 'youtube_subscribers'
     | 'youtube_comment'
-    | 'shopify_spend';
+    | 'shopify_spend'
+    | 'swap';
 
   /**
    * Unique identifier for the associated website
@@ -4007,6 +4105,11 @@ export namespace RuleCreateParams {
      * Array of streak milestones and corresponding rewards.
      */
     streakArray?: Array<Metadata.StreakArray> | null;
+
+    /**
+     * Metadata for swap loyalty rules
+     */
+    swap?: Metadata.Swap;
 
     /**
      * ID of the Telegram channel.
@@ -4520,6 +4623,33 @@ export namespace RuleCreateParams {
        * Milestone required to achieve the streak.
        */
       streakMilestone: number;
+    }
+
+    /**
+     * Metadata for swap loyalty rules
+     */
+    export interface Swap {
+      provider?: 'any' | 'relay' | 'lifi';
+
+      relayReferrerId?: string;
+
+      requireCrossChainSwap?: boolean;
+
+      swappedToChain?: 'any' | number | string;
+
+      swappedToTokens?: Array<Swap.SwappedToToken>;
+
+      tokenMode?: 'any' | 'specific';
+
+      trackTokenAmount?: boolean;
+    }
+
+    export namespace Swap {
+      export interface SwappedToToken {
+        address: string;
+
+        chainId: string;
+      }
     }
   }
 
@@ -5114,6 +5244,11 @@ export namespace RuleUpdateParams {
     streakArray?: Array<Metadata.StreakArray> | null;
 
     /**
+     * Metadata for swap loyalty rules
+     */
+    swap?: Metadata.Swap;
+
+    /**
      * ID of the Telegram channel.
      */
     telegramChannelId?: string | null;
@@ -5625,6 +5760,33 @@ export namespace RuleUpdateParams {
        * Milestone required to achieve the streak.
        */
       streakMilestone: number;
+    }
+
+    /**
+     * Metadata for swap loyalty rules
+     */
+    export interface Swap {
+      provider?: 'any' | 'relay' | 'lifi';
+
+      relayReferrerId?: string;
+
+      requireCrossChainSwap?: boolean;
+
+      swappedToChain?: 'any' | number | string;
+
+      swappedToTokens?: Array<Swap.SwappedToToken>;
+
+      tokenMode?: 'any' | 'specific';
+
+      trackTokenAmount?: boolean;
+    }
+
+    export namespace Swap {
+      export interface SwappedToToken {
+        address: string;
+
+        chainId: string;
+      }
     }
   }
 }
