@@ -285,11 +285,6 @@ export namespace RuleEditListResponse {
         hasNeverSold?: boolean;
 
         /**
-         * Flag indicating whether the order source is included.
-         */
-        hasOrderSource?: boolean;
-
-        /**
          * Indicates if the full royalty has been paid for items.
          */
         hasPaidFullRoyalty?: boolean;
@@ -383,11 +378,6 @@ export namespace RuleEditListResponse {
          * give points for only one token ownership per contract
          */
         onlyRewardSingleTokenOwnership?: boolean | null;
-
-        /**
-         * Order source of the order for the token sale
-         */
-        orderSource?: string;
 
         /**
          * Promotional code associated with the rule.
@@ -1237,11 +1227,6 @@ export namespace RuleEditListResponse {
         hasNeverSold?: boolean;
 
         /**
-         * Flag indicating whether the order source is included.
-         */
-        hasOrderSource?: boolean;
-
-        /**
          * Indicates if the full royalty has been paid for items.
          */
         hasPaidFullRoyalty?: boolean;
@@ -1335,11 +1320,6 @@ export namespace RuleEditListResponse {
          * give points for only one token ownership per contract
          */
         onlyRewardSingleTokenOwnership?: boolean | null;
-
-        /**
-         * Order source of the order for the token sale
-         */
-        orderSource?: string;
 
         /**
          * Promotional code associated with the rule.
@@ -2244,11 +2224,6 @@ export namespace RuleEditRestoreResponse {
       hasNeverSold?: boolean;
 
       /**
-       * Flag indicating whether the order source is included.
-       */
-      hasOrderSource?: boolean;
-
-      /**
        * Indicates if the full royalty has been paid for items.
        */
       hasPaidFullRoyalty?: boolean;
@@ -2342,11 +2317,6 @@ export namespace RuleEditRestoreResponse {
        * give points for only one token ownership per contract
        */
       onlyRewardSingleTokenOwnership?: boolean | null;
-
-      /**
-       * Order source of the order for the token sale
-       */
-      orderSource?: string;
 
       /**
        * Promotional code associated with the rule.
@@ -3196,11 +3166,6 @@ export namespace RuleEditRestoreResponse {
       hasNeverSold?: boolean;
 
       /**
-       * Flag indicating whether the order source is included.
-       */
-      hasOrderSource?: boolean;
-
-      /**
        * Indicates if the full royalty has been paid for items.
        */
       hasPaidFullRoyalty?: boolean;
@@ -3294,11 +3259,6 @@ export namespace RuleEditRestoreResponse {
        * give points for only one token ownership per contract
        */
       onlyRewardSingleTokenOwnership?: boolean | null;
-
-      /**
-       * Order source of the order for the token sale
-       */
-      orderSource?: string;
 
       /**
        * Promotional code associated with the rule.
