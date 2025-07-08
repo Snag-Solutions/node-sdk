@@ -120,6 +120,8 @@ export interface MintingGetAssetsParams {
     | 'vanar'
     | 'xai'
     | 'zksync'
+    | 'coti'
+    | 'cotiTestnet'
     | 'sepolia'
     | 'optimism_sepolia'
     | 'arbitrumSepolia'
