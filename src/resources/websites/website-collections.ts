@@ -108,6 +108,8 @@ export interface WebsiteCollectionCreateParams {
     | 'vanar'
     | 'xai'
     | 'zksync'
+    | 'coti'
+    | 'cotiTestnet'
     | 'sepolia'
     | 'optimism_sepolia'
     | 'arbitrumSepolia'
