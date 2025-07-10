@@ -6,7 +6,7 @@ import * as Core from '../../core';
 
 export class Badges extends APIResource {
   /**
-   * This endpoint allows you to configure a new badge.
+   * This endpoint allows you to configure a new badge
    *
    * @example
    * ```ts
