@@ -175,11 +175,6 @@ export interface AccountRetrieveRankResponse {
 
 export interface AccountListParams {
   /**
-   * Discord username to filter accounts by
-   */
-  discordUser?: string;
-
-  /**
    * External identifier for the user
    */
   externalIdentifier?: string;
@@ -213,11 +208,6 @@ export interface AccountListParams {
    * Pagination cursor to start after a specific account ID
    */
   startingAfter?: string;
-
-  /**
-   * Twitter username to filter accounts by
-   */
-  twitterUser?: string;
 
   /**
    * External identifier for the user group controlled by you
