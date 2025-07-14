@@ -36,7 +36,6 @@ describe('resource accounts', () => {
       client.loyalty.accounts.list(
         {
           externalIdentifier: '123e4567-e89b-12d3-a456-426614174090',
-          isMainAccount: 'true',
           limit: 20,
           loyaltyCurrencyId: '123e4567-e89b-12d3-a456-426614174090',
           organizationId: '123e4567-e89b-12d3-a456-426614174001',
