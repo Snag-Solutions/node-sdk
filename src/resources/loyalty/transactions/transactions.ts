@@ -410,8 +410,6 @@ export interface TransactionGetTransactionEntriesParams {
    */
   direction?: 'credit' | 'debit';
 
-  excludeDeletedCurrency?: 'true' | 'false';
-
   /**
    * Key to ensure idempotency of the request
    */
@@ -421,6 +419,12 @@ export interface TransactionGetTransactionEntriesParams {
    * Maximum number of records to return (max 1000)
    */
   limit?: number;
+
+  /**
+   * UUID of the loyalty currency IDs to filter by. Use this to exclude deleted
+   * currencies
+   */
+  loyaltyCurrencyId?: string | Array<string>;
 
   /**
    * UUID of the rule group (converted to lowercase)
