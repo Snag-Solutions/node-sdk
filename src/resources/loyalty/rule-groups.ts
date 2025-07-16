@@ -504,6 +504,12 @@ export namespace RuleGroupGetRuleGroupsResponse {
           rewardPerImpression?: boolean | null;
 
           /**
+           * Flag indicating if the rule should reward based on value of traded tokens
+           * instead of count.
+           */
+          rewardPerValue?: boolean;
+
+          /**
            * Currency associated with sales.
            */
           saleCurrency?: string;

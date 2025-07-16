@@ -675,6 +675,12 @@ export namespace RuleCreateResponse {
     rewardPerImpression?: boolean | null;
 
     /**
+     * Flag indicating if the rule should reward based on value of traded tokens
+     * instead of count.
+     */
+    rewardPerValue?: boolean;
+
+    /**
      * Currency associated with sales.
      */
     saleCurrency?: string;
@@ -1814,6 +1820,12 @@ export namespace RuleUpdateResponse {
     rewardPerImpression?: boolean | null;
 
     /**
+     * Flag indicating if the rule should reward based on value of traded tokens
+     * instead of count.
+     */
+    rewardPerValue?: boolean;
+
+    /**
      * Currency associated with sales.
      */
     saleCurrency?: string;
@@ -2867,6 +2879,12 @@ export namespace RuleListResponse {
        * Flag indicating if rewards are given per impression.
        */
       rewardPerImpression?: boolean | null;
+
+      /**
+       * Flag indicating if the rule should reward based on value of traded tokens
+       * instead of count.
+       */
+      rewardPerValue?: boolean;
 
       /**
        * Currency associated with sales.
@@ -4027,6 +4045,12 @@ export namespace RuleCreateParams {
     rewardPerImpression?: boolean | null;
 
     /**
+     * Flag indicating if the rule should reward based on value of traded tokens
+     * instead of count.
+     */
+    rewardPerValue?: boolean;
+
+    /**
      * Currency associated with sales.
      */
     saleCurrency?: string;
@@ -5162,6 +5186,12 @@ export namespace RuleUpdateParams {
      * Flag indicating if rewards are given per impression.
      */
     rewardPerImpression?: boolean | null;
+
+    /**
+     * Flag indicating if the rule should reward based on value of traded tokens
+     * instead of count.
+     */
+    rewardPerValue?: boolean;
 
     /**
      * Currency associated with sales.
