@@ -315,6 +315,11 @@ export namespace BadgeCreateResponse {
     id: string;
 
     /**
+     * The date and time the user badge was created
+     */
+    createdAt: string;
+
+    /**
      * UUID of the badge (converted to lowercase)
      */
     loyaltyBadgeId: string;
@@ -330,6 +335,11 @@ export namespace BadgeCreateResponse {
     status: 'active' | 'inactive' | 'revoked';
 
     /**
+     * The date and time the user badge was updated
+     */
+    updatedAt: string;
+
+    /**
      * UUID of the user (converted to lowercase)
      */
     userId: string;
@@ -343,6 +353,28 @@ export namespace BadgeCreateResponse {
      * Array of progress for the badge
      */
     progress?: unknown;
+
+    /**
+     * User associated with the user badge
+     */
+    user?: LoyaltyBadgeUser.User;
+  }
+
+  export namespace LoyaltyBadgeUser {
+    /**
+     * User associated with the user badge
+     */
+    export interface User {
+      /**
+       * UUID of the user (converted to lowercase)
+       */
+      id: string;
+
+      /**
+       * Wallet address of the user
+       */
+      walletAddress: string;
+    }
   }
 
   export interface LoyaltyRule {
@@ -350,6 +382,11 @@ export namespace BadgeCreateResponse {
      * UUID of the loyalty rule (converted to lowercase)
      */
     id: string;
+
+    /**
+     * The name of the loyalty rule
+     */
+    name: string;
   }
 }
 
@@ -529,6 +566,11 @@ export namespace BadgeUpdateResponse {
     id: string;
 
     /**
+     * The date and time the user badge was created
+     */
+    createdAt: string;
+
+    /**
      * UUID of the badge (converted to lowercase)
      */
     loyaltyBadgeId: string;
@@ -544,6 +586,11 @@ export namespace BadgeUpdateResponse {
     status: 'active' | 'inactive' | 'revoked';
 
     /**
+     * The date and time the user badge was updated
+     */
+    updatedAt: string;
+
+    /**
      * UUID of the user (converted to lowercase)
      */
     userId: string;
@@ -557,6 +604,28 @@ export namespace BadgeUpdateResponse {
      * Array of progress for the badge
      */
     progress?: unknown;
+
+    /**
+     * User associated with the user badge
+     */
+    user?: LoyaltyBadgeUser.User;
+  }
+
+  export namespace LoyaltyBadgeUser {
+    /**
+     * User associated with the user badge
+     */
+    export interface User {
+      /**
+       * UUID of the user (converted to lowercase)
+       */
+      id: string;
+
+      /**
+       * Wallet address of the user
+       */
+      walletAddress: string;
+    }
   }
 
   export interface LoyaltyRule {
@@ -564,6 +633,11 @@ export namespace BadgeUpdateResponse {
      * UUID of the loyalty rule (converted to lowercase)
      */
     id: string;
+
+    /**
+     * The name of the loyalty rule
+     */
+    name: string;
   }
 }
 
@@ -743,6 +817,11 @@ export namespace BadgeListResponse {
     id: string;
 
     /**
+     * The date and time the user badge was created
+     */
+    createdAt: string;
+
+    /**
      * UUID of the badge (converted to lowercase)
      */
     loyaltyBadgeId: string;
@@ -758,6 +837,11 @@ export namespace BadgeListResponse {
     status: 'active' | 'inactive' | 'revoked';
 
     /**
+     * The date and time the user badge was updated
+     */
+    updatedAt: string;
+
+    /**
      * UUID of the user (converted to lowercase)
      */
     userId: string;
@@ -771,6 +855,28 @@ export namespace BadgeListResponse {
      * Array of progress for the badge
      */
     progress?: unknown;
+
+    /**
+     * User associated with the user badge
+     */
+    user?: LoyaltyBadgeUser.User;
+  }
+
+  export namespace LoyaltyBadgeUser {
+    /**
+     * User associated with the user badge
+     */
+    export interface User {
+      /**
+       * UUID of the user (converted to lowercase)
+       */
+      id: string;
+
+      /**
+       * Wallet address of the user
+       */
+      walletAddress: string;
+    }
   }
 
   export interface LoyaltyRule {
@@ -778,6 +884,11 @@ export namespace BadgeListResponse {
      * UUID of the loyalty rule (converted to lowercase)
      */
     id: string;
+
+    /**
+     * The name of the loyalty rule
+     */
+    name: string;
   }
 }
 
@@ -957,6 +1068,11 @@ export namespace BadgeDeleteResponse {
     id: string;
 
     /**
+     * The date and time the user badge was created
+     */
+    createdAt: string;
+
+    /**
      * UUID of the badge (converted to lowercase)
      */
     loyaltyBadgeId: string;
@@ -972,6 +1088,11 @@ export namespace BadgeDeleteResponse {
     status: 'active' | 'inactive' | 'revoked';
 
     /**
+     * The date and time the user badge was updated
+     */
+    updatedAt: string;
+
+    /**
      * UUID of the user (converted to lowercase)
      */
     userId: string;
@@ -985,6 +1106,28 @@ export namespace BadgeDeleteResponse {
      * Array of progress for the badge
      */
     progress?: unknown;
+
+    /**
+     * User associated with the user badge
+     */
+    user?: LoyaltyBadgeUser.User;
+  }
+
+  export namespace LoyaltyBadgeUser {
+    /**
+     * User associated with the user badge
+     */
+    export interface User {
+      /**
+       * UUID of the user (converted to lowercase)
+       */
+      id: string;
+
+      /**
+       * Wallet address of the user
+       */
+      walletAddress: string;
+    }
   }
 
   export interface LoyaltyRule {
@@ -992,6 +1135,11 @@ export namespace BadgeDeleteResponse {
      * UUID of the loyalty rule (converted to lowercase)
      */
     id: string;
+
+    /**
+     * The name of the loyalty rule
+     */
+    name: string;
   }
 }
 

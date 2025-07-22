@@ -133,6 +133,15 @@ export namespace MetadataListResponse {
 }
 
 export interface MetadataCreateParams {
+  blockStatusReason?:
+    | 'sybil_and_multi_account'
+    | 'account_migration'
+    | 'abuse_manipulation'
+    | 'not_sybil'
+    | 'issue_resolved'
+    | 'other'
+    | null;
+
   discordUser?: string | null;
 
   discordUserId?: string | null;
@@ -150,6 +159,8 @@ export interface MetadataCreateParams {
   googleUser?: string | null;
 
   googleUserId?: string | null;
+
+  internalNotes?: string | null;
 
   isBlocked?: boolean;
 
