@@ -36,7 +36,7 @@ export class Users extends APIResource {
   }
 
   /**
-   * This endpoint allows you to create a user
+   * This endpoint allows you to connect a user to a user group
    *
    * @example
    * ```ts
