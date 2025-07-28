@@ -33,7 +33,7 @@ export class WebsiteUserRoles extends APIResource {
    *     websiteId: '123e4567-e89b-12d3-a456-426614174000',
    *     websiteUserRoles: [
    *       {
-   *         roleType: 'WEBSITE_ADMIN',
+   *         roleType: 'WEBSITE_SUPER_ADMIN',
    *         walletAddress:
    *           '0x1234567890abcdef1234567890abcdef12345678',
    *       },
