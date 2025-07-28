@@ -36,7 +36,7 @@ describe('resource websiteUserRoles', () => {
     const responsePromise = client.websites.websiteUserRoles.assign({
       websiteId: '123e4567-e89b-12d3-a456-426614174000',
       websiteUserRoles: [
-        { roleType: 'WEBSITE_ADMIN', walletAddress: '0x1234567890abcdef1234567890abcdef12345678' },
+        { roleType: 'WEBSITE_SUPER_ADMIN', walletAddress: '0x1234567890abcdef1234567890abcdef12345678' },
       ],
     });
     const rawResponse = await responsePromise.asResponse();
@@ -54,7 +54,7 @@ describe('resource websiteUserRoles', () => {
       websiteId: '123e4567-e89b-12d3-a456-426614174000',
       websiteUserRoles: [
         {
-          roleType: 'WEBSITE_ADMIN',
+          roleType: 'WEBSITE_SUPER_ADMIN',
           walletAddress: '0x1234567890abcdef1234567890abcdef12345678',
           deletedAt: '2022-01-01T00:00:00.000Z',
         },
