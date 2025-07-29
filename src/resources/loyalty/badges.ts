@@ -1358,6 +1358,11 @@ export interface BadgeListParams {
 
 export interface BadgeRevokeParams {
   /**
+   * Status of the badge
+   */
+  status?: 'active' | 'inactive' | 'revoked';
+
+  /**
    * UUID of the user (converted to lowercase)
    */
   userId?: string;
@@ -1369,6 +1374,11 @@ export interface BadgeRevokeParams {
 }
 
 export interface BadgeRewardParams {
+  /**
+   * Status of the badge
+   */
+  status?: 'active' | 'inactive' | 'revoked';
+
   /**
    * UUID of the user (converted to lowercase)
    */

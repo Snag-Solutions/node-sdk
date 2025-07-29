@@ -185,6 +185,7 @@ describe('resource badges', () => {
       client.loyalty.badges.revoke(
         '123e4567-e89b-12d3-a456-426614174333',
         {
+          status: 'revoked',
           userId: '123e4567-e89b-12d3-a456-426614174333',
           walletAddress: '0x1234567890abcdef1234567890abcdef12345678',
         },
@@ -222,6 +223,7 @@ describe('resource badges', () => {
       client.loyalty.badges.reward(
         '123e4567-e89b-12d3-a456-426614174333',
         {
+          status: 'revoked',
           userId: '123e4567-e89b-12d3-a456-426614174333',
           walletAddress: '0x1234567890abcdef1234567890abcdef12345678',
         },
