@@ -1010,6 +1010,11 @@ export namespace RuleGroupGetRuleGroupsResponse {
             params?: Array<SmartContract.Param> | null;
 
             /**
+             * Type of the smart contract interaction.
+             */
+            type?: 'function' | 'event' | null;
+
+            /**
              * Flag indicating if a bonus is applied.
              */
             withBonus?: boolean | null;
