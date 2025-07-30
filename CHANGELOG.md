@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.0-alpha.91 (2025-07-30)
+
+Full Changelog: [v0.1.0-alpha.90...v0.1.0-alpha.91](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.90...v0.1.0-alpha.91)
+
+### Features
+
+* **api:** open api update ([a0df00c](https://github.com/Snag-Solutions/node-sdk/commit/a0df00cdf8349d040578530431d4afbae1a90de1))
+
+
+### Chores
+
+* **internal:** remove redundant imports config ([bef3272](https://github.com/Snag-Solutions/node-sdk/commit/bef3272d46e5cfb6c83f44ee6321f361b6488b3c))
+
 ## 0.1.0-alpha.90 (2025-07-29)
 
 Full Changelog: [v0.1.0-alpha.89...v0.1.0-alpha.90](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.89...v0.1.0-alpha.90)
