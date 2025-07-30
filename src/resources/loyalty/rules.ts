@@ -1184,6 +1184,11 @@ export namespace RuleCreateResponse {
       params?: Array<SmartContract.Param> | null;
 
       /**
+       * Type of the smart contract interaction.
+       */
+      type?: 'function' | 'event' | null;
+
+      /**
        * Flag indicating if a bonus is applied.
        */
       withBonus?: boolean | null;
@@ -2344,6 +2349,11 @@ export namespace RuleUpdateResponse {
       params?: Array<SmartContract.Param> | null;
 
       /**
+       * Type of the smart contract interaction.
+       */
+      type?: 'function' | 'event' | null;
+
+      /**
        * Flag indicating if a bonus is applied.
        */
       withBonus?: boolean | null;
@@ -3409,6 +3419,11 @@ export namespace RuleListResponse {
          * Array of parameters for the smart contract.
          */
         params?: Array<SmartContract.Param> | null;
+
+        /**
+         * Type of the smart contract interaction.
+         */
+        type?: 'function' | 'event' | null;
 
         /**
          * Flag indicating if a bonus is applied.
@@ -4584,6 +4599,11 @@ export namespace RuleCreateParams {
       params?: Array<SmartContract.Param> | null;
 
       /**
+       * Type of the smart contract interaction.
+       */
+      type?: 'function' | 'event' | null;
+
+      /**
        * Flag indicating if a bonus is applied.
        */
       withBonus?: boolean | null;
@@ -5740,6 +5760,11 @@ export namespace RuleUpdateParams {
        * Array of parameters for the smart contract.
        */
       params?: Array<SmartContract.Param> | null;
+
+      /**
+       * Type of the smart contract interaction.
+       */
+      type?: 'function' | 'event' | null;
 
       /**
        * Flag indicating if a bonus is applied.
