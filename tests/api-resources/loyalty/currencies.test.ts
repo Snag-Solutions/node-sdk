@@ -41,7 +41,7 @@ describe('resource currencies', () => {
       apiGetTransactionEntryUrl: 'https://api.example.com/get-loyalty-tx',
       apiGetUrl: 'https://api.example.com/get-loyalty',
       apiPostUrl: 'https://api.example.com/post-loyalty',
-      imageUrl: 'https://assets.snagsolutions.io/images/loyalty.png',
+      imageUrl: 'https://d1ked0nzx7in3u.cloudfront.net/images/loyalty.png',
       sortId: 1,
     });
   });
