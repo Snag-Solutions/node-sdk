@@ -566,7 +566,7 @@ export namespace RuleEditListResponse {
         /**
          * Type of wallet associated with the rule.
          */
-        walletType?: 'evm' | 'solana' | 'imx' | 'sui' | 'ton' | 'cosmos' | null;
+        walletType?: 'evm' | 'solana' | 'imx' | 'sui' | 'ton' | 'cosmos' | 'ultra' | null;
 
         /**
          * ID of the Youtube channel.
@@ -1529,7 +1529,7 @@ export namespace RuleEditListResponse {
         /**
          * Type of wallet associated with the rule.
          */
-        walletType?: 'evm' | 'solana' | 'imx' | 'sui' | 'ton' | 'cosmos' | null;
+        walletType?: 'evm' | 'solana' | 'imx' | 'sui' | 'ton' | 'cosmos' | 'ultra' | null;
 
         /**
          * ID of the Youtube channel.
@@ -2547,7 +2547,7 @@ export namespace RuleEditRestoreResponse {
       /**
        * Type of wallet associated with the rule.
        */
-      walletType?: 'evm' | 'solana' | 'imx' | 'sui' | 'ton' | 'cosmos' | null;
+      walletType?: 'evm' | 'solana' | 'imx' | 'sui' | 'ton' | 'cosmos' | 'ultra' | null;
 
       /**
        * ID of the Youtube channel.
@@ -3510,7 +3510,7 @@ export namespace RuleEditRestoreResponse {
       /**
        * Type of wallet associated with the rule.
        */
-      walletType?: 'evm' | 'solana' | 'imx' | 'sui' | 'ton' | 'cosmos' | null;
+      walletType?: 'evm' | 'solana' | 'imx' | 'sui' | 'ton' | 'cosmos' | 'ultra' | null;
 
       /**
        * ID of the Youtube channel.

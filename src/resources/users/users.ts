@@ -450,7 +450,7 @@ export interface UserConnectParams {
    */
   walletAddress: string;
 
-  walletType: 'evm' | 'solana' | 'imx' | 'sui' | 'ton' | 'cosmos';
+  walletType: 'evm' | 'solana' | 'imx' | 'sui' | 'ton' | 'cosmos' | 'ultra';
 
   /**
    * The ID of the website
