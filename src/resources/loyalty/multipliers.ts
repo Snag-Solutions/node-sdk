@@ -316,8 +316,6 @@ export interface MultiplierUpdateParams {
 }
 
 export interface MultiplierListParams {
-  discordUser?: string;
-
   externalIdentifier?: string;
 
   includeDeleted?: string;
@@ -327,8 +325,6 @@ export interface MultiplierListParams {
   organizationId?: string;
 
   startingAfter?: string;
-
-  twitterUser?: string;
 
   userGroupExternalIdentifier?: string;
 

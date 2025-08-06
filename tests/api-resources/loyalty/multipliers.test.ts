@@ -95,13 +95,11 @@ describe('resource multipliers', () => {
     await expect(
       client.loyalty.multipliers.list(
         {
-          discordUser: 'discordUser',
           externalIdentifier: 'externalIdentifier',
           includeDeleted: 'includeDeleted',
           limit: 1,
           organizationId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
           startingAfter: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
-          twitterUser: 'twitterUser',
           userGroupExternalIdentifier: 'userGroupExternalIdentifier',
           userGroupId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
           userId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
