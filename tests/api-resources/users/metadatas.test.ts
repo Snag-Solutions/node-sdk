@@ -55,6 +55,8 @@ describe('resource metadatas', () => {
           steamUsername: 'steamUsername',
           telegramUserId: 'telegramUserId',
           telegramUsername: 'telegramUsername',
+          tiktokUser: 'tiktokUser',
+          tiktokUserId: 'tiktokUserId',
           twitterUser: 'twitterUser',
           twitterUserFollowersCount: 0,
           twitterUserId: 'twitterUserId',
