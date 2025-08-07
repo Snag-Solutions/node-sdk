@@ -180,6 +180,10 @@ export interface MetadataCreateParams {
 
   telegramUsername?: string | null;
 
+  tiktokUser?: string | null;
+
+  tiktokUserId?: string | null;
+
   twitterUser?: string | null;
 
   twitterUserFollowersCount?: number | null;
