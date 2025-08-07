@@ -139,6 +139,8 @@ export interface MetadataCreateParams {
     | 'abuse_manipulation'
     | 'not_sybil'
     | 'issue_resolved'
+    | 'twitter_suspended'
+    | 'block_exempt'
     | 'other'
     | null;
 
