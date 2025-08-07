@@ -241,6 +241,10 @@ export namespace UserListResponse {
 
       telegramVerifiedAt?: string | null;
 
+      tiktokUser?: string | null;
+
+      tiktokUserId?: string | null;
+
       twitterUser?: string | null;
 
       twitterUserFollowersCount?: number | null;
