@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.0-alpha.96 (2025-08-07)
+
+Full Changelog: [v0.1.0-alpha.95...v0.1.0-alpha.96](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.95...v0.1.0-alpha.96)
+
+### Features
+
+* **api:** open api update ([f91ef28](https://github.com/Snag-Solutions/node-sdk/commit/f91ef2801c13c58a45d026c57b51a3a3000474b8))
+
+
+### Chores
+
+* **internal:** move publish config ([791abc9](https://github.com/Snag-Solutions/node-sdk/commit/791abc984a32a78392404f3e868fbdfb53078079))
+
 ## 0.1.0-alpha.95 (2025-08-07)
 
 Full Changelog: [v0.1.0-alpha.94...v0.1.0-alpha.95](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.94...v0.1.0-alpha.95)
