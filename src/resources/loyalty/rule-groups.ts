@@ -248,7 +248,8 @@ export namespace RuleGroupGetRuleGroupsResponse {
           | 'youtube_subscribers'
           | 'youtube_comment'
           | 'shopify_spend'
-          | 'swap';
+          | 'swap'
+          | 'tiktok_post';
       }
 
       export namespace LoyaltyRule {
