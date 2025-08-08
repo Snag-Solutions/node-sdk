@@ -498,6 +498,7 @@ export interface TransactionGetTransactionEntriesParams {
     | 'youtube_comment'
     | 'shopify_spend'
     | 'swap'
+    | 'tiktok_post'
     | Array<
         | 'Bonus'
         | 'BoughtOn'
@@ -560,6 +561,7 @@ export interface TransactionGetTransactionEntriesParams {
         | 'youtube_comment'
         | 'shopify_spend'
         | 'swap'
+        | 'tiktok_post'
       >;
 
   /**
