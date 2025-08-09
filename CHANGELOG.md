@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.0-alpha.99 (2025-08-09)
+
+Full Changelog: [v0.1.0-alpha.98...v0.1.0-alpha.99](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.98...v0.1.0-alpha.99)
+
+### Chores
+
+* **internal:** update comment in script ([d1ad977](https://github.com/Snag-Solutions/node-sdk/commit/d1ad97747057c35271592a6bb5dd14ec7bca8983))
+* update @stainless-api/prism-cli to v5.15.0 ([67dc7ae](https://github.com/Snag-Solutions/node-sdk/commit/67dc7ae736e42a32509d05a14c932344b47cb3f9))
+
 ## 0.1.0-alpha.98 (2025-08-08)
 
 Full Changelog: [v0.1.0-alpha.97...v0.1.0-alpha.98](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.97...v0.1.0-alpha.98)
