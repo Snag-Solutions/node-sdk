@@ -961,11 +961,6 @@ export namespace RuleGroupGetRuleGroupsResponse {
            */
           export interface SmartContract {
             /**
-             * ABI of the smart contract.
-             */
-            abi?: string | null;
-
-            /**
              * Mapping of addresses for the smart contract.
              */
             addressMapping?: string | null;
