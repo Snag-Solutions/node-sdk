@@ -886,11 +886,6 @@ export namespace RuleEditListResponse {
          */
         export interface SmartContract {
           /**
-           * ABI of the smart contract.
-           */
-          abi?: string | null;
-
-          /**
            * Mapping of addresses for the smart contract.
            */
           addressMapping?: string | null;
@@ -1848,11 +1843,6 @@ export namespace RuleEditListResponse {
          * Object containing details of the associated smart contract.
          */
         export interface SmartContract {
-          /**
-           * ABI of the smart contract.
-           */
-          abi?: string | null;
-
           /**
            * Mapping of addresses for the smart contract.
            */
@@ -2867,11 +2857,6 @@ export namespace RuleEditRestoreResponse {
        */
       export interface SmartContract {
         /**
-         * ABI of the smart contract.
-         */
-        abi?: string | null;
-
-        /**
          * Mapping of addresses for the smart contract.
          */
         addressMapping?: string | null;
@@ -3829,11 +3814,6 @@ export namespace RuleEditRestoreResponse {
        * Object containing details of the associated smart contract.
        */
       export interface SmartContract {
-        /**
-         * ABI of the smart contract.
-         */
-        abi?: string | null;
-
         /**
          * Mapping of addresses for the smart contract.
          */
