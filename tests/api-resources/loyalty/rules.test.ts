@@ -128,7 +128,6 @@ describe('resource rules', () => {
         secondReferralReward: 5,
         skipMultiplier: true,
         smartContract: {
-          abi: '[]',
           addressMapping: '0x123...789',
           amountMultiplier: { valueMapping: 'amount' },
           bonus: [{ amount: 50, count: 5 }],
@@ -325,7 +324,6 @@ describe('resource rules', () => {
         secondReferralReward: 5,
         skipMultiplier: true,
         smartContract: {
-          abi: '[]',
           addressMapping: '0x123...789',
           amountMultiplier: { valueMapping: 'amount' },
           bonus: [{ amount: 50, count: 5 }],
