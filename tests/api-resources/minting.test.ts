@@ -9,7 +9,7 @@ const client = new SnagSolutions({
 });
 
 describe('resource minting', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getAssets: only required params', async () => {
     const responsePromise = client.minting.getAssets({
       organizationId: '00000000-0000-0000-0000-000000000000',
@@ -24,7 +24,7 @@ describe('resource minting', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getAssets: required and optional params', async () => {
     const response = await client.minting.getAssets({
       organizationId: '00000000-0000-0000-0000-000000000000',

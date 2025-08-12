@@ -9,7 +9,7 @@ const client = new SnagSolutions({
 });
 
 describe('resource ruleStatuses', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('update: only required params', async () => {
     const responsePromise = client.loyalty.transactions.ruleStatuses.update({
       loyaltyRuleId: '123e4567-e89b-12d3-a456-426614174030',
@@ -23,7 +23,7 @@ describe('resource ruleStatuses', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('update: required and optional params', async () => {
     const response = await client.loyalty.transactions.ruleStatuses.update({
       loyaltyRuleId: '123e4567-e89b-12d3-a456-426614174030',
@@ -36,7 +36,7 @@ describe('resource ruleStatuses', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('list', async () => {
     const responsePromise = client.loyalty.transactions.ruleStatuses.list();
     const rawResponse = await responsePromise.asResponse();
@@ -48,7 +48,7 @@ describe('resource ruleStatuses', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('list: request options instead of params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -56,7 +56,7 @@ describe('resource ruleStatuses', () => {
     ).rejects.toThrow(SnagSolutions.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('list: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(

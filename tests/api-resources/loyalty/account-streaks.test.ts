@@ -9,7 +9,7 @@ const client = new SnagSolutions({
 });
 
 describe('resource accountStreaks', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getStreaks: only required params', async () => {
     const responsePromise = client.loyalty.accountStreaks.getStreaks({
       loyaltyRuleId:
@@ -24,7 +24,7 @@ describe('resource accountStreaks', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getStreaks: required and optional params', async () => {
     const response = await client.loyalty.accountStreaks.getStreaks({
       loyaltyRuleId:

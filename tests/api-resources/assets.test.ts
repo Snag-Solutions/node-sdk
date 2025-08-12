@@ -9,7 +9,7 @@ const client = new SnagSolutions({
 });
 
 describe('resource assets', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('createAsset: only required params', async () => {
     const responsePromise = client.assets.createAsset({ fileName: 'example.png', fileSize: 1024 });
     const rawResponse = await responsePromise.asResponse();
@@ -21,7 +21,7 @@ describe('resource assets', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('createAsset: required and optional params', async () => {
     const response = await client.assets.createAsset({
       fileName: 'example.png',

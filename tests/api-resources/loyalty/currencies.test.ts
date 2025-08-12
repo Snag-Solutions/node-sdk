@@ -9,7 +9,7 @@ const client = new SnagSolutions({
 });
 
 describe('resource currencies', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('create: only required params', async () => {
     const responsePromise = client.loyalty.currencies.create({
       decimals: 2,
@@ -27,7 +27,7 @@ describe('resource currencies', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('create: required and optional params', async () => {
     const response = await client.loyalty.currencies.create({
       decimals: 2,
@@ -46,7 +46,7 @@ describe('resource currencies', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('list: only required params', async () => {
     const responsePromise = client.loyalty.currencies.list({
       organizationId: '123e4567-e89b-12d3-a456-426614174001',
@@ -61,7 +61,7 @@ describe('resource currencies', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('list: required and optional params', async () => {
     const response = await client.loyalty.currencies.list({
       organizationId: '123e4567-e89b-12d3-a456-426614174001',
