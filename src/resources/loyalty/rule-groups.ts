@@ -490,6 +490,11 @@ export namespace RuleGroupGetRuleGroupsResponse {
           referrerReward?: number | null;
 
           /**
+           * Loyalty currency ID of the referrer reward.
+           */
+          referrerRewardLoyaltyCurrencyId?: string | null;
+
+          /**
            * Flag indicating if the rule can also reward badges per range.
            */
           rewardBadgePerRange?: boolean;
