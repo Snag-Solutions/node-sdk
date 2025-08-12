@@ -9,7 +9,7 @@ const client = new SnagSolutions({
 });
 
 describe('resource ruleGroups', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('createRuleGroup: only required params', async () => {
     const responsePromise = client.loyalty.ruleGroups.createRuleGroup({
       name: 'name',
@@ -25,7 +25,7 @@ describe('resource ruleGroups', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('createRuleGroup: required and optional params', async () => {
     const response = await client.loyalty.ruleGroups.createRuleGroup({
       name: 'name',
@@ -38,7 +38,7 @@ describe('resource ruleGroups', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('deleteRuleGroup', async () => {
     const responsePromise = client.loyalty.ruleGroups.deleteRuleGroup('182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e');
     const rawResponse = await responsePromise.asResponse();
@@ -50,7 +50,7 @@ describe('resource ruleGroups', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('deleteRuleGroup: request options instead of params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -60,7 +60,7 @@ describe('resource ruleGroups', () => {
     ).rejects.toThrow(SnagSolutions.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getRuleGroups', async () => {
     const responsePromise = client.loyalty.ruleGroups.getRuleGroups();
     const rawResponse = await responsePromise.asResponse();
@@ -72,7 +72,7 @@ describe('resource ruleGroups', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getRuleGroups: request options instead of params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -80,7 +80,7 @@ describe('resource ruleGroups', () => {
     ).rejects.toThrow(SnagSolutions.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getRuleGroups: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -97,7 +97,7 @@ describe('resource ruleGroups', () => {
     ).rejects.toThrow(SnagSolutions.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('updateRuleGroup', async () => {
     const responsePromise = client.loyalty.ruleGroups.updateRuleGroup('182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e');
     const rawResponse = await responsePromise.asResponse();
@@ -109,7 +109,7 @@ describe('resource ruleGroups', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('updateRuleGroup: request options instead of params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -119,7 +119,7 @@ describe('resource ruleGroups', () => {
     ).rejects.toThrow(SnagSolutions.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('updateRuleGroup: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(

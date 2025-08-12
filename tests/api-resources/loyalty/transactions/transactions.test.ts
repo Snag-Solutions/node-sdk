@@ -9,7 +9,7 @@ const client = new SnagSolutions({
 });
 
 describe('resource transactions', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('createTransaction: only required params', async () => {
     const responsePromise = client.loyalty.transactions.createTransaction({
       description: 'Purchase of item X',
@@ -24,7 +24,7 @@ describe('resource transactions', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('createTransaction: required and optional params', async () => {
     const response = await client.loyalty.transactions.createTransaction({
       description: 'Purchase of item X',
@@ -41,7 +41,7 @@ describe('resource transactions', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getTransactionEntries', async () => {
     const responsePromise = client.loyalty.transactions.getTransactionEntries();
     const rawResponse = await responsePromise.asResponse();
@@ -53,7 +53,7 @@ describe('resource transactions', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getTransactionEntries: request options instead of params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -61,7 +61,7 @@ describe('resource transactions', () => {
     ).rejects.toThrow(SnagSolutions.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getTransactionEntries: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -95,7 +95,7 @@ describe('resource transactions', () => {
     ).rejects.toThrow(SnagSolutions.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listRuleChains: only required params', async () => {
     const responsePromise = client.loyalty.transactions.listRuleChains({
       organizationId: '123e4567-e89b-12d3-a456-426614174001',
@@ -110,7 +110,7 @@ describe('resource transactions', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listRuleChains: required and optional params', async () => {
     const response = await client.loyalty.transactions.listRuleChains({
       organizationId: '123e4567-e89b-12d3-a456-426614174001',

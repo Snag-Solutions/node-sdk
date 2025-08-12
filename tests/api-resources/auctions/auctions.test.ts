@@ -9,7 +9,7 @@ const client = new SnagSolutions({
 });
 
 describe('resource auctions', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getPageSections: only required params', async () => {
     const responsePromise = client.auctions.getPageSections({
       organizationId: '123e4567-e89b-12d3-a456-426614174334',
@@ -25,7 +25,7 @@ describe('resource auctions', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getPageSections: required and optional params', async () => {
     const response = await client.auctions.getPageSections({
       organizationId: '123e4567-e89b-12d3-a456-426614174334',
@@ -38,7 +38,7 @@ describe('resource auctions', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listAuctionBids', async () => {
     const responsePromise = client.auctions.listAuctionBids();
     const rawResponse = await responsePromise.asResponse();
@@ -50,7 +50,7 @@ describe('resource auctions', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listAuctionBids: request options instead of params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(client.auctions.listAuctionBids({ path: '/_stainless_unknown_path' })).rejects.toThrow(
@@ -58,7 +58,7 @@ describe('resource auctions', () => {
     );
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listAuctionBids: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -79,7 +79,7 @@ describe('resource auctions', () => {
     ).rejects.toThrow(SnagSolutions.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listAuctions', async () => {
     const responsePromise = client.auctions.listAuctions();
     const rawResponse = await responsePromise.asResponse();
@@ -91,7 +91,7 @@ describe('resource auctions', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listAuctions: request options instead of params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(client.auctions.listAuctions({ path: '/_stainless_unknown_path' })).rejects.toThrow(

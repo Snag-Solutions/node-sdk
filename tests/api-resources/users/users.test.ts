@@ -9,7 +9,7 @@ const client = new SnagSolutions({
 });
 
 describe('resource users', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('list', async () => {
     const responsePromise = client.users.list();
     const rawResponse = await responsePromise.asResponse();
@@ -21,7 +21,7 @@ describe('resource users', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('list: request options instead of params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(client.users.list({ path: '/_stainless_unknown_path' })).rejects.toThrow(
@@ -29,7 +29,7 @@ describe('resource users', () => {
     );
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('list: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -60,7 +60,7 @@ describe('resource users', () => {
     ).rejects.toThrow(SnagSolutions.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('connect: only required params', async () => {
     const responsePromise = client.users.connect({
       organizationId: '123e4567-e89b-12d3-a456-426614174001',
@@ -77,7 +77,7 @@ describe('resource users', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('connect: required and optional params', async () => {
     const response = await client.users.connect({
       organizationId: '123e4567-e89b-12d3-a456-426614174001',
@@ -110,7 +110,7 @@ describe('resource users', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('count: only required params', async () => {
     const responsePromise = client.users.count({
       organizationId: '123e4567-e89b-12d3-a456-426614174001',
@@ -125,7 +125,7 @@ describe('resource users', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('count: required and optional params', async () => {
     const response = await client.users.count({
       organizationId: '123e4567-e89b-12d3-a456-426614174001',
@@ -133,7 +133,7 @@ describe('resource users', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('createDevice: only required params', async () => {
     const responsePromise = client.users.createDevice({ ipAddress: '123.456.789.012' });
     const rawResponse = await responsePromise.asResponse();
@@ -145,7 +145,7 @@ describe('resource users', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('createDevice: required and optional params', async () => {
     const response = await client.users.createDevice({
       ipAddress: '123.456.789.012',
@@ -155,7 +155,7 @@ describe('resource users', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('disconnect: only required params', async () => {
     const responsePromise = client.users.disconnect({
       organizationId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
@@ -171,7 +171,7 @@ describe('resource users', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('disconnect: required and optional params', async () => {
     const response = await client.users.disconnect({
       organizationId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
@@ -180,7 +180,7 @@ describe('resource users', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('verify: only required params', async () => {
     const responsePromise = client.users.verify({ accountLinkData: 'accountLinkData' });
     const rawResponse = await responsePromise.asResponse();
@@ -192,7 +192,7 @@ describe('resource users', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('verify: required and optional params', async () => {
     const response = await client.users.verify({
       accountLinkData: 'accountLinkData',

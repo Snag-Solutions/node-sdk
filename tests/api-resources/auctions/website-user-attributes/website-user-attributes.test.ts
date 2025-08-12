@@ -9,7 +9,7 @@ const client = new SnagSolutions({
 });
 
 describe('resource websiteUserAttributes', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('create: only required params', async () => {
     const responsePromise = client.auctions.websiteUserAttributes.create({
       data: [{ label: 'Website User Attribute Label' }],
@@ -23,7 +23,7 @@ describe('resource websiteUserAttributes', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('create: required and optional params', async () => {
     const response = await client.auctions.websiteUserAttributes.create({
       data: [{ label: 'Website User Attribute Label', id: '123e4567-e89b-12d3-a456-426614174003' }],
@@ -32,7 +32,7 @@ describe('resource websiteUserAttributes', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('list', async () => {
     const responsePromise = client.auctions.websiteUserAttributes.list();
     const rawResponse = await responsePromise.asResponse();
@@ -44,7 +44,7 @@ describe('resource websiteUserAttributes', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('list: request options instead of params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -52,7 +52,7 @@ describe('resource websiteUserAttributes', () => {
     ).rejects.toThrow(SnagSolutions.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('list: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -67,7 +67,7 @@ describe('resource websiteUserAttributes', () => {
     ).rejects.toThrow(SnagSolutions.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete: only required params', async () => {
     const responsePromise = client.auctions.websiteUserAttributes.delete('id', {
       body_id: '123e4567-e89b-12d3-a456-426614174003',
@@ -83,7 +83,7 @@ describe('resource websiteUserAttributes', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete: required and optional params', async () => {
     const response = await client.auctions.websiteUserAttributes.delete('id', {
       body_id: '123e4567-e89b-12d3-a456-426614174003',

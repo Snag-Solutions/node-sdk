@@ -9,7 +9,7 @@ const client = new SnagSolutions({
 });
 
 describe('resource auth', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('connectAuth', async () => {
     const responsePromise = client.auth.connectAuth('twitter');
     const rawResponse = await responsePromise.asResponse();
@@ -21,7 +21,7 @@ describe('resource auth', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('connectAuth: request options instead of params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(client.auth.connectAuth('twitter', { path: '/_stainless_unknown_path' })).rejects.toThrow(
@@ -29,7 +29,7 @@ describe('resource auth', () => {
     );
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('connectAuth: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
