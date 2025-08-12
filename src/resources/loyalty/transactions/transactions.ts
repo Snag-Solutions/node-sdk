@@ -602,7 +602,7 @@ export interface TransactionGetTransactionEntriesParams {
   userCompletedLoyaltyRuleId?: string | Array<string>;
 
   /**
-   * External identifier for the user group controlled by you
+   * External identifier for the user group controlled by you.
    */
   userGroupExternalIdentifier?: string;
 
