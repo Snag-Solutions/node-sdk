@@ -9,7 +9,7 @@ const client = new SnagSolutions({
 });
 
 describe('resource questions', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('create: only required params', async () => {
     const responsePromise = client.loyalty.questions.create({
       loyaltyQuestionAnswers: [{ isCorrect: true, sortIdentifier: 1, text: 'Red' }],
@@ -25,7 +25,7 @@ describe('resource questions', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('create: required and optional params', async () => {
     const response = await client.loyalty.questions.create({
       loyaltyQuestionAnswers: [
@@ -37,7 +37,7 @@ describe('resource questions', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('update: only required params', async () => {
     const responsePromise = client.loyalty.questions.update('id', {
       loyaltyQuestionAnswers: [{ isCorrect: true, sortIdentifier: 1, text: 'Red' }],
@@ -52,7 +52,7 @@ describe('resource questions', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('update: required and optional params', async () => {
     const response = await client.loyalty.questions.update('id', {
       loyaltyQuestionAnswers: [
@@ -62,7 +62,7 @@ describe('resource questions', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('list: only required params', async () => {
     const responsePromise = client.loyalty.questions.list({
       loyaltyRuleIds: '123e4567-e89b-12d3-a456-426614174000',
@@ -78,7 +78,7 @@ describe('resource questions', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('list: required and optional params', async () => {
     const response = await client.loyalty.questions.list({
       loyaltyRuleIds: '123e4567-e89b-12d3-a456-426614174000',
