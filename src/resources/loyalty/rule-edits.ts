@@ -415,6 +415,11 @@ export namespace RuleEditListResponse {
         referrerReward?: number | null;
 
         /**
+         * Loyalty currency ID of the referrer reward.
+         */
+        referrerRewardLoyaltyCurrencyId?: string | null;
+
+        /**
          * Flag indicating if the rule can also reward badges per range.
          */
         rewardBadgePerRange?: boolean;
@@ -1371,6 +1376,11 @@ export namespace RuleEditListResponse {
          * Lump sum reward given to a referrer.
          */
         referrerReward?: number | null;
+
+        /**
+         * Loyalty currency ID of the referrer reward.
+         */
+        referrerRewardLoyaltyCurrencyId?: string | null;
 
         /**
          * Flag indicating if the rule can also reward badges per range.
@@ -2386,6 +2396,11 @@ export namespace RuleEditRestoreResponse {
       referrerReward?: number | null;
 
       /**
+       * Loyalty currency ID of the referrer reward.
+       */
+      referrerRewardLoyaltyCurrencyId?: string | null;
+
+      /**
        * Flag indicating if the rule can also reward badges per range.
        */
       rewardBadgePerRange?: boolean;
@@ -3342,6 +3357,11 @@ export namespace RuleEditRestoreResponse {
        * Lump sum reward given to a referrer.
        */
       referrerReward?: number | null;
+
+      /**
+       * Loyalty currency ID of the referrer reward.
+       */
+      referrerRewardLoyaltyCurrencyId?: string | null;
 
       /**
        * Flag indicating if the rule can also reward badges per range.
