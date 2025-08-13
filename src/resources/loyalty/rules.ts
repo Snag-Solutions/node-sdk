@@ -5966,7 +5966,7 @@ export interface RuleCompleteParams {
   commentLink?: string;
 
   /**
-   * Unique key to ensure idempotent requests.
+   * Unique key to ensure idempotent requests
    */
   idempotencyKey?: string;
 
