@@ -5966,7 +5966,7 @@ export interface RuleCompleteParams {
   commentLink?: string;
 
   /**
-   * Unique key to ensure idempotent requests
+   * Unique key to ensure idempotent requests.
    */
   idempotencyKey?: string;
 
@@ -5987,7 +5987,7 @@ export interface RuleCompleteParams {
 
   /**
    * Flag indicating if only verification is required, this will not create a
-   * transaction and reward the user
+   * transaction and reward the user.
    */
   verifyOnly?: string;
 
