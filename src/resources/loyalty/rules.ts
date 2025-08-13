@@ -5976,6 +5976,11 @@ export interface RuleCompleteParams {
   loyaltyQuestionChoiceId?: string;
 
   /**
+   * Value to compare with the range
+   */
+  rangeValue?: number | null;
+
+  /**
    * Unique identifier for the user
    */
   userId?: string;
