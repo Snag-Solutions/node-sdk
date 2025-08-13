@@ -1150,11 +1150,6 @@ export namespace RuleCreateResponse {
       amountMultiplier?: SmartContract.AmountMultiplier | null;
 
       /**
-       * Array of bonus details applied to the rule.
-       */
-      bonus?: Array<SmartContract.Bonus> | null;
-
-      /**
        * ID of the smart contract.
        */
       contractId?: string | null;
@@ -1165,19 +1160,9 @@ export namespace RuleCreateResponse {
       criteria?: 'everyEvent' | 'byParameter' | null;
 
       /**
-       * Time range applied to the rule.
-       */
-      customRange?: SmartContract.CustomRange | null;
-
-      /**
        * Event emitted by the smart contract.
        */
       event?: string | null;
-
-      /**
-       * Maximum value allowed for the parameter.
-       */
-      max?: number | null;
 
       /**
        * Array of parameters for the smart contract.
@@ -1188,16 +1173,6 @@ export namespace RuleCreateResponse {
        * Type of the smart contract interaction.
        */
       type?: 'function' | 'event' | null;
-
-      /**
-       * Flag indicating if a bonus is applied.
-       */
-      withBonus?: boolean | null;
-
-      /**
-       * Flag indicating if a custom range is applied.
-       */
-      withCustomRange?: boolean | null;
     }
 
     export namespace SmartContract {
@@ -1209,33 +1184,6 @@ export namespace RuleCreateResponse {
          * Mapping of the value for the smart contract.
          */
         valueMapping?: string | null;
-      }
-
-      export interface Bonus {
-        /**
-         * Amount of the bonus.
-         */
-        amount?: number | null;
-
-        /**
-         * Number of times the bonus is applied.
-         */
-        count?: number | null;
-      }
-
-      /**
-       * Time range applied to the rule.
-       */
-      export interface CustomRange {
-        /**
-         * End time of the custom range.
-         */
-        endsAt?: string | null;
-
-        /**
-         * Start time of the custom range.
-         */
-        startsAt?: string | null;
       }
 
       export interface Param {
@@ -2315,11 +2263,6 @@ export namespace RuleUpdateResponse {
       amountMultiplier?: SmartContract.AmountMultiplier | null;
 
       /**
-       * Array of bonus details applied to the rule.
-       */
-      bonus?: Array<SmartContract.Bonus> | null;
-
-      /**
        * ID of the smart contract.
        */
       contractId?: string | null;
@@ -2330,19 +2273,9 @@ export namespace RuleUpdateResponse {
       criteria?: 'everyEvent' | 'byParameter' | null;
 
       /**
-       * Time range applied to the rule.
-       */
-      customRange?: SmartContract.CustomRange | null;
-
-      /**
        * Event emitted by the smart contract.
        */
       event?: string | null;
-
-      /**
-       * Maximum value allowed for the parameter.
-       */
-      max?: number | null;
 
       /**
        * Array of parameters for the smart contract.
@@ -2353,16 +2286,6 @@ export namespace RuleUpdateResponse {
        * Type of the smart contract interaction.
        */
       type?: 'function' | 'event' | null;
-
-      /**
-       * Flag indicating if a bonus is applied.
-       */
-      withBonus?: boolean | null;
-
-      /**
-       * Flag indicating if a custom range is applied.
-       */
-      withCustomRange?: boolean | null;
     }
 
     export namespace SmartContract {
@@ -2374,33 +2297,6 @@ export namespace RuleUpdateResponse {
          * Mapping of the value for the smart contract.
          */
         valueMapping?: string | null;
-      }
-
-      export interface Bonus {
-        /**
-         * Amount of the bonus.
-         */
-        amount?: number | null;
-
-        /**
-         * Number of times the bonus is applied.
-         */
-        count?: number | null;
-      }
-
-      /**
-       * Time range applied to the rule.
-       */
-      export interface CustomRange {
-        /**
-         * End time of the custom range.
-         */
-        endsAt?: string | null;
-
-        /**
-         * Start time of the custom range.
-         */
-        startsAt?: string | null;
       }
 
       export interface Param {
@@ -3387,11 +3283,6 @@ export namespace RuleListResponse {
         amountMultiplier?: SmartContract.AmountMultiplier | null;
 
         /**
-         * Array of bonus details applied to the rule.
-         */
-        bonus?: Array<SmartContract.Bonus> | null;
-
-        /**
          * ID of the smart contract.
          */
         contractId?: string | null;
@@ -3402,19 +3293,9 @@ export namespace RuleListResponse {
         criteria?: 'everyEvent' | 'byParameter' | null;
 
         /**
-         * Time range applied to the rule.
-         */
-        customRange?: SmartContract.CustomRange | null;
-
-        /**
          * Event emitted by the smart contract.
          */
         event?: string | null;
-
-        /**
-         * Maximum value allowed for the parameter.
-         */
-        max?: number | null;
 
         /**
          * Array of parameters for the smart contract.
@@ -3425,16 +3306,6 @@ export namespace RuleListResponse {
          * Type of the smart contract interaction.
          */
         type?: 'function' | 'event' | null;
-
-        /**
-         * Flag indicating if a bonus is applied.
-         */
-        withBonus?: boolean | null;
-
-        /**
-         * Flag indicating if a custom range is applied.
-         */
-        withCustomRange?: boolean | null;
       }
 
       export namespace SmartContract {
@@ -3446,33 +3317,6 @@ export namespace RuleListResponse {
            * Mapping of the value for the smart contract.
            */
           valueMapping?: string | null;
-        }
-
-        export interface Bonus {
-          /**
-           * Amount of the bonus.
-           */
-          amount?: number | null;
-
-          /**
-           * Number of times the bonus is applied.
-           */
-          count?: number | null;
-        }
-
-        /**
-         * Time range applied to the rule.
-         */
-        export interface CustomRange {
-          /**
-           * End time of the custom range.
-           */
-          endsAt?: string | null;
-
-          /**
-           * Start time of the custom range.
-           */
-          startsAt?: string | null;
         }
 
         export interface Param {
@@ -4566,11 +4410,6 @@ export namespace RuleCreateParams {
       amountMultiplier?: SmartContract.AmountMultiplier | null;
 
       /**
-       * Array of bonus details applied to the rule.
-       */
-      bonus?: Array<SmartContract.Bonus> | null;
-
-      /**
        * ID of the smart contract.
        */
       contractId?: string | null;
@@ -4581,19 +4420,9 @@ export namespace RuleCreateParams {
       criteria?: 'everyEvent' | 'byParameter' | null;
 
       /**
-       * Time range applied to the rule.
-       */
-      customRange?: SmartContract.CustomRange | null;
-
-      /**
        * Event emitted by the smart contract.
        */
       event?: string | null;
-
-      /**
-       * Maximum value allowed for the parameter.
-       */
-      max?: number | null;
 
       /**
        * Array of parameters for the smart contract.
@@ -4604,16 +4433,6 @@ export namespace RuleCreateParams {
        * Type of the smart contract interaction.
        */
       type?: 'function' | 'event' | null;
-
-      /**
-       * Flag indicating if a bonus is applied.
-       */
-      withBonus?: boolean | null;
-
-      /**
-       * Flag indicating if a custom range is applied.
-       */
-      withCustomRange?: boolean | null;
     }
 
     export namespace SmartContract {
@@ -4625,33 +4444,6 @@ export namespace RuleCreateParams {
          * Mapping of the value for the smart contract.
          */
         valueMapping?: string | null;
-      }
-
-      export interface Bonus {
-        /**
-         * Amount of the bonus.
-         */
-        amount?: number | null;
-
-        /**
-         * Number of times the bonus is applied.
-         */
-        count?: number | null;
-      }
-
-      /**
-       * Time range applied to the rule.
-       */
-      export interface CustomRange {
-        /**
-         * End time of the custom range.
-         */
-        endsAt?: string | null;
-
-        /**
-         * Start time of the custom range.
-         */
-        startsAt?: string | null;
       }
 
       export interface Param {
@@ -5729,11 +5521,6 @@ export namespace RuleUpdateParams {
       amountMultiplier?: SmartContract.AmountMultiplier | null;
 
       /**
-       * Array of bonus details applied to the rule.
-       */
-      bonus?: Array<SmartContract.Bonus> | null;
-
-      /**
        * ID of the smart contract.
        */
       contractId?: string | null;
@@ -5744,19 +5531,9 @@ export namespace RuleUpdateParams {
       criteria?: 'everyEvent' | 'byParameter' | null;
 
       /**
-       * Time range applied to the rule.
-       */
-      customRange?: SmartContract.CustomRange | null;
-
-      /**
        * Event emitted by the smart contract.
        */
       event?: string | null;
-
-      /**
-       * Maximum value allowed for the parameter.
-       */
-      max?: number | null;
 
       /**
        * Array of parameters for the smart contract.
@@ -5767,16 +5544,6 @@ export namespace RuleUpdateParams {
        * Type of the smart contract interaction.
        */
       type?: 'function' | 'event' | null;
-
-      /**
-       * Flag indicating if a bonus is applied.
-       */
-      withBonus?: boolean | null;
-
-      /**
-       * Flag indicating if a custom range is applied.
-       */
-      withCustomRange?: boolean | null;
     }
 
     export namespace SmartContract {
@@ -5788,33 +5555,6 @@ export namespace RuleUpdateParams {
          * Mapping of the value for the smart contract.
          */
         valueMapping?: string | null;
-      }
-
-      export interface Bonus {
-        /**
-         * Amount of the bonus.
-         */
-        amount?: number | null;
-
-        /**
-         * Number of times the bonus is applied.
-         */
-        count?: number | null;
-      }
-
-      /**
-       * Time range applied to the rule.
-       */
-      export interface CustomRange {
-        /**
-         * End time of the custom range.
-         */
-        endsAt?: string | null;
-
-        /**
-         * Start time of the custom range.
-         */
-        startsAt?: string | null;
       }
 
       export interface Param {
