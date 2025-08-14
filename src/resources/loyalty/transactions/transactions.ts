@@ -406,11 +406,6 @@ export interface TransactionGetTransactionEntriesParams {
   createdAtStart?: string;
 
   /**
-   * Direction of the transaction entry to filter by
-   */
-  direction?: 'credit' | 'debit';
-
-  /**
    * Key to ensure idempotency of the request
    */
   idempotencyKey?: string;
