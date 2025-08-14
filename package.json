@@ -1,6 +1,6 @@
 {
   "name": "@snagsolutions/sdk",
-  "version": "0.1.0-alpha.107",
+  "version": "0.1.0-alpha.108",
   "description": "The official TypeScript library for the Snag Solutions API",
   "author": "Snag Solutions <dev-feedback@snag-solutions.com>",
   "types": "dist/index.d.ts",
