@@ -125,6 +125,7 @@ export interface MintingGetAssetsParams {
     | 'morph'
     | 'morphTestnet'
     | 'morphHolesky'
+    | 'nitrograph'
     | 'sepolia'
     | 'optimism_sepolia'
     | 'arbitrumSepolia'
