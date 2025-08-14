@@ -5674,7 +5674,7 @@ export interface RuleListParams {
   isActive?: 'true' | 'false';
 
   /**
-   * Maximum number of records to return (max 1000)
+   * Maximum number of records to return (max 100)
    */
   limit?: number;
 
