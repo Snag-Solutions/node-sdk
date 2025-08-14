@@ -69,7 +69,6 @@ describe('resource transactions', () => {
         {
           createdAtEnd: '2023-10-01T12:34:56Z',
           createdAtStart: '2023-10-01T12:34:56Z',
-          direction: 'credit',
           idempotencyKey: 'idempkey123',
           limit: 50,
           loyaltyCurrencyId: '123e4567-e89b-12d3-a456-426614174333',
