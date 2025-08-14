@@ -358,11 +358,6 @@ export interface UserListParams {
   discordUser?: string;
 
   /**
-   * Display name of the user
-   */
-  displayName?: string;
-
-  /**
    * External identifier for the user
    */
   externalIdentifier?: string;

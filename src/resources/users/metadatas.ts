@@ -233,6 +233,8 @@ export interface MetadataListParams {
    */
   userId?: string;
 
+  userSearch?: string;
+
   /**
    * Wallet address of the user
    */

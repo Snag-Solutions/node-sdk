@@ -104,6 +104,7 @@ describe('resource metadatas', () => {
           organizationId: '123e4567-e89b-12d3-a456-426614174002',
           startingAfter: '123e4567-e89b-12d3-a456-426614174003',
           userId: '123e4567-e89b-12d3-a456-426614174000',
+          userSearch: 'xxxxx',
           walletAddress: '0x1234567890abcdef1234567890abcdef12345678',
           websiteId: '123e4567-e89b-12d3-a456-426614174001',
         },
