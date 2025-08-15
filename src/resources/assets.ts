@@ -66,7 +66,8 @@ export interface AssetCreateAssetParams {
     | 'posts'
     | 'profiles'
     | 'minting'
-    | 'loyalty';
+    | 'loyalty'
+    | 'tokenClaims';
 
   /**
    * UUID of the organization (optional, converted to lowercase)
