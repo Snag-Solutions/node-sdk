@@ -175,7 +175,9 @@ describe('resource rules', () => {
       websiteId: '123e4567-e89b-12d3-a456-426614174002',
       backgroundAssetUrl: 'https://example.com/background.png',
       collectionAddress: '0x1234567890abcdef1234567890abcdef12345678',
-      collections: [{ address: '0xabcdefabcdefabcdefabcdefabcdefabcdef', network: 'mainnet' }],
+      collections: [
+        { address: '0xabcdefabcdefabcdefabcdefabcdefabcdef', network: 'mainnet', symbol: 'COLL' },
+      ],
       customRewardsApiUrl: 'https://api.example.com/rewards',
       customRewardsCsvUrl: 'https://example.com/rewards.csv',
       description: 'A loyalty rule rewarding users for referrals.',
@@ -220,7 +222,9 @@ describe('resource rules', () => {
       endTime: '2024-12-31T23:59:00Z',
       name: 'Daily Rewards Program',
       collectionAddress: '0x1234567890abcdef1234567890abcdef12345678',
-      collections: [{ address: '0xabcdefabcdefabcdefabcdefabcdefabcdef', network: 'mainnet' }],
+      collections: [
+        { address: '0xabcdefabcdefabcdefabcdefabcdefabcdef', network: 'mainnet', symbol: 'COLL' },
+      ],
       customRewardsApiUrl: 'https://api.example.com/rewards',
       customRewardsCsvUrl: 'https://example.com/rewards.csv',
       description: 'This rule rewards users daily for specific actions.',

@@ -404,6 +404,8 @@ export interface RuleCreateResponse {
     | 'morph'
     | 'morphTestnet'
     | 'morphHolesky'
+    | 'ultra'
+    | 'ultraTestnet'
     | 'nitrograph'
     | 'sepolia'
     | 'optimism_sepolia'
@@ -886,6 +888,8 @@ export namespace RuleCreateResponse {
         | 'morph'
         | 'morphTestnet'
         | 'morphHolesky'
+        | 'ultra'
+        | 'ultraTestnet'
         | 'nitrograph'
         | 'sepolia'
         | 'optimism_sepolia'
@@ -1031,6 +1035,8 @@ export namespace RuleCreateResponse {
         | 'morph'
         | 'morphTestnet'
         | 'morphHolesky'
+        | 'ultra'
+        | 'ultraTestnet'
         | 'nitrograph'
         | 'sepolia'
         | 'optimism_sepolia'
@@ -1305,6 +1311,8 @@ export namespace RuleCreateResponse {
       | 'morph'
       | 'morphTestnet'
       | 'morphHolesky'
+      | 'ultra'
+      | 'ultraTestnet'
       | 'nitrograph'
       | 'sepolia'
       | 'optimism_sepolia'
@@ -1313,6 +1321,11 @@ export namespace RuleCreateResponse {
       | 'optimism_goerli'
       | 'arbitrumGoerli'
       | 'basecamp';
+
+    /**
+     * Symbol of the collection.
+     */
+    symbol?: string;
   }
 }
 
@@ -1461,6 +1474,8 @@ export interface RuleUpdateResponse {
     | 'morph'
     | 'morphTestnet'
     | 'morphHolesky'
+    | 'ultra'
+    | 'ultraTestnet'
     | 'nitrograph'
     | 'sepolia'
     | 'optimism_sepolia'
@@ -1543,6 +1558,8 @@ export namespace RuleUpdateResponse {
       | 'morph'
       | 'morphTestnet'
       | 'morphHolesky'
+      | 'ultra'
+      | 'ultraTestnet'
       | 'nitrograph'
       | 'sepolia'
       | 'optimism_sepolia'
@@ -1551,6 +1568,11 @@ export namespace RuleUpdateResponse {
       | 'optimism_goerli'
       | 'arbitrumGoerli'
       | 'basecamp';
+
+    /**
+     * Symbol of the collection.
+     */
+    symbol?: string;
   }
 
   /**
@@ -2004,6 +2026,8 @@ export namespace RuleUpdateResponse {
         | 'morph'
         | 'morphTestnet'
         | 'morphHolesky'
+        | 'ultra'
+        | 'ultraTestnet'
         | 'nitrograph'
         | 'sepolia'
         | 'optimism_sepolia'
@@ -2149,6 +2173,8 @@ export namespace RuleUpdateResponse {
         | 'morph'
         | 'morphTestnet'
         | 'morphHolesky'
+        | 'ultra'
+        | 'ultraTestnet'
         | 'nitrograph'
         | 'sepolia'
         | 'optimism_sepolia'
@@ -3026,6 +3052,8 @@ export namespace RuleListResponse {
           | 'morph'
           | 'morphTestnet'
           | 'morphHolesky'
+          | 'ultra'
+          | 'ultraTestnet'
           | 'nitrograph'
           | 'sepolia'
           | 'optimism_sepolia'
@@ -3171,6 +3199,8 @@ export namespace RuleListResponse {
           | 'morph'
           | 'morphTestnet'
           | 'morphHolesky'
+          | 'ultra'
+          | 'ultraTestnet'
           | 'nitrograph'
           | 'sepolia'
           | 'optimism_sepolia'
@@ -3674,6 +3704,8 @@ export interface RuleCreateParams {
     | 'morph'
     | 'morphTestnet'
     | 'morphHolesky'
+    | 'ultra'
+    | 'ultraTestnet'
     | 'nitrograph'
     | 'sepolia'
     | 'optimism_sepolia'
@@ -4156,6 +4188,8 @@ export namespace RuleCreateParams {
         | 'morph'
         | 'morphTestnet'
         | 'morphHolesky'
+        | 'ultra'
+        | 'ultraTestnet'
         | 'nitrograph'
         | 'sepolia'
         | 'optimism_sepolia'
@@ -4301,6 +4335,8 @@ export namespace RuleCreateParams {
         | 'morph'
         | 'morphTestnet'
         | 'morphHolesky'
+        | 'ultra'
+        | 'ultraTestnet'
         | 'nitrograph'
         | 'sepolia'
         | 'optimism_sepolia'
@@ -4575,6 +4611,8 @@ export namespace RuleCreateParams {
       | 'morph'
       | 'morphTestnet'
       | 'morphHolesky'
+      | 'ultra'
+      | 'ultraTestnet'
       | 'nitrograph'
       | 'sepolia'
       | 'optimism_sepolia'
@@ -4583,6 +4621,11 @@ export namespace RuleCreateParams {
       | 'optimism_goerli'
       | 'arbitrumGoerli'
       | 'basecamp';
+
+    /**
+     * Symbol of the collection.
+     */
+    symbol?: string;
   }
 }
 
@@ -4729,6 +4772,8 @@ export interface RuleUpdateParams {
     | 'morph'
     | 'morphTestnet'
     | 'morphHolesky'
+    | 'ultra'
+    | 'ultraTestnet'
     | 'nitrograph'
     | 'sepolia'
     | 'optimism_sepolia'
@@ -4811,6 +4856,8 @@ export namespace RuleUpdateParams {
       | 'morph'
       | 'morphTestnet'
       | 'morphHolesky'
+      | 'ultra'
+      | 'ultraTestnet'
       | 'nitrograph'
       | 'sepolia'
       | 'optimism_sepolia'
@@ -4819,6 +4866,11 @@ export namespace RuleUpdateParams {
       | 'optimism_goerli'
       | 'arbitrumGoerli'
       | 'basecamp';
+
+    /**
+     * Symbol of the collection.
+     */
+    symbol?: string;
   }
 
   /**
@@ -5272,6 +5324,8 @@ export namespace RuleUpdateParams {
         | 'morph'
         | 'morphTestnet'
         | 'morphHolesky'
+        | 'ultra'
+        | 'ultraTestnet'
         | 'nitrograph'
         | 'sepolia'
         | 'optimism_sepolia'
@@ -5417,6 +5471,8 @@ export namespace RuleUpdateParams {
         | 'morph'
         | 'morphTestnet'
         | 'morphHolesky'
+        | 'ultra'
+        | 'ultraTestnet'
         | 'nitrograph'
         | 'sepolia'
         | 'optimism_sepolia'
