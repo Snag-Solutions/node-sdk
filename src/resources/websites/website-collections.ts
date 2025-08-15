@@ -113,6 +113,8 @@ export interface WebsiteCollectionCreateParams {
     | 'morph'
     | 'morphTestnet'
     | 'morphHolesky'
+    | 'ultra'
+    | 'ultraTestnet'
     | 'nitrograph'
     | 'sepolia'
     | 'optimism_sepolia'
