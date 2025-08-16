@@ -225,6 +225,7 @@ SnagSolutions.Loyalty = Loyalty;
 SnagSolutions.Minting = Minting;
 SnagSolutions.Referral = Referral;
 SnagSolutions.Websites = Websites;
+
 export declare namespace SnagSolutions {
   export type RequestOptions = Core.RequestOptions;
 
