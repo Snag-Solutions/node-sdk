@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.0-alpha.114 (2025-08-16)
+
+Full Changelog: [v0.1.0-alpha.113...v0.1.0-alpha.114](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.113...v0.1.0-alpha.114)
+
+### Chores
+
+* **deps:** update dependency node-fetch to v2.6.13 ([5f8c332](https://github.com/Snag-Solutions/node-sdk/commit/5f8c332f3c46ab8fcc5ecb6d79fcd610fcfc1089))
+* **internal:** formatting change ([6ac5e3e](https://github.com/Snag-Solutions/node-sdk/commit/6ac5e3e1ab51eb57d11ffda2a57283a04d158944))
+
 ## 0.1.0-alpha.113 (2025-08-15)
 
 Full Changelog: [v0.1.0-alpha.112...v0.1.0-alpha.113](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.112...v0.1.0-alpha.113)
