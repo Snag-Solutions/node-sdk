@@ -1119,6 +1119,8 @@ export interface RuleGroupCreateRuleGroupParams {
 export interface RuleGroupGetRuleGroupsParams {
   excludeHidden?: string;
 
+  isActive?: string;
+
   limit?: number;
 
   organizationId?: string;
