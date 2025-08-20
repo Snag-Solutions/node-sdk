@@ -240,11 +240,6 @@ export namespace RuleEditListResponse {
         customRewardsApiKey?: string;
 
         /**
-         * Flag indicating if the rule should use direct RPC to get the balance of tokens.
-         */
-        directRpc?: boolean;
-
-        /**
          * Array of Discord servers, channels, and roles to join.
          */
         discordServersToJoin?: Array<Metadata.DiscordServersToJoin> | null;
@@ -1160,11 +1155,6 @@ export namespace RuleEditListResponse {
          * API key for custom rewards integration.
          */
         customRewardsApiKey?: string;
-
-        /**
-         * Flag indicating if the rule should use direct RPC to get the balance of tokens.
-         */
-        directRpc?: boolean;
 
         /**
          * Array of Discord servers, channels, and roles to join.
@@ -2139,11 +2129,6 @@ export namespace RuleEditRestoreResponse {
       customRewardsApiKey?: string;
 
       /**
-       * Flag indicating if the rule should use direct RPC to get the balance of tokens.
-       */
-      directRpc?: boolean;
-
-      /**
        * Array of Discord servers, channels, and roles to join.
        */
       discordServersToJoin?: Array<Metadata.DiscordServersToJoin> | null;
@@ -3059,11 +3044,6 @@ export namespace RuleEditRestoreResponse {
        * API key for custom rewards integration.
        */
       customRewardsApiKey?: string;
-
-      /**
-       * Flag indicating if the rule should use direct RPC to get the balance of tokens.
-       */
-      directRpc?: boolean;
 
       /**
        * Array of Discord servers, channels, and roles to join.
