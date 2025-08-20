@@ -56,7 +56,6 @@ describe('resource rules', () => {
         completeProfileConditions: { twitter: true, discord: false },
         cta: { href: 'https://example.com', label: 'Click Here' },
         customRewardsApiKey: 'api-key-1234',
-        directRpc: false,
         discordServersToJoin: [
           {
             id: '123456789012345678',
@@ -253,7 +252,6 @@ describe('resource rules', () => {
         completeProfileConditions: { twitter: true, discord: false },
         cta: { href: 'https://example.com', label: 'Click Here' },
         customRewardsApiKey: 'api-key-1234',
-        directRpc: false,
         discordServersToJoin: [
           {
             id: '123456789012345678',
