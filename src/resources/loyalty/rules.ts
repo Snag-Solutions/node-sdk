@@ -677,6 +677,11 @@ export namespace RuleCreateResponse {
     referrerRewardLoyaltyCurrencyId?: string | null;
 
     /**
+     * Flag indicating if the post link is required.
+     */
+    requirePostLink?: boolean | null;
+
+    /**
      * Flag indicating if the rule can also reward badges per range.
      */
     rewardBadgePerRange?: boolean;
@@ -1820,6 +1825,11 @@ export namespace RuleUpdateResponse {
     referrerRewardLoyaltyCurrencyId?: string | null;
 
     /**
+     * Flag indicating if the post link is required.
+     */
+    requirePostLink?: boolean | null;
+
+    /**
      * Flag indicating if the rule can also reward badges per range.
      */
     rewardBadgePerRange?: boolean;
@@ -2849,6 +2859,11 @@ export namespace RuleListResponse {
        * Loyalty currency ID of the referrer reward.
        */
       referrerRewardLoyaltyCurrencyId?: string | null;
+
+      /**
+       * Flag indicating if the post link is required.
+       */
+      requirePostLink?: boolean | null;
 
       /**
        * Flag indicating if the rule can also reward badges per range.
@@ -3992,6 +4007,11 @@ export namespace RuleCreateParams {
     referrerRewardLoyaltyCurrencyId?: string | null;
 
     /**
+     * Flag indicating if the post link is required.
+     */
+    requirePostLink?: boolean | null;
+
+    /**
      * Flag indicating if the rule can also reward badges per range.
      */
     rewardBadgePerRange?: boolean;
@@ -5133,6 +5153,11 @@ export namespace RuleUpdateParams {
     referrerRewardLoyaltyCurrencyId?: string | null;
 
     /**
+     * Flag indicating if the post link is required.
+     */
+    requirePostLink?: boolean | null;
+
+    /**
      * Flag indicating if the rule can also reward badges per range.
      */
     rewardBadgePerRange?: boolean;
@@ -5800,9 +5825,9 @@ export interface RuleCompleteParams {
   amount?: number | null;
 
   /**
-   * Link to the comment made by user
+   * Link to the post/comment made by user
    */
-  commentLink?: string;
+  contentUrl?: string;
 
   /**
    * Unique key to ensure idempotent requests.

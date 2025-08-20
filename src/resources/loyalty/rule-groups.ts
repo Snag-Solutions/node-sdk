@@ -500,6 +500,11 @@ export namespace RuleGroupGetRuleGroupsResponse {
           referrerRewardLoyaltyCurrencyId?: string | null;
 
           /**
+           * Flag indicating if the post link is required.
+           */
+          requirePostLink?: boolean | null;
+
+          /**
            * Flag indicating if the rule can also reward badges per range.
            */
           rewardBadgePerRange?: boolean;
