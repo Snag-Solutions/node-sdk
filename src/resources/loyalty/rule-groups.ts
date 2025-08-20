@@ -315,6 +315,11 @@ export namespace RuleGroupGetRuleGroupsResponse {
           customRewardsApiKey?: string;
 
           /**
+           * Flag indicating if the rule should use direct RPC to get the balance of tokens.
+           */
+          directRpc?: boolean;
+
+          /**
            * Array of Discord servers, channels, and roles to join.
            */
           discordServersToJoin?: Array<Metadata.DiscordServersToJoin> | null;
