@@ -494,6 +494,7 @@ export interface TransactionGetTransactionEntriesParams {
     | 'shopify_spend'
     | 'swap'
     | 'tiktok_post'
+    | 'post_impressions'
     | Array<
         | 'Bonus'
         | 'BoughtOn'
@@ -557,6 +558,7 @@ export interface TransactionGetTransactionEntriesParams {
         | 'shopify_spend'
         | 'swap'
         | 'tiktok_post'
+        | 'post_impressions'
       >;
 
   /**
