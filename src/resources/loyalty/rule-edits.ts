@@ -425,6 +425,11 @@ export namespace RuleEditListResponse {
         referrerRewardLoyaltyCurrencyId?: string | null;
 
         /**
+         * Flag indicating if the post link is required.
+         */
+        requirePostLink?: boolean | null;
+
+        /**
          * Flag indicating if the rule can also reward badges per range.
          */
         rewardBadgePerRange?: boolean;
@@ -1345,6 +1350,11 @@ export namespace RuleEditListResponse {
          * Loyalty currency ID of the referrer reward.
          */
         referrerRewardLoyaltyCurrencyId?: string | null;
+
+        /**
+         * Flag indicating if the post link is required.
+         */
+        requirePostLink?: boolean | null;
 
         /**
          * Flag indicating if the rule can also reward badges per range.
@@ -2324,6 +2334,11 @@ export namespace RuleEditRestoreResponse {
       referrerRewardLoyaltyCurrencyId?: string | null;
 
       /**
+       * Flag indicating if the post link is required.
+       */
+      requirePostLink?: boolean | null;
+
+      /**
        * Flag indicating if the rule can also reward badges per range.
        */
       rewardBadgePerRange?: boolean;
@@ -3244,6 +3259,11 @@ export namespace RuleEditRestoreResponse {
        * Loyalty currency ID of the referrer reward.
        */
       referrerRewardLoyaltyCurrencyId?: string | null;
+
+      /**
+       * Flag indicating if the post link is required.
+       */
+      requirePostLink?: boolean | null;
 
       /**
        * Flag indicating if the rule can also reward badges per range.
