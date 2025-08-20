@@ -275,8 +275,7 @@ export interface RuleCreateResponse {
     | 'youtube_comment'
     | 'shopify_spend'
     | 'swap'
-    | 'tiktok_post'
-    | 'post_impressions';
+    | 'tiktok_post';
 
   /**
    * Unique identifier for the associated website
@@ -3606,8 +3605,7 @@ export interface RuleCreateParams {
     | 'youtube_comment'
     | 'shopify_spend'
     | 'swap'
-    | 'tiktok_post'
-    | 'post_impressions';
+    | 'tiktok_post';
 
   /**
    * Unique identifier for the associated website
