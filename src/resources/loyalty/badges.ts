@@ -169,6 +169,11 @@ export interface BadgeCreateResponse {
   name: string;
 
   /**
+   * Array of data jobs associated with the badge
+   */
+  dataJobs?: Array<BadgeCreateResponse.DataJob>;
+
+  /**
    * Array of user badges
    */
   loyaltyBadgeUsers?: Array<BadgeCreateResponse.LoyaltyBadgeUser>;
@@ -308,6 +313,33 @@ export namespace BadgeCreateResponse {
     }
   }
 
+  export interface DataJob {
+    /**
+     * UUID of the data job (converted to lowercase)
+     */
+    id: string;
+
+    /**
+     * The date and time the data job was created
+     */
+    createdAt: string;
+
+    /**
+     * The status of the data job
+     */
+    status: 'pending' | 'complete' | 'failed';
+
+    /**
+     * The date and time the data job was updated
+     */
+    updatedAt: string;
+
+    /**
+     * The message associated with the data job
+     */
+    message?: string | null;
+  }
+
   export interface LoyaltyBadgeUser {
     /**
      * UUID of the user badge (converted to lowercase)
@@ -418,6 +450,11 @@ export interface BadgeUpdateResponse {
    * The name of the badge
    */
   name: string;
+
+  /**
+   * Array of data jobs associated with the badge
+   */
+  dataJobs?: Array<BadgeUpdateResponse.DataJob>;
 
   /**
    * Array of user badges
@@ -559,6 +596,33 @@ export namespace BadgeUpdateResponse {
     }
   }
 
+  export interface DataJob {
+    /**
+     * UUID of the data job (converted to lowercase)
+     */
+    id: string;
+
+    /**
+     * The date and time the data job was created
+     */
+    createdAt: string;
+
+    /**
+     * The status of the data job
+     */
+    status: 'pending' | 'complete' | 'failed';
+
+    /**
+     * The date and time the data job was updated
+     */
+    updatedAt: string;
+
+    /**
+     * The message associated with the data job
+     */
+    message?: string | null;
+  }
+
   export interface LoyaltyBadgeUser {
     /**
      * UUID of the user badge (converted to lowercase)
@@ -669,6 +733,11 @@ export interface BadgeListResponse {
    * The name of the badge
    */
   name: string;
+
+  /**
+   * Array of data jobs associated with the badge
+   */
+  dataJobs?: Array<BadgeListResponse.DataJob>;
 
   /**
    * Array of user badges
@@ -810,6 +879,33 @@ export namespace BadgeListResponse {
     }
   }
 
+  export interface DataJob {
+    /**
+     * UUID of the data job (converted to lowercase)
+     */
+    id: string;
+
+    /**
+     * The date and time the data job was created
+     */
+    createdAt: string;
+
+    /**
+     * The status of the data job
+     */
+    status: 'pending' | 'complete' | 'failed';
+
+    /**
+     * The date and time the data job was updated
+     */
+    updatedAt: string;
+
+    /**
+     * The message associated with the data job
+     */
+    message?: string | null;
+  }
+
   export interface LoyaltyBadgeUser {
     /**
      * UUID of the user badge (converted to lowercase)
@@ -920,6 +1016,11 @@ export interface BadgeDeleteResponse {
    * The name of the badge
    */
   name: string;
+
+  /**
+   * Array of data jobs associated with the badge
+   */
+  dataJobs?: Array<BadgeDeleteResponse.DataJob>;
 
   /**
    * Array of user badges
@@ -1059,6 +1160,33 @@ export namespace BadgeDeleteResponse {
         name: string;
       }
     }
+  }
+
+  export interface DataJob {
+    /**
+     * UUID of the data job (converted to lowercase)
+     */
+    id: string;
+
+    /**
+     * The date and time the data job was created
+     */
+    createdAt: string;
+
+    /**
+     * The status of the data job
+     */
+    status: 'pending' | 'complete' | 'failed';
+
+    /**
+     * The date and time the data job was updated
+     */
+    updatedAt: string;
+
+    /**
+     * The message associated with the data job
+     */
+    message?: string | null;
   }
 
   export interface LoyaltyBadgeUser {
