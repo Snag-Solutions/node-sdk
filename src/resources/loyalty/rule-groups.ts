@@ -527,6 +527,16 @@ export namespace RuleGroupGetRuleGroupsResponse {
           rewardPerValue?: boolean;
 
           /**
+           * Wallet address of the user can only be used if userId is not provided
+           */
+          royaltyAddress?: string;
+
+          /**
+           * Royalty percentage of the item.
+           */
+          royaltyPercentage?: number;
+
+          /**
            * Currency associated with sales.
            */
           saleCurrency?: string;

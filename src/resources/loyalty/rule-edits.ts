@@ -451,6 +451,16 @@ export namespace RuleEditListResponse {
         rewardPerValue?: boolean;
 
         /**
+         * Wallet address of the user can only be used if userId is not provided
+         */
+        royaltyAddress?: string;
+
+        /**
+         * Royalty percentage of the item.
+         */
+        royaltyPercentage?: number;
+
+        /**
          * Currency associated with sales.
          */
         saleCurrency?: string;
@@ -1376,6 +1386,16 @@ export namespace RuleEditListResponse {
          * instead of count.
          */
         rewardPerValue?: boolean;
+
+        /**
+         * Wallet address of the user can only be used if userId is not provided
+         */
+        royaltyAddress?: string;
+
+        /**
+         * Royalty percentage of the item.
+         */
+        royaltyPercentage?: number;
 
         /**
          * Currency associated with sales.
@@ -2360,6 +2380,16 @@ export namespace RuleEditRestoreResponse {
       rewardPerValue?: boolean;
 
       /**
+       * Wallet address of the user can only be used if userId is not provided
+       */
+      royaltyAddress?: string;
+
+      /**
+       * Royalty percentage of the item.
+       */
+      royaltyPercentage?: number;
+
+      /**
        * Currency associated with sales.
        */
       saleCurrency?: string;
@@ -3285,6 +3315,16 @@ export namespace RuleEditRestoreResponse {
        * instead of count.
        */
       rewardPerValue?: boolean;
+
+      /**
+       * Wallet address of the user can only be used if userId is not provided
+       */
+      royaltyAddress?: string;
+
+      /**
+       * Royalty percentage of the item.
+       */
+      royaltyPercentage?: number;
 
       /**
        * Currency associated with sales.
