@@ -313,6 +313,8 @@ export interface RuleCreateResponse {
    */
   description?: string;
 
+  duplicatedFromId?: string | null;
+
   /**
    * ID of the external integration
    */
@@ -3673,6 +3675,8 @@ export interface RuleCreateParams {
    * Optional detailed description of the rule
    */
   description?: string;
+
+  duplicatedFromId?: string | null;
 
   /**
    * ID of the external integration
