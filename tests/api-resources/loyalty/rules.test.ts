@@ -185,6 +185,7 @@ describe('resource rules', () => {
       customRewardsApiUrl: 'https://api.example.com/rewards',
       customRewardsCsvUrl: 'https://example.com/rewards.csv',
       description: 'A loyalty rule rewarding users for referrals.',
+      duplicatedFromId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
       externalIntegrationId: '123e4567-e89b-12d3-a456-426614174005',
       hideInUi: false,
       interval: 'weekly',
