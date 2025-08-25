@@ -35,6 +35,7 @@ describe('resource metadatas', () => {
     await expect(
       client.users.metadatas.create(
         {
+          bio: 'bio',
           blockStatusReason: 'sybil_and_multi_account',
           discordUser: 'discordUser',
           discordUserId: 'discordUserId',
@@ -47,8 +48,10 @@ describe('resource metadatas', () => {
           googleUserId: 'googleUserId',
           internalNotes: 'internalNotes',
           isBlocked: true,
+          location: 'location',
           logoUrl: 'logoUrl',
           organizationId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+          portfolioUrl: 'portfolioUrl',
           stardustProfileIdentifier: 'stardustProfileIdentifier',
           stardustWalletIdentifier: 'stardustWalletIdentifier',
           steamUserId: 'steamUserId',
