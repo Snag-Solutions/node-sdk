@@ -306,6 +306,11 @@ export namespace RuleGroupGetRuleGroupsResponse {
           completeProfileConditions?: { [key: string]: boolean } | null;
 
           /**
+           * Description of the external rule condition (only for external rules)
+           */
+          conditionDescription?: string;
+
+          /**
            * Object containing details for the call-to-action.
            */
           cta?: Metadata.Cta | null;
