@@ -485,6 +485,11 @@ export namespace RuleCreateResponse {
     completeProfileConditions?: { [key: string]: boolean } | null;
 
     /**
+     * Description of the external rule condition (only for external rules)
+     */
+    conditionDescription?: string;
+
+    /**
      * Object containing details for the call-to-action.
      */
     cta?: Metadata.Cta | null;
@@ -1643,6 +1648,11 @@ export namespace RuleUpdateResponse {
     completeProfileConditions?: { [key: string]: boolean } | null;
 
     /**
+     * Description of the external rule condition (only for external rules)
+     */
+    conditionDescription?: string;
+
+    /**
      * Object containing details for the call-to-action.
      */
     cta?: Metadata.Cta | null;
@@ -2687,6 +2697,11 @@ export namespace RuleListResponse {
        * Conditions for completing the profile.
        */
       completeProfileConditions?: { [key: string]: boolean } | null;
+
+      /**
+       * Description of the external rule condition (only for external rules)
+       */
+      conditionDescription?: string;
 
       /**
        * Object containing details for the call-to-action.
@@ -3848,6 +3863,11 @@ export namespace RuleCreateParams {
     completeProfileConditions?: { [key: string]: boolean } | null;
 
     /**
+     * Description of the external rule condition (only for external rules)
+     */
+    conditionDescription?: string;
+
+    /**
      * Object containing details for the call-to-action.
      */
     cta?: Metadata.Cta | null;
@@ -5002,6 +5022,11 @@ export namespace RuleUpdateParams {
      * Conditions for completing the profile.
      */
     completeProfileConditions?: { [key: string]: boolean } | null;
+
+    /**
+     * Description of the external rule condition (only for external rules)
+     */
+    conditionDescription?: string;
 
     /**
      * Object containing details for the call-to-action.
