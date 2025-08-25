@@ -133,6 +133,8 @@ export namespace MetadataListResponse {
 }
 
 export interface MetadataCreateParams {
+  bio?: string | null;
+
   blockStatusReason?:
     | 'sybil_and_multi_account'
     | 'account_migration'
@@ -166,9 +168,13 @@ export interface MetadataCreateParams {
 
   isBlocked?: boolean;
 
+  location?: string | null;
+
   logoUrl?: string | null;
 
   organizationId?: string;
+
+  portfolioUrl?: string | null;
 
   stardustProfileIdentifier?: string | null;
 
