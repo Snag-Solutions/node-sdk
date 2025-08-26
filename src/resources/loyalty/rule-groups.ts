@@ -250,7 +250,8 @@ export namespace RuleGroupGetRuleGroupsResponse {
           | 'shopify_spend'
           | 'swap'
           | 'tiktok_post'
-          | 'post_impressions';
+          | 'post_impressions'
+          | 'discord_join';
       }
 
       export namespace LoyaltyRule {
