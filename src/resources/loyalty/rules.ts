@@ -701,6 +701,11 @@ export namespace RuleCreateResponse {
     rewardByBatch?: boolean | null;
 
     /**
+     * Flag indicating if the reward is rewarded per action.
+     */
+    rewardPerAction?: boolean | null;
+
+    /**
      * Flag indicating if rewards are given per impression.
      */
     rewardPerImpression?: boolean | null;
@@ -1864,6 +1869,11 @@ export namespace RuleUpdateResponse {
     rewardByBatch?: boolean | null;
 
     /**
+     * Flag indicating if the reward is rewarded per action.
+     */
+    rewardPerAction?: boolean | null;
+
+    /**
      * Flag indicating if rewards are given per impression.
      */
     rewardPerImpression?: boolean | null;
@@ -2913,6 +2923,11 @@ export namespace RuleListResponse {
        * Flag indicating if the reward is rewarded by batch.
        */
       rewardByBatch?: boolean | null;
+
+      /**
+       * Flag indicating if the reward is rewarded per action.
+       */
+      rewardPerAction?: boolean | null;
 
       /**
        * Flag indicating if rewards are given per impression.
@@ -4080,6 +4095,11 @@ export namespace RuleCreateParams {
     rewardByBatch?: boolean | null;
 
     /**
+     * Flag indicating if the reward is rewarded per action.
+     */
+    rewardPerAction?: boolean | null;
+
+    /**
      * Flag indicating if rewards are given per impression.
      */
     rewardPerImpression?: boolean | null;
@@ -5239,6 +5259,11 @@ export namespace RuleUpdateParams {
      * Flag indicating if the reward is rewarded by batch.
      */
     rewardByBatch?: boolean | null;
+
+    /**
+     * Flag indicating if the reward is rewarded per action.
+     */
+    rewardPerAction?: boolean | null;
 
     /**
      * Flag indicating if rewards are given per impression.

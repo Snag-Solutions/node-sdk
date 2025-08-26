@@ -445,6 +445,11 @@ export namespace RuleEditListResponse {
         rewardByBatch?: boolean | null;
 
         /**
+         * Flag indicating if the reward is rewarded per action.
+         */
+        rewardPerAction?: boolean | null;
+
+        /**
          * Flag indicating if rewards are given per impression.
          */
         rewardPerImpression?: boolean | null;
@@ -1385,6 +1390,11 @@ export namespace RuleEditListResponse {
          * Flag indicating if the reward is rewarded by batch.
          */
         rewardByBatch?: boolean | null;
+
+        /**
+         * Flag indicating if the reward is rewarded per action.
+         */
+        rewardPerAction?: boolean | null;
 
         /**
          * Flag indicating if rewards are given per impression.
@@ -2384,6 +2394,11 @@ export namespace RuleEditRestoreResponse {
       rewardByBatch?: boolean | null;
 
       /**
+       * Flag indicating if the reward is rewarded per action.
+       */
+      rewardPerAction?: boolean | null;
+
+      /**
        * Flag indicating if rewards are given per impression.
        */
       rewardPerImpression?: boolean | null;
@@ -3324,6 +3339,11 @@ export namespace RuleEditRestoreResponse {
        * Flag indicating if the reward is rewarded by batch.
        */
       rewardByBatch?: boolean | null;
+
+      /**
+       * Flag indicating if the reward is rewarded per action.
+       */
+      rewardPerAction?: boolean | null;
 
       /**
        * Flag indicating if rewards are given per impression.
