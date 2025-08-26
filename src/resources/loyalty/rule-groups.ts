@@ -522,6 +522,11 @@ export namespace RuleGroupGetRuleGroupsResponse {
           rewardByBatch?: boolean | null;
 
           /**
+           * Flag indicating if the reward is rewarded per action.
+           */
+          rewardPerAction?: boolean | null;
+
+          /**
            * Flag indicating if rewards are given per impression.
            */
           rewardPerImpression?: boolean | null;
