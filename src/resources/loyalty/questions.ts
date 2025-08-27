@@ -53,8 +53,6 @@ export class Questions extends APIResource {
    * ```ts
    * const questions = await client.loyalty.questions.list({
    *   loyaltyRuleIds: '123e4567-e89b-12d3-a456-426614174000',
-   *   organizationId: '123e4567-e89b-12d3-a456-426614174002',
-   *   websiteId: '123e4567-e89b-12d3-a456-426614174001',
    * });
    * ```
    */
@@ -221,12 +219,17 @@ export interface QuestionListParams {
   /**
    * UUID of the organization to fetch questions for
    */
-  organizationId: string;
+  organizationId?: string;
+
+  /**
+   * UUID of the user to fetch questions for
+   */
+  userId?: string;
 
   /**
    * UUID of the website to fetch questions for
    */
-  websiteId: string;
+  websiteId?: string;
 }
 
 export declare namespace Questions {

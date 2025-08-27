@@ -34,7 +34,12 @@ describe('resource questionsResponses', () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
       client.loyalty.questionsResponses.list(
-        { questionsId: ['123e4567-e89b-12d3-a456-426614174001'] },
+        {
+          organizationId: '123e4567-e89b-12d3-a456-426614174001',
+          questionsId: ['123e4567-e89b-12d3-a456-426614174001'],
+          userId: '123e4567-e89b-12d3-a456-426614174001',
+          websiteId: '123e4567-e89b-12d3-a456-426614174001',
+        },
         { path: '/_stainless_unknown_path' },
       ),
     ).rejects.toThrow(SnagSolutions.NotFoundError);
@@ -58,6 +63,9 @@ describe('resource questionsResponses', () => {
   test.skip('submit: required and optional params', async () => {
     const response = await client.loyalty.questionsResponses.submit({
       loyaltyQuestionChoiceId: '123e4567-e89b-12d3-a456-426614174001',
+      organizationId: '123e4567-e89b-12d3-a456-426614174001',
+      userId: '123e4567-e89b-12d3-a456-426614174003',
+      websiteId: '123e4567-e89b-12d3-a456-426614174001',
     });
   });
 });

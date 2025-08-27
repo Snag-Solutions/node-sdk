@@ -139,9 +139,24 @@ export namespace QuestionsResponseSubmitResponse {
 
 export interface QuestionsResponseListParams {
   /**
+   * UUID of the organization to filter responses
+   */
+  organizationId?: string;
+
+  /**
    * UUID(s) of the questions to filter responses
    */
   questionsId?: string | Array<string>;
+
+  /**
+   * UUID of the user to filter responses
+   */
+  userId?: string;
+
+  /**
+   * UUID of the website to filter responses
+   */
+  websiteId?: string;
 }
 
 export interface QuestionsResponseSubmitParams {
@@ -149,6 +164,21 @@ export interface QuestionsResponseSubmitParams {
    * UUID of the selected choice
    */
   loyaltyQuestionChoiceId: string;
+
+  /**
+   * UUID of the organization to filter responses
+   */
+  organizationId?: string;
+
+  /**
+   * UUID of the user who submitted the response
+   */
+  userId?: string;
+
+  /**
+   * UUID of the website to filter responses
+   */
+  websiteId?: string;
 }
 
 export declare namespace QuestionsResponses {

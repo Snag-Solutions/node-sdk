@@ -66,8 +66,6 @@ describe('resource questions', () => {
   test.skip('list: only required params', async () => {
     const responsePromise = client.loyalty.questions.list({
       loyaltyRuleIds: '123e4567-e89b-12d3-a456-426614174000',
-      organizationId: '123e4567-e89b-12d3-a456-426614174002',
-      websiteId: '123e4567-e89b-12d3-a456-426614174001',
     });
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
@@ -83,6 +81,7 @@ describe('resource questions', () => {
     const response = await client.loyalty.questions.list({
       loyaltyRuleIds: '123e4567-e89b-12d3-a456-426614174000',
       organizationId: '123e4567-e89b-12d3-a456-426614174002',
+      userId: '123e4567-e89b-12d3-a456-426614174003',
       websiteId: '123e4567-e89b-12d3-a456-426614174001',
     });
   });
