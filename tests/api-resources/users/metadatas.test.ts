@@ -56,6 +56,7 @@ describe('resource metadatas', () => {
           stardustWalletIdentifier: 'stardustWalletIdentifier',
           steamUserId: 'steamUserId',
           steamUsername: 'steamUsername',
+          sybilScore: 1,
           telegramUserId: 'telegramUserId',
           telegramUsername: 'telegramUsername',
           tiktokUser: 'tiktokUser',

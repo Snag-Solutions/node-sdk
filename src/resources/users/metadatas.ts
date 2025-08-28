@@ -184,6 +184,8 @@ export interface MetadataCreateParams {
 
   steamUsername?: string | null;
 
+  sybilScore?: number | null;
+
   telegramUserId?: string | null;
 
   telegramUsername?: string | null;
