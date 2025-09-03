@@ -1436,7 +1436,7 @@ export interface BadgeListParams {
   /**
    * Array of badge IDs (converted to lowercase) to fetch
    */
-  badgeIds?: Array<string>;
+  badgeIds?: string | Array<string>;
 
   /**
    * Include deleted badges in the response
