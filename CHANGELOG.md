@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.134 (2025-09-06)
+
+Full Changelog: [v0.1.0-alpha.133...v0.1.0-alpha.134](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.133...v0.1.0-alpha.134)
+
+### Chores
+
+* ci build action ([b4bd639](https://github.com/Snag-Solutions/node-sdk/commit/b4bd63931bb556a0be2e883a5438a3513c7bad81))
+
 ## 0.1.0-alpha.133 (2025-09-03)
 
 Full Changelog: [v0.1.0-alpha.132...v0.1.0-alpha.133](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.132...v0.1.0-alpha.133)
