@@ -496,6 +496,7 @@ export interface TransactionGetTransactionEntriesParams {
     | 'tiktok_post'
     | 'post_impressions'
     | 'discord_join'
+    | 'connected_youtube'
     | Array<
         | 'Bonus'
         | 'BoughtOn'
@@ -561,6 +562,7 @@ export interface TransactionGetTransactionEntriesParams {
         | 'tiktok_post'
         | 'post_impressions'
         | 'discord_join'
+        | 'connected_youtube'
       >;
 
   /**

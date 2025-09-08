@@ -251,7 +251,8 @@ export namespace RuleGroupGetRuleGroupsResponse {
           | 'swap'
           | 'tiktok_post'
           | 'post_impressions'
-          | 'discord_join';
+          | 'discord_join'
+          | 'connected_youtube';
       }
 
       export namespace LoyaltyRule {
