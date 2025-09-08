@@ -277,7 +277,8 @@ export interface RuleCreateResponse {
     | 'swap'
     | 'tiktok_post'
     | 'post_impressions'
-    | 'discord_join';
+    | 'discord_join'
+    | 'connected_youtube';
 
   /**
    * Unique identifier for the associated website
@@ -3671,7 +3672,8 @@ export interface RuleCreateParams {
     | 'swap'
     | 'tiktok_post'
     | 'post_impressions'
-    | 'discord_join';
+    | 'discord_join'
+    | 'connected_youtube';
 
   /**
    * Unique identifier for the associated website
