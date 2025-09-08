@@ -50,6 +50,8 @@ export namespace UserListResponse {
     referralCode: Data.ReferralCode;
 
     user: Data.User;
+
+    eligible?: boolean | null;
   }
 
   export namespace Data {
