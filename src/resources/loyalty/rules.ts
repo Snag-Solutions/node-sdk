@@ -436,6 +436,11 @@ export interface RuleCreateResponse {
   shopifyStoreUrl?: string | null;
 
   /**
+   * Whether to show this rule before the start time
+   */
+  showBeforeStart?: boolean;
+
+  /**
    * Optional subscription id for the rule
    */
   subscriptionId?: string | null;
@@ -1534,6 +1539,11 @@ export interface RuleUpdateResponse {
    * URL of the Shopify store
    */
   shopifyStoreUrl?: string | null;
+
+  /**
+   * Whether to show this rule before the start time
+   */
+  showBeforeStart?: boolean;
 
   /**
    * Start time for the loyalty rule
@@ -3831,6 +3841,11 @@ export interface RuleCreateParams {
   shopifyStoreUrl?: string | null;
 
   /**
+   * Whether to show this rule before the start time
+   */
+  showBeforeStart?: boolean;
+
+  /**
    * Optional subscription id for the rule
    */
   subscriptionId?: string | null;
@@ -4927,6 +4942,11 @@ export interface RuleUpdateParams {
    * URL of the Shopify store
    */
   shopifyStoreUrl?: string | null;
+
+  /**
+   * Whether to show this rule before the start time
+   */
+  showBeforeStart?: boolean;
 
   /**
    * Start time for the loyalty rule

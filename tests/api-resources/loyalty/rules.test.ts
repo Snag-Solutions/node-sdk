@@ -202,6 +202,7 @@ describe('resource rules', () => {
       oauthCredentialsId: '123e4567-e89b-12d3-a456-426614174003',
       rewardType: 'points',
       shopifyStoreUrl: 'https://example.com',
+      showBeforeStart: false,
       subscriptionId: 'sub12345',
     });
   });
@@ -381,6 +382,7 @@ describe('resource rules', () => {
       oauthCredentialsId: '123e4567-e89b-12d3-a456-426614174000',
       rewardType: 'points',
       shopifyStoreUrl: 'https://example.com',
+      showBeforeStart: false,
       startTime: '2024-01-01T00:00:00Z',
       subscriptionId: 'sub12345',
     });
