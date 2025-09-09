@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.136 (2025-09-09)
+
+Full Changelog: [v0.1.0-alpha.135...v0.1.0-alpha.136](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.135...v0.1.0-alpha.136)
+
+### Bug Fixes
+
+* coerce nullable values to undefined ([ce869c1](https://github.com/Snag-Solutions/node-sdk/commit/ce869c1fa98dc163a737fafb12f4c1b394a13874))
+
 ## 0.1.0-alpha.135 (2025-09-08)
 
 Full Changelog: [v0.1.0-alpha.134...v0.1.0-alpha.135](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.134...v0.1.0-alpha.135)
