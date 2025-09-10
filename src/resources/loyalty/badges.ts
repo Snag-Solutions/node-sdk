@@ -382,6 +382,11 @@ export namespace BadgeCreateResponse {
     websiteId: string;
 
     /**
+     * Whether the user has dismissed the badge in the UI
+     */
+    dismissedInUi?: boolean;
+
+    /**
      * Array of progress for the badge
      */
     progress?: unknown;
@@ -663,6 +668,11 @@ export namespace BadgeUpdateResponse {
      * UUID of the website (converted to lowercase)
      */
     websiteId: string;
+
+    /**
+     * Whether the user has dismissed the badge in the UI
+     */
+    dismissedInUi?: boolean;
 
     /**
      * Array of progress for the badge
@@ -948,6 +958,11 @@ export namespace BadgeListResponse {
     websiteId: string;
 
     /**
+     * Whether the user has dismissed the badge in the UI
+     */
+    dismissedInUi?: boolean;
+
+    /**
      * Array of progress for the badge
      */
     progress?: unknown;
@@ -1229,6 +1244,11 @@ export namespace BadgeDeleteResponse {
      * UUID of the website (converted to lowercase)
      */
     websiteId: string;
+
+    /**
+     * Whether the user has dismissed the badge in the UI
+     */
+    dismissedInUi?: boolean;
 
     /**
      * Array of progress for the badge
