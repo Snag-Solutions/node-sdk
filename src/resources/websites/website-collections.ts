@@ -95,6 +95,7 @@ export interface WebsiteCollectionCreateParams {
     | 'fantomTestnet'
     | 'flowMainnet'
     | 'mainnet'
+    | 'nexusTestnet'
     | 'optimism'
     | 'polygon'
     | 'polygon_mumbai'
