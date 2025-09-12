@@ -142,7 +142,6 @@ export interface MetadataCreateParams {
     | 'not_sybil'
     | 'issue_resolved'
     | 'twitter_suspended'
-    | 'block_exempt'
     | 'other'
     | null;
 
@@ -167,6 +166,8 @@ export interface MetadataCreateParams {
   internalNotes?: string | null;
 
   isBlocked?: boolean;
+
+  isBlockExempt?: boolean;
 
   location?: string | null;
 

@@ -48,6 +48,7 @@ describe('resource metadatas', () => {
           googleUserId: 'googleUserId',
           internalNotes: 'internalNotes',
           isBlocked: true,
+          isBlockExempt: true,
           location: 'location',
           logoUrl: 'logoUrl',
           organizationId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
