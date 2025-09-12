@@ -202,6 +202,11 @@ export namespace BadgeCreateResponse {
     association: Array<LoyaltyCondition.Association>;
 
     /**
+     * URL of the CSV file
+     */
+    csvUrl: string | null;
+
+    /**
      * The description of the condition
      */
     description: string | null;
@@ -510,6 +515,11 @@ export namespace BadgeUpdateResponse {
     amount: number | null;
 
     association: Array<LoyaltyCondition.Association>;
+
+    /**
+     * URL of the CSV file
+     */
+    csvUrl: string | null;
 
     /**
      * The description of the condition
@@ -822,6 +832,11 @@ export namespace BadgeListResponse {
     association: Array<LoyaltyCondition.Association>;
 
     /**
+     * URL of the CSV file
+     */
+    csvUrl: string | null;
+
+    /**
      * The description of the condition
      */
     description: string | null;
@@ -1130,6 +1145,11 @@ export namespace BadgeDeleteResponse {
     amount: number | null;
 
     association: Array<LoyaltyCondition.Association>;
+
+    /**
+     * URL of the CSV file
+     */
+    csvUrl: string | null;
 
     /**
      * The description of the condition
