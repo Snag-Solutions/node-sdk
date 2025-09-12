@@ -50,6 +50,7 @@ describe('resource badges', () => {
       name: 'Example Badge',
       organizationId: '123e4567-e89b-12d3-a456-426614174222',
       websiteId: '123e4567-e89b-12d3-a456-426614174111',
+      csvFiles: [{ src: 'https://example.com', description: 'description', name: 'name' }],
       description: 'Example description',
     });
   });
@@ -83,6 +84,7 @@ describe('resource badges', () => {
       client.loyalty.badges.update(
         '123e4567-e89b-12d3-a456-426614174333',
         {
+          csvFiles: [{ src: 'https://example.com', description: 'description', name: 'name' }],
           description: 'Example description',
           imageUrl: 'https://example.com/image.png',
           name: 'Example Badge',

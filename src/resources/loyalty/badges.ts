@@ -202,11 +202,6 @@ export namespace BadgeCreateResponse {
     association: Array<LoyaltyCondition.Association>;
 
     /**
-     * The URL of the CSV file
-     */
-    csvUrl: string | null;
-
-    /**
      * The description of the condition
      */
     description: string | null;
@@ -235,6 +230,11 @@ export namespace BadgeCreateResponse {
      * The type of the condition
      */
     type: 'rule' | 'rules' | 'points' | 'section' | 'level' | 'api' | 'badge' | 'badges' | 'csv';
+
+    /**
+     * Array of CSV files associated with the condition
+     */
+    csvFiles?: Array<LoyaltyCondition.CsvFile>;
   }
 
   export namespace LoyaltyCondition {
@@ -310,6 +310,28 @@ export namespace BadgeCreateResponse {
          */
         name: string;
       }
+    }
+
+    export interface CsvFile {
+      /**
+       * UUID of the CSV file (converted to lowercase)
+       */
+      id: string;
+
+      /**
+       * The description of the CSV file
+       */
+      description: string | null;
+
+      /**
+       * The name of the CSV file
+       */
+      name: string | null;
+
+      /**
+       * The URL of the CSV file
+       */
+      url: string | null;
     }
   }
 
@@ -490,11 +512,6 @@ export namespace BadgeUpdateResponse {
     association: Array<LoyaltyCondition.Association>;
 
     /**
-     * The URL of the CSV file
-     */
-    csvUrl: string | null;
-
-    /**
      * The description of the condition
      */
     description: string | null;
@@ -523,6 +540,11 @@ export namespace BadgeUpdateResponse {
      * The type of the condition
      */
     type: 'rule' | 'rules' | 'points' | 'section' | 'level' | 'api' | 'badge' | 'badges' | 'csv';
+
+    /**
+     * Array of CSV files associated with the condition
+     */
+    csvFiles?: Array<LoyaltyCondition.CsvFile>;
   }
 
   export namespace LoyaltyCondition {
@@ -598,6 +620,28 @@ export namespace BadgeUpdateResponse {
          */
         name: string;
       }
+    }
+
+    export interface CsvFile {
+      /**
+       * UUID of the CSV file (converted to lowercase)
+       */
+      id: string;
+
+      /**
+       * The description of the CSV file
+       */
+      description: string | null;
+
+      /**
+       * The name of the CSV file
+       */
+      name: string | null;
+
+      /**
+       * The URL of the CSV file
+       */
+      url: string | null;
     }
   }
 
@@ -778,11 +822,6 @@ export namespace BadgeListResponse {
     association: Array<LoyaltyCondition.Association>;
 
     /**
-     * The URL of the CSV file
-     */
-    csvUrl: string | null;
-
-    /**
      * The description of the condition
      */
     description: string | null;
@@ -811,6 +850,11 @@ export namespace BadgeListResponse {
      * The type of the condition
      */
     type: 'rule' | 'rules' | 'points' | 'section' | 'level' | 'api' | 'badge' | 'badges' | 'csv';
+
+    /**
+     * Array of CSV files associated with the condition
+     */
+    csvFiles?: Array<LoyaltyCondition.CsvFile>;
   }
 
   export namespace LoyaltyCondition {
@@ -886,6 +930,28 @@ export namespace BadgeListResponse {
          */
         name: string;
       }
+    }
+
+    export interface CsvFile {
+      /**
+       * UUID of the CSV file (converted to lowercase)
+       */
+      id: string;
+
+      /**
+       * The description of the CSV file
+       */
+      description: string | null;
+
+      /**
+       * The name of the CSV file
+       */
+      name: string | null;
+
+      /**
+       * The URL of the CSV file
+       */
+      url: string | null;
     }
   }
 
@@ -1066,11 +1132,6 @@ export namespace BadgeDeleteResponse {
     association: Array<LoyaltyCondition.Association>;
 
     /**
-     * The URL of the CSV file
-     */
-    csvUrl: string | null;
-
-    /**
      * The description of the condition
      */
     description: string | null;
@@ -1099,6 +1160,11 @@ export namespace BadgeDeleteResponse {
      * The type of the condition
      */
     type: 'rule' | 'rules' | 'points' | 'section' | 'level' | 'api' | 'badge' | 'badges' | 'csv';
+
+    /**
+     * Array of CSV files associated with the condition
+     */
+    csvFiles?: Array<LoyaltyCondition.CsvFile>;
   }
 
   export namespace LoyaltyCondition {
@@ -1174,6 +1240,28 @@ export namespace BadgeDeleteResponse {
          */
         name: string;
       }
+    }
+
+    export interface CsvFile {
+      /**
+       * UUID of the CSV file (converted to lowercase)
+       */
+      id: string;
+
+      /**
+       * The description of the CSV file
+       */
+      description: string | null;
+
+      /**
+       * The name of the CSV file
+       */
+      name: string | null;
+
+      /**
+       * The URL of the CSV file
+       */
+      url: string | null;
     }
   }
 
@@ -1365,6 +1453,8 @@ export interface BadgeCreateParams {
    */
   websiteId: string;
 
+  csvFiles?: Array<BadgeCreateParams.CsvFile>;
+
   /**
    * The description of the badge
    */
@@ -1433,9 +1523,19 @@ export namespace BadgeCreateParams {
      */
     type?: 'rule' | 'rules' | 'points' | 'section' | 'level' | 'api' | 'badge' | 'badges' | 'csv';
   }
+
+  export interface CsvFile {
+    src: string;
+
+    description?: string;
+
+    name?: string;
+  }
 }
 
 export interface BadgeUpdateParams {
+  csvFiles?: Array<BadgeUpdateParams.CsvFile>;
+
   /**
    * The description of the badge
    */
@@ -1450,6 +1550,16 @@ export interface BadgeUpdateParams {
    * The name of the badge
    */
   name?: string;
+}
+
+export namespace BadgeUpdateParams {
+  export interface CsvFile {
+    src: string;
+
+    description?: string;
+
+    name?: string;
+  }
 }
 
 export interface BadgeListParams {
