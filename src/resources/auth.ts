@@ -51,6 +51,11 @@ export interface AuthConnectAuthParams {
   responseType?: 'redirect' | 'json';
 
   /**
+   * Whether to skip the YouTube channel check
+   */
+  skipYTChannelCheck?: string;
+
+  /**
    * The ID of the user
    */
   userId?: string;
