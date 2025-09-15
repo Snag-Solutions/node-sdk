@@ -1516,7 +1516,7 @@ export namespace BadgeCreateParams {
     /**
      * UUID of the loyalty rule chain (optional, converted to lowercase)
      */
-    loyaltyRuleChainId?: string;
+    loyaltyRuleChainId?: string | null;
 
     /**
      * Array of UUIDs of the rule group (optional, converted to lowercase)
