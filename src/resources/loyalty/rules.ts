@@ -330,7 +330,7 @@ export interface RuleCreateResponse {
   /**
    * Interval between rule executions
    */
-  interval?: 'daily' | 'weekly' | 'monthly' | 'once' | 'custom' | 'every_message' | null;
+  interval?: 'daily' | 'weekly' | 'monthly' | 'once' | 'custom' | 'every_message' | 'unlimited' | null;
 
   /**
    * Whether this rule is mandatory
@@ -1444,7 +1444,7 @@ export interface RuleUpdateResponse {
   /**
    * Time interval for recurring rule execution
    */
-  interval?: 'daily' | 'weekly' | 'monthly' | 'once' | 'custom' | 'every_message' | null;
+  interval?: 'daily' | 'weekly' | 'monthly' | 'once' | 'custom' | 'every_message' | 'unlimited' | null;
 
   /**
    * Whether this rule is required for participation
@@ -3745,7 +3745,7 @@ export interface RuleCreateParams {
   /**
    * Interval between rule executions
    */
-  interval?: 'daily' | 'weekly' | 'monthly' | 'once' | 'custom' | 'every_message' | null;
+  interval?: 'daily' | 'weekly' | 'monthly' | 'once' | 'custom' | 'every_message' | 'unlimited' | null;
 
   /**
    * Whether this rule is mandatory
@@ -4857,7 +4857,7 @@ export interface RuleUpdateParams {
   /**
    * Time interval for recurring rule execution
    */
-  interval?: 'daily' | 'weekly' | 'monthly' | 'once' | 'custom' | 'every_message' | null;
+  interval?: 'daily' | 'weekly' | 'monthly' | 'once' | 'custom' | 'every_message' | 'unlimited' | null;
 
   /**
    * Whether this rule is required for participation
