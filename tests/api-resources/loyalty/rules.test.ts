@@ -419,6 +419,7 @@ describe('resource rules', () => {
           collectionAddress: '0x1234567890abcdef1234567890abcdef12345678',
           includeLoyaltyRuleChains: 'true',
           isActive: 'true',
+          isSpecial: 'true',
           limit: 50,
           loyaltyRuleGroupId: '123e4567-e89b-12d3-a456-426614174004',
           loyaltyRuleId: '123e4567-e89b-12d3-a456-426614174001',
