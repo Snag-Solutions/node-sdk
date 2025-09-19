@@ -5928,6 +5928,12 @@ export interface RuleListParams {
   isActive?: 'true' | 'false';
 
   /**
+   * If true this will only return special rules, special rules are the rules that
+   * are used for anti sybil as honey pot
+   */
+  isSpecial?: 'true' | 'false';
+
+  /**
    * Maximum number of records to return (max 100)
    */
   limit?: number;
