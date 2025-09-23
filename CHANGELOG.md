@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.1.0-alpha.147 (2025-09-23)
+
+Full Changelog: [v0.1.0-alpha.146...v0.1.0-alpha.147](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.146...v0.1.0-alpha.147)
+
+### Features
+
+* **api:** open api update ([c87209b](https://github.com/Snag-Solutions/node-sdk/commit/c87209b61c6116e3005db73b068cc64ae84ae56e))
+* **api:** open api update ([ca2b42f](https://github.com/Snag-Solutions/node-sdk/commit/ca2b42f9c810c21044e20d727870c777f0ba1f19))
+
+
+### Chores
+
+* do not install brew dependencies in ./scripts/bootstrap by default ([baf309b](https://github.com/Snag-Solutions/node-sdk/commit/baf309bdbf7f8de7cb96bc7f557807caf6308bfc))
+
 ## 0.1.0-alpha.146 (2025-09-19)
 
 Full Changelog: [v0.1.0-alpha.145...v0.1.0-alpha.146](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.145...v0.1.0-alpha.146)
