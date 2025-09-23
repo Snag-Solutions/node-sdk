@@ -495,7 +495,7 @@ export namespace RuleCreateResponse {
     /**
      * Description of the external rule condition (only for external rules)
      */
-    conditionDescription?: string;
+    conditionDescription?: string | null;
 
     /**
      * Object containing details for the call-to-action.
@@ -1673,7 +1673,7 @@ export namespace RuleUpdateResponse {
     /**
      * Description of the external rule condition (only for external rules)
      */
-    conditionDescription?: string;
+    conditionDescription?: string | null;
 
     /**
      * Object containing details for the call-to-action.
@@ -2731,7 +2731,7 @@ export namespace RuleListResponse {
       /**
        * Description of the external rule condition (only for external rules)
        */
-      conditionDescription?: string;
+      conditionDescription?: string | null;
 
       /**
        * Object containing details for the call-to-action.
@@ -3910,7 +3910,7 @@ export namespace RuleCreateParams {
     /**
      * Description of the external rule condition (only for external rules)
      */
-    conditionDescription?: string;
+    conditionDescription?: string | null;
 
     /**
      * Object containing details for the call-to-action.
@@ -5086,7 +5086,7 @@ export namespace RuleUpdateParams {
     /**
      * Description of the external rule condition (only for external rules)
      */
-    conditionDescription?: string;
+    conditionDescription?: string | null;
 
     /**
      * Object containing details for the call-to-action.

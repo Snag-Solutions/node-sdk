@@ -310,7 +310,7 @@ export namespace RuleGroupGetRuleGroupsResponse {
           /**
            * Description of the external rule condition (only for external rules)
            */
-          conditionDescription?: string;
+          conditionDescription?: string | null;
 
           /**
            * Object containing details for the call-to-action.
