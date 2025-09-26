@@ -480,7 +480,7 @@ export namespace RuleCreateResponse {
     /**
      * Text to check in the Twitter post, username, or bio.
      */
-    checkText?: string | Array<string> | null;
+    checkText?: string | null;
 
     /**
      * Array of collections associated with the rule.
@@ -696,11 +696,6 @@ export namespace RuleCreateResponse {
      * Flag indicating if the post link is required.
      */
     requirePostLink?: boolean | null;
-
-    /**
-     * Flag indicating if media metadata is required.
-     */
-    requirePostMediaLink?: boolean | null;
 
     /**
      * Flag indicating if the rule can also reward badges per range.
@@ -1663,7 +1658,7 @@ export namespace RuleUpdateResponse {
     /**
      * Text to check in the Twitter post, username, or bio.
      */
-    checkText?: string | Array<string> | null;
+    checkText?: string | null;
 
     /**
      * Array of collections associated with the rule.
@@ -1879,11 +1874,6 @@ export namespace RuleUpdateResponse {
      * Flag indicating if the post link is required.
      */
     requirePostLink?: boolean | null;
-
-    /**
-     * Flag indicating if media metadata is required.
-     */
-    requirePostMediaLink?: boolean | null;
 
     /**
      * Flag indicating if the rule can also reward badges per range.
@@ -2726,7 +2716,7 @@ export namespace RuleListResponse {
       /**
        * Text to check in the Twitter post, username, or bio.
        */
-      checkText?: string | Array<string> | null;
+      checkText?: string | null;
 
       /**
        * Array of collections associated with the rule.
@@ -2942,11 +2932,6 @@ export namespace RuleListResponse {
        * Flag indicating if the post link is required.
        */
       requirePostLink?: boolean | null;
-
-      /**
-       * Flag indicating if media metadata is required.
-       */
-      requirePostMediaLink?: boolean | null;
 
       /**
        * Flag indicating if the rule can also reward badges per range.
@@ -3910,7 +3895,7 @@ export namespace RuleCreateParams {
     /**
      * Text to check in the Twitter post, username, or bio.
      */
-    checkText?: string | Array<string> | null;
+    checkText?: string | null;
 
     /**
      * Array of collections associated with the rule.
@@ -4126,11 +4111,6 @@ export namespace RuleCreateParams {
      * Flag indicating if the post link is required.
      */
     requirePostLink?: boolean | null;
-
-    /**
-     * Flag indicating if media metadata is required.
-     */
-    requirePostMediaLink?: boolean | null;
 
     /**
      * Flag indicating if the rule can also reward badges per range.
@@ -5091,7 +5071,7 @@ export namespace RuleUpdateParams {
     /**
      * Text to check in the Twitter post, username, or bio.
      */
-    checkText?: string | Array<string> | null;
+    checkText?: string | null;
 
     /**
      * Array of collections associated with the rule.
@@ -5307,11 +5287,6 @@ export namespace RuleUpdateParams {
      * Flag indicating if the post link is required.
      */
     requirePostLink?: boolean | null;
-
-    /**
-     * Flag indicating if media metadata is required.
-     */
-    requirePostMediaLink?: boolean | null;
 
     /**
      * Flag indicating if the rule can also reward badges per range.

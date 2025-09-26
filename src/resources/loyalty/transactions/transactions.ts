@@ -647,7 +647,7 @@ export interface TransactionListRuleChainsParams {
   /**
    * Number of rule chains to return
    */
-  limit?: number;
+  limit?: number | null;
 
   /**
    * Starting after the given rule chain ID
