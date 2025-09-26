@@ -1,5 +1,23 @@
 # Changelog
 
+## 0.1.0-alpha.151 (2025-09-26)
+
+Full Changelog: [v0.1.0-alpha.150...v0.1.0-alpha.151](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.150...v0.1.0-alpha.151)
+
+### Features
+
+* **api:** open api update ([84c698a](https://github.com/Snag-Solutions/node-sdk/commit/84c698aa14cfd00142e769d60f345091d548c063))
+
+
+### Performance Improvements
+
+* faster formatting ([1e9d8df](https://github.com/Snag-Solutions/node-sdk/commit/1e9d8df8b46cdf96d5788acca9b09d644b8c33d2))
+
+
+### Chores
+
+* **internal:** remove deprecated `compilerOptions.baseUrl` from tsconfig.json ([00d3cf3](https://github.com/Snag-Solutions/node-sdk/commit/00d3cf32e28f46ca60476a119e61df8065322a8a))
+
 ## 0.1.0-alpha.150 (2025-09-26)
 
 Full Changelog: [v0.1.0-alpha.149...v0.1.0-alpha.150](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.149...v0.1.0-alpha.150)
