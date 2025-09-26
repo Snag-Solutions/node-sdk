@@ -7,11 +7,10 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "esModuleInterop": true,
-    "baseUrl": "./",
     "paths": {
-      "@snagsolutions/sdk/_shims/auto/*": ["src/_shims/auto/*-node"],
-      "@snagsolutions/sdk/*": ["src/*"],
-      "@snagsolutions/sdk": ["src/index.ts"]
+      "@snagsolutions/sdk/_shims/auto/*": ["./src/_shims/auto/*-node"],
+      "@snagsolutions/sdk/*": ["./src/*"],
+      "@snagsolutions/sdk": ["./src/index.ts"]
     },
     "noEmit": true,
 
@@ -32,7 +31,7 @@
     "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
-		"isolatedModules": false,
+    "isolatedModules": false,
 
     "skipLibCheck": true
   }
