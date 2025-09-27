@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.152 (2025-09-27)
+
+Full Changelog: [v0.1.0-alpha.151...v0.1.0-alpha.152](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.151...v0.1.0-alpha.152)
+
+### Chores
+
+* **internal:** fix incremental formatting in some cases ([3801ff6](https://github.com/Snag-Solutions/node-sdk/commit/3801ff6a2a89c5438dbf30c029a397aa851190d7))
+
 ## 0.1.0-alpha.151 (2025-09-26)
 
 Full Changelog: [v0.1.0-alpha.150...v0.1.0-alpha.151](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.150...v0.1.0-alpha.151)
