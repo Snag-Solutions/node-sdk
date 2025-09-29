@@ -713,6 +713,11 @@ export namespace RuleCreateResponse {
     rewardByBatch?: boolean | null;
 
     /**
+     * Criteria to evaluate the reward.
+     */
+    rewardCriteria?: 'IMPRESSIONS_COUNT' | 'EVERY_ELIGIBLE' | null;
+
+    /**
      * Flag indicating if the reward is rewarded per action.
      */
     rewardPerAction?: boolean | null;
@@ -1896,6 +1901,11 @@ export namespace RuleUpdateResponse {
     rewardByBatch?: boolean | null;
 
     /**
+     * Criteria to evaluate the reward.
+     */
+    rewardCriteria?: 'IMPRESSIONS_COUNT' | 'EVERY_ELIGIBLE' | null;
+
+    /**
      * Flag indicating if the reward is rewarded per action.
      */
     rewardPerAction?: boolean | null;
@@ -2957,6 +2967,11 @@ export namespace RuleListResponse {
        * Flag indicating if the reward is rewarded by batch.
        */
       rewardByBatch?: boolean | null;
+
+      /**
+       * Criteria to evaluate the reward.
+       */
+      rewardCriteria?: 'IMPRESSIONS_COUNT' | 'EVERY_ELIGIBLE' | null;
 
       /**
        * Flag indicating if the reward is rewarded per action.
@@ -4143,6 +4158,11 @@ export namespace RuleCreateParams {
     rewardByBatch?: boolean | null;
 
     /**
+     * Criteria to evaluate the reward.
+     */
+    rewardCriteria?: 'IMPRESSIONS_COUNT' | 'EVERY_ELIGIBLE' | null;
+
+    /**
      * Flag indicating if the reward is rewarded per action.
      */
     rewardPerAction?: boolean | null;
@@ -5322,6 +5342,11 @@ export namespace RuleUpdateParams {
      * Flag indicating if the reward is rewarded by batch.
      */
     rewardByBatch?: boolean | null;
+
+    /**
+     * Criteria to evaluate the reward.
+     */
+    rewardCriteria?: 'IMPRESSIONS_COUNT' | 'EVERY_ELIGIBLE' | null;
 
     /**
      * Flag indicating if the reward is rewarded per action.
