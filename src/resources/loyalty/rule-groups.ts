@@ -530,7 +530,7 @@ export namespace RuleGroupGetRuleGroupsResponse {
           /**
            * Criteria to evaluate the reward.
            */
-          rewardCriteria?: 'IMPRESSIONS_COUNT' | 'EVERY_ELIGIBLE' | null;
+          rewardCriteria?: 'IMPRESSIONS_COUNT' | 'ELIGIBLE_POST' | null;
 
           /**
            * Flag indicating if the reward is rewarded per action.

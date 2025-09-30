@@ -715,7 +715,7 @@ export namespace RuleCreateResponse {
     /**
      * Criteria to evaluate the reward.
      */
-    rewardCriteria?: 'IMPRESSIONS_COUNT' | 'EVERY_ELIGIBLE' | null;
+    rewardCriteria?: 'IMPRESSIONS_COUNT' | 'ELIGIBLE_POST' | null;
 
     /**
      * Flag indicating if the reward is rewarded per action.
@@ -1903,7 +1903,7 @@ export namespace RuleUpdateResponse {
     /**
      * Criteria to evaluate the reward.
      */
-    rewardCriteria?: 'IMPRESSIONS_COUNT' | 'EVERY_ELIGIBLE' | null;
+    rewardCriteria?: 'IMPRESSIONS_COUNT' | 'ELIGIBLE_POST' | null;
 
     /**
      * Flag indicating if the reward is rewarded per action.
@@ -2971,7 +2971,7 @@ export namespace RuleListResponse {
       /**
        * Criteria to evaluate the reward.
        */
-      rewardCriteria?: 'IMPRESSIONS_COUNT' | 'EVERY_ELIGIBLE' | null;
+      rewardCriteria?: 'IMPRESSIONS_COUNT' | 'ELIGIBLE_POST' | null;
 
       /**
        * Flag indicating if the reward is rewarded per action.
@@ -4160,7 +4160,7 @@ export namespace RuleCreateParams {
     /**
      * Criteria to evaluate the reward.
      */
-    rewardCriteria?: 'IMPRESSIONS_COUNT' | 'EVERY_ELIGIBLE' | null;
+    rewardCriteria?: 'IMPRESSIONS_COUNT' | 'ELIGIBLE_POST' | null;
 
     /**
      * Flag indicating if the reward is rewarded per action.
@@ -5346,7 +5346,7 @@ export namespace RuleUpdateParams {
     /**
      * Criteria to evaluate the reward.
      */
-    rewardCriteria?: 'IMPRESSIONS_COUNT' | 'EVERY_ELIGIBLE' | null;
+    rewardCriteria?: 'IMPRESSIONS_COUNT' | 'ELIGIBLE_POST' | null;
 
     /**
      * Flag indicating if the reward is rewarded per action.
