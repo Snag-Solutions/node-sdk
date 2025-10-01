@@ -1,5 +1,22 @@
 # Changelog
 
+## 0.1.0-alpha.152 (2025-10-01)
+
+Full Changelog: [v0.1.0-alpha.151...v0.1.0-alpha.152](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.151...v0.1.0-alpha.152)
+
+### Features
+
+* **api:** open api update ([5f0c224](https://github.com/Snag-Solutions/node-sdk/commit/5f0c22494e0946f8d2ffb3adf4404c8c4310e419))
+* **api:** open api update ([aa62263](https://github.com/Snag-Solutions/node-sdk/commit/aa62263ae0ec89ff9a69c6e9ba9a5c8fb6671755))
+
+
+### Chores
+
+* **internal:** codegen related update ([594f72f](https://github.com/Snag-Solutions/node-sdk/commit/594f72f790c964b8f1bb62092cd82deb5e97f30f))
+* **internal:** fix incremental formatting in some cases ([3801ff6](https://github.com/Snag-Solutions/node-sdk/commit/3801ff6a2a89c5438dbf30c029a397aa851190d7))
+* **internal:** ignore .eslintcache ([c111599](https://github.com/Snag-Solutions/node-sdk/commit/c11159969078b54341f13ebab6e6af49464d45e5))
+* **internal:** remove .eslintcache ([38f89e8](https://github.com/Snag-Solutions/node-sdk/commit/38f89e8d741b8646498530fd6668567c74c6dab8))
+
 ## 0.1.0-alpha.151 (2025-09-26)
 
 Full Changelog: [v0.1.0-alpha.150...v0.1.0-alpha.151](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.150...v0.1.0-alpha.151)
