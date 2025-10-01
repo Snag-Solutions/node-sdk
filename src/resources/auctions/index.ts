@@ -10,9 +10,7 @@ export {
 export {
   WebsiteUserAttributes,
   type WebsiteUserAttributeCreateResponse,
-  type WebsiteUserAttributeListResponse,
   type WebsiteUserAttributeDeleteResponse,
   type WebsiteUserAttributeCreateParams,
-  type WebsiteUserAttributeListParams,
   type WebsiteUserAttributeDeleteParams,
 } from './website-user-attributes/index';
