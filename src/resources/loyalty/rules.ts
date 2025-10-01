@@ -3596,11 +3596,15 @@ export namespace RuleGetStatusResponse {
   export interface Data {
     loyaltyRuleId: string;
 
-    status: 'pending' | 'processing' | 'completed' | 'failed';
-
     userId: string;
 
     message?: string;
+
+    /**
+     * Status of the queued job, this is only returned if the job is queued and being
+     * processed, this wil be retained for 10 minutes after the job is completed
+     */
+    status?: 'pending' | 'processing' | 'completed' | 'failed';
   }
 }
 
@@ -5967,11 +5971,6 @@ export interface RuleListParams {
   collectionAddress?: string;
 
   /**
-   * If true this will only return loyalty rule chains
-   */
-  includeLoyaltyRuleChains?: 'true' | 'false';
-
-  /**
    * If true this will only return active rules, the rules for which the startTime is
    * in the past and the endTime is in the future
    */
@@ -6071,7 +6070,24 @@ export interface RuleCompleteParams {
 }
 
 export interface RuleGetStatusParams {
+  /**
+   * Number of items to return
+   */
+  limit?: number | null;
+
+  /**
+   * Unique identifier for the loyalty rule[s]
+   */
+  loyaltyRuleId?: string | Array<string>;
+
   organizationId?: string;
+
+  /**
+   * Starting after item
+   */
+  startingAfter?: string;
+
+  userGroupId?: string;
 
   userId?: string;
 

@@ -35,45 +35,4 @@ describe('resource ruleStatuses', () => {
       websiteId: '123e4567-e89b-12d3-a456-426614174002',
     });
   });
-
-  // Prism tests are disabled
-  test.skip('list', async () => {
-    const responsePromise = client.loyalty.transactions.ruleStatuses.list();
-    const rawResponse = await responsePromise.asResponse();
-    expect(rawResponse).toBeInstanceOf(Response);
-    const response = await responsePromise;
-    expect(response).not.toBeInstanceOf(Response);
-    const dataAndResponse = await responsePromise.withResponse();
-    expect(dataAndResponse.data).toBe(response);
-    expect(dataAndResponse.response).toBe(rawResponse);
-  });
-
-  // Prism tests are disabled
-  test.skip('list: request options instead of params are passed correctly', async () => {
-    // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
-    await expect(
-      client.loyalty.transactions.ruleStatuses.list({ path: '/_stainless_unknown_path' }),
-    ).rejects.toThrow(SnagSolutions.NotFoundError);
-  });
-
-  // Prism tests are disabled
-  test.skip('list: request options and params are passed correctly', async () => {
-    // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
-    await expect(
-      client.loyalty.transactions.ruleStatuses.list(
-        {
-          limit: 10,
-          loyaltyRuleId: '123e4567-e89b-12d3-a456-426614174030',
-          organizationId: '123e4567-e89b-12d3-a456-426614174001',
-          startingAfter: '123e4567-e89b-12d3-a456-426614174001',
-          userGroupExternalIdentifier: 'userGroupExternalIdentifier',
-          userGroupId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
-          userId: ['123e4567-e89b-12d3-a456-426614174000'],
-          walletAddress: ['0x1234567890abcdef1234567890abcdef12345678'],
-          websiteId: '123e4567-e89b-12d3-a456-426614174002',
-        },
-        { path: '/_stainless_unknown_path' },
-      ),
-    ).rejects.toThrow(SnagSolutions.NotFoundError);
-  });
 });

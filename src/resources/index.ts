@@ -31,10 +31,4 @@ export {
   type UserDisconnectParams,
   type UserVerifyParams,
 } from './users/users';
-export {
-  Websites,
-  type WebsiteCreateResponse,
-  type WebsiteListResponse,
-  type WebsiteCreateParams,
-  type WebsiteListParams,
-} from './websites/websites';
+export { Websites, type WebsiteListResponse, type WebsiteListParams } from './websites/websites';

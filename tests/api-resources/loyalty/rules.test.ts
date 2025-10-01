@@ -421,7 +421,6 @@ describe('resource rules', () => {
           allotedToUserId: '123e4567-e89b-12d3-a456-426614174005',
           allotedUserGroupId: '123e4567-e89b-12d3-a456-426614174006',
           collectionAddress: '0x1234567890abcdef1234567890abcdef12345678',
-          includeLoyaltyRuleChains: 'true',
           isActive: 'true',
           isSpecial: 'true',
           limit: 50,
@@ -540,7 +539,11 @@ describe('resource rules', () => {
     await expect(
       client.loyalty.rules.getStatus(
         {
+          limit: 10,
+          loyaltyRuleId: '123e4567-e89b-12d3-a456-426614174030',
           organizationId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+          startingAfter: '123e4567-e89b-12d3-a456-426614174001',
+          userGroupId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
           userId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
           walletAddress: 'walletAddress',
           websiteId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
