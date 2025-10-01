@@ -4,13 +4,7 @@ import { APIResource } from '../../../resource';
 import { isRequestOptions } from '../../../core';
 import * as Core from '../../../core';
 import * as RuleStatusesAPI from './rule-statuses';
-import {
-  RuleStatusListParams,
-  RuleStatusListResponse,
-  RuleStatusUpdateParams,
-  RuleStatusUpdateResponse,
-  RuleStatuses,
-} from './rule-statuses';
+import { RuleStatusUpdateParams, RuleStatusUpdateResponse, RuleStatuses } from './rule-statuses';
 
 export class Transactions extends APIResource {
   ruleStatuses: RuleStatusesAPI.RuleStatuses = new RuleStatusesAPI.RuleStatuses(this._client);
@@ -59,25 +53,6 @@ export class Transactions extends APIResource {
       return this.getTransactionEntries({}, query);
     }
     return this._client.get('/api/loyalty/transaction_entries', { query, ...options });
-  }
-
-  /**
-   * Retrieve configured loyalty rule chains
-   *
-   * @example
-   * ```ts
-   * const response =
-   *   await client.loyalty.transactions.listRuleChains({
-   *     organizationId: '123e4567-e89b-12d3-a456-426614174001',
-   *     websiteId: '123e4567-e89b-12d3-a456-426614174002',
-   *   });
-   * ```
-   */
-  listRuleChains(
-    query: TransactionListRuleChainsParams,
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<TransactionListRuleChainsResponse> {
-    return this._client.get('/api/loyalty/rule_chains', { query, ...options });
   }
 }
 
@@ -232,114 +207,6 @@ export namespace TransactionGetTransactionEntriesResponse {
       export namespace LoyaltyRule {
         export interface LoyaltyRuleGroupItem {
           loyaltyRuleGroupId: string;
-        }
-      }
-    }
-  }
-}
-
-export interface TransactionListRuleChainsResponse {
-  data: Array<TransactionListRuleChainsResponse.Data>;
-
-  hasNextPage: boolean;
-}
-
-export namespace TransactionListRuleChainsResponse {
-  export interface Data {
-    /**
-     * Unique identifier for the rule chain
-     */
-    id: string;
-
-    loyaltyConditions: Array<Data.LoyaltyCondition>;
-
-    /**
-     * Unique identifier for the loyalty rule
-     */
-    loyaltyRuleId: string;
-
-    /**
-     * Name of the rule chain
-     */
-    name: string;
-  }
-
-  export namespace Data {
-    export interface LoyaltyCondition {
-      /**
-       * Unique identifier for the condition
-       */
-      id: string;
-
-      /**
-       * Amount of the condition
-       */
-      amount: number | null;
-
-      association: Array<LoyaltyCondition.Association>;
-
-      /**
-       * URL of the CSV file
-       */
-      csvUrl: string | null;
-
-      /**
-       * Description of the condition
-       */
-      description: string | null;
-
-      /**
-       * Number of times the condition must be met
-       */
-      repeatCount: number | null;
-
-      /**
-       * Number of times the condition must be met
-       */
-      requiredCount: number | null;
-
-      /**
-       * Type of the condition
-       */
-      type: 'rule' | 'rules' | 'points' | 'section' | 'level' | 'api' | 'badge' | 'badges' | 'csv';
-    }
-
-    export namespace LoyaltyCondition {
-      export interface Association {
-        /**
-         * Unique identifier for the association
-         */
-        id: string;
-
-        /**
-         * Unique identifier for the loyalty badge
-         */
-        loyaltyBadgeId: string | null;
-
-        /**
-         * Unique identifier for the loyalty currency
-         */
-        loyaltyCurrencyId: string | null;
-
-        loyaltyRule: Association.LoyaltyRule | null;
-
-        /**
-         * Unique identifier for the loyalty rule group
-         */
-        loyaltyRuleGroupId: string | null;
-
-        /**
-         * Unique identifier for the loyalty rule
-         */
-        loyaltyRuleId: string | null;
-      }
-
-      export namespace Association {
-        export interface LoyaltyRule {
-          /**
-           * Name of the loyalty rule
-           */
-          name: string;
         }
       }
     }
@@ -633,45 +500,19 @@ export interface TransactionGetTransactionEntriesParams {
   websiteId?: string;
 }
 
-export interface TransactionListRuleChainsParams {
-  /**
-   * Unique identifier for the organization
-   */
-  organizationId: string;
-
-  /**
-   * Unique identifier for the website
-   */
-  websiteId: string;
-
-  /**
-   * Number of rule chains to return
-   */
-  limit?: number;
-
-  /**
-   * Starting after the given rule chain ID
-   */
-  startingAfter?: string;
-}
-
 Transactions.RuleStatuses = RuleStatuses;
 
 export declare namespace Transactions {
   export {
     type TransactionCreateTransactionResponse as TransactionCreateTransactionResponse,
     type TransactionGetTransactionEntriesResponse as TransactionGetTransactionEntriesResponse,
-    type TransactionListRuleChainsResponse as TransactionListRuleChainsResponse,
     type TransactionCreateTransactionParams as TransactionCreateTransactionParams,
     type TransactionGetTransactionEntriesParams as TransactionGetTransactionEntriesParams,
-    type TransactionListRuleChainsParams as TransactionListRuleChainsParams,
   };
 
   export {
     RuleStatuses as RuleStatuses,
     type RuleStatusUpdateResponse as RuleStatusUpdateResponse,
-    type RuleStatusListResponse as RuleStatusListResponse,
     type RuleStatusUpdateParams as RuleStatusUpdateParams,
-    type RuleStatusListParams as RuleStatusListParams,
   };
 }

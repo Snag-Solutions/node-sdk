@@ -164,6 +164,8 @@ export namespace UserListResponse {
     temporaryLoyaltyUser?: boolean | null;
 
     userMetadata?: Array<Data.UserMetadata> | null;
+
+    websiteUserAttributes?: Array<Data.WebsiteUserAttribute> | null;
   }
 
   export namespace Data {
@@ -256,6 +258,26 @@ export namespace UserListResponse {
       walletGroupIdentifier?: string | null;
 
       YTChannelId?: string | null;
+    }
+
+    export interface WebsiteUserAttribute {
+      id: string;
+
+      label: string;
+
+      websiteUserAttributeValues: Array<WebsiteUserAttribute.WebsiteUserAttributeValue>;
+    }
+
+    export namespace WebsiteUserAttribute {
+      export interface WebsiteUserAttributeValue {
+        id: string;
+
+        userId: string;
+
+        value: string;
+
+        websiteUserAttributeId: string;
+      }
     }
   }
 }
