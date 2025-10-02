@@ -764,7 +764,8 @@ export namespace RuleGroupGetRuleGroupsResponse {
               | 'goerli'
               | 'optimism_goerli'
               | 'arbitrumGoerli'
-              | 'basecamp';
+              | 'basecamp'
+              | 'somnia';
           }
 
           /**
@@ -912,7 +913,8 @@ export namespace RuleGroupGetRuleGroupsResponse {
               | 'goerli'
               | 'optimism_goerli'
               | 'arbitrumGoerli'
-              | 'basecamp';
+              | 'basecamp'
+              | 'somnia';
 
             /**
              * Indicates if only in-range liquidity is rewarded.

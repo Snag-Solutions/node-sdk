@@ -686,7 +686,8 @@ export namespace RuleEditListResponse {
             | 'goerli'
             | 'optimism_goerli'
             | 'arbitrumGoerli'
-            | 'basecamp';
+            | 'basecamp'
+            | 'somnia';
         }
 
         /**
@@ -834,7 +835,8 @@ export namespace RuleEditListResponse {
             | 'goerli'
             | 'optimism_goerli'
             | 'arbitrumGoerli'
-            | 'basecamp';
+            | 'basecamp'
+            | 'somnia';
 
           /**
            * Indicates if only in-range liquidity is rewarded.
@@ -1645,7 +1647,8 @@ export namespace RuleEditListResponse {
             | 'goerli'
             | 'optimism_goerli'
             | 'arbitrumGoerli'
-            | 'basecamp';
+            | 'basecamp'
+            | 'somnia';
         }
 
         /**
@@ -1793,7 +1796,8 @@ export namespace RuleEditListResponse {
             | 'goerli'
             | 'optimism_goerli'
             | 'arbitrumGoerli'
-            | 'basecamp';
+            | 'basecamp'
+            | 'somnia';
 
           /**
            * Indicates if only in-range liquidity is rewarded.
@@ -2659,7 +2663,8 @@ export namespace RuleEditRestoreResponse {
           | 'goerli'
           | 'optimism_goerli'
           | 'arbitrumGoerli'
-          | 'basecamp';
+          | 'basecamp'
+          | 'somnia';
       }
 
       /**
@@ -2807,7 +2812,8 @@ export namespace RuleEditRestoreResponse {
           | 'goerli'
           | 'optimism_goerli'
           | 'arbitrumGoerli'
-          | 'basecamp';
+          | 'basecamp'
+          | 'somnia';
 
         /**
          * Indicates if only in-range liquidity is rewarded.
@@ -3618,7 +3624,8 @@ export namespace RuleEditRestoreResponse {
           | 'goerli'
           | 'optimism_goerli'
           | 'arbitrumGoerli'
-          | 'basecamp';
+          | 'basecamp'
+          | 'somnia';
       }
 
       /**
@@ -3766,7 +3773,8 @@ export namespace RuleEditRestoreResponse {
           | 'goerli'
           | 'optimism_goerli'
           | 'arbitrumGoerli'
-          | 'basecamp';
+          | 'basecamp'
+          | 'somnia';
 
         /**
          * Indicates if only in-range liquidity is rewarded.

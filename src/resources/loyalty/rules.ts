@@ -419,7 +419,8 @@ export interface RuleCreateResponse {
     | 'goerli'
     | 'optimism_goerli'
     | 'arbitrumGoerli'
-    | 'basecamp';
+    | 'basecamp'
+    | 'somnia';
 
   /**
    * OAuth credentials associated with the rule
@@ -949,7 +950,8 @@ export namespace RuleCreateResponse {
         | 'goerli'
         | 'optimism_goerli'
         | 'arbitrumGoerli'
-        | 'basecamp';
+        | 'basecamp'
+        | 'somnia';
     }
 
     /**
@@ -1097,7 +1099,8 @@ export namespace RuleCreateResponse {
         | 'goerli'
         | 'optimism_goerli'
         | 'arbitrumGoerli'
-        | 'basecamp';
+        | 'basecamp'
+        | 'somnia';
 
       /**
        * Indicates if only in-range liquidity is rewarded.
@@ -1374,7 +1377,8 @@ export namespace RuleCreateResponse {
       | 'goerli'
       | 'optimism_goerli'
       | 'arbitrumGoerli'
-      | 'basecamp';
+      | 'basecamp'
+      | 'somnia';
 
     /**
      * Symbol of the collection.
@@ -1538,7 +1542,8 @@ export interface RuleUpdateResponse {
     | 'goerli'
     | 'optimism_goerli'
     | 'arbitrumGoerli'
-    | 'basecamp';
+    | 'basecamp'
+    | 'somnia';
 
   /**
    * ID for associated OAuth credentials
@@ -1628,7 +1633,8 @@ export namespace RuleUpdateResponse {
       | 'goerli'
       | 'optimism_goerli'
       | 'arbitrumGoerli'
-      | 'basecamp';
+      | 'basecamp'
+      | 'somnia';
 
     /**
      * Symbol of the collection.
@@ -2137,7 +2143,8 @@ export namespace RuleUpdateResponse {
         | 'goerli'
         | 'optimism_goerli'
         | 'arbitrumGoerli'
-        | 'basecamp';
+        | 'basecamp'
+        | 'somnia';
     }
 
     /**
@@ -2285,7 +2292,8 @@ export namespace RuleUpdateResponse {
         | 'goerli'
         | 'optimism_goerli'
         | 'arbitrumGoerli'
-        | 'basecamp';
+        | 'basecamp'
+        | 'somnia';
 
       /**
        * Indicates if only in-range liquidity is rewarded.
@@ -3205,7 +3213,8 @@ export namespace RuleListResponse {
           | 'goerli'
           | 'optimism_goerli'
           | 'arbitrumGoerli'
-          | 'basecamp';
+          | 'basecamp'
+          | 'somnia';
       }
 
       /**
@@ -3353,7 +3362,8 @@ export namespace RuleListResponse {
           | 'goerli'
           | 'optimism_goerli'
           | 'arbitrumGoerli'
-          | 'basecamp';
+          | 'basecamp'
+          | 'somnia';
 
         /**
          * Indicates if only in-range liquidity is rewarded.
@@ -3868,7 +3878,8 @@ export interface RuleCreateParams {
     | 'goerli'
     | 'optimism_goerli'
     | 'arbitrumGoerli'
-    | 'basecamp';
+    | 'basecamp'
+    | 'somnia';
 
   /**
    * OAuth credentials associated with the rule
@@ -4398,7 +4409,8 @@ export namespace RuleCreateParams {
         | 'goerli'
         | 'optimism_goerli'
         | 'arbitrumGoerli'
-        | 'basecamp';
+        | 'basecamp'
+        | 'somnia';
     }
 
     /**
@@ -4546,7 +4558,8 @@ export namespace RuleCreateParams {
         | 'goerli'
         | 'optimism_goerli'
         | 'arbitrumGoerli'
-        | 'basecamp';
+        | 'basecamp'
+        | 'somnia';
 
       /**
        * Indicates if only in-range liquidity is rewarded.
@@ -4823,7 +4836,8 @@ export namespace RuleCreateParams {
       | 'goerli'
       | 'optimism_goerli'
       | 'arbitrumGoerli'
-      | 'basecamp';
+      | 'basecamp'
+      | 'somnia';
 
     /**
      * Symbol of the collection.
@@ -4985,7 +4999,8 @@ export interface RuleUpdateParams {
     | 'goerli'
     | 'optimism_goerli'
     | 'arbitrumGoerli'
-    | 'basecamp';
+    | 'basecamp'
+    | 'somnia';
 
   /**
    * ID for associated OAuth credentials
@@ -5075,7 +5090,8 @@ export namespace RuleUpdateParams {
       | 'goerli'
       | 'optimism_goerli'
       | 'arbitrumGoerli'
-      | 'basecamp';
+      | 'basecamp'
+      | 'somnia';
 
     /**
      * Symbol of the collection.
@@ -5584,7 +5600,8 @@ export namespace RuleUpdateParams {
         | 'goerli'
         | 'optimism_goerli'
         | 'arbitrumGoerli'
-        | 'basecamp';
+        | 'basecamp'
+        | 'somnia';
     }
 
     /**
@@ -5732,7 +5749,8 @@ export namespace RuleUpdateParams {
         | 'goerli'
         | 'optimism_goerli'
         | 'arbitrumGoerli'
-        | 'basecamp';
+        | 'basecamp'
+        | 'somnia';
 
       /**
        * Indicates if only in-range liquidity is rewarded.
