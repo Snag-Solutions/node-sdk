@@ -252,7 +252,8 @@ export namespace RuleGroupGetRuleGroupsResponse {
           | 'tiktok_post'
           | 'post_impressions'
           | 'discord_join'
-          | 'connected_youtube';
+          | 'connected_youtube'
+          | 'connected_tiktok';
       }
 
       export namespace LoyaltyRule {
