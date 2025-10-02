@@ -278,7 +278,8 @@ export interface RuleCreateResponse {
     | 'tiktok_post'
     | 'post_impressions'
     | 'discord_join'
-    | 'connected_youtube';
+    | 'connected_youtube'
+    | 'connected_tiktok';
 
   /**
    * Unique identifier for the associated website
@@ -3737,7 +3738,8 @@ export interface RuleCreateParams {
     | 'tiktok_post'
     | 'post_impressions'
     | 'discord_join'
-    | 'connected_youtube';
+    | 'connected_youtube'
+    | 'connected_tiktok';
 
   /**
    * Unique identifier for the associated website
