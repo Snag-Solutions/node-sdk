@@ -135,7 +135,8 @@ export interface MintingGetAssetsParams {
     | 'goerli'
     | 'optimism_goerli'
     | 'arbitrumGoerli'
-    | 'basecamp';
+    | 'basecamp'
+    | 'somnia';
 
   /**
    * Sort Key
