@@ -127,6 +127,11 @@ export namespace AccountListResponse {
        * Ethereum wallet address of the user
        */
       walletAddress: string | null;
+
+      /**
+       * Array of website user attribute values for the user
+       */
+      websiteUserAttributeValues: Array<User.WebsiteUserAttributeValue>;
     }
 
     export namespace User {
@@ -158,6 +163,38 @@ export namespace AccountListResponse {
          * Identifier for the wallet group
          */
         walletGroupIdentifier: string | null;
+      }
+
+      /**
+       * Schema for a website user attribute value
+       */
+      export interface WebsiteUserAttributeValue {
+        /**
+         * Value for the website user attribute
+         */
+        value: string;
+
+        /**
+         * Website user attribute details
+         */
+        websiteUserAttribute: WebsiteUserAttributeValue.WebsiteUserAttribute;
+      }
+
+      export namespace WebsiteUserAttributeValue {
+        /**
+         * Website user attribute details
+         */
+        export interface WebsiteUserAttribute {
+          /**
+           * Unique identifier for the website user attribute
+           */
+          id: string;
+
+          /**
+           * Label for the website user attribute
+           */
+          label: string;
+        }
       }
     }
   }
