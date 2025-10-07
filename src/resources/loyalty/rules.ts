@@ -3701,7 +3701,7 @@ export namespace RuleGetStatusResponse {
      * - Spend in Shopify Store: "Shopify not connected"
      * - Points Airdrop: "Seems like you're not eligible for this points airdrop."
      *
-     *       General / Unmatched
+     *       General
      *
      * - "Quest already completed"
      * - "Quest already completed using the same social account (${socialAccountName}),
