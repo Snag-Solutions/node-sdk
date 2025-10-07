@@ -292,6 +292,11 @@ export interface RuleCreateResponse {
   backgroundAssetUrl?: string;
 
   /**
+   * The type of claim for the reward
+   */
+  claimType?: 'manual' | 'auto' | null;
+
+  /**
    * Blockchain address of the associated collection
    */
   collectionAddress?: string;
@@ -427,6 +432,11 @@ export interface RuleCreateResponse {
    * OAuth credentials associated with the rule
    */
   oauthCredentialsId?: string | null;
+
+  /**
+   * The lifetime of the reward
+   */
+  rewardLifetime?: 'permanent' | 'dynamic' | null;
 
   /**
    * Type of reward issued by the rule
@@ -1407,6 +1417,11 @@ export interface RuleUpdateResponse {
   name: string;
 
   /**
+   * The type of claim for the reward
+   */
+  claimType?: 'manual' | 'auto' | null;
+
+  /**
    * Blockchain address of the associated collection
    */
   collectionAddress?: string;
@@ -1550,6 +1565,11 @@ export interface RuleUpdateResponse {
    * ID for associated OAuth credentials
    */
   oauthCredentialsId?: string | null;
+
+  /**
+   * The lifetime of the reward
+   */
+  rewardLifetime?: 'permanent' | 'dynamic' | null;
 
   /**
    * Type of reward issued by this rule
@@ -3752,6 +3772,11 @@ export interface RuleCreateParams {
   backgroundAssetUrl?: string;
 
   /**
+   * The type of claim for the reward
+   */
+  claimType?: 'manual' | 'auto' | null;
+
+  /**
    * Blockchain address of the associated collection
    */
   collectionAddress?: string;
@@ -3887,6 +3912,11 @@ export interface RuleCreateParams {
    * OAuth credentials associated with the rule
    */
   oauthCredentialsId?: string | null;
+
+  /**
+   * The lifetime of the reward
+   */
+  rewardLifetime?: 'permanent' | 'dynamic' | null;
 
   /**
    * Type of reward issued by the rule
@@ -4865,6 +4895,11 @@ export interface RuleUpdateParams {
   name: string;
 
   /**
+   * The type of claim for the reward
+   */
+  claimType?: 'manual' | 'auto' | null;
+
+  /**
    * Blockchain address of the associated collection
    */
   collectionAddress?: string;
@@ -5008,6 +5043,11 @@ export interface RuleUpdateParams {
    * ID for associated OAuth credentials
    */
   oauthCredentialsId?: string | null;
+
+  /**
+   * The lifetime of the reward
+   */
+  rewardLifetime?: 'permanent' | 'dynamic' | null;
 
   /**
    * Type of reward issued by this rule
