@@ -134,7 +134,8 @@ export class Rules extends APIResource {
   }
 
   /**
-   * This will return the processing status of quests for a specific user
+   * This will return the processing status of quests for a specific user and also
+   * the progress of the loyalty rule
    *
    * @example
    * ```ts
@@ -3630,6 +3631,15 @@ export namespace RuleGetStatusResponse {
     userId: string;
 
     /**
+     * The ID of the loyalty rule status for the Progress object
+     */
+    id?: string;
+
+    createdAt?: string;
+
+    fulfilledAt?: string | null;
+
+    /**
      * Categorized examples of messages that may be returned for a loyalty rule's
      * processing result.
      *
@@ -3715,11 +3725,22 @@ export namespace RuleGetStatusResponse {
      */
     message?: string;
 
+    organizationId?: string;
+
+    /**
+     * The progress of the loyalty rule from 0 to 100
+     */
+    progress?: number;
+
     /**
      * Status of the queued job, this is only returned if the job is queued and being
      * processed, this wil be retained for 10 minutes after the job is completed
      */
     status?: 'pending' | 'processing' | 'completed' | 'failed';
+
+    updatedAt?: string;
+
+    websiteId?: string;
   }
 }
 
