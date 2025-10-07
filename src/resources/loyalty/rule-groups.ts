@@ -354,6 +354,11 @@ export namespace RuleGroupGetRuleGroupsResponse {
           enableVerifiedMultiplier?: boolean;
 
           /**
+           * Type of ERC20 token for the loyalty rule.
+           */
+          erc20Type?: 'erc20' | 'native';
+
+          /**
            * Fill source of the order for the token sale
            */
           fillSource?: string;
