@@ -47,6 +47,7 @@ describe('resource users', () => {
           steamUsername: 'elonmusk',
           telegramUserId: '1234567890',
           telegramUsername: 'elonmusk',
+          tiktokUser: 'elonmusk',
           twitterUser: 'elonmusk',
           userGroupExternalIdentifier: 'userGroupExternalIdentifier',
           userGroupId: '123e4567-e89b-12d3-a456-426614174002',
