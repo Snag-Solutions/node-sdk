@@ -434,6 +434,11 @@ export interface UserListParams {
   telegramUsername?: string;
 
   /**
+   * TikTok username of the user
+   */
+  tiktokUser?: string;
+
+  /**
    * Twitter username of the user
    */
   twitterUser?: string;
