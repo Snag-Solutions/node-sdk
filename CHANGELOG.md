@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.1.0-alpha.158 (2025-10-07)
+
+Full Changelog: [v0.1.0-alpha.157...v0.1.0-alpha.158](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.157...v0.1.0-alpha.158)
+
+### Features
+
+* **api:** open api update ([ad07136](https://github.com/Snag-Solutions/node-sdk/commit/ad07136a350aa49dd4e157948e31705eb618c1d3))
+* **api:** open api update ([fc710f4](https://github.com/Snag-Solutions/node-sdk/commit/fc710f4ec63ab22809942f4ddd0dc8e06a6f1750))
+
+
+### Chores
+
+* **internal:** use npm pack for build uploads ([89f3c57](https://github.com/Snag-Solutions/node-sdk/commit/89f3c57c18fb97b1d82f347371751e3d4dcbeab3))
+
 ## 0.1.0-alpha.157 (2025-10-06)
 
 Full Changelog: [v0.1.0-alpha.156...v0.1.0-alpha.157](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.156...v0.1.0-alpha.157)
