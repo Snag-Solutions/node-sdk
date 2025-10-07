@@ -182,6 +182,7 @@ describe('resource rules', () => {
       type: 'Bonus',
       websiteId: '123e4567-e89b-12d3-a456-426614174002',
       backgroundAssetUrl: 'https://example.com/background.png',
+      claimType: 'auto',
       collectionAddress: '0x1234567890abcdef1234567890abcdef12345678',
       collections: [
         { address: '0xabcdefabcdefabcdefabcdefabcdefabcdef', network: 'mainnet', symbol: 'COLL' },
@@ -202,6 +203,7 @@ describe('resource rules', () => {
       mediaUrl: 'https://example.com/media.png',
       network: 'mainnet',
       oauthCredentialsId: '123e4567-e89b-12d3-a456-426614174003',
+      rewardLifetime: 'permanent',
       rewardType: 'points',
       shopifyStoreUrl: 'https://example.com',
       showBeforeStart: false,
@@ -231,6 +233,7 @@ describe('resource rules', () => {
       amount: '10.5',
       endTime: '2024-12-31T23:59:00Z',
       name: 'Daily Rewards Program',
+      claimType: 'auto',
       collectionAddress: '0x1234567890abcdef1234567890abcdef12345678',
       collections: [
         { address: '0xabcdefabcdefabcdefabcdefabcdefabcdef', network: 'mainnet', symbol: 'COLL' },
@@ -384,6 +387,7 @@ describe('resource rules', () => {
       },
       network: 'mainnet',
       oauthCredentialsId: '123e4567-e89b-12d3-a456-426614174000',
+      rewardLifetime: 'permanent',
       rewardType: 'points',
       shopifyStoreUrl: 'https://example.com',
       showBeforeStart: false,
