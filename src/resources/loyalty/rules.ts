@@ -3629,6 +3629,90 @@ export namespace RuleGetStatusResponse {
 
     userId: string;
 
+    /**
+     * Categorized examples of messages that may be returned for a loyalty rule's
+     * processing result.
+     *
+     * User Onboarding
+     *
+     * - Check In: "Streak successful"
+     * - Complete Profile Details: "Profile not complete"
+     *
+     * Connect Accounts
+     *
+     * - Connect TikTok: "TikTok not connected"
+     * - Connect Discord: "Discord not connected", "Discord request timeout"
+     * - Connect X: "Twitter not connected", "Twitter not connected or content url is
+     *   required"
+     * - Connect Email: "Email address not connected"
+     * - Connect Telegram: "Telegram not connected", "user has not setup telegram (no
+     *   telegramUsername), please setup username in telegram and reconnect.",
+     *   "Telegram request rate-limited"
+     * - Connect Steam: "Steam not connected"
+     * - Connect Youtube: "Youtube not connected"
+     *
+     *       Social Quests
+     *
+     * - Join Telegram Group: "Telegram Channel not joined", "Telegram Channel joined
+     *   successfully"
+     * - Post on TikTok: "TikTok post not verified"
+     * - Comment on an X Post: "Quest Completed: You have commented on the tweet",
+     *   "Quest Not Completed: Comment not found for the specified tweet"
+     * - Repost an X Post: "Quest Completed: You have retweeted the tweet", "Quest Not
+     *   Completed: Retweet not found for the specified tweet", "Quest Completed: You
+     *   have retweeted and commented on the tweet", "Quest Not Completed: You have not
+     *   retweeted or commented on the tweet"
+     * - Follow an X Account: "Missing required parameters: twitterUserId,
+     *   targetUsername", "Quest Completed: You are a follower of
+     *   @${targetUsername}", "Quest Not Completed: Please follow @${targetUsername}
+     *   and try again in few minutes"
+     * - React to an X Post: "Missing required parameters: texts, twitterUserId,
+     *   userTweetId", "No text provided", "Quest Completed: You have posted {tweetId}
+     *   a tweet with the text {text}", "Quest Not Completed: Your all previous {COUNT}
+     *   posts are already claimed. Please post a new tweet and try again in a few
+     *   minutes.", "Tweet is already claimed", "Tweet does not belong to the user",
+     *   "Text not found in tweet", "Tweet is before the quest start time", "Tweet does
+     *   not have media", "Text found in tweet"
+     * - Add Text to X Bio: "Missing required parameters: texts, twitterUserId", "User
+     *   not found", "Text found in bio", "Text not found in bio"
+     * - Add Text to X Username: "Missing required parameters: texts, twitterUserId",
+     *   "User not found", "Text found in username", "Text not found in username"
+     * - Comment on an X Post with Text: "Missing required parameters: texts,
+     *   twitterUserId", "Comment is already claimed", "Text found in comment", "Text
+     *   not found in comment", "Tweet not found or could not be retrieved"
+     * - Comment on a YouTube Video: "Youtube comment added", "Youtube comment not
+     *   added"
+     * - Subscribe to a YouTube Channel: "Youtube channel subscribed", "Quest failed,
+     *   please make sure you have made your subscriptions public in youtube"
+     * - Get X post impressions: "You've already claimed the reward for this impression
+     *   range."
+     * - Add an Item to Steam Wishlist: "Steam Wishlist item added", "Steam Wishlist
+     *   item not added"
+     *
+     * Complex Onchain Logic
+     *
+     * - Token Swap: "Swap rewards calculated successfully", "Swap rule failed"
+     *
+     * Other
+     *
+     * - Answer a Quiz: "Quiz question not configured", "No question response found",
+     *   "Incorrect answer", "Correct answer"
+     * - Answer a Poll: "Poll question not configured", "Poll response recorded"
+     * - Spend in Shopify Store: "Shopify not connected"
+     * - Points Airdrop: "Seems like you're not eligible for this points airdrop."
+     *
+     *       General / Unmatched
+     *
+     * - "Quest already completed"
+     * - "Quest already completed using the same social account (${socialAccountName}),
+     *   with the different user."
+     * - "You've already claimed the reward for this quest."
+     * - "Quest not achieved, please try again."
+     * - "Rule is not setup"
+     * - "Request aborted due to timeout"
+     * - "Google account not connected"
+     * - "Claim failed: Multiplier is already active"
+     */
     message?: string;
 
     /**
