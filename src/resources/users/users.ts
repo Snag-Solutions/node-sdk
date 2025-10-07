@@ -195,6 +195,8 @@ export namespace UserListResponse {
     export interface UserMetadata {
       bio?: string | null;
 
+      createdAt?: string | null;
+
       discordUser?: string | null;
 
       discordVerifiedAt?: string | null;
@@ -252,6 +254,8 @@ export namespace UserListResponse {
       twitterUserFollowersCount?: number | null;
 
       twitterVerifiedAt?: string | null;
+
+      updatedAt?: string | null;
 
       userGroupId?: string | null;
 
