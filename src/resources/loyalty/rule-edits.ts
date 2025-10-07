@@ -275,6 +275,11 @@ export namespace RuleEditListResponse {
         enableVerifiedMultiplier?: boolean;
 
         /**
+         * Type of ERC20 token for the loyalty rule.
+         */
+        erc20Type?: 'erc20' | 'native';
+
+        /**
          * Fill source of the order for the token sale
          */
         fillSource?: string;
@@ -1234,6 +1239,11 @@ export namespace RuleEditListResponse {
          * Flag indicating whether the verified multiplier is enabled.
          */
         enableVerifiedMultiplier?: boolean;
+
+        /**
+         * Type of ERC20 token for the loyalty rule.
+         */
+        erc20Type?: 'erc20' | 'native';
 
         /**
          * Fill source of the order for the token sale
@@ -2252,6 +2262,11 @@ export namespace RuleEditRestoreResponse {
       enableVerifiedMultiplier?: boolean;
 
       /**
+       * Type of ERC20 token for the loyalty rule.
+       */
+      erc20Type?: 'erc20' | 'native';
+
+      /**
        * Fill source of the order for the token sale
        */
       fillSource?: string;
@@ -3211,6 +3226,11 @@ export namespace RuleEditRestoreResponse {
        * Flag indicating whether the verified multiplier is enabled.
        */
       enableVerifiedMultiplier?: boolean;
+
+      /**
+       * Type of ERC20 token for the loyalty rule.
+       */
+      erc20Type?: 'erc20' | 'native';
 
       /**
        * Fill source of the order for the token sale
