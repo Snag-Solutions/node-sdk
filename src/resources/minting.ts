@@ -112,6 +112,8 @@ export interface MintingGetAssetsParams {
     | 'polygon'
     | 'polygon_mumbai'
     | 'skaleNebula'
+    | 'skaleEuropa'
+    | 'skaleCalypso'
     | 'solana'
     | 'sophon'
     | 'sophonTestnet'
