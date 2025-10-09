@@ -195,9 +195,17 @@ export namespace UserListResponse {
     }
 
     export interface Referrer {
-      id: string;
-
       eligible: boolean;
+
+      user: Referrer.User;
+    }
+
+    export namespace Referrer {
+      export interface User {
+        id: string;
+
+        walletAddress: string;
+      }
     }
 
     export interface UserMetadata {
