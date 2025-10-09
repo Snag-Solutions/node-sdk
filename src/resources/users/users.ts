@@ -159,6 +159,8 @@ export namespace UserListResponse {
 
     privyUserId?: string | null;
 
+    referrers?: Array<Data.Referrer> | null;
+
     stardustProfileId?: string | null;
 
     temporaryLoyaltyUser?: boolean | null;
@@ -190,6 +192,12 @@ export namespace UserListResponse {
 
     export interface Follower {
       userId: string;
+    }
+
+    export interface Referrer {
+      id: string;
+
+      eligible: boolean;
     }
 
     export interface UserMetadata {
