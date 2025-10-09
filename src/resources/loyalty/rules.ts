@@ -1438,7 +1438,7 @@ export interface RuleUpdateResponse {
   /**
    * Blockchain address of the associated collection
    */
-  collectionAddress?: string;
+  collectionAddress?: string | null;
 
   /**
    * List of associated collections
@@ -5055,7 +5055,7 @@ export interface RuleUpdateParams {
   /**
    * Blockchain address of the associated collection
    */
-  collectionAddress?: string;
+  collectionAddress?: string | null;
 
   /**
    * List of associated collections
