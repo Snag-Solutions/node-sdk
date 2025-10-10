@@ -400,6 +400,11 @@ export interface UserListParams {
   discordUser?: string;
 
   /**
+   * Email address of the user
+   */
+  emailAddress?: string;
+
+  /**
    * External identifier for the user
    */
   externalIdentifier?: string;

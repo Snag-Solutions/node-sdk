@@ -37,6 +37,7 @@ describe('resource users', () => {
         {
           address: '0x1234567890abcdef1234567890abcdef12345678',
           discordUser: 'elonmusk',
+          emailAddress: 'elonmusk@example.com',
           externalIdentifier: '123e4567',
           includeDelegation: true,
           includeFollow: true,
