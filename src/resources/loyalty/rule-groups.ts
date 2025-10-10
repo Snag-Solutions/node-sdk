@@ -695,7 +695,17 @@ export namespace RuleGroupGetRuleGroupsResponse {
           /**
            * Type of wallet associated with the rule.
            */
-          walletType?: 'evm' | 'solana' | 'imx' | 'sui' | 'ton' | 'cosmos' | 'ultra' | 'agw' | null;
+          walletType?:
+            | 'evm'
+            | 'solana'
+            | 'imx'
+            | 'sui'
+            | 'ton'
+            | 'cosmos'
+            | 'ultra'
+            | 'agw'
+            | 'flow_cadence'
+            | null;
 
           /**
            * ID of the Youtube channel.
@@ -773,7 +783,8 @@ export namespace RuleGroupGetRuleGroupsResponse {
               | 'optimism_goerli'
               | 'arbitrumGoerli'
               | 'basecamp'
-              | 'somnia';
+              | 'somnia'
+              | 'flow_cadence';
           }
 
           /**
@@ -924,7 +935,8 @@ export namespace RuleGroupGetRuleGroupsResponse {
               | 'optimism_goerli'
               | 'arbitrumGoerli'
               | 'basecamp'
-              | 'somnia';
+              | 'somnia'
+              | 'flow_cadence';
 
             /**
              * Indicates if only in-range liquidity is rewarded.

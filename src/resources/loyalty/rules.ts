@@ -429,7 +429,8 @@ export interface RuleCreateResponse {
     | 'optimism_goerli'
     | 'arbitrumGoerli'
     | 'basecamp'
-    | 'somnia';
+    | 'somnia'
+    | 'flow_cadence';
 
   /**
    * OAuth credentials associated with the rule
@@ -894,7 +895,17 @@ export namespace RuleCreateResponse {
     /**
      * Type of wallet associated with the rule.
      */
-    walletType?: 'evm' | 'solana' | 'imx' | 'sui' | 'ton' | 'cosmos' | 'ultra' | 'agw' | null;
+    walletType?:
+      | 'evm'
+      | 'solana'
+      | 'imx'
+      | 'sui'
+      | 'ton'
+      | 'cosmos'
+      | 'ultra'
+      | 'agw'
+      | 'flow_cadence'
+      | null;
 
     /**
      * ID of the Youtube channel.
@@ -972,7 +983,8 @@ export namespace RuleCreateResponse {
         | 'optimism_goerli'
         | 'arbitrumGoerli'
         | 'basecamp'
-        | 'somnia';
+        | 'somnia'
+        | 'flow_cadence';
     }
 
     /**
@@ -1123,7 +1135,8 @@ export namespace RuleCreateResponse {
         | 'optimism_goerli'
         | 'arbitrumGoerli'
         | 'basecamp'
-        | 'somnia';
+        | 'somnia'
+        | 'flow_cadence';
 
       /**
        * Indicates if only in-range liquidity is rewarded.
@@ -1403,7 +1416,8 @@ export namespace RuleCreateResponse {
       | 'optimism_goerli'
       | 'arbitrumGoerli'
       | 'basecamp'
-      | 'somnia';
+      | 'somnia'
+      | 'flow_cadence';
 
     /**
      * Symbol of the collection.
@@ -1575,7 +1589,8 @@ export interface RuleUpdateResponse {
     | 'optimism_goerli'
     | 'arbitrumGoerli'
     | 'basecamp'
-    | 'somnia';
+    | 'somnia'
+    | 'flow_cadence';
 
   /**
    * ID for associated OAuth credentials
@@ -1673,7 +1688,8 @@ export namespace RuleUpdateResponse {
       | 'optimism_goerli'
       | 'arbitrumGoerli'
       | 'basecamp'
-      | 'somnia';
+      | 'somnia'
+      | 'flow_cadence';
 
     /**
      * Symbol of the collection.
@@ -2112,7 +2128,17 @@ export namespace RuleUpdateResponse {
     /**
      * Type of wallet associated with the rule.
      */
-    walletType?: 'evm' | 'solana' | 'imx' | 'sui' | 'ton' | 'cosmos' | 'ultra' | 'agw' | null;
+    walletType?:
+      | 'evm'
+      | 'solana'
+      | 'imx'
+      | 'sui'
+      | 'ton'
+      | 'cosmos'
+      | 'ultra'
+      | 'agw'
+      | 'flow_cadence'
+      | null;
 
     /**
      * ID of the Youtube channel.
@@ -2190,7 +2216,8 @@ export namespace RuleUpdateResponse {
         | 'optimism_goerli'
         | 'arbitrumGoerli'
         | 'basecamp'
-        | 'somnia';
+        | 'somnia'
+        | 'flow_cadence';
     }
 
     /**
@@ -2341,7 +2368,8 @@ export namespace RuleUpdateResponse {
         | 'optimism_goerli'
         | 'arbitrumGoerli'
         | 'basecamp'
-        | 'somnia';
+        | 'somnia'
+        | 'flow_cadence';
 
       /**
        * Indicates if only in-range liquidity is rewarded.
@@ -3191,7 +3219,17 @@ export namespace RuleListResponse {
       /**
        * Type of wallet associated with the rule.
        */
-      walletType?: 'evm' | 'solana' | 'imx' | 'sui' | 'ton' | 'cosmos' | 'ultra' | 'agw' | null;
+      walletType?:
+        | 'evm'
+        | 'solana'
+        | 'imx'
+        | 'sui'
+        | 'ton'
+        | 'cosmos'
+        | 'ultra'
+        | 'agw'
+        | 'flow_cadence'
+        | null;
 
       /**
        * ID of the Youtube channel.
@@ -3269,7 +3307,8 @@ export namespace RuleListResponse {
           | 'optimism_goerli'
           | 'arbitrumGoerli'
           | 'basecamp'
-          | 'somnia';
+          | 'somnia'
+          | 'flow_cadence';
       }
 
       /**
@@ -3420,7 +3459,8 @@ export namespace RuleListResponse {
           | 'optimism_goerli'
           | 'arbitrumGoerli'
           | 'basecamp'
-          | 'somnia';
+          | 'somnia'
+          | 'flow_cadence';
 
         /**
          * Indicates if only in-range liquidity is rewarded.
@@ -4048,7 +4088,8 @@ export interface RuleCreateParams {
     | 'optimism_goerli'
     | 'arbitrumGoerli'
     | 'basecamp'
-    | 'somnia';
+    | 'somnia'
+    | 'flow_cadence';
 
   /**
    * OAuth credentials associated with the rule
@@ -4513,7 +4554,17 @@ export namespace RuleCreateParams {
     /**
      * Type of wallet associated with the rule.
      */
-    walletType?: 'evm' | 'solana' | 'imx' | 'sui' | 'ton' | 'cosmos' | 'ultra' | 'agw' | null;
+    walletType?:
+      | 'evm'
+      | 'solana'
+      | 'imx'
+      | 'sui'
+      | 'ton'
+      | 'cosmos'
+      | 'ultra'
+      | 'agw'
+      | 'flow_cadence'
+      | null;
 
     /**
      * ID of the Youtube channel.
@@ -4591,7 +4642,8 @@ export namespace RuleCreateParams {
         | 'optimism_goerli'
         | 'arbitrumGoerli'
         | 'basecamp'
-        | 'somnia';
+        | 'somnia'
+        | 'flow_cadence';
     }
 
     /**
@@ -4742,7 +4794,8 @@ export namespace RuleCreateParams {
         | 'optimism_goerli'
         | 'arbitrumGoerli'
         | 'basecamp'
-        | 'somnia';
+        | 'somnia'
+        | 'flow_cadence';
 
       /**
        * Indicates if only in-range liquidity is rewarded.
@@ -5022,7 +5075,8 @@ export namespace RuleCreateParams {
       | 'optimism_goerli'
       | 'arbitrumGoerli'
       | 'basecamp'
-      | 'somnia';
+      | 'somnia'
+      | 'flow_cadence';
 
     /**
      * Symbol of the collection.
@@ -5192,7 +5246,8 @@ export interface RuleUpdateParams {
     | 'optimism_goerli'
     | 'arbitrumGoerli'
     | 'basecamp'
-    | 'somnia';
+    | 'somnia'
+    | 'flow_cadence';
 
   /**
    * ID for associated OAuth credentials
@@ -5290,7 +5345,8 @@ export namespace RuleUpdateParams {
       | 'optimism_goerli'
       | 'arbitrumGoerli'
       | 'basecamp'
-      | 'somnia';
+      | 'somnia'
+      | 'flow_cadence';
 
     /**
      * Symbol of the collection.
@@ -5729,7 +5785,17 @@ export namespace RuleUpdateParams {
     /**
      * Type of wallet associated with the rule.
      */
-    walletType?: 'evm' | 'solana' | 'imx' | 'sui' | 'ton' | 'cosmos' | 'ultra' | 'agw' | null;
+    walletType?:
+      | 'evm'
+      | 'solana'
+      | 'imx'
+      | 'sui'
+      | 'ton'
+      | 'cosmos'
+      | 'ultra'
+      | 'agw'
+      | 'flow_cadence'
+      | null;
 
     /**
      * ID of the Youtube channel.
@@ -5807,7 +5873,8 @@ export namespace RuleUpdateParams {
         | 'optimism_goerli'
         | 'arbitrumGoerli'
         | 'basecamp'
-        | 'somnia';
+        | 'somnia'
+        | 'flow_cadence';
     }
 
     /**
@@ -5958,7 +6025,8 @@ export namespace RuleUpdateParams {
         | 'optimism_goerli'
         | 'arbitrumGoerli'
         | 'basecamp'
-        | 'somnia';
+        | 'somnia'
+        | 'flow_cadence';
 
       /**
        * Indicates if only in-range liquidity is rewarded.
