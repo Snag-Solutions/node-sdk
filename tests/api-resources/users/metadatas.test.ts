@@ -40,7 +40,7 @@ describe('resource metadatas', () => {
           discordUser: 'discordUser',
           discordUserId: 'discordUserId',
           displayName: 'displayName',
-          emailAddress: 'emailAddress',
+          emailAddress: 'dev@stainless.com',
           epicAccountIdentifier: 'epicAccountIdentifier',
           externalIdentifier: 'externalIdentifier',
           externalLoyaltyScore: 'externalLoyaltyScore',
