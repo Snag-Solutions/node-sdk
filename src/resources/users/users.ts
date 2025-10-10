@@ -496,7 +496,7 @@ export interface UserConnectParams {
    */
   walletAddress: string;
 
-  walletType: 'evm' | 'solana' | 'imx' | 'sui' | 'ton' | 'cosmos' | 'ultra' | 'agw';
+  walletType: 'evm' | 'solana' | 'imx' | 'sui' | 'ton' | 'cosmos' | 'ultra' | 'agw' | 'flow_cadence';
 
   /**
    * The ID of the website
