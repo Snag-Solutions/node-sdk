@@ -9,16 +9,16 @@ export class Auth extends APIResource {
    * This endpoint allows you to connect your auth account to a Snag account
    */
   connectAuth(
-    authType: 'twitter' | 'discord' | 'telegram' | 'epic' | 'steam' | 'ultra' | 'google' | 'tiktok',
+    authType: 'twitter' | 'discord' | 'telegram' | 'epic' | 'steam' | 'ultra' | 'google' | 'tiktok' | 'email',
     query?: AuthConnectAuthParams,
     options?: Core.RequestOptions,
   ): Core.APIPromise<AuthConnectAuthResponse>;
   connectAuth(
-    authType: 'twitter' | 'discord' | 'telegram' | 'epic' | 'steam' | 'ultra' | 'google' | 'tiktok',
+    authType: 'twitter' | 'discord' | 'telegram' | 'epic' | 'steam' | 'ultra' | 'google' | 'tiktok' | 'email',
     options?: Core.RequestOptions,
   ): Core.APIPromise<AuthConnectAuthResponse>;
   connectAuth(
-    authType: 'twitter' | 'discord' | 'telegram' | 'epic' | 'steam' | 'ultra' | 'google' | 'tiktok',
+    authType: 'twitter' | 'discord' | 'telegram' | 'epic' | 'steam' | 'ultra' | 'google' | 'tiktok' | 'email',
     query: AuthConnectAuthParams | Core.RequestOptions = {},
     options?: Core.RequestOptions,
   ): Core.APIPromise<AuthConnectAuthResponse> {
