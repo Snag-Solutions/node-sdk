@@ -41,17 +41,23 @@ export interface AuthConnectAuthResponse {
 
 export interface AuthConnectAuthParams {
   /**
+   * The email address of the user, this is only required for email auth
+   */
+  emailAddress?: string;
+
+  /**
    * The redirect URL where the user will land after completing the auth
    */
   redirect?: string;
 
   /**
-   * The type of response to return
+   * The type of response to return, this is not valid for email auth, email auth
+   * only supports the redirect flow via verification link.
    */
   responseType?: 'redirect' | 'json';
 
   /**
-   * Whether to skip the YouTube channel check
+   * Whether to skip the YouTube channel check, this is only value for google auth
    */
   skipYTChannelCheck?: string;
 

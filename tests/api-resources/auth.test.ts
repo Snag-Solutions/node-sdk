@@ -36,6 +36,7 @@ describe('resource auth', () => {
       client.auth.connectAuth(
         'twitter',
         {
+          emailAddress: 'elonmusk@example.com',
           redirect: 'https://example.com',
           responseType: 'redirect',
           skipYTChannelCheck: 'skipYTChannelCheck',
