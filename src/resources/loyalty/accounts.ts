@@ -26,6 +26,7 @@ export class Accounts extends APIResource {
   }
 
   /**
+   * This api can only return the rank upto 5000, after that it will return '5000+'.
    * Returns the user's rank determined by their loyalty points for the specified
    * loyalty currency. This can be a slow operation for large organizations. We
    * recommend caching when possible.
@@ -205,7 +206,8 @@ export namespace AccountListResponse {
  */
 export interface AccountRetrieveRankResponse {
   /**
-   * Rank of the user. null means the user has no amount.
+   * Rank of the user. null means the user has no amount. This api can only return
+   * the rank upto 5000, after that it will return "5000+"
    */
   rank: number | null;
 }
