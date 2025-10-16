@@ -253,6 +253,7 @@ export namespace RuleGroupGetRuleGroupsResponse {
           | 'post_impressions'
           | 'discord_join'
           | 'connected_youtube'
+          | 'stratus_function'
           | 'connected_tiktok';
       }
 
