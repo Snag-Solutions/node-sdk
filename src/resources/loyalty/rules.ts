@@ -280,6 +280,7 @@ export interface RuleCreateResponse {
     | 'post_impressions'
     | 'discord_join'
     | 'connected_youtube'
+    | 'stratus_function'
     | 'connected_tiktok';
 
   /**
@@ -328,6 +329,11 @@ export interface RuleCreateResponse {
    * ID of the external integration
    */
   externalIntegrationId?: string | null;
+
+  /**
+   * Optional stratus function id for the rule
+   */
+  functionId?: string | null;
 
   /**
    * Whether to hide this rule in the user interface
@@ -458,7 +464,7 @@ export interface RuleCreateResponse {
   showBeforeStart?: boolean;
 
   /**
-   * Optional subscription id for the rule
+   * Optional stratus subscription id for the rule
    */
   subscriptionId?: string | null;
 }
@@ -1495,6 +1501,11 @@ export interface RuleUpdateResponse {
   frequency?: 'none' | 'once' | 'daily' | 'weekly' | 'monthly' | 'immediately';
 
   /**
+   * Optional stratus function id for the rule
+   */
+  functionId?: string | null;
+
+  /**
    * Whether to hide this rule in the user interface
    */
   hideInUi?: boolean;
@@ -1623,7 +1634,7 @@ export interface RuleUpdateResponse {
   startTime?: string | null;
 
   /**
-   * Optional subscription id for the rule
+   * Optional stratus subscription id for the rule
    */
   subscriptionId?: string | null;
 }
@@ -3939,6 +3950,7 @@ export interface RuleCreateParams {
     | 'post_impressions'
     | 'discord_join'
     | 'connected_youtube'
+    | 'stratus_function'
     | 'connected_tiktok';
 
   /**
@@ -3987,6 +3999,11 @@ export interface RuleCreateParams {
    * ID of the external integration
    */
   externalIntegrationId?: string | null;
+
+  /**
+   * Optional stratus function id for the rule
+   */
+  functionId?: string | null;
 
   /**
    * Whether to hide this rule in the user interface
@@ -4117,7 +4134,7 @@ export interface RuleCreateParams {
   showBeforeStart?: boolean;
 
   /**
-   * Optional subscription id for the rule
+   * Optional stratus subscription id for the rule
    */
   subscriptionId?: string | null;
 }
@@ -5152,6 +5169,11 @@ export interface RuleUpdateParams {
   frequency?: 'none' | 'once' | 'daily' | 'weekly' | 'monthly' | 'immediately';
 
   /**
+   * Optional stratus function id for the rule
+   */
+  functionId?: string | null;
+
+  /**
    * Whether to hide this rule in the user interface
    */
   hideInUi?: boolean;
@@ -5280,7 +5302,7 @@ export interface RuleUpdateParams {
   startTime?: string | null;
 
   /**
-   * Optional subscription id for the rule
+   * Optional stratus subscription id for the rule
    */
   subscriptionId?: string | null;
 }
