@@ -30,6 +30,21 @@ export class Values extends APIResource {
   create(body: ValueCreateParams, options?: Core.RequestOptions): Core.APIPromise<ValueCreateResponse> {
     return this._client.post('/api/website_user_attributes/values', { body, ...options });
   }
+
+  /**
+   * Get all website user attribute values
+   *
+   * @example
+   * ```ts
+   * const values =
+   *   await client.auctions.websiteUserAttributes.values.list({
+   *     userIds: '123e4567-e89b-12d3-a456-426614174004',
+   *   });
+   * ```
+   */
+  list(query: ValueListParams, options?: Core.RequestOptions): Core.APIPromise<ValueListResponse> {
+    return this._client.get('/api/website_user_attributes/values', { query, ...options });
+  }
 }
 
 export type ValueCreateResponse = Array<ValueCreateResponse.ValueCreateResponseItem>;
@@ -51,6 +66,32 @@ export namespace ValueCreateResponse {
     websiteId: string;
 
     websiteUserAttributeId: string;
+  }
+}
+
+export interface ValueListResponse {
+  data: Array<ValueListResponse.Data>;
+
+  hasNextPage: boolean;
+}
+
+export namespace ValueListResponse {
+  export interface Data {
+    id: string;
+
+    createdAt: string;
+
+    customFieldId: string;
+
+    organizationId: string;
+
+    updatedAt: string;
+
+    userId: string;
+
+    value: string;
+
+    websiteId: string;
   }
 }
 
@@ -92,6 +133,33 @@ export namespace ValueCreateParams {
   }
 }
 
+export interface ValueListParams {
+  /**
+   * Unique identifier for the user
+   */
+  userIds: string | Array<string>;
+
+  /**
+   * Number of website user attributes to return
+   */
+  limit?: string;
+
+  /**
+   * Unique identifier for the organization
+   */
+  organizationId?: string;
+
+  /**
+   * Unique identifier for the website
+   */
+  websiteId?: string;
+}
+
 export declare namespace Values {
-  export { type ValueCreateResponse as ValueCreateResponse, type ValueCreateParams as ValueCreateParams };
+  export {
+    type ValueCreateResponse as ValueCreateResponse,
+    type ValueListResponse as ValueListResponse,
+    type ValueCreateParams as ValueCreateParams,
+    type ValueListParams as ValueListParams,
+  };
 }

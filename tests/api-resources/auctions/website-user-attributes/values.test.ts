@@ -46,4 +46,28 @@ describe('resource values', () => {
       websiteId: '123e4567-e89b-12d3-a456-426614174001',
     });
   });
+
+  // Prism tests are disabled
+  test.skip('list: only required params', async () => {
+    const responsePromise = client.auctions.websiteUserAttributes.values.list({
+      userIds: '123e4567-e89b-12d3-a456-426614174004',
+    });
+    const rawResponse = await responsePromise.asResponse();
+    expect(rawResponse).toBeInstanceOf(Response);
+    const response = await responsePromise;
+    expect(response).not.toBeInstanceOf(Response);
+    const dataAndResponse = await responsePromise.withResponse();
+    expect(dataAndResponse.data).toBe(response);
+    expect(dataAndResponse.response).toBe(rawResponse);
+  });
+
+  // Prism tests are disabled
+  test.skip('list: required and optional params', async () => {
+    const response = await client.auctions.websiteUserAttributes.values.list({
+      userIds: '123e4567-e89b-12d3-a456-426614174004',
+      limit: 'limit',
+      organizationId: '123e4567-e89b-12d3-a456-426614174002',
+      websiteId: '123e4567-e89b-12d3-a456-426614174001',
+    });
+  });
 });

@@ -98,6 +98,8 @@ export {
   Transactions,
   type TransactionCreateTransactionResponse,
   type TransactionGetTransactionEntriesResponse,
+  type TransactionListRuleChainsResponse,
   type TransactionCreateTransactionParams,
   type TransactionGetTransactionEntriesParams,
+  type TransactionListRuleChainsParams,
 } from './transactions/index';

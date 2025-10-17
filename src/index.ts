@@ -37,7 +37,13 @@ import {
   UserVerifyResponse,
   Users,
 } from './resources/users/users';
-import { WebsiteListParams, WebsiteListResponse, Websites } from './resources/websites/websites';
+import {
+  WebsiteCreateParams,
+  WebsiteCreateResponse,
+  WebsiteListParams,
+  WebsiteListResponse,
+  Websites,
+} from './resources/websites/websites';
 
 export interface ClientOptions {
   /**
@@ -275,7 +281,9 @@ export declare namespace SnagSolutions {
 
   export {
     Websites as Websites,
+    type WebsiteCreateResponse as WebsiteCreateResponse,
     type WebsiteListResponse as WebsiteListResponse,
+    type WebsiteCreateParams as WebsiteCreateParams,
     type WebsiteListParams as WebsiteListParams,
   };
 }
