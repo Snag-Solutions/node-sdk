@@ -33,6 +33,41 @@ describe('resource websiteUserAttributes', () => {
   });
 
   // Prism tests are disabled
+  test.skip('list', async () => {
+    const responsePromise = client.auctions.websiteUserAttributes.list();
+    const rawResponse = await responsePromise.asResponse();
+    expect(rawResponse).toBeInstanceOf(Response);
+    const response = await responsePromise;
+    expect(response).not.toBeInstanceOf(Response);
+    const dataAndResponse = await responsePromise.withResponse();
+    expect(dataAndResponse.data).toBe(response);
+    expect(dataAndResponse.response).toBe(rawResponse);
+  });
+
+  // Prism tests are disabled
+  test.skip('list: request options instead of params are passed correctly', async () => {
+    // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
+    await expect(
+      client.auctions.websiteUserAttributes.list({ path: '/_stainless_unknown_path' }),
+    ).rejects.toThrow(SnagSolutions.NotFoundError);
+  });
+
+  // Prism tests are disabled
+  test.skip('list: request options and params are passed correctly', async () => {
+    // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
+    await expect(
+      client.auctions.websiteUserAttributes.list(
+        {
+          limit: 'limit',
+          organizationId: '123e4567-e89b-12d3-a456-426614174002',
+          websiteId: '123e4567-e89b-12d3-a456-426614174001',
+        },
+        { path: '/_stainless_unknown_path' },
+      ),
+    ).rejects.toThrow(SnagSolutions.NotFoundError);
+  });
+
+  // Prism tests are disabled
   test.skip('delete: only required params', async () => {
     const responsePromise = client.auctions.websiteUserAttributes.delete('id', {
       body_id: '123e4567-e89b-12d3-a456-426614174003',

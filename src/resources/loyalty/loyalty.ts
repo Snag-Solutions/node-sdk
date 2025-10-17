@@ -110,6 +110,8 @@ import {
   TransactionCreateTransactionResponse,
   TransactionGetTransactionEntriesParams,
   TransactionGetTransactionEntriesResponse,
+  TransactionListRuleChainsParams,
+  TransactionListRuleChainsResponse,
   Transactions,
 } from './transactions/transactions';
 
@@ -157,8 +159,10 @@ export declare namespace Loyalty {
     Transactions as Transactions,
     type TransactionCreateTransactionResponse as TransactionCreateTransactionResponse,
     type TransactionGetTransactionEntriesResponse as TransactionGetTransactionEntriesResponse,
+    type TransactionListRuleChainsResponse as TransactionListRuleChainsResponse,
     type TransactionCreateTransactionParams as TransactionCreateTransactionParams,
     type TransactionGetTransactionEntriesParams as TransactionGetTransactionEntriesParams,
+    type TransactionListRuleChainsParams as TransactionListRuleChainsParams,
   };
 
   export {

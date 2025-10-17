@@ -1,4 +1,4 @@
-configured_endpoints: 59
-openapi_spec_url: https://storage.googleapis.com/stainless-sdk-openapi-specs/snag%2Fsnag-solutions-0bf4c58a1116df3465393c26561c6b666e74c0e51e91c648e9a927025a3b1c92.yml
-openapi_spec_hash: 60abd1c8ded56556a8157e0569c95db6
+configured_endpoints: 65
+openapi_spec_url: https://storage.googleapis.com/stainless-sdk-openapi-specs/snag%2Fsnag-solutions-07bffb7aab5a272d48232f6b642224b2df47378812082f500280fbf9f7f5d77a.yml
+openapi_spec_hash: cdff3dc929f19188d38ff272ab6aab11
 config_hash: 426e8666ab02e0305ddb39069385879b
