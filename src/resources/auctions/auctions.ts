@@ -9,6 +9,8 @@ import {
   WebsiteUserAttributeCreateResponse,
   WebsiteUserAttributeDeleteParams,
   WebsiteUserAttributeDeleteResponse,
+  WebsiteUserAttributeListParams,
+  WebsiteUserAttributeListResponse,
   WebsiteUserAttributes,
 } from './website-user-attributes/website-user-attributes';
 
@@ -425,8 +427,10 @@ export declare namespace Auctions {
   export {
     WebsiteUserAttributes as WebsiteUserAttributes,
     type WebsiteUserAttributeCreateResponse as WebsiteUserAttributeCreateResponse,
+    type WebsiteUserAttributeListResponse as WebsiteUserAttributeListResponse,
     type WebsiteUserAttributeDeleteResponse as WebsiteUserAttributeDeleteResponse,
     type WebsiteUserAttributeCreateParams as WebsiteUserAttributeCreateParams,
+    type WebsiteUserAttributeListParams as WebsiteUserAttributeListParams,
     type WebsiteUserAttributeDeleteParams as WebsiteUserAttributeDeleteParams,
   };
 }

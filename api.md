@@ -36,11 +36,13 @@ Methods:
 Types:
 
 - <code><a href="./src/resources/auctions/website-user-attributes/website-user-attributes.ts">WebsiteUserAttributeCreateResponse</a></code>
+- <code><a href="./src/resources/auctions/website-user-attributes/website-user-attributes.ts">WebsiteUserAttributeListResponse</a></code>
 - <code><a href="./src/resources/auctions/website-user-attributes/website-user-attributes.ts">WebsiteUserAttributeDeleteResponse</a></code>
 
 Methods:
 
 - <code title="post /api/website_user_attributes">client.auctions.websiteUserAttributes.<a href="./src/resources/auctions/website-user-attributes/website-user-attributes.ts">create</a>({ ...params }) -> WebsiteUserAttributeCreateResponse</code>
+- <code title="get /api/website_user_attributes">client.auctions.websiteUserAttributes.<a href="./src/resources/auctions/website-user-attributes/website-user-attributes.ts">list</a>({ ...params }) -> WebsiteUserAttributeListResponse</code>
 - <code title="delete /api/website_user_attributes/{id}">client.auctions.websiteUserAttributes.<a href="./src/resources/auctions/website-user-attributes/website-user-attributes.ts">delete</a>(pathId, { ...params }) -> WebsiteUserAttributeDeleteResponse</code>
 
 ### Values
@@ -48,10 +50,12 @@ Methods:
 Types:
 
 - <code><a href="./src/resources/auctions/website-user-attributes/values.ts">ValueCreateResponse</a></code>
+- <code><a href="./src/resources/auctions/website-user-attributes/values.ts">ValueListResponse</a></code>
 
 Methods:
 
 - <code title="post /api/website_user_attributes/values">client.auctions.websiteUserAttributes.values.<a href="./src/resources/auctions/website-user-attributes/values.ts">create</a>({ ...params }) -> ValueCreateResponse</code>
+- <code title="get /api/website_user_attributes/values">client.auctions.websiteUserAttributes.values.<a href="./src/resources/auctions/website-user-attributes/values.ts">list</a>({ ...params }) -> ValueListResponse</code>
 
 # Users
 
@@ -109,11 +113,13 @@ Types:
 
 - <code><a href="./src/resources/loyalty/transactions/transactions.ts">TransactionCreateTransactionResponse</a></code>
 - <code><a href="./src/resources/loyalty/transactions/transactions.ts">TransactionGetTransactionEntriesResponse</a></code>
+- <code><a href="./src/resources/loyalty/transactions/transactions.ts">TransactionListRuleChainsResponse</a></code>
 
 Methods:
 
 - <code title="post /api/loyalty/transactions">client.loyalty.transactions.<a href="./src/resources/loyalty/transactions/transactions.ts">createTransaction</a>({ ...params }) -> TransactionCreateTransactionResponse</code>
 - <code title="get /api/loyalty/transaction_entries">client.loyalty.transactions.<a href="./src/resources/loyalty/transactions/transactions.ts">getTransactionEntries</a>({ ...params }) -> TransactionGetTransactionEntriesResponse</code>
+- <code title="get /api/loyalty/rule_chains">client.loyalty.transactions.<a href="./src/resources/loyalty/transactions/transactions.ts">listRuleChains</a>({ ...params }) -> TransactionListRuleChainsResponse</code>
 
 ### RuleStatuses
 
@@ -291,13 +297,24 @@ Methods:
 
 Types:
 
+- <code><a href="./src/resources/websites/websites.ts">WebsiteCreateResponse</a></code>
 - <code><a href="./src/resources/websites/websites.ts">WebsiteListResponse</a></code>
 
 Methods:
 
+- <code title="post /api/websites">client.websites.<a href="./src/resources/websites/websites.ts">create</a>({ ...params }) -> WebsiteCreateResponse</code>
 - <code title="get /api/websites">client.websites.<a href="./src/resources/websites/websites.ts">list</a>({ ...params }) -> WebsiteListResponse</code>
 
 ## WebsiteCollections
+
+Types:
+
+- <code><a href="./src/resources/websites/website-collections.ts">WebsiteCollectionListResponse</a></code>
+
+Methods:
+
+- <code title="post /api/website_collections">client.websites.websiteCollections.<a href="./src/resources/websites/website-collections.ts">create</a>({ ...params }) -> void</code>
+- <code title="get /api/website_collections">client.websites.websiteCollections.<a href="./src/resources/websites/website-collections.ts">list</a>({ ...params }) -> WebsiteCollectionListResponse</code>
 
 ## WebsiteUserRoles
 
