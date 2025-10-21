@@ -4,7 +4,13 @@ import { APIResource } from '../../../resource';
 import { isRequestOptions } from '../../../core';
 import * as Core from '../../../core';
 import * as RuleStatusesAPI from './rule-statuses';
-import { RuleStatusUpdateParams, RuleStatusUpdateResponse, RuleStatuses } from './rule-statuses';
+import {
+  RuleStatusListParams,
+  RuleStatusListResponse,
+  RuleStatusUpdateParams,
+  RuleStatusUpdateResponse,
+  RuleStatuses,
+} from './rule-statuses';
 
 export class Transactions extends APIResource {
   ruleStatuses: RuleStatusesAPI.RuleStatuses = new RuleStatusesAPI.RuleStatuses(this._client);
@@ -668,6 +674,8 @@ export declare namespace Transactions {
   export {
     RuleStatuses as RuleStatuses,
     type RuleStatusUpdateResponse as RuleStatusUpdateResponse,
+    type RuleStatusListResponse as RuleStatusListResponse,
     type RuleStatusUpdateParams as RuleStatusUpdateParams,
+    type RuleStatusListParams as RuleStatusListParams,
   };
 }
