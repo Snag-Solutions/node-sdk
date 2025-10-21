@@ -126,10 +126,12 @@ Methods:
 Types:
 
 - <code><a href="./src/resources/loyalty/transactions/rule-statuses.ts">RuleStatusUpdateResponse</a></code>
+- <code><a href="./src/resources/loyalty/transactions/rule-statuses.ts">RuleStatusListResponse</a></code>
 
 Methods:
 
 - <code title="post /api/loyalty/rule_statuses">client.loyalty.transactions.ruleStatuses.<a href="./src/resources/loyalty/transactions/rule-statuses.ts">update</a>({ ...params }) -> RuleStatusUpdateResponse</code>
+- <code title="get /api/loyalty/rule_statuses">client.loyalty.transactions.ruleStatuses.<a href="./src/resources/loyalty/transactions/rule-statuses.ts">list</a>({ ...params }) -> RuleStatusListResponse</code>
 
 ## Accounts
 
