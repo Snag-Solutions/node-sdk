@@ -67,7 +67,10 @@ export interface MetadataCreateResponse {
 
   user: MetadataCreateResponse.User;
 
-  userGroup: MetadataCreateResponse.UserGroup;
+  /**
+   * User group associated with the user
+   */
+  userGroup: MetadataCreateResponse.UserGroup | null;
 
   /**
    * Identifier for the user group set via api
@@ -98,6 +101,9 @@ export namespace MetadataCreateResponse {
     walletAddress: string;
   }
 
+  /**
+   * User group associated with the user
+   */
   export interface UserGroup {
     /**
      * id for the user group

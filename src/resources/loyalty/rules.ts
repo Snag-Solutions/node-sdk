@@ -2618,7 +2618,7 @@ export namespace RuleListResponse {
     /**
      * Amount associated with the loyalty rule
      */
-    amount: number;
+    amount: number | null;
 
     /**
      * Timestamp when the loyalty rule was created
@@ -2638,7 +2638,7 @@ export namespace RuleListResponse {
     /**
      * End time of the loyalty rule
      */
-    endTime: string;
+    endTime: string | null;
 
     /**
      * Frequency of the loyalty rule
@@ -2668,7 +2668,7 @@ export namespace RuleListResponse {
     /**
      * Start time of the loyalty rule
      */
-    startTime: string;
+    startTime: string | null;
 
     /**
      * Type of the loyalty rule
