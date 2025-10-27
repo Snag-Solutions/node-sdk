@@ -40,7 +40,6 @@ describe('resource users', () => {
           emailAddress: 'elonmusk@example.com',
           externalIdentifier: '123e4567',
           includeDelegation: true,
-          includeFollow: true,
           limit: 10,
           organizationId: '123e4567-e89b-12d3-a456-426614174001',
           startingAfter: '123e4567-e89b-12d3-a456-426614174020',
