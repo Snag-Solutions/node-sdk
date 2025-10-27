@@ -136,20 +136,9 @@ export namespace UserListResponse {
     walletAddress: string;
 
     /**
-     * The followers of the user, only returned if includeFollow is true
-     */
-    _count?: Data._Count | null;
-
-    /**
      * The delegations from the user, only returned if includeDelegation is true
      */
     delegationsFrom?: Array<Data.DelegationsFrom> | null;
-
-    /**
-     * The followers of the user, only returned if includeFollow is true and the user
-     * is querying their own user
-     */
-    followers?: Array<Data.Follower> | null;
 
     /**
      * Whether the user has notifications enabled, only returned if
@@ -171,27 +160,8 @@ export namespace UserListResponse {
   }
 
   export namespace Data {
-    /**
-     * The followers of the user, only returned if includeFollow is true
-     */
-    export interface _Count {
-      select: _Count.Select;
-    }
-
-    export namespace _Count {
-      export interface Select {
-        followers: number;
-
-        follows: number;
-      }
-    }
-
     export interface DelegationsFrom {
       walletAddress: string;
-    }
-
-    export interface Follower {
-      userId: string;
     }
 
     export interface Referrer {
@@ -413,11 +383,6 @@ export interface UserListParams {
    * Whether to include delegations in the response
    */
   includeDelegation?: boolean | null;
-
-  /**
-   * Whether to include followers in the response
-   */
-  includeFollow?: boolean | null;
 
   /**
    * Number of users to return
