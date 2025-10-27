@@ -155,7 +155,7 @@ export namespace UserListResponse {
      * Whether the user has notifications enabled, only returned if
      * includeNotifications is true
      */
-    notifications?: boolean;
+    notifications?: boolean | null;
 
     privyUserId?: string | null;
 
