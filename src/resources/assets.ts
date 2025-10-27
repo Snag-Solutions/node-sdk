@@ -58,7 +58,6 @@ export interface AssetCreateAssetParams {
    * The file path, must be a valid enum value.
    */
   filePath?:
-    | 'announcements'
     | 'images'
     | 'videos'
     | 'banners'
