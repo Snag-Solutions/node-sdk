@@ -157,7 +157,7 @@ export namespace TransactionGetTransactionEntriesResponse {
     /**
      * Type of the loyalty transaction
      */
-    type: 'auction_bid' | 'direct_mint' | 'loyalty_rule' | 'api_key' | 'order';
+    type: 'auction_bid' | 'direct_mint' | 'loyalty_rule' | 'api_key' | 'order' | null;
 
     /**
      * Timestamp when the transaction entry was last updated
@@ -188,7 +188,7 @@ export namespace TransactionGetTransactionEntriesResponse {
       /**
        * Type of the loyalty transaction
        */
-      type: 'auction_bid' | 'direct_mint' | 'loyalty_rule' | 'api_key' | 'order';
+      type: 'auction_bid' | 'direct_mint' | 'loyalty_rule' | 'api_key' | 'order' | null;
 
       /**
        * Details of the loyalty rule associated with the transaction
