@@ -149,6 +149,11 @@ export interface BadgeCreateResponse {
   id: string;
 
   /**
+   * The date and time the badge was created
+   */
+  createdAt: string;
+
+  /**
    * The description of the badge
    */
   description: string | null;
@@ -167,6 +172,11 @@ export interface BadgeCreateResponse {
    * The name of the badge
    */
   name: string;
+
+  /**
+   * The date and time the badge was updated
+   */
+  updatedAt: string;
 
   /**
    * Array of data jobs associated with the badge
@@ -464,6 +474,11 @@ export interface BadgeUpdateResponse {
   id: string;
 
   /**
+   * The date and time the badge was created
+   */
+  createdAt: string;
+
+  /**
    * The description of the badge
    */
   description: string | null;
@@ -482,6 +497,11 @@ export interface BadgeUpdateResponse {
    * The name of the badge
    */
   name: string;
+
+  /**
+   * The date and time the badge was updated
+   */
+  updatedAt: string;
 
   /**
    * Array of data jobs associated with the badge
@@ -779,6 +799,11 @@ export interface BadgeListResponse {
   id: string;
 
   /**
+   * The date and time the badge was created
+   */
+  createdAt: string;
+
+  /**
    * The description of the badge
    */
   description: string | null;
@@ -797,6 +822,11 @@ export interface BadgeListResponse {
    * The name of the badge
    */
   name: string;
+
+  /**
+   * The date and time the badge was updated
+   */
+  updatedAt: string;
 
   /**
    * Array of data jobs associated with the badge
@@ -1094,6 +1124,11 @@ export interface BadgeDeleteResponse {
   id: string;
 
   /**
+   * The date and time the badge was created
+   */
+  createdAt: string;
+
+  /**
    * The description of the badge
    */
   description: string | null;
@@ -1112,6 +1147,11 @@ export interface BadgeDeleteResponse {
    * The name of the badge
    */
   name: string;
+
+  /**
+   * The date and time the badge was updated
+   */
+  updatedAt: string;
 
   /**
    * Array of data jobs associated with the badge
