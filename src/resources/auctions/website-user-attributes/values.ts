@@ -32,7 +32,7 @@ export class Values extends APIResource {
   }
 
   /**
-   * Get all website user attribute values
+   * Get values for a website user attribute
    *
    * @example
    * ```ts
