@@ -150,8 +150,6 @@ export namespace UserListResponse {
 
     referrers?: Array<Data.Referrer> | null;
 
-    stardustProfileId?: string | null;
-
     temporaryLoyaltyUser?: boolean | null;
 
     userMetadata?: Array<Data.UserMetadata> | null;
