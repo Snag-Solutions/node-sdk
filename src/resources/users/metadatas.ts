@@ -183,10 +183,6 @@ export interface MetadataCreateParams {
 
   portfolioUrl?: string | null;
 
-  stardustProfileIdentifier?: string | null;
-
-  stardustWalletIdentifier?: string | null;
-
   steamUserId?: string | null;
 
   steamUsername?: string | null;
