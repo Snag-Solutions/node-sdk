@@ -105,6 +105,11 @@ export class Users extends APIResource {
   }
 
   /**
+   * Transfers a social account from one user to another when a conflict is detected.
+   * Disconnects the account from the previous user and connects it to the current
+   * user's profile. Used when a social account is already linked to a different user
+   * (MAXIMUM_ACCOUNT_LINKED error).
+   *
    * @example
    * ```ts
    * const response = await client.users.verify({
