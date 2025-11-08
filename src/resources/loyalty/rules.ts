@@ -281,7 +281,8 @@ export interface RuleCreateResponse {
     | 'discord_join'
     | 'connected_youtube'
     | 'stratus_function'
-    | 'connected_tiktok';
+    | 'connected_tiktok'
+    | 'tiktok_follow';
 
   /**
    * Unique identifier for the associated website
@@ -3951,7 +3952,8 @@ export interface RuleCreateParams {
     | 'discord_join'
     | 'connected_youtube'
     | 'stratus_function'
-    | 'connected_tiktok';
+    | 'connected_tiktok'
+    | 'tiktok_follow';
 
   /**
    * Unique identifier for the associated website

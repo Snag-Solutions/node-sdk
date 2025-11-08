@@ -499,6 +499,7 @@ export interface TransactionGetTransactionEntriesParams {
     | 'connected_youtube'
     | 'stratus_function'
     | 'connected_tiktok'
+    | 'tiktok_follow'
     | Array<
         | 'Bonus'
         | 'BoughtOn'
@@ -567,6 +568,7 @@ export interface TransactionGetTransactionEntriesParams {
         | 'connected_youtube'
         | 'stratus_function'
         | 'connected_tiktok'
+        | 'tiktok_follow'
       >;
 
   /**
