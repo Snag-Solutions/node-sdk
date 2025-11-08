@@ -254,7 +254,8 @@ export namespace RuleGroupGetRuleGroupsResponse {
           | 'discord_join'
           | 'connected_youtube'
           | 'stratus_function'
-          | 'connected_tiktok';
+          | 'connected_tiktok'
+          | 'tiktok_follow';
       }
 
       export namespace LoyaltyRule {
