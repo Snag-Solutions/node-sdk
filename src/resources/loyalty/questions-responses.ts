@@ -54,14 +54,19 @@ export class QuestionsResponses extends APIResource {
  * List of question responses with details
  */
 export interface QuestionsResponseListResponse {
-  responses: Array<QuestionsResponseListResponse.Response>;
+  data: Array<QuestionsResponseListResponse.Data>;
+
+  /**
+   * Indicates if there are more pages of results available
+   */
+  hasNextPage: boolean;
 }
 
 export namespace QuestionsResponseListResponse {
   /**
    * Response details including the question and choice information
    */
-  export interface Response {
+  export interface Data {
     id: string;
 
     createdAt: string;
@@ -72,12 +77,12 @@ export namespace QuestionsResponseListResponse {
 
     loyaltyQuestionId: string;
 
-    question: Response.Question;
+    question: Data.Question;
 
     userId: string;
   }
 
-  export namespace Response {
+  export namespace Data {
     export interface Question {
       loyaltyQuestionChoices: Array<Question.LoyaltyQuestionChoice>;
 
@@ -139,6 +144,11 @@ export namespace QuestionsResponseSubmitResponse {
 
 export interface QuestionsResponseListParams {
   /**
+   * Maximum number of records to return (max 100)
+   */
+  limit?: number;
+
+  /**
    * UUID of the organization to filter responses
    */
   organizationId?: string;
@@ -147,6 +157,11 @@ export interface QuestionsResponseListParams {
    * UUID(s) of the questions to filter responses
    */
   questionsId?: string | Array<string>;
+
+  /**
+   * Pagination cursor to start after a specific resource ID
+   */
+  startingAfter?: string;
 
   /**
    * UUID of the user to filter responses

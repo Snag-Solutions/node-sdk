@@ -4,6 +4,7 @@ export { Assets, type AssetCreateAssetResponse, type AssetCreateAssetParams } fr
 export {
   Auctions,
   type AuctionGetPageSectionsResponse,
+  type AuctionListAuctionBidsResponse,
   type AuctionListAuctionsResponse,
   type AuctionGetPageSectionsParams,
   type AuctionListAuctionBidsParams,

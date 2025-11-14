@@ -103,21 +103,25 @@ export namespace QuestionUpdateResponse {
   }
 }
 
-export type QuestionListResponse = Array<QuestionListResponse.QuestionListResponseItem>;
+export interface QuestionListResponse {
+  data: Array<QuestionListResponse.Data>;
+
+  hasNextPage: boolean;
+}
 
 export namespace QuestionListResponse {
   /**
    * Response returned for a question
    */
-  export interface QuestionListResponseItem {
+  export interface Data {
     id: string;
 
-    loyaltyQuestionChoices: Array<QuestionListResponseItem.LoyaltyQuestionChoice>;
+    loyaltyQuestionChoices: Array<Data.LoyaltyQuestionChoice>;
 
     text: string;
   }
 
-  export namespace QuestionListResponseItem {
+  export namespace Data {
     export interface LoyaltyQuestionChoice {
       id: string;
 
@@ -217,9 +221,19 @@ export interface QuestionListParams {
   loyaltyRuleIds: string | Array<string>;
 
   /**
+   * Maximum number of records to return (max 100)
+   */
+  limit?: number;
+
+  /**
    * UUID of the organization to fetch questions for
    */
   organizationId?: string;
+
+  /**
+   * Pagination cursor to start after a specific resource ID
+   */
+  startingAfter?: string;
 
   /**
    * UUID of the user to fetch questions for

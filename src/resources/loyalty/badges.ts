@@ -789,328 +789,339 @@ export namespace BadgeUpdateResponse {
   }
 }
 
-/**
- * Response returned upon successful fetching of the badges.
- */
 export interface BadgeListResponse {
-  /**
-   * UUID of the badge (converted to lowercase)
-   */
-  id: string;
+  data: Array<BadgeListResponse.Data>;
 
   /**
-   * The date and time the badge was created
+   * Indicates if there is a next page of results
    */
-  createdAt: string;
-
-  /**
-   * The description of the badge
-   */
-  description: string | null;
-
-  /**
-   * The URL of the badge image
-   */
-  imageUrl: string | null;
-
-  /**
-   * Array of conditions of the badge
-   */
-  loyaltyConditions: Array<BadgeListResponse.LoyaltyCondition>;
-
-  /**
-   * The name of the badge
-   */
-  name: string;
-
-  /**
-   * The date and time the badge was updated
-   */
-  updatedAt: string;
-
-  /**
-   * Array of data jobs associated with the badge
-   */
-  dataJobs?: Array<BadgeListResponse.DataJob>;
-
-  /**
-   * Array of user badges
-   */
-  loyaltyBadgeUsers?: Array<BadgeListResponse.LoyaltyBadgeUser>;
-
-  /**
-   * Array of loyalty rules associated with the badge
-   */
-  loyaltyRules?: Array<BadgeListResponse.LoyaltyRule>;
+  hasNextPage: boolean;
 }
 
 export namespace BadgeListResponse {
   /**
-   * Schema for a loyalty condition rule.
+   * Response returned upon successful fetching of the badges.
    */
-  export interface LoyaltyCondition {
+  export interface Data {
     /**
-     * UUID of the condition (converted to lowercase)
+     * UUID of the badge (converted to lowercase)
      */
     id: string;
 
     /**
-     * The amount of the condition
+     * The date and time the badge was created
      */
-    amount: number | null;
-
-    association: Array<LoyaltyCondition.Association>;
+    createdAt: string;
 
     /**
-     * URL of the CSV file
-     */
-    csvUrl: string | null;
-
-    /**
-     * The description of the condition
+     * The description of the badge
      */
     description: string | null;
 
     /**
-     * UUID of the currency (converted to lowercase)
+     * The URL of the badge image
      */
-    loyaltyCurrencyId: string | null;
+    imageUrl: string | null;
 
     /**
-     * UUID of the rule group (converted to lowercase)
+     * Array of conditions of the badge
      */
-    loyaltyRuleGroupId: string | null;
+    loyaltyConditions: Array<Data.LoyaltyCondition>;
 
     /**
-     * The repeat count of the condition
+     * The name of the badge
      */
-    repeatCount: number | null;
+    name: string;
 
     /**
-     * The required count of the condition
+     * The date and time the badge was updated
      */
-    requiredCount: number | null;
+    updatedAt: string;
 
     /**
-     * The type of the condition
+     * Array of data jobs associated with the badge
      */
-    type: 'rule' | 'rules' | 'points' | 'section' | 'level' | 'api' | 'badge' | 'badges' | 'csv';
+    dataJobs?: Array<Data.DataJob>;
 
     /**
-     * Array of CSV files associated with the condition
+     * Array of user badges
      */
-    csvFiles?: Array<LoyaltyCondition.CsvFile>;
+    loyaltyBadgeUsers?: Array<Data.LoyaltyBadgeUser>;
+
+    /**
+     * Array of loyalty rules associated with the badge
+     */
+    loyaltyRules?: Array<Data.LoyaltyRule>;
   }
 
-  export namespace LoyaltyCondition {
-    export interface Association {
-      loyaltyBadge: Association.LoyaltyBadge | null;
-
-      loyaltyCurrency: Association.LoyaltyCurrency | null;
-
-      loyaltyLeaderboardView: Association.LoyaltyLeaderboardView | null;
-
-      loyaltyRule: Association.LoyaltyRule | null;
-
-      loyaltyRuleGroup: Association.LoyaltyRuleGroup | null;
-    }
-
-    export namespace Association {
-      export interface LoyaltyBadge {
-        /**
-         * UUID of the association (converted to lowercase)
-         */
-        id: string;
-
-        /**
-         * The name of the association
-         */
-        name: string;
-      }
-
-      export interface LoyaltyCurrency {
-        /**
-         * UUID of the association (converted to lowercase)
-         */
-        id: string;
-
-        /**
-         * The name of the association
-         */
-        name: string;
-      }
-
-      export interface LoyaltyLeaderboardView {
-        /**
-         * UUID of the association (converted to lowercase)
-         */
-        id: string;
-
-        /**
-         * The name of the association
-         */
-        name: string;
-      }
-
-      export interface LoyaltyRule {
-        /**
-         * UUID of the association (converted to lowercase)
-         */
-        id: string;
-
-        /**
-         * The name of the association
-         */
-        name: string;
-      }
-
-      export interface LoyaltyRuleGroup {
-        /**
-         * UUID of the association (converted to lowercase)
-         */
-        id: string;
-
-        /**
-         * The name of the association
-         */
-        name: string;
-      }
-    }
-
-    export interface CsvFile {
+  export namespace Data {
+    /**
+     * Schema for a loyalty condition rule.
+     */
+    export interface LoyaltyCondition {
       /**
-       * UUID of the CSV file (converted to lowercase)
+       * UUID of the condition (converted to lowercase)
        */
       id: string;
 
       /**
-       * The description of the CSV file
+       * The amount of the condition
+       */
+      amount: number | null;
+
+      association: Array<LoyaltyCondition.Association>;
+
+      /**
+       * URL of the CSV file
+       */
+      csvUrl: string | null;
+
+      /**
+       * The description of the condition
        */
       description: string | null;
 
       /**
-       * The name of the CSV file
+       * UUID of the currency (converted to lowercase)
        */
-      name: string | null;
+      loyaltyCurrencyId: string | null;
 
       /**
-       * The URL of the CSV file
+       * UUID of the rule group (converted to lowercase)
        */
-      url: string | null;
+      loyaltyRuleGroupId: string | null;
+
+      /**
+       * The repeat count of the condition
+       */
+      repeatCount: number | null;
+
+      /**
+       * The required count of the condition
+       */
+      requiredCount: number | null;
+
+      /**
+       * The type of the condition
+       */
+      type: 'rule' | 'rules' | 'points' | 'section' | 'level' | 'api' | 'badge' | 'badges' | 'csv';
+
+      /**
+       * Array of CSV files associated with the condition
+       */
+      csvFiles?: Array<LoyaltyCondition.CsvFile>;
     }
-  }
 
-  export interface DataJob {
-    /**
-     * UUID of the data job (converted to lowercase)
-     */
-    id: string;
+    export namespace LoyaltyCondition {
+      export interface Association {
+        loyaltyBadge: Association.LoyaltyBadge | null;
 
-    /**
-     * The date and time the data job was created
-     */
-    createdAt: string;
+        loyaltyCurrency: Association.LoyaltyCurrency | null;
 
-    /**
-     * The status of the data job
-     */
-    status: 'pending' | 'complete' | 'failed';
+        loyaltyLeaderboardView: Association.LoyaltyLeaderboardView | null;
 
-    /**
-     * The date and time the data job was updated
-     */
-    updatedAt: string;
+        loyaltyRule: Association.LoyaltyRule | null;
 
-    /**
-     * The message associated with the data job
-     */
-    message?: string | null;
-  }
+        loyaltyRuleGroup: Association.LoyaltyRuleGroup | null;
+      }
 
-  export interface LoyaltyBadgeUser {
-    /**
-     * UUID of the user badge (converted to lowercase)
-     */
-    id: string;
+      export namespace Association {
+        export interface LoyaltyBadge {
+          /**
+           * UUID of the association (converted to lowercase)
+           */
+          id: string;
 
-    /**
-     * The date and time the user badge was created
-     */
-    createdAt: string;
+          /**
+           * The name of the association
+           */
+          name: string;
+        }
 
-    /**
-     * UUID of the badge (converted to lowercase)
-     */
-    loyaltyBadgeId: string;
+        export interface LoyaltyCurrency {
+          /**
+           * UUID of the association (converted to lowercase)
+           */
+          id: string;
 
-    /**
-     * UUID of the organization (converted to lowercase)
-     */
-    organizationId: string;
+          /**
+           * The name of the association
+           */
+          name: string;
+        }
 
-    /**
-     * The status of the badge
-     */
-    status: 'active' | 'inactive' | 'revoked';
+        export interface LoyaltyLeaderboardView {
+          /**
+           * UUID of the association (converted to lowercase)
+           */
+          id: string;
 
-    /**
-     * The date and time the user badge was updated
-     */
-    updatedAt: string;
+          /**
+           * The name of the association
+           */
+          name: string;
+        }
 
-    /**
-     * UUID of the user (converted to lowercase)
-     */
-    userId: string;
+        export interface LoyaltyRule {
+          /**
+           * UUID of the association (converted to lowercase)
+           */
+          id: string;
 
-    /**
-     * UUID of the website (converted to lowercase)
-     */
-    websiteId: string;
+          /**
+           * The name of the association
+           */
+          name: string;
+        }
 
-    /**
-     * Whether the user has dismissed the badge in the UI
-     */
-    dismissedInUi?: boolean;
+        export interface LoyaltyRuleGroup {
+          /**
+           * UUID of the association (converted to lowercase)
+           */
+          id: string;
 
-    /**
-     * Array of progress for the badge
-     */
-    progress?: unknown;
+          /**
+           * The name of the association
+           */
+          name: string;
+        }
+      }
 
-    /**
-     * User associated with the user badge
-     */
-    user?: LoyaltyBadgeUser.User;
-  }
+      export interface CsvFile {
+        /**
+         * UUID of the CSV file (converted to lowercase)
+         */
+        id: string;
 
-  export namespace LoyaltyBadgeUser {
-    /**
-     * User associated with the user badge
-     */
-    export interface User {
+        /**
+         * The description of the CSV file
+         */
+        description: string | null;
+
+        /**
+         * The name of the CSV file
+         */
+        name: string | null;
+
+        /**
+         * The URL of the CSV file
+         */
+        url: string | null;
+      }
+    }
+
+    export interface DataJob {
       /**
-       * UUID of the user (converted to lowercase)
+       * UUID of the data job (converted to lowercase)
        */
       id: string;
 
       /**
-       * Wallet address of the user
+       * The date and time the data job was created
        */
-      walletAddress: string;
+      createdAt: string;
+
+      /**
+       * The status of the data job
+       */
+      status: 'pending' | 'complete' | 'failed';
+
+      /**
+       * The date and time the data job was updated
+       */
+      updatedAt: string;
+
+      /**
+       * The message associated with the data job
+       */
+      message?: string | null;
     }
-  }
 
-  export interface LoyaltyRule {
-    /**
-     * UUID of the loyalty rule (converted to lowercase)
-     */
-    id: string;
+    export interface LoyaltyBadgeUser {
+      /**
+       * UUID of the user badge (converted to lowercase)
+       */
+      id: string;
 
-    /**
-     * The name of the loyalty rule
-     */
-    name: string;
+      /**
+       * The date and time the user badge was created
+       */
+      createdAt: string;
+
+      /**
+       * UUID of the badge (converted to lowercase)
+       */
+      loyaltyBadgeId: string;
+
+      /**
+       * UUID of the organization (converted to lowercase)
+       */
+      organizationId: string;
+
+      /**
+       * The status of the badge
+       */
+      status: 'active' | 'inactive' | 'revoked';
+
+      /**
+       * The date and time the user badge was updated
+       */
+      updatedAt: string;
+
+      /**
+       * UUID of the user (converted to lowercase)
+       */
+      userId: string;
+
+      /**
+       * UUID of the website (converted to lowercase)
+       */
+      websiteId: string;
+
+      /**
+       * Whether the user has dismissed the badge in the UI
+       */
+      dismissedInUi?: boolean;
+
+      /**
+       * Array of progress for the badge
+       */
+      progress?: unknown;
+
+      /**
+       * User associated with the user badge
+       */
+      user?: LoyaltyBadgeUser.User;
+    }
+
+    export namespace LoyaltyBadgeUser {
+      /**
+       * User associated with the user badge
+       */
+      export interface User {
+        /**
+         * UUID of the user (converted to lowercase)
+         */
+        id: string;
+
+        /**
+         * Wallet address of the user
+         */
+        walletAddress: string;
+      }
+    }
+
+    export interface LoyaltyRule {
+      /**
+       * UUID of the loyalty rule (converted to lowercase)
+       */
+      id: string;
+
+      /**
+       * The name of the loyalty rule
+       */
+      name: string;
+    }
   }
 }
 
