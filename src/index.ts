@@ -13,6 +13,7 @@ import {
   AuctionGetPageSectionsParams,
   AuctionGetPageSectionsResponse,
   AuctionListAuctionBidsParams,
+  AuctionListAuctionBidsResponse,
   AuctionListAuctionsResponse,
   Auctions,
 } from './resources/auctions/auctions';
@@ -244,6 +245,7 @@ export declare namespace SnagSolutions {
   export {
     Auctions as Auctions,
     type AuctionGetPageSectionsResponse as AuctionGetPageSectionsResponse,
+    type AuctionListAuctionBidsResponse as AuctionListAuctionBidsResponse,
     type AuctionListAuctionsResponse as AuctionListAuctionsResponse,
     type AuctionGetPageSectionsParams as AuctionGetPageSectionsParams,
     type AuctionListAuctionBidsParams as AuctionListAuctionBidsParams,

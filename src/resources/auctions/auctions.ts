@@ -42,23 +42,22 @@ export class Auctions extends APIResource {
    *
    * @example
    * ```ts
-   * await client.auctions.listAuctionBids();
+   * const response = await client.auctions.listAuctionBids();
    * ```
    */
-  listAuctionBids(query?: AuctionListAuctionBidsParams, options?: Core.RequestOptions): Core.APIPromise<void>;
-  listAuctionBids(options?: Core.RequestOptions): Core.APIPromise<void>;
+  listAuctionBids(
+    query?: AuctionListAuctionBidsParams,
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<AuctionListAuctionBidsResponse>;
+  listAuctionBids(options?: Core.RequestOptions): Core.APIPromise<AuctionListAuctionBidsResponse>;
   listAuctionBids(
     query: AuctionListAuctionBidsParams | Core.RequestOptions = {},
     options?: Core.RequestOptions,
-  ): Core.APIPromise<void> {
+  ): Core.APIPromise<AuctionListAuctionBidsResponse> {
     if (isRequestOptions(query)) {
       return this.listAuctionBids({}, query);
     }
-    return this._client.get('/api/auction_bids', {
-      query,
-      ...options,
-      headers: { Accept: '*/*', ...options?.headers },
-    });
+    return this._client.get('/api/auction_bids', { query, ...options });
   }
 
   /**
@@ -204,6 +203,98 @@ export namespace AuctionGetPageSectionsResponse {
       id: string;
 
       mintingContractId?: string | null;
+    }
+  }
+}
+
+export interface AuctionListAuctionBidsResponse {
+  data: Array<AuctionListAuctionBidsResponse.Data>;
+
+  /**
+   * Indicates if there is a next page of results
+   */
+  hasNextPage: boolean;
+}
+
+export namespace AuctionListAuctionBidsResponse {
+  /**
+   * Schema for a get auction bids response
+   */
+  export interface Data {
+    id: string;
+
+    auctionId: string;
+
+    auctionItem: Data.AuctionItem | null;
+
+    auctionItemId: string | null;
+
+    currencyAddress: string | null;
+
+    currencyDecimals: number;
+
+    loyaltyCurrency: Data.LoyaltyCurrency | null;
+
+    status: 'submitted' | 'accepted' | 'rejected' | 'fulfilled';
+
+    updatedAt: string;
+
+    user: Data.User;
+
+    amount?: unknown;
+  }
+
+  export namespace Data {
+    export interface AuctionItem {
+      id: string;
+
+      mintingContractAsset: AuctionItem.MintingContractAsset | null;
+
+      quantity: number;
+    }
+
+    export namespace AuctionItem {
+      export interface MintingContractAsset {
+        id: string;
+
+        isPhygitalItem: boolean;
+
+        revealedAt: string | null;
+
+        tokenId: number | null;
+
+        shippingPrice?: unknown;
+      }
+    }
+
+    export interface LoyaltyCurrency {
+      id: string;
+
+      apiAuthKey: string | null;
+
+      apiAuthType: 'none' | 'basic' | 'bearer' | 'apiKey' | null;
+
+      apiAuthValue: string | null;
+
+      apiGetTransactionEntryUrl: string | null;
+
+      apiGetUrl: string | null;
+
+      apiPostUrl: string | null;
+
+      decimals: number;
+
+      imageUrl: string | null;
+
+      name: string;
+
+      symbol: string;
+    }
+
+    export interface User {
+      id: string;
+
+      walletAddress: string;
     }
   }
 }
@@ -419,6 +510,7 @@ Auctions.WebsiteUserAttributes = WebsiteUserAttributes;
 export declare namespace Auctions {
   export {
     type AuctionGetPageSectionsResponse as AuctionGetPageSectionsResponse,
+    type AuctionListAuctionBidsResponse as AuctionListAuctionBidsResponse,
     type AuctionListAuctionsResponse as AuctionListAuctionsResponse,
     type AuctionGetPageSectionsParams as AuctionGetPageSectionsParams,
     type AuctionListAuctionBidsParams as AuctionListAuctionBidsParams,

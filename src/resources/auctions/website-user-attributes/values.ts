@@ -140,14 +140,19 @@ export interface ValueListParams {
   userIds: string | Array<string>;
 
   /**
-   * Number of website user attributes to return
+   * Maximum number of records to return (max 100)
    */
-  limit?: string;
+  limit?: number;
 
   /**
    * Unique identifier for the organization
    */
   organizationId?: string;
+
+  /**
+   * Pagination cursor to start after a specific resource ID
+   */
+  startingAfter?: string;
 
   /**
    * Unique identifier for the website

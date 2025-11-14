@@ -23,12 +23,13 @@ Methods:
 Types:
 
 - <code><a href="./src/resources/auctions/auctions.ts">AuctionGetPageSectionsResponse</a></code>
+- <code><a href="./src/resources/auctions/auctions.ts">AuctionListAuctionBidsResponse</a></code>
 - <code><a href="./src/resources/auctions/auctions.ts">AuctionListAuctionsResponse</a></code>
 
 Methods:
 
 - <code title="get /api/page_sections">client.auctions.<a href="./src/resources/auctions/auctions.ts">getPageSections</a>({ ...params }) -> AuctionGetPageSectionsResponse</code>
-- <code title="get /api/auction_bids">client.auctions.<a href="./src/resources/auctions/auctions.ts">listAuctionBids</a>({ ...params }) -> void</code>
+- <code title="get /api/auction_bids">client.auctions.<a href="./src/resources/auctions/auctions.ts">listAuctionBids</a>({ ...params }) -> AuctionListAuctionBidsResponse</code>
 - <code title="get /api/auctions">client.auctions.<a href="./src/resources/auctions/auctions.ts">listAuctions</a>() -> AuctionListAuctionsResponse</code>
 
 ## WebsiteUserAttributes

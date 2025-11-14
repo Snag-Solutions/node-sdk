@@ -80,7 +80,9 @@ describe('resource questions', () => {
   test.skip('list: required and optional params', async () => {
     const response = await client.loyalty.questions.list({
       loyaltyRuleIds: '123e4567-e89b-12d3-a456-426614174000',
+      limit: 50,
       organizationId: '123e4567-e89b-12d3-a456-426614174002',
+      startingAfter: '123e4567-e89b-12d3-a456-426614174010',
       userId: '123e4567-e89b-12d3-a456-426614174003',
       websiteId: '123e4567-e89b-12d3-a456-426614174001',
     });
