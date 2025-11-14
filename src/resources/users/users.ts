@@ -127,6 +127,11 @@ export interface UserListResponse {
    * Schema for users response
    */
   data: Array<UserListResponse.Data>;
+
+  /**
+   * Indicates if there is a next page of results
+   */
+  hasNextPage: boolean;
 }
 
 export namespace UserListResponse {

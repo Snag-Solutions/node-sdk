@@ -35,8 +35,10 @@ describe('resource questionsResponses', () => {
     await expect(
       client.loyalty.questionsResponses.list(
         {
+          limit: 50,
           organizationId: '123e4567-e89b-12d3-a456-426614174001',
           questionsId: ['123e4567-e89b-12d3-a456-426614174001'],
+          startingAfter: '123e4567-e89b-12d3-a456-426614174010',
           userId: '123e4567-e89b-12d3-a456-426614174001',
           websiteId: '123e4567-e89b-12d3-a456-426614174001',
         },

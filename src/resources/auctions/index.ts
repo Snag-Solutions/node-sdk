@@ -3,6 +3,7 @@
 export {
   Auctions,
   type AuctionGetPageSectionsResponse,
+  type AuctionListAuctionBidsResponse,
   type AuctionListAuctionsResponse,
   type AuctionGetPageSectionsParams,
   type AuctionListAuctionBidsParams,
