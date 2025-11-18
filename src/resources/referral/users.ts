@@ -1,6 +1,7 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
 import { APIResource } from '../../resource';
+import { isRequestOptions } from '../../core';
 import * as Core from '../../core';
 
 export class Users extends APIResource {
@@ -23,12 +24,18 @@ export class Users extends APIResource {
    *
    * @example
    * ```ts
-   * const users = await client.referral.users.list({
-   *   walletAddress: 'string',
-   * });
+   * const users = await client.referral.users.list();
    * ```
    */
-  list(query: UserListParams, options?: Core.RequestOptions): Core.APIPromise<UserListResponse> {
+  list(query?: UserListParams, options?: Core.RequestOptions): Core.APIPromise<UserListResponse>;
+  list(options?: Core.RequestOptions): Core.APIPromise<UserListResponse>;
+  list(
+    query: UserListParams | Core.RequestOptions = {},
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<UserListResponse> {
+    if (isRequestOptions(query)) {
+      return this.list({}, query);
+    }
     return this._client.get('/api/referral/users', { query, ...options });
   }
 }
@@ -101,8 +108,6 @@ export interface UserCreateParams {
 }
 
 export interface UserListParams {
-  walletAddress: string | Array<string>;
-
   limit?: number;
 
   loyaltyRuleId?: string;
@@ -110,6 +115,8 @@ export interface UserListParams {
   organizationId?: string;
 
   startingAfter?: string;
+
+  walletAddress?: string | Array<string>;
 
   websiteId?: string;
 }
