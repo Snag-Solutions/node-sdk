@@ -33,8 +33,8 @@ describe('resource users', () => {
   });
 
   // Prism tests are disabled
-  test.skip('list: only required params', async () => {
-    const responsePromise = client.referral.users.list({ walletAddress: 'string' });
+  test.skip('list', async () => {
+    const responsePromise = client.referral.users.list();
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -45,14 +45,28 @@ describe('resource users', () => {
   });
 
   // Prism tests are disabled
-  test.skip('list: required and optional params', async () => {
-    const response = await client.referral.users.list({
-      walletAddress: 'string',
-      limit: 1,
-      loyaltyRuleId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
-      organizationId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
-      startingAfter: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
-      websiteId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
-    });
+  test.skip('list: request options instead of params are passed correctly', async () => {
+    // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
+    await expect(client.referral.users.list({ path: '/_stainless_unknown_path' })).rejects.toThrow(
+      SnagSolutions.NotFoundError,
+    );
+  });
+
+  // Prism tests are disabled
+  test.skip('list: request options and params are passed correctly', async () => {
+    // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
+    await expect(
+      client.referral.users.list(
+        {
+          limit: 1,
+          loyaltyRuleId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+          organizationId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+          startingAfter: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+          walletAddress: 'string',
+          websiteId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+        },
+        { path: '/_stainless_unknown_path' },
+      ),
+    ).rejects.toThrow(SnagSolutions.NotFoundError);
   });
 });
