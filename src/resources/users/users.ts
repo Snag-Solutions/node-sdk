@@ -175,10 +175,30 @@ export namespace UserListResponse {
     export interface Referrer {
       eligible: boolean;
 
+      referralCode: Referrer.ReferralCode;
+
       user: Referrer.User;
     }
 
     export namespace Referrer {
+      export interface ReferralCode {
+        /**
+         * Use who referred the user
+         */
+        user: ReferralCode.User;
+      }
+
+      export namespace ReferralCode {
+        /**
+         * Use who referred the user
+         */
+        export interface User {
+          id: string;
+
+          walletAddress: string;
+        }
+      }
+
       export interface User {
         id: string;
 
