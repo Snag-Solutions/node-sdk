@@ -364,7 +364,7 @@ export namespace BadgeCreateResponse {
     /**
      * The status of the data job
      */
-    status: 'pending' | 'complete' | 'failed';
+    status: 'pending' | 'processing' | 'complete' | 'failed' | 'cancelled';
 
     /**
      * The date and time the data job was updated
@@ -689,7 +689,7 @@ export namespace BadgeUpdateResponse {
     /**
      * The status of the data job
      */
-    status: 'pending' | 'complete' | 'failed';
+    status: 'pending' | 'processing' | 'complete' | 'failed' | 'cancelled';
 
     /**
      * The date and time the data job was updated
@@ -1024,7 +1024,7 @@ export namespace BadgeListResponse {
       /**
        * The status of the data job
        */
-      status: 'pending' | 'complete' | 'failed';
+      status: 'pending' | 'processing' | 'complete' | 'failed' | 'cancelled';
 
       /**
        * The date and time the data job was updated
@@ -1350,7 +1350,7 @@ export namespace BadgeDeleteResponse {
     /**
      * The status of the data job
      */
-    status: 'pending' | 'complete' | 'failed';
+    status: 'pending' | 'processing' | 'complete' | 'failed' | 'cancelled';
 
     /**
      * The date and time the data job was updated
