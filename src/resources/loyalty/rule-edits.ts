@@ -626,6 +626,7 @@ export namespace RuleEditListResponse {
           | 'ultra'
           | 'agw'
           | 'flow_cadence'
+          | 'substrate'
           | null;
 
         /**
@@ -1608,6 +1609,7 @@ export namespace RuleEditListResponse {
           | 'ultra'
           | 'agw'
           | 'flow_cadence'
+          | 'substrate'
           | null;
 
         /**
@@ -2645,6 +2647,7 @@ export namespace RuleEditRestoreResponse {
         | 'ultra'
         | 'agw'
         | 'flow_cadence'
+        | 'substrate'
         | null;
 
       /**
@@ -3627,6 +3630,7 @@ export namespace RuleEditRestoreResponse {
         | 'ultra'
         | 'agw'
         | 'flow_cadence'
+        | 'substrate'
         | null;
 
       /**

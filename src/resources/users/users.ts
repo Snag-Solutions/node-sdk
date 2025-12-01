@@ -494,7 +494,17 @@ export interface UserConnectParams {
    */
   walletAddress: string;
 
-  walletType: 'evm' | 'solana' | 'imx' | 'sui' | 'ton' | 'cosmos' | 'ultra' | 'agw' | 'flow_cadence';
+  walletType:
+    | 'evm'
+    | 'solana'
+    | 'imx'
+    | 'sui'
+    | 'ton'
+    | 'cosmos'
+    | 'ultra'
+    | 'agw'
+    | 'flow_cadence'
+    | 'substrate';
 
   /**
    * The ID of the website
