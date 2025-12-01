@@ -184,6 +184,11 @@ export interface BadgeCreateResponse {
   dataJobs?: Array<BadgeCreateResponse.DataJob>;
 
   /**
+   * Whether to hide this badge in the user interface
+   */
+  hideInUi?: boolean;
+
+  /**
    * Array of user badges
    */
   loyaltyBadgeUsers?: Array<BadgeCreateResponse.LoyaltyBadgeUser>;
@@ -424,6 +429,11 @@ export namespace BadgeCreateResponse {
     dismissedInUi?: boolean;
 
     /**
+     * Whether to hide this badge in the user interface
+     */
+    hideInUi?: boolean;
+
+    /**
      * Array of progress for the badge
      */
     progress?: unknown;
@@ -507,6 +517,11 @@ export interface BadgeUpdateResponse {
    * Array of data jobs associated with the badge
    */
   dataJobs?: Array<BadgeUpdateResponse.DataJob>;
+
+  /**
+   * Whether to hide this badge in the user interface
+   */
+  hideInUi?: boolean;
 
   /**
    * Array of user badges
@@ -749,6 +764,11 @@ export namespace BadgeUpdateResponse {
     dismissedInUi?: boolean;
 
     /**
+     * Whether to hide this badge in the user interface
+     */
+    hideInUi?: boolean;
+
+    /**
      * Array of progress for the badge
      */
     progress?: unknown;
@@ -842,6 +862,11 @@ export namespace BadgeListResponse {
      * Array of data jobs associated with the badge
      */
     dataJobs?: Array<Data.DataJob>;
+
+    /**
+     * Whether to hide this badge in the user interface
+     */
+    hideInUi?: boolean;
 
     /**
      * Array of user badges
@@ -1084,6 +1109,11 @@ export namespace BadgeListResponse {
       dismissedInUi?: boolean;
 
       /**
+       * Whether to hide this badge in the user interface
+       */
+      hideInUi?: boolean;
+
+      /**
        * Array of progress for the badge
        */
       progress?: unknown;
@@ -1168,6 +1198,11 @@ export interface BadgeDeleteResponse {
    * Array of data jobs associated with the badge
    */
   dataJobs?: Array<BadgeDeleteResponse.DataJob>;
+
+  /**
+   * Whether to hide this badge in the user interface
+   */
+  hideInUi?: boolean;
 
   /**
    * Array of user badges
@@ -1410,6 +1445,11 @@ export namespace BadgeDeleteResponse {
     dismissedInUi?: boolean;
 
     /**
+     * Whether to hide this badge in the user interface
+     */
+    hideInUi?: boolean;
+
+    /**
      * Array of progress for the badge
      */
     progress?: unknown;
@@ -1530,6 +1570,11 @@ export interface BadgeCreateParams {
    * The description of the badge
    */
   description?: string;
+
+  /**
+   * Whether to hide this badge in the user interface
+   */
+  hideInUi?: boolean;
 }
 
 export namespace BadgeCreateParams {
@@ -1611,6 +1656,11 @@ export interface BadgeUpdateParams {
    * The description of the badge
    */
   description?: string;
+
+  /**
+   * Whether to hide this badge in the user interface
+   */
+  hideInUi?: boolean;
 
   /**
    * The URL of the badge image
