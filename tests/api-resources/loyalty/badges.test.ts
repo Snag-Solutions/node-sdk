@@ -52,6 +52,7 @@ describe('resource badges', () => {
       websiteId: '123e4567-e89b-12d3-a456-426614174111',
       csvFiles: [{ src: 'https://example.com', description: 'description', name: 'name' }],
       description: 'Example description',
+      hideInUi: false,
     });
   });
 
@@ -86,6 +87,7 @@ describe('resource badges', () => {
         {
           csvFiles: [{ src: 'https://example.com', description: 'description', name: 'name' }],
           description: 'Example description',
+          hideInUi: false,
           imageUrl: 'https://example.com/image.png',
           name: 'Example Badge',
         },
