@@ -912,6 +912,7 @@ export namespace RuleCreateResponse {
       | 'ultra'
       | 'agw'
       | 'flow_cadence'
+      | 'substrate'
       | null;
 
     /**
@@ -2150,6 +2151,7 @@ export namespace RuleUpdateResponse {
       | 'ultra'
       | 'agw'
       | 'flow_cadence'
+      | 'substrate'
       | null;
 
     /**
@@ -3241,6 +3243,7 @@ export namespace RuleListResponse {
         | 'ultra'
         | 'agw'
         | 'flow_cadence'
+        | 'substrate'
         | null;
 
       /**
@@ -4583,6 +4586,7 @@ export namespace RuleCreateParams {
       | 'ultra'
       | 'agw'
       | 'flow_cadence'
+      | 'substrate'
       | null;
 
     /**
@@ -5819,6 +5823,7 @@ export namespace RuleUpdateParams {
       | 'ultra'
       | 'agw'
       | 'flow_cadence'
+      | 'substrate'
       | null;
 
     /**

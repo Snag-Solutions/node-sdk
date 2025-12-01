@@ -707,6 +707,7 @@ export namespace RuleGroupGetRuleGroupsResponse {
             | 'ultra'
             | 'agw'
             | 'flow_cadence'
+            | 'substrate'
             | null;
 
           /**
