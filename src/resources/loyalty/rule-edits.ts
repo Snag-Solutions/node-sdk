@@ -706,6 +706,8 @@ export namespace RuleEditListResponse {
             | 'arbitrumGoerli'
             | 'basecamp'
             | 'somnia'
+            | 'polkadot'
+            | 'kusama'
             | 'flow_cadence';
         }
 
@@ -858,6 +860,8 @@ export namespace RuleEditListResponse {
             | 'arbitrumGoerli'
             | 'basecamp'
             | 'somnia'
+            | 'polkadot'
+            | 'kusama'
             | 'flow_cadence';
 
           /**
@@ -1689,6 +1693,8 @@ export namespace RuleEditListResponse {
             | 'arbitrumGoerli'
             | 'basecamp'
             | 'somnia'
+            | 'polkadot'
+            | 'kusama'
             | 'flow_cadence';
         }
 
@@ -1841,6 +1847,8 @@ export namespace RuleEditListResponse {
             | 'arbitrumGoerli'
             | 'basecamp'
             | 'somnia'
+            | 'polkadot'
+            | 'kusama'
             | 'flow_cadence';
 
           /**
@@ -2727,6 +2735,8 @@ export namespace RuleEditRestoreResponse {
           | 'arbitrumGoerli'
           | 'basecamp'
           | 'somnia'
+          | 'polkadot'
+          | 'kusama'
           | 'flow_cadence';
       }
 
@@ -2879,6 +2889,8 @@ export namespace RuleEditRestoreResponse {
           | 'arbitrumGoerli'
           | 'basecamp'
           | 'somnia'
+          | 'polkadot'
+          | 'kusama'
           | 'flow_cadence';
 
         /**
@@ -3710,6 +3722,8 @@ export namespace RuleEditRestoreResponse {
           | 'arbitrumGoerli'
           | 'basecamp'
           | 'somnia'
+          | 'polkadot'
+          | 'kusama'
           | 'flow_cadence';
       }
 
@@ -3862,6 +3876,8 @@ export namespace RuleEditRestoreResponse {
           | 'arbitrumGoerli'
           | 'basecamp'
           | 'somnia'
+          | 'polkadot'
+          | 'kusama'
           | 'flow_cadence';
 
         /**
