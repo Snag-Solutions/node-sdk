@@ -127,6 +127,8 @@ export interface WebsiteCollectionCreateParams {
     | 'arbitrumGoerli'
     | 'basecamp'
     | 'somnia'
+    | 'polkadot'
+    | 'kusama'
     | 'flow_cadence';
 
   organizationId: string;
