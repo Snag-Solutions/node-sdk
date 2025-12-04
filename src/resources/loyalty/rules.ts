@@ -437,6 +437,7 @@ export interface RuleCreateResponse {
     | 'arbitrumGoerli'
     | 'basecamp'
     | 'somnia'
+    | 'zkverify'
     | 'polkadot'
     | 'kusama'
     | 'flow_cadence';
@@ -994,6 +995,7 @@ export namespace RuleCreateResponse {
         | 'arbitrumGoerli'
         | 'basecamp'
         | 'somnia'
+        | 'zkverify'
         | 'polkadot'
         | 'kusama'
         | 'flow_cadence';
@@ -1148,6 +1150,7 @@ export namespace RuleCreateResponse {
         | 'arbitrumGoerli'
         | 'basecamp'
         | 'somnia'
+        | 'zkverify'
         | 'polkadot'
         | 'kusama'
         | 'flow_cadence';
@@ -1431,6 +1434,7 @@ export namespace RuleCreateResponse {
       | 'arbitrumGoerli'
       | 'basecamp'
       | 'somnia'
+      | 'zkverify'
       | 'polkadot'
       | 'kusama'
       | 'flow_cadence';
@@ -1611,6 +1615,7 @@ export interface RuleUpdateResponse {
     | 'arbitrumGoerli'
     | 'basecamp'
     | 'somnia'
+    | 'zkverify'
     | 'polkadot'
     | 'kusama'
     | 'flow_cadence';
@@ -1712,6 +1717,7 @@ export namespace RuleUpdateResponse {
       | 'arbitrumGoerli'
       | 'basecamp'
       | 'somnia'
+      | 'zkverify'
       | 'polkadot'
       | 'kusama'
       | 'flow_cadence';
@@ -2243,6 +2249,7 @@ export namespace RuleUpdateResponse {
         | 'arbitrumGoerli'
         | 'basecamp'
         | 'somnia'
+        | 'zkverify'
         | 'polkadot'
         | 'kusama'
         | 'flow_cadence';
@@ -2397,6 +2404,7 @@ export namespace RuleUpdateResponse {
         | 'arbitrumGoerli'
         | 'basecamp'
         | 'somnia'
+        | 'zkverify'
         | 'polkadot'
         | 'kusama'
         | 'flow_cadence';
@@ -3339,6 +3347,7 @@ export namespace RuleListResponse {
           | 'arbitrumGoerli'
           | 'basecamp'
           | 'somnia'
+          | 'zkverify'
           | 'polkadot'
           | 'kusama'
           | 'flow_cadence';
@@ -3493,6 +3502,7 @@ export namespace RuleListResponse {
           | 'arbitrumGoerli'
           | 'basecamp'
           | 'somnia'
+          | 'zkverify'
           | 'polkadot'
           | 'kusama'
           | 'flow_cadence';
@@ -4131,6 +4141,7 @@ export interface RuleCreateParams {
     | 'arbitrumGoerli'
     | 'basecamp'
     | 'somnia'
+    | 'zkverify'
     | 'polkadot'
     | 'kusama'
     | 'flow_cadence';
@@ -4688,6 +4699,7 @@ export namespace RuleCreateParams {
         | 'arbitrumGoerli'
         | 'basecamp'
         | 'somnia'
+        | 'zkverify'
         | 'polkadot'
         | 'kusama'
         | 'flow_cadence';
@@ -4842,6 +4854,7 @@ export namespace RuleCreateParams {
         | 'arbitrumGoerli'
         | 'basecamp'
         | 'somnia'
+        | 'zkverify'
         | 'polkadot'
         | 'kusama'
         | 'flow_cadence';
@@ -5125,6 +5138,7 @@ export namespace RuleCreateParams {
       | 'arbitrumGoerli'
       | 'basecamp'
       | 'somnia'
+      | 'zkverify'
       | 'polkadot'
       | 'kusama'
       | 'flow_cadence';
@@ -5303,6 +5317,7 @@ export interface RuleUpdateParams {
     | 'arbitrumGoerli'
     | 'basecamp'
     | 'somnia'
+    | 'zkverify'
     | 'polkadot'
     | 'kusama'
     | 'flow_cadence';
@@ -5404,6 +5419,7 @@ export namespace RuleUpdateParams {
       | 'arbitrumGoerli'
       | 'basecamp'
       | 'somnia'
+      | 'zkverify'
       | 'polkadot'
       | 'kusama'
       | 'flow_cadence';
@@ -5935,6 +5951,7 @@ export namespace RuleUpdateParams {
         | 'arbitrumGoerli'
         | 'basecamp'
         | 'somnia'
+        | 'zkverify'
         | 'polkadot'
         | 'kusama'
         | 'flow_cadence';
@@ -6089,6 +6106,7 @@ export namespace RuleUpdateParams {
         | 'arbitrumGoerli'
         | 'basecamp'
         | 'somnia'
+        | 'zkverify'
         | 'polkadot'
         | 'kusama'
         | 'flow_cadence';

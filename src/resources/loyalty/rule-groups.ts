@@ -787,6 +787,7 @@ export namespace RuleGroupGetRuleGroupsResponse {
               | 'arbitrumGoerli'
               | 'basecamp'
               | 'somnia'
+              | 'zkverify'
               | 'polkadot'
               | 'kusama'
               | 'flow_cadence';
@@ -941,6 +942,7 @@ export namespace RuleGroupGetRuleGroupsResponse {
               | 'arbitrumGoerli'
               | 'basecamp'
               | 'somnia'
+              | 'zkverify'
               | 'polkadot'
               | 'kusama'
               | 'flow_cadence';

@@ -127,6 +127,7 @@ export interface WebsiteCollectionCreateParams {
     | 'arbitrumGoerli'
     | 'basecamp'
     | 'somnia'
+    | 'zkverify'
     | 'polkadot'
     | 'kusama'
     | 'flow_cadence';
