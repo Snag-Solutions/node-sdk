@@ -139,6 +139,7 @@ export interface MintingGetAssetsParams {
     | 'arbitrumGoerli'
     | 'basecamp'
     | 'somnia'
+    | 'zkverify'
     | 'polkadot'
     | 'kusama'
     | 'flow_cadence';
