@@ -706,6 +706,7 @@ export namespace RuleEditListResponse {
             | 'arbitrumGoerli'
             | 'basecamp'
             | 'somnia'
+            | 'zkverify'
             | 'polkadot'
             | 'kusama'
             | 'flow_cadence';
@@ -860,6 +861,7 @@ export namespace RuleEditListResponse {
             | 'arbitrumGoerli'
             | 'basecamp'
             | 'somnia'
+            | 'zkverify'
             | 'polkadot'
             | 'kusama'
             | 'flow_cadence';
@@ -1693,6 +1695,7 @@ export namespace RuleEditListResponse {
             | 'arbitrumGoerli'
             | 'basecamp'
             | 'somnia'
+            | 'zkverify'
             | 'polkadot'
             | 'kusama'
             | 'flow_cadence';
@@ -1847,6 +1850,7 @@ export namespace RuleEditListResponse {
             | 'arbitrumGoerli'
             | 'basecamp'
             | 'somnia'
+            | 'zkverify'
             | 'polkadot'
             | 'kusama'
             | 'flow_cadence';
@@ -2735,6 +2739,7 @@ export namespace RuleEditRestoreResponse {
           | 'arbitrumGoerli'
           | 'basecamp'
           | 'somnia'
+          | 'zkverify'
           | 'polkadot'
           | 'kusama'
           | 'flow_cadence';
@@ -2889,6 +2894,7 @@ export namespace RuleEditRestoreResponse {
           | 'arbitrumGoerli'
           | 'basecamp'
           | 'somnia'
+          | 'zkverify'
           | 'polkadot'
           | 'kusama'
           | 'flow_cadence';
@@ -3722,6 +3728,7 @@ export namespace RuleEditRestoreResponse {
           | 'arbitrumGoerli'
           | 'basecamp'
           | 'somnia'
+          | 'zkverify'
           | 'polkadot'
           | 'kusama'
           | 'flow_cadence';
@@ -3876,6 +3883,7 @@ export namespace RuleEditRestoreResponse {
           | 'arbitrumGoerli'
           | 'basecamp'
           | 'somnia'
+          | 'zkverify'
           | 'polkadot'
           | 'kusama'
           | 'flow_cadence';
