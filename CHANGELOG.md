@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.192 (2025-12-06)
+
+Full Changelog: [v0.1.0-alpha.191...v0.1.0-alpha.192](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.191...v0.1.0-alpha.192)
+
+### Bug Fixes
+
+* **mcp:** return correct lines on typescript errors ([d5790ee](https://github.com/Snag-Solutions/node-sdk/commit/d5790ee34ebcc0bbaf220a88cd8393988c5e438a))
+
 ## 0.1.0-alpha.191 (2025-12-04)
 
 Full Changelog: [v0.1.0-alpha.190...v0.1.0-alpha.191](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.190...v0.1.0-alpha.191)
