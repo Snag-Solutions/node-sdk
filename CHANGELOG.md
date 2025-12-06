@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.0-alpha.193 (2025-12-06)
+
+Full Changelog: [v0.1.0-alpha.192...v0.1.0-alpha.193](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.192...v0.1.0-alpha.193)
+
+### Bug Fixes
+
+* **mcp:** correct code tool API endpoint ([7cccde3](https://github.com/Snag-Solutions/node-sdk/commit/7cccde314e2cc97b2dade6b2ea9b8b4d65860523))
+
+
+### Chores
+
+* **internal:** codegen related update ([d0b00e8](https://github.com/Snag-Solutions/node-sdk/commit/d0b00e808e6eb8e077fc13f6f15af7e1314a342b))
+
 ## 0.1.0-alpha.192 (2025-12-06)
 
 Full Changelog: [v0.1.0-alpha.191...v0.1.0-alpha.192](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.191...v0.1.0-alpha.192)
