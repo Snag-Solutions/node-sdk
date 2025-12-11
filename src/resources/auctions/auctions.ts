@@ -223,8 +223,6 @@ export namespace AuctionListAuctionBidsResponse {
   export interface Data {
     id: string;
 
-    auction: Data.Auction | null;
-
     auctionId: string;
 
     auctionItem: Data.AuctionItem | null;
@@ -247,12 +245,6 @@ export namespace AuctionListAuctionBidsResponse {
   }
 
   export namespace Data {
-    export interface Auction {
-      id: string;
-
-      name: string;
-    }
-
     export interface AuctionItem {
       id: string;
 
@@ -468,9 +460,9 @@ export interface AuctionGetPageSectionsParams {
 
 export interface AuctionListAuctionBidsParams {
   /**
-   * The bid ID(s) - accepts a single ID or an array of IDs
+   * The bid ID
    */
-  id?: string | Array<string>;
+  id?: string;
 
   /**
    * ID of the auction
