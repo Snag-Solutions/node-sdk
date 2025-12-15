@@ -455,6 +455,7 @@ export interface TransactionGetTransactionEntriesParams {
     | 'connected_discord'
     | 'connected_email'
     | 'connected_epic'
+    | 'connected_github'
     | 'connected_steam'
     | 'connected_telegram'
     | 'connected_twitter'
@@ -500,6 +501,7 @@ export interface TransactionGetTransactionEntriesParams {
     | 'stratus_function'
     | 'connected_tiktok'
     | 'tiktok_follow'
+    | 'github_repo_star'
     | Array<
         | 'Bonus'
         | 'BoughtOn'
@@ -524,6 +526,7 @@ export interface TransactionGetTransactionEntriesParams {
         | 'connected_discord'
         | 'connected_email'
         | 'connected_epic'
+        | 'connected_github'
         | 'connected_steam'
         | 'connected_telegram'
         | 'connected_twitter'
@@ -569,6 +572,7 @@ export interface TransactionGetTransactionEntriesParams {
         | 'stratus_function'
         | 'connected_tiktok'
         | 'tiktok_follow'
+        | 'github_repo_star'
       >;
 
   /**

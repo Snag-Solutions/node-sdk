@@ -44,6 +44,8 @@ describe('resource metadatas', () => {
           epicAccountIdentifier: 'epicAccountIdentifier',
           externalIdentifier: 'externalIdentifier',
           externalLoyaltyScore: 'externalLoyaltyScore',
+          githubUser: 'githubUser',
+          githubUserId: 'githubUserId',
           googleUser: 'googleUser',
           googleUserId: 'googleUserId',
           internalNotes: 'internalNotes',

@@ -290,6 +290,11 @@ export namespace RuleEditListResponse {
         firstReferralReward?: number | null;
 
         /**
+         * URL of the GitHub repository to check for star.
+         */
+        githubRepoUrl?: string | null;
+
+        /**
          * Flag indicating whether the fill source is included.
          */
         hasFillSource?: boolean;
@@ -525,6 +530,7 @@ export namespace RuleEditListResponse {
           | 'X(Twitter)'
           | 'YouTube'
           | 'Google'
+          | 'GitHub'
           | null;
 
         /**
@@ -1279,6 +1285,11 @@ export namespace RuleEditListResponse {
         firstReferralReward?: number | null;
 
         /**
+         * URL of the GitHub repository to check for star.
+         */
+        githubRepoUrl?: string | null;
+
+        /**
          * Flag indicating whether the fill source is included.
          */
         hasFillSource?: boolean;
@@ -1514,6 +1525,7 @@ export namespace RuleEditListResponse {
           | 'X(Twitter)'
           | 'YouTube'
           | 'Google'
+          | 'GitHub'
           | null;
 
         /**
@@ -2323,6 +2335,11 @@ export namespace RuleEditRestoreResponse {
       firstReferralReward?: number | null;
 
       /**
+       * URL of the GitHub repository to check for star.
+       */
+      githubRepoUrl?: string | null;
+
+      /**
        * Flag indicating whether the fill source is included.
        */
       hasFillSource?: boolean;
@@ -2558,6 +2575,7 @@ export namespace RuleEditRestoreResponse {
         | 'X(Twitter)'
         | 'YouTube'
         | 'Google'
+        | 'GitHub'
         | null;
 
       /**
@@ -3312,6 +3330,11 @@ export namespace RuleEditRestoreResponse {
       firstReferralReward?: number | null;
 
       /**
+       * URL of the GitHub repository to check for star.
+       */
+      githubRepoUrl?: string | null;
+
+      /**
        * Flag indicating whether the fill source is included.
        */
       hasFillSource?: boolean;
@@ -3547,6 +3570,7 @@ export namespace RuleEditRestoreResponse {
         | 'X(Twitter)'
         | 'YouTube'
         | 'Google'
+        | 'GitHub'
         | null;
 
       /**
