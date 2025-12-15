@@ -214,6 +214,11 @@ export interface AuctionListAuctionBidsResponse {
    * Indicates if there is a next page of results
    */
   hasNextPage: boolean;
+
+  /**
+   * Total count of matching bids (only present when includeCount=true)
+   */
+  count?: number;
 }
 
 export namespace AuctionListAuctionBidsResponse {
@@ -470,14 +475,29 @@ export interface AuctionListAuctionBidsParams {
   auctionId?: string;
 
   /**
+   * Include total count of matching bids in response
+   */
+  includeCount?: boolean | null;
+
+  /**
    * Maximum number of bids to return
    */
   limit?: number;
 
   /**
+   * Order bids by amount (ascending or descending). Defaults to desc.
+   */
+  orderBy?: 'asc' | 'desc';
+
+  /**
    * ID of the organization
    */
   organizationId?: string;
+
+  /**
+   * Number of bids to skip (for offset-based pagination)
+   */
+  skip?: number | null;
 
   /**
    * Pagination cursor to start after a specific bid ID
@@ -488,6 +508,11 @@ export interface AuctionListAuctionBidsParams {
    * Status of the bid
    */
   status?: 'submitted' | 'accepted' | 'rejected' | 'fulfilled';
+
+  /**
+   * Filter by multiple bid statuses (OR condition)
+   */
+  statuses?: Array<'submitted' | 'accepted' | 'rejected' | 'fulfilled'>;
 
   /**
    * ID of the user who made the bid
