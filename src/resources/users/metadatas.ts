@@ -165,6 +165,10 @@ export interface MetadataCreateParams {
 
   externalLoyaltyScore?: string | null;
 
+  githubUser?: string | null;
+
+  githubUserId?: string | null;
+
   googleUser?: string | null;
 
   googleUserId?: string | null;

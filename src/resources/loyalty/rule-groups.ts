@@ -211,6 +211,7 @@ export namespace RuleGroupGetRuleGroupsResponse {
           | 'connected_discord'
           | 'connected_email'
           | 'connected_epic'
+          | 'connected_github'
           | 'connected_steam'
           | 'connected_telegram'
           | 'connected_twitter'
@@ -255,7 +256,8 @@ export namespace RuleGroupGetRuleGroupsResponse {
           | 'connected_youtube'
           | 'stratus_function'
           | 'connected_tiktok'
-          | 'tiktok_follow';
+          | 'tiktok_follow'
+          | 'github_repo_star';
       }
 
       export namespace LoyaltyRule {
@@ -369,6 +371,11 @@ export namespace RuleGroupGetRuleGroupsResponse {
            * Percentage reward given to a user for their first referral.
            */
           firstReferralReward?: number | null;
+
+          /**
+           * URL of the GitHub repository to check for star.
+           */
+          githubRepoUrl?: string | null;
 
           /**
            * Flag indicating whether the fill source is included.
@@ -606,6 +613,7 @@ export namespace RuleGroupGetRuleGroupsResponse {
             | 'X(Twitter)'
             | 'YouTube'
             | 'Google'
+            | 'GitHub'
             | null;
 
           /**

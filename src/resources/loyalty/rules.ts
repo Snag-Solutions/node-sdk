@@ -238,6 +238,7 @@ export interface RuleCreateResponse {
     | 'connected_discord'
     | 'connected_email'
     | 'connected_epic'
+    | 'connected_github'
     | 'connected_steam'
     | 'connected_telegram'
     | 'connected_twitter'
@@ -282,7 +283,8 @@ export interface RuleCreateResponse {
     | 'connected_youtube'
     | 'stratus_function'
     | 'connected_tiktok'
-    | 'tiktok_follow';
+    | 'tiktok_follow'
+    | 'github_repo_star';
 
   /**
    * Unique identifier for the associated website
@@ -579,6 +581,11 @@ export namespace RuleCreateResponse {
     firstReferralReward?: number | null;
 
     /**
+     * URL of the GitHub repository to check for star.
+     */
+    githubRepoUrl?: string | null;
+
+    /**
      * Flag indicating whether the fill source is included.
      */
     hasFillSource?: boolean;
@@ -814,6 +821,7 @@ export namespace RuleCreateResponse {
       | 'X(Twitter)'
       | 'YouTube'
       | 'Google'
+      | 'GitHub'
       | null;
 
     /**
@@ -1833,6 +1841,11 @@ export namespace RuleUpdateResponse {
     firstReferralReward?: number | null;
 
     /**
+     * URL of the GitHub repository to check for star.
+     */
+    githubRepoUrl?: string | null;
+
+    /**
      * Flag indicating whether the fill source is included.
      */
     hasFillSource?: boolean;
@@ -2068,6 +2081,7 @@ export namespace RuleUpdateResponse {
       | 'X(Twitter)'
       | 'YouTube'
       | 'Google'
+      | 'GitHub'
       | null;
 
     /**
@@ -2931,6 +2945,11 @@ export namespace RuleListResponse {
       firstReferralReward?: number | null;
 
       /**
+       * URL of the GitHub repository to check for star.
+       */
+      githubRepoUrl?: string | null;
+
+      /**
        * Flag indicating whether the fill source is included.
        */
       hasFillSource?: boolean;
@@ -3166,6 +3185,7 @@ export namespace RuleListResponse {
         | 'X(Twitter)'
         | 'YouTube'
         | 'Google'
+        | 'GitHub'
         | null;
 
       /**
@@ -3942,6 +3962,7 @@ export interface RuleCreateParams {
     | 'connected_discord'
     | 'connected_email'
     | 'connected_epic'
+    | 'connected_github'
     | 'connected_steam'
     | 'connected_telegram'
     | 'connected_twitter'
@@ -3986,7 +4007,8 @@ export interface RuleCreateParams {
     | 'connected_youtube'
     | 'stratus_function'
     | 'connected_tiktok'
-    | 'tiktok_follow';
+    | 'tiktok_follow'
+    | 'github_repo_star';
 
   /**
    * Unique identifier for the associated website
@@ -4283,6 +4305,11 @@ export namespace RuleCreateParams {
     firstReferralReward?: number | null;
 
     /**
+     * URL of the GitHub repository to check for star.
+     */
+    githubRepoUrl?: string | null;
+
+    /**
      * Flag indicating whether the fill source is included.
      */
     hasFillSource?: boolean;
@@ -4518,6 +4545,7 @@ export namespace RuleCreateParams {
       | 'X(Twitter)'
       | 'YouTube'
       | 'Google'
+      | 'GitHub'
       | null;
 
     /**
@@ -5535,6 +5563,11 @@ export namespace RuleUpdateParams {
     firstReferralReward?: number | null;
 
     /**
+     * URL of the GitHub repository to check for star.
+     */
+    githubRepoUrl?: string | null;
+
+    /**
      * Flag indicating whether the fill source is included.
      */
     hasFillSource?: boolean;
@@ -5770,6 +5803,7 @@ export namespace RuleUpdateParams {
       | 'X(Twitter)'
       | 'YouTube'
       | 'Google'
+      | 'GitHub'
       | null;
 
     /**
