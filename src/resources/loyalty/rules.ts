@@ -6459,6 +6459,11 @@ export interface RuleCompleteParams {
   rangeValue?: number | null;
 
   /**
+   * Flag indicating if the chain or required check should be skipped.
+   */
+  skipChainOrRequiredCheck?: boolean;
+
+  /**
    * Unique identifier for the user
    */
   userId?: string;
