@@ -431,6 +431,7 @@ describe('resource rules', () => {
           allotedToUserId: '123e4567-e89b-12d3-a456-426614174005',
           allotedUserGroupId: '123e4567-e89b-12d3-a456-426614174006',
           collectionAddress: '0x1234567890abcdef1234567890abcdef12345678',
+          includeDeleted: false,
           isActive: 'true',
           isSpecial: 'true',
           limit: 50,
