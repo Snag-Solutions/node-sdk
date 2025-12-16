@@ -6382,6 +6382,11 @@ export interface RuleListParams {
   collectionAddress?: string;
 
   /**
+   * Whether to include deleted/archived records
+   */
+  includeDeleted?: boolean | null;
+
+  /**
    * If true this will only return active rules, the rules for which the startTime is
    * in the past and the endTime is in the future
    */
