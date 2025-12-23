@@ -107,7 +107,7 @@ export class Rules extends APIResource {
    * link_click, discord_member, connect_wallet, check_in, external_rule,
    * drip_x_follow, drip_x_new_tweet, drip_x_text_in_bio, drip_x_text_in_name,
    * drip_x_text_in_comment, drip_x_tweet, telegram_join, DiscordMessages,
-   * youtube_subscribers, youtube_comment, steam_wishlist
+   * youtube_subscribers, youtube_comment, steam_wishlist, discord_role_grant
    *
    * @example
    * ```ts
@@ -284,7 +284,8 @@ export interface RuleCreateResponse {
     | 'stratus_function'
     | 'connected_tiktok'
     | 'tiktok_follow'
-    | 'github_repo_star';
+    | 'github_repo_star'
+    | 'discord_role_grant';
 
   /**
    * Unique identifier for the associated website
@@ -4008,7 +4009,8 @@ export interface RuleCreateParams {
     | 'stratus_function'
     | 'connected_tiktok'
     | 'tiktok_follow'
-    | 'github_repo_star';
+    | 'github_repo_star'
+    | 'discord_role_grant';
 
   /**
    * Unique identifier for the associated website

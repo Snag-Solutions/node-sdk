@@ -502,6 +502,7 @@ export interface TransactionGetTransactionEntriesParams {
     | 'connected_tiktok'
     | 'tiktok_follow'
     | 'github_repo_star'
+    | 'discord_role_grant'
     | Array<
         | 'Bonus'
         | 'BoughtOn'
@@ -573,6 +574,7 @@ export interface TransactionGetTransactionEntriesParams {
         | 'connected_tiktok'
         | 'tiktok_follow'
         | 'github_repo_star'
+        | 'discord_role_grant'
       >;
 
   /**

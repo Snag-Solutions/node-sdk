@@ -257,7 +257,8 @@ export namespace RuleGroupGetRuleGroupsResponse {
           | 'stratus_function'
           | 'connected_tiktok'
           | 'tiktok_follow'
-          | 'github_repo_star';
+          | 'github_repo_star'
+          | 'discord_role_grant';
       }
 
       export namespace LoyaltyRule {
