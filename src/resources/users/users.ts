@@ -423,6 +423,16 @@ export interface UserListParams {
   organizationId?: string;
 
   /**
+   * Reddit username of the user
+   */
+  redditUser?: string;
+
+  /**
+   * Reddit ID of the user
+   */
+  redditUserId?: string;
+
+  /**
    * Pagination cursor to start after a specific user ID
    */
   startingAfter?: string;
