@@ -258,7 +258,9 @@ export namespace RuleGroupGetRuleGroupsResponse {
           | 'connected_tiktok'
           | 'tiktok_follow'
           | 'github_repo_star'
-          | 'discord_role_grant';
+          | 'discord_role_grant'
+          | 'connected_reddit'
+          | 'reddit_comment';
       }
 
       export namespace LoyaltyRule {
@@ -509,6 +511,11 @@ export namespace RuleGroupGetRuleGroupsResponse {
           range?: Array<Metadata.Range>;
 
           /**
+           * ID of the Reddit post.
+           */
+          redditPostId?: string | null;
+
+          /**
            * Object defining referral requirements.
            */
           referralRequirements?: Metadata.ReferralRequirements | null;
@@ -615,6 +622,7 @@ export namespace RuleGroupGetRuleGroupsResponse {
             | 'YouTube'
             | 'Google'
             | 'GitHub'
+            | 'Reddit'
             | null;
 
           /**

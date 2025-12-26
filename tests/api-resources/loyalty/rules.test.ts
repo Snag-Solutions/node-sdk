@@ -115,6 +115,7 @@ describe('resource rules', () => {
             loyaltyMultiplierAmount: 1.5,
           },
         ],
+        redditPostId: '1234567890',
         referralRequirements: {
           achievePoints: true,
           completeProfile: false,
@@ -328,6 +329,7 @@ describe('resource rules', () => {
             loyaltyMultiplierAmount: 1.5,
           },
         ],
+        redditPostId: '1234567890',
         referralRequirements: {
           achievePoints: true,
           completeProfile: false,

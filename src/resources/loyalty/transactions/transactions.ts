@@ -503,6 +503,8 @@ export interface TransactionGetTransactionEntriesParams {
     | 'tiktok_follow'
     | 'github_repo_star'
     | 'discord_role_grant'
+    | 'connected_reddit'
+    | 'reddit_comment'
     | Array<
         | 'Bonus'
         | 'BoughtOn'
@@ -575,6 +577,8 @@ export interface TransactionGetTransactionEntriesParams {
         | 'tiktok_follow'
         | 'github_repo_star'
         | 'discord_role_grant'
+        | 'connected_reddit'
+        | 'reddit_comment'
       >;
 
   /**
