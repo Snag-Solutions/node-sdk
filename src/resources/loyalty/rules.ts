@@ -285,7 +285,9 @@ export interface RuleCreateResponse {
     | 'connected_tiktok'
     | 'tiktok_follow'
     | 'github_repo_star'
-    | 'discord_role_grant';
+    | 'discord_role_grant'
+    | 'connected_reddit'
+    | 'reddit_comment';
 
   /**
    * Unique identifier for the associated website
@@ -717,6 +719,11 @@ export namespace RuleCreateResponse {
     range?: Array<Metadata.Range>;
 
     /**
+     * ID of the Reddit post.
+     */
+    redditPostId?: string | null;
+
+    /**
      * Object defining referral requirements.
      */
     referralRequirements?: Metadata.ReferralRequirements | null;
@@ -823,6 +830,7 @@ export namespace RuleCreateResponse {
       | 'YouTube'
       | 'Google'
       | 'GitHub'
+      | 'Reddit'
       | null;
 
     /**
@@ -1977,6 +1985,11 @@ export namespace RuleUpdateResponse {
     range?: Array<Metadata.Range>;
 
     /**
+     * ID of the Reddit post.
+     */
+    redditPostId?: string | null;
+
+    /**
      * Object defining referral requirements.
      */
     referralRequirements?: Metadata.ReferralRequirements | null;
@@ -2083,6 +2096,7 @@ export namespace RuleUpdateResponse {
       | 'YouTube'
       | 'Google'
       | 'GitHub'
+      | 'Reddit'
       | null;
 
     /**
@@ -3081,6 +3095,11 @@ export namespace RuleListResponse {
       range?: Array<Metadata.Range>;
 
       /**
+       * ID of the Reddit post.
+       */
+      redditPostId?: string | null;
+
+      /**
        * Object defining referral requirements.
        */
       referralRequirements?: Metadata.ReferralRequirements | null;
@@ -3187,6 +3206,7 @@ export namespace RuleListResponse {
         | 'YouTube'
         | 'Google'
         | 'GitHub'
+        | 'Reddit'
         | null;
 
       /**
@@ -4010,7 +4030,9 @@ export interface RuleCreateParams {
     | 'connected_tiktok'
     | 'tiktok_follow'
     | 'github_repo_star'
-    | 'discord_role_grant';
+    | 'discord_role_grant'
+    | 'connected_reddit'
+    | 'reddit_comment';
 
   /**
    * Unique identifier for the associated website
@@ -4442,6 +4464,11 @@ export namespace RuleCreateParams {
     range?: Array<Metadata.Range>;
 
     /**
+     * ID of the Reddit post.
+     */
+    redditPostId?: string | null;
+
+    /**
      * Object defining referral requirements.
      */
     referralRequirements?: Metadata.ReferralRequirements | null;
@@ -4548,6 +4575,7 @@ export namespace RuleCreateParams {
       | 'YouTube'
       | 'Google'
       | 'GitHub'
+      | 'Reddit'
       | null;
 
     /**
@@ -5700,6 +5728,11 @@ export namespace RuleUpdateParams {
     range?: Array<Metadata.Range>;
 
     /**
+     * ID of the Reddit post.
+     */
+    redditPostId?: string | null;
+
+    /**
      * Object defining referral requirements.
      */
     referralRequirements?: Metadata.ReferralRequirements | null;
@@ -5806,6 +5839,7 @@ export namespace RuleUpdateParams {
       | 'YouTube'
       | 'Google'
       | 'GitHub'
+      | 'Reddit'
       | null;
 
     /**

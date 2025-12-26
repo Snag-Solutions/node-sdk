@@ -425,6 +425,11 @@ export namespace RuleEditListResponse {
         range?: Array<Metadata.Range>;
 
         /**
+         * ID of the Reddit post.
+         */
+        redditPostId?: string | null;
+
+        /**
          * Object defining referral requirements.
          */
         referralRequirements?: Metadata.ReferralRequirements | null;
@@ -531,6 +536,7 @@ export namespace RuleEditListResponse {
           | 'YouTube'
           | 'Google'
           | 'GitHub'
+          | 'Reddit'
           | null;
 
         /**
@@ -1420,6 +1426,11 @@ export namespace RuleEditListResponse {
         range?: Array<Metadata.Range>;
 
         /**
+         * ID of the Reddit post.
+         */
+        redditPostId?: string | null;
+
+        /**
          * Object defining referral requirements.
          */
         referralRequirements?: Metadata.ReferralRequirements | null;
@@ -1526,6 +1537,7 @@ export namespace RuleEditListResponse {
           | 'YouTube'
           | 'Google'
           | 'GitHub'
+          | 'Reddit'
           | null;
 
         /**
@@ -2470,6 +2482,11 @@ export namespace RuleEditRestoreResponse {
       range?: Array<Metadata.Range>;
 
       /**
+       * ID of the Reddit post.
+       */
+      redditPostId?: string | null;
+
+      /**
        * Object defining referral requirements.
        */
       referralRequirements?: Metadata.ReferralRequirements | null;
@@ -2576,6 +2593,7 @@ export namespace RuleEditRestoreResponse {
         | 'YouTube'
         | 'Google'
         | 'GitHub'
+        | 'Reddit'
         | null;
 
       /**
@@ -3465,6 +3483,11 @@ export namespace RuleEditRestoreResponse {
       range?: Array<Metadata.Range>;
 
       /**
+       * ID of the Reddit post.
+       */
+      redditPostId?: string | null;
+
+      /**
        * Object defining referral requirements.
        */
       referralRequirements?: Metadata.ReferralRequirements | null;
@@ -3571,6 +3594,7 @@ export namespace RuleEditRestoreResponse {
         | 'YouTube'
         | 'Google'
         | 'GitHub'
+        | 'Reddit'
         | null;
 
       /**
