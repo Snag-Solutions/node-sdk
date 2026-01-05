@@ -55,7 +55,7 @@ export interface CurrencyCreateResponse {
   /**
    * Type of authentication used for API
    */
-  apiAuthType: 'none' | 'basic' | 'bearer' | 'apiKey' | null;
+  apiAuthType: 'none' | 'basic' | 'bearer' | 'api_key' | null;
 
   /**
    * Authentication value for API
@@ -157,7 +157,7 @@ export namespace CurrencyListResponse {
     /**
      * Type of authentication used for API
      */
-    apiAuthType: 'none' | 'basic' | 'bearer' | 'apiKey' | null;
+    apiAuthType: 'none' | 'basic' | 'bearer' | 'api_key' | null;
 
     /**
      * Authentication value for API
@@ -270,7 +270,7 @@ export interface CurrencyCreateParams {
   /**
    * Type of authentication used for API
    */
-  apiAuthType?: 'none' | 'basic' | 'bearer' | 'apiKey' | null;
+  apiAuthType?: 'none' | 'basic' | 'bearer' | 'api_key' | null;
 
   /**
    * Authentication value for API
