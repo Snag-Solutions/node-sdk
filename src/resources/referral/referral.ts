@@ -47,6 +47,8 @@ export interface ReferralCreateCodeResponse {
 export interface ReferralCreateCodeParams {
   loyaltyRuleId: string;
 
+  customReferralCode?: string;
+
   organizationId?: string;
 
   userId?: string;

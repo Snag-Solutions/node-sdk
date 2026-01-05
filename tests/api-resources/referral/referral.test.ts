@@ -27,6 +27,7 @@ describe('resource referral', () => {
   test.skip('createCode: required and optional params', async () => {
     const response = await client.referral.createCode({
       loyaltyRuleId: '558bcf56-24f1-4ef4-9787-043086295780',
+      customReferralCode: 'pro',
       organizationId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
       userId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
       websiteId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
