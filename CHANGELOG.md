@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.206 (2026-01-05)
+
+Full Changelog: [v0.1.0-alpha.205...v0.1.0-alpha.206](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.205...v0.1.0-alpha.206)
+
+### Features
+
+* **api:** open api update ([b73c18c](https://github.com/Snag-Solutions/node-sdk/commit/b73c18c4400a2b137137cc9786d42a39a7830e64))
+
 ## 0.1.0-alpha.205 (2026-01-05)
 
 Full Changelog: [v0.1.0-alpha.204...v0.1.0-alpha.205](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.204...v0.1.0-alpha.205)
