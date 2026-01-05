@@ -89,7 +89,7 @@ export interface WebsiteCollectionCreateParams {
     | 'berachainArtio'
     | 'berachainBepolia'
     | 'binance'
-    | 'bsc_testnet'
+    | 'bscTestnet'
     | 'campTestnet'
     | 'fantom'
     | 'fantomTestnet'

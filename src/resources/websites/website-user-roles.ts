@@ -33,7 +33,7 @@ export class WebsiteUserRoles extends APIResource {
    *     websiteId: '123e4567-e89b-12d3-a456-426614174000',
    *     websiteUserRoles: [
    *       {
-   *         roleType: 'website_super_admin',
+   *         roleType: 'WEBSITE_SUPER_ADMIN',
    *         walletAddress:
    *           '0x1234567890abcdef1234567890abcdef12345678',
    *       },
@@ -102,12 +102,12 @@ export namespace WebsiteUserRoleAssignParams {
      * Role type of the user
      */
     roleType:
-      | 'website_super_admin'
-      | 'website_admin'
-      | 'website_moderator'
-      | 'website_api_key'
-      | 'stratus_api_key'
-      | 'website_read_only_api_key';
+      | 'WEBSITE_SUPER_ADMIN'
+      | 'WEBSITE_ADMIN'
+      | 'WEBSITE_MODERATOR'
+      | 'WEBSITE_API_KEY'
+      | 'STRATUS_API_KEY'
+      | 'WEBSITE_READ_ONLY_API_KEY';
 
     /**
      * Wallet address of the user

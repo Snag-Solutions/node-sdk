@@ -285,7 +285,7 @@ export namespace AuctionListAuctionBidsResponse {
 
       apiAuthKey: string | null;
 
-      apiAuthType: 'none' | 'basic' | 'bearer' | 'api_key' | null;
+      apiAuthType: 'none' | 'basic' | 'bearer' | 'apiKey' | null;
 
       apiAuthValue: string | null;
 
