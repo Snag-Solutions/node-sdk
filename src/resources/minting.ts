@@ -101,7 +101,7 @@ export interface MintingGetAssetsParams {
     | 'berachainArtio'
     | 'berachainBepolia'
     | 'binance'
-    | 'bsc_testnet'
+    | 'bscTestnet'
     | 'campTestnet'
     | 'fantom'
     | 'fantomTestnet'
