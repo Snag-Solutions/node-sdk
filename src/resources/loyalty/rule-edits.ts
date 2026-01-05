@@ -486,6 +486,11 @@ export namespace RuleEditListResponse {
         rewardPerValue?: boolean;
 
         /**
+         * Flag indicating if the rule should reward quality posts.
+         */
+        rewardQualityPosts?: boolean;
+
+        /**
          * Wallet address of the user can only be used if userId is not provided
          */
         royaltyAddress?: string;
@@ -1485,6 +1490,11 @@ export namespace RuleEditListResponse {
          * instead of count.
          */
         rewardPerValue?: boolean;
+
+        /**
+         * Flag indicating if the rule should reward quality posts.
+         */
+        rewardQualityPosts?: boolean;
 
         /**
          * Wallet address of the user can only be used if userId is not provided
@@ -2543,6 +2553,11 @@ export namespace RuleEditRestoreResponse {
       rewardPerValue?: boolean;
 
       /**
+       * Flag indicating if the rule should reward quality posts.
+       */
+      rewardQualityPosts?: boolean;
+
+      /**
        * Wallet address of the user can only be used if userId is not provided
        */
       royaltyAddress?: string;
@@ -3542,6 +3557,11 @@ export namespace RuleEditRestoreResponse {
        * instead of count.
        */
       rewardPerValue?: boolean;
+
+      /**
+       * Flag indicating if the rule should reward quality posts.
+       */
+      rewardQualityPosts?: boolean;
 
       /**
        * Wallet address of the user can only be used if userId is not provided
