@@ -31,12 +31,10 @@ export type AccountStreakGetStreaksResponse =
   Array<AccountStreakGetStreaksResponse.AccountStreakGetStreaksResponseItem>;
 
 export namespace AccountStreakGetStreaksResponse {
+  /**
+   * Response schema for getting loyalty account streaks, null if no streak
+   */
   export interface AccountStreakGetStreaksResponseItem {
-    /**
-     * ID of the loyalty account streak, null if no streak yet
-     */
-    id: string | null;
-
     /**
      * Date and time the streak was created, null if no streak yet
      */
@@ -64,6 +62,11 @@ export namespace AccountStreakGetStreaksResponse {
     userId: string;
 
     walletAddress: string;
+
+    /**
+     * ID of the loyalty account streak, null if no streak yet
+     */
+    id?: string;
   }
 
   export namespace AccountStreakGetStreaksResponseItem {
@@ -87,9 +90,19 @@ export interface AccountStreakGetStreaksParams {
   limit?: number;
 
   /**
+   * Unique identifier for the organization
+   */
+  organizationId?: string;
+
+  /**
    * Pagination cursor to start after a specific resource ID
    */
   startingAfter?: string;
+
+  /**
+   * Unique identifier for the user group
+   */
+  userGroupId?: string;
 
   /**
    * User id to filter by
@@ -100,6 +113,11 @@ export interface AccountStreakGetStreaksParams {
    * Wallet address to filter by
    */
   walletAddress?: string;
+
+  /**
+   * Unique identifier for the website
+   */
+  websiteId?: string;
 }
 
 export declare namespace AccountStreaks {
