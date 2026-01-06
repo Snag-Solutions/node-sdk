@@ -276,6 +276,12 @@ export namespace RuleGroupGetRuleGroupsResponse {
 
         export interface Metadata {
           /**
+           * Array of loyalty rule IDs that count as check-in when completed. If ["any"] then
+           * any rule completions count as check-in.
+           */
+          autoCheckInRuleIds?: Array<(string & {}) | 'any'> | null;
+
+          /**
            * Number of tokens per batch.
            */
           batchSize?: number | null;
