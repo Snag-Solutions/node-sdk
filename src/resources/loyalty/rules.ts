@@ -484,6 +484,12 @@ export namespace RuleCreateResponse {
    */
   export interface Metadata {
     /**
+     * Array of loyalty rule IDs that count as check-in when completed. If ["any"] then
+     * any rule completions count as check-in.
+     */
+    autoCheckInRuleIds?: Array<(string & {}) | 'any'> | null;
+
+    /**
      * Number of tokens per batch.
      */
     batchSize?: number | null;
@@ -1755,6 +1761,12 @@ export namespace RuleUpdateResponse {
    */
   export interface Metadata {
     /**
+     * Array of loyalty rule IDs that count as check-in when completed. If ["any"] then
+     * any rule completions count as check-in.
+     */
+    autoCheckInRuleIds?: Array<(string & {}) | 'any'> | null;
+
+    /**
      * Number of tokens per batch.
      */
     batchSize?: number | null;
@@ -2869,6 +2881,12 @@ export namespace RuleListResponse {
     }
 
     export interface Metadata {
+      /**
+       * Array of loyalty rule IDs that count as check-in when completed. If ["any"] then
+       * any rule completions count as check-in.
+       */
+      autoCheckInRuleIds?: Array<(string & {}) | 'any'> | null;
+
       /**
        * Number of tokens per batch.
        */
@@ -4244,6 +4262,12 @@ export namespace RuleCreateParams {
    */
   export interface Metadata {
     /**
+     * Array of loyalty rule IDs that count as check-in when completed. If ["any"] then
+     * any rule completions count as check-in.
+     */
+    autoCheckInRuleIds?: Array<(string & {}) | 'any'> | null;
+
+    /**
      * Number of tokens per batch.
      */
     batchSize?: number | null;
@@ -5512,6 +5536,12 @@ export namespace RuleUpdateParams {
    * Additional metadata for the loyalty rule
    */
   export interface Metadata {
+    /**
+     * Array of loyalty rule IDs that count as check-in when completed. If ["any"] then
+     * any rule completions count as check-in.
+     */
+    autoCheckInRuleIds?: Array<(string & {}) | 'any'> | null;
+
     /**
      * Number of tokens per batch.
      */
