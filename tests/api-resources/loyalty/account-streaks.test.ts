@@ -30,9 +30,12 @@ describe('resource accountStreaks', () => {
       loyaltyRuleId:
         'loyaltyRuleId=123e4567-e89b-12d3-a456-426614174001&loyaltyRuleId=123e4567-e89b-12d3-a456-426614174002',
       limit: 50,
+      organizationId: '123e4567-e89b-12d3-a456-426614174003',
       startingAfter: '123e4567-e89b-12d3-a456-426614174010',
+      userGroupId: '123e4567-e89b-12d3-a456-426614174004',
       userId: '123e4567-e89b-12d3-a456-426614174001',
       walletAddress: '0x1234567890123456789012345678901234567890',
+      websiteId: '123e4567-e89b-12d3-a456-426614174002',
     });
   });
 });
