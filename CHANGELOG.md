@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.0-alpha.210 (2026-01-07)
+
+Full Changelog: [v0.1.0-alpha.209...v0.1.0-alpha.210](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.209...v0.1.0-alpha.210)
+
+### Features
+
+* **api:** open api update ([9316060](https://github.com/Snag-Solutions/node-sdk/commit/9316060fe3541346146ab8da1f0e0876a7f5dcb6))
+
+
+### Chores
+
+* break long lines in snippets into multiline ([0dac6a3](https://github.com/Snag-Solutions/node-sdk/commit/0dac6a3438f50406f132d56cf283ea0d8453ca6a))
+
 ## 0.1.0-alpha.209 (2026-01-06)
 
 Full Changelog: [v0.1.0-alpha.208...v0.1.0-alpha.209](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.208...v0.1.0-alpha.209)
