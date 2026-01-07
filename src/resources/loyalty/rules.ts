@@ -285,6 +285,9 @@ export interface RuleCreateResponse {
     | 'connected_tiktok'
     | 'tiktok_follow'
     | 'github_repo_star'
+    | 'github_repo_fork'
+    | 'github_repo_collaborator'
+    | 'github_merge_PR'
     | 'discord_role_grant'
     | 'connected_reddit'
     | 'reddit_comment';
@@ -588,6 +591,11 @@ export namespace RuleCreateResponse {
      * Percentage reward given to a user for their first referral.
      */
     firstReferralReward?: number | null;
+
+    /**
+     * Name of the GitHub branch to check for PR merge.
+     */
+    githubBranchName?: string | null;
 
     /**
      * URL of the GitHub repository to check for star.
@@ -1867,6 +1875,11 @@ export namespace RuleUpdateResponse {
     firstReferralReward?: number | null;
 
     /**
+     * Name of the GitHub branch to check for PR merge.
+     */
+    githubBranchName?: string | null;
+
+    /**
      * URL of the GitHub repository to check for star.
      */
     githubRepoUrl?: string | null;
@@ -2988,6 +3001,11 @@ export namespace RuleListResponse {
       firstReferralReward?: number | null;
 
       /**
+       * Name of the GitHub branch to check for PR merge.
+       */
+      githubBranchName?: string | null;
+
+      /**
        * URL of the GitHub repository to check for star.
        */
       githubRepoUrl?: string | null;
@@ -4063,6 +4081,9 @@ export interface RuleCreateParams {
     | 'connected_tiktok'
     | 'tiktok_follow'
     | 'github_repo_star'
+    | 'github_repo_fork'
+    | 'github_repo_collaborator'
+    | 'github_merge_PR'
     | 'discord_role_grant'
     | 'connected_reddit'
     | 'reddit_comment';
@@ -4366,6 +4387,11 @@ export namespace RuleCreateParams {
      * Percentage reward given to a user for their first referral.
      */
     firstReferralReward?: number | null;
+
+    /**
+     * Name of the GitHub branch to check for PR merge.
+     */
+    githubBranchName?: string | null;
 
     /**
      * URL of the GitHub repository to check for star.
@@ -5641,6 +5667,11 @@ export namespace RuleUpdateParams {
      * Percentage reward given to a user for their first referral.
      */
     firstReferralReward?: number | null;
+
+    /**
+     * Name of the GitHub branch to check for PR merge.
+     */
+    githubBranchName?: string | null;
 
     /**
      * URL of the GitHub repository to check for star.

@@ -258,6 +258,9 @@ export namespace RuleGroupGetRuleGroupsResponse {
           | 'connected_tiktok'
           | 'tiktok_follow'
           | 'github_repo_star'
+          | 'github_repo_fork'
+          | 'github_repo_collaborator'
+          | 'github_merge_PR'
           | 'discord_role_grant'
           | 'connected_reddit'
           | 'reddit_comment';
@@ -380,6 +383,11 @@ export namespace RuleGroupGetRuleGroupsResponse {
            * Percentage reward given to a user for their first referral.
            */
           firstReferralReward?: number | null;
+
+          /**
+           * Name of the GitHub branch to check for PR merge.
+           */
+          githubBranchName?: string | null;
 
           /**
            * URL of the GitHub repository to check for star.
