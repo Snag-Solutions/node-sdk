@@ -12,7 +12,13 @@ describe('resource questions', () => {
   // Prism tests are disabled
   test.skip('create: only required params', async () => {
     const responsePromise = client.loyalty.questions.create({
-      loyaltyQuestionAnswers: [{ isCorrect: true, sortIdentifier: 1, text: 'Red' }],
+      loyaltyQuestionAnswers: [
+        {
+          isCorrect: true,
+          sortIdentifier: 1,
+          text: 'Red',
+        },
+      ],
       loyaltyRuleId: '123e4567-e89b-12d3-a456-426614174000',
       questionText: 'What is your favorite color?',
     });
@@ -29,7 +35,12 @@ describe('resource questions', () => {
   test.skip('create: required and optional params', async () => {
     const response = await client.loyalty.questions.create({
       loyaltyQuestionAnswers: [
-        { isCorrect: true, sortIdentifier: 1, text: 'Red', id: '123e4567-e89b-12d3-a456-426614174333' },
+        {
+          isCorrect: true,
+          sortIdentifier: 1,
+          text: 'Red',
+          id: '123e4567-e89b-12d3-a456-426614174333',
+        },
       ],
       loyaltyRuleId: '123e4567-e89b-12d3-a456-426614174000',
       questionText: 'What is your favorite color?',
@@ -40,7 +51,13 @@ describe('resource questions', () => {
   // Prism tests are disabled
   test.skip('update: only required params', async () => {
     const responsePromise = client.loyalty.questions.update('id', {
-      loyaltyQuestionAnswers: [{ isCorrect: true, sortIdentifier: 1, text: 'Red' }],
+      loyaltyQuestionAnswers: [
+        {
+          isCorrect: true,
+          sortIdentifier: 1,
+          text: 'Red',
+        },
+      ],
       questionText: 'What is your favorite color?',
     });
     const rawResponse = await responsePromise.asResponse();
@@ -56,7 +73,12 @@ describe('resource questions', () => {
   test.skip('update: required and optional params', async () => {
     const response = await client.loyalty.questions.update('id', {
       loyaltyQuestionAnswers: [
-        { isCorrect: true, sortIdentifier: 1, text: 'Red', id: '123e4567-e89b-12d3-a456-426614174333' },
+        {
+          isCorrect: true,
+          sortIdentifier: 1,
+          text: 'Red',
+          id: '123e4567-e89b-12d3-a456-426614174333',
+        },
       ],
       questionText: 'What is your favorite color?',
     });

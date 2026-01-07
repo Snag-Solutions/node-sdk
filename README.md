@@ -137,7 +137,9 @@ You can also use the `.withResponse()` method to get the raw `Response` along wi
 ```ts
 const client = new SnagSolutions();
 
-const response = await client.assets.createAsset({ fileName: 'REPLACE_ME', fileSize: 1024 }).asResponse();
+const response = await client.assets
+  .createAsset({ fileName: 'REPLACE_ME', fileSize: 1024 })
+  .asResponse();
 console.log(response.headers.get('X-My-Header'));
 console.log(response.statusText); // access the underlying Response object
 
