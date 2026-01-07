@@ -63,7 +63,11 @@ describe('resource multipliers', () => {
     await expect(
       client.loyalty.multipliers.update(
         '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
-        { description: 'description', multiplier: 0.01, title: 'title' },
+        {
+          description: 'description',
+          multiplier: 0.01,
+          title: 'title',
+        },
         { path: '/_stainless_unknown_path' },
       ),
     ).rejects.toThrow(SnagSolutions.NotFoundError);

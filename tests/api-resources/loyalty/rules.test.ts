@@ -52,7 +52,11 @@ describe('resource rules', () => {
         checkRepost: true,
         checkText: 'loyalty',
         collection: [
-          { address: '0xabcdefabcdefabcdefabcdefabcdefabcdef', multiplier: 2, network: 'mainnet' },
+          {
+            address: '0xabcdefabcdefabcdefabcdefabcdefabcdef',
+            multiplier: 2,
+            network: 'mainnet',
+          },
         ],
         completeProfileConditions: { twitter: true, discord: false },
         conditionDescription: 'Complete the specific task on external platform',
@@ -62,7 +66,13 @@ describe('resource rules', () => {
         discordServersToJoin: [
           {
             id: '123456789012345678',
-            channels: [{ id: '987654321098765432', emojis: [{ id: '1f600' }], text: 'Hello' }],
+            channels: [
+              {
+                id: '987654321098765432',
+                emojis: [{ id: '1f600' }],
+                text: 'Hello',
+              },
+            ],
             roles: [{ id: 'role123' }],
           },
         ],
@@ -147,7 +157,13 @@ describe('resource rules', () => {
           contractId: '123e4567-e89b-12d3-a456-426614174000',
           criteria: 'everyEvent',
           event: 'Transfer',
-          params: [{ condition: '>=', name: 'value', value: '100' }],
+          params: [
+            {
+              condition: '>=',
+              name: 'value',
+              value: '100',
+            },
+          ],
           type: 'event',
         },
         snapshotProposals: [{ id: 'proposal123', space: 'space123' }],
@@ -190,7 +206,11 @@ describe('resource rules', () => {
       claimType: 'auto',
       collectionAddress: '0x1234567890abcdef1234567890abcdef12345678',
       collections: [
-        { address: '0xabcdefabcdefabcdefabcdefabcdefabcdef', network: 'mainnet', symbol: 'COLL' },
+        {
+          address: '0xabcdefabcdefabcdefabcdefabcdefabcdef',
+          network: 'mainnet',
+          symbol: 'COLL',
+        },
       ],
       customRewardsApiUrl: 'https://api.example.com/rewards',
       customRewardsCsvUrl: 'https://example.com/rewards.csv',
@@ -242,7 +262,11 @@ describe('resource rules', () => {
       claimType: 'auto',
       collectionAddress: '0x1234567890abcdef1234567890abcdef12345678',
       collections: [
-        { address: '0xabcdefabcdefabcdefabcdefabcdefabcdef', network: 'mainnet', symbol: 'COLL' },
+        {
+          address: '0xabcdefabcdefabcdefabcdefabcdefabcdef',
+          network: 'mainnet',
+          symbol: 'COLL',
+        },
       ],
       customRewardsApiUrl: 'https://api.example.com/rewards',
       customRewardsCsvUrl: 'https://example.com/rewards.csv',
@@ -268,7 +292,11 @@ describe('resource rules', () => {
         checkRepost: true,
         checkText: 'loyalty',
         collection: [
-          { address: '0xabcdefabcdefabcdefabcdefabcdefabcdef', multiplier: 2, network: 'mainnet' },
+          {
+            address: '0xabcdefabcdefabcdefabcdefabcdefabcdef',
+            multiplier: 2,
+            network: 'mainnet',
+          },
         ],
         completeProfileConditions: { twitter: true, discord: false },
         conditionDescription: 'Complete the specific task on external platform',
@@ -278,7 +306,13 @@ describe('resource rules', () => {
         discordServersToJoin: [
           {
             id: '123456789012345678',
-            channels: [{ id: '987654321098765432', emojis: [{ id: '1f600' }], text: 'Hello' }],
+            channels: [
+              {
+                id: '987654321098765432',
+                emojis: [{ id: '1f600' }],
+                text: 'Hello',
+              },
+            ],
             roles: [{ id: 'role123' }],
           },
         ],
@@ -363,7 +397,13 @@ describe('resource rules', () => {
           contractId: '123e4567-e89b-12d3-a456-426614174000',
           criteria: 'everyEvent',
           event: 'Transfer',
-          params: [{ condition: '>=', name: 'value', value: '100' }],
+          params: [
+            {
+              condition: '>=',
+              name: 'value',
+              value: '100',
+            },
+          ],
           type: 'event',
         },
         snapshotProposals: [{ id: 'proposal123', space: 'space123' }],

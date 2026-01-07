@@ -125,7 +125,11 @@ describe('resource ruleGroups', () => {
     await expect(
       client.loyalty.ruleGroups.updateRuleGroup(
         '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
-        { isCollapsible: true, name: 'name', subtitle: 'subtitle' },
+        {
+          isCollapsible: true,
+          name: 'name',
+          subtitle: 'subtitle',
+        },
         { path: '/_stainless_unknown_path' },
       ),
     ).rejects.toThrow(SnagSolutions.NotFoundError);

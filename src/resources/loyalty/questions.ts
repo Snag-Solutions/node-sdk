@@ -11,7 +11,11 @@ export class Questions extends APIResource {
    * ```ts
    * const question = await client.loyalty.questions.create({
    *   loyaltyQuestionAnswers: [
-   *     { isCorrect: true, sortIdentifier: 1, text: 'Red' },
+   *     {
+   *       isCorrect: true,
+   *       sortIdentifier: 1,
+   *       text: 'Red',
+   *     },
    *   ],
    *   loyaltyRuleId: '123e4567-e89b-12d3-a456-426614174000',
    *   questionText: 'What is your favorite color?',
@@ -31,7 +35,11 @@ export class Questions extends APIResource {
    *   'id',
    *   {
    *     loyaltyQuestionAnswers: [
-   *       { isCorrect: true, sortIdentifier: 1, text: 'Red' },
+   *       {
+   *         isCorrect: true,
+   *         sortIdentifier: 1,
+   *         text: 'Red',
+   *       },
    *     ],
    *     questionText: 'What is your favorite color?',
    *   },
