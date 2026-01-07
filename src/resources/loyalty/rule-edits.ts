@@ -296,6 +296,11 @@ export namespace RuleEditListResponse {
         firstReferralReward?: number | null;
 
         /**
+         * Name of the GitHub branch to check for PR merge.
+         */
+        githubBranchName?: string | null;
+
+        /**
          * URL of the GitHub repository to check for star.
          */
         githubRepoUrl?: string | null;
@@ -1306,6 +1311,11 @@ export namespace RuleEditListResponse {
          * Percentage reward given to a user for their first referral.
          */
         firstReferralReward?: number | null;
+
+        /**
+         * Name of the GitHub branch to check for PR merge.
+         */
+        githubBranchName?: string | null;
 
         /**
          * URL of the GitHub repository to check for star.
@@ -2375,6 +2385,11 @@ export namespace RuleEditRestoreResponse {
       firstReferralReward?: number | null;
 
       /**
+       * Name of the GitHub branch to check for PR merge.
+       */
+      githubBranchName?: string | null;
+
+      /**
        * URL of the GitHub repository to check for star.
        */
       githubRepoUrl?: string | null;
@@ -3385,6 +3400,11 @@ export namespace RuleEditRestoreResponse {
        * Percentage reward given to a user for their first referral.
        */
       firstReferralReward?: number | null;
+
+      /**
+       * Name of the GitHub branch to check for PR merge.
+       */
+      githubBranchName?: string | null;
 
       /**
        * URL of the GitHub repository to check for star.
