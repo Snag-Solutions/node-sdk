@@ -708,6 +708,11 @@ export namespace RuleCreateResponse {
     onlyRewardSingleTokenOwnership?: boolean | null;
 
     /**
+     * Pre-generated text template that will be used to prefill the post content.
+     */
+    preGeneratedPostText?: string | null;
+
+    /**
      * Promotional code associated with the rule.
      */
     promoCode?: string;
@@ -1990,6 +1995,11 @@ export namespace RuleUpdateResponse {
     onlyRewardSingleTokenOwnership?: boolean | null;
 
     /**
+     * Pre-generated text template that will be used to prefill the post content.
+     */
+    preGeneratedPostText?: string | null;
+
+    /**
      * Promotional code associated with the rule.
      */
     promoCode?: string;
@@ -3114,6 +3124,11 @@ export namespace RuleListResponse {
        * give points for only one token ownership per contract
        */
       onlyRewardSingleTokenOwnership?: boolean | null;
+
+      /**
+       * Pre-generated text template that will be used to prefill the post content.
+       */
+      preGeneratedPostText?: string | null;
 
       /**
        * Promotional code associated with the rule.
@@ -4504,6 +4519,11 @@ export namespace RuleCreateParams {
     onlyRewardSingleTokenOwnership?: boolean | null;
 
     /**
+     * Pre-generated text template that will be used to prefill the post content.
+     */
+    preGeneratedPostText?: string | null;
+
+    /**
      * Promotional code associated with the rule.
      */
     promoCode?: string;
@@ -5782,6 +5802,11 @@ export namespace RuleUpdateParams {
      * give points for only one token ownership per contract
      */
     onlyRewardSingleTokenOwnership?: boolean | null;
+
+    /**
+     * Pre-generated text template that will be used to prefill the post content.
+     */
+    preGeneratedPostText?: string | null;
 
     /**
      * Promotional code associated with the rule.

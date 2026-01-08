@@ -500,6 +500,11 @@ export namespace RuleGroupGetRuleGroupsResponse {
           onlyRewardSingleTokenOwnership?: boolean | null;
 
           /**
+           * Pre-generated text template that will be used to prefill the post content.
+           */
+          preGeneratedPostText?: string | null;
+
+          /**
            * Promotional code associated with the rule.
            */
           promoCode?: string;
