@@ -411,6 +411,11 @@ export namespace RuleEditListResponse {
         onlyRewardSingleTokenOwnership?: boolean | null;
 
         /**
+         * Pre-generated text template that will be used to prefill the post content.
+         */
+        preGeneratedPostText?: string | null;
+
+        /**
          * Promotional code associated with the rule.
          */
         promoCode?: string;
@@ -1426,6 +1431,11 @@ export namespace RuleEditListResponse {
          * give points for only one token ownership per contract
          */
         onlyRewardSingleTokenOwnership?: boolean | null;
+
+        /**
+         * Pre-generated text template that will be used to prefill the post content.
+         */
+        preGeneratedPostText?: string | null;
 
         /**
          * Promotional code associated with the rule.
@@ -2500,6 +2510,11 @@ export namespace RuleEditRestoreResponse {
       onlyRewardSingleTokenOwnership?: boolean | null;
 
       /**
+       * Pre-generated text template that will be used to prefill the post content.
+       */
+      preGeneratedPostText?: string | null;
+
+      /**
        * Promotional code associated with the rule.
        */
       promoCode?: string;
@@ -3515,6 +3530,11 @@ export namespace RuleEditRestoreResponse {
        * give points for only one token ownership per contract
        */
       onlyRewardSingleTokenOwnership?: boolean | null;
+
+      /**
+       * Pre-generated text template that will be used to prefill the post content.
+       */
+      preGeneratedPostText?: string | null;
 
       /**
        * Promotional code associated with the rule.
