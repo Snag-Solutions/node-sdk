@@ -318,6 +318,11 @@ export interface RuleCreateResponse {
   collections?: Array<RuleCreateResponse.Collection> | null;
 
   /**
+   * The IDs of the contracts
+   */
+  contractIds?: Array<string> | null;
+
+  /**
    * URL for fetching custom rewards
    */
   customRewardsApiUrl?: string | null;
@@ -1519,6 +1524,11 @@ export interface RuleUpdateResponse {
    * List of associated collections
    */
   collections?: Array<RuleUpdateResponse.Collection> | null;
+
+  /**
+   * The IDs of the contracts
+   */
+  contractIds?: Array<string> | null;
 
   /**
    * API URL for custom rewards integration
@@ -4129,6 +4139,11 @@ export interface RuleCreateParams {
   collections?: Array<RuleCreateParams.Collection> | null;
 
   /**
+   * The IDs of the contracts
+   */
+  contractIds?: Array<string> | null;
+
+  /**
    * URL for fetching custom rewards
    */
   customRewardsApiUrl?: string | null;
@@ -5328,6 +5343,11 @@ export interface RuleUpdateParams {
    * List of associated collections
    */
   collections?: Array<RuleUpdateParams.Collection> | null;
+
+  /**
+   * The IDs of the contracts
+   */
+  contractIds?: Array<string> | null;
 
   /**
    * API URL for custom rewards integration
