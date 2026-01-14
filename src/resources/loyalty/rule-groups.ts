@@ -263,7 +263,8 @@ export namespace RuleGroupGetRuleGroupsResponse {
           | 'github_merge_PR'
           | 'discord_role_grant'
           | 'connected_reddit'
-          | 'reddit_comment';
+          | 'reddit_comment'
+          | 'robinhood_token_hold';
       }
 
       export namespace LoyaltyRule {
@@ -594,6 +595,8 @@ export namespace RuleGroupGetRuleGroupsResponse {
            * Flag indicating if the rule should reward quality posts.
            */
           rewardQualityPosts?: boolean;
+
+          robinhoodSymbols?: Array<string> | null;
 
           /**
            * Wallet address of the user can only be used if userId is not provided
