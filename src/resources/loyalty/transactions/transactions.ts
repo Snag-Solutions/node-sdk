@@ -508,6 +508,7 @@ export interface TransactionGetTransactionEntriesParams {
     | 'discord_role_grant'
     | 'connected_reddit'
     | 'reddit_comment'
+    | 'robinhood_token_hold'
     | Array<
         | 'Bonus'
         | 'BoughtOn'
@@ -585,6 +586,7 @@ export interface TransactionGetTransactionEntriesParams {
         | 'discord_role_grant'
         | 'connected_reddit'
         | 'reddit_comment'
+        | 'robinhood_token_hold'
       >;
 
   /**
