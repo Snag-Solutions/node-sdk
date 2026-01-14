@@ -290,7 +290,8 @@ export interface RuleCreateResponse {
     | 'github_merge_PR'
     | 'discord_role_grant'
     | 'connected_reddit'
-    | 'reddit_comment';
+    | 'reddit_comment'
+    | 'robinhood_token_hold';
 
   /**
    * Unique identifier for the associated website
@@ -807,6 +808,8 @@ export namespace RuleCreateResponse {
      * Flag indicating if the rule should reward quality posts.
      */
     rewardQualityPosts?: boolean;
+
+    robinhoodSymbols?: Array<string> | null;
 
     /**
      * Wallet address of the user can only be used if userId is not provided
@@ -2100,6 +2103,8 @@ export namespace RuleUpdateResponse {
      */
     rewardQualityPosts?: boolean;
 
+    robinhoodSymbols?: Array<string> | null;
+
     /**
      * Wallet address of the user can only be used if userId is not provided
      */
@@ -3231,6 +3236,8 @@ export namespace RuleListResponse {
        */
       rewardQualityPosts?: boolean;
 
+      robinhoodSymbols?: Array<string> | null;
+
       /**
        * Wallet address of the user can only be used if userId is not provided
        */
@@ -4111,7 +4118,8 @@ export interface RuleCreateParams {
     | 'github_merge_PR'
     | 'discord_role_grant'
     | 'connected_reddit'
-    | 'reddit_comment';
+    | 'reddit_comment'
+    | 'robinhood_token_hold';
 
   /**
    * Unique identifier for the associated website
@@ -4628,6 +4636,8 @@ export namespace RuleCreateParams {
      * Flag indicating if the rule should reward quality posts.
      */
     rewardQualityPosts?: boolean;
+
+    robinhoodSymbols?: Array<string> | null;
 
     /**
      * Wallet address of the user can only be used if userId is not provided
@@ -5918,6 +5928,8 @@ export namespace RuleUpdateParams {
      * Flag indicating if the rule should reward quality posts.
      */
     rewardQualityPosts?: boolean;
+
+    robinhoodSymbols?: Array<string> | null;
 
     /**
      * Wallet address of the user can only be used if userId is not provided

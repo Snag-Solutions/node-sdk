@@ -506,6 +506,8 @@ export namespace RuleEditListResponse {
          */
         rewardQualityPosts?: boolean;
 
+        robinhoodSymbols?: Array<string> | null;
+
         /**
          * Wallet address of the user can only be used if userId is not provided
          */
@@ -1527,6 +1529,8 @@ export namespace RuleEditListResponse {
          * Flag indicating if the rule should reward quality posts.
          */
         rewardQualityPosts?: boolean;
+
+        robinhoodSymbols?: Array<string> | null;
 
         /**
          * Wallet address of the user can only be used if userId is not provided
@@ -2605,6 +2609,8 @@ export namespace RuleEditRestoreResponse {
        */
       rewardQualityPosts?: boolean;
 
+      robinhoodSymbols?: Array<string> | null;
+
       /**
        * Wallet address of the user can only be used if userId is not provided
        */
@@ -3626,6 +3632,8 @@ export namespace RuleEditRestoreResponse {
        * Flag indicating if the rule should reward quality posts.
        */
       rewardQualityPosts?: boolean;
+
+      robinhoodSymbols?: Array<string> | null;
 
       /**
        * Wallet address of the user can only be used if userId is not provided
