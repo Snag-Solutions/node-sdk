@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.0-alpha.214 (2026-01-15)
+
+Full Changelog: [v0.1.0-alpha.213...v0.1.0-alpha.214](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.213...v0.1.0-alpha.214)
+
+### Features
+
+* **api:** open api update ([26d46c7](https://github.com/Snag-Solutions/node-sdk/commit/26d46c7c764d459b2669f1c946db8f77c7f19c51))
+
+
+### Chores
+
+* **internal:** upgrade babel, qs, js-yaml ([65189dc](https://github.com/Snag-Solutions/node-sdk/commit/65189dc49930f60d2cac8aef7891a4d057164630))
+
 ## 0.1.0-alpha.213 (2026-01-14)
 
 Full Changelog: [v0.1.0-alpha.212...v0.1.0-alpha.213](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.212...v0.1.0-alpha.213)
