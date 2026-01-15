@@ -264,7 +264,8 @@ export namespace RuleGroupGetRuleGroupsResponse {
           | 'discord_role_grant'
           | 'connected_reddit'
           | 'reddit_comment'
-          | 'robinhood_token_hold';
+          | 'robinhood_token_hold'
+          | 'shopify_purchase';
       }
 
       export namespace LoyaltyRule {
