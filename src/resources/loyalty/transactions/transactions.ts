@@ -509,7 +509,6 @@ export interface TransactionGetTransactionEntriesParams {
     | 'connected_reddit'
     | 'reddit_comment'
     | 'robinhood_token_hold'
-    | 'shopify_purchase'
     | Array<
         | 'Bonus'
         | 'BoughtOn'
@@ -588,7 +587,6 @@ export interface TransactionGetTransactionEntriesParams {
         | 'connected_reddit'
         | 'reddit_comment'
         | 'robinhood_token_hold'
-        | 'shopify_purchase'
       >;
 
   /**
