@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.0-alpha.215 (2026-01-17)
+
+Full Changelog: [v0.1.0-alpha.214...v0.1.0-alpha.215](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.214...v0.1.0-alpha.215)
+
+### Features
+
+* **api:** open api update ([bd9a0a4](https://github.com/Snag-Solutions/node-sdk/commit/bd9a0a49e2c68076ee001bdf64feb539fcbf27c9))
+
+
+### Chores
+
+* **internal:** update `actions/checkout` version ([3c92abc](https://github.com/Snag-Solutions/node-sdk/commit/3c92abc1203d7c92df41f61ff9aa7aab15494e7d))
+
 ## 0.1.0-alpha.214 (2026-01-15)
 
 Full Changelog: [v0.1.0-alpha.213...v0.1.0-alpha.214](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.213...v0.1.0-alpha.214)
