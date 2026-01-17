@@ -291,8 +291,7 @@ export interface RuleCreateResponse {
     | 'discord_role_grant'
     | 'connected_reddit'
     | 'reddit_comment'
-    | 'robinhood_token_hold'
-    | 'shopify_purchase';
+    | 'robinhood_token_hold';
 
   /**
    * Unique identifier for the associated website
@@ -4120,8 +4119,7 @@ export interface RuleCreateParams {
     | 'discord_role_grant'
     | 'connected_reddit'
     | 'reddit_comment'
-    | 'robinhood_token_hold'
-    | 'shopify_purchase';
+    | 'robinhood_token_hold';
 
   /**
    * Unique identifier for the associated website
