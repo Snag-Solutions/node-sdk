@@ -114,13 +114,17 @@ Types:
 
 - <code><a href="./src/resources/loyalty/transactions/transactions.ts">TransactionCreateTransactionResponse</a></code>
 - <code><a href="./src/resources/loyalty/transactions/transactions.ts">TransactionGetTransactionEntriesResponse</a></code>
+- <code><a href="./src/resources/loyalty/transactions/transactions.ts">TransactionListBadgeUsersResponse</a></code>
 - <code><a href="./src/resources/loyalty/transactions/transactions.ts">TransactionListRuleChainsResponse</a></code>
+- <code><a href="./src/resources/loyalty/transactions/transactions.ts">TransactionResetLoyaltyCurrencyResponse</a></code>
 
 Methods:
 
 - <code title="post /api/loyalty/transactions">client.loyalty.transactions.<a href="./src/resources/loyalty/transactions/transactions.ts">createTransaction</a>({ ...params }) -> TransactionCreateTransactionResponse</code>
 - <code title="get /api/loyalty/transaction_entries">client.loyalty.transactions.<a href="./src/resources/loyalty/transactions/transactions.ts">getTransactionEntries</a>({ ...params }) -> TransactionGetTransactionEntriesResponse</code>
+- <code title="get /api/loyalty/badge_users">client.loyalty.transactions.<a href="./src/resources/loyalty/transactions/transactions.ts">listBadgeUsers</a>({ ...params }) -> TransactionListBadgeUsersResponse</code>
 - <code title="get /api/loyalty/rule_chains">client.loyalty.transactions.<a href="./src/resources/loyalty/transactions/transactions.ts">listRuleChains</a>({ ...params }) -> TransactionListRuleChainsResponse</code>
+- <code title="post /api/loyalty/reset">client.loyalty.transactions.<a href="./src/resources/loyalty/transactions/transactions.ts">resetLoyaltyCurrency</a>({ ...params }) -> TransactionResetLoyaltyCurrencyResponse</code>
 
 ### RuleStatuses
 
@@ -133,6 +137,18 @@ Methods:
 
 - <code title="post /api/loyalty/rule_statuses">client.loyalty.transactions.ruleStatuses.<a href="./src/resources/loyalty/transactions/rule-statuses.ts">update</a>({ ...params }) -> RuleStatusUpdateResponse</code>
 - <code title="get /api/loyalty/rule_statuses">client.loyalty.transactions.ruleStatuses.<a href="./src/resources/loyalty/transactions/rule-statuses.ts">list</a>({ ...params }) -> RuleStatusListResponse</code>
+
+### Posts
+
+Types:
+
+- <code><a href="./src/resources/loyalty/transactions/posts.ts">PostListResponse</a></code>
+- <code><a href="./src/resources/loyalty/transactions/posts.ts">PostRewardResponse</a></code>
+
+Methods:
+
+- <code title="get /api/loyalty/posts">client.loyalty.transactions.posts.<a href="./src/resources/loyalty/transactions/posts.ts">list</a>({ ...params }) -> PostListResponse</code>
+- <code title="post /api/loyalty/posts/{id}/reward">client.loyalty.transactions.posts.<a href="./src/resources/loyalty/transactions/posts.ts">reward</a>(id, { ...params }) -> PostRewardResponse</code>
 
 ## Accounts
 
@@ -268,11 +284,47 @@ Methods:
 
 Types:
 
-- <code><a href="./src/resources/minting.ts">MintingGetAssetsResponse</a></code>
+- <code><a href="./src/resources/minting/minting.ts">MintingGetAssetsResponse</a></code>
+- <code><a href="./src/resources/minting/minting.ts">MintingGetTokenGateStatusResponse</a></code>
 
 Methods:
 
-- <code title="get /api/minting/assets">client.minting.<a href="./src/resources/minting.ts">getAssets</a>({ ...params }) -> MintingGetAssetsResponse</code>
+- <code title="get /api/minting/assets">client.minting.<a href="./src/resources/minting/minting.ts">getAssets</a>({ ...params }) -> MintingGetAssetsResponse</code>
+- <code title="get /api/minting/token_gate">client.minting.<a href="./src/resources/minting/minting.ts">getTokenGateStatus</a>({ ...params }) -> MintingGetTokenGateStatusResponse</code>
+
+## Status
+
+Types:
+
+- <code><a href="./src/resources/minting/status.ts">StatusRetrieveResponse</a></code>
+- <code><a href="./src/resources/minting/status.ts">StatusUpdateResponse</a></code>
+
+Methods:
+
+- <code title="get /api/minting/status/{id}">client.minting.status.<a href="./src/resources/minting/status.ts">retrieve</a>(id) -> StatusRetrieveResponse</code>
+- <code title="post /api/minting/status/{id}">client.minting.status.<a href="./src/resources/minting/status.ts">update</a>(id, { ...params }) -> StatusUpdateResponse</code>
+
+## Allowlist
+
+Types:
+
+- <code><a href="./src/resources/minting/allowlist.ts">AllowlistListResponse</a></code>
+- <code><a href="./src/resources/minting/allowlist.ts">AllowlistUpsertResponse</a></code>
+
+Methods:
+
+- <code title="get /api/minting/assets/allowlist">client.minting.allowlist.<a href="./src/resources/minting/allowlist.ts">list</a>({ ...params }) -> AllowlistListResponse</code>
+- <code title="post /api/minting/assets/allowlist">client.minting.allowlist.<a href="./src/resources/minting/allowlist.ts">upsert</a>({ ...params }) -> AllowlistUpsertResponse</code>
+
+## Contracts
+
+Types:
+
+- <code><a href="./src/resources/minting/contracts.ts">ContractMintResponse</a></code>
+
+Methods:
+
+- <code title="post /api/minting/contracts/mint">client.minting.contracts.<a href="./src/resources/minting/contracts.ts">mint</a>({ ...params }) -> ContractMintResponse</code>
 
 # Referral
 
@@ -330,3 +382,23 @@ Methods:
 
 - <code title="get /api/website_user_roles">client.websites.websiteUserRoles.<a href="./src/resources/websites/website-user-roles.ts">list</a>({ ...params }) -> WebsiteUserRoleListResponse</code>
 - <code title="post /api/website_user_roles">client.websites.websiteUserRoles.<a href="./src/resources/websites/website-user-roles.ts">assign</a>({ ...params }) -> WebsiteUserRoleAssignResponse</code>
+
+# TokenClaims
+
+Types:
+
+- <code><a href="./src/resources/token-claims.ts">TokenClaimRetrieveResponse</a></code>
+- <code><a href="./src/resources/token-claims.ts">TokenClaimListResponse</a></code>
+- <code><a href="./src/resources/token-claims.ts">TokenClaimCheckEligibilityResponse</a></code>
+- <code><a href="./src/resources/token-claims.ts">TokenClaimGetProofResponse</a></code>
+- <code><a href="./src/resources/token-claims.ts">TokenClaimListUsersResponse</a></code>
+- <code><a href="./src/resources/token-claims.ts">TokenClaimUpdateClaimResponse</a></code>
+
+Methods:
+
+- <code title="get /api/token_claims/{id}">client.tokenClaims.<a href="./src/resources/token-claims.ts">retrieve</a>(pathId, { ...params }) -> TokenClaimRetrieveResponse</code>
+- <code title="get /api/token_claims">client.tokenClaims.<a href="./src/resources/token-claims.ts">list</a>({ ...params }) -> TokenClaimListResponse</code>
+- <code title="get /api/token_claims/{id}/eligibility">client.tokenClaims.<a href="./src/resources/token-claims.ts">checkEligibility</a>(pathId, { ...params }) -> TokenClaimCheckEligibilityResponse</code>
+- <code title="get /api/token_claims/{id}/proof">client.tokenClaims.<a href="./src/resources/token-claims.ts">getProof</a>(pathId, { ...params }) -> TokenClaimGetProofResponse</code>
+- <code title="get /api/token_claims/{id}/users">client.tokenClaims.<a href="./src/resources/token-claims.ts">listUsers</a>(id, { ...params }) -> TokenClaimListUsersResponse</code>
+- <code title="post /api/token_claims/{id}/claim">client.tokenClaims.<a href="./src/resources/token-claims.ts">updateClaim</a>(id, { ...params }) -> TokenClaimUpdateClaimResponse</code>

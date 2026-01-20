@@ -8,7 +8,21 @@ import * as Uploads from './uploads';
 import * as API from './resources/index';
 import { AssetCreateAssetParams, AssetCreateAssetResponse, Assets } from './resources/assets';
 import { Auth, AuthConnectAuthParams, AuthConnectAuthResponse } from './resources/auth';
-import { Minting, MintingGetAssetsParams, MintingGetAssetsResponse } from './resources/minting';
+import {
+  TokenClaimCheckEligibilityParams,
+  TokenClaimCheckEligibilityResponse,
+  TokenClaimGetProofParams,
+  TokenClaimGetProofResponse,
+  TokenClaimListParams,
+  TokenClaimListResponse,
+  TokenClaimListUsersParams,
+  TokenClaimListUsersResponse,
+  TokenClaimRetrieveParams,
+  TokenClaimRetrieveResponse,
+  TokenClaimUpdateClaimParams,
+  TokenClaimUpdateClaimResponse,
+  TokenClaims,
+} from './resources/token-claims';
 import {
   AuctionGetPageSectionsParams,
   AuctionGetPageSectionsResponse,
@@ -18,6 +32,13 @@ import {
   Auctions,
 } from './resources/auctions/auctions';
 import { Loyalty } from './resources/loyalty/loyalty';
+import {
+  Minting,
+  MintingGetAssetsParams,
+  MintingGetAssetsResponse,
+  MintingGetTokenGateStatusParams,
+  MintingGetTokenGateStatusResponse,
+} from './resources/minting/minting';
 import {
   Referral,
   ReferralCreateCodeParams,
@@ -170,6 +191,7 @@ export class SnagSolutions extends Core.APIClient {
   minting: API.Minting = new API.Minting(this);
   referral: API.Referral = new API.Referral(this);
   websites: API.Websites = new API.Websites(this);
+  tokenClaims: API.TokenClaims = new API.TokenClaims(this);
 
   /**
    * Check whether the base URL is set to its default.
@@ -226,6 +248,7 @@ SnagSolutions.Loyalty = Loyalty;
 SnagSolutions.Minting = Minting;
 SnagSolutions.Referral = Referral;
 SnagSolutions.Websites = Websites;
+SnagSolutions.TokenClaims = TokenClaims;
 
 export declare namespace SnagSolutions {
   export type RequestOptions = Core.RequestOptions;
@@ -272,7 +295,9 @@ export declare namespace SnagSolutions {
   export {
     Minting as Minting,
     type MintingGetAssetsResponse as MintingGetAssetsResponse,
+    type MintingGetTokenGateStatusResponse as MintingGetTokenGateStatusResponse,
     type MintingGetAssetsParams as MintingGetAssetsParams,
+    type MintingGetTokenGateStatusParams as MintingGetTokenGateStatusParams,
   };
 
   export {
@@ -287,6 +312,22 @@ export declare namespace SnagSolutions {
     type WebsiteListResponse as WebsiteListResponse,
     type WebsiteCreateParams as WebsiteCreateParams,
     type WebsiteListParams as WebsiteListParams,
+  };
+
+  export {
+    TokenClaims as TokenClaims,
+    type TokenClaimRetrieveResponse as TokenClaimRetrieveResponse,
+    type TokenClaimListResponse as TokenClaimListResponse,
+    type TokenClaimCheckEligibilityResponse as TokenClaimCheckEligibilityResponse,
+    type TokenClaimGetProofResponse as TokenClaimGetProofResponse,
+    type TokenClaimListUsersResponse as TokenClaimListUsersResponse,
+    type TokenClaimUpdateClaimResponse as TokenClaimUpdateClaimResponse,
+    type TokenClaimRetrieveParams as TokenClaimRetrieveParams,
+    type TokenClaimListParams as TokenClaimListParams,
+    type TokenClaimCheckEligibilityParams as TokenClaimCheckEligibilityParams,
+    type TokenClaimGetProofParams as TokenClaimGetProofParams,
+    type TokenClaimListUsersParams as TokenClaimListUsersParams,
+    type TokenClaimUpdateClaimParams as TokenClaimUpdateClaimParams,
   };
 }
 

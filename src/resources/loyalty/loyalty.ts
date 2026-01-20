@@ -110,8 +110,12 @@ import {
   TransactionCreateTransactionResponse,
   TransactionGetTransactionEntriesParams,
   TransactionGetTransactionEntriesResponse,
+  TransactionListBadgeUsersParams,
+  TransactionListBadgeUsersResponse,
   TransactionListRuleChainsParams,
   TransactionListRuleChainsResponse,
+  TransactionResetLoyaltyCurrencyParams,
+  TransactionResetLoyaltyCurrencyResponse,
   Transactions,
 } from './transactions/transactions';
 
@@ -159,10 +163,14 @@ export declare namespace Loyalty {
     Transactions as Transactions,
     type TransactionCreateTransactionResponse as TransactionCreateTransactionResponse,
     type TransactionGetTransactionEntriesResponse as TransactionGetTransactionEntriesResponse,
+    type TransactionListBadgeUsersResponse as TransactionListBadgeUsersResponse,
     type TransactionListRuleChainsResponse as TransactionListRuleChainsResponse,
+    type TransactionResetLoyaltyCurrencyResponse as TransactionResetLoyaltyCurrencyResponse,
     type TransactionCreateTransactionParams as TransactionCreateTransactionParams,
     type TransactionGetTransactionEntriesParams as TransactionGetTransactionEntriesParams,
+    type TransactionListBadgeUsersParams as TransactionListBadgeUsersParams,
     type TransactionListRuleChainsParams as TransactionListRuleChainsParams,
+    type TransactionResetLoyaltyCurrencyParams as TransactionResetLoyaltyCurrencyParams,
   };
 
   export {
