@@ -11,12 +11,33 @@ export {
 } from './auctions/auctions';
 export { Auth, type AuthConnectAuthResponse, type AuthConnectAuthParams } from './auth';
 export { Loyalty } from './loyalty/loyalty';
-export { Minting, type MintingGetAssetsResponse, type MintingGetAssetsParams } from './minting';
+export {
+  Minting,
+  type MintingGetAssetsResponse,
+  type MintingGetTokenGateStatusResponse,
+  type MintingGetAssetsParams,
+  type MintingGetTokenGateStatusParams,
+} from './minting/minting';
 export {
   Referral,
   type ReferralCreateCodeResponse,
   type ReferralCreateCodeParams,
 } from './referral/referral';
+export {
+  TokenClaims,
+  type TokenClaimRetrieveResponse,
+  type TokenClaimListResponse,
+  type TokenClaimCheckEligibilityResponse,
+  type TokenClaimGetProofResponse,
+  type TokenClaimListUsersResponse,
+  type TokenClaimUpdateClaimResponse,
+  type TokenClaimRetrieveParams,
+  type TokenClaimListParams,
+  type TokenClaimCheckEligibilityParams,
+  type TokenClaimGetProofParams,
+  type TokenClaimListUsersParams,
+  type TokenClaimUpdateClaimParams,
+} from './token-claims';
 export {
   Users,
   type UserListResponse,

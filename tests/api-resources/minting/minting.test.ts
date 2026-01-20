@@ -44,4 +44,33 @@ describe('resource minting', () => {
       walletAddress: '0x1234567890123456789012345678901234567890',
     });
   });
+
+  // Prism tests are disabled
+  test.skip('getTokenGateStatus: only required params', async () => {
+    const responsePromise = client.minting.getTokenGateStatus({
+      collectionAddress: 'collectionAddress',
+      mintingContractAssetId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+      mintingContractId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+      network: 'network',
+      tokenId: 'tokenId',
+    });
+    const rawResponse = await responsePromise.asResponse();
+    expect(rawResponse).toBeInstanceOf(Response);
+    const response = await responsePromise;
+    expect(response).not.toBeInstanceOf(Response);
+    const dataAndResponse = await responsePromise.withResponse();
+    expect(dataAndResponse.data).toBe(response);
+    expect(dataAndResponse.response).toBe(rawResponse);
+  });
+
+  // Prism tests are disabled
+  test.skip('getTokenGateStatus: required and optional params', async () => {
+    const response = await client.minting.getTokenGateStatus({
+      collectionAddress: 'collectionAddress',
+      mintingContractAssetId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+      mintingContractId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+      network: 'network',
+      tokenId: 'tokenId',
+    });
+  });
 });
