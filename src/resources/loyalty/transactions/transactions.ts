@@ -3,6 +3,8 @@
 import { APIResource } from '../../../resource';
 import { isRequestOptions } from '../../../core';
 import * as Core from '../../../core';
+import * as PostsAPI from './posts';
+import { PostListParams, PostListResponse, PostRewardParams, PostRewardResponse, Posts } from './posts';
 import * as RuleStatusesAPI from './rule-statuses';
 import {
   RuleStatusListParams,
@@ -14,6 +16,7 @@ import {
 
 export class Transactions extends APIResource {
   ruleStatuses: RuleStatusesAPI.RuleStatuses = new RuleStatusesAPI.RuleStatuses(this._client);
+  posts: PostsAPI.Posts = new PostsAPI.Posts(this._client);
 
   /**
    * Create a loyalty transaction to update account balances.
@@ -62,6 +65,24 @@ export class Transactions extends APIResource {
   }
 
   /**
+   * This endpoint allows you to fetch users for a specific badge.
+   *
+   * @example
+   * ```ts
+   * const response =
+   *   await client.loyalty.transactions.listBadgeUsers({
+   *     loyaltyBadgeId: '123e4567-e89b-12d3-a456-426614174222',
+   *   });
+   * ```
+   */
+  listBadgeUsers(
+    query: TransactionListBadgeUsersParams,
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<TransactionListBadgeUsersResponse> {
+    return this._client.get('/api/loyalty/badge_users', { query, ...options });
+  }
+
+  /**
    * Retrieve configured loyalty rule chains
    *
    * @example
@@ -78,6 +99,26 @@ export class Transactions extends APIResource {
     options?: Core.RequestOptions,
   ): Core.APIPromise<TransactionListRuleChainsResponse> {
     return this._client.get('/api/loyalty/rule_chains', { query, ...options });
+  }
+
+  /**
+   * Reset Loyalty Currency of a website
+   *
+   * @example
+   * ```ts
+   * const response =
+   *   await client.loyalty.transactions.resetLoyaltyCurrency({
+   *     loyaltyCurrencyId:
+   *       '123e4567-e89b-12d3-a456-426614174000',
+   *     type: 'loyalty_reset_balances',
+   *   });
+   * ```
+   */
+  resetLoyaltyCurrency(
+    body: TransactionResetLoyaltyCurrencyParams,
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<TransactionResetLoyaltyCurrencyResponse> {
+    return this._client.post('/api/loyalty/reset', { body, ...options });
   }
 }
 
@@ -238,6 +279,83 @@ export namespace TransactionGetTransactionEntriesResponse {
   }
 }
 
+/**
+ * Response returned upon successful fetching of the badge users.
+ */
+export interface TransactionListBadgeUsersResponse {
+  /**
+   * UUID of the user badge (converted to lowercase)
+   */
+  id: string;
+
+  /**
+   * The date and time the user badge was created
+   */
+  createdAt: string;
+
+  /**
+   * The date and time the user badge was deleted
+   */
+  deletedAt: string | null;
+
+  /**
+   * UUID of the badge (converted to lowercase)
+   */
+  loyaltyBadgeId: string;
+
+  /**
+   * UUID of the organization (converted to lowercase)
+   */
+  organizationId: string;
+
+  /**
+   * Array of progress for the badge
+   */
+  progress: Array<unknown>;
+
+  /**
+   * The status of the badge
+   */
+  status: 'active' | 'inactive' | 'revoked';
+
+  /**
+   * The date and time the user badge was updated
+   */
+  updatedAt: string;
+
+  /**
+   * UUID of the user (converted to lowercase)
+   */
+  userId: string;
+
+  /**
+   * UUID of the website (converted to lowercase)
+   */
+  websiteId: string;
+
+  /**
+   * Whether the user has dismissed the badge in the UI
+   */
+  dismissedInUi?: boolean;
+
+  /**
+   * User associated with the user badge
+   */
+  user?: TransactionListBadgeUsersResponse.User | null;
+}
+
+export namespace TransactionListBadgeUsersResponse {
+  /**
+   * User associated with the user badge
+   */
+  export interface User {
+    /**
+     * Wallet address of the user
+     */
+    walletAddress: string;
+  }
+}
+
 export interface TransactionListRuleChainsResponse {
   data: Array<TransactionListRuleChainsResponse.Data>;
 
@@ -344,6 +462,10 @@ export namespace TransactionListRuleChainsResponse {
       }
     }
   }
+}
+
+export interface TransactionResetLoyaltyCurrencyResponse {
+  success: boolean;
 }
 
 export interface TransactionCreateTransactionParams {
@@ -657,6 +779,43 @@ export interface TransactionGetTransactionEntriesParams {
   websiteId?: string;
 }
 
+export interface TransactionListBadgeUsersParams {
+  /**
+   * UUID of the loyalty badge (converted to lowercase)
+   */
+  loyaltyBadgeId: string;
+
+  /**
+   * Number of badges to fetch
+   */
+  limit?: number;
+
+  /**
+   * UUID of the organization (optional, converted to lowercase)
+   */
+  organizationId?: string;
+
+  /**
+   * UUID of the badge to start after (converted to lowercase)
+   */
+  startingAfter?: string;
+
+  /**
+   * Status of the badge
+   */
+  status?: 'active' | 'inactive' | 'revoked';
+
+  /**
+   * Wallet Address of the user, or array of wallet addresses.
+   */
+  walletAddress?: string;
+
+  /**
+   * UUID of the website (optional, converted to lowercase)
+   */
+  websiteId?: string;
+}
+
 export interface TransactionListRuleChainsParams {
   /**
    * Unique identifier for the organization
@@ -679,16 +838,43 @@ export interface TransactionListRuleChainsParams {
   startingAfter?: string;
 }
 
+export interface TransactionResetLoyaltyCurrencyParams {
+  /**
+   * UUID of the loyalty currency to reset
+   */
+  loyaltyCurrencyId: string;
+
+  type:
+    | 'loyalty_reset_balances'
+    | 'loyalty_reset_balances_data_and_rules'
+    | 'loyalty_reset_balances_data_not_rules';
+
+  /**
+   * UUID of the organization (optional, converted to lowercase)
+   */
+  organizationId?: string;
+
+  /**
+   * UUID of the website (optional, converted to lowercase)
+   */
+  websiteId?: string;
+}
+
 Transactions.RuleStatuses = RuleStatuses;
+Transactions.Posts = Posts;
 
 export declare namespace Transactions {
   export {
     type TransactionCreateTransactionResponse as TransactionCreateTransactionResponse,
     type TransactionGetTransactionEntriesResponse as TransactionGetTransactionEntriesResponse,
+    type TransactionListBadgeUsersResponse as TransactionListBadgeUsersResponse,
     type TransactionListRuleChainsResponse as TransactionListRuleChainsResponse,
+    type TransactionResetLoyaltyCurrencyResponse as TransactionResetLoyaltyCurrencyResponse,
     type TransactionCreateTransactionParams as TransactionCreateTransactionParams,
     type TransactionGetTransactionEntriesParams as TransactionGetTransactionEntriesParams,
+    type TransactionListBadgeUsersParams as TransactionListBadgeUsersParams,
     type TransactionListRuleChainsParams as TransactionListRuleChainsParams,
+    type TransactionResetLoyaltyCurrencyParams as TransactionResetLoyaltyCurrencyParams,
   };
 
   export {
@@ -697,5 +883,13 @@ export declare namespace Transactions {
     type RuleStatusListResponse as RuleStatusListResponse,
     type RuleStatusUpdateParams as RuleStatusUpdateParams,
     type RuleStatusListParams as RuleStatusListParams,
+  };
+
+  export {
+    Posts as Posts,
+    type PostListResponse as PostListResponse,
+    type PostRewardResponse as PostRewardResponse,
+    type PostListParams as PostListParams,
+    type PostRewardParams as PostRewardParams,
   };
 }

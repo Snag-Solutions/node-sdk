@@ -98,8 +98,12 @@ export {
   Transactions,
   type TransactionCreateTransactionResponse,
   type TransactionGetTransactionEntriesResponse,
+  type TransactionListBadgeUsersResponse,
   type TransactionListRuleChainsResponse,
+  type TransactionResetLoyaltyCurrencyResponse,
   type TransactionCreateTransactionParams,
   type TransactionGetTransactionEntriesParams,
+  type TransactionListBadgeUsersParams,
   type TransactionListRuleChainsParams,
+  type TransactionResetLoyaltyCurrencyParams,
 } from './transactions/index';
