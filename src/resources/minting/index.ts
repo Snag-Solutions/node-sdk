@@ -7,7 +7,13 @@ export {
   type AllowlistListParams,
   type AllowlistUpsertParams,
 } from './allowlist';
-export { Contracts, type ContractMintResponse, type ContractMintParams } from './contracts';
+export {
+  Contracts,
+  type ContractListResponse,
+  type ContractMintResponse,
+  type ContractListParams,
+  type ContractMintParams,
+} from './contracts';
 export {
   Minting,
   type MintingGetAssetsResponse,

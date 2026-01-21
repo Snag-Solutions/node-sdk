@@ -11,7 +11,13 @@ import {
   AllowlistUpsertResponse,
 } from './allowlist';
 import * as ContractsAPI from './contracts';
-import { ContractMintParams, ContractMintResponse, Contracts } from './contracts';
+import {
+  ContractListParams,
+  ContractListResponse,
+  ContractMintParams,
+  ContractMintResponse,
+  Contracts,
+} from './contracts';
 import * as StatusAPI from './status';
 import { Status, StatusRetrieveResponse, StatusUpdateParams, StatusUpdateResponse } from './status';
 
@@ -263,7 +269,9 @@ export declare namespace Minting {
 
   export {
     Contracts as Contracts,
+    type ContractListResponse as ContractListResponse,
     type ContractMintResponse as ContractMintResponse,
+    type ContractListParams as ContractListParams,
     type ContractMintParams as ContractMintParams,
   };
 }
