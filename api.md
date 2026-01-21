@@ -320,10 +320,12 @@ Methods:
 
 Types:
 
+- <code><a href="./src/resources/minting/contracts.ts">ContractListResponse</a></code>
 - <code><a href="./src/resources/minting/contracts.ts">ContractMintResponse</a></code>
 
 Methods:
 
+- <code title="get /api/minting/contracts">client.minting.contracts.<a href="./src/resources/minting/contracts.ts">list</a>({ ...params }) -> ContractListResponse</code>
 - <code title="post /api/minting/contracts/mint">client.minting.contracts.<a href="./src/resources/minting/contracts.ts">mint</a>({ ...params }) -> ContractMintResponse</code>
 
 # Referral
