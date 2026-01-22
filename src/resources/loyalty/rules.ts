@@ -2835,6 +2835,12 @@ export namespace RuleListResponse {
        * Name of the rule chain
        */
       name: string;
+
+      /**
+       * Type of the operator. AND if all conditions must be met, OR if any condition can
+       * be met.
+       */
+      operatorType?: 'AND' | 'OR';
     }
 
     export namespace LoyaltyRuleChain {
@@ -2889,6 +2895,8 @@ export namespace RuleListResponse {
            */
           loyaltyBadgeId: string | null;
 
+          loyaltyCurrency: Association.LoyaltyCurrency | null;
+
           /**
            * Unique identifier for the loyalty currency
            */
@@ -2908,6 +2916,13 @@ export namespace RuleListResponse {
         }
 
         export namespace Association {
+          export interface LoyaltyCurrency {
+            /**
+             * Name of the loyalty currency
+             */
+            name: string;
+          }
+
           export interface LoyaltyRule {
             /**
              * Name of the loyalty rule
