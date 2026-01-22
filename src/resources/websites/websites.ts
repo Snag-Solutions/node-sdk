@@ -88,6 +88,11 @@ export interface WebsiteCreateResponse {
   name: string;
 
   /**
+   * Onchain tokens associated with the website
+   */
+  onchainTokens: Array<WebsiteCreateResponse.OnchainToken>;
+
+  /**
    * Date when terms were signed
    */
   termsSignedAt: string | null;
@@ -133,6 +138,66 @@ export namespace WebsiteCreateResponse {
      */
     royaltyFeeAddress: string;
   }
+
+  /**
+   * Schema representing an onchain token
+   */
+  export interface OnchainToken {
+    /**
+     * OnchainToken ID
+     */
+    id: string;
+
+    /**
+     * Contract address of the onchain token
+     */
+    address: string;
+
+    /**
+     * Chain ID where the token is deployed
+     */
+    chainId: string;
+
+    /**
+     * Creation timestamp
+     */
+    createdAt: string;
+
+    /**
+     * Associated loyalty currency ID
+     */
+    currencyId: string;
+
+    /**
+     * Deletion timestamp
+     */
+    deletedAt: string | null;
+
+    /**
+     * Organization ID
+     */
+    organizationId: string;
+
+    /**
+     * Relayer ID for transaction processing
+     */
+    relayerId: string | null;
+
+    /**
+     * Last sync timestamp
+     */
+    syncedAt: string | null;
+
+    /**
+     * Last update timestamp
+     */
+    updatedAt: string;
+
+    /**
+     * Website ID
+     */
+    websiteId: string;
+  }
 }
 
 /**
@@ -174,6 +239,11 @@ export namespace WebsiteListResponse {
      * Website name
      */
     name: string;
+
+    /**
+     * Onchain tokens associated with the website
+     */
+    onchainTokens: Array<Data.OnchainToken>;
 
     /**
      * Date when terms were signed
@@ -220,6 +290,66 @@ export namespace WebsiteListResponse {
        * Address to receive royalty fees
        */
       royaltyFeeAddress: string;
+    }
+
+    /**
+     * Schema representing an onchain token
+     */
+    export interface OnchainToken {
+      /**
+       * OnchainToken ID
+       */
+      id: string;
+
+      /**
+       * Contract address of the onchain token
+       */
+      address: string;
+
+      /**
+       * Chain ID where the token is deployed
+       */
+      chainId: string;
+
+      /**
+       * Creation timestamp
+       */
+      createdAt: string;
+
+      /**
+       * Associated loyalty currency ID
+       */
+      currencyId: string;
+
+      /**
+       * Deletion timestamp
+       */
+      deletedAt: string | null;
+
+      /**
+       * Organization ID
+       */
+      organizationId: string;
+
+      /**
+       * Relayer ID for transaction processing
+       */
+      relayerId: string | null;
+
+      /**
+       * Last sync timestamp
+       */
+      syncedAt: string | null;
+
+      /**
+       * Last update timestamp
+       */
+      updatedAt: string;
+
+      /**
+       * Website ID
+       */
+      websiteId: string;
     }
   }
 }
