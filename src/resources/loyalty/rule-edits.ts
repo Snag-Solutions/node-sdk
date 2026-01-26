@@ -376,6 +376,11 @@ export namespace RuleEditListResponse {
         maxQty?: number | null;
 
         /**
+         * Minimum follower count for the rule. Accepts both number and string values.
+         */
+        minimumFollowerCount?: number | null;
+
+        /**
          * Minimum quantity constraint for token holding.
          */
         minQty?: number | null;
@@ -1398,6 +1403,11 @@ export namespace RuleEditListResponse {
          * Maximum quantity constraint for token holding.
          */
         maxQty?: number | null;
+
+        /**
+         * Minimum follower count for the rule. Accepts both number and string values.
+         */
+        minimumFollowerCount?: number | null;
 
         /**
          * Minimum quantity constraint for token holding.
@@ -2479,6 +2489,11 @@ export namespace RuleEditRestoreResponse {
       maxQty?: number | null;
 
       /**
+       * Minimum follower count for the rule. Accepts both number and string values.
+       */
+      minimumFollowerCount?: number | null;
+
+      /**
        * Minimum quantity constraint for token holding.
        */
       minQty?: number | null;
@@ -3501,6 +3516,11 @@ export namespace RuleEditRestoreResponse {
        * Maximum quantity constraint for token holding.
        */
       maxQty?: number | null;
+
+      /**
+       * Minimum follower count for the rule. Accepts both number and string values.
+       */
+      minimumFollowerCount?: number | null;
 
       /**
        * Minimum quantity constraint for token holding.
