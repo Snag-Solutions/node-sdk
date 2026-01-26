@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.0-alpha.220 (2026-01-26)
+
+Full Changelog: [v0.1.0-alpha.219...v0.1.0-alpha.220](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.219...v0.1.0-alpha.220)
+
+### Features
+
+* **api:** open api update ([f0c4c21](https://github.com/Snag-Solutions/node-sdk/commit/f0c4c212d69080fce514584c8de18df88cf3409d))
+
+
+### Chores
+
+* **ci:** upgrade `actions/github-script` ([1c96ae9](https://github.com/Snag-Solutions/node-sdk/commit/1c96ae91c81e347d2fd620b9d4b420b67629a595))
+
 ## 0.1.0-alpha.219 (2026-01-22)
 
 Full Changelog: [v0.1.0-alpha.218...v0.1.0-alpha.219](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.218...v0.1.0-alpha.219)
