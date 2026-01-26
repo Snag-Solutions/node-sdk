@@ -291,7 +291,8 @@ export interface RuleCreateResponse {
     | 'discord_role_grant'
     | 'connected_reddit'
     | 'reddit_comment'
-    | 'robinhood_token_hold';
+    | 'robinhood_token_hold'
+    | 'connected_instagram';
 
   /**
    * Unique identifier for the associated website
@@ -4149,7 +4150,8 @@ export interface RuleCreateParams {
     | 'discord_role_grant'
     | 'connected_reddit'
     | 'reddit_comment'
-    | 'robinhood_token_hold';
+    | 'robinhood_token_hold'
+    | 'connected_instagram';
 
   /**
    * Unique identifier for the associated website

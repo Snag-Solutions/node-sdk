@@ -646,6 +646,7 @@ export interface TransactionGetTransactionEntriesParams {
     | 'connected_reddit'
     | 'reddit_comment'
     | 'robinhood_token_hold'
+    | 'connected_instagram'
     | Array<
         | 'Bonus'
         | 'BoughtOn'
@@ -724,6 +725,7 @@ export interface TransactionGetTransactionEntriesParams {
         | 'connected_reddit'
         | 'reddit_comment'
         | 'robinhood_token_hold'
+        | 'connected_instagram'
       >;
 
   /**
