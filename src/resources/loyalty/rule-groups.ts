@@ -466,6 +466,11 @@ export namespace RuleGroupGetRuleGroupsResponse {
           maxQty?: number | null;
 
           /**
+           * Minimum follower count for the rule. Accepts both number and string values.
+           */
+          minimumFollowerCount?: number | null;
+
+          /**
            * Minimum quantity constraint for token holding.
            */
           minQty?: number | null;
