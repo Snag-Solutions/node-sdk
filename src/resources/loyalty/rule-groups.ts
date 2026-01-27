@@ -167,7 +167,7 @@ export namespace RuleGroupGetRuleGroupsResponse {
 
         endTime: string | null;
 
-        frequency: 'none' | 'once' | 'daily' | 'weekly' | 'monthly' | 'immediately' | null;
+        frequency: 'none' | 'once' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'immediately' | null;
 
         hideInUi: boolean;
 

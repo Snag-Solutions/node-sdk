@@ -184,7 +184,7 @@ export interface RuleCreateResponse {
   /**
    * Execution frequency of the loyalty rule
    */
-  frequency: 'none' | 'once' | 'daily' | 'weekly' | 'monthly' | 'immediately';
+  frequency: 'none' | 'once' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'immediately';
 
   /**
    * Unique identifier for the loyalty currency
@@ -359,7 +359,16 @@ export interface RuleCreateResponse {
   /**
    * Interval between rule executions
    */
-  interval?: 'daily' | 'weekly' | 'monthly' | 'once' | 'custom' | 'every_message' | 'unlimited' | null;
+  interval?:
+    | 'hourly'
+    | 'daily'
+    | 'weekly'
+    | 'monthly'
+    | 'once'
+    | 'custom'
+    | 'every_message'
+    | 'unlimited'
+    | null;
 
   /**
    * Whether this rule is mandatory
@@ -1572,7 +1581,7 @@ export interface RuleUpdateResponse {
   /**
    * Frequency of the rule execution
    */
-  frequency?: 'none' | 'once' | 'daily' | 'weekly' | 'monthly' | 'immediately';
+  frequency?: 'none' | 'once' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'immediately';
 
   /**
    * Optional stratus function id for the rule
@@ -1587,7 +1596,16 @@ export interface RuleUpdateResponse {
   /**
    * Time interval for recurring rule execution
    */
-  interval?: 'daily' | 'weekly' | 'monthly' | 'once' | 'custom' | 'every_message' | 'unlimited' | null;
+  interval?:
+    | 'hourly'
+    | 'daily'
+    | 'weekly'
+    | 'monthly'
+    | 'once'
+    | 'custom'
+    | 'every_message'
+    | 'unlimited'
+    | null;
 
   /**
    * Whether this rule is required for participation
@@ -4043,7 +4061,7 @@ export interface RuleCreateParams {
   /**
    * Execution frequency of the loyalty rule
    */
-  frequency: 'none' | 'once' | 'daily' | 'weekly' | 'monthly' | 'immediately';
+  frequency: 'none' | 'once' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'immediately';
 
   /**
    * Unique identifier for the loyalty currency
@@ -4218,7 +4236,16 @@ export interface RuleCreateParams {
   /**
    * Interval between rule executions
    */
-  interval?: 'daily' | 'weekly' | 'monthly' | 'once' | 'custom' | 'every_message' | 'unlimited' | null;
+  interval?:
+    | 'hourly'
+    | 'daily'
+    | 'weekly'
+    | 'monthly'
+    | 'once'
+    | 'custom'
+    | 'every_message'
+    | 'unlimited'
+    | null;
 
   /**
    * Whether this rule is mandatory
@@ -5429,7 +5456,7 @@ export interface RuleUpdateParams {
   /**
    * Frequency of the rule execution
    */
-  frequency?: 'none' | 'once' | 'daily' | 'weekly' | 'monthly' | 'immediately';
+  frequency?: 'none' | 'once' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'immediately';
 
   /**
    * Optional stratus function id for the rule
@@ -5444,7 +5471,16 @@ export interface RuleUpdateParams {
   /**
    * Time interval for recurring rule execution
    */
-  interval?: 'daily' | 'weekly' | 'monthly' | 'once' | 'custom' | 'every_message' | 'unlimited' | null;
+  interval?:
+    | 'hourly'
+    | 'daily'
+    | 'weekly'
+    | 'monthly'
+    | 'once'
+    | 'custom'
+    | 'every_message'
+    | 'unlimited'
+    | null;
 
   /**
    * Whether this rule is required for participation
