@@ -55,7 +55,9 @@ export namespace ContractListResponse {
 
     _count: Data._Count;
 
-    address: string;
+    address: string | null;
+
+    contractKind: 'ONCHAIN' | 'OFFCHAIN';
 
     description: string | null;
 
@@ -141,7 +143,8 @@ export namespace ContractListResponse {
       | 'zkverify'
       | 'polkadot'
       | 'kusama'
-      | 'flow_cadence';
+      | 'flow_cadence'
+      | null;
 
     organizationId: string;
 
