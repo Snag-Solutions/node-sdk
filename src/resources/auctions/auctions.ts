@@ -362,7 +362,7 @@ export namespace AuctionListAuctionsResponse {
 
     name: string;
 
-    network: 'ethereum' | 'zksync';
+    network: 'ethereum' | 'zksync' | null;
 
     organizationId: string;
 
