@@ -637,6 +637,11 @@ export interface UserVerifyParams {
 
   userId?: string;
 
+  /**
+   * The wallet address of the user
+   */
+  walletAddress?: string;
+
   websiteId?: string;
 }
 
