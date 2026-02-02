@@ -200,6 +200,7 @@ describe('resource users', () => {
       accountLinkData: 'accountLinkData',
       organizationId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
       userId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+      walletAddress: '0x1234567890abcdef1234567890abcdef12345678',
       websiteId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
     });
   });
