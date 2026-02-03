@@ -1414,26 +1414,52 @@ export namespace RuleCreateResponse {
      * Metadata for swap loyalty rules
      */
     export interface Swap {
+      from?: Swap.From;
+
       provider?: 'any' | 'relay' | 'lifi';
 
       relayReferrerId?: string;
 
       requireCrossChainSwap?: boolean;
 
-      swappedToChain?: 'any' | number | string;
-
-      swappedToTokens?: Array<Swap.SwappedToToken>;
-
-      tokenMode?: 'any' | 'specific';
-
-      trackTokenAmount?: boolean;
+      to?: Swap.To;
     }
 
     export namespace Swap {
-      export interface SwappedToToken {
-        address: string;
+      export interface From {
+        chain?: 'any' | number | string;
 
-        chainId: string;
+        mode?: 'any' | 'specific';
+
+        tokens?: Array<From.Token>;
+
+        trackAmount?: boolean;
+      }
+
+      export namespace From {
+        export interface Token {
+          address: string;
+
+          chainId: string;
+        }
+      }
+
+      export interface To {
+        chain?: 'any' | number | string;
+
+        mode?: 'any' | 'specific';
+
+        tokens?: Array<To.Token>;
+
+        trackAmount?: boolean;
+      }
+
+      export namespace To {
+        export interface Token {
+          address: string;
+
+          chainId: string;
+        }
       }
     }
   }
@@ -2722,26 +2748,52 @@ export namespace RuleUpdateResponse {
      * Metadata for swap loyalty rules
      */
     export interface Swap {
+      from?: Swap.From;
+
       provider?: 'any' | 'relay' | 'lifi';
 
       relayReferrerId?: string;
 
       requireCrossChainSwap?: boolean;
 
-      swappedToChain?: 'any' | number | string;
-
-      swappedToTokens?: Array<Swap.SwappedToToken>;
-
-      tokenMode?: 'any' | 'specific';
-
-      trackTokenAmount?: boolean;
+      to?: Swap.To;
     }
 
     export namespace Swap {
-      export interface SwappedToToken {
-        address: string;
+      export interface From {
+        chain?: 'any' | number | string;
 
-        chainId: string;
+        mode?: 'any' | 'specific';
+
+        tokens?: Array<From.Token>;
+
+        trackAmount?: boolean;
+      }
+
+      export namespace From {
+        export interface Token {
+          address: string;
+
+          chainId: string;
+        }
+      }
+
+      export interface To {
+        chain?: 'any' | number | string;
+
+        mode?: 'any' | 'specific';
+
+        tokens?: Array<To.Token>;
+
+        trackAmount?: boolean;
+      }
+
+      export namespace To {
+        export interface Token {
+          address: string;
+
+          chainId: string;
+        }
       }
     }
   }
@@ -3875,26 +3927,52 @@ export namespace RuleListResponse {
        * Metadata for swap loyalty rules
        */
       export interface Swap {
+        from?: Swap.From;
+
         provider?: 'any' | 'relay' | 'lifi';
 
         relayReferrerId?: string;
 
         requireCrossChainSwap?: boolean;
 
-        swappedToChain?: 'any' | number | string;
-
-        swappedToTokens?: Array<Swap.SwappedToToken>;
-
-        tokenMode?: 'any' | 'specific';
-
-        trackTokenAmount?: boolean;
+        to?: Swap.To;
       }
 
       export namespace Swap {
-        export interface SwappedToToken {
-          address: string;
+        export interface From {
+          chain?: 'any' | number | string;
 
-          chainId: string;
+          mode?: 'any' | 'specific';
+
+          tokens?: Array<From.Token>;
+
+          trackAmount?: boolean;
+        }
+
+        export namespace From {
+          export interface Token {
+            address: string;
+
+            chainId: string;
+          }
+        }
+
+        export interface To {
+          chain?: 'any' | number | string;
+
+          mode?: 'any' | 'specific';
+
+          tokens?: Array<To.Token>;
+
+          trackAmount?: boolean;
+        }
+
+        export namespace To {
+          export interface Token {
+            address: string;
+
+            chainId: string;
+          }
         }
       }
     }
@@ -5291,26 +5369,52 @@ export namespace RuleCreateParams {
      * Metadata for swap loyalty rules
      */
     export interface Swap {
+      from?: Swap.From;
+
       provider?: 'any' | 'relay' | 'lifi';
 
       relayReferrerId?: string;
 
       requireCrossChainSwap?: boolean;
 
-      swappedToChain?: 'any' | number | string;
-
-      swappedToTokens?: Array<Swap.SwappedToToken>;
-
-      tokenMode?: 'any' | 'specific';
-
-      trackTokenAmount?: boolean;
+      to?: Swap.To;
     }
 
     export namespace Swap {
-      export interface SwappedToToken {
-        address: string;
+      export interface From {
+        chain?: 'any' | number | string;
 
-        chainId: string;
+        mode?: 'any' | 'specific';
+
+        tokens?: Array<From.Token>;
+
+        trackAmount?: boolean;
+      }
+
+      export namespace From {
+        export interface Token {
+          address: string;
+
+          chainId: string;
+        }
+      }
+
+      export interface To {
+        chain?: 'any' | number | string;
+
+        mode?: 'any' | 'specific';
+
+        tokens?: Array<To.Token>;
+
+        trackAmount?: boolean;
+      }
+
+      export namespace To {
+        export interface Token {
+          address: string;
+
+          chainId: string;
+        }
       }
     }
   }
@@ -6597,26 +6701,52 @@ export namespace RuleUpdateParams {
      * Metadata for swap loyalty rules
      */
     export interface Swap {
+      from?: Swap.From;
+
       provider?: 'any' | 'relay' | 'lifi';
 
       relayReferrerId?: string;
 
       requireCrossChainSwap?: boolean;
 
-      swappedToChain?: 'any' | number | string;
-
-      swappedToTokens?: Array<Swap.SwappedToToken>;
-
-      tokenMode?: 'any' | 'specific';
-
-      trackTokenAmount?: boolean;
+      to?: Swap.To;
     }
 
     export namespace Swap {
-      export interface SwappedToToken {
-        address: string;
+      export interface From {
+        chain?: 'any' | number | string;
 
-        chainId: string;
+        mode?: 'any' | 'specific';
+
+        tokens?: Array<From.Token>;
+
+        trackAmount?: boolean;
+      }
+
+      export namespace From {
+        export interface Token {
+          address: string;
+
+          chainId: string;
+        }
+      }
+
+      export interface To {
+        chain?: 'any' | number | string;
+
+        mode?: 'any' | 'specific';
+
+        tokens?: Array<To.Token>;
+
+        trackAmount?: boolean;
+      }
+
+      export namespace To {
+        export interface Token {
+          address: string;
+
+          chainId: string;
+        }
       }
     }
   }
