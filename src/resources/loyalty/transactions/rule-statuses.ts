@@ -134,7 +134,8 @@ export interface RuleStatusListParams {
   limit?: number | null;
 
   /**
-   * Unique identifier for the loyalty rule[s]
+   * Unique identifier(s) for the loyalty rule(s). Accepts a single ID or an array
+   * (up to 100); for larger sets, batch requests to avoid URL length limits.
    */
   loyaltyRuleId?: string | Array<string>;
 

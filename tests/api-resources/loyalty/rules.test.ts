@@ -44,6 +44,7 @@ describe('resource rules', () => {
       frequency: 'daily',
       loyaltyCurrencyId: '456e1234-e89b-12d3-a456-426614174003',
       metadata: {
+        allowMultipleRedemptions: false,
         autoCheckInRuleIds: ['123e4567-e89b-12d3-a456-426614174000'],
         batchSize: 100,
         buttonText: 'Verify Now',
@@ -298,6 +299,7 @@ describe('resource rules', () => {
       maxAmountPerInterval: 100,
       mediaUrl: 'https://example.com/media.png',
       metadata: {
+        allowMultipleRedemptions: false,
         autoCheckInRuleIds: ['123e4567-e89b-12d3-a456-426614174000'],
         batchSize: 100,
         buttonText: 'Verify Now',
