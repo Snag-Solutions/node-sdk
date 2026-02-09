@@ -265,7 +265,8 @@ export namespace RuleGroupGetRuleGroupsResponse {
           | 'connected_reddit'
           | 'reddit_comment'
           | 'robinhood_token_hold'
-          | 'connected_instagram';
+          | 'connected_instagram'
+          | 'instagram_post';
       }
 
       export namespace LoyaltyRule {
@@ -280,6 +281,12 @@ export namespace RuleGroupGetRuleGroupsResponse {
         }
 
         export interface Metadata {
+          /**
+           * Flag indicating if the rule allows multiple redemptions. Applies to Enter a Code
+           * only.
+           */
+          allowMultipleRedemptions?: boolean;
+
           /**
            * Array of loyalty rule IDs that count as check-in when completed. If ["any"] then
            * any rule completions count as check-in.
