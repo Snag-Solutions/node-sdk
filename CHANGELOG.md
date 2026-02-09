@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.0-alpha.226 (2026-02-09)
+
+Full Changelog: [v0.1.0-alpha.225...v0.1.0-alpha.226](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.225...v0.1.0-alpha.226)
+
+### Features
+
+* **api:** open api update ([4be5f60](https://github.com/Snag-Solutions/node-sdk/commit/4be5f60857521938b84dabef97ccaa8b9f98449c))
+
+
+### Chores
+
+* **client:** do not parse responses with empty content-length ([23af1f2](https://github.com/Snag-Solutions/node-sdk/commit/23af1f23ee2fc87e50905c8336415188cedeeb08))
+
 ## 0.1.0-alpha.225 (2026-02-03)
 
 Full Changelog: [v0.1.0-alpha.224...v0.1.0-alpha.225](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.224...v0.1.0-alpha.225)
