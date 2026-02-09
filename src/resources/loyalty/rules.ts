@@ -292,7 +292,8 @@ export interface RuleCreateResponse {
     | 'connected_reddit'
     | 'reddit_comment'
     | 'robinhood_token_hold'
-    | 'connected_instagram';
+    | 'connected_instagram'
+    | 'instagram_post';
 
   /**
    * Unique identifier for the associated website
@@ -502,6 +503,12 @@ export namespace RuleCreateResponse {
    * Additional metadata for the loyalty rule
    */
   export interface Metadata {
+    /**
+     * Flag indicating if the rule allows multiple redemptions. Applies to Enter a Code
+     * only.
+     */
+    allowMultipleRedemptions?: boolean;
+
     /**
      * Array of loyalty rule IDs that count as check-in when completed. If ["any"] then
      * any rule completions count as check-in.
@@ -1837,6 +1844,12 @@ export namespace RuleUpdateResponse {
    */
   export interface Metadata {
     /**
+     * Flag indicating if the rule allows multiple redemptions. Applies to Enter a Code
+     * only.
+     */
+    allowMultipleRedemptions?: boolean;
+
+    /**
      * Array of loyalty rule IDs that count as check-in when completed. If ["any"] then
      * any rule completions count as check-in.
      */
@@ -3015,6 +3028,12 @@ export namespace RuleListResponse {
     }
 
     export interface Metadata {
+      /**
+       * Flag indicating if the rule allows multiple redemptions. Applies to Enter a Code
+       * only.
+       */
+      allowMultipleRedemptions?: boolean;
+
       /**
        * Array of loyalty rule IDs that count as check-in when completed. If ["any"] then
        * any rule completions count as check-in.
@@ -4247,7 +4266,8 @@ export interface RuleCreateParams {
     | 'connected_reddit'
     | 'reddit_comment'
     | 'robinhood_token_hold'
-    | 'connected_instagram';
+    | 'connected_instagram'
+    | 'instagram_post';
 
   /**
    * Unique identifier for the associated website
@@ -4457,6 +4477,12 @@ export namespace RuleCreateParams {
    * Additional metadata for the loyalty rule
    */
   export interface Metadata {
+    /**
+     * Flag indicating if the rule allows multiple redemptions. Applies to Enter a Code
+     * only.
+     */
+    allowMultipleRedemptions?: boolean;
+
     /**
      * Array of loyalty rule IDs that count as check-in when completed. If ["any"] then
      * any rule completions count as check-in.
@@ -5789,6 +5815,12 @@ export namespace RuleUpdateParams {
    * Additional metadata for the loyalty rule
    */
   export interface Metadata {
+    /**
+     * Flag indicating if the rule allows multiple redemptions. Applies to Enter a Code
+     * only.
+     */
+    allowMultipleRedemptions?: boolean;
+
     /**
      * Array of loyalty rule IDs that count as check-in when completed. If ["any"] then
      * any rule completions count as check-in.

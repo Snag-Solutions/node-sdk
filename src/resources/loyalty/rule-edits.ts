@@ -190,6 +190,12 @@ export namespace RuleEditListResponse {
     export namespace Data {
       export interface Metadata {
         /**
+         * Flag indicating if the rule allows multiple redemptions. Applies to Enter a Code
+         * only.
+         */
+        allowMultipleRedemptions?: boolean;
+
+        /**
          * Array of loyalty rule IDs that count as check-in when completed. If ["any"] then
          * any rule completions count as check-in.
          */
@@ -1244,6 +1250,12 @@ export namespace RuleEditListResponse {
 
     export namespace PreviousData {
       export interface Metadata {
+        /**
+         * Flag indicating if the rule allows multiple redemptions. Applies to Enter a Code
+         * only.
+         */
+        allowMultipleRedemptions?: boolean;
+
         /**
          * Array of loyalty rule IDs that count as check-in when completed. If ["any"] then
          * any rule completions count as check-in.
@@ -2355,6 +2367,12 @@ export namespace RuleEditRestoreResponse {
   export namespace Data {
     export interface Metadata {
       /**
+       * Flag indicating if the rule allows multiple redemptions. Applies to Enter a Code
+       * only.
+       */
+      allowMultipleRedemptions?: boolean;
+
+      /**
        * Array of loyalty rule IDs that count as check-in when completed. If ["any"] then
        * any rule completions count as check-in.
        */
@@ -3409,6 +3427,12 @@ export namespace RuleEditRestoreResponse {
 
   export namespace PreviousData {
     export interface Metadata {
+      /**
+       * Flag indicating if the rule allows multiple redemptions. Applies to Enter a Code
+       * only.
+       */
+      allowMultipleRedemptions?: boolean;
+
       /**
        * Array of loyalty rule IDs that count as check-in when completed. If ["any"] then
        * any rule completions count as check-in.
