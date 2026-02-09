@@ -1,8 +1,8 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { APIResource } from '../../resource';
-import { isRequestOptions } from '../../core';
-import * as Core from '../../core';
+import { APIResource } from '../../core/resource';
+import { APIPromise } from '../../core/api-promise';
+import { RequestOptions } from '../../internal/request-options';
 
 export class Contracts extends APIResource {
   /**
@@ -13,15 +13,10 @@ export class Contracts extends APIResource {
    * const contracts = await client.minting.contracts.list();
    * ```
    */
-  list(query?: ContractListParams, options?: Core.RequestOptions): Core.APIPromise<ContractListResponse>;
-  list(options?: Core.RequestOptions): Core.APIPromise<ContractListResponse>;
   list(
-    query: ContractListParams | Core.RequestOptions = {},
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<ContractListResponse> {
-    if (isRequestOptions(query)) {
-      return this.list({}, query);
-    }
+    query: ContractListParams | null | undefined = {},
+    options?: RequestOptions,
+  ): APIPromise<ContractListResponse> {
     return this._client.get('/api/minting/contracts', { query, ...options });
   }
 
@@ -36,7 +31,7 @@ export class Contracts extends APIResource {
    * });
    * ```
    */
-  mint(body: ContractMintParams, options?: Core.RequestOptions): Core.APIPromise<ContractMintResponse> {
+  mint(body: ContractMintParams, options?: RequestOptions): APIPromise<ContractMintResponse> {
     return this._client.post('/api/minting/contracts/mint', { body, ...options });
   }
 }

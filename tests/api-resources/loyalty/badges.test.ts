@@ -1,7 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
 import SnagSolutions from '@snagsolutions/sdk';
-import { Response } from 'node-fetch';
 
 const client = new SnagSolutions({
   apiKey: 'My API Key',
@@ -75,16 +74,6 @@ describe('resource badges', () => {
   });
 
   // Prism tests are disabled
-  test.skip('update: request options instead of params are passed correctly', async () => {
-    // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
-    await expect(
-      client.loyalty.badges.update('123e4567-e89b-12d3-a456-426614174333', {
-        path: '/_stainless_unknown_path',
-      }),
-    ).rejects.toThrow(SnagSolutions.NotFoundError);
-  });
-
-  // Prism tests are disabled
   test.skip('update: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -118,14 +107,6 @@ describe('resource badges', () => {
     const dataAndResponse = await responsePromise.withResponse();
     expect(dataAndResponse.data).toBe(response);
     expect(dataAndResponse.response).toBe(rawResponse);
-  });
-
-  // Prism tests are disabled
-  test.skip('list: request options instead of params are passed correctly', async () => {
-    // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
-    await expect(client.loyalty.badges.list({ path: '/_stainless_unknown_path' })).rejects.toThrow(
-      SnagSolutions.NotFoundError,
-    );
   });
 
   // Prism tests are disabled
@@ -163,16 +144,6 @@ describe('resource badges', () => {
   });
 
   // Prism tests are disabled
-  test.skip('delete: request options instead of params are passed correctly', async () => {
-    // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
-    await expect(
-      client.loyalty.badges.delete('123e4567-e89b-12d3-a456-426614174333', {
-        path: '/_stainless_unknown_path',
-      }),
-    ).rejects.toThrow(SnagSolutions.NotFoundError);
-  });
-
-  // Prism tests are disabled
   test.skip('revoke', async () => {
     const responsePromise = client.loyalty.badges.revoke('123e4567-e89b-12d3-a456-426614174333');
     const rawResponse = await responsePromise.asResponse();
@@ -182,16 +153,6 @@ describe('resource badges', () => {
     const dataAndResponse = await responsePromise.withResponse();
     expect(dataAndResponse.data).toBe(response);
     expect(dataAndResponse.response).toBe(rawResponse);
-  });
-
-  // Prism tests are disabled
-  test.skip('revoke: request options instead of params are passed correctly', async () => {
-    // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
-    await expect(
-      client.loyalty.badges.revoke('123e4567-e89b-12d3-a456-426614174333', {
-        path: '/_stainless_unknown_path',
-      }),
-    ).rejects.toThrow(SnagSolutions.NotFoundError);
   });
 
   // Prism tests are disabled
@@ -220,16 +181,6 @@ describe('resource badges', () => {
     const dataAndResponse = await responsePromise.withResponse();
     expect(dataAndResponse.data).toBe(response);
     expect(dataAndResponse.response).toBe(rawResponse);
-  });
-
-  // Prism tests are disabled
-  test.skip('reward: request options instead of params are passed correctly', async () => {
-    // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
-    await expect(
-      client.loyalty.badges.reward('123e4567-e89b-12d3-a456-426614174333', {
-        path: '/_stainless_unknown_path',
-      }),
-    ).rejects.toThrow(SnagSolutions.NotFoundError);
   });
 
   // Prism tests are disabled

@@ -1,10 +1,11 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { APIResource } from '../../../resource';
-import { isRequestOptions } from '../../../core';
-import * as Core from '../../../core';
+import { APIResource } from '../../../core/resource';
 import * as ValuesAPI from './values';
 import { ValueCreateParams, ValueCreateResponse, ValueListParams, ValueListResponse, Values } from './values';
+import { APIPromise } from '../../../core/api-promise';
+import { RequestOptions } from '../../../internal/request-options';
+import { path } from '../../../internal/utils/path';
 
 export class WebsiteUserAttributes extends APIResource {
   values: ValuesAPI.Values = new ValuesAPI.Values(this._client);
@@ -22,8 +23,8 @@ export class WebsiteUserAttributes extends APIResource {
    */
   create(
     body: WebsiteUserAttributeCreateParams,
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<WebsiteUserAttributeCreateResponse> {
+    options?: RequestOptions,
+  ): APIPromise<WebsiteUserAttributeCreateResponse> {
     return this._client.post('/api/website_user_attributes', { body, ...options });
   }
 
@@ -37,17 +38,9 @@ export class WebsiteUserAttributes extends APIResource {
    * ```
    */
   list(
-    query?: WebsiteUserAttributeListParams,
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<WebsiteUserAttributeListResponse>;
-  list(options?: Core.RequestOptions): Core.APIPromise<WebsiteUserAttributeListResponse>;
-  list(
-    query: WebsiteUserAttributeListParams | Core.RequestOptions = {},
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<WebsiteUserAttributeListResponse> {
-    if (isRequestOptions(query)) {
-      return this.list({}, query);
-    }
+    query: WebsiteUserAttributeListParams | null | undefined = {},
+    options?: RequestOptions,
+  ): APIPromise<WebsiteUserAttributeListResponse> {
     return this._client.get('/api/website_user_attributes', { query, ...options });
   }
 
@@ -65,11 +58,11 @@ export class WebsiteUserAttributes extends APIResource {
    * ```
    */
   delete(
-    pathId: string,
+    pathID: string,
     body: WebsiteUserAttributeDeleteParams,
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<WebsiteUserAttributeDeleteResponse> {
-    return this._client.delete(`/api/website_user_attributes/${pathId}`, { body, ...options });
+    options?: RequestOptions,
+  ): APIPromise<WebsiteUserAttributeDeleteResponse> {
+    return this._client.delete(path`/api/website_user_attributes/${pathID}`, { body, ...options });
   }
 }
 

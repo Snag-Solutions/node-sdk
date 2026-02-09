@@ -1,7 +1,8 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { APIResource } from '../../resource';
-import * as Core from '../../core';
+import { APIResource } from '../../core/resource';
+import { APIPromise } from '../../core/api-promise';
+import { RequestOptions } from '../../internal/request-options';
 
 export class WebsiteUserRoles extends APIResource {
   /**
@@ -16,10 +17,7 @@ export class WebsiteUserRoles extends APIResource {
    *   });
    * ```
    */
-  list(
-    query: WebsiteUserRoleListParams,
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<WebsiteUserRoleListResponse> {
+  list(query: WebsiteUserRoleListParams, options?: RequestOptions): APIPromise<WebsiteUserRoleListResponse> {
     return this._client.get('/api/website_user_roles', { query, ...options });
   }
 
@@ -43,8 +41,8 @@ export class WebsiteUserRoles extends APIResource {
    */
   assign(
     body: WebsiteUserRoleAssignParams,
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<WebsiteUserRoleAssignResponse> {
+    options?: RequestOptions,
+  ): APIPromise<WebsiteUserRoleAssignResponse> {
     return this._client.post('/api/website_user_roles', { body, ...options });
   }
 }

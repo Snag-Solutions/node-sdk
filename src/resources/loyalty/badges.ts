@@ -1,8 +1,9 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { APIResource } from '../../resource';
-import { isRequestOptions } from '../../core';
-import * as Core from '../../core';
+import { APIResource } from '../../core/resource';
+import { APIPromise } from '../../core/api-promise';
+import { RequestOptions } from '../../internal/request-options';
+import { path } from '../../internal/utils/path';
 
 export class Badges extends APIResource {
   /**
@@ -19,7 +20,7 @@ export class Badges extends APIResource {
    * });
    * ```
    */
-  create(body: BadgeCreateParams, options?: Core.RequestOptions): Core.APIPromise<BadgeCreateResponse> {
+  create(body: BadgeCreateParams, options?: RequestOptions): APIPromise<BadgeCreateResponse> {
     return this._client.post('/api/loyalty/badges', { body, ...options });
   }
 
@@ -35,19 +36,10 @@ export class Badges extends APIResource {
    */
   update(
     id: string,
-    body?: BadgeUpdateParams,
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<BadgeUpdateResponse>;
-  update(id: string, options?: Core.RequestOptions): Core.APIPromise<BadgeUpdateResponse>;
-  update(
-    id: string,
-    body: BadgeUpdateParams | Core.RequestOptions = {},
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<BadgeUpdateResponse> {
-    if (isRequestOptions(body)) {
-      return this.update(id, {}, body);
-    }
-    return this._client.post(`/api/loyalty/badges/${id}`, { body, ...options });
+    body: BadgeUpdateParams | null | undefined = {},
+    options?: RequestOptions,
+  ): APIPromise<BadgeUpdateResponse> {
+    return this._client.post(path`/api/loyalty/badges/${id}`, { body, ...options });
   }
 
   /**
@@ -58,15 +50,10 @@ export class Badges extends APIResource {
    * const badges = await client.loyalty.badges.list();
    * ```
    */
-  list(query?: BadgeListParams, options?: Core.RequestOptions): Core.APIPromise<BadgeListResponse>;
-  list(options?: Core.RequestOptions): Core.APIPromise<BadgeListResponse>;
   list(
-    query: BadgeListParams | Core.RequestOptions = {},
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<BadgeListResponse> {
-    if (isRequestOptions(query)) {
-      return this.list({}, query);
-    }
+    query: BadgeListParams | null | undefined = {},
+    options?: RequestOptions,
+  ): APIPromise<BadgeListResponse> {
     return this._client.get('/api/loyalty/badges', { query, ...options });
   }
 
@@ -80,8 +67,8 @@ export class Badges extends APIResource {
    * );
    * ```
    */
-  delete(id: string, options?: Core.RequestOptions): Core.APIPromise<BadgeDeleteResponse> {
-    return this._client.delete(`/api/loyalty/badges/${id}`, options);
+  delete(id: string, options?: RequestOptions): APIPromise<BadgeDeleteResponse> {
+    return this._client.delete(path`/api/loyalty/badges/${id}`, options);
   }
 
   /**
@@ -96,19 +83,10 @@ export class Badges extends APIResource {
    */
   revoke(
     id: string,
-    body?: BadgeRevokeParams,
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<BadgeRevokeResponse>;
-  revoke(id: string, options?: Core.RequestOptions): Core.APIPromise<BadgeRevokeResponse>;
-  revoke(
-    id: string,
-    body: BadgeRevokeParams | Core.RequestOptions = {},
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<BadgeRevokeResponse> {
-    if (isRequestOptions(body)) {
-      return this.revoke(id, {}, body);
-    }
-    return this._client.post(`/api/loyalty/badges/${id}/revoke`, { body, ...options });
+    body: BadgeRevokeParams | null | undefined = {},
+    options?: RequestOptions,
+  ): APIPromise<BadgeRevokeResponse> {
+    return this._client.post(path`/api/loyalty/badges/${id}/revoke`, { body, ...options });
   }
 
   /**
@@ -123,19 +101,10 @@ export class Badges extends APIResource {
    */
   reward(
     id: string,
-    body?: BadgeRewardParams,
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<BadgeRewardResponse>;
-  reward(id: string, options?: Core.RequestOptions): Core.APIPromise<BadgeRewardResponse>;
-  reward(
-    id: string,
-    body: BadgeRewardParams | Core.RequestOptions = {},
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<BadgeRewardResponse> {
-    if (isRequestOptions(body)) {
-      return this.reward(id, {}, body);
-    }
-    return this._client.post(`/api/loyalty/badges/${id}/reward`, { body, ...options });
+    body: BadgeRewardParams | null | undefined = {},
+    options?: RequestOptions,
+  ): APIPromise<BadgeRewardResponse> {
+    return this._client.post(path`/api/loyalty/badges/${id}/reward`, { body, ...options });
   }
 }
 

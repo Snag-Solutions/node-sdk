@@ -1,9 +1,10 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { APIResource } from '../../resource';
-import * as Core from '../../core';
+import { APIResource } from '../../core/resource';
 import * as UsersAPI from './users';
 import { UserCreateParams, UserCreateResponse, UserListParams, UserListResponse, Users } from './users';
+import { APIPromise } from '../../core/api-promise';
+import { RequestOptions } from '../../internal/request-options';
 
 export class Referral extends APIResource {
   users: UsersAPI.Users = new UsersAPI.Users(this._client);
@@ -20,8 +21,8 @@ export class Referral extends APIResource {
    */
   createCode(
     body: ReferralCreateCodeParams,
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<ReferralCreateCodeResponse> {
+    options?: RequestOptions,
+  ): APIPromise<ReferralCreateCodeResponse> {
     return this._client.post('/api/referral/codes', { body, ...options });
   }
 }

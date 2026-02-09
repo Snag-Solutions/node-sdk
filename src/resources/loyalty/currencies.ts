@@ -1,7 +1,8 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { APIResource } from '../../resource';
-import * as Core from '../../core';
+import { APIResource } from '../../core/resource';
+import { APIPromise } from '../../core/api-promise';
+import { RequestOptions } from '../../internal/request-options';
 
 export class Currencies extends APIResource {
   /**
@@ -18,7 +19,7 @@ export class Currencies extends APIResource {
    * });
    * ```
    */
-  create(body: CurrencyCreateParams, options?: Core.RequestOptions): Core.APIPromise<CurrencyCreateResponse> {
+  create(body: CurrencyCreateParams, options?: RequestOptions): APIPromise<CurrencyCreateResponse> {
     return this._client.post('/api/loyalty/currencies', { body, ...options });
   }
 
@@ -33,7 +34,7 @@ export class Currencies extends APIResource {
    * });
    * ```
    */
-  list(query: CurrencyListParams, options?: Core.RequestOptions): Core.APIPromise<CurrencyListResponse> {
+  list(query: CurrencyListParams, options?: RequestOptions): APIPromise<CurrencyListResponse> {
     return this._client.get('/api/loyalty/currencies', { query, ...options });
   }
 }

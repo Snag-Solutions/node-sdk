@@ -1,8 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { APIResource } from '../../resource';
-import { isRequestOptions } from '../../core';
-import * as Core from '../../core';
+import { APIResource } from '../../core/resource';
 import * as MetadatasAPI from './metadatas';
 import {
   MetadataCreateParams,
@@ -11,6 +9,8 @@ import {
   MetadataListResponse,
   Metadatas,
 } from './metadatas';
+import { APIPromise } from '../../core/api-promise';
+import { RequestOptions } from '../../internal/request-options';
 
 export class Users extends APIResource {
   metadatas: MetadatasAPI.Metadatas = new MetadatasAPI.Metadatas(this._client);
@@ -23,15 +23,10 @@ export class Users extends APIResource {
    * const users = await client.users.list();
    * ```
    */
-  list(query?: UserListParams, options?: Core.RequestOptions): Core.APIPromise<UserListResponse>;
-  list(options?: Core.RequestOptions): Core.APIPromise<UserListResponse>;
   list(
-    query: UserListParams | Core.RequestOptions = {},
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<UserListResponse> {
-    if (isRequestOptions(query)) {
-      return this.list({}, query);
-    }
+    query: UserListParams | null | undefined = {},
+    options?: RequestOptions,
+  ): APIPromise<UserListResponse> {
     return this._client.get('/api/users', { query, ...options });
   }
 
@@ -49,7 +44,7 @@ export class Users extends APIResource {
    * });
    * ```
    */
-  connect(body: UserConnectParams, options?: Core.RequestOptions): Core.APIPromise<UserConnectResponse> {
+  connect(body: UserConnectParams, options?: RequestOptions): APIPromise<UserConnectResponse> {
     return this._client.post('/api/users/connect', { body, ...options });
   }
 
@@ -64,7 +59,7 @@ export class Users extends APIResource {
    * });
    * ```
    */
-  count(query: UserCountParams, options?: Core.RequestOptions): Core.APIPromise<UserCountResponse> {
+  count(query: UserCountParams, options?: RequestOptions): APIPromise<UserCountResponse> {
     return this._client.get('/api/users/count', { query, ...options });
   }
 
@@ -78,10 +73,7 @@ export class Users extends APIResource {
    * });
    * ```
    */
-  createDevice(
-    body: UserCreateDeviceParams,
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<UserCreateDeviceResponse> {
+  createDevice(body: UserCreateDeviceParams, options?: RequestOptions): APIPromise<UserCreateDeviceResponse> {
     return this._client.post('/api/users/devices', { body, ...options });
   }
 
@@ -97,10 +89,7 @@ export class Users extends APIResource {
    * });
    * ```
    */
-  disconnect(
-    body: UserDisconnectParams,
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<UserDisconnectResponse> {
+  disconnect(body: UserDisconnectParams, options?: RequestOptions): APIPromise<UserDisconnectResponse> {
     return this._client.post('/api/users/disconnect', { body, ...options });
   }
 
@@ -117,7 +106,7 @@ export class Users extends APIResource {
    * });
    * ```
    */
-  verify(body: UserVerifyParams, options?: Core.RequestOptions): Core.APIPromise<UserVerifyResponse> {
+  verify(body: UserVerifyParams, options?: RequestOptions): APIPromise<UserVerifyResponse> {
     return this._client.post('/api/users/verify', { body, ...options });
   }
 }

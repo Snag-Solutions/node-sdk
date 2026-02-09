@@ -1,8 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { APIResource } from '../../resource';
-import { isRequestOptions } from '../../core';
-import * as Core from '../../core';
+import { APIResource } from '../../core/resource';
 import * as WebsiteCollectionsAPI from './website-collections';
 import {
   WebsiteCollectionCreateParams,
@@ -18,6 +16,8 @@ import {
   WebsiteUserRoleListResponse,
   WebsiteUserRoles,
 } from './website-user-roles';
+import { APIPromise } from '../../core/api-promise';
+import { RequestOptions } from '../../internal/request-options';
 
 export class Websites extends APIResource {
   websiteCollections: WebsiteCollectionsAPI.WebsiteCollections = new WebsiteCollectionsAPI.WebsiteCollections(
@@ -37,7 +37,7 @@ export class Websites extends APIResource {
    * });
    * ```
    */
-  create(body: WebsiteCreateParams, options?: Core.RequestOptions): Core.APIPromise<WebsiteCreateResponse> {
+  create(body: WebsiteCreateParams, options?: RequestOptions): APIPromise<WebsiteCreateResponse> {
     return this._client.post('/api/websites', { body, ...options });
   }
 
@@ -50,15 +50,10 @@ export class Websites extends APIResource {
    * const websites = await client.websites.list();
    * ```
    */
-  list(query?: WebsiteListParams, options?: Core.RequestOptions): Core.APIPromise<WebsiteListResponse>;
-  list(options?: Core.RequestOptions): Core.APIPromise<WebsiteListResponse>;
   list(
-    query: WebsiteListParams | Core.RequestOptions = {},
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<WebsiteListResponse> {
-    if (isRequestOptions(query)) {
-      return this.list({}, query);
-    }
+    query: WebsiteListParams | null | undefined = {},
+    options?: RequestOptions,
+  ): APIPromise<WebsiteListResponse> {
     return this._client.get('/api/websites', { query, ...options });
   }
 }

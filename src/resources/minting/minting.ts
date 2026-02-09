@@ -1,7 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { APIResource } from '../../resource';
-import * as Core from '../../core';
+import { APIResource } from '../../core/resource';
 import * as AllowlistAPI from './allowlist';
 import {
   Allowlist,
@@ -20,6 +19,8 @@ import {
 } from './contracts';
 import * as StatusAPI from './status';
 import { Status, StatusRetrieveResponse, StatusUpdateParams, StatusUpdateResponse } from './status';
+import { APIPromise } from '../../core/api-promise';
+import { RequestOptions } from '../../internal/request-options';
 
 export class Minting extends APIResource {
   status: StatusAPI.Status = new StatusAPI.Status(this._client);
@@ -37,10 +38,7 @@ export class Minting extends APIResource {
    * });
    * ```
    */
-  getAssets(
-    query: MintingGetAssetsParams,
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<MintingGetAssetsResponse> {
+  getAssets(query: MintingGetAssetsParams, options?: RequestOptions): APIPromise<MintingGetAssetsResponse> {
     return this._client.get('/api/minting/assets', { query, ...options });
   }
 
@@ -61,8 +59,8 @@ export class Minting extends APIResource {
    */
   getTokenGateStatus(
     query: MintingGetTokenGateStatusParams,
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<MintingGetTokenGateStatusResponse> {
+    options?: RequestOptions,
+  ): APIPromise<MintingGetTokenGateStatusResponse> {
     return this._client.get('/api/minting/token_gate', { query, ...options });
   }
 }

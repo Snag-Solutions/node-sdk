@@ -1,33 +1,29 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { APIResource } from '../resource';
-import { isRequestOptions } from '../core';
-import * as Core from '../core';
+import { APIResource } from '../core/resource';
+import { APIPromise } from '../core/api-promise';
+import { RequestOptions } from '../internal/request-options';
+import { path } from '../internal/utils/path';
 
 export class TokenClaims extends APIResource {
   /**
    * Get a token claim by id
    */
   retrieve(
-    pathId: string,
+    pathID: string,
     query: TokenClaimRetrieveParams,
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<TokenClaimRetrieveResponse> {
-    return this._client.get(`/api/token_claims/${pathId}`, { query, ...options });
+    options?: RequestOptions,
+  ): APIPromise<TokenClaimRetrieveResponse> {
+    return this._client.get(path`/api/token_claims/${pathID}`, { query, ...options });
   }
 
   /**
    * Get all available token claims for a given website and organization
    */
-  list(query?: TokenClaimListParams, options?: Core.RequestOptions): Core.APIPromise<TokenClaimListResponse>;
-  list(options?: Core.RequestOptions): Core.APIPromise<TokenClaimListResponse>;
   list(
-    query: TokenClaimListParams | Core.RequestOptions = {},
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<TokenClaimListResponse> {
-    if (isRequestOptions(query)) {
-      return this.list({}, query);
-    }
+    query: TokenClaimListParams | null | undefined = {},
+    options?: RequestOptions,
+  ): APIPromise<TokenClaimListResponse> {
     return this._client.get('/api/token_claims', { query, ...options });
   }
 
@@ -35,22 +31,22 @@ export class TokenClaims extends APIResource {
    * Check if a wallet address is eligible for a token claim
    */
   checkEligibility(
-    pathId: string,
+    pathID: string,
     query: TokenClaimCheckEligibilityParams,
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<TokenClaimCheckEligibilityResponse> {
-    return this._client.get(`/api/token_claims/${pathId}/eligibility`, { query, ...options });
+    options?: RequestOptions,
+  ): APIPromise<TokenClaimCheckEligibilityResponse> {
+    return this._client.get(path`/api/token_claims/${pathID}/eligibility`, { query, ...options });
   }
 
   /**
    * Get a token claim proof for a given wallet address
    */
   getProof(
-    pathId: string,
+    pathID: string,
     query: TokenClaimGetProofParams,
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<TokenClaimGetProofResponse> {
-    return this._client.get(`/api/token_claims/${pathId}/proof`, { query, ...options });
+    options?: RequestOptions,
+  ): APIPromise<TokenClaimGetProofResponse> {
+    return this._client.get(path`/api/token_claims/${pathID}/proof`, { query, ...options });
   }
 
   /**
@@ -58,19 +54,10 @@ export class TokenClaims extends APIResource {
    */
   listUsers(
     id: string,
-    query?: TokenClaimListUsersParams,
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<TokenClaimListUsersResponse>;
-  listUsers(id: string, options?: Core.RequestOptions): Core.APIPromise<TokenClaimListUsersResponse>;
-  listUsers(
-    id: string,
-    query: TokenClaimListUsersParams | Core.RequestOptions = {},
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<TokenClaimListUsersResponse> {
-    if (isRequestOptions(query)) {
-      return this.listUsers(id, {}, query);
-    }
-    return this._client.get(`/api/token_claims/${id}/users`, { query, ...options });
+    query: TokenClaimListUsersParams | null | undefined = {},
+    options?: RequestOptions,
+  ): APIPromise<TokenClaimListUsersResponse> {
+    return this._client.get(path`/api/token_claims/${id}/users`, { query, ...options });
   }
 
   /**
@@ -79,9 +66,9 @@ export class TokenClaims extends APIResource {
   updateClaim(
     id: string,
     body: TokenClaimUpdateClaimParams,
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<TokenClaimUpdateClaimResponse> {
-    return this._client.post(`/api/token_claims/${id}/claim`, { body, ...options });
+    options?: RequestOptions,
+  ): APIPromise<TokenClaimUpdateClaimResponse> {
+    return this._client.post(path`/api/token_claims/${id}/claim`, { body, ...options });
   }
 }
 

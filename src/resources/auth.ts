@@ -1,8 +1,9 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { APIResource } from '../resource';
-import { isRequestOptions } from '../core';
-import * as Core from '../core';
+import { APIResource } from '../core/resource';
+import { APIPromise } from '../core/api-promise';
+import { RequestOptions } from '../internal/request-options';
+import { path } from '../internal/utils/path';
 
 export class Auth extends APIResource {
   /**
@@ -21,44 +22,10 @@ export class Auth extends APIResource {
       | 'email'
       | 'reddit'
       | 'instagram',
-    query?: AuthConnectAuthParams,
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<AuthConnectAuthResponse>;
-  connectAuth(
-    authType:
-      | 'twitter'
-      | 'discord'
-      | 'telegram'
-      | 'epic'
-      | 'steam'
-      | 'ultra'
-      | 'google'
-      | 'tiktok'
-      | 'email'
-      | 'reddit'
-      | 'instagram',
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<AuthConnectAuthResponse>;
-  connectAuth(
-    authType:
-      | 'twitter'
-      | 'discord'
-      | 'telegram'
-      | 'epic'
-      | 'steam'
-      | 'ultra'
-      | 'google'
-      | 'tiktok'
-      | 'email'
-      | 'reddit'
-      | 'instagram',
-    query: AuthConnectAuthParams | Core.RequestOptions = {},
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<AuthConnectAuthResponse> {
-    if (isRequestOptions(query)) {
-      return this.connectAuth(authType, {}, query);
-    }
-    return this._client.get(`/api/${authType}/auth`, { query, ...options });
+    query: AuthConnectAuthParams | null | undefined = {},
+    options?: RequestOptions,
+  ): APIPromise<AuthConnectAuthResponse> {
+    return this._client.get(path`/api/${authType}/auth`, { query, ...options });
   }
 }
 

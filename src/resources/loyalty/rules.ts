@@ -1,8 +1,9 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { APIResource } from '../../resource';
-import { isRequestOptions } from '../../core';
-import * as Core from '../../core';
+import { APIResource } from '../../core/resource';
+import { APIPromise } from '../../core/api-promise';
+import { RequestOptions } from '../../internal/request-options';
+import { path } from '../../internal/utils/path';
 
 export class Rules extends APIResource {
   /**
@@ -26,7 +27,7 @@ export class Rules extends APIResource {
    * });
    * ```
    */
-  create(body: RuleCreateParams, options?: Core.RequestOptions): Core.APIPromise<RuleCreateResponse> {
+  create(body: RuleCreateParams, options?: RequestOptions): APIPromise<RuleCreateResponse> {
     return this._client.post('/api/loyalty/rules', { body, ...options });
   }
 
@@ -45,12 +46,8 @@ export class Rules extends APIResource {
    * );
    * ```
    */
-  update(
-    id: string,
-    body: RuleUpdateParams,
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<RuleUpdateResponse> {
-    return this._client.post(`/api/loyalty/rules/${id}`, { body, ...options });
+  update(id: string, body: RuleUpdateParams, options?: RequestOptions): APIPromise<RuleUpdateResponse> {
+    return this._client.post(path`/api/loyalty/rules/${id}`, { body, ...options });
   }
 
   /**
@@ -61,15 +58,10 @@ export class Rules extends APIResource {
    * const rules = await client.loyalty.rules.list();
    * ```
    */
-  list(query?: RuleListParams, options?: Core.RequestOptions): Core.APIPromise<RuleListResponse>;
-  list(options?: Core.RequestOptions): Core.APIPromise<RuleListResponse>;
   list(
-    query: RuleListParams | Core.RequestOptions = {},
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<RuleListResponse> {
-    if (isRequestOptions(query)) {
-      return this.list({}, query);
-    }
+    query: RuleListParams | null | undefined = {},
+    options?: RequestOptions,
+  ): APIPromise<RuleListResponse> {
     return this._client.get('/api/loyalty/rules', { query, ...options });
   }
 
@@ -85,20 +77,11 @@ export class Rules extends APIResource {
    */
   delete(
     id: string,
-    params?: RuleDeleteParams,
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<RuleDeleteResponse>;
-  delete(id: string, options?: Core.RequestOptions): Core.APIPromise<RuleDeleteResponse>;
-  delete(
-    id: string,
-    params: RuleDeleteParams | Core.RequestOptions = {},
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<RuleDeleteResponse> {
-    if (isRequestOptions(params)) {
-      return this.delete(id, {}, params);
-    }
-    const { debitLoyaltyPoints } = params;
-    return this._client.delete(`/api/loyalty/rules/${id}`, { query: { debitLoyaltyPoints }, ...options });
+    params: RuleDeleteParams | null | undefined = {},
+    options?: RequestOptions,
+  ): APIPromise<RuleDeleteResponse> {
+    const { debitLoyaltyPoints } = params ?? {};
+    return this._client.delete(path`/api/loyalty/rules/${id}`, { query: { debitLoyaltyPoints }, ...options });
   }
 
   /**
@@ -118,19 +101,10 @@ export class Rules extends APIResource {
    */
   complete(
     id: string,
-    body?: RuleCompleteParams,
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<RuleCompleteResponse>;
-  complete(id: string, options?: Core.RequestOptions): Core.APIPromise<RuleCompleteResponse>;
-  complete(
-    id: string,
-    body: RuleCompleteParams | Core.RequestOptions = {},
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<RuleCompleteResponse> {
-    if (isRequestOptions(body)) {
-      return this.complete(id, {}, body);
-    }
-    return this._client.post(`/api/loyalty/rules/${id}/complete`, { body, ...options });
+    body: RuleCompleteParams | null | undefined = {},
+    options?: RequestOptions,
+  ): APIPromise<RuleCompleteResponse> {
+    return this._client.post(path`/api/loyalty/rules/${id}/complete`, { body, ...options });
   }
 
   /**
@@ -143,17 +117,9 @@ export class Rules extends APIResource {
    * ```
    */
   getStatus(
-    query?: RuleGetStatusParams,
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<RuleGetStatusResponse>;
-  getStatus(options?: Core.RequestOptions): Core.APIPromise<RuleGetStatusResponse>;
-  getStatus(
-    query: RuleGetStatusParams | Core.RequestOptions = {},
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<RuleGetStatusResponse> {
-    if (isRequestOptions(query)) {
-      return this.getStatus({}, query);
-    }
+    query: RuleGetStatusParams | null | undefined = {},
+    options?: RequestOptions,
+  ): APIPromise<RuleGetStatusResponse> {
     return this._client.get('/api/loyalty/rules/status', { query, ...options });
   }
 }

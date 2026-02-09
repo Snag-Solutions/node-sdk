@@ -1,7 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
 import SnagSolutions from '@snagsolutions/sdk';
-import { Response } from 'node-fetch';
 
 const client = new SnagSolutions({
   apiKey: 'My API Key',
@@ -48,16 +47,6 @@ describe('resource multipliers', () => {
   });
 
   // Prism tests are disabled
-  test.skip('update: request options instead of params are passed correctly', async () => {
-    // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
-    await expect(
-      client.loyalty.multipliers.update('182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e', {
-        path: '/_stainless_unknown_path',
-      }),
-    ).rejects.toThrow(SnagSolutions.NotFoundError);
-  });
-
-  // Prism tests are disabled
   test.skip('update: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -83,14 +72,6 @@ describe('resource multipliers', () => {
     const dataAndResponse = await responsePromise.withResponse();
     expect(dataAndResponse.data).toBe(response);
     expect(dataAndResponse.response).toBe(rawResponse);
-  });
-
-  // Prism tests are disabled
-  test.skip('list: request options instead of params are passed correctly', async () => {
-    // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
-    await expect(client.loyalty.multipliers.list({ path: '/_stainless_unknown_path' })).rejects.toThrow(
-      SnagSolutions.NotFoundError,
-    );
   });
 
   // Prism tests are disabled
@@ -129,18 +110,8 @@ describe('resource multipliers', () => {
   });
 
   // Prism tests are disabled
-  test.skip('delete: request options instead of params are passed correctly', async () => {
-    // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
-    await expect(
-      client.loyalty.multipliers.delete('182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e', {
-        path: '/_stainless_unknown_path',
-      }),
-    ).rejects.toThrow(SnagSolutions.NotFoundError);
-  });
-
-  // Prism tests are disabled
-  test.skip('deleteByExternalId: only required params', async () => {
-    const responsePromise = client.loyalty.multipliers.deleteByExternalId({
+  test.skip('deleteByExternalID: only required params', async () => {
+    const responsePromise = client.loyalty.multipliers.deleteByExternalID({
       externalIdentifier: 'externalIdentifier',
     });
     const rawResponse = await responsePromise.asResponse();
@@ -153,8 +124,8 @@ describe('resource multipliers', () => {
   });
 
   // Prism tests are disabled
-  test.skip('deleteByExternalId: required and optional params', async () => {
-    const response = await client.loyalty.multipliers.deleteByExternalId({
+  test.skip('deleteByExternalID: required and optional params', async () => {
+    const response = await client.loyalty.multipliers.deleteByExternalID({
       externalIdentifier: 'externalIdentifier',
     });
   });

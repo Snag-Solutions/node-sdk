@@ -1,8 +1,9 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { APIResource } from '../../resource';
-import { isRequestOptions } from '../../core';
-import * as Core from '../../core';
+import { APIResource } from '../../core/resource';
+import { APIPromise } from '../../core/api-promise';
+import { RequestOptions } from '../../internal/request-options';
+import { path } from '../../internal/utils/path';
 
 export class Multipliers extends APIResource {
   /**
@@ -16,10 +17,7 @@ export class Multipliers extends APIResource {
    * });
    * ```
    */
-  create(
-    body: MultiplierCreateParams,
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<MultiplierCreateResponse> {
+  create(body: MultiplierCreateParams, options?: RequestOptions): APIPromise<MultiplierCreateResponse> {
     return this._client.post('/api/loyalty/multipliers', { body, ...options });
   }
 
@@ -34,20 +32,11 @@ export class Multipliers extends APIResource {
    * ```
    */
   update(
-    multiplierId: string,
-    body?: MultiplierUpdateParams,
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<MultiplierUpdateResponse>;
-  update(multiplierId: string, options?: Core.RequestOptions): Core.APIPromise<MultiplierUpdateResponse>;
-  update(
-    multiplierId: string,
-    body: MultiplierUpdateParams | Core.RequestOptions = {},
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<MultiplierUpdateResponse> {
-    if (isRequestOptions(body)) {
-      return this.update(multiplierId, {}, body);
-    }
-    return this._client.post(`/api/loyalty/multipliers/${multiplierId}`, { body, ...options });
+    multiplierID: string,
+    body: MultiplierUpdateParams | null | undefined = {},
+    options?: RequestOptions,
+  ): APIPromise<MultiplierUpdateResponse> {
+    return this._client.post(path`/api/loyalty/multipliers/${multiplierID}`, { body, ...options });
   }
 
   /**
@@ -58,15 +47,10 @@ export class Multipliers extends APIResource {
    * const multipliers = await client.loyalty.multipliers.list();
    * ```
    */
-  list(query?: MultiplierListParams, options?: Core.RequestOptions): Core.APIPromise<MultiplierListResponse>;
-  list(options?: Core.RequestOptions): Core.APIPromise<MultiplierListResponse>;
   list(
-    query: MultiplierListParams | Core.RequestOptions = {},
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<MultiplierListResponse> {
-    if (isRequestOptions(query)) {
-      return this.list({}, query);
-    }
+    query: MultiplierListParams | null | undefined = {},
+    options?: RequestOptions,
+  ): APIPromise<MultiplierListResponse> {
     return this._client.get('/api/loyalty/multipliers', { query, ...options });
   }
 
@@ -80,8 +64,8 @@ export class Multipliers extends APIResource {
    * );
    * ```
    */
-  delete(multiplierId: string, options?: Core.RequestOptions): Core.APIPromise<MultiplierDeleteResponse> {
-    return this._client.delete(`/api/loyalty/multipliers/${multiplierId}`, options);
+  delete(multiplierID: string, options?: RequestOptions): APIPromise<MultiplierDeleteResponse> {
+    return this._client.delete(path`/api/loyalty/multipliers/${multiplierID}`, options);
   }
 
   /**
@@ -90,15 +74,15 @@ export class Multipliers extends APIResource {
    * @example
    * ```ts
    * const response =
-   *   await client.loyalty.multipliers.deleteByExternalId({
+   *   await client.loyalty.multipliers.deleteByExternalID({
    *     externalIdentifier: 'externalIdentifier',
    *   });
    * ```
    */
-  deleteByExternalId(
+  deleteByExternalID(
     body: MultiplierDeleteByExternalIDParams,
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<MultiplierDeleteByExternalIDResponse> {
+    options?: RequestOptions,
+  ): APIPromise<MultiplierDeleteByExternalIDResponse> {
     return this._client.delete('/api/loyalty/multipliers', { body, ...options });
   }
 }

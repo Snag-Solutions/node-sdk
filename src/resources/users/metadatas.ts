@@ -1,8 +1,8 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { APIResource } from '../../resource';
-import { isRequestOptions } from '../../core';
-import * as Core from '../../core';
+import { APIResource } from '../../core/resource';
+import { APIPromise } from '../../core/api-promise';
+import { RequestOptions } from '../../internal/request-options';
 
 export class Metadatas extends APIResource {
   /**
@@ -13,15 +13,10 @@ export class Metadatas extends APIResource {
    * const metadata = await client.users.metadatas.create();
    * ```
    */
-  create(body?: MetadataCreateParams, options?: Core.RequestOptions): Core.APIPromise<MetadataCreateResponse>;
-  create(options?: Core.RequestOptions): Core.APIPromise<MetadataCreateResponse>;
   create(
-    body: MetadataCreateParams | Core.RequestOptions = {},
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<MetadataCreateResponse> {
-    if (isRequestOptions(body)) {
-      return this.create({}, body);
-    }
+    body: MetadataCreateParams | null | undefined = {},
+    options?: RequestOptions,
+  ): APIPromise<MetadataCreateResponse> {
     return this._client.post('/api/users/metadatas', { body, ...options });
   }
 
@@ -33,15 +28,10 @@ export class Metadatas extends APIResource {
    * const metadatas = await client.users.metadatas.list();
    * ```
    */
-  list(query?: MetadataListParams, options?: Core.RequestOptions): Core.APIPromise<MetadataListResponse>;
-  list(options?: Core.RequestOptions): Core.APIPromise<MetadataListResponse>;
   list(
-    query: MetadataListParams | Core.RequestOptions = {},
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<MetadataListResponse> {
-    if (isRequestOptions(query)) {
-      return this.list({}, query);
-    }
+    query: MetadataListParams | null | undefined = {},
+    options?: RequestOptions,
+  ): APIPromise<MetadataListResponse> {
     return this._client.get('/api/users/metadatas', { query, ...options });
   }
 }

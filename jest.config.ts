@@ -8,7 +8,6 @@ const config: JestConfigWithTsJest = {
   },
   moduleNameMapper: {
     '^@snagsolutions/sdk$': '<rootDir>/src/index.ts',
-    '^@snagsolutions/sdk/_shims/auto/(.*)$': '<rootDir>/src/_shims/auto/$1-node',
     '^@snagsolutions/sdk/(.*)$': '<rootDir>/src/$1',
   },
   modulePathIgnorePatterns: [
@@ -16,6 +15,7 @@ const config: JestConfigWithTsJest = {
     '<rootDir>/dist/',
     '<rootDir>/deno/',
     '<rootDir>/deno_tests/',
+    '<rootDir>/packages/',
   ],
   testPathIgnorePatterns: ['scripts'],
 };

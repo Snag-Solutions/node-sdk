@@ -1,8 +1,9 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { APIResource } from '../../resource';
-import { isRequestOptions } from '../../core';
-import * as Core from '../../core';
+import { APIResource } from '../../core/resource';
+import { APIPromise } from '../../core/api-promise';
+import { RequestOptions } from '../../internal/request-options';
+import { path } from '../../internal/utils/path';
 
 export class Accounts extends APIResource {
   /**
@@ -13,15 +14,10 @@ export class Accounts extends APIResource {
    * const accounts = await client.loyalty.accounts.list();
    * ```
    */
-  list(query?: AccountListParams, options?: Core.RequestOptions): Core.APIPromise<AccountListResponse>;
-  list(options?: Core.RequestOptions): Core.APIPromise<AccountListResponse>;
   list(
-    query: AccountListParams | Core.RequestOptions = {},
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<AccountListResponse> {
-    if (isRequestOptions(query)) {
-      return this.list({}, query);
-    }
+    query: AccountListParams | null | undefined = {},
+    options?: RequestOptions,
+  ): APIPromise<AccountListResponse> {
     return this._client.get('/api/loyalty/accounts', { query, ...options });
   }
 
@@ -47,9 +43,9 @@ export class Accounts extends APIResource {
   retrieveRank(
     id: string,
     query: AccountRetrieveRankParams,
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<AccountRetrieveRankResponse> {
-    return this._client.get(`/api/loyalty/accounts/${id}/rank`, { query, ...options });
+    options?: RequestOptions,
+  ): APIPromise<AccountRetrieveRankResponse> {
+    return this._client.get(path`/api/loyalty/accounts/${id}/rank`, { query, ...options });
   }
 }
 

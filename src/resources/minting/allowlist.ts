@@ -1,7 +1,8 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { APIResource } from '../../resource';
-import * as Core from '../../core';
+import { APIResource } from '../../core/resource';
+import { APIPromise } from '../../core/api-promise';
+import { RequestOptions } from '../../internal/request-options';
 
 export class Allowlist extends APIResource {
   /**
@@ -15,7 +16,7 @@ export class Allowlist extends APIResource {
    * });
    * ```
    */
-  list(query: AllowlistListParams, options?: Core.RequestOptions): Core.APIPromise<AllowlistListResponse> {
+  list(query: AllowlistListParams, options?: RequestOptions): APIPromise<AllowlistListResponse> {
     return this._client.get('/api/minting/assets/allowlist', { query, ...options });
   }
 
@@ -35,10 +36,7 @@ export class Allowlist extends APIResource {
    * });
    * ```
    */
-  upsert(
-    body: AllowlistUpsertParams,
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<AllowlistUpsertResponse> {
+  upsert(body: AllowlistUpsertParams, options?: RequestOptions): APIPromise<AllowlistUpsertResponse> {
     return this._client.post('/api/minting/assets/allowlist', { body, ...options });
   }
 }
