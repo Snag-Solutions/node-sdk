@@ -67,7 +67,7 @@ export class Auth extends APIResource {
  */
 export interface AuthConnectAuthResponse {
   /**
-   * The URL to redirect to
+   * The URL to redirect to.
    */
   url: string;
 }
