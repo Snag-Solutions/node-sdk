@@ -105,7 +105,8 @@ export namespace WebsiteUserRoleAssignParams {
       | 'WEBSITE_MODERATOR'
       | 'WEBSITE_API_KEY'
       | 'STRATUS_API_KEY'
-      | 'WEBSITE_READ_ONLY_API_KEY';
+      | 'WEBSITE_READ_ONLY_API_KEY'
+      | 'ORGANIZATION_API_KEY';
 
     /**
      * Wallet address of the user
