@@ -648,6 +648,7 @@ export interface TransactionGetTransactionEntriesParams {
     | 'robinhood_token_hold'
     | 'connected_instagram'
     | 'instagram_post'
+    | 'dapps_by_gas_spent'
     | Array<
         | 'Bonus'
         | 'BoughtOn'
@@ -728,6 +729,7 @@ export interface TransactionGetTransactionEntriesParams {
         | 'robinhood_token_hold'
         | 'connected_instagram'
         | 'instagram_post'
+        | 'dapps_by_gas_spent'
       >;
 
   /**

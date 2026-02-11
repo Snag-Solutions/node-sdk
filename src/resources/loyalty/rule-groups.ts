@@ -266,7 +266,8 @@ export namespace RuleGroupGetRuleGroupsResponse {
           | 'reddit_comment'
           | 'robinhood_token_hold'
           | 'connected_instagram'
-          | 'instagram_post';
+          | 'instagram_post'
+          | 'dapps_by_gas_spent';
       }
 
       export namespace LoyaltyRule {

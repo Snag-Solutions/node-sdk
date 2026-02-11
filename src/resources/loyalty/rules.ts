@@ -293,7 +293,8 @@ export interface RuleCreateResponse {
     | 'reddit_comment'
     | 'robinhood_token_hold'
     | 'connected_instagram'
-    | 'instagram_post';
+    | 'instagram_post'
+    | 'dapps_by_gas_spent';
 
   /**
    * Unique identifier for the associated website
@@ -4267,7 +4268,8 @@ export interface RuleCreateParams {
     | 'reddit_comment'
     | 'robinhood_token_hold'
     | 'connected_instagram'
-    | 'instagram_post';
+    | 'instagram_post'
+    | 'dapps_by_gas_spent';
 
   /**
    * Unique identifier for the associated website
