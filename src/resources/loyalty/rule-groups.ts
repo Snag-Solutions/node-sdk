@@ -848,6 +848,8 @@ export namespace RuleGroupGetRuleGroupsResponse {
               | 'zkverify'
               | 'polkadot'
               | 'kusama'
+              | 'horizen'
+              | 'horizenTestnet'
               | 'flow_cadence';
           }
 
@@ -1003,6 +1005,8 @@ export namespace RuleGroupGetRuleGroupsResponse {
               | 'zkverify'
               | 'polkadot'
               | 'kusama'
+              | 'horizen'
+              | 'horizenTestnet'
               | 'flow_cadence';
 
             /**
