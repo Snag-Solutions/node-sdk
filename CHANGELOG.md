@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.231 (2026-02-11)
+
+Full Changelog: [v0.1.0-alpha.230...v0.1.0-alpha.231](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.230...v0.1.0-alpha.231)
+
+### Chores
+
+* remove custom code ([827479d](https://github.com/Snag-Solutions/node-sdk/commit/827479dd478fb4eb18af479930ada2451531cbd3))
+
 ## 0.1.0-alpha.230 (2026-02-10)
 
 Full Changelog: [v0.1.0-alpha.229...v0.1.0-alpha.230](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.229...v0.1.0-alpha.230)
