@@ -130,6 +130,8 @@ export interface WebsiteCollectionCreateParams {
     | 'zkverify'
     | 'polkadot'
     | 'kusama'
+    | 'horizen'
+    | 'horizenTestnet'
     | 'flow_cadence';
 
   organizationId: string;

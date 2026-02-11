@@ -755,6 +755,8 @@ export namespace RuleEditListResponse {
             | 'zkverify'
             | 'polkadot'
             | 'kusama'
+            | 'horizen'
+            | 'horizenTestnet'
             | 'flow_cadence';
         }
 
@@ -910,6 +912,8 @@ export namespace RuleEditListResponse {
             | 'zkverify'
             | 'polkadot'
             | 'kusama'
+            | 'horizen'
+            | 'horizenTestnet'
             | 'flow_cadence';
 
           /**
@@ -1816,6 +1820,8 @@ export namespace RuleEditListResponse {
             | 'zkverify'
             | 'polkadot'
             | 'kusama'
+            | 'horizen'
+            | 'horizenTestnet'
             | 'flow_cadence';
         }
 
@@ -1971,6 +1977,8 @@ export namespace RuleEditListResponse {
             | 'zkverify'
             | 'polkadot'
             | 'kusama'
+            | 'horizen'
+            | 'horizenTestnet'
             | 'flow_cadence';
 
           /**
@@ -2932,6 +2940,8 @@ export namespace RuleEditRestoreResponse {
           | 'zkverify'
           | 'polkadot'
           | 'kusama'
+          | 'horizen'
+          | 'horizenTestnet'
           | 'flow_cadence';
       }
 
@@ -3087,6 +3097,8 @@ export namespace RuleEditRestoreResponse {
           | 'zkverify'
           | 'polkadot'
           | 'kusama'
+          | 'horizen'
+          | 'horizenTestnet'
           | 'flow_cadence';
 
         /**
@@ -3993,6 +4005,8 @@ export namespace RuleEditRestoreResponse {
           | 'zkverify'
           | 'polkadot'
           | 'kusama'
+          | 'horizen'
+          | 'horizenTestnet'
           | 'flow_cadence';
       }
 
@@ -4148,6 +4162,8 @@ export namespace RuleEditRestoreResponse {
           | 'zkverify'
           | 'polkadot'
           | 'kusama'
+          | 'horizen'
+          | 'horizenTestnet'
           | 'flow_cadence';
 
         /**
