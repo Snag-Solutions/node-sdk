@@ -20,7 +20,8 @@ export class Auth extends APIResource {
       | 'tiktok'
       | 'email'
       | 'reddit'
-      | 'instagram',
+      | 'instagram'
+      | 'github',
     query?: AuthConnectAuthParams,
     options?: Core.RequestOptions,
   ): Core.APIPromise<AuthConnectAuthResponse>;
@@ -36,7 +37,8 @@ export class Auth extends APIResource {
       | 'tiktok'
       | 'email'
       | 'reddit'
-      | 'instagram',
+      | 'instagram'
+      | 'github',
     options?: Core.RequestOptions,
   ): Core.APIPromise<AuthConnectAuthResponse>;
   connectAuth(
@@ -51,7 +53,8 @@ export class Auth extends APIResource {
       | 'tiktok'
       | 'email'
       | 'reddit'
-      | 'instagram',
+      | 'instagram'
+      | 'github',
     query: AuthConnectAuthParams | Core.RequestOptions = {},
     options?: Core.RequestOptions,
   ): Core.APIPromise<AuthConnectAuthResponse> {
