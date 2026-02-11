@@ -799,6 +799,12 @@ export namespace RuleCreateResponse {
     requirePostMediaLink?: boolean | null;
 
     /**
+     * If enabled, the progress tracking row will be deleted after a successful claim,
+     * allowing the user to re-earn the rule.
+     */
+    resetProgressOnClaim?: boolean | null;
+
+    /**
      * Flag indicating if the rule can also reward badges per range.
      */
     rewardBadgePerRange?: boolean;
@@ -2149,6 +2155,12 @@ export namespace RuleUpdateResponse {
     requirePostMediaLink?: boolean | null;
 
     /**
+     * If enabled, the progress tracking row will be deleted after a successful claim,
+     * allowing the user to re-earn the rule.
+     */
+    resetProgressOnClaim?: boolean | null;
+
+    /**
      * Flag indicating if the rule can also reward badges per range.
      */
     rewardBadgePerRange?: boolean;
@@ -3336,6 +3348,12 @@ export namespace RuleListResponse {
        * Flag indicating if media metadata is required.
        */
       requirePostMediaLink?: boolean | null;
+
+      /**
+       * If enabled, the progress tracking row will be deleted after a successful claim,
+       * allowing the user to re-earn the rule.
+       */
+      resetProgressOnClaim?: boolean | null;
 
       /**
        * Flag indicating if the rule can also reward badges per range.
@@ -4794,6 +4812,12 @@ export namespace RuleCreateParams {
     requirePostMediaLink?: boolean | null;
 
     /**
+     * If enabled, the progress tracking row will be deleted after a successful claim,
+     * allowing the user to re-earn the rule.
+     */
+    resetProgressOnClaim?: boolean | null;
+
+    /**
      * Flag indicating if the rule can also reward badges per range.
      */
     rewardBadgePerRange?: boolean;
@@ -6140,6 +6164,12 @@ export namespace RuleUpdateParams {
      * Flag indicating if media metadata is required.
      */
     requirePostMediaLink?: boolean | null;
+
+    /**
+     * If enabled, the progress tracking row will be deleted after a successful claim,
+     * allowing the user to re-earn the rule.
+     */
+    resetProgressOnClaim?: boolean | null;
 
     /**
      * Flag indicating if the rule can also reward badges per range.
