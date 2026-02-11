@@ -231,6 +231,10 @@ export namespace UserListResponse {
 
       externalLoyaltyScore?: string | null;
 
+      githubUser?: string | null;
+
+      githubUserId?: string | null;
+
       googleUser?: string | null;
 
       googleUserId?: string | null;
@@ -248,6 +252,10 @@ export namespace UserListResponse {
       meta?: string | null;
 
       portfolioUrl?: string | null;
+
+      redditUser?: string | null;
+
+      redditUserId?: string | null;
 
       steamUserId?: string | null;
 
