@@ -1,8 +1,7 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { APIResource } from '../../../core/resource';
-import { APIPromise } from '../../../core/api-promise';
-import { RequestOptions } from '../../../internal/request-options';
+import { APIResource } from '../../../resource';
+import * as Core from '../../../core';
 
 export class Values extends APIResource {
   /**
@@ -28,7 +27,7 @@ export class Values extends APIResource {
    *   );
    * ```
    */
-  create(body: ValueCreateParams, options?: RequestOptions): APIPromise<ValueCreateResponse> {
+  create(body: ValueCreateParams, options?: Core.RequestOptions): Core.APIPromise<ValueCreateResponse> {
     return this._client.post('/api/website_user_attributes/values', { body, ...options });
   }
 
@@ -43,7 +42,7 @@ export class Values extends APIResource {
    *   });
    * ```
    */
-  list(query: ValueListParams, options?: RequestOptions): APIPromise<ValueListResponse> {
+  list(query: ValueListParams, options?: Core.RequestOptions): Core.APIPromise<ValueListResponse> {
     return this._client.get('/api/website_user_attributes/values', { query, ...options });
   }
 }

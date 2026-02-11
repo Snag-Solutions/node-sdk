@@ -1,8 +1,7 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { APIResource } from '../core/resource';
-import { APIPromise } from '../core/api-promise';
-import { RequestOptions } from '../internal/request-options';
+import { APIResource } from '../resource';
+import * as Core from '../core';
 
 export class Assets extends APIResource {
   /**
@@ -18,7 +17,10 @@ export class Assets extends APIResource {
    * });
    * ```
    */
-  createAsset(body: AssetCreateAssetParams, options?: RequestOptions): APIPromise<AssetCreateAssetResponse> {
+  createAsset(
+    body: AssetCreateAssetParams,
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<AssetCreateAssetResponse> {
     return this._client.post('/api/assets', { body, ...options });
   }
 }

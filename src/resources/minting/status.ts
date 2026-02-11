@@ -1,9 +1,7 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { APIResource } from '../../core/resource';
-import { APIPromise } from '../../core/api-promise';
-import { RequestOptions } from '../../internal/request-options';
-import { path } from '../../internal/utils/path';
+import { APIResource } from '../../resource';
+import * as Core from '../../core';
 
 export class Status extends APIResource {
   /**
@@ -14,8 +12,8 @@ export class Status extends APIResource {
    * const status = await client.minting.status.retrieve('id');
    * ```
    */
-  retrieve(id: string, options?: RequestOptions): APIPromise<StatusRetrieveResponse> {
-    return this._client.get(path`/api/minting/status/${id}`, options);
+  retrieve(id: string, options?: Core.RequestOptions): Core.APIPromise<StatusRetrieveResponse> {
+    return this._client.get(`/api/minting/status/${id}`, options);
   }
 
   /**
@@ -28,8 +26,12 @@ export class Status extends APIResource {
    * });
    * ```
    */
-  update(id: string, body: StatusUpdateParams, options?: RequestOptions): APIPromise<StatusUpdateResponse> {
-    return this._client.post(path`/api/minting/status/${id}`, { body, ...options });
+  update(
+    id: string,
+    body: StatusUpdateParams,
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<StatusUpdateResponse> {
+    return this._client.post(`/api/minting/status/${id}`, { body, ...options });
   }
 }
 

@@ -1,9 +1,7 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { APIResource } from '../../core/resource';
-import { APIPromise } from '../../core/api-promise';
-import { buildHeaders } from '../../internal/headers';
-import { RequestOptions } from '../../internal/request-options';
+import { APIResource } from '../../resource';
+import * as Core from '../../core';
 
 export class WebsiteCollections extends APIResource {
   /**
@@ -22,11 +20,11 @@ export class WebsiteCollections extends APIResource {
    * });
    * ```
    */
-  create(body: WebsiteCollectionCreateParams, options?: RequestOptions): APIPromise<void> {
+  create(body: WebsiteCollectionCreateParams, options?: Core.RequestOptions): Core.APIPromise<void> {
     return this._client.post('/api/website_collections', {
       body,
       ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      headers: { Accept: '*/*', ...options?.headers },
     });
   }
 
@@ -43,8 +41,8 @@ export class WebsiteCollections extends APIResource {
    */
   list(
     query: WebsiteCollectionListParams,
-    options?: RequestOptions,
-  ): APIPromise<WebsiteCollectionListResponse> {
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<WebsiteCollectionListResponse> {
     return this._client.get('/api/website_collections', { query, ...options });
   }
 }

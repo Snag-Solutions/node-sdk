@@ -1,9 +1,8 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { APIResource } from '../../core/resource';
-import { APIPromise } from '../../core/api-promise';
-import { RequestOptions } from '../../internal/request-options';
-import { path } from '../../internal/utils/path';
+import { APIResource } from '../../resource';
+import { isRequestOptions } from '../../core';
+import * as Core from '../../core';
 
 export class RuleGroups extends APIResource {
   /**
@@ -21,8 +20,8 @@ export class RuleGroups extends APIResource {
    */
   createRuleGroup(
     body: RuleGroupCreateRuleGroupParams,
-    options?: RequestOptions,
-  ): APIPromise<RuleGroupCreateRuleGroupResponse> {
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<RuleGroupCreateRuleGroupResponse> {
     return this._client.post('/api/loyalty/rule_groups/create', { body, ...options });
   }
 
@@ -37,8 +36,8 @@ export class RuleGroups extends APIResource {
    *   );
    * ```
    */
-  deleteRuleGroup(id: string, options?: RequestOptions): APIPromise<unknown> {
-    return this._client.delete(path`/api/loyalty/rule_groups/${id}`, options);
+  deleteRuleGroup(id: string, options?: Core.RequestOptions): Core.APIPromise<unknown> {
+    return this._client.delete(`/api/loyalty/rule_groups/${id}`, options);
   }
 
   /**
@@ -51,9 +50,17 @@ export class RuleGroups extends APIResource {
    * ```
    */
   getRuleGroups(
-    query: RuleGroupGetRuleGroupsParams | null | undefined = {},
-    options?: RequestOptions,
-  ): APIPromise<RuleGroupGetRuleGroupsResponse> {
+    query?: RuleGroupGetRuleGroupsParams,
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<RuleGroupGetRuleGroupsResponse>;
+  getRuleGroups(options?: Core.RequestOptions): Core.APIPromise<RuleGroupGetRuleGroupsResponse>;
+  getRuleGroups(
+    query: RuleGroupGetRuleGroupsParams | Core.RequestOptions = {},
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<RuleGroupGetRuleGroupsResponse> {
+    if (isRequestOptions(query)) {
+      return this.getRuleGroups({}, query);
+    }
     return this._client.get('/api/loyalty/rule_groups', { query, ...options });
   }
 
@@ -70,10 +77,22 @@ export class RuleGroups extends APIResource {
    */
   updateRuleGroup(
     id: string,
-    body: RuleGroupUpdateRuleGroupParams | null | undefined = {},
-    options?: RequestOptions,
-  ): APIPromise<RuleGroupUpdateRuleGroupResponse> {
-    return this._client.post(path`/api/loyalty/rule_groups/${id}`, { body, ...options });
+    body?: RuleGroupUpdateRuleGroupParams,
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<RuleGroupUpdateRuleGroupResponse>;
+  updateRuleGroup(
+    id: string,
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<RuleGroupUpdateRuleGroupResponse>;
+  updateRuleGroup(
+    id: string,
+    body: RuleGroupUpdateRuleGroupParams | Core.RequestOptions = {},
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<RuleGroupUpdateRuleGroupResponse> {
+    if (isRequestOptions(body)) {
+      return this.updateRuleGroup(id, {}, body);
+    }
+    return this._client.post(`/api/loyalty/rule_groups/${id}`, { body, ...options });
   }
 }
 

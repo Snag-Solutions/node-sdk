@@ -1,8 +1,8 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { APIResource } from '../../core/resource';
-import { APIPromise } from '../../core/api-promise';
-import { RequestOptions } from '../../internal/request-options';
+import { APIResource } from '../../resource';
+import { isRequestOptions } from '../../core';
+import * as Core from '../../core';
 
 export class QuestionsResponses extends APIResource {
   /**
@@ -16,9 +16,17 @@ export class QuestionsResponses extends APIResource {
    * ```
    */
   list(
-    query: QuestionsResponseListParams | null | undefined = {},
-    options?: RequestOptions,
-  ): APIPromise<QuestionsResponseListResponse> {
+    query?: QuestionsResponseListParams,
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<QuestionsResponseListResponse>;
+  list(options?: Core.RequestOptions): Core.APIPromise<QuestionsResponseListResponse>;
+  list(
+    query: QuestionsResponseListParams | Core.RequestOptions = {},
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<QuestionsResponseListResponse> {
+    if (isRequestOptions(query)) {
+      return this.list({}, query);
+    }
     return this._client.get('/api/loyalty/questions_responses', { query, ...options });
   }
 
@@ -36,8 +44,8 @@ export class QuestionsResponses extends APIResource {
    */
   submit(
     body: QuestionsResponseSubmitParams,
-    options?: RequestOptions,
-  ): APIPromise<QuestionsResponseSubmitResponse> {
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<QuestionsResponseSubmitResponse> {
     return this._client.post('/api/loyalty/questions_responses', { body, ...options });
   }
 }

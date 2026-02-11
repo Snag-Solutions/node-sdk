@@ -1,9 +1,8 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { APIResource } from '../../../core/resource';
-import { APIPromise } from '../../../core/api-promise';
-import { RequestOptions } from '../../../internal/request-options';
-import { path } from '../../../internal/utils/path';
+import { APIResource } from '../../../resource';
+import { isRequestOptions } from '../../../core';
+import * as Core from '../../../core';
 
 export class Posts extends APIResource {
   /**
@@ -17,10 +16,15 @@ export class Posts extends APIResource {
    *   await client.loyalty.transactions.posts.list();
    * ```
    */
+  list(query?: PostListParams, options?: Core.RequestOptions): Core.APIPromise<PostListResponse>;
+  list(options?: Core.RequestOptions): Core.APIPromise<PostListResponse>;
   list(
-    query: PostListParams | null | undefined = {},
-    options?: RequestOptions,
-  ): APIPromise<PostListResponse> {
+    query: PostListParams | Core.RequestOptions = {},
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<PostListResponse> {
+    if (isRequestOptions(query)) {
+      return this.list({}, query);
+    }
     return this._client.get('/api/loyalty/posts', { query, ...options });
   }
 
@@ -37,8 +41,12 @@ export class Posts extends APIResource {
    *   });
    * ```
    */
-  reward(id: string, body: PostRewardParams, options?: RequestOptions): APIPromise<PostRewardResponse> {
-    return this._client.post(path`/api/loyalty/posts/${id}/reward`, { body, ...options });
+  reward(
+    id: string,
+    body: PostRewardParams,
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<PostRewardResponse> {
+    return this._client.post(`/api/loyalty/posts/${id}/reward`, { body, ...options });
   }
 }
 

@@ -1,6 +1,7 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
 import SnagSolutions from '@snagsolutions/sdk';
+import { Response } from 'node-fetch';
 
 const client = new SnagSolutions({
   apiKey: 'My API Key',
@@ -18,6 +19,14 @@ describe('resource posts', () => {
     const dataAndResponse = await responsePromise.withResponse();
     expect(dataAndResponse.data).toBe(response);
     expect(dataAndResponse.response).toBe(rawResponse);
+  });
+
+  // Prism tests are disabled
+  test.skip('list: request options instead of params are passed correctly', async () => {
+    // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
+    await expect(
+      client.loyalty.transactions.posts.list({ path: '/_stainless_unknown_path' }),
+    ).rejects.toThrow(SnagSolutions.NotFoundError);
   });
 
   // Prism tests are disabled

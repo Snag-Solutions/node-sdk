@@ -1,6 +1,8 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { APIResource } from '../../core/resource';
+import { APIResource } from '../../resource';
+import { isRequestOptions } from '../../core';
+import * as Core from '../../core';
 import * as WebsiteUserAttributesAPI from './website-user-attributes/website-user-attributes';
 import {
   WebsiteUserAttributeCreateParams,
@@ -11,8 +13,6 @@ import {
   WebsiteUserAttributeListResponse,
   WebsiteUserAttributes,
 } from './website-user-attributes/website-user-attributes';
-import { APIPromise } from '../../core/api-promise';
-import { RequestOptions } from '../../internal/request-options';
 
 export class Auctions extends APIResource {
   websiteUserAttributes: WebsiteUserAttributesAPI.WebsiteUserAttributes =
@@ -32,8 +32,8 @@ export class Auctions extends APIResource {
    */
   getPageSections(
     query: AuctionGetPageSectionsParams,
-    options?: RequestOptions,
-  ): APIPromise<AuctionGetPageSectionsResponse> {
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<AuctionGetPageSectionsResponse> {
     return this._client.get('/api/page_sections', { query, ...options });
   }
 
@@ -46,9 +46,17 @@ export class Auctions extends APIResource {
    * ```
    */
   listAuctionBids(
-    query: AuctionListAuctionBidsParams | null | undefined = {},
-    options?: RequestOptions,
-  ): APIPromise<AuctionListAuctionBidsResponse> {
+    query?: AuctionListAuctionBidsParams,
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<AuctionListAuctionBidsResponse>;
+  listAuctionBids(options?: Core.RequestOptions): Core.APIPromise<AuctionListAuctionBidsResponse>;
+  listAuctionBids(
+    query: AuctionListAuctionBidsParams | Core.RequestOptions = {},
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<AuctionListAuctionBidsResponse> {
+    if (isRequestOptions(query)) {
+      return this.listAuctionBids({}, query);
+    }
     return this._client.get('/api/auction_bids', { query, ...options });
   }
 
@@ -60,7 +68,7 @@ export class Auctions extends APIResource {
    * const response = await client.auctions.listAuctions();
    * ```
    */
-  listAuctions(options?: RequestOptions): APIPromise<AuctionListAuctionsResponse> {
+  listAuctions(options?: Core.RequestOptions): Core.APIPromise<AuctionListAuctionsResponse> {
     return this._client.get('/api/auctions', options);
   }
 }

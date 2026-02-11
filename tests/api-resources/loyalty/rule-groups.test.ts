@@ -1,6 +1,7 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
 import SnagSolutions from '@snagsolutions/sdk';
+import { Response } from 'node-fetch';
 
 const client = new SnagSolutions({
   apiKey: 'My API Key',
@@ -50,6 +51,16 @@ describe('resource ruleGroups', () => {
   });
 
   // Prism tests are disabled
+  test.skip('deleteRuleGroup: request options instead of params are passed correctly', async () => {
+    // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
+    await expect(
+      client.loyalty.ruleGroups.deleteRuleGroup('182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e', {
+        path: '/_stainless_unknown_path',
+      }),
+    ).rejects.toThrow(SnagSolutions.NotFoundError);
+  });
+
+  // Prism tests are disabled
   test.skip('getRuleGroups', async () => {
     const responsePromise = client.loyalty.ruleGroups.getRuleGroups();
     const rawResponse = await responsePromise.asResponse();
@@ -59,6 +70,14 @@ describe('resource ruleGroups', () => {
     const dataAndResponse = await responsePromise.withResponse();
     expect(dataAndResponse.data).toBe(response);
     expect(dataAndResponse.response).toBe(rawResponse);
+  });
+
+  // Prism tests are disabled
+  test.skip('getRuleGroups: request options instead of params are passed correctly', async () => {
+    // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
+    await expect(
+      client.loyalty.ruleGroups.getRuleGroups({ path: '/_stainless_unknown_path' }),
+    ).rejects.toThrow(SnagSolutions.NotFoundError);
   });
 
   // Prism tests are disabled
@@ -88,6 +107,16 @@ describe('resource ruleGroups', () => {
     const dataAndResponse = await responsePromise.withResponse();
     expect(dataAndResponse.data).toBe(response);
     expect(dataAndResponse.response).toBe(rawResponse);
+  });
+
+  // Prism tests are disabled
+  test.skip('updateRuleGroup: request options instead of params are passed correctly', async () => {
+    // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
+    await expect(
+      client.loyalty.ruleGroups.updateRuleGroup('182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e', {
+        path: '/_stainless_unknown_path',
+      }),
+    ).rejects.toThrow(SnagSolutions.NotFoundError);
   });
 
   // Prism tests are disabled
