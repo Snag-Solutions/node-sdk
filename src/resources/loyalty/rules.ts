@@ -466,6 +466,8 @@ export interface RuleCreateResponse {
     | 'zkverify'
     | 'polkadot'
     | 'kusama'
+    | 'horizen'
+    | 'horizenTestnet'
     | 'flow_cadence';
 
   /**
@@ -1070,6 +1072,8 @@ export namespace RuleCreateResponse {
         | 'zkverify'
         | 'polkadot'
         | 'kusama'
+        | 'horizen'
+        | 'horizenTestnet'
         | 'flow_cadence';
     }
 
@@ -1225,6 +1229,8 @@ export namespace RuleCreateResponse {
         | 'zkverify'
         | 'polkadot'
         | 'kusama'
+        | 'horizen'
+        | 'horizenTestnet'
         | 'flow_cadence';
 
       /**
@@ -1535,6 +1541,8 @@ export namespace RuleCreateResponse {
       | 'zkverify'
       | 'polkadot'
       | 'kusama'
+      | 'horizen'
+      | 'horizenTestnet'
       | 'flow_cadence';
 
     /**
@@ -1730,6 +1738,8 @@ export interface RuleUpdateResponse {
     | 'zkverify'
     | 'polkadot'
     | 'kusama'
+    | 'horizen'
+    | 'horizenTestnet'
     | 'flow_cadence';
 
   /**
@@ -1832,6 +1842,8 @@ export namespace RuleUpdateResponse {
       | 'zkverify'
       | 'polkadot'
       | 'kusama'
+      | 'horizen'
+      | 'horizenTestnet'
       | 'flow_cadence';
 
     /**
@@ -2410,6 +2422,8 @@ export namespace RuleUpdateResponse {
         | 'zkverify'
         | 'polkadot'
         | 'kusama'
+        | 'horizen'
+        | 'horizenTestnet'
         | 'flow_cadence';
     }
 
@@ -2565,6 +2579,8 @@ export namespace RuleUpdateResponse {
         | 'zkverify'
         | 'polkadot'
         | 'kusama'
+        | 'horizen'
+        | 'horizenTestnet'
         | 'flow_cadence';
 
       /**
@@ -3595,6 +3611,8 @@ export namespace RuleListResponse {
           | 'zkverify'
           | 'polkadot'
           | 'kusama'
+          | 'horizen'
+          | 'horizenTestnet'
           | 'flow_cadence';
       }
 
@@ -3750,6 +3768,8 @@ export namespace RuleListResponse {
           | 'zkverify'
           | 'polkadot'
           | 'kusama'
+          | 'horizen'
+          | 'horizenTestnet'
           | 'flow_cadence';
 
         /**
@@ -4441,6 +4461,8 @@ export interface RuleCreateParams {
     | 'zkverify'
     | 'polkadot'
     | 'kusama'
+    | 'horizen'
+    | 'horizenTestnet'
     | 'flow_cadence';
 
   /**
@@ -5045,6 +5067,8 @@ export namespace RuleCreateParams {
         | 'zkverify'
         | 'polkadot'
         | 'kusama'
+        | 'horizen'
+        | 'horizenTestnet'
         | 'flow_cadence';
     }
 
@@ -5200,6 +5224,8 @@ export namespace RuleCreateParams {
         | 'zkverify'
         | 'polkadot'
         | 'kusama'
+        | 'horizen'
+        | 'horizenTestnet'
         | 'flow_cadence';
 
       /**
@@ -5510,6 +5536,8 @@ export namespace RuleCreateParams {
       | 'zkverify'
       | 'polkadot'
       | 'kusama'
+      | 'horizen'
+      | 'horizenTestnet'
       | 'flow_cadence';
 
     /**
@@ -5703,6 +5731,8 @@ export interface RuleUpdateParams {
     | 'zkverify'
     | 'polkadot'
     | 'kusama'
+    | 'horizen'
+    | 'horizenTestnet'
     | 'flow_cadence';
 
   /**
@@ -5805,6 +5835,8 @@ export namespace RuleUpdateParams {
       | 'zkverify'
       | 'polkadot'
       | 'kusama'
+      | 'horizen'
+      | 'horizenTestnet'
       | 'flow_cadence';
 
     /**
@@ -6383,6 +6415,8 @@ export namespace RuleUpdateParams {
         | 'zkverify'
         | 'polkadot'
         | 'kusama'
+        | 'horizen'
+        | 'horizenTestnet'
         | 'flow_cadence';
     }
 
@@ -6538,6 +6572,8 @@ export namespace RuleUpdateParams {
         | 'zkverify'
         | 'polkadot'
         | 'kusama'
+        | 'horizen'
+        | 'horizenTestnet'
         | 'flow_cadence';
 
       /**

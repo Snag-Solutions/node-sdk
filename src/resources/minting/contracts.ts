@@ -143,6 +143,8 @@ export namespace ContractListResponse {
       | 'zkverify'
       | 'polkadot'
       | 'kusama'
+      | 'horizen'
+      | 'horizenTestnet'
       | 'flow_cadence'
       | null;
 
@@ -311,6 +313,8 @@ export namespace ContractListResponse {
         | 'zkverify'
         | 'polkadot'
         | 'kusama'
+        | 'horizen'
+        | 'horizenTestnet'
         | 'flow_cadence';
     }
   }
