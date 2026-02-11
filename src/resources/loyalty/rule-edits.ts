@@ -482,6 +482,12 @@ export namespace RuleEditListResponse {
         requirePostMediaLink?: boolean | null;
 
         /**
+         * If enabled, the progress tracking row will be deleted after a successful claim,
+         * allowing the user to re-earn the rule.
+         */
+        resetProgressOnClaim?: boolean | null;
+
+        /**
          * Flag indicating if the rule can also reward badges per range.
          */
         rewardBadgePerRange?: boolean;
@@ -1545,6 +1551,12 @@ export namespace RuleEditListResponse {
          * Flag indicating if media metadata is required.
          */
         requirePostMediaLink?: boolean | null;
+
+        /**
+         * If enabled, the progress tracking row will be deleted after a successful claim,
+         * allowing the user to re-earn the rule.
+         */
+        resetProgressOnClaim?: boolean | null;
 
         /**
          * Flag indicating if the rule can also reward badges per range.
@@ -2667,6 +2679,12 @@ export namespace RuleEditRestoreResponse {
       requirePostMediaLink?: boolean | null;
 
       /**
+       * If enabled, the progress tracking row will be deleted after a successful claim,
+       * allowing the user to re-earn the rule.
+       */
+      resetProgressOnClaim?: boolean | null;
+
+      /**
        * Flag indicating if the rule can also reward badges per range.
        */
       rewardBadgePerRange?: boolean;
@@ -3730,6 +3748,12 @@ export namespace RuleEditRestoreResponse {
        * Flag indicating if media metadata is required.
        */
       requirePostMediaLink?: boolean | null;
+
+      /**
+       * If enabled, the progress tracking row will be deleted after a successful claim,
+       * allowing the user to re-earn the rule.
+       */
+      resetProgressOnClaim?: boolean | null;
 
       /**
        * Flag indicating if the rule can also reward badges per range.

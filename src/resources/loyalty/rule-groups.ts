@@ -575,6 +575,12 @@ export namespace RuleGroupGetRuleGroupsResponse {
           requirePostMediaLink?: boolean | null;
 
           /**
+           * If enabled, the progress tracking row will be deleted after a successful claim,
+           * allowing the user to re-earn the rule.
+           */
+          resetProgressOnClaim?: boolean | null;
+
+          /**
            * Flag indicating if the rule can also reward badges per range.
            */
           rewardBadgePerRange?: boolean;
