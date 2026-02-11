@@ -13,10 +13,12 @@ Methods:
 Types:
 
 - <code><a href="./src/resources/auth.ts">AuthConnectAuthResponse</a></code>
+- <code><a href="./src/resources/auth.ts">AuthConnectAuthVerifyResponse</a></code>
 
 Methods:
 
 - <code title="get /api/{authType}/auth">client.auth.<a href="./src/resources/auth.ts">connectAuth</a>(authType, { ...params }) -> AuthConnectAuthResponse</code>
+- <code title="get /api/{authType}/auth/connect">client.auth.<a href="./src/resources/auth.ts">connectAuthVerify</a>(authType, { ...params }) -> AuthConnectAuthVerifyResponse</code>
 
 # Auctions
 

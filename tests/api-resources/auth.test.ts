@@ -48,4 +48,28 @@ describe('resource auth', () => {
       ),
     ).rejects.toThrow(SnagSolutions.NotFoundError);
   });
+
+  // Prism tests are disabled
+  test.skip('connectAuthVerify: only required params', async () => {
+    const responsePromise = client.auth.connectAuthVerify('tiktok', { state: 'state' });
+    const rawResponse = await responsePromise.asResponse();
+    expect(rawResponse).toBeInstanceOf(Response);
+    const response = await responsePromise;
+    expect(response).not.toBeInstanceOf(Response);
+    const dataAndResponse = await responsePromise.withResponse();
+    expect(dataAndResponse.data).toBe(response);
+    expect(dataAndResponse.response).toBe(rawResponse);
+  });
+
+  // Prism tests are disabled
+  test.skip('connectAuthVerify: required and optional params', async () => {
+    const response = await client.auth.connectAuthVerify('tiktok', {
+      state: 'state',
+      code: 'code',
+      instagramUsernameOrUrl: 'https://www.instagram.com/example/',
+      redditProfileUrl: 'https://www.reddit.com/user/example',
+      responseType: 'json',
+      tiktokProfileUrl: 'https://www.tiktok.com/@example/video/1234567890',
+    });
+  });
 });

@@ -9,7 +9,13 @@ export {
   type AuctionGetPageSectionsParams,
   type AuctionListAuctionBidsParams,
 } from './auctions/auctions';
-export { Auth, type AuthConnectAuthResponse, type AuthConnectAuthParams } from './auth';
+export {
+  Auth,
+  type AuthConnectAuthResponse,
+  type AuthConnectAuthVerifyResponse,
+  type AuthConnectAuthParams,
+  type AuthConnectAuthVerifyParams,
+} from './auth';
 export { Loyalty } from './loyalty/loyalty';
 export {
   Minting,
