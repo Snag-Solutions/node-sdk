@@ -1,6 +1,8 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { APIResource } from '../../../core/resource';
+import { APIResource } from '../../../resource';
+import { isRequestOptions } from '../../../core';
+import * as Core from '../../../core';
 import * as PostsAPI from './posts';
 import { PostListParams, PostListResponse, PostRewardParams, PostRewardResponse, Posts } from './posts';
 import * as RuleStatusesAPI from './rule-statuses';
@@ -11,8 +13,6 @@ import {
   RuleStatusUpdateResponse,
   RuleStatuses,
 } from './rule-statuses';
-import { APIPromise } from '../../../core/api-promise';
-import { RequestOptions } from '../../../internal/request-options';
 
 export class Transactions extends APIResource {
   ruleStatuses: RuleStatusesAPI.RuleStatuses = new RuleStatusesAPI.RuleStatuses(this._client);
@@ -32,8 +32,8 @@ export class Transactions extends APIResource {
    */
   createTransaction(
     body: TransactionCreateTransactionParams,
-    options?: RequestOptions,
-  ): APIPromise<TransactionCreateTransactionResponse> {
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<TransactionCreateTransactionResponse> {
     return this._client.post('/api/loyalty/transactions', { body, ...options });
   }
 
@@ -48,9 +48,19 @@ export class Transactions extends APIResource {
    * ```
    */
   getTransactionEntries(
-    query: TransactionGetTransactionEntriesParams | null | undefined = {},
-    options?: RequestOptions,
-  ): APIPromise<TransactionGetTransactionEntriesResponse> {
+    query?: TransactionGetTransactionEntriesParams,
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<TransactionGetTransactionEntriesResponse>;
+  getTransactionEntries(
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<TransactionGetTransactionEntriesResponse>;
+  getTransactionEntries(
+    query: TransactionGetTransactionEntriesParams | Core.RequestOptions = {},
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<TransactionGetTransactionEntriesResponse> {
+    if (isRequestOptions(query)) {
+      return this.getTransactionEntries({}, query);
+    }
     return this._client.get('/api/loyalty/transaction_entries', { query, ...options });
   }
 
@@ -67,8 +77,8 @@ export class Transactions extends APIResource {
    */
   listBadgeUsers(
     query: TransactionListBadgeUsersParams,
-    options?: RequestOptions,
-  ): APIPromise<TransactionListBadgeUsersResponse> {
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<TransactionListBadgeUsersResponse> {
     return this._client.get('/api/loyalty/badge_users', { query, ...options });
   }
 
@@ -86,8 +96,8 @@ export class Transactions extends APIResource {
    */
   listRuleChains(
     query: TransactionListRuleChainsParams,
-    options?: RequestOptions,
-  ): APIPromise<TransactionListRuleChainsResponse> {
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<TransactionListRuleChainsResponse> {
     return this._client.get('/api/loyalty/rule_chains', { query, ...options });
   }
 
@@ -106,8 +116,8 @@ export class Transactions extends APIResource {
    */
   resetLoyaltyCurrency(
     body: TransactionResetLoyaltyCurrencyParams,
-    options?: RequestOptions,
-  ): APIPromise<TransactionResetLoyaltyCurrencyResponse> {
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<TransactionResetLoyaltyCurrencyResponse> {
     return this._client.post('/api/loyalty/reset', { body, ...options });
   }
 }

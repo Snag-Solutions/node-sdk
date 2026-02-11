@@ -1,8 +1,8 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { APIResource } from '../../../core/resource';
-import { APIPromise } from '../../../core/api-promise';
-import { RequestOptions } from '../../../internal/request-options';
+import { APIResource } from '../../../resource';
+import { isRequestOptions } from '../../../core';
+import * as Core from '../../../core';
 
 export class RuleStatuses extends APIResource {
   /**
@@ -16,7 +16,10 @@ export class RuleStatuses extends APIResource {
    *   });
    * ```
    */
-  update(body: RuleStatusUpdateParams, options?: RequestOptions): APIPromise<RuleStatusUpdateResponse> {
+  update(
+    body: RuleStatusUpdateParams,
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<RuleStatusUpdateResponse> {
     return this._client.post('/api/loyalty/rule_statuses', { body, ...options });
   }
 
@@ -29,10 +32,15 @@ export class RuleStatuses extends APIResource {
    *   await client.loyalty.transactions.ruleStatuses.list();
    * ```
    */
+  list(query?: RuleStatusListParams, options?: Core.RequestOptions): Core.APIPromise<RuleStatusListResponse>;
+  list(options?: Core.RequestOptions): Core.APIPromise<RuleStatusListResponse>;
   list(
-    query: RuleStatusListParams | null | undefined = {},
-    options?: RequestOptions,
-  ): APIPromise<RuleStatusListResponse> {
+    query: RuleStatusListParams | Core.RequestOptions = {},
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<RuleStatusListResponse> {
+    if (isRequestOptions(query)) {
+      return this.list({}, query);
+    }
     return this._client.get('/api/loyalty/rule_statuses', { query, ...options });
   }
 }

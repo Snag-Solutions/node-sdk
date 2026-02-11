@@ -1,9 +1,7 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { APIResource } from '../../core/resource';
-import { APIPromise } from '../../core/api-promise';
-import { RequestOptions } from '../../internal/request-options';
-import { path } from '../../internal/utils/path';
+import { APIResource } from '../../resource';
+import * as Core from '../../core';
 
 export class RuleEdits extends APIResource {
   /**
@@ -16,7 +14,7 @@ export class RuleEdits extends APIResource {
    * });
    * ```
    */
-  list(query: RuleEditListParams, options?: RequestOptions): APIPromise<RuleEditListResponse> {
+  list(query: RuleEditListParams, options?: Core.RequestOptions): Core.APIPromise<RuleEditListResponse> {
     return this._client.get('/api/loyalty/rule_edits', { query, ...options });
   }
 
@@ -33,9 +31,9 @@ export class RuleEdits extends APIResource {
   restore(
     id: string,
     body?: RuleEditRestoreParams | null | undefined,
-    options?: RequestOptions,
-  ): APIPromise<RuleEditRestoreResponse> {
-    return this._client.post(path`/api/loyalty/rule_edits/${id}/restore`, { body, ...options });
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<RuleEditRestoreResponse> {
+    return this._client.post(`/api/loyalty/rule_edits/${id}/restore`, { body, ...options });
   }
 }
 

@@ -1,8 +1,8 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { APIResource } from '../../core/resource';
-import { APIPromise } from '../../core/api-promise';
-import { RequestOptions } from '../../internal/request-options';
+import { APIResource } from '../../resource';
+import { isRequestOptions } from '../../core';
+import * as Core from '../../core';
 
 export class Users extends APIResource {
   /**
@@ -15,7 +15,7 @@ export class Users extends APIResource {
    * });
    * ```
    */
-  create(body: UserCreateParams, options?: RequestOptions): APIPromise<UserCreateResponse> {
+  create(body: UserCreateParams, options?: Core.RequestOptions): Core.APIPromise<UserCreateResponse> {
     return this._client.post('/api/referral/users', { body, ...options });
   }
 
@@ -27,10 +27,15 @@ export class Users extends APIResource {
    * const users = await client.referral.users.list();
    * ```
    */
+  list(query?: UserListParams, options?: Core.RequestOptions): Core.APIPromise<UserListResponse>;
+  list(options?: Core.RequestOptions): Core.APIPromise<UserListResponse>;
   list(
-    query: UserListParams | null | undefined = {},
-    options?: RequestOptions,
-  ): APIPromise<UserListResponse> {
+    query: UserListParams | Core.RequestOptions = {},
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<UserListResponse> {
+    if (isRequestOptions(query)) {
+      return this.list({}, query);
+    }
     return this._client.get('/api/referral/users', { query, ...options });
   }
 }

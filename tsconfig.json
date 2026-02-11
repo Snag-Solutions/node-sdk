@@ -1,6 +1,6 @@
 {
   "include": ["src", "tests", "examples"],
-  "exclude": [],
+  "exclude": ["src/_shims/**/*-deno.ts"],
   "compilerOptions": {
     "target": "es2020",
     "lib": ["es2020"],
@@ -8,6 +8,7 @@
     "moduleResolution": "node",
     "esModuleInterop": true,
     "paths": {
+      "@snagsolutions/sdk/_shims/auto/*": ["./src/_shims/auto/*-node"],
       "@snagsolutions/sdk/*": ["./src/*"],
       "@snagsolutions/sdk": ["./src/index.ts"]
     },
