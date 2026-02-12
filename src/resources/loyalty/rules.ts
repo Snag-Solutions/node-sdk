@@ -294,6 +294,7 @@ export interface RuleCreateResponse {
     | 'robinhood_token_hold'
     | 'connected_instagram'
     | 'instagram_post'
+    | 'instagram_follow'
     | 'dapps_by_gas_spent';
 
   /**
@@ -4307,6 +4308,7 @@ export interface RuleCreateParams {
     | 'robinhood_token_hold'
     | 'connected_instagram'
     | 'instagram_post'
+    | 'instagram_follow'
     | 'dapps_by_gas_spent';
 
   /**
