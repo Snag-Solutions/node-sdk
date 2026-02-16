@@ -498,6 +498,10 @@ export interface TransactionCreateTransactionParams {
    * Unique identifier for the loyalty currency
    */
   loyaltyCurrencyId?: string;
+
+  organizationId?: string;
+
+  websiteId?: string;
 }
 
 export namespace TransactionCreateTransactionParams {

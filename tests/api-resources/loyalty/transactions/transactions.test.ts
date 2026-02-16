@@ -38,6 +38,8 @@ describe('resource transactions', () => {
         },
       ],
       loyaltyCurrencyId: '123e4567-e89b-12d3-a456-426614174090',
+      organizationId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+      websiteId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
     });
   });
 
