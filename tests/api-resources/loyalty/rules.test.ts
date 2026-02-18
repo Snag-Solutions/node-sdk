@@ -286,6 +286,7 @@ describe('resource rules', () => {
       contractIds: ['123e4567-e89b-12d3-a456-426614174005'],
       customRewardsApiUrl: 'https://api.example.com/rewards',
       customRewardsCsvUrl: 'https://example.com/rewards.csv',
+      deletedAt: null,
       description: 'This rule rewards users daily for specific actions.',
       effectiveEndTime: '2024-12-31T23:59:00Z',
       effectiveStartTime: '2024-01-01T00:00:00Z',
