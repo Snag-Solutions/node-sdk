@@ -59,6 +59,16 @@ describe('resource badges', () => {
       ],
       description: 'Example description',
       hideInUi: false,
+      rewards: [
+        {
+          rewardType: 'points',
+          amount: 100,
+          isRetroactive: false,
+          loyaltyCurrencyId: '123e4567-e89b-12d3-a456-426614174333',
+          loyaltyCurrencyIds: ['123e4567-e89b-12d3-a456-426614174333'],
+          multiplier: 2.5,
+        },
+      ],
     });
   });
 
@@ -102,6 +112,16 @@ describe('resource badges', () => {
           hideInUi: false,
           imageUrl: 'https://example.com/image.png',
           name: 'Example Badge',
+          rewards: [
+            {
+              rewardType: 'points',
+              amount: 100,
+              isRetroactive: false,
+              loyaltyCurrencyId: '123e4567-e89b-12d3-a456-426614174333',
+              loyaltyCurrencyIds: ['123e4567-e89b-12d3-a456-426614174333'],
+              multiplier: 2.5,
+            },
+          ],
         },
         { path: '/_stainless_unknown_path' },
       ),
