@@ -1608,6 +1608,12 @@ export interface RuleUpdateResponse {
   customRewardsCsvUrl?: string | null;
 
   /**
+   * Timestamp when the loyalty rule was deleted. Set to null to restore a deleted
+   * rule.
+   */
+  deletedAt?: string | null;
+
+  /**
    * Optional description of the loyalty rule
    */
   description?: string;
@@ -5618,6 +5624,12 @@ export interface RuleUpdateParams {
    * URL for uploading custom rewards via CSV
    */
   customRewardsCsvUrl?: string | null;
+
+  /**
+   * Timestamp when the loyalty rule was deleted. Set to null to restore a deleted
+   * rule.
+   */
+  deletedAt?: string | null;
 
   /**
    * Optional description of the loyalty rule
