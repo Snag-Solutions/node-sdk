@@ -197,6 +197,11 @@ export interface BadgeCreateResponse {
    * Array of loyalty rules associated with the badge
    */
   loyaltyRules?: Array<BadgeCreateResponse.LoyaltyRule>;
+
+  /**
+   * Array of rewards granted when the badge is achieved
+   */
+  rewards?: Array<BadgeCreateResponse.Reward>;
 }
 
 export namespace BadgeCreateResponse {
@@ -424,6 +429,11 @@ export namespace BadgeCreateResponse {
     websiteId: string;
 
     /**
+     * The date and time the user badge was granted
+     */
+    completedAt?: string | null;
+
+    /**
      * Whether the user has dismissed the badge in the UI
      */
     dismissedInUi?: boolean;
@@ -471,6 +481,44 @@ export namespace BadgeCreateResponse {
      * The name of the loyalty rule
      */
     name: string;
+  }
+
+  export interface Reward {
+    /**
+     * UUID of the badge reward
+     */
+    id: string;
+
+    /**
+     * Points amount to reward (for points reward type)
+     */
+    amount: number | null;
+
+    /**
+     * Whether the multiplier should be applied to the user's existing balance
+     */
+    isRetroactive: boolean;
+
+    /**
+     * UUID of the loyalty currency for this reward
+     */
+    loyaltyCurrencyId: string | null;
+
+    /**
+     * Multiplier to reward (for multiplier reward type)
+     */
+    multiplier: number | null;
+
+    /**
+     * Type of reward (points or multiplier)
+     */
+    rewardType: 'points' | 'multiplier' | 'badge';
+
+    /**
+     * Array of loyalty currency IDs for multiplier rewards (empty means all
+     * currencies)
+     */
+    loyaltyCurrencyIds?: Array<string>;
   }
 }
 
@@ -532,6 +580,11 @@ export interface BadgeUpdateResponse {
    * Array of loyalty rules associated with the badge
    */
   loyaltyRules?: Array<BadgeUpdateResponse.LoyaltyRule>;
+
+  /**
+   * Array of rewards granted when the badge is achieved
+   */
+  rewards?: Array<BadgeUpdateResponse.Reward>;
 }
 
 export namespace BadgeUpdateResponse {
@@ -759,6 +812,11 @@ export namespace BadgeUpdateResponse {
     websiteId: string;
 
     /**
+     * The date and time the user badge was granted
+     */
+    completedAt?: string | null;
+
+    /**
      * Whether the user has dismissed the badge in the UI
      */
     dismissedInUi?: boolean;
@@ -806,6 +864,44 @@ export namespace BadgeUpdateResponse {
      * The name of the loyalty rule
      */
     name: string;
+  }
+
+  export interface Reward {
+    /**
+     * UUID of the badge reward
+     */
+    id: string;
+
+    /**
+     * Points amount to reward (for points reward type)
+     */
+    amount: number | null;
+
+    /**
+     * Whether the multiplier should be applied to the user's existing balance
+     */
+    isRetroactive: boolean;
+
+    /**
+     * UUID of the loyalty currency for this reward
+     */
+    loyaltyCurrencyId: string | null;
+
+    /**
+     * Multiplier to reward (for multiplier reward type)
+     */
+    multiplier: number | null;
+
+    /**
+     * Type of reward (points or multiplier)
+     */
+    rewardType: 'points' | 'multiplier' | 'badge';
+
+    /**
+     * Array of loyalty currency IDs for multiplier rewards (empty means all
+     * currencies)
+     */
+    loyaltyCurrencyIds?: Array<string>;
   }
 }
 
@@ -877,6 +973,11 @@ export namespace BadgeListResponse {
      * Array of loyalty rules associated with the badge
      */
     loyaltyRules?: Array<Data.LoyaltyRule>;
+
+    /**
+     * Array of rewards granted when the badge is achieved
+     */
+    rewards?: Array<Data.Reward>;
   }
 
   export namespace Data {
@@ -1104,6 +1205,11 @@ export namespace BadgeListResponse {
       websiteId: string;
 
       /**
+       * The date and time the user badge was granted
+       */
+      completedAt?: string | null;
+
+      /**
        * Whether the user has dismissed the badge in the UI
        */
       dismissedInUi?: boolean;
@@ -1151,6 +1257,44 @@ export namespace BadgeListResponse {
        * The name of the loyalty rule
        */
       name: string;
+    }
+
+    export interface Reward {
+      /**
+       * UUID of the badge reward
+       */
+      id: string;
+
+      /**
+       * Points amount to reward (for points reward type)
+       */
+      amount: number | null;
+
+      /**
+       * Whether the multiplier should be applied to the user's existing balance
+       */
+      isRetroactive: boolean;
+
+      /**
+       * UUID of the loyalty currency for this reward
+       */
+      loyaltyCurrencyId: string | null;
+
+      /**
+       * Multiplier to reward (for multiplier reward type)
+       */
+      multiplier: number | null;
+
+      /**
+       * Type of reward (points or multiplier)
+       */
+      rewardType: 'points' | 'multiplier' | 'badge';
+
+      /**
+       * Array of loyalty currency IDs for multiplier rewards (empty means all
+       * currencies)
+       */
+      loyaltyCurrencyIds?: Array<string>;
     }
   }
 }
@@ -1213,6 +1357,11 @@ export interface BadgeDeleteResponse {
    * Array of loyalty rules associated with the badge
    */
   loyaltyRules?: Array<BadgeDeleteResponse.LoyaltyRule>;
+
+  /**
+   * Array of rewards granted when the badge is achieved
+   */
+  rewards?: Array<BadgeDeleteResponse.Reward>;
 }
 
 export namespace BadgeDeleteResponse {
@@ -1440,6 +1589,11 @@ export namespace BadgeDeleteResponse {
     websiteId: string;
 
     /**
+     * The date and time the user badge was granted
+     */
+    completedAt?: string | null;
+
+    /**
      * Whether the user has dismissed the badge in the UI
      */
     dismissedInUi?: boolean;
@@ -1487,6 +1641,44 @@ export namespace BadgeDeleteResponse {
      * The name of the loyalty rule
      */
     name: string;
+  }
+
+  export interface Reward {
+    /**
+     * UUID of the badge reward
+     */
+    id: string;
+
+    /**
+     * Points amount to reward (for points reward type)
+     */
+    amount: number | null;
+
+    /**
+     * Whether the multiplier should be applied to the user's existing balance
+     */
+    isRetroactive: boolean;
+
+    /**
+     * UUID of the loyalty currency for this reward
+     */
+    loyaltyCurrencyId: string | null;
+
+    /**
+     * Multiplier to reward (for multiplier reward type)
+     */
+    multiplier: number | null;
+
+    /**
+     * Type of reward (points or multiplier)
+     */
+    rewardType: 'points' | 'multiplier' | 'badge';
+
+    /**
+     * Array of loyalty currency IDs for multiplier rewards (empty means all
+     * currencies)
+     */
+    loyaltyCurrencyIds?: Array<string>;
   }
 }
 
@@ -1575,6 +1767,11 @@ export interface BadgeCreateParams {
    * Whether to hide this badge in the user interface
    */
   hideInUi?: boolean;
+
+  /**
+   * Array of rewards granted when the badge is achieved
+   */
+  rewards?: Array<BadgeCreateParams.Reward>;
 }
 
 export namespace BadgeCreateParams {
@@ -1647,6 +1844,39 @@ export namespace BadgeCreateParams {
 
     name?: string;
   }
+
+  export interface Reward {
+    /**
+     * Type of reward (points or multiplier)
+     */
+    rewardType: 'points' | 'multiplier' | 'badge';
+
+    /**
+     * Points amount to reward (for points reward type)
+     */
+    amount?: number;
+
+    /**
+     * Whether the multiplier should be applied to the user's existing balance
+     */
+    isRetroactive?: boolean;
+
+    /**
+     * UUID of the loyalty currency for this reward
+     */
+    loyaltyCurrencyId?: string;
+
+    /**
+     * Array of loyalty currency IDs for multiplier rewards (empty means all
+     * currencies)
+     */
+    loyaltyCurrencyIds?: Array<string>;
+
+    /**
+     * Multiplier to reward (for multiplier reward type)
+     */
+    multiplier?: number;
+  }
 }
 
 export interface BadgeUpdateParams {
@@ -1671,6 +1901,11 @@ export interface BadgeUpdateParams {
    * The name of the badge
    */
   name?: string;
+
+  /**
+   * Array of rewards granted when the badge is achieved
+   */
+  rewards?: Array<BadgeUpdateParams.Reward>;
 }
 
 export namespace BadgeUpdateParams {
@@ -1680,6 +1915,39 @@ export namespace BadgeUpdateParams {
     description?: string;
 
     name?: string;
+  }
+
+  export interface Reward {
+    /**
+     * Type of reward (points or multiplier)
+     */
+    rewardType: 'points' | 'multiplier' | 'badge';
+
+    /**
+     * Points amount to reward (for points reward type)
+     */
+    amount?: number;
+
+    /**
+     * Whether the multiplier should be applied to the user's existing balance
+     */
+    isRetroactive?: boolean;
+
+    /**
+     * UUID of the loyalty currency for this reward
+     */
+    loyaltyCurrencyId?: string;
+
+    /**
+     * Array of loyalty currency IDs for multiplier rewards (empty means all
+     * currencies)
+     */
+    loyaltyCurrencyIds?: Array<string>;
+
+    /**
+     * Multiplier to reward (for multiplier reward type)
+     */
+    multiplier?: number;
   }
 }
 
