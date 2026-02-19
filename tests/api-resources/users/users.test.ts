@@ -108,6 +108,7 @@ describe('resource users', () => {
             state_init: 'state_init',
           },
         },
+        verifiedLocally: true,
       },
     });
   });

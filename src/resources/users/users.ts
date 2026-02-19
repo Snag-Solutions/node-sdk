@@ -281,6 +281,8 @@ export namespace UserListResponse {
 
       userGroupId?: string | null;
 
+      verifiedLocallyAt?: string | null;
+
       walletGroupIdentifier?: string | null;
 
       YTChannelId?: string | null;
@@ -559,6 +561,8 @@ export namespace UserConnectParams {
     signature?: string;
 
     tonVerification?: VerificationData.TonVerification;
+
+    verifiedLocally?: boolean;
   }
 
   export namespace VerificationData {
