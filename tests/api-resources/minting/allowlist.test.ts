@@ -9,7 +9,7 @@ const client = new SnagSolutions({
 });
 
 describe('resource allowlist', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list: only required params', async () => {
     const responsePromise = client.minting.allowlist.list({
       mintingContractAssetId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
@@ -23,7 +23,7 @@ describe('resource allowlist', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list: required and optional params', async () => {
     const response = await client.minting.allowlist.list({
       mintingContractAssetId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
@@ -33,7 +33,7 @@ describe('resource allowlist', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('upsert: only required params', async () => {
     const responsePromise = client.minting.allowlist.upsert({
       entries: [{ quantity: 1, walletAddress: 'walletAddress' }],
@@ -48,7 +48,7 @@ describe('resource allowlist', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('upsert: required and optional params', async () => {
     const response = await client.minting.allowlist.upsert({
       entries: [{ quantity: 1, walletAddress: 'walletAddress' }],

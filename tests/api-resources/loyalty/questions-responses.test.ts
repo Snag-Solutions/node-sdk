@@ -9,7 +9,7 @@ const client = new SnagSolutions({
 });
 
 describe('resource questionsResponses', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list', async () => {
     const responsePromise = client.loyalty.questionsResponses.list();
     const rawResponse = await responsePromise.asResponse();
@@ -21,7 +21,7 @@ describe('resource questionsResponses', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list: request options instead of params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -29,7 +29,7 @@ describe('resource questionsResponses', () => {
     ).rejects.toThrow(SnagSolutions.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -47,7 +47,7 @@ describe('resource questionsResponses', () => {
     ).rejects.toThrow(SnagSolutions.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('submit: only required params', async () => {
     const responsePromise = client.loyalty.questionsResponses.submit({
       loyaltyQuestionChoiceId: '123e4567-e89b-12d3-a456-426614174001',
@@ -61,7 +61,7 @@ describe('resource questionsResponses', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('submit: required and optional params', async () => {
     const response = await client.loyalty.questionsResponses.submit({
       loyaltyQuestionChoiceId: '123e4567-e89b-12d3-a456-426614174001',

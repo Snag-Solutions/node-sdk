@@ -9,7 +9,7 @@ const client = new SnagSolutions({
 });
 
 describe('resource websiteCollections', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('create: only required params', async () => {
     const responsePromise = client.websites.websiteCollections.create({
       collectionAddress: '0x2c02efDd09B3BA1AEaDd3dCAa7aC7A37C1CBDA8A',
@@ -28,7 +28,7 @@ describe('resource websiteCollections', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('create: required and optional params', async () => {
     const response = await client.websites.websiteCollections.create({
       collectionAddress: '0x2c02efDd09B3BA1AEaDd3dCAa7aC7A37C1CBDA8A',
@@ -50,7 +50,7 @@ describe('resource websiteCollections', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list: only required params', async () => {
     const responsePromise = client.websites.websiteCollections.list({
       websiteId: '123e4567-e89b-12d3-a456-426614174000',
@@ -64,7 +64,7 @@ describe('resource websiteCollections', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list: required and optional params', async () => {
     const response = await client.websites.websiteCollections.list({
       websiteId: '123e4567-e89b-12d3-a456-426614174000',
