@@ -34,7 +34,6 @@ describe('resource auctions', () => {
       all: '1',
       pageId: '123e4567-e89b-12d3-a456-426614174336',
       pageSectionType: 'all_items',
-      websiteCollectionId: '123e4567-e89b-12d3-a456-426614174335',
     });
   });
 
