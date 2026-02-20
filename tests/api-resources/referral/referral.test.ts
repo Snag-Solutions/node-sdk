@@ -9,7 +9,7 @@ const client = new SnagSolutions({
 });
 
 describe('resource referral', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('createCode: only required params', async () => {
     const responsePromise = client.referral.createCode({
       loyaltyRuleId: '558bcf56-24f1-4ef4-9787-043086295780',
@@ -23,7 +23,7 @@ describe('resource referral', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('createCode: required and optional params', async () => {
     const response = await client.referral.createCode({
       loyaltyRuleId: '558bcf56-24f1-4ef4-9787-043086295780',

@@ -9,7 +9,7 @@ const client = new SnagSolutions({
 });
 
 describe('resource badges', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('create: only required params', async () => {
     const responsePromise = client.loyalty.badges.create({
       conditions: [{}],
@@ -27,7 +27,7 @@ describe('resource badges', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('create: required and optional params', async () => {
     const response = await client.loyalty.badges.create({
       conditions: [
@@ -72,7 +72,7 @@ describe('resource badges', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('update', async () => {
     const responsePromise = client.loyalty.badges.update('123e4567-e89b-12d3-a456-426614174333');
     const rawResponse = await responsePromise.asResponse();
@@ -84,7 +84,7 @@ describe('resource badges', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('update: request options instead of params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -94,7 +94,7 @@ describe('resource badges', () => {
     ).rejects.toThrow(SnagSolutions.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('update: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -128,7 +128,7 @@ describe('resource badges', () => {
     ).rejects.toThrow(SnagSolutions.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list', async () => {
     const responsePromise = client.loyalty.badges.list();
     const rawResponse = await responsePromise.asResponse();
@@ -140,7 +140,7 @@ describe('resource badges', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list: request options instead of params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(client.loyalty.badges.list({ path: '/_stainless_unknown_path' })).rejects.toThrow(
@@ -148,7 +148,7 @@ describe('resource badges', () => {
     );
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -170,7 +170,7 @@ describe('resource badges', () => {
     ).rejects.toThrow(SnagSolutions.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('delete', async () => {
     const responsePromise = client.loyalty.badges.delete('123e4567-e89b-12d3-a456-426614174333');
     const rawResponse = await responsePromise.asResponse();
@@ -182,7 +182,7 @@ describe('resource badges', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('delete: request options instead of params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -192,7 +192,7 @@ describe('resource badges', () => {
     ).rejects.toThrow(SnagSolutions.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('revoke', async () => {
     const responsePromise = client.loyalty.badges.revoke('123e4567-e89b-12d3-a456-426614174333');
     const rawResponse = await responsePromise.asResponse();
@@ -204,7 +204,7 @@ describe('resource badges', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('revoke: request options instead of params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -214,7 +214,7 @@ describe('resource badges', () => {
     ).rejects.toThrow(SnagSolutions.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('revoke: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -230,7 +230,7 @@ describe('resource badges', () => {
     ).rejects.toThrow(SnagSolutions.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('reward', async () => {
     const responsePromise = client.loyalty.badges.reward('123e4567-e89b-12d3-a456-426614174333');
     const rawResponse = await responsePromise.asResponse();
@@ -242,7 +242,7 @@ describe('resource badges', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('reward: request options instead of params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -252,7 +252,7 @@ describe('resource badges', () => {
     ).rejects.toThrow(SnagSolutions.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('reward: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(

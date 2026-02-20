@@ -9,7 +9,7 @@ const client = new SnagSolutions({
 });
 
 describe('resource ruleEdits', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list: only required params', async () => {
     const responsePromise = client.loyalty.ruleEdits.list({ loyaltyRuleId: true });
     const rawResponse = await responsePromise.asResponse();
@@ -21,7 +21,7 @@ describe('resource ruleEdits', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list: required and optional params', async () => {
     const response = await client.loyalty.ruleEdits.list({
       loyaltyRuleId: true,
@@ -32,7 +32,7 @@ describe('resource ruleEdits', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('restore', async () => {
     const responsePromise = client.loyalty.ruleEdits.restore('182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e');
     const rawResponse = await responsePromise.asResponse();
@@ -44,7 +44,7 @@ describe('resource ruleEdits', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('restore: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(

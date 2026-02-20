@@ -9,7 +9,7 @@ const client = new SnagSolutions({
 });
 
 describe('resource multipliers', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('create: only required params', async () => {
     const responsePromise = client.loyalty.multipliers.create({
       multiplier: 0.01,
@@ -24,7 +24,7 @@ describe('resource multipliers', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('create: required and optional params', async () => {
     const response = await client.loyalty.multipliers.create({
       multiplier: 0.01,
@@ -35,7 +35,7 @@ describe('resource multipliers', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('update', async () => {
     const responsePromise = client.loyalty.multipliers.update('182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e');
     const rawResponse = await responsePromise.asResponse();
@@ -47,7 +47,7 @@ describe('resource multipliers', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('update: request options instead of params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -57,7 +57,7 @@ describe('resource multipliers', () => {
     ).rejects.toThrow(SnagSolutions.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('update: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -73,7 +73,7 @@ describe('resource multipliers', () => {
     ).rejects.toThrow(SnagSolutions.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list', async () => {
     const responsePromise = client.loyalty.multipliers.list();
     const rawResponse = await responsePromise.asResponse();
@@ -85,7 +85,7 @@ describe('resource multipliers', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list: request options instead of params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(client.loyalty.multipliers.list({ path: '/_stainless_unknown_path' })).rejects.toThrow(
@@ -93,7 +93,7 @@ describe('resource multipliers', () => {
     );
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -116,7 +116,7 @@ describe('resource multipliers', () => {
     ).rejects.toThrow(SnagSolutions.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('delete', async () => {
     const responsePromise = client.loyalty.multipliers.delete('182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e');
     const rawResponse = await responsePromise.asResponse();
@@ -128,7 +128,7 @@ describe('resource multipliers', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('delete: request options instead of params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -138,7 +138,7 @@ describe('resource multipliers', () => {
     ).rejects.toThrow(SnagSolutions.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('deleteByExternalId: only required params', async () => {
     const responsePromise = client.loyalty.multipliers.deleteByExternalId({
       externalIdentifier: 'externalIdentifier',
@@ -152,7 +152,7 @@ describe('resource multipliers', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('deleteByExternalId: required and optional params', async () => {
     const response = await client.loyalty.multipliers.deleteByExternalId({
       externalIdentifier: 'externalIdentifier',

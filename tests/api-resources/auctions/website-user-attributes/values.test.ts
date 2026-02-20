@@ -9,7 +9,7 @@ const client = new SnagSolutions({
 });
 
 describe('resource values', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('create: only required params', async () => {
     const responsePromise = client.auctions.websiteUserAttributes.values.create({
       data: [
@@ -31,7 +31,7 @@ describe('resource values', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('create: required and optional params', async () => {
     const response = await client.auctions.websiteUserAttributes.values.create({
       data: [
@@ -47,7 +47,7 @@ describe('resource values', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list: only required params', async () => {
     const responsePromise = client.auctions.websiteUserAttributes.values.list({
       userIds: '123e4567-e89b-12d3-a456-426614174004',
@@ -61,7 +61,7 @@ describe('resource values', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list: required and optional params', async () => {
     const response = await client.auctions.websiteUserAttributes.values.list({
       userIds: '123e4567-e89b-12d3-a456-426614174004',

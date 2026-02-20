@@ -9,7 +9,7 @@ const client = new SnagSolutions({
 });
 
 describe('resource tokenClaims', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieve: only required params', async () => {
     const responsePromise = client.tokenClaims.retrieve('id', {
       query_id: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
@@ -23,14 +23,14 @@ describe('resource tokenClaims', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieve: required and optional params', async () => {
     const response = await client.tokenClaims.retrieve('id', {
       query_id: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list', async () => {
     const responsePromise = client.tokenClaims.list();
     const rawResponse = await responsePromise.asResponse();
@@ -42,7 +42,7 @@ describe('resource tokenClaims', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list: request options instead of params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(client.tokenClaims.list({ path: '/_stainless_unknown_path' })).rejects.toThrow(
@@ -50,7 +50,7 @@ describe('resource tokenClaims', () => {
     );
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -65,7 +65,7 @@ describe('resource tokenClaims', () => {
     ).rejects.toThrow(SnagSolutions.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('checkEligibility: only required params', async () => {
     const responsePromise = client.tokenClaims.checkEligibility('id', {
       query_id: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
@@ -80,7 +80,7 @@ describe('resource tokenClaims', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('checkEligibility: required and optional params', async () => {
     const response = await client.tokenClaims.checkEligibility('id', {
       query_id: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
@@ -88,7 +88,7 @@ describe('resource tokenClaims', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('getProof: only required params', async () => {
     const responsePromise = client.tokenClaims.getProof('id', {
       query_id: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
@@ -103,7 +103,7 @@ describe('resource tokenClaims', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('getProof: required and optional params', async () => {
     const response = await client.tokenClaims.getProof('id', {
       query_id: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
@@ -111,7 +111,7 @@ describe('resource tokenClaims', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('listUsers', async () => {
     const responsePromise = client.tokenClaims.listUsers('id');
     const rawResponse = await responsePromise.asResponse();
@@ -123,7 +123,7 @@ describe('resource tokenClaims', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('listUsers: request options instead of params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(client.tokenClaims.listUsers('id', { path: '/_stainless_unknown_path' })).rejects.toThrow(
@@ -131,7 +131,7 @@ describe('resource tokenClaims', () => {
     );
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('listUsers: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -149,7 +149,7 @@ describe('resource tokenClaims', () => {
     ).rejects.toThrow(SnagSolutions.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('updateClaim: only required params', async () => {
     const responsePromise = client.tokenClaims.updateClaim('id', {
       txHash: '0xecc2efdd09bd231a9ad9bd2aada37aa7ccc3d38a03cc25beb6c28aa0aaa316be',
@@ -164,7 +164,7 @@ describe('resource tokenClaims', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('updateClaim: required and optional params', async () => {
     const response = await client.tokenClaims.updateClaim('id', {
       txHash: '0xecc2efdd09bd231a9ad9bd2aada37aa7ccc3d38a03cc25beb6c28aa0aaa316be',
