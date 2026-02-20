@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.1.0-alpha.241 (2026-02-20)
+
+Full Changelog: [v0.1.0-alpha.240...v0.1.0-alpha.241](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.240...v0.1.0-alpha.241)
+
+### Features
+
+* **api:** open api update ([fa2f57c](https://github.com/Snag-Solutions/node-sdk/commit/fa2f57c170f01493a8a7bead50fc39a7effe4297))
+
+
+### Chores
+
+* **internal:** remove mock server code ([a76e4bf](https://github.com/Snag-Solutions/node-sdk/commit/a76e4bf0efcd30230407f249b090bde214ce885a))
+* update mock server docs ([2a7962d](https://github.com/Snag-Solutions/node-sdk/commit/2a7962d55efff86a12c665dc92f91b525226447b))
+
 ## 0.1.0-alpha.240 (2026-02-20)
 
 Full Changelog: [v0.1.0-alpha.239...v0.1.0-alpha.240](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.239...v0.1.0-alpha.240)
