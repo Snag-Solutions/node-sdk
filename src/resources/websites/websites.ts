@@ -127,16 +127,6 @@ export namespace WebsiteCreateResponse {
      * Collection name
      */
     name: string;
-
-    /**
-     * Royalty fee percentage
-     */
-    royaltyFee: number;
-
-    /**
-     * Address to receive royalty fees
-     */
-    royaltyFeeAddress: string;
   }
 
   /**
@@ -280,16 +270,6 @@ export namespace WebsiteListResponse {
        * Collection name
        */
       name: string;
-
-      /**
-       * Royalty fee percentage
-       */
-      royaltyFee: number;
-
-      /**
-       * Address to receive royalty fees
-       */
-      royaltyFeeAddress: string;
     }
 
     /**
