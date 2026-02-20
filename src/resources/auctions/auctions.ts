@@ -464,11 +464,6 @@ export interface AuctionGetPageSectionsParams {
    * Type of the page section to filter by
    */
   pageSectionType?: 'all_items' | 'discovery_item' | 'discovery_items_grid' | null;
-
-  /**
-   * Unique identifier for the website collection to filter by
-   */
-  websiteCollectionId?: string;
 }
 
 export interface AuctionListAuctionBidsParams {
