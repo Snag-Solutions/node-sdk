@@ -9,7 +9,7 @@ const client = new SnagSolutions({
 });
 
 describe('resource minting', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('getAssets: only required params', async () => {
     const responsePromise = client.minting.getAssets({
       organizationId: '00000000-0000-0000-0000-000000000000',
@@ -24,7 +24,7 @@ describe('resource minting', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('getAssets: required and optional params', async () => {
     const response = await client.minting.getAssets({
       organizationId: '00000000-0000-0000-0000-000000000000',
@@ -45,7 +45,7 @@ describe('resource minting', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('getTokenGateStatus: only required params', async () => {
     const responsePromise = client.minting.getTokenGateStatus({
       collectionAddress: 'collectionAddress',
@@ -63,7 +63,7 @@ describe('resource minting', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('getTokenGateStatus: required and optional params', async () => {
     const response = await client.minting.getTokenGateStatus({
       collectionAddress: 'collectionAddress',

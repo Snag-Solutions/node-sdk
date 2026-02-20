@@ -9,7 +9,7 @@ const client = new SnagSolutions({
 });
 
 describe('resource status', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieve', async () => {
     const responsePromise = client.minting.status.retrieve('id');
     const rawResponse = await responsePromise.asResponse();
@@ -21,7 +21,7 @@ describe('resource status', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieve: request options instead of params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(client.minting.status.retrieve('id', { path: '/_stainless_unknown_path' })).rejects.toThrow(
@@ -29,7 +29,7 @@ describe('resource status', () => {
     );
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('update: only required params', async () => {
     const responsePromise = client.minting.status.update('id', { status: 'failed' });
     const rawResponse = await responsePromise.asResponse();
@@ -41,7 +41,7 @@ describe('resource status', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('update: required and optional params', async () => {
     const response = await client.minting.status.update('id', { status: 'failed', txHash: 'txHash' });
   });

@@ -9,7 +9,7 @@ const client = new SnagSolutions({
 });
 
 describe('resource accounts', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list', async () => {
     const responsePromise = client.loyalty.accounts.list();
     const rawResponse = await responsePromise.asResponse();
@@ -21,7 +21,7 @@ describe('resource accounts', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list: request options instead of params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(client.loyalty.accounts.list({ path: '/_stainless_unknown_path' })).rejects.toThrow(
@@ -29,7 +29,7 @@ describe('resource accounts', () => {
     );
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -53,7 +53,7 @@ describe('resource accounts', () => {
     ).rejects.toThrow(SnagSolutions.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieveRank: only required params', async () => {
     const responsePromise = client.loyalty.accounts.retrieveRank('123e4567-e89b-12d3-a456-426614174333', {
       loyaltyCurrencyId: '123e4567-e89b-12d3-a456-426614174333',
@@ -69,7 +69,7 @@ describe('resource accounts', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieveRank: required and optional params', async () => {
     const response = await client.loyalty.accounts.retrieveRank('123e4567-e89b-12d3-a456-426614174333', {
       loyaltyCurrencyId: '123e4567-e89b-12d3-a456-426614174333',

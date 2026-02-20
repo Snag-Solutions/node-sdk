@@ -9,7 +9,7 @@ const client = new SnagSolutions({
 });
 
 describe('resource websiteUserRoles', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list: only required params', async () => {
     const responsePromise = client.websites.websiteUserRoles.list({
       websiteId: '123e4567-e89b-12d3-a456-426614174000',
@@ -23,7 +23,7 @@ describe('resource websiteUserRoles', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list: required and optional params', async () => {
     const response = await client.websites.websiteUserRoles.list({
       websiteId: '123e4567-e89b-12d3-a456-426614174000',
@@ -31,7 +31,7 @@ describe('resource websiteUserRoles', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('assign: only required params', async () => {
     const responsePromise = client.websites.websiteUserRoles.assign({
       websiteId: '123e4567-e89b-12d3-a456-426614174000',
@@ -48,7 +48,7 @@ describe('resource websiteUserRoles', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('assign: required and optional params', async () => {
     const response = await client.websites.websiteUserRoles.assign({
       websiteId: '123e4567-e89b-12d3-a456-426614174000',

@@ -9,7 +9,7 @@ const client = new SnagSolutions({
 });
 
 describe('resource auth', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('connectAuth', async () => {
     const responsePromise = client.auth.connectAuth('twitter');
     const rawResponse = await responsePromise.asResponse();
@@ -21,7 +21,7 @@ describe('resource auth', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('connectAuth: request options instead of params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(client.auth.connectAuth('twitter', { path: '/_stainless_unknown_path' })).rejects.toThrow(
@@ -29,7 +29,7 @@ describe('resource auth', () => {
     );
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('connectAuth: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -49,7 +49,7 @@ describe('resource auth', () => {
     ).rejects.toThrow(SnagSolutions.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('connectAuthVerify: only required params', async () => {
     const responsePromise = client.auth.connectAuthVerify('tiktok', { state: 'state' });
     const rawResponse = await responsePromise.asResponse();
@@ -61,7 +61,7 @@ describe('resource auth', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('connectAuthVerify: required and optional params', async () => {
     const response = await client.auth.connectAuthVerify('tiktok', {
       state: 'state',
