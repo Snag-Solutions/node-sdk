@@ -175,8 +175,6 @@ export namespace ContractListResponse {
 
     tokenType: 'erc721' | 'erc1155' | 'erc721c';
 
-    websiteCollectionId: string | null;
-
     websiteId: string;
   }
 

@@ -143,8 +143,6 @@ export namespace AuctionGetPageSectionsResponse {
   export namespace Banner {
     export interface WebsiteCollectionBanner {
       id: string;
-
-      websiteCollectionId: string;
     }
 
     export interface Carousel {
