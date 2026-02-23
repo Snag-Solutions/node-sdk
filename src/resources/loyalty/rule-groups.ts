@@ -268,6 +268,7 @@ export namespace RuleGroupGetRuleGroupsResponse {
           | 'connected_instagram'
           | 'instagram_post'
           | 'instagram_follow'
+          | 'connected_phone'
           | 'dapps_by_gas_spent';
       }
 
@@ -662,6 +663,7 @@ export namespace RuleGroupGetRuleGroupsResponse {
             | 'Discord'
             | 'EpicGames'
             | 'Instagram'
+            | 'Phone'
             | 'Steam'
             | 'Telegram'
             | 'TikTok'
@@ -838,6 +840,7 @@ export namespace RuleGroupGetRuleGroupsResponse {
               | 'zksync'
               | 'coti'
               | 'cotiTestnet'
+              | 'dogeosTestnet'
               | 'morph'
               | 'morphTestnet'
               | 'morphHolesky'
@@ -995,6 +998,7 @@ export namespace RuleGroupGetRuleGroupsResponse {
               | 'zksync'
               | 'coti'
               | 'cotiTestnet'
+              | 'dogeosTestnet'
               | 'morph'
               | 'morphTestnet'
               | 'morphHolesky'

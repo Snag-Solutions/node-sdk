@@ -126,6 +126,7 @@ export namespace ContractListResponse {
       | 'zksync'
       | 'coti'
       | 'cotiTestnet'
+      | 'dogeosTestnet'
       | 'morph'
       | 'morphTestnet'
       | 'morphHolesky'
@@ -296,6 +297,7 @@ export namespace ContractListResponse {
         | 'zksync'
         | 'coti'
         | 'cotiTestnet'
+        | 'dogeosTestnet'
         | 'morph'
         | 'morphTestnet'
         | 'morphHolesky'
@@ -397,7 +399,8 @@ export interface ContractMintParams {
     | 'google_api'
     | 'shopify'
     | 'ultra'
-    | 'github';
+    | 'github'
+    | 'twilio';
 
   walletAddress?: string;
 }
