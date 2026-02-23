@@ -113,6 +113,7 @@ export interface WebsiteCollectionCreateParams {
     | 'zksync'
     | 'coti'
     | 'cotiTestnet'
+    | 'dogeosTestnet'
     | 'morph'
     | 'morphTestnet'
     | 'morphHolesky'

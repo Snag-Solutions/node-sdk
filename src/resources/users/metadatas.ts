@@ -185,6 +185,11 @@ export interface MetadataCreateParams {
 
   organizationId?: string;
 
+  /**
+   * Phone number in E.164 format (e.g., +14155552671)
+   */
+  phoneNumber?: string | null;
+
   portfolioUrl?: string | null;
 
   steamUserId?: string | null;
