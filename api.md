@@ -366,15 +366,6 @@ Methods:
 
 ## WebsiteCollections
 
-Types:
-
-- <code><a href="./src/resources/websites/website-collections.ts">WebsiteCollectionListResponse</a></code>
-
-Methods:
-
-- <code title="post /api/website_collections">client.websites.websiteCollections.<a href="./src/resources/websites/website-collections.ts">create</a>({ ...params }) -> void</code>
-- <code title="get /api/website_collections">client.websites.websiteCollections.<a href="./src/resources/websites/website-collections.ts">list</a>({ ...params }) -> WebsiteCollectionListResponse</code>
-
 ## WebsiteUserRoles
 
 Types:

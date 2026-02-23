@@ -4,12 +4,7 @@ import { APIResource } from '../../resource';
 import { isRequestOptions } from '../../core';
 import * as Core from '../../core';
 import * as WebsiteCollectionsAPI from './website-collections';
-import {
-  WebsiteCollectionCreateParams,
-  WebsiteCollectionListParams,
-  WebsiteCollectionListResponse,
-  WebsiteCollections,
-} from './website-collections';
+import { WebsiteCollections } from './website-collections';
 import * as WebsiteUserRolesAPI from './website-user-roles';
 import {
   WebsiteUserRoleAssignParams,
@@ -404,12 +399,7 @@ export declare namespace Websites {
     type WebsiteListParams as WebsiteListParams,
   };
 
-  export {
-    WebsiteCollections as WebsiteCollections,
-    type WebsiteCollectionListResponse as WebsiteCollectionListResponse,
-    type WebsiteCollectionCreateParams as WebsiteCollectionCreateParams,
-    type WebsiteCollectionListParams as WebsiteCollectionListParams,
-  };
+  export { WebsiteCollections as WebsiteCollections };
 
   export {
     WebsiteUserRoles as WebsiteUserRoles,
