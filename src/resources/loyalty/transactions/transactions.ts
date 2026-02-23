@@ -653,6 +653,7 @@ export interface TransactionGetTransactionEntriesParams {
     | 'connected_instagram'
     | 'instagram_post'
     | 'instagram_follow'
+    | 'connected_phone'
     | 'dapps_by_gas_spent'
     | Array<
         | 'Bonus'
@@ -735,6 +736,7 @@ export interface TransactionGetTransactionEntriesParams {
         | 'connected_instagram'
         | 'instagram_post'
         | 'instagram_follow'
+        | 'connected_phone'
         | 'dapps_by_gas_spent'
       >;
 

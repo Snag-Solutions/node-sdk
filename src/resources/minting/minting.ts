@@ -183,6 +183,7 @@ export interface MintingGetAssetsParams {
     | 'zksync'
     | 'coti'
     | 'cotiTestnet'
+    | 'dogeosTestnet'
     | 'morph'
     | 'morphTestnet'
     | 'morphHolesky'

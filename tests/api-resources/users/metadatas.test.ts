@@ -54,6 +54,7 @@ describe('resource metadatas', () => {
           location: 'location',
           logoUrl: 'logoUrl',
           organizationId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+          phoneNumber: '+14155552671',
           portfolioUrl: 'portfolioUrl',
           steamUserId: 'steamUserId',
           steamUsername: 'steamUsername',
