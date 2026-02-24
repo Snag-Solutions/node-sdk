@@ -60,7 +60,7 @@ $ yarn link @snagsolutions/sdk
 # With pnpm
 $ pnpm link --global
 $ cd ../my-package
-$ pnpm link -—global @snagsolutions/sdk
+$ pnpm link --global @snagsolutions/sdk
 ```
 
 ## Running tests
