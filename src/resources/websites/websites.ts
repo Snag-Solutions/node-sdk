@@ -68,96 +68,14 @@ export interface WebsiteCreateResponse {
   id: string;
 
   /**
-   * Counts of related entities
-   */
-  _count: WebsiteCreateResponse._Count;
-
-  /**
    * Website name
    */
   name: string;
 
   /**
-   * Onchain tokens associated with the website
-   */
-  onchainTokens: Array<WebsiteCreateResponse.OnchainToken>;
-
-  /**
    * Date when terms were signed
    */
   termsSignedAt: string | null;
-}
-
-export namespace WebsiteCreateResponse {
-  /**
-   * Counts of related entities
-   */
-  export interface _Count {
-    /**
-     * Count of minting contract assets
-     */
-    mintingContractAssets: number;
-  }
-
-  /**
-   * Schema representing an onchain token
-   */
-  export interface OnchainToken {
-    /**
-     * OnchainToken ID
-     */
-    id: string;
-
-    /**
-     * Contract address of the onchain token
-     */
-    address: string;
-
-    /**
-     * Chain ID where the token is deployed
-     */
-    chainId: string;
-
-    /**
-     * Creation timestamp
-     */
-    createdAt: string;
-
-    /**
-     * Associated loyalty currency ID
-     */
-    currencyId: string;
-
-    /**
-     * Deletion timestamp
-     */
-    deletedAt: string | null;
-
-    /**
-     * Organization ID
-     */
-    organizationId: string;
-
-    /**
-     * Relayer ID for transaction processing
-     */
-    relayerId: string | null;
-
-    /**
-     * Last sync timestamp
-     */
-    syncedAt: string | null;
-
-    /**
-     * Last update timestamp
-     */
-    updatedAt: string;
-
-    /**
-     * Website ID
-     */
-    websiteId: string;
-  }
 }
 
 /**
@@ -186,96 +104,14 @@ export namespace WebsiteListResponse {
     id: string;
 
     /**
-     * Counts of related entities
-     */
-    _count: Data._Count;
-
-    /**
      * Website name
      */
     name: string;
 
     /**
-     * Onchain tokens associated with the website
-     */
-    onchainTokens: Array<Data.OnchainToken>;
-
-    /**
      * Date when terms were signed
      */
     termsSignedAt: string | null;
-  }
-
-  export namespace Data {
-    /**
-     * Counts of related entities
-     */
-    export interface _Count {
-      /**
-       * Count of minting contract assets
-       */
-      mintingContractAssets: number;
-    }
-
-    /**
-     * Schema representing an onchain token
-     */
-    export interface OnchainToken {
-      /**
-       * OnchainToken ID
-       */
-      id: string;
-
-      /**
-       * Contract address of the onchain token
-       */
-      address: string;
-
-      /**
-       * Chain ID where the token is deployed
-       */
-      chainId: string;
-
-      /**
-       * Creation timestamp
-       */
-      createdAt: string;
-
-      /**
-       * Associated loyalty currency ID
-       */
-      currencyId: string;
-
-      /**
-       * Deletion timestamp
-       */
-      deletedAt: string | null;
-
-      /**
-       * Organization ID
-       */
-      organizationId: string;
-
-      /**
-       * Relayer ID for transaction processing
-       */
-      relayerId: string | null;
-
-      /**
-       * Last sync timestamp
-       */
-      syncedAt: string | null;
-
-      /**
-       * Last update timestamp
-       */
-      updatedAt: string;
-
-      /**
-       * Website ID
-       */
-      websiteId: string;
-    }
   }
 }
 
