@@ -655,6 +655,8 @@ export interface TransactionGetTransactionEntriesParams {
     | 'instagram_follow'
     | 'connected_phone'
     | 'dapps_by_gas_spent'
+    | 'dapps_by_active_users'
+    | 'dapps_by_new_users'
     | Array<
         | 'Bonus'
         | 'BoughtOn'
@@ -738,6 +740,8 @@ export interface TransactionGetTransactionEntriesParams {
         | 'instagram_follow'
         | 'connected_phone'
         | 'dapps_by_gas_spent'
+        | 'dapps_by_active_users'
+        | 'dapps_by_new_users'
       >;
 
   /**
