@@ -73,11 +73,6 @@ export interface WebsiteCreateResponse {
   _count: WebsiteCreateResponse._Count;
 
   /**
-   * Collections associated with the website
-   */
-  collections: Array<WebsiteCreateResponse.Collection>;
-
-  /**
    * Website name
    */
   name: string;
@@ -102,26 +97,6 @@ export namespace WebsiteCreateResponse {
      * Count of minting contract assets
      */
     mintingContractAssets: number;
-  }
-
-  /**
-   * Schema representing a collection
-   */
-  export interface Collection {
-    /**
-     * Collection ID
-     */
-    id: string;
-
-    /**
-     * URL of the collection image
-     */
-    imageUrl: string | null;
-
-    /**
-     * Collection name
-     */
-    name: string;
   }
 
   /**
@@ -216,11 +191,6 @@ export namespace WebsiteListResponse {
     _count: Data._Count;
 
     /**
-     * Collections associated with the website
-     */
-    collections: Array<Data.Collection>;
-
-    /**
      * Website name
      */
     name: string;
@@ -245,26 +215,6 @@ export namespace WebsiteListResponse {
        * Count of minting contract assets
        */
       mintingContractAssets: number;
-    }
-
-    /**
-     * Schema representing a collection
-     */
-    export interface Collection {
-      /**
-       * Collection ID
-       */
-      id: string;
-
-      /**
-       * URL of the collection image
-       */
-      imageUrl: string | null;
-
-      /**
-       * Collection name
-       */
-      name: string;
     }
 
     /**
