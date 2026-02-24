@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.246 (2026-02-24)
+
+Full Changelog: [v0.1.0-alpha.245...v0.1.0-alpha.246](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.245...v0.1.0-alpha.246)
+
+### Bug Fixes
+
+* **docs/contributing:** correct pnpm link command ([5b2d31f](https://github.com/Snag-Solutions/node-sdk/commit/5b2d31f952d830f6766bfe57f842aaa18b68790d))
+
 ## 0.1.0-alpha.245 (2026-02-24)
 
 Full Changelog: [v0.1.0-alpha.244...v0.1.0-alpha.245](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.244...v0.1.0-alpha.245)
