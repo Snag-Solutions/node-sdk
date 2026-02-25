@@ -192,16 +192,6 @@ export namespace AuctionGetPageSectionsResponse {
 
   export interface ItemsGrid {
     id: string;
-
-    websiteCollection: ItemsGrid.WebsiteCollection;
-  }
-
-  export namespace ItemsGrid {
-    export interface WebsiteCollection {
-      id: string;
-
-      mintingContractId?: string | null;
-    }
   }
 }
 
