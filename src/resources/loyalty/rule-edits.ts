@@ -177,6 +177,17 @@ export namespace RuleEditListResponse {
       collectionAddress?: string;
 
       /**
+       * Reward based on data usage within the last day, week, or month. Leave it empty
+       * for all time usage.
+       */
+      dappDataWindow?: 'daily' | 'weekly' | 'monthly' | null;
+
+      /**
+       * Filter dApps by deployment age before ranking.
+       */
+      dappDeployedWithin?: 'daily' | 'weekly' | 'monthly' | null;
+
+      /**
        * URL of the media associated with the loyalty rule
        */
       mediaUrl?: string | null;
@@ -1249,6 +1260,17 @@ export namespace RuleEditListResponse {
        * Optional address of the collection
        */
       collectionAddress?: string;
+
+      /**
+       * Reward based on data usage within the last day, week, or month. Leave it empty
+       * for all time usage.
+       */
+      dappDataWindow?: 'daily' | 'weekly' | 'monthly' | null;
+
+      /**
+       * Filter dApps by deployment age before ranking.
+       */
+      dappDeployedWithin?: 'daily' | 'weekly' | 'monthly' | null;
 
       /**
        * URL of the media associated with the loyalty rule
@@ -2380,6 +2402,17 @@ export namespace RuleEditRestoreResponse {
     collectionAddress?: string;
 
     /**
+     * Reward based on data usage within the last day, week, or month. Leave it empty
+     * for all time usage.
+     */
+    dappDataWindow?: 'daily' | 'weekly' | 'monthly' | null;
+
+    /**
+     * Filter dApps by deployment age before ranking.
+     */
+    dappDeployedWithin?: 'daily' | 'weekly' | 'monthly' | null;
+
+    /**
      * URL of the media associated with the loyalty rule
      */
     mediaUrl?: string | null;
@@ -3452,6 +3485,17 @@ export namespace RuleEditRestoreResponse {
      * Optional address of the collection
      */
     collectionAddress?: string;
+
+    /**
+     * Reward based on data usage within the last day, week, or month. Leave it empty
+     * for all time usage.
+     */
+    dappDataWindow?: 'daily' | 'weekly' | 'monthly' | null;
+
+    /**
+     * Filter dApps by deployment age before ranking.
+     */
+    dappDeployedWithin?: 'daily' | 'weekly' | 'monthly' | null;
 
     /**
      * URL of the media associated with the loyalty rule

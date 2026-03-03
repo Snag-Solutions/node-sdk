@@ -341,6 +341,17 @@ export interface RuleCreateResponse {
   customRewardsCsvUrl?: string | null;
 
   /**
+   * Reward based on data usage within the last day, week, or month. Leave it empty
+   * for all time usage.
+   */
+  dappDataWindow?: 'daily' | 'weekly' | 'monthly' | null;
+
+  /**
+   * Filter dApps by deployment age before ranking.
+   */
+  dappDeployedWithin?: 'daily' | 'weekly' | 'monthly' | null;
+
+  /**
    * Optional detailed description of the rule
    */
   description?: string;
@@ -1614,6 +1625,17 @@ export interface RuleUpdateResponse {
    * URL for uploading custom rewards via CSV
    */
   customRewardsCsvUrl?: string | null;
+
+  /**
+   * Reward based on data usage within the last day, week, or month. Leave it empty
+   * for all time usage.
+   */
+  dappDataWindow?: 'daily' | 'weekly' | 'monthly' | null;
+
+  /**
+   * Filter dApps by deployment age before ranking.
+   */
+  dappDeployedWithin?: 'daily' | 'weekly' | 'monthly' | null;
 
   /**
    * Timestamp when the loyalty rule was deleted. Set to null to restore a deleted
@@ -2948,6 +2970,17 @@ export namespace RuleListResponse {
      * Optional address of the collection
      */
     collectionAddress?: string;
+
+    /**
+     * Reward based on data usage within the last day, week, or month. Leave it empty
+     * for all time usage.
+     */
+    dappDataWindow?: 'daily' | 'weekly' | 'monthly' | null;
+
+    /**
+     * Filter dApps by deployment age before ranking.
+     */
+    dappDeployedWithin?: 'daily' | 'weekly' | 'monthly' | null;
 
     /**
      * URL of the media associated with the loyalty rule
@@ -4377,6 +4410,17 @@ export interface RuleCreateParams {
   customRewardsCsvUrl?: string | null;
 
   /**
+   * Reward based on data usage within the last day, week, or month. Leave it empty
+   * for all time usage.
+   */
+  dappDataWindow?: 'daily' | 'weekly' | 'monthly' | null;
+
+  /**
+   * Filter dApps by deployment age before ranking.
+   */
+  dappDeployedWithin?: 'daily' | 'weekly' | 'monthly' | null;
+
+  /**
    * Optional detailed description of the rule
    */
   description?: string;
@@ -5648,6 +5692,17 @@ export interface RuleUpdateParams {
    * URL for uploading custom rewards via CSV
    */
   customRewardsCsvUrl?: string | null;
+
+  /**
+   * Reward based on data usage within the last day, week, or month. Leave it empty
+   * for all time usage.
+   */
+  dappDataWindow?: 'daily' | 'weekly' | 'monthly' | null;
+
+  /**
+   * Filter dApps by deployment age before ranking.
+   */
+  dappDeployedWithin?: 'daily' | 'weekly' | 'monthly' | null;
 
   /**
    * Timestamp when the loyalty rule was deleted. Set to null to restore a deleted
