@@ -71,11 +71,6 @@ export interface WebsiteCreateResponse {
    * Website name
    */
   name: string;
-
-  /**
-   * Date when terms were signed
-   */
-  termsSignedAt: string | null;
 }
 
 /**
@@ -107,11 +102,6 @@ export namespace WebsiteListResponse {
      * Website name
      */
     name: string;
-
-    /**
-     * Date when terms were signed
-     */
-    termsSignedAt: string | null;
   }
 }
 
