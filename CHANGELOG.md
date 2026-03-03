@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.0-alpha.250 (2026-03-03)
+
+Full Changelog: [v0.1.0-alpha.249...v0.1.0-alpha.250](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.249...v0.1.0-alpha.250)
+
+### Features
+
+* **api:** open api update ([007b6a6](https://github.com/Snag-Solutions/node-sdk/commit/007b6a6755110b5b28e8ca1b2be8783518c873bf))
+
+
+### Chores
+
+* **internal:** move stringifyQuery implementation to internal function ([ecfbeb8](https://github.com/Snag-Solutions/node-sdk/commit/ecfbeb83330e2503b641f7dd3e2369f5acb31275))
+
 ## 0.1.0-alpha.249 (2026-02-25)
 
 Full Changelog: [v0.1.0-alpha.248...v0.1.0-alpha.249](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.248...v0.1.0-alpha.249)
