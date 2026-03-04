@@ -103,11 +103,19 @@ export class Rules extends APIResource {
 
   /**
    * Verify a loyalty rule based on user action and reward them if applicable. This
-   * endpoint currently only supports following rule types code_entry, text_input,
-   * link_click, discord_member, connect_wallet, check_in, external_rule,
+   * endpoint currently only supports following rule types: code_entry, text_input,
+   * link_click, external_rule, connect_wallet, check_in, connected_twitter,
    * drip_x_follow, drip_x_new_tweet, drip_x_text_in_bio, drip_x_text_in_name,
-   * drip_x_text_in_comment, drip_x_tweet, telegram_join, DiscordMessages,
-   * youtube_subscribers, youtube_comment, steam_wishlist, discord_role_grant
+   * drip_x_text_in_comment, drip_x_tweet, connected_phone, instagram_post,
+   * instagram_follow, connected_steam, steam_wishlist, connected_epic,
+   * connected_email, profile_completed, connected_telegram, telegram_messages,
+   * telegram_join, connected_discord, discord_member, DiscordMessages, discord_join,
+   * discord_role_grant, quiz, poll, TokenHold, token_hold_erc20, connected_github,
+   * github_repo_star, github_repo_fork, github_repo_collaborator, connected_youtube,
+   * youtube_subscribers, youtube_comment, connected_reddit, reddit_comment,
+   * connected_instagram, points_airdrop, shopify_spend, swap, connected_tiktok,
+   * tiktok_post, tiktok_follow, post_impressions, stratus_function,
+   * dapps_by_gas_spent, dapps_by_active_users, dapps_by_new_users
    *
    * @example
    * ```ts
