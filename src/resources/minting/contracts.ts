@@ -151,6 +151,8 @@ export namespace ContractListResponse {
 
     organizationId: string;
 
+    perUserMintLimit: number | null;
+
     preRevealMedia: string | null;
 
     primarySaleRecipientAddress: string;
