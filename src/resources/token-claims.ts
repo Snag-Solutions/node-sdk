@@ -113,6 +113,8 @@ export namespace TokenClaimListResponse {
 
     endTime: string | null;
 
+    erc20Decimals: number | null;
+
     geoBlock: Array<string>;
 
     isDraft: boolean;
