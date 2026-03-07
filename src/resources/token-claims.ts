@@ -9,11 +9,11 @@ export class TokenClaims extends APIResource {
    * Get a token claim by id
    */
   retrieve(
-    pathId: string,
+    id: string,
     query: TokenClaimRetrieveParams,
     options?: Core.RequestOptions,
   ): Core.APIPromise<TokenClaimRetrieveResponse> {
-    return this._client.get(`/api/token_claims/${pathId}`, { query, ...options });
+    return this._client.get(`/api/token_claims/${id}`, { query, ...options });
   }
 
   /**
@@ -35,22 +35,22 @@ export class TokenClaims extends APIResource {
    * Check if a wallet address is eligible for a token claim
    */
   checkEligibility(
-    pathId: string,
+    id: string,
     query: TokenClaimCheckEligibilityParams,
     options?: Core.RequestOptions,
   ): Core.APIPromise<TokenClaimCheckEligibilityResponse> {
-    return this._client.get(`/api/token_claims/${pathId}/eligibility`, { query, ...options });
+    return this._client.get(`/api/token_claims/${id}/eligibility`, { query, ...options });
   }
 
   /**
    * Get a token claim proof for a given wallet address
    */
   getProof(
-    pathId: string,
+    id: string,
     query: TokenClaimGetProofParams,
     options?: Core.RequestOptions,
   ): Core.APIPromise<TokenClaimGetProofResponse> {
-    return this._client.get(`/api/token_claims/${pathId}/proof`, { query, ...options });
+    return this._client.get(`/api/token_claims/${id}/proof`, { query, ...options });
   }
 
   /**
@@ -250,7 +250,7 @@ export namespace TokenClaimUpdateClaimResponse {
 }
 
 export interface TokenClaimRetrieveParams {
-  query_id: string;
+  id: string;
 }
 
 export interface TokenClaimListParams {
@@ -262,13 +262,13 @@ export interface TokenClaimListParams {
 }
 
 export interface TokenClaimCheckEligibilityParams {
-  query_id: string;
+  id: string;
 
   walletAddress: string;
 }
 
 export interface TokenClaimGetProofParams {
-  query_id: string;
+  id: string;
 
   walletAddress: string;
 }
