@@ -58,18 +58,18 @@ export class WebsiteUserAttributes extends APIResource {
    * ```ts
    * const websiteUserAttribute =
    *   await client.auctions.websiteUserAttributes.delete('id', {
-   *     body_id: '123e4567-e89b-12d3-a456-426614174003',
+   *     id: '123e4567-e89b-12d3-a456-426614174003',
    *     organizationId: '123e4567-e89b-12d3-a456-426614174002',
    *     websiteId: '123e4567-e89b-12d3-a456-426614174001',
    *   });
    * ```
    */
   delete(
-    pathId: string,
+    id: string,
     body: WebsiteUserAttributeDeleteParams,
     options?: Core.RequestOptions,
   ): Core.APIPromise<WebsiteUserAttributeDeleteResponse> {
-    return this._client.delete(`/api/website_user_attributes/${pathId}`, { body, ...options });
+    return this._client.delete(`/api/website_user_attributes/${id}`, { body, ...options });
   }
 }
 
@@ -177,7 +177,7 @@ export interface WebsiteUserAttributeDeleteParams {
   /**
    * Unique identifier for the website user attribute
    */
-  body_id: string;
+  id: string;
 
   /**
    * Unique identifier for the organization

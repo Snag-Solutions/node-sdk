@@ -46,7 +46,7 @@ Methods:
 
 - <code title="post /api/website_user_attributes">client.auctions.websiteUserAttributes.<a href="./src/resources/auctions/website-user-attributes/website-user-attributes.ts">create</a>({ ...params }) -> WebsiteUserAttributeCreateResponse</code>
 - <code title="get /api/website_user_attributes">client.auctions.websiteUserAttributes.<a href="./src/resources/auctions/website-user-attributes/website-user-attributes.ts">list</a>({ ...params }) -> WebsiteUserAttributeListResponse</code>
-- <code title="delete /api/website_user_attributes/{id}">client.auctions.websiteUserAttributes.<a href="./src/resources/auctions/website-user-attributes/website-user-attributes.ts">delete</a>(pathId, { ...params }) -> WebsiteUserAttributeDeleteResponse</code>
+- <code title="delete /api/website_user_attributes/{id}">client.auctions.websiteUserAttributes.<a href="./src/resources/auctions/website-user-attributes/website-user-attributes.ts">delete</a>(id, { ...params }) -> WebsiteUserAttributeDeleteResponse</code>
 
 ### Values
 
@@ -391,9 +391,9 @@ Types:
 
 Methods:
 
-- <code title="get /api/token_claims/{id}">client.tokenClaims.<a href="./src/resources/token-claims.ts">retrieve</a>(pathId, { ...params }) -> TokenClaimRetrieveResponse</code>
+- <code title="get /api/token_claims/{id}">client.tokenClaims.<a href="./src/resources/token-claims.ts">retrieve</a>(id, { ...params }) -> TokenClaimRetrieveResponse</code>
 - <code title="get /api/token_claims">client.tokenClaims.<a href="./src/resources/token-claims.ts">list</a>({ ...params }) -> TokenClaimListResponse</code>
-- <code title="get /api/token_claims/{id}/eligibility">client.tokenClaims.<a href="./src/resources/token-claims.ts">checkEligibility</a>(pathId, { ...params }) -> TokenClaimCheckEligibilityResponse</code>
-- <code title="get /api/token_claims/{id}/proof">client.tokenClaims.<a href="./src/resources/token-claims.ts">getProof</a>(pathId, { ...params }) -> TokenClaimGetProofResponse</code>
+- <code title="get /api/token_claims/{id}/eligibility">client.tokenClaims.<a href="./src/resources/token-claims.ts">checkEligibility</a>(id, { ...params }) -> TokenClaimCheckEligibilityResponse</code>
+- <code title="get /api/token_claims/{id}/proof">client.tokenClaims.<a href="./src/resources/token-claims.ts">getProof</a>(id, { ...params }) -> TokenClaimGetProofResponse</code>
 - <code title="get /api/token_claims/{id}/users">client.tokenClaims.<a href="./src/resources/token-claims.ts">listUsers</a>(id, { ...params }) -> TokenClaimListUsersResponse</code>
 - <code title="post /api/token_claims/{id}/claim">client.tokenClaims.<a href="./src/resources/token-claims.ts">updateClaim</a>(id, { ...params }) -> TokenClaimUpdateClaimResponse</code>

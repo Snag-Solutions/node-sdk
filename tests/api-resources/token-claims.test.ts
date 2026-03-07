@@ -11,9 +11,7 @@ const client = new SnagSolutions({
 describe('resource tokenClaims', () => {
   // Mock server tests are disabled
   test.skip('retrieve: only required params', async () => {
-    const responsePromise = client.tokenClaims.retrieve('id', {
-      query_id: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
-    });
+    const responsePromise = client.tokenClaims.retrieve('id', { id: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e' });
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -25,9 +23,7 @@ describe('resource tokenClaims', () => {
 
   // Mock server tests are disabled
   test.skip('retrieve: required and optional params', async () => {
-    const response = await client.tokenClaims.retrieve('id', {
-      query_id: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
-    });
+    const response = await client.tokenClaims.retrieve('id', { id: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e' });
   });
 
   // Mock server tests are disabled
@@ -68,7 +64,7 @@ describe('resource tokenClaims', () => {
   // Mock server tests are disabled
   test.skip('checkEligibility: only required params', async () => {
     const responsePromise = client.tokenClaims.checkEligibility('id', {
-      query_id: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+      id: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
       walletAddress: 'walletAddress',
     });
     const rawResponse = await responsePromise.asResponse();
@@ -83,7 +79,7 @@ describe('resource tokenClaims', () => {
   // Mock server tests are disabled
   test.skip('checkEligibility: required and optional params', async () => {
     const response = await client.tokenClaims.checkEligibility('id', {
-      query_id: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+      id: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
       walletAddress: 'walletAddress',
     });
   });
@@ -91,7 +87,7 @@ describe('resource tokenClaims', () => {
   // Mock server tests are disabled
   test.skip('getProof: only required params', async () => {
     const responsePromise = client.tokenClaims.getProof('id', {
-      query_id: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+      id: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
       walletAddress: 'walletAddress',
     });
     const rawResponse = await responsePromise.asResponse();
@@ -106,7 +102,7 @@ describe('resource tokenClaims', () => {
   // Mock server tests are disabled
   test.skip('getProof: required and optional params', async () => {
     const response = await client.tokenClaims.getProof('id', {
-      query_id: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+      id: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
       walletAddress: 'walletAddress',
     });
   });
