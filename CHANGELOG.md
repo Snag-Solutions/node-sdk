@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.0-alpha.254 (2026-03-07)
+
+Full Changelog: [v0.1.0-alpha.253...v0.1.0-alpha.254](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.253...v0.1.0-alpha.254)
+
+### Chores
+
+* **internal:** codegen related update ([69bcad5](https://github.com/Snag-Solutions/node-sdk/commit/69bcad5a6ca9bb5d12c26031eed678c92dea21ad))
+* **internal:** codegen related update ([4ebb8a5](https://github.com/Snag-Solutions/node-sdk/commit/4ebb8a50537f05d69366e0a9dfd55d9e7e0c75c6))
+
 ## 0.1.0-alpha.253 (2026-03-05)
 
 Full Changelog: [v0.1.0-alpha.252...v0.1.0-alpha.253](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.252...v0.1.0-alpha.253)
