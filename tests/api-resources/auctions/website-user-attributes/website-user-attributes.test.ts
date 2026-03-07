@@ -71,7 +71,7 @@ describe('resource websiteUserAttributes', () => {
   // Mock server tests are disabled
   test.skip('delete: only required params', async () => {
     const responsePromise = client.auctions.websiteUserAttributes.delete('id', {
-      body_id: '123e4567-e89b-12d3-a456-426614174003',
+      id: '123e4567-e89b-12d3-a456-426614174003',
       organizationId: '123e4567-e89b-12d3-a456-426614174002',
       websiteId: '123e4567-e89b-12d3-a456-426614174001',
     });
@@ -87,7 +87,7 @@ describe('resource websiteUserAttributes', () => {
   // Mock server tests are disabled
   test.skip('delete: required and optional params', async () => {
     const response = await client.auctions.websiteUserAttributes.delete('id', {
-      body_id: '123e4567-e89b-12d3-a456-426614174003',
+      id: '123e4567-e89b-12d3-a456-426614174003',
       organizationId: '123e4567-e89b-12d3-a456-426614174002',
       websiteId: '123e4567-e89b-12d3-a456-426614174001',
     });
