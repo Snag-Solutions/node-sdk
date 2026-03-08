@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.1.0-alpha.254 (2026-03-08)
+
+Full Changelog: [v0.1.0-alpha.253...v0.1.0-alpha.254](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.253...v0.1.0-alpha.254)
+
+### Bug Fixes
+
+* **client:** preserve URL params already embedded in path ([5a5a8c0](https://github.com/Snag-Solutions/node-sdk/commit/5a5a8c05ecd287fef6e03e16b1bc795370592cda))
+
+
+### Chores
+
+* **ci:** skip uploading artifacts on stainless-internal branches ([b969856](https://github.com/Snag-Solutions/node-sdk/commit/b969856c11b47d54fd5b9c2ef85f3bbc065b9d54))
+* **internal:** codegen related update ([69bcad5](https://github.com/Snag-Solutions/node-sdk/commit/69bcad5a6ca9bb5d12c26031eed678c92dea21ad))
+* **internal:** codegen related update ([4ebb8a5](https://github.com/Snag-Solutions/node-sdk/commit/4ebb8a50537f05d69366e0a9dfd55d9e7e0c75c6))
+
 ## 0.1.0-alpha.253 (2026-03-05)
 
 Full Changelog: [v0.1.0-alpha.252...v0.1.0-alpha.253](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.252...v0.1.0-alpha.253)
