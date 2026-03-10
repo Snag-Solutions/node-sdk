@@ -1960,7 +1960,7 @@ export interface BadgeListParams {
   /**
    * Include deleted badges in the response
    */
-  includeDeleted?: boolean | null;
+  includeDeleted?: boolean;
 
   /**
    * Number of badges to fetch

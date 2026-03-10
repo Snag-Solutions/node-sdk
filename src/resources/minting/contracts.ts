@@ -351,13 +351,13 @@ export interface ContractMintResponse {
 }
 
 export interface ContractListParams {
-  includeDeleted?: boolean | null;
+  includeDeleted?: boolean;
 
   limit?: number;
 
   organizationId?: string;
 
-  showOnMarketplace?: boolean | null;
+  showOnMarketplace?: boolean;
 
   startingAfter?: string;
 
