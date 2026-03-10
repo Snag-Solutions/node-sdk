@@ -145,6 +145,8 @@ export namespace TokenClaimListResponse {
 
     minLockupForMultiplier?: number;
 
+    minPercentageToStake?: number;
+
     multiplier?: number;
 
     stakingContractType?: 'linear' | 'timelock' | null;
