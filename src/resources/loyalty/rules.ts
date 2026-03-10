@@ -6977,7 +6977,7 @@ export interface RuleListParams {
   /**
    * Whether to include deleted/archived records
    */
-  includeDeleted?: boolean | null;
+  includeDeleted?: boolean;
 
   /**
    * If true this will only return active rules, the rules for which the startTime is
