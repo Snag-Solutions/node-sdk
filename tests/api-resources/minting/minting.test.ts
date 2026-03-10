@@ -33,6 +33,7 @@ describe('resource minting', () => {
       currencyType: 'loyalty',
       includeDeleted: false,
       includeMetadata: true,
+      isHidden: true,
       isListed: true,
       mintingContractAssetId: '00000000-0000-0000-0000-000000000000',
       mintingContractIds: '123e4567-e89b-12d3-a456-426614174000,987fcdeb-51a2-43d7-9876-543210987654',
