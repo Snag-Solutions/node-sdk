@@ -420,7 +420,7 @@ export interface UserListParams {
   /**
    * Whether to include delegations in the response
    */
-  includeDelegation?: boolean | null;
+  includeDelegation?: boolean;
 
   /**
    * Number of users to return

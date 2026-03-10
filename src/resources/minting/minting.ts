@@ -121,12 +121,12 @@ export interface MintingGetAssetsParams {
   /**
    * Whether to include deleted assets in the response
    */
-  includeDeleted?: boolean | null;
+  includeDeleted?: boolean;
 
   /**
    * Whether to include metadata in the response
    */
-  includeMetadata?: boolean | null;
+  includeMetadata?: boolean;
 
   /**
    * Whether to include hidden assets in the response
