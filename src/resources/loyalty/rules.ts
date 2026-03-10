@@ -306,7 +306,8 @@ export interface RuleCreateResponse {
     | 'connected_phone'
     | 'dapps_by_gas_spent'
     | 'dapps_by_active_users'
-    | 'dapps_by_new_users';
+    | 'dapps_by_new_users'
+    | 'dapps_by_transaction_count';
 
   /**
    * Unique identifier for the associated website
@@ -4375,7 +4376,8 @@ export interface RuleCreateParams {
     | 'connected_phone'
     | 'dapps_by_gas_spent'
     | 'dapps_by_active_users'
-    | 'dapps_by_new_users';
+    | 'dapps_by_new_users'
+    | 'dapps_by_transaction_count';
 
   /**
    * Unique identifier for the associated website
