@@ -129,6 +129,11 @@ export interface MintingGetAssetsParams {
   includeMetadata?: boolean | null;
 
   /**
+   * Whether to include hidden assets in the response
+   */
+  isHidden?: boolean | null;
+
+  /**
    * Whether to include listed assets in the response
    */
   isListed?: boolean | null;
