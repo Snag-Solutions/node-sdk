@@ -310,12 +310,13 @@ export interface AuctionListAuctionsResponse {
 }
 
 export namespace AuctionListAuctionsResponse {
+  /**
+   * Schema representing an auction
+   */
   export interface Data {
     id: string;
 
     auctionBids: Array<Data.AuctionBid>;
-
-    auctionItems: Array<Data.AuctionItem>;
 
     biddersOwnCollectionAddresses: Array<string>;
 
@@ -381,28 +382,6 @@ export namespace AuctionListAuctionsResponse {
       amount: string;
 
       createdAt: string;
-    }
-
-    export interface AuctionItem {
-      id: string;
-
-      /**
-       * Schema representing a minting contract asset
-       */
-      mintingContractAsset: AuctionItem.MintingContractAsset;
-
-      quantity: number;
-
-      sortId: number;
-    }
-
-    export namespace AuctionItem {
-      /**
-       * Schema representing a minting contract asset
-       */
-      export interface MintingContractAsset {
-        id: string;
-      }
     }
 
     /**
