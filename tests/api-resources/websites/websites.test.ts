@@ -25,6 +25,10 @@ describe('resource websites', () => {
   test.skip('create: required and optional params', async () => {
     const response = await client.websites.create({
       name: 'My New Website',
+      adminWalletAddress: [
+        '0x742d35Cc6634C0532925a3b844Bc454e4438f44e',
+        '0x66f820a414680b5bcda5eeca5dea238543f42054',
+      ],
       discordUrl: 'https://discord.gg/mywebsite',
       homeUrl: 'https://www.mywebsite.com',
       instagramUsername: '@mywebsite',

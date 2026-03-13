@@ -23,7 +23,8 @@ export class Websites extends APIResource {
   );
 
   /**
-   * Creates a new website
+   * Creates a new website. `adminWalletAddress` can only be used when authenticating
+   * with an organization API key.
    *
    * @example
    * ```ts
@@ -110,6 +111,12 @@ export interface WebsiteCreateParams {
    * Name of the website
    */
   name: string;
+
+  /**
+   * Optional admin wallet addresses to grant admin access on creation (organization
+   * API key only). Maximum 2.
+   */
+  adminWalletAddress?: Array<string>;
 
   /**
    * Discord URL of the website account
