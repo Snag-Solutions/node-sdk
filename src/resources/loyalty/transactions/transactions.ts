@@ -658,6 +658,7 @@ export interface TransactionGetTransactionEntriesParams {
     | 'dapps_by_active_users'
     | 'dapps_by_new_users'
     | 'dapps_by_transaction_count'
+    | 'dapps_by_user_retention'
     | Array<
         | 'Bonus'
         | 'BoughtOn'
@@ -744,6 +745,7 @@ export interface TransactionGetTransactionEntriesParams {
         | 'dapps_by_active_users'
         | 'dapps_by_new_users'
         | 'dapps_by_transaction_count'
+        | 'dapps_by_user_retention'
       >;
 
   /**

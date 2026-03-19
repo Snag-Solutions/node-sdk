@@ -307,7 +307,8 @@ export interface RuleCreateResponse {
     | 'dapps_by_gas_spent'
     | 'dapps_by_active_users'
     | 'dapps_by_new_users'
-    | 'dapps_by_transaction_count';
+    | 'dapps_by_transaction_count'
+    | 'dapps_by_user_retention';
 
   /**
    * Unique identifier for the associated website
@@ -4377,7 +4378,8 @@ export interface RuleCreateParams {
     | 'dapps_by_gas_spent'
     | 'dapps_by_active_users'
     | 'dapps_by_new_users'
-    | 'dapps_by_transaction_count';
+    | 'dapps_by_transaction_count'
+    | 'dapps_by_user_retention';
 
   /**
    * Unique identifier for the associated website
