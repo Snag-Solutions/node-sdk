@@ -7001,9 +7001,10 @@ export interface RuleListParams {
   limit?: number;
 
   /**
-   * ID of the loyalty rule group to filter results
+   * ID(s) of the loyalty rule group(s) to filter results. Single ID or array for
+   * multiple groups (shared cursor when multiple).
    */
-  loyaltyRuleGroupId?: string;
+  loyaltyRuleGroupId?: string | Array<string>;
 
   /**
    * The IDs of the loyalty rule
