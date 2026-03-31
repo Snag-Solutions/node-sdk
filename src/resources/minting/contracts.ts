@@ -53,8 +53,6 @@ export namespace ContractListResponse {
   export interface Data {
     id: string;
 
-    _count: Data._Count;
-
     address: string | null;
 
     contractKind: 'ONCHAIN' | 'OFFCHAIN';
@@ -177,14 +175,12 @@ export namespace ContractListResponse {
 
     tokenType: 'erc721' | 'erc1155' | 'erc721c';
 
+    totalAssets: number;
+
     websiteId: string;
   }
 
   export namespace Data {
-    export interface _Count {
-      mintingContractAssets: number;
-    }
-
     export interface MintingContractAsset {
       id: string;
 
