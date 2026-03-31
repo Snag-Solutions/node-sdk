@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.0-alpha.263 (2026-03-31)
+
+Full Changelog: [v0.1.0-alpha.262...v0.1.0-alpha.263](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.262...v0.1.0-alpha.263)
+
+### Features
+
+* **api:** open api update ([24ac985](https://github.com/Snag-Solutions/node-sdk/commit/24ac985b844e2b2910cc74b45311a6e8e0d7f8c4))
+
+
+### Chores
+
+* **ci:** skip lint on metadata-only changes ([d2c7393](https://github.com/Snag-Solutions/node-sdk/commit/d2c73934b2ad0bf4c19af1077ea6f33dd4947053))
+
 ## 0.1.0-alpha.262 (2026-03-24)
 
 Full Changelog: [v0.1.0-alpha.261...v0.1.0-alpha.262](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.261...v0.1.0-alpha.262)
