@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.1.0-alpha.264 (2026-04-28)
+
+Full Changelog: [v0.1.0-alpha.263...v0.1.0-alpha.264](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.263...v0.1.0-alpha.264)
+
+### Features
+
+* support setting headers via env ([daf79d8](https://github.com/Snag-Solutions/node-sdk/commit/daf79d895bbdb544f581450e9c9c3f11a2362415))
+
+
+### Chores
+
+* **internal:** codegen related update ([1364e17](https://github.com/Snag-Solutions/node-sdk/commit/1364e17dccffa5f4c5b03492870ecb1b99fa2aa1))
+* **internal:** more robust bootstrap script ([db86a65](https://github.com/Snag-Solutions/node-sdk/commit/db86a65412dfad820fcb096f97f820f247cbbddb))
+
 ## 0.1.0-alpha.263 (2026-03-31)
 
 Full Changelog: [v0.1.0-alpha.262...v0.1.0-alpha.263](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.262...v0.1.0-alpha.263)
