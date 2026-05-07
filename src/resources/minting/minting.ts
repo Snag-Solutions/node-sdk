@@ -170,6 +170,7 @@ export interface MintingGetAssetsParams {
     | 'fantomTestnet'
     | 'flowMainnet'
     | 'mainnet'
+    | 'nexus'
     | 'nexusTestnet'
     | 'optimism'
     | 'polygon'
