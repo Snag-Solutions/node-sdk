@@ -149,7 +149,7 @@ export namespace RuleEditListResponse {
       /**
        * Type of the reward
        */
-      rewardType: 'points' | 'multiplier' | 'badge';
+      rewardType: 'points' | 'multiplier' | 'badge' | 'token';
 
       /**
        * Start time of the loyalty rule
@@ -967,7 +967,7 @@ export namespace RuleEditListResponse {
           /**
            * Reward amount for this range.
            */
-          amount: number;
+          amount: number | string;
 
           /**
            * End value of the range.
@@ -1236,7 +1236,7 @@ export namespace RuleEditListResponse {
       /**
        * Type of the reward
        */
-      rewardType: 'points' | 'multiplier' | 'badge';
+      rewardType: 'points' | 'multiplier' | 'badge' | 'token';
 
       /**
        * Start time of the loyalty rule
@@ -2054,7 +2054,7 @@ export namespace RuleEditListResponse {
           /**
            * Reward amount for this range.
            */
-          amount: number;
+          amount: number | string;
 
           /**
            * End value of the range.
@@ -2378,7 +2378,7 @@ export namespace RuleEditRestoreResponse {
     /**
      * Type of the reward
      */
-    rewardType: 'points' | 'multiplier' | 'badge';
+    rewardType: 'points' | 'multiplier' | 'badge' | 'token';
 
     /**
      * Start time of the loyalty rule
@@ -3196,7 +3196,7 @@ export namespace RuleEditRestoreResponse {
         /**
          * Reward amount for this range.
          */
-        amount: number;
+        amount: number | string;
 
         /**
          * End value of the range.
@@ -3465,7 +3465,7 @@ export namespace RuleEditRestoreResponse {
     /**
      * Type of the reward
      */
-    rewardType: 'points' | 'multiplier' | 'badge';
+    rewardType: 'points' | 'multiplier' | 'badge' | 'token';
 
     /**
      * Start time of the loyalty rule
@@ -4283,7 +4283,7 @@ export namespace RuleEditRestoreResponse {
         /**
          * Reward amount for this range.
          */
-        amount: number;
+        amount: number | string;
 
         /**
          * End value of the range.

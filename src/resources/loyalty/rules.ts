@@ -16,7 +16,6 @@ export class Rules extends APIResource {
    *   effectiveStartTime: '2024-01-01T00:00:00Z',
    *   endTime: '2024-12-31T23:59:00Z',
    *   frequency: 'daily',
-   *   loyaltyCurrencyId: '456e1234-e89b-12d3-a456-426614174003',
    *   metadata: {},
    *   name: 'Referral Bonus Rule',
    *   organizationId: '123e4567-e89b-12d3-a456-426614174001',
@@ -193,11 +192,6 @@ export interface RuleCreateResponse {
    * Execution frequency of the loyalty rule
    */
   frequency: 'none' | 'once' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'immediately';
-
-  /**
-   * Unique identifier for the loyalty currency
-   */
-  loyaltyCurrencyId: string;
 
   /**
    * Additional metadata for the loyalty rule
@@ -408,6 +402,13 @@ export interface RuleCreateResponse {
   loyaltyBadgeId?: string | null;
 
   /**
+   * Unique identifier for the loyalty currency. Optional when rewardType is token
+   * and tokenReward is provided; backend will find or create the currency from the
+   * selected contract.
+   */
+  loyaltyCurrencyId?: string;
+
+  /**
    * Unique identifier for the loyalty rule group
    */
   loyaltyRuleGroupId?: 'no-section' | (string & {}) | null;
@@ -510,7 +511,7 @@ export interface RuleCreateResponse {
   /**
    * Type of reward issued by the rule
    */
-  rewardType?: 'points' | 'multiplier' | 'badge';
+  rewardType?: 'points' | 'multiplier' | 'badge' | 'token';
 
   /**
    * URL of the Shopify store
@@ -526,6 +527,12 @@ export interface RuleCreateResponse {
    * Optional stratus subscription id for the rule
    */
   subscriptionId?: string | null;
+
+  /**
+   * When rewardType is token, provide relayer and either an ERC-20 contract or
+   * isNative=true to find or create loyalty currency and onchain token.
+   */
+  tokenReward?: RuleCreateResponse.TokenReward;
 }
 
 export namespace RuleCreateResponse {
@@ -1300,7 +1307,7 @@ export namespace RuleCreateResponse {
       /**
        * Reward amount for this range.
        */
-      amount: number;
+      amount: number | string;
 
       /**
        * End value of the range.
@@ -1590,6 +1597,29 @@ export namespace RuleCreateResponse {
      */
     symbol?: string;
   }
+
+  /**
+   * When rewardType is token, provide relayer and either an ERC-20 contract or
+   * isNative=true to find or create loyalty currency and onchain token.
+   */
+  export interface TokenReward {
+    /**
+     * Stratus relayer for token distribution (same network as contract)
+     */
+    relayerId: string;
+
+    /**
+     * ERC-20 contract to reward with; must match relayer network. Required unless
+     * isNative is true.
+     */
+    contractId?: string;
+
+    /**
+     * When true, reward is the chain native gas token (ETH, MATIC, BNB, …) and
+     * contractId is omitted.
+     */
+    isNative?: boolean;
+  }
 }
 
 export interface RuleUpdateResponse {
@@ -1712,6 +1742,12 @@ export interface RuleUpdateResponse {
   isRequired?: boolean;
 
   /**
+   * Loyalty currency. Optional when rewardType is token and tokenReward is provided;
+   * backend resolves the hidden currency from the contract.
+   */
+  loyaltyCurrencyId?: string;
+
+  /**
    * ID of the rule group section to associate with the rule
    */
   loyaltyRuleGroupId?: (string & {}) | 'no-section' | null;
@@ -1814,7 +1850,7 @@ export interface RuleUpdateResponse {
   /**
    * Type of reward issued by this rule
    */
-  rewardType?: 'points' | 'multiplier' | 'badge';
+  rewardType?: 'points' | 'multiplier' | 'badge' | 'token';
 
   /**
    * URL of the Shopify store
@@ -1835,6 +1871,12 @@ export interface RuleUpdateResponse {
    * Optional stratus subscription id for the rule
    */
   subscriptionId?: string | null;
+
+  /**
+   * When rewardType is token, provide relayer and either an ERC-20 contract or
+   * isNative=true to find or create the hidden loyalty currency and onchain token.
+   */
+  tokenReward?: RuleUpdateResponse.TokenReward;
 }
 
 export namespace RuleUpdateResponse {
@@ -2684,7 +2726,7 @@ export namespace RuleUpdateResponse {
       /**
        * Reward amount for this range.
        */
-      amount: number;
+      amount: number | string;
 
       /**
        * End value of the range.
@@ -2899,6 +2941,29 @@ export namespace RuleUpdateResponse {
       }
     }
   }
+
+  /**
+   * When rewardType is token, provide relayer and either an ERC-20 contract or
+   * isNative=true to find or create the hidden loyalty currency and onchain token.
+   */
+  export interface TokenReward {
+    /**
+     * Stratus relayer for token distribution (same network as contract)
+     */
+    relayerId: string;
+
+    /**
+     * ERC-20 contract to reward with; must match relayer network. Required unless
+     * isNative is true.
+     */
+    contractId?: string;
+
+    /**
+     * When true, reward is the chain native gas token (ETH, MATIC, BNB, …) and
+     * contractId is omitted.
+     */
+    isNative?: boolean;
+  }
 }
 
 export interface RuleListResponse {
@@ -2962,7 +3027,7 @@ export namespace RuleListResponse {
     /**
      * Type of the reward
      */
-    rewardType: 'points' | 'multiplier' | 'badge';
+    rewardType: 'points' | 'multiplier' | 'badge' | 'token';
 
     /**
      * Start time of the loyalty rule
@@ -3895,7 +3960,7 @@ export namespace RuleListResponse {
         /**
          * Reward amount for this range.
          */
-        amount: number;
+        amount: number | string;
 
         /**
          * End value of the range.
@@ -4276,11 +4341,6 @@ export interface RuleCreateParams {
   frequency: 'none' | 'once' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'immediately';
 
   /**
-   * Unique identifier for the loyalty currency
-   */
-  loyaltyCurrencyId: string;
-
-  /**
    * Additional metadata for the loyalty rule
    */
   metadata: RuleCreateParams.Metadata;
@@ -4489,6 +4549,13 @@ export interface RuleCreateParams {
   loyaltyBadgeId?: string | null;
 
   /**
+   * Unique identifier for the loyalty currency. Optional when rewardType is token
+   * and tokenReward is provided; backend will find or create the currency from the
+   * selected contract.
+   */
+  loyaltyCurrencyId?: string;
+
+  /**
    * Unique identifier for the loyalty rule group
    */
   loyaltyRuleGroupId?: 'no-section' | (string & {}) | null;
@@ -4591,7 +4658,7 @@ export interface RuleCreateParams {
   /**
    * Type of reward issued by the rule
    */
-  rewardType?: 'points' | 'multiplier' | 'badge';
+  rewardType?: 'points' | 'multiplier' | 'badge' | 'token';
 
   /**
    * URL of the Shopify store
@@ -4607,6 +4674,12 @@ export interface RuleCreateParams {
    * Optional stratus subscription id for the rule
    */
   subscriptionId?: string | null;
+
+  /**
+   * When rewardType is token, provide relayer and either an ERC-20 contract or
+   * isNative=true to find or create loyalty currency and onchain token.
+   */
+  tokenReward?: RuleCreateParams.TokenReward;
 }
 
 export namespace RuleCreateParams {
@@ -5381,7 +5454,7 @@ export namespace RuleCreateParams {
       /**
        * Reward amount for this range.
        */
-      amount: number;
+      amount: number | string;
 
       /**
        * End value of the range.
@@ -5671,6 +5744,29 @@ export namespace RuleCreateParams {
      */
     symbol?: string;
   }
+
+  /**
+   * When rewardType is token, provide relayer and either an ERC-20 contract or
+   * isNative=true to find or create loyalty currency and onchain token.
+   */
+  export interface TokenReward {
+    /**
+     * Stratus relayer for token distribution (same network as contract)
+     */
+    relayerId: string;
+
+    /**
+     * ERC-20 contract to reward with; must match relayer network. Required unless
+     * isNative is true.
+     */
+    contractId?: string;
+
+    /**
+     * When true, reward is the chain native gas token (ETH, MATIC, BNB, …) and
+     * contractId is omitted.
+     */
+    isNative?: boolean;
+  }
 }
 
 export interface RuleUpdateParams {
@@ -5791,6 +5887,12 @@ export interface RuleUpdateParams {
   isRequired?: boolean;
 
   /**
+   * Loyalty currency. Optional when rewardType is token and tokenReward is provided;
+   * backend resolves the hidden currency from the contract.
+   */
+  loyaltyCurrencyId?: string;
+
+  /**
    * ID of the rule group section to associate with the rule
    */
   loyaltyRuleGroupId?: (string & {}) | 'no-section' | null;
@@ -5893,7 +5995,7 @@ export interface RuleUpdateParams {
   /**
    * Type of reward issued by this rule
    */
-  rewardType?: 'points' | 'multiplier' | 'badge';
+  rewardType?: 'points' | 'multiplier' | 'badge' | 'token';
 
   /**
    * URL of the Shopify store
@@ -5914,6 +6016,12 @@ export interface RuleUpdateParams {
    * Optional stratus subscription id for the rule
    */
   subscriptionId?: string | null;
+
+  /**
+   * When rewardType is token, provide relayer and either an ERC-20 contract or
+   * isNative=true to find or create the hidden loyalty currency and onchain token.
+   */
+  tokenReward?: RuleUpdateParams.TokenReward;
 }
 
 export namespace RuleUpdateParams {
@@ -6763,7 +6871,7 @@ export namespace RuleUpdateParams {
       /**
        * Reward amount for this range.
        */
-      amount: number;
+      amount: number | string;
 
       /**
        * End value of the range.
@@ -6977,6 +7085,29 @@ export namespace RuleUpdateParams {
         }
       }
     }
+  }
+
+  /**
+   * When rewardType is token, provide relayer and either an ERC-20 contract or
+   * isNative=true to find or create the hidden loyalty currency and onchain token.
+   */
+  export interface TokenReward {
+    /**
+     * Stratus relayer for token distribution (same network as contract)
+     */
+    relayerId: string;
+
+    /**
+     * ERC-20 contract to reward with; must match relayer network. Required unless
+     * isNative is true.
+     */
+    contractId?: string;
+
+    /**
+     * When true, reward is the chain native gas token (ETH, MATIC, BNB, …) and
+     * contractId is omitted.
+     */
+    isNative?: boolean;
   }
 }
 

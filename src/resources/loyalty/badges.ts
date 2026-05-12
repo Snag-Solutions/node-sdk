@@ -512,7 +512,7 @@ export namespace BadgeCreateResponse {
     /**
      * Type of reward (points or multiplier)
      */
-    rewardType: 'points' | 'multiplier' | 'badge';
+    rewardType: 'points' | 'multiplier' | 'badge' | 'token';
 
     /**
      * Array of loyalty currency IDs for multiplier rewards (empty means all
@@ -895,7 +895,7 @@ export namespace BadgeUpdateResponse {
     /**
      * Type of reward (points or multiplier)
      */
-    rewardType: 'points' | 'multiplier' | 'badge';
+    rewardType: 'points' | 'multiplier' | 'badge' | 'token';
 
     /**
      * Array of loyalty currency IDs for multiplier rewards (empty means all
@@ -1288,7 +1288,7 @@ export namespace BadgeListResponse {
       /**
        * Type of reward (points or multiplier)
        */
-      rewardType: 'points' | 'multiplier' | 'badge';
+      rewardType: 'points' | 'multiplier' | 'badge' | 'token';
 
       /**
        * Array of loyalty currency IDs for multiplier rewards (empty means all
@@ -1672,7 +1672,7 @@ export namespace BadgeDeleteResponse {
     /**
      * Type of reward (points or multiplier)
      */
-    rewardType: 'points' | 'multiplier' | 'badge';
+    rewardType: 'points' | 'multiplier' | 'badge' | 'token';
 
     /**
      * Array of loyalty currency IDs for multiplier rewards (empty means all
@@ -1849,7 +1849,7 @@ export namespace BadgeCreateParams {
     /**
      * Type of reward (points or multiplier)
      */
-    rewardType: 'points' | 'multiplier' | 'badge';
+    rewardType: 'points' | 'multiplier' | 'badge' | 'token';
 
     /**
      * Points amount to reward (for points reward type)
@@ -1921,7 +1921,7 @@ export namespace BadgeUpdateParams {
     /**
      * Type of reward (points or multiplier)
      */
-    rewardType: 'points' | 'multiplier' | 'badge';
+    rewardType: 'points' | 'multiplier' | 'badge' | 'token';
 
     /**
      * Points amount to reward (for points reward type)
