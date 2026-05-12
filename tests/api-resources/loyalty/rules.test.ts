@@ -17,7 +17,6 @@ describe('resource rules', () => {
       effectiveStartTime: '2024-01-01T00:00:00Z',
       endTime: '2024-12-31T23:59:00Z',
       frequency: 'daily',
-      loyaltyCurrencyId: '456e1234-e89b-12d3-a456-426614174003',
       metadata: {},
       name: 'Referral Bonus Rule',
       organizationId: '123e4567-e89b-12d3-a456-426614174001',
@@ -42,7 +41,6 @@ describe('resource rules', () => {
       effectiveStartTime: '2024-01-01T00:00:00Z',
       endTime: '2024-12-31T23:59:00Z',
       frequency: 'daily',
-      loyaltyCurrencyId: '456e1234-e89b-12d3-a456-426614174003',
       metadata: {
         allowMultipleRedemptions: false,
         autoCheckInRuleIds: ['123e4567-e89b-12d3-a456-426614174000'],
@@ -239,6 +237,7 @@ describe('resource rules', () => {
       interval: 'weekly',
       isRequired: true,
       loyaltyBadgeId: '123e4567-e89b-12d3-a456-426614174004',
+      loyaltyCurrencyId: '456e1234-e89b-12d3-a456-426614174003',
       loyaltyRuleGroupId: '123e4567-e89b-12d3-a456-426614174004',
       loyaltyUserAllotmentCsvUrl: 'https://example.com/loyalty-user-allotment.csv',
       maxAmountInterval: 'daily',
@@ -251,6 +250,11 @@ describe('resource rules', () => {
       shopifyStoreUrl: 'https://example.com',
       showBeforeStart: false,
       subscriptionId: 'sub12345',
+      tokenReward: {
+        relayerId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+        contractId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+        isNative: true,
+      },
     });
   });
 
@@ -300,6 +304,7 @@ describe('resource rules', () => {
       hideInUi: false,
       interval: 'weekly',
       isRequired: true,
+      loyaltyCurrencyId: '456e1234-e89b-12d3-a456-426614174003',
       loyaltyRuleGroupId: '123e4567-e89b-12d3-a456-426614174005',
       maxAmountInterval: 'daily',
       maxAmountPerInterval: 100,
@@ -480,6 +485,11 @@ describe('resource rules', () => {
       showBeforeStart: false,
       startTime: '2024-01-01T00:00:00Z',
       subscriptionId: 'sub12345',
+      tokenReward: {
+        relayerId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+        contractId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+        isNative: true,
+      },
     });
   });
 
