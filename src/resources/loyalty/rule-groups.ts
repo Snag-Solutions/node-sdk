@@ -183,7 +183,7 @@ export namespace RuleGroupGetRuleGroupsResponse {
 
         name: string;
 
-        rewardType: 'points' | 'multiplier' | 'badge';
+        rewardType: 'points' | 'multiplier' | 'badge' | 'token';
 
         startTime: string | null;
 
@@ -1055,7 +1055,7 @@ export namespace RuleGroupGetRuleGroupsResponse {
             /**
              * Reward amount for this range.
              */
-            amount: number;
+            amount: number | string;
 
             /**
              * End value of the range.
