@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.0-alpha.267 (2026-05-13)
+
+Full Changelog: [v0.1.0-alpha.266...v0.1.0-alpha.267](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.266...v0.1.0-alpha.267)
+
 ## 0.1.0-alpha.266 (2026-05-12)
 
 Full Changelog: [v0.1.0-alpha.265...v0.1.0-alpha.266](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.265...v0.1.0-alpha.266)
