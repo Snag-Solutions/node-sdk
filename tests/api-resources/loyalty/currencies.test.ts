@@ -66,6 +66,7 @@ describe('resource currencies', () => {
     const response = await client.loyalty.currencies.list({
       organizationId: '123e4567-e89b-12d3-a456-426614174001',
       websiteId: '123e4567-e89b-12d3-a456-426614174002',
+      excludeTokenRewardCurrencies: 'true',
       includeDeleted: 'false',
       limit: 50,
       startingAfter: '123e4567-e89b-12d3-a456-426614174010',
