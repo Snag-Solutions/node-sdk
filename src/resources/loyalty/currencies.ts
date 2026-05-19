@@ -131,6 +131,13 @@ export interface CurrencyCreateResponse {
    * Unique identifier for the website
    */
   websiteId: string;
+
+  /**
+   * True for LoyaltyCurrency rows auto-created by resolveTokenReward (Option 1
+   * hidden currency backing a token-reward rule). Excluded from list responses by
+   * default; opt in via excludeTokenRewardCurrencies=false on the list endpoint.
+   */
+  isTokenRewardCurrency?: boolean;
 }
 
 export interface CurrencyListResponse {
@@ -233,6 +240,13 @@ export namespace CurrencyListResponse {
      * Unique identifier for the website
      */
     websiteId: string;
+
+    /**
+     * True for LoyaltyCurrency rows auto-created by resolveTokenReward (Option 1
+     * hidden currency backing a token-reward rule). Excluded from list responses by
+     * default; opt in via excludeTokenRewardCurrencies=false on the list endpoint.
+     */
+    isTokenRewardCurrency?: boolean;
   }
 }
 
@@ -313,6 +327,13 @@ export interface CurrencyListParams {
    * Unique identifier for the website
    */
   websiteId: string;
+
+  /**
+   * Exclude LoyaltyCurrency rows auto-created by token-reward rules
+   * (isTokenRewardCurrency=true). Defaults to true so admin pickers never see them;
+   * surfaces that need to render an existing token-reward rule pass false.
+   */
+  excludeTokenRewardCurrencies?: string;
 
   /**
    * Whether to include deleted currencies
