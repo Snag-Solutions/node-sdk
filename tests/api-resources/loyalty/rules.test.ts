@@ -17,6 +17,7 @@ describe('resource rules', () => {
       effectiveStartTime: '2024-01-01T00:00:00Z',
       endTime: '2024-12-31T23:59:00Z',
       frequency: 'daily',
+      interval: 'weekly',
       metadata: {},
       name: 'Referral Bonus Rule',
       organizationId: '123e4567-e89b-12d3-a456-426614174001',
@@ -41,6 +42,7 @@ describe('resource rules', () => {
       effectiveStartTime: '2024-01-01T00:00:00Z',
       endTime: '2024-12-31T23:59:00Z',
       frequency: 'daily',
+      interval: 'weekly',
       metadata: {
         allowMultipleRedemptions: false,
         autoCheckInRuleIds: ['123e4567-e89b-12d3-a456-426614174000'],
@@ -234,7 +236,6 @@ describe('resource rules', () => {
       externalIntegrationId: '123e4567-e89b-12d3-a456-426614174005',
       functionId: 'func12345',
       hideInUi: false,
-      interval: 'weekly',
       isRequired: true,
       loyaltyBadgeId: '123e4567-e89b-12d3-a456-426614174004',
       loyaltyCurrencyId: '456e1234-e89b-12d3-a456-426614174003',
@@ -263,7 +264,9 @@ describe('resource rules', () => {
     const responsePromise = client.loyalty.rules.update('182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e', {
       amount: '10.5',
       endTime: '2024-12-31T23:59:00Z',
+      interval: 'weekly',
       name: 'Daily Rewards Program',
+      startTime: '2024-01-01T00:00:00Z',
     });
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
@@ -279,7 +282,9 @@ describe('resource rules', () => {
     const response = await client.loyalty.rules.update('182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e', {
       amount: '10.5',
       endTime: '2024-12-31T23:59:00Z',
+      interval: 'weekly',
       name: 'Daily Rewards Program',
+      startTime: '2024-01-01T00:00:00Z',
       claimType: 'auto',
       collectionAddress: '0x1234567890abcdef1234567890abcdef12345678',
       collections: [
@@ -302,7 +307,6 @@ describe('resource rules', () => {
       frequency: 'daily',
       functionId: 'func12345',
       hideInUi: false,
-      interval: 'weekly',
       isRequired: true,
       loyaltyCurrencyId: '456e1234-e89b-12d3-a456-426614174003',
       loyaltyRuleGroupId: '123e4567-e89b-12d3-a456-426614174005',
@@ -483,7 +487,6 @@ describe('resource rules', () => {
       rewardType: 'points',
       shopifyStoreUrl: 'https://example.com',
       showBeforeStart: false,
-      startTime: '2024-01-01T00:00:00Z',
       subscriptionId: 'sub12345',
       tokenReward: {
         relayerId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
