@@ -16,6 +16,7 @@ export class Rules extends APIResource {
    *   effectiveStartTime: '2024-01-01T00:00:00Z',
    *   endTime: '2024-12-31T23:59:00Z',
    *   frequency: 'daily',
+   *   interval: 'weekly',
    *   metadata: {},
    *   name: 'Referral Bonus Rule',
    *   organizationId: '123e4567-e89b-12d3-a456-426614174001',
@@ -39,7 +40,9 @@ export class Rules extends APIResource {
    *   {
    *     amount: '10.5',
    *     endTime: '2024-12-31T23:59:00Z',
+   *     interval: 'weekly',
    *     name: 'Daily Rewards Program',
+   *     startTime: '2024-01-01T00:00:00Z',
    *   },
    * );
    * ```
@@ -194,6 +197,11 @@ export interface RuleCreateResponse {
   frequency: 'none' | 'once' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'immediately';
 
   /**
+   * Interval between rule executions
+   */
+  interval: 'hourly' | 'daily' | 'weekly' | 'monthly' | 'once' | 'custom' | 'every_message' | 'unlimited';
+
+  /**
    * Additional metadata for the loyalty rule
    */
   metadata: RuleCreateResponse.Metadata;
@@ -211,7 +219,7 @@ export interface RuleCreateResponse {
   /**
    * When the rule becomes active
    */
-  startTime: string | null;
+  startTime: string;
 
   /**
    * Type of loyalty rule being created
@@ -376,20 +384,6 @@ export interface RuleCreateResponse {
    * Whether to hide this rule in the user interface
    */
   hideInUi?: boolean;
-
-  /**
-   * Interval between rule executions
-   */
-  interval?:
-    | 'hourly'
-    | 'daily'
-    | 'weekly'
-    | 'monthly'
-    | 'once'
-    | 'custom'
-    | 'every_message'
-    | 'unlimited'
-    | null;
 
   /**
    * Whether this rule is mandatory
@@ -1636,9 +1630,19 @@ export interface RuleUpdateResponse {
   endTime: string | null;
 
   /**
+   * Time interval for recurring rule execution
+   */
+  interval: 'hourly' | 'daily' | 'weekly' | 'monthly' | 'once' | 'custom' | 'every_message' | 'unlimited';
+
+  /**
    * Name of the loyalty rule
    */
   name: string;
+
+  /**
+   * Start time for the loyalty rule
+   */
+  startTime: string;
 
   /**
    * The type of claim for the reward
@@ -1721,20 +1725,6 @@ export interface RuleUpdateResponse {
    * Whether to hide this rule in the user interface
    */
   hideInUi?: boolean;
-
-  /**
-   * Time interval for recurring rule execution
-   */
-  interval?:
-    | 'hourly'
-    | 'daily'
-    | 'weekly'
-    | 'monthly'
-    | 'once'
-    | 'custom'
-    | 'every_message'
-    | 'unlimited'
-    | null;
 
   /**
    * Whether this rule is required for participation
@@ -1861,11 +1851,6 @@ export interface RuleUpdateResponse {
    * Whether to show this rule before the start time
    */
   showBeforeStart?: boolean;
-
-  /**
-   * Start time for the loyalty rule
-   */
-  startTime?: string | null;
 
   /**
    * Optional stratus subscription id for the rule
@@ -4341,6 +4326,11 @@ export interface RuleCreateParams {
   frequency: 'none' | 'once' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'immediately';
 
   /**
+   * Interval between rule executions
+   */
+  interval: 'hourly' | 'daily' | 'weekly' | 'monthly' | 'once' | 'custom' | 'every_message' | 'unlimited';
+
+  /**
    * Additional metadata for the loyalty rule
    */
   metadata: RuleCreateParams.Metadata;
@@ -4358,7 +4348,7 @@ export interface RuleCreateParams {
   /**
    * When the rule becomes active
    */
-  startTime: string | null;
+  startTime: string;
 
   /**
    * Type of loyalty rule being created
@@ -4523,20 +4513,6 @@ export interface RuleCreateParams {
    * Whether to hide this rule in the user interface
    */
   hideInUi?: boolean;
-
-  /**
-   * Interval between rule executions
-   */
-  interval?:
-    | 'hourly'
-    | 'daily'
-    | 'weekly'
-    | 'monthly'
-    | 'once'
-    | 'custom'
-    | 'every_message'
-    | 'unlimited'
-    | null;
 
   /**
    * Whether this rule is mandatory
@@ -5781,9 +5757,19 @@ export interface RuleUpdateParams {
   endTime: string | null;
 
   /**
+   * Time interval for recurring rule execution
+   */
+  interval: 'hourly' | 'daily' | 'weekly' | 'monthly' | 'once' | 'custom' | 'every_message' | 'unlimited';
+
+  /**
    * Name of the loyalty rule
    */
   name: string;
+
+  /**
+   * Start time for the loyalty rule
+   */
+  startTime: string;
 
   /**
    * The type of claim for the reward
@@ -5866,20 +5852,6 @@ export interface RuleUpdateParams {
    * Whether to hide this rule in the user interface
    */
   hideInUi?: boolean;
-
-  /**
-   * Time interval for recurring rule execution
-   */
-  interval?:
-    | 'hourly'
-    | 'daily'
-    | 'weekly'
-    | 'monthly'
-    | 'once'
-    | 'custom'
-    | 'every_message'
-    | 'unlimited'
-    | null;
 
   /**
    * Whether this rule is required for participation
@@ -6006,11 +5978,6 @@ export interface RuleUpdateParams {
    * Whether to show this rule before the start time
    */
   showBeforeStart?: boolean;
-
-  /**
-   * Start time for the loyalty rule
-   */
-  startTime?: string | null;
 
   /**
    * Optional stratus subscription id for the rule
