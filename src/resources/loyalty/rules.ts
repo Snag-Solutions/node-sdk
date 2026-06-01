@@ -40,7 +40,6 @@ export class Rules extends APIResource {
    *   {
    *     amount: '10.5',
    *     endTime: '2024-12-31T23:59:00Z',
-   *     interval: 'weekly',
    *     name: 'Daily Rewards Program',
    *     startTime: '2024-01-01T00:00:00Z',
    *   },
@@ -384,6 +383,15 @@ export interface RuleCreateResponse {
    * Whether to hide this rule in the user interface
    */
   hideInUi?: boolean;
+
+  /**
+   * Routes rule rewards to the dApp owner address (for substitution-type rules:
+   * external*rule, smart_contract_event, stratus_function) or marks the rule as a
+   * dApp-attribution rule (for the dapps_by*_ family). Defaults to true at the API
+   * for the dapps*by*_ family when omitted, false otherwise. Immutable after
+   * creation.
+   */
+  isDappRule?: boolean;
 
   /**
    * Whether this rule is mandatory
@@ -1630,11 +1638,6 @@ export interface RuleUpdateResponse {
   endTime: string | null;
 
   /**
-   * Time interval for recurring rule execution
-   */
-  interval: 'hourly' | 'daily' | 'weekly' | 'monthly' | 'once' | 'custom' | 'every_message' | 'unlimited';
-
-  /**
    * Name of the loyalty rule
    */
   name: string;
@@ -1725,6 +1728,11 @@ export interface RuleUpdateResponse {
    * Whether to hide this rule in the user interface
    */
   hideInUi?: boolean;
+
+  /**
+   * Time interval for recurring rule execution
+   */
+  interval?: 'hourly' | 'daily' | 'weekly' | 'monthly' | 'once' | 'custom' | 'every_message' | 'unlimited';
 
   /**
    * Whether this rule is required for participation
@@ -4515,6 +4523,15 @@ export interface RuleCreateParams {
   hideInUi?: boolean;
 
   /**
+   * Routes rule rewards to the dApp owner address (for substitution-type rules:
+   * external*rule, smart_contract_event, stratus_function) or marks the rule as a
+   * dApp-attribution rule (for the dapps_by*_ family). Defaults to true at the API
+   * for the dapps*by*_ family when omitted, false otherwise. Immutable after
+   * creation.
+   */
+  isDappRule?: boolean;
+
+  /**
    * Whether this rule is mandatory
    */
   isRequired?: boolean;
@@ -5757,11 +5774,6 @@ export interface RuleUpdateParams {
   endTime: string | null;
 
   /**
-   * Time interval for recurring rule execution
-   */
-  interval: 'hourly' | 'daily' | 'weekly' | 'monthly' | 'once' | 'custom' | 'every_message' | 'unlimited';
-
-  /**
    * Name of the loyalty rule
    */
   name: string;
@@ -5852,6 +5864,11 @@ export interface RuleUpdateParams {
    * Whether to hide this rule in the user interface
    */
   hideInUi?: boolean;
+
+  /**
+   * Time interval for recurring rule execution
+   */
+  interval?: 'hourly' | 'daily' | 'weekly' | 'monthly' | 'once' | 'custom' | 'every_message' | 'unlimited';
 
   /**
    * Whether this rule is required for participation
