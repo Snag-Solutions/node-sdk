@@ -196,6 +196,12 @@ export namespace RuleEditListResponse {
        * Optional metadata for the loyalty rule
        */
       metadata?: { [key: string]: Data.Metadata };
+
+      /**
+       * Flag indicating if the progress is tracked. If enabled, the rule can only be
+       * completed once the progress is 100%.
+       */
+      trackProgress?: boolean | null;
     }
 
     export namespace Data {
@@ -630,12 +636,6 @@ export namespace RuleEditListResponse {
          * Flag indicating if all contracts are tracked.
          */
         trackAllContracts?: boolean | null;
-
-        /**
-         * Flag indicating if the progress is tracked. If enabled, the rule can only be
-         * completed once the progress is 100%.
-         */
-        trackProgress?: boolean | null;
 
         /**
          * URL of the associated Twitter account.
@@ -1283,6 +1283,12 @@ export namespace RuleEditListResponse {
        * Optional metadata for the loyalty rule
        */
       metadata?: { [key: string]: PreviousData.Metadata };
+
+      /**
+       * Flag indicating if the progress is tracked. If enabled, the rule can only be
+       * completed once the progress is 100%.
+       */
+      trackProgress?: boolean | null;
     }
 
     export namespace PreviousData {
@@ -1717,12 +1723,6 @@ export namespace RuleEditListResponse {
          * Flag indicating if all contracts are tracked.
          */
         trackAllContracts?: boolean | null;
-
-        /**
-         * Flag indicating if the progress is tracked. If enabled, the rule can only be
-         * completed once the progress is 100%.
-         */
-        trackProgress?: boolean | null;
 
         /**
          * URL of the associated Twitter account.
@@ -2425,6 +2425,12 @@ export namespace RuleEditRestoreResponse {
      * Optional metadata for the loyalty rule
      */
     metadata?: { [key: string]: Data.Metadata };
+
+    /**
+     * Flag indicating if the progress is tracked. If enabled, the rule can only be
+     * completed once the progress is 100%.
+     */
+    trackProgress?: boolean | null;
   }
 
   export namespace Data {
@@ -2859,12 +2865,6 @@ export namespace RuleEditRestoreResponse {
        * Flag indicating if all contracts are tracked.
        */
       trackAllContracts?: boolean | null;
-
-      /**
-       * Flag indicating if the progress is tracked. If enabled, the rule can only be
-       * completed once the progress is 100%.
-       */
-      trackProgress?: boolean | null;
 
       /**
        * URL of the associated Twitter account.
@@ -3512,6 +3512,12 @@ export namespace RuleEditRestoreResponse {
      * Optional metadata for the loyalty rule
      */
     metadata?: { [key: string]: PreviousData.Metadata };
+
+    /**
+     * Flag indicating if the progress is tracked. If enabled, the rule can only be
+     * completed once the progress is 100%.
+     */
+    trackProgress?: boolean | null;
   }
 
   export namespace PreviousData {
@@ -3946,12 +3952,6 @@ export namespace RuleEditRestoreResponse {
        * Flag indicating if all contracts are tracked.
        */
       trackAllContracts?: boolean | null;
-
-      /**
-       * Flag indicating if the progress is tracked. If enabled, the rule can only be
-       * completed once the progress is 100%.
-       */
-      trackProgress?: boolean | null;
 
       /**
        * URL of the associated Twitter account.
