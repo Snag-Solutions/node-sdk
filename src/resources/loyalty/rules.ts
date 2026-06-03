@@ -535,6 +535,12 @@ export interface RuleCreateResponse {
    * isNative=true to find or create loyalty currency and onchain token.
    */
   tokenReward?: RuleCreateResponse.TokenReward;
+
+  /**
+   * Flag indicating if the progress is tracked. If enabled, the rule can only be
+   * completed once the progress is 100%.
+   */
+  trackProgress?: boolean;
 }
 
 export namespace RuleCreateResponse {
@@ -972,12 +978,6 @@ export namespace RuleCreateResponse {
      * Flag indicating if all contracts are tracked.
      */
     trackAllContracts?: boolean | null;
-
-    /**
-     * Flag indicating if the progress is tracked. If enabled, the rule can only be
-     * completed once the progress is 100%.
-     */
-    trackProgress?: boolean | null;
 
     /**
      * URL of the associated Twitter account.
@@ -1870,6 +1870,12 @@ export interface RuleUpdateResponse {
    * isNative=true to find or create the hidden loyalty currency and onchain token.
    */
   tokenReward?: RuleUpdateResponse.TokenReward;
+
+  /**
+   * Flag indicating if the progress is tracked. If enabled, the rule can only be
+   * completed once the progress is 100%.
+   */
+  trackProgress?: boolean;
 }
 
 export namespace RuleUpdateResponse {
@@ -2382,12 +2388,6 @@ export namespace RuleUpdateResponse {
      * Flag indicating if all contracts are tracked.
      */
     trackAllContracts?: boolean | null;
-
-    /**
-     * Flag indicating if the progress is tracked. If enabled, the rule can only be
-     * completed once the progress is 100%.
-     */
-    trackProgress?: boolean | null;
 
     /**
      * URL of the associated Twitter account.
@@ -3067,6 +3067,12 @@ export namespace RuleListResponse {
      * Optional metadata for the loyalty rule
      */
     metadata?: { [key: string]: Data.Metadata };
+
+    /**
+     * Flag indicating if the progress is tracked. If enabled, the rule can only be
+     * completed once the progress is 100%.
+     */
+    trackProgress?: boolean | null;
   }
 
   export namespace Data {
@@ -3616,12 +3622,6 @@ export namespace RuleListResponse {
        * Flag indicating if all contracts are tracked.
        */
       trackAllContracts?: boolean | null;
-
-      /**
-       * Flag indicating if the progress is tracked. If enabled, the rule can only be
-       * completed once the progress is 100%.
-       */
-      trackProgress?: boolean | null;
 
       /**
        * URL of the associated Twitter account.
@@ -4673,6 +4673,12 @@ export interface RuleCreateParams {
    * isNative=true to find or create loyalty currency and onchain token.
    */
   tokenReward?: RuleCreateParams.TokenReward;
+
+  /**
+   * Flag indicating if the progress is tracked. If enabled, the rule can only be
+   * completed once the progress is 100%.
+   */
+  trackProgress?: boolean;
 }
 
 export namespace RuleCreateParams {
@@ -5110,12 +5116,6 @@ export namespace RuleCreateParams {
      * Flag indicating if all contracts are tracked.
      */
     trackAllContracts?: boolean | null;
-
-    /**
-     * Flag indicating if the progress is tracked. If enabled, the rule can only be
-     * completed once the progress is 100%.
-     */
-    trackProgress?: boolean | null;
 
     /**
      * URL of the associated Twitter account.
@@ -6006,6 +6006,12 @@ export interface RuleUpdateParams {
    * isNative=true to find or create the hidden loyalty currency and onchain token.
    */
   tokenReward?: RuleUpdateParams.TokenReward;
+
+  /**
+   * Flag indicating if the progress is tracked. If enabled, the rule can only be
+   * completed once the progress is 100%.
+   */
+  trackProgress?: boolean;
 }
 
 export namespace RuleUpdateParams {
@@ -6518,12 +6524,6 @@ export namespace RuleUpdateParams {
      * Flag indicating if all contracts are tracked.
      */
     trackAllContracts?: boolean | null;
-
-    /**
-     * Flag indicating if the progress is tracked. If enabled, the rule can only be
-     * completed once the progress is 100%.
-     */
-    trackProgress?: boolean | null;
 
     /**
      * URL of the associated Twitter account.

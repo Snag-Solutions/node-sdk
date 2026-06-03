@@ -198,7 +198,6 @@ describe('resource rules', () => {
         telegramChannelId: 'telegram-channel-123',
         timeDelayToVerifySeconds: 300,
         trackAllContracts: true,
-        trackProgress: true,
         twitterAccountUrl: 'https://twitter.com/example_user',
         twitterHashtag: '#loyalty',
         twitterPostUrl: 'https://twitter.com/example/status/1234567890',
@@ -257,6 +256,7 @@ describe('resource rules', () => {
         contractId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
         isNative: true,
       },
+      trackProgress: true,
     });
   });
 
@@ -468,7 +468,6 @@ describe('resource rules', () => {
         telegramChannelId: 'telegram-channel-123',
         timeDelayToVerifySeconds: 300,
         trackAllContracts: true,
-        trackProgress: true,
         twitterAccountUrl: 'https://twitter.com/example_user',
         twitterHashtag: '#loyalty',
         twitterPostUrl: 'https://twitter.com/example/status/1234567890',
@@ -493,6 +492,7 @@ describe('resource rules', () => {
         contractId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
         isNative: true,
       },
+      trackProgress: true,
     });
   });
 
