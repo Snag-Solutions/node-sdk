@@ -506,6 +506,13 @@ export interface RuleCreateResponse {
   oauthCredentialsId?: string | null;
 
   /**
+   * How tracked progress is interpreted. "percentage" counts 0-100 and is shown as a
+   * percentage. "counter" counts up to the highest reward range end and is shown as
+   * a raw count.
+   */
+  progressType?: 'counter' | 'percentage' | null;
+
+  /**
    * The lifetime of the reward
    */
   rewardLifetime?: 'permanent' | 'dynamic' | null;
@@ -1841,6 +1848,13 @@ export interface RuleUpdateResponse {
   oauthCredentialsId?: string | null;
 
   /**
+   * How tracked progress is interpreted. "percentage" counts 0-100 and is shown as a
+   * percentage. "counter" counts up to the highest reward range end and is shown as
+   * a raw count.
+   */
+  progressType?: 'counter' | 'percentage' | null;
+
+  /**
    * The lifetime of the reward
    */
   rewardLifetime?: 'permanent' | 'dynamic' | null;
@@ -3067,6 +3081,13 @@ export namespace RuleListResponse {
      * Optional metadata for the loyalty rule
      */
     metadata?: { [key: string]: Data.Metadata };
+
+    /**
+     * How tracked progress is interpreted. "percentage" counts 0-100 and is shown as a
+     * percentage. "counter" counts up to the highest reward range end and is shown as
+     * a raw count.
+     */
+    progressType?: 'counter' | 'percentage' | null;
 
     /**
      * Flag indicating if the progress is tracked. If enabled, the rule can only be
@@ -4644,6 +4665,13 @@ export interface RuleCreateParams {
   oauthCredentialsId?: string | null;
 
   /**
+   * How tracked progress is interpreted. "percentage" counts 0-100 and is shown as a
+   * percentage. "counter" counts up to the highest reward range end and is shown as
+   * a raw count.
+   */
+  progressType?: 'counter' | 'percentage' | null;
+
+  /**
    * The lifetime of the reward
    */
   rewardLifetime?: 'permanent' | 'dynamic' | null;
@@ -5975,6 +6003,13 @@ export interface RuleUpdateParams {
    * ID for associated OAuth credentials
    */
   oauthCredentialsId?: string | null;
+
+  /**
+   * How tracked progress is interpreted. "percentage" counts 0-100 and is shown as a
+   * percentage. "counter" counts up to the highest reward range end and is shown as
+   * a raw count.
+   */
+  progressType?: 'counter' | 'percentage' | null;
 
   /**
    * The lifetime of the reward
