@@ -96,7 +96,9 @@ export interface RuleStatusUpdateParams {
   loyaltyRuleId: string;
 
   /**
-   * Increment progress of the loyalty rule
+   * Increment progress of the loyalty rule. The resulting progress is clamped to the
+   * rule target (100 for percentage rules, the highest reward range end for counter
+   * rules).
    */
   incProgress?: number;
 
@@ -106,7 +108,8 @@ export interface RuleStatusUpdateParams {
   organizationId?: string;
 
   /**
-   * Progress of the loyalty rule
+   * Progress of the loyalty rule. Clamped to the rule target (100 for percentage
+   * rules, the highest reward range end for counter rules).
    */
   progress?: number;
 
