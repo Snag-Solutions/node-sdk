@@ -198,6 +198,13 @@ export namespace RuleEditListResponse {
       metadata?: { [key: string]: Data.Metadata };
 
       /**
+       * How tracked progress is interpreted. "percentage" counts 0-100 and is shown as a
+       * percentage. "counter" counts up to the highest reward range end and is shown as
+       * a raw count.
+       */
+      progressType?: 'counter' | 'percentage' | null;
+
+      /**
        * Flag indicating if the progress is tracked. If enabled, the rule can only be
        * completed once the progress is 100%.
        */
@@ -1283,6 +1290,13 @@ export namespace RuleEditListResponse {
        * Optional metadata for the loyalty rule
        */
       metadata?: { [key: string]: PreviousData.Metadata };
+
+      /**
+       * How tracked progress is interpreted. "percentage" counts 0-100 and is shown as a
+       * percentage. "counter" counts up to the highest reward range end and is shown as
+       * a raw count.
+       */
+      progressType?: 'counter' | 'percentage' | null;
 
       /**
        * Flag indicating if the progress is tracked. If enabled, the rule can only be
@@ -2427,6 +2441,13 @@ export namespace RuleEditRestoreResponse {
     metadata?: { [key: string]: Data.Metadata };
 
     /**
+     * How tracked progress is interpreted. "percentage" counts 0-100 and is shown as a
+     * percentage. "counter" counts up to the highest reward range end and is shown as
+     * a raw count.
+     */
+    progressType?: 'counter' | 'percentage' | null;
+
+    /**
      * Flag indicating if the progress is tracked. If enabled, the rule can only be
      * completed once the progress is 100%.
      */
@@ -3512,6 +3533,13 @@ export namespace RuleEditRestoreResponse {
      * Optional metadata for the loyalty rule
      */
     metadata?: { [key: string]: PreviousData.Metadata };
+
+    /**
+     * How tracked progress is interpreted. "percentage" counts 0-100 and is shown as a
+     * percentage. "counter" counts up to the highest reward range end and is shown as
+     * a raw count.
+     */
+    progressType?: 'counter' | 'percentage' | null;
 
     /**
      * Flag indicating if the progress is tracked. If enabled, the rule can only be
