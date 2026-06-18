@@ -431,11 +431,6 @@ export namespace RuleEditListResponse {
         onlyNative?: boolean;
 
         /**
-         * Flag indicating whether to include only non-listed items.
-         */
-        onlyNonListed?: boolean;
-
-        /**
          * Indicates if only existing users are rewarded.
          */
         onlyRewardExistingUser?: boolean;
@@ -638,11 +633,6 @@ export namespace RuleEditListResponse {
          * Time delay in seconds to verify actions.
          */
         timeDelayToVerifySeconds?: string | number | null;
-
-        /**
-         * Flag indicating if all contracts are tracked.
-         */
-        trackAllContracts?: boolean | null;
 
         /**
          * URL of the associated Twitter account.
@@ -1525,11 +1515,6 @@ export namespace RuleEditListResponse {
         onlyNative?: boolean;
 
         /**
-         * Flag indicating whether to include only non-listed items.
-         */
-        onlyNonListed?: boolean;
-
-        /**
          * Indicates if only existing users are rewarded.
          */
         onlyRewardExistingUser?: boolean;
@@ -1732,11 +1717,6 @@ export namespace RuleEditListResponse {
          * Time delay in seconds to verify actions.
          */
         timeDelayToVerifySeconds?: string | number | null;
-
-        /**
-         * Flag indicating if all contracts are tracked.
-         */
-        trackAllContracts?: boolean | null;
 
         /**
          * URL of the associated Twitter account.
@@ -2674,11 +2654,6 @@ export namespace RuleEditRestoreResponse {
       onlyNative?: boolean;
 
       /**
-       * Flag indicating whether to include only non-listed items.
-       */
-      onlyNonListed?: boolean;
-
-      /**
        * Indicates if only existing users are rewarded.
        */
       onlyRewardExistingUser?: boolean;
@@ -2881,11 +2856,6 @@ export namespace RuleEditRestoreResponse {
        * Time delay in seconds to verify actions.
        */
       timeDelayToVerifySeconds?: string | number | null;
-
-      /**
-       * Flag indicating if all contracts are tracked.
-       */
-      trackAllContracts?: boolean | null;
 
       /**
        * URL of the associated Twitter account.
@@ -3768,11 +3738,6 @@ export namespace RuleEditRestoreResponse {
       onlyNative?: boolean;
 
       /**
-       * Flag indicating whether to include only non-listed items.
-       */
-      onlyNonListed?: boolean;
-
-      /**
        * Indicates if only existing users are rewarded.
        */
       onlyRewardExistingUser?: boolean;
@@ -3975,11 +3940,6 @@ export namespace RuleEditRestoreResponse {
        * Time delay in seconds to verify actions.
        */
       timeDelayToVerifySeconds?: string | number | null;
-
-      /**
-       * Flag indicating if all contracts are tracked.
-       */
-      trackAllContracts?: boolean | null;
 
       /**
        * URL of the associated Twitter account.
