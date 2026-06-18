@@ -506,11 +506,6 @@ export namespace RuleGroupGetRuleGroupsResponse {
           onlyNative?: boolean;
 
           /**
-           * Flag indicating whether to include only non-listed items.
-           */
-          onlyNonListed?: boolean;
-
-          /**
            * Indicates if only existing users are rewarded.
            */
           onlyRewardExistingUser?: boolean;
@@ -713,11 +708,6 @@ export namespace RuleGroupGetRuleGroupsResponse {
            * Time delay in seconds to verify actions.
            */
           timeDelayToVerifySeconds?: string | number | null;
-
-          /**
-           * Flag indicating if all contracts are tracked.
-           */
-          trackAllContracts?: boolean | null;
 
           /**
            * URL of the associated Twitter account.
