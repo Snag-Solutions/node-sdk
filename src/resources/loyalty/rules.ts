@@ -21,7 +21,7 @@ export class Rules extends APIResource {
    *   name: 'Referral Bonus Rule',
    *   organizationId: '123e4567-e89b-12d3-a456-426614174001',
    *   startTime: '2024-01-01T00:00:00Z',
-   *   type: 'Bonus',
+   *   type: 'TokenHold',
    *   websiteId: '123e4567-e89b-12d3-a456-426614174002',
    * });
    * ```
@@ -230,16 +230,16 @@ export interface RuleCreateResponse {
     | 'DiscordMessages'
     | 'Listing'
     | 'Lodging'
-    | 'MintOn'
     | 'PoapClaim'
     | 'SnagSocialsConnected'
     | 'SnapshotFullset'
     | 'SnapshotHold'
-    | 'SoldOn'
     | 'SoldWithRoyalties'
-    | 'TokenHold'
     | 'TwitterBio'
     | 'TwitterHashTagPost'
+    | 'MintOn'
+    | 'SoldOn'
+    | 'TokenHold'
     | 'Retweet'
     | 'check_in'
     | 'code_entry'
@@ -743,19 +743,9 @@ export namespace RuleCreateResponse {
     liquidity?: Metadata.Liquidity;
 
     /**
-     * Maximum quantity constraint for token holding.
-     */
-    maxQty?: number | null;
-
-    /**
      * Minimum follower count for the rule. Accepts both number and string values.
      */
     minimumFollowerCount?: number | null;
-
-    /**
-     * Minimum quantity constraint for token holding.
-     */
-    minQty?: number | null;
 
     /**
      * Array of loyalty currency IDs used for multipliers.
@@ -2150,19 +2140,9 @@ export namespace RuleUpdateResponse {
     liquidity?: Metadata.Liquidity;
 
     /**
-     * Maximum quantity constraint for token holding.
-     */
-    maxQty?: number | null;
-
-    /**
      * Minimum follower count for the rule. Accepts both number and string values.
      */
     minimumFollowerCount?: number | null;
-
-    /**
-     * Minimum quantity constraint for token holding.
-     */
-    minQty?: number | null;
 
     /**
      * Array of loyalty currency IDs used for multipliers.
@@ -3381,19 +3361,9 @@ export namespace RuleListResponse {
       liquidity?: Metadata.Liquidity;
 
       /**
-       * Maximum quantity constraint for token holding.
-       */
-      maxQty?: number | null;
-
-      /**
        * Minimum follower count for the rule. Accepts both number and string values.
        */
       minimumFollowerCount?: number | null;
-
-      /**
-       * Minimum quantity constraint for token holding.
-       */
-      minQty?: number | null;
 
       /**
        * Array of loyalty currency IDs used for multipliers.
@@ -4359,16 +4329,16 @@ export interface RuleCreateParams {
     | 'DiscordMessages'
     | 'Listing'
     | 'Lodging'
-    | 'MintOn'
     | 'PoapClaim'
     | 'SnagSocialsConnected'
     | 'SnapshotFullset'
     | 'SnapshotHold'
-    | 'SoldOn'
     | 'SoldWithRoyalties'
-    | 'TokenHold'
     | 'TwitterBio'
     | 'TwitterHashTagPost'
+    | 'MintOn'
+    | 'SoldOn'
+    | 'TokenHold'
     | 'Retweet'
     | 'check_in'
     | 'code_entry'
@@ -4872,19 +4842,9 @@ export namespace RuleCreateParams {
     liquidity?: Metadata.Liquidity;
 
     /**
-     * Maximum quantity constraint for token holding.
-     */
-    maxQty?: number | null;
-
-    /**
      * Minimum follower count for the rule. Accepts both number and string values.
      */
     minimumFollowerCount?: number | null;
-
-    /**
-     * Minimum quantity constraint for token holding.
-     */
-    minQty?: number | null;
 
     /**
      * Array of loyalty currency IDs used for multipliers.
@@ -6277,19 +6237,9 @@ export namespace RuleUpdateParams {
     liquidity?: Metadata.Liquidity;
 
     /**
-     * Maximum quantity constraint for token holding.
-     */
-    maxQty?: number | null;
-
-    /**
      * Minimum follower count for the rule. Accepts both number and string values.
      */
     minimumFollowerCount?: number | null;
-
-    /**
-     * Minimum quantity constraint for token holding.
-     */
-    minQty?: number | null;
 
     /**
      * Array of loyalty currency IDs used for multipliers.
