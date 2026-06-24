@@ -401,19 +401,9 @@ export namespace RuleEditListResponse {
         liquidity?: Metadata.Liquidity;
 
         /**
-         * Maximum quantity constraint for token holding.
-         */
-        maxQty?: number | null;
-
-        /**
          * Minimum follower count for the rule. Accepts both number and string values.
          */
         minimumFollowerCount?: number | null;
-
-        /**
-         * Minimum quantity constraint for token holding.
-         */
-        minQty?: number | null;
 
         /**
          * Array of loyalty currency IDs used for multipliers.
@@ -1485,19 +1475,9 @@ export namespace RuleEditListResponse {
         liquidity?: Metadata.Liquidity;
 
         /**
-         * Maximum quantity constraint for token holding.
-         */
-        maxQty?: number | null;
-
-        /**
          * Minimum follower count for the rule. Accepts both number and string values.
          */
         minimumFollowerCount?: number | null;
-
-        /**
-         * Minimum quantity constraint for token holding.
-         */
-        minQty?: number | null;
 
         /**
          * Array of loyalty currency IDs used for multipliers.
@@ -2624,19 +2604,9 @@ export namespace RuleEditRestoreResponse {
       liquidity?: Metadata.Liquidity;
 
       /**
-       * Maximum quantity constraint for token holding.
-       */
-      maxQty?: number | null;
-
-      /**
        * Minimum follower count for the rule. Accepts both number and string values.
        */
       minimumFollowerCount?: number | null;
-
-      /**
-       * Minimum quantity constraint for token holding.
-       */
-      minQty?: number | null;
 
       /**
        * Array of loyalty currency IDs used for multipliers.
@@ -3708,19 +3678,9 @@ export namespace RuleEditRestoreResponse {
       liquidity?: Metadata.Liquidity;
 
       /**
-       * Maximum quantity constraint for token holding.
-       */
-      maxQty?: number | null;
-
-      /**
        * Minimum follower count for the rule. Accepts both number and string values.
        */
       minimumFollowerCount?: number | null;
-
-      /**
-       * Minimum quantity constraint for token holding.
-       */
-      minQty?: number | null;
 
       /**
        * Array of loyalty currency IDs used for multipliers.
