@@ -194,16 +194,16 @@ export namespace RuleGroupGetRuleGroupsResponse {
           | 'DiscordMessages'
           | 'Listing'
           | 'Lodging'
-          | 'MintOn'
           | 'PoapClaim'
           | 'SnagSocialsConnected'
           | 'SnapshotFullset'
           | 'SnapshotHold'
-          | 'SoldOn'
           | 'SoldWithRoyalties'
-          | 'TokenHold'
           | 'TwitterBio'
           | 'TwitterHashTagPost'
+          | 'MintOn'
+          | 'SoldOn'
+          | 'TokenHold'
           | 'Retweet'
           | 'check_in'
           | 'code_entry'
@@ -476,19 +476,9 @@ export namespace RuleGroupGetRuleGroupsResponse {
           liquidity?: Metadata.Liquidity;
 
           /**
-           * Maximum quantity constraint for token holding.
-           */
-          maxQty?: number | null;
-
-          /**
            * Minimum follower count for the rule. Accepts both number and string values.
            */
           minimumFollowerCount?: number | null;
-
-          /**
-           * Minimum quantity constraint for token holding.
-           */
-          minQty?: number | null;
 
           /**
            * Array of loyalty currency IDs used for multipliers.
