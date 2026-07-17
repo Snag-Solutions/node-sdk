@@ -839,6 +839,8 @@ export namespace RuleGroupGetRuleGroupsResponse {
               | 'kusama'
               | 'horizen'
               | 'horizenTestnet'
+              | 'robinhoodChain'
+              | 'robinhoodChainTestnet'
               | 'flow_cadence';
           }
 
@@ -998,6 +1000,8 @@ export namespace RuleGroupGetRuleGroupsResponse {
               | 'kusama'
               | 'horizen'
               | 'horizenTestnet'
+              | 'robinhoodChain'
+              | 'robinhoodChainTestnet'
               | 'flow_cadence';
 
             /**

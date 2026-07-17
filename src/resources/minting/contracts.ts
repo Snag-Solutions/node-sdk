@@ -145,6 +145,8 @@ export namespace ContractListResponse {
       | 'kusama'
       | 'horizen'
       | 'horizenTestnet'
+      | 'robinhoodChain'
+      | 'robinhoodChainTestnet'
       | 'flow_cadence'
       | null;
 
@@ -315,6 +317,8 @@ export namespace ContractListResponse {
         | 'kusama'
         | 'horizen'
         | 'horizenTestnet'
+        | 'robinhoodChain'
+        | 'robinhoodChainTestnet'
         | 'flow_cadence';
     }
   }

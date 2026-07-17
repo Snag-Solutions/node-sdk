@@ -209,6 +209,8 @@ export interface MintingGetAssetsParams {
     | 'kusama'
     | 'horizen'
     | 'horizenTestnet'
+    | 'robinhoodChain'
+    | 'robinhoodChainTestnet'
     | 'flow_cadence';
 
   /**
