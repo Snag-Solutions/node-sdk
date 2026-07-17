@@ -764,6 +764,8 @@ export namespace RuleEditListResponse {
             | 'kusama'
             | 'horizen'
             | 'horizenTestnet'
+            | 'robinhoodChain'
+            | 'robinhoodChainTestnet'
             | 'flow_cadence';
         }
 
@@ -923,6 +925,8 @@ export namespace RuleEditListResponse {
             | 'kusama'
             | 'horizen'
             | 'horizenTestnet'
+            | 'robinhoodChain'
+            | 'robinhoodChainTestnet'
             | 'flow_cadence';
 
           /**
@@ -1838,6 +1842,8 @@ export namespace RuleEditListResponse {
             | 'kusama'
             | 'horizen'
             | 'horizenTestnet'
+            | 'robinhoodChain'
+            | 'robinhoodChainTestnet'
             | 'flow_cadence';
         }
 
@@ -1997,6 +2003,8 @@ export namespace RuleEditListResponse {
             | 'kusama'
             | 'horizen'
             | 'horizenTestnet'
+            | 'robinhoodChain'
+            | 'robinhoodChainTestnet'
             | 'flow_cadence';
 
           /**
@@ -2967,6 +2975,8 @@ export namespace RuleEditRestoreResponse {
           | 'kusama'
           | 'horizen'
           | 'horizenTestnet'
+          | 'robinhoodChain'
+          | 'robinhoodChainTestnet'
           | 'flow_cadence';
       }
 
@@ -3126,6 +3136,8 @@ export namespace RuleEditRestoreResponse {
           | 'kusama'
           | 'horizen'
           | 'horizenTestnet'
+          | 'robinhoodChain'
+          | 'robinhoodChainTestnet'
           | 'flow_cadence';
 
         /**
@@ -4041,6 +4053,8 @@ export namespace RuleEditRestoreResponse {
           | 'kusama'
           | 'horizen'
           | 'horizenTestnet'
+          | 'robinhoodChain'
+          | 'robinhoodChainTestnet'
           | 'flow_cadence';
       }
 
@@ -4200,6 +4214,8 @@ export namespace RuleEditRestoreResponse {
           | 'kusama'
           | 'horizen'
           | 'horizenTestnet'
+          | 'robinhoodChain'
+          | 'robinhoodChainTestnet'
           | 'flow_cadence';
 
         /**
