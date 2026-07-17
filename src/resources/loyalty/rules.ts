@@ -498,6 +498,8 @@ export interface RuleCreateResponse {
     | 'kusama'
     | 'horizen'
     | 'horizenTestnet'
+    | 'robinhoodChain'
+    | 'robinhoodChainTestnet'
     | 'flow_cadence';
 
   /**
@@ -1106,6 +1108,8 @@ export namespace RuleCreateResponse {
         | 'kusama'
         | 'horizen'
         | 'horizenTestnet'
+        | 'robinhoodChain'
+        | 'robinhoodChainTestnet'
         | 'flow_cadence';
     }
 
@@ -1265,6 +1269,8 @@ export namespace RuleCreateResponse {
         | 'kusama'
         | 'horizen'
         | 'horizenTestnet'
+        | 'robinhoodChain'
+        | 'robinhoodChainTestnet'
         | 'flow_cadence';
 
       /**
@@ -1579,6 +1585,8 @@ export namespace RuleCreateResponse {
       | 'kusama'
       | 'horizen'
       | 'horizenTestnet'
+      | 'robinhoodChain'
+      | 'robinhoodChainTestnet'
       | 'flow_cadence';
 
     /**
@@ -1820,6 +1828,8 @@ export interface RuleUpdateResponse {
     | 'kusama'
     | 'horizen'
     | 'horizenTestnet'
+    | 'robinhoodChain'
+    | 'robinhoodChainTestnet'
     | 'flow_cadence';
 
   /**
@@ -1940,6 +1950,8 @@ export namespace RuleUpdateResponse {
       | 'kusama'
       | 'horizen'
       | 'horizenTestnet'
+      | 'robinhoodChain'
+      | 'robinhoodChainTestnet'
       | 'flow_cadence';
 
     /**
@@ -2503,6 +2515,8 @@ export namespace RuleUpdateResponse {
         | 'kusama'
         | 'horizen'
         | 'horizenTestnet'
+        | 'robinhoodChain'
+        | 'robinhoodChainTestnet'
         | 'flow_cadence';
     }
 
@@ -2662,6 +2676,8 @@ export namespace RuleUpdateResponse {
         | 'kusama'
         | 'horizen'
         | 'horizenTestnet'
+        | 'robinhoodChain'
+        | 'robinhoodChainTestnet'
         | 'flow_cadence';
 
       /**
@@ -3724,6 +3740,8 @@ export namespace RuleListResponse {
           | 'kusama'
           | 'horizen'
           | 'horizenTestnet'
+          | 'robinhoodChain'
+          | 'robinhoodChainTestnet'
           | 'flow_cadence';
       }
 
@@ -3883,6 +3901,8 @@ export namespace RuleListResponse {
           | 'kusama'
           | 'horizen'
           | 'horizenTestnet'
+          | 'robinhoodChain'
+          | 'robinhoodChainTestnet'
           | 'flow_cadence';
 
         /**
@@ -4597,6 +4617,8 @@ export interface RuleCreateParams {
     | 'kusama'
     | 'horizen'
     | 'horizenTestnet'
+    | 'robinhoodChain'
+    | 'robinhoodChainTestnet'
     | 'flow_cadence';
 
   /**
@@ -5205,6 +5227,8 @@ export namespace RuleCreateParams {
         | 'kusama'
         | 'horizen'
         | 'horizenTestnet'
+        | 'robinhoodChain'
+        | 'robinhoodChainTestnet'
         | 'flow_cadence';
     }
 
@@ -5364,6 +5388,8 @@ export namespace RuleCreateParams {
         | 'kusama'
         | 'horizen'
         | 'horizenTestnet'
+        | 'robinhoodChain'
+        | 'robinhoodChainTestnet'
         | 'flow_cadence';
 
       /**
@@ -5678,6 +5704,8 @@ export namespace RuleCreateParams {
       | 'kusama'
       | 'horizen'
       | 'horizenTestnet'
+      | 'robinhoodChain'
+      | 'robinhoodChainTestnet'
       | 'flow_cadence';
 
     /**
@@ -5917,6 +5945,8 @@ export interface RuleUpdateParams {
     | 'kusama'
     | 'horizen'
     | 'horizenTestnet'
+    | 'robinhoodChain'
+    | 'robinhoodChainTestnet'
     | 'flow_cadence';
 
   /**
@@ -6037,6 +6067,8 @@ export namespace RuleUpdateParams {
       | 'kusama'
       | 'horizen'
       | 'horizenTestnet'
+      | 'robinhoodChain'
+      | 'robinhoodChainTestnet'
       | 'flow_cadence';
 
     /**
@@ -6600,6 +6632,8 @@ export namespace RuleUpdateParams {
         | 'kusama'
         | 'horizen'
         | 'horizenTestnet'
+        | 'robinhoodChain'
+        | 'robinhoodChainTestnet'
         | 'flow_cadence';
     }
 
@@ -6759,6 +6793,8 @@ export namespace RuleUpdateParams {
         | 'kusama'
         | 'horizen'
         | 'horizenTestnet'
+        | 'robinhoodChain'
+        | 'robinhoodChainTestnet'
         | 'flow_cadence';
 
       /**
