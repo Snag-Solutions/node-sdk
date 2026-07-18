@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.275 (2026-07-18)
+
+Full Changelog: [v0.1.0-alpha.274...v0.1.0-alpha.275](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.274...v0.1.0-alpha.275)
+
+### Features
+
+* **stlc:** configurable CI runner and private-production-repo support in workflow templates ([d891c99](https://github.com/Snag-Solutions/node-sdk/commit/d891c99301f54ad5b97645baa2f53b273a9479d1))
+
 ## 0.1.0-alpha.274 (2026-07-17)
 
 Full Changelog: [v0.1.0-alpha.273...v0.1.0-alpha.274](https://github.com/Snag-Solutions/node-sdk/compare/v0.1.0-alpha.273...v0.1.0-alpha.274)
