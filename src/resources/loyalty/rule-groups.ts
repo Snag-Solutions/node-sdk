@@ -476,6 +476,25 @@ export namespace RuleGroupGetRuleGroupsResponse {
           liquidity?: Metadata.Liquidity;
 
           /**
+           * Reaction limit for comments. Once the post reaches this many comments, the
+           * Comment requirement is hidden and no longer verified.
+           */
+          maxComments?: number | null;
+
+          /**
+           * Reaction limit for likes. Once the post reaches this many likes, the Like
+           * requirement is hidden from users. Likes are never verified server-side, so this
+           * only controls display.
+           */
+          maxLikes?: number | null;
+
+          /**
+           * Reaction limit for reposts. Once the post reaches this many reposts, the Repost
+           * requirement is hidden and no longer verified.
+           */
+          maxReposts?: number | null;
+
+          /**
            * Minimum follower count for the rule. Accepts both number and string values.
            */
           minimumFollowerCount?: number | null;
@@ -534,6 +553,13 @@ export namespace RuleGroupGetRuleGroupsResponse {
            * Array defining ranges and corresponding rewards.
            */
           range?: Array<Metadata.Range>;
+
+          /**
+           * Latest scraped public reaction counts for the post, written back from
+           * social-service (throttled). Drives which reaction requirements are hidden once
+           * they hit their configured limit. Not admin-editable.
+           */
+          reactionStats?: Metadata.ReactionStats | null;
 
           /**
            * ID of the Reddit post.
@@ -1054,6 +1080,21 @@ export namespace RuleGroupGetRuleGroupsResponse {
              * Amount of the loyalty multiplier for this range.
              */
             loyaltyMultiplierAmount?: number;
+          }
+
+          /**
+           * Latest scraped public reaction counts for the post, written back from
+           * social-service (throttled). Drives which reaction requirements are hidden once
+           * they hit their configured limit. Not admin-editable.
+           */
+          export interface ReactionStats {
+            commentCount?: number | null;
+
+            likeCount?: number | null;
+
+            repostCount?: number | null;
+
+            syncedAt?: string | null;
           }
 
           /**
