@@ -35,6 +35,7 @@ describe('resource accounts', () => {
     await expect(
       client.loyalty.accounts.list(
         {
+          excludeDeletedCurrency: 'true',
           externalIdentifier: '123e4567-e89b-12d3-a456-426614174090',
           limit: 20,
           loyaltyCurrencyId: '123e4567-e89b-12d3-a456-426614174090',

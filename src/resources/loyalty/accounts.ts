@@ -214,6 +214,13 @@ export interface AccountRetrieveRankResponse {
 
 export interface AccountListParams {
   /**
+   * Pass true to drop accounts belonging to deleted loyalty currencies. Defaults to
+   * false, so they are included. Ignored when loyaltyCurrencyId names a currency — a
+   * deleted currency returns its accounts either way.
+   */
+  excludeDeletedCurrency?: 'true' | 'false';
+
+  /**
    * External identifier for the user
    */
   externalIdentifier?: string;
@@ -224,9 +231,9 @@ export interface AccountListParams {
   limit?: number;
 
   /**
-   * Unique identifier for the loyalty currency
+   * Loyalty currency ID(s) to filter accounts by. Accepts a single id or a list.
    */
-  loyaltyCurrencyId?: string;
+  loyaltyCurrencyId?: string | Array<string>;
 
   /**
    * Unique identifier for the organization to filter by
