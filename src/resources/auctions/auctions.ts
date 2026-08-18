@@ -271,18 +271,6 @@ export namespace AuctionListAuctionBidsResponse {
     export interface LoyaltyCurrency {
       id: string;
 
-      apiAuthKey: string | null;
-
-      apiAuthType: 'none' | 'basic' | 'bearer' | 'apiKey' | null;
-
-      apiAuthValue: string | null;
-
-      apiGetTransactionEntryUrl: string | null;
-
-      apiGetUrl: string | null;
-
-      apiPostUrl: string | null;
-
       decimals: number;
 
       imageUrl: string | null;
@@ -290,6 +278,18 @@ export namespace AuctionListAuctionBidsResponse {
       name: string;
 
       symbol: string;
+
+      apiAuthKey?: string | null;
+
+      apiAuthType?: 'none' | 'basic' | 'bearer' | 'apiKey' | null;
+
+      apiAuthValue?: string | null;
+
+      apiGetTransactionEntryUrl?: string | null;
+
+      apiGetUrl?: string | null;
+
+      apiPostUrl?: string | null;
     }
 
     export interface User {
